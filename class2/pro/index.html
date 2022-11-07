@@ -1,0 +1,96 @@
+﻿
+
+
+<html>
+<head>
+<title>aaRS</title>
+
+<link rel="icon" href="../../fig/icon_pro.png">
+<meta name="viewport" content="width=device-width, initial-scale=0.41, maximum-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/styles.css">
+
+<script language='JavaScript' type='text/JavaScript' src="../../js/aaRS.js"></script>
+<script type='text/javascript' src='../../bower_components/bio-pv/bio-pv.min.js'></script>
+
+        
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+
+
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+
+
+
+<script language='JavaScript' type='text/JavaScript'>
+
+
+function init(){
+	
+	renderaaRS("ProRS", "Prolyl tRNA Synthetase");
+}
+
+
+
+</script>
+
+</head>
+<body onload="init()">
+
+
+	<div id="main">
+
+		<h1></h1>
+		<div id="alignment" class="svgDiv">
+
+		</div>
+
+
+		<div id="alignment2" class="svgDiv">
+
+		</div>
+
+
+		<div class="svgDiv">
+			<svg id="secondary" height=0 width=0 overflow="auto"></svg>
+		</div>
+
+		<div id="tertiaryTable">
+			
+			<table>
+				<tr>
+					<td>
+						<div id="superposition"> </div>
+					</td>
+					
+					<td>
+						<div id="tertiary"> </div>
+					</td>
+				</tr>
+			
+			</table>
+			
+			
+		
+		</div>
+		
+		
+		<div id="notes">
+		
+		
+		</div>
+
+
+	</div>
+</body>
+</html>

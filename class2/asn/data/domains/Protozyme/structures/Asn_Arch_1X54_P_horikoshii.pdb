@@ -1,0 +1,5566 @@
+HEADER    LIGASE                                  15-MAY-05   1X54              
+TITLE     CRYSTAL STRUCTURE OF ASPARAGINYL-TRNA SYNTHETASE FROM PYROCOCCUS      
+TITLE    2 HORIKOSHII COMPLEXED WITH ASPARAGINYL-ADENYLATE                      
+COMPND    MOL_ID: 1;                                                            
+COMPND   2 MOLECULE: ASPARAGINYL-TRNA SYNTHETASE;                               
+COMPND   3 CHAIN: A;                                                            
+COMPND   4 SYNONYM: ASPARAGINE-TRNA LIGASE, ASNRS;                              
+COMPND   5 EC: 6.1.1.22;                                                        
+COMPND   6 ENGINEERED: YES                                                      
+SOURCE    MOL_ID: 1;                                                            
+SOURCE   2 ORGANISM_SCIENTIFIC: PYROCOCCUS HORIKOSHII;                          
+SOURCE   3 ORGANISM_TAXID: 53953;                                               
+SOURCE   4 EXPRESSION_SYSTEM: ESCHERICHIA COLI;                                 
+SOURCE   5 EXPRESSION_SYSTEM_TAXID: 562;                                        
+SOURCE   6 EXPRESSION_SYSTEM_VECTOR_TYPE: PLASMID;                              
+SOURCE   7 EXPRESSION_SYSTEM_PLASMID: PET11A                                    
+KEYWDS    AMINOACYL-TRNA SYNTHETASE, RIKEN STRUCTURAL GENOMICS/PROTEOMICS       
+KEYWDS   2 INITIATIVE, RSGI, STRUCTURAL GENOMICS, LIGASE                        
+EXPDTA    X-RAY DIFFRACTION                                                     
+AUTHOR    W.IWASAKI,S.SEKINE,S.YOKOYAMA,RIKEN STRUCTURAL GENOMICS/PROTEOMICS    
+AUTHOR   2 INITIATIVE (RSGI)                                                    
+REVDAT   4   13-JUL-11 1X54    1       VERSN                                    
+REVDAT   3   24-FEB-09 1X54    1       VERSN                                    
+REVDAT   2   18-JUL-06 1X54    1       JRNL                                     
+REVDAT   1   23-MAY-06 1X54    0                                                
+JRNL        AUTH   W.IWASAKI,S.SEKINE,C.KUROISHI,S.KURAMITSU,M.SHIROUZU,        
+JRNL        AUTH 2 S.YOKOYAMA                                                   
+JRNL        TITL   STRUCTURAL BASIS OF THE WATER-ASSISTED ASPARAGINE            
+JRNL        TITL 2 RECOGNITION BY ASPARAGINYL-TRNA SYNTHETASE.                  
+JRNL        REF    J.MOL.BIOL.                   V. 360   329 2006              
+JRNL        REFN                   ISSN 0022-2836                               
+JRNL        PMID   16753178                                                     
+JRNL        DOI    10.1016/J.JMB.2006.04.068                                    
+REMARK   2                                                                      
+REMARK   2 RESOLUTION.    1.45 ANGSTROMS.                                       
+REMARK   3                                                                      
+REMARK   3 REFINEMENT.                                                          
+REMARK   3   PROGRAM     : REFMAC 5.1.9999                                      
+REMARK   3   AUTHORS     : MURSHUDOV,VAGIN,DODSON                               
+REMARK   3                                                                      
+REMARK   3    REFINEMENT TARGET : MAXIMUM LIKELIHOOD                            
+REMARK   3                                                                      
+REMARK   3  DATA USED IN REFINEMENT.                                            
+REMARK   3   RESOLUTION RANGE HIGH (ANGSTROMS) : 1.45                           
+REMARK   3   RESOLUTION RANGE LOW  (ANGSTROMS) : 30.29                          
+REMARK   3   DATA CUTOFF            (SIGMA(F)) : 0.000                          
+REMARK   3   COMPLETENESS FOR RANGE        (%) : NULL                           
+REMARK   3   NUMBER OF REFLECTIONS             : 92348                          
+REMARK   3                                                                      
+REMARK   3  FIT TO DATA USED IN REFINEMENT.                                     
+REMARK   3   CROSS-VALIDATION METHOD          : THROUGHOUT                      
+REMARK   3   FREE R VALUE TEST SET SELECTION  : RANDOM                          
+REMARK   3   R VALUE     (WORKING + TEST SET) : 0.169                           
+REMARK   3   R VALUE            (WORKING SET) : 0.168                           
+REMARK   3   FREE R VALUE                     : 0.192                           
+REMARK   3   FREE R VALUE TEST SET SIZE   (%) : 5.000                           
+REMARK   3   FREE R VALUE TEST SET COUNT      : 4882                            
+REMARK   3                                                                      
+REMARK   3  FIT IN THE HIGHEST RESOLUTION BIN.                                  
+REMARK   3   TOTAL NUMBER OF BINS USED           : 20                           
+REMARK   3   BIN RESOLUTION RANGE HIGH       (A) : 1.45                         
+REMARK   3   BIN RESOLUTION RANGE LOW        (A) : 1.49                         
+REMARK   3   REFLECTION IN BIN     (WORKING SET) : 5425                         
+REMARK   3   BIN COMPLETENESS (WORKING+TEST) (%) : NULL                         
+REMARK   3   BIN R VALUE           (WORKING SET) : 0.2040                       
+REMARK   3   BIN FREE R VALUE SET COUNT          : 263                          
+REMARK   3   BIN FREE R VALUE                    : 0.2380                       
+REMARK   3                                                                      
+REMARK   3  NUMBER OF NON-HYDROGEN ATOMS USED IN REFINEMENT.                    
+REMARK   3   PROTEIN ATOMS            : 3544                                    
+REMARK   3   NUCLEIC ACID ATOMS       : 0                                       
+REMARK   3   HETEROGEN ATOMS          : 40                                      
+REMARK   3   SOLVENT ATOMS            : 309                                     
+REMARK   3                                                                      
+REMARK   3  B VALUES.                                                           
+REMARK   3   FROM WILSON PLOT           (A**2) : NULL                           
+REMARK   3   MEAN B VALUE      (OVERALL, A**2) : 21.34                          
+REMARK   3   OVERALL ANISOTROPIC B VALUE.                                       
+REMARK   3    B11 (A**2) : -0.03000                                             
+REMARK   3    B22 (A**2) : 0.11000                                              
+REMARK   3    B33 (A**2) : -0.12000                                             
+REMARK   3    B12 (A**2) : 0.00000                                              
+REMARK   3    B13 (A**2) : -0.04000                                             
+REMARK   3    B23 (A**2) : 0.00000                                              
+REMARK   3                                                                      
+REMARK   3  ESTIMATED OVERALL COORDINATE ERROR.                                 
+REMARK   3   ESU BASED ON R VALUE                            (A): 0.065         
+REMARK   3   ESU BASED ON FREE R VALUE                       (A): 0.058         
+REMARK   3   ESU BASED ON MAXIMUM LIKELIHOOD                 (A): 0.035         
+REMARK   3   ESU FOR B VALUES BASED ON MAXIMUM LIKELIHOOD (A**2): 1.942         
+REMARK   3                                                                      
+REMARK   3 CORRELATION COEFFICIENTS.                                            
+REMARK   3   CORRELATION COEFFICIENT FO-FC      : 0.969                         
+REMARK   3   CORRELATION COEFFICIENT FO-FC FREE : 0.958                         
+REMARK   3                                                                      
+REMARK   3  RMS DEVIATIONS FROM IDEAL VALUES        COUNT    RMS    WEIGHT      
+REMARK   3   BOND LENGTHS REFINED ATOMS        (A):  3674 ; 0.010 ; 0.022       
+REMARK   3   BOND LENGTHS OTHERS               (A):  NULL ;  NULL ;  NULL       
+REMARK   3   BOND ANGLES REFINED ATOMS   (DEGREES):  4977 ; 1.296 ; 1.966       
+REMARK   3   BOND ANGLES OTHERS          (DEGREES):  NULL ;  NULL ;  NULL       
+REMARK   3   TORSION ANGLES, PERIOD 1    (DEGREES):   431 ; 5.823 ; 5.000       
+REMARK   3   TORSION ANGLES, PERIOD 2    (DEGREES):   172 ;33.413 ;23.605       
+REMARK   3   TORSION ANGLES, PERIOD 3    (DEGREES):   652 ;12.746 ;15.000       
+REMARK   3   TORSION ANGLES, PERIOD 4    (DEGREES):    27 ;12.828 ;15.000       
+REMARK   3   CHIRAL-CENTER RESTRAINTS       (A**3):   531 ; 0.091 ; 0.200       
+REMARK   3   GENERAL PLANES REFINED ATOMS      (A):  2767 ; 0.006 ; 0.020       
+REMARK   3   GENERAL PLANES OTHERS             (A):  NULL ;  NULL ;  NULL       
+REMARK   3   NON-BONDED CONTACTS REFINED ATOMS (A):  1572 ; 0.196 ; 0.200       
+REMARK   3   NON-BONDED CONTACTS OTHERS        (A):  NULL ;  NULL ;  NULL       
+REMARK   3   NON-BONDED TORSION REFINED ATOMS  (A):  NULL ;  NULL ;  NULL       
+REMARK   3   NON-BONDED TORSION OTHERS         (A):  NULL ;  NULL ;  NULL       
+REMARK   3   H-BOND (X...Y) REFINED ATOMS      (A):   287 ; 0.130 ; 0.200       
+REMARK   3   H-BOND (X...Y) OTHERS             (A):  NULL ;  NULL ;  NULL       
+REMARK   3   POTENTIAL METAL-ION REFINED ATOMS (A):  NULL ;  NULL ;  NULL       
+REMARK   3   POTENTIAL METAL-ION OTHERS        (A):  NULL ;  NULL ;  NULL       
+REMARK   3   SYMMETRY VDW REFINED ATOMS        (A):    91 ; 0.140 ; 0.200       
+REMARK   3   SYMMETRY VDW OTHERS               (A):  NULL ;  NULL ;  NULL       
+REMARK   3   SYMMETRY H-BOND REFINED ATOMS     (A):    43 ; 0.134 ; 0.200       
+REMARK   3   SYMMETRY H-BOND OTHERS            (A):  NULL ;  NULL ;  NULL       
+REMARK   3   SYMMETRY METAL-ION REFINED ATOMS  (A):  NULL ;  NULL ;  NULL       
+REMARK   3   SYMMETRY METAL-ION OTHERS         (A):  NULL ;  NULL ;  NULL       
+REMARK   3                                                                      
+REMARK   3  ISOTROPIC THERMAL FACTOR RESTRAINTS.     COUNT   RMS    WEIGHT      
+REMARK   3   MAIN-CHAIN BOND REFINED ATOMS  (A**2):  2238 ; 1.205 ; 1.500       
+REMARK   3   MAIN-CHAIN BOND OTHER ATOMS    (A**2):  NULL ;  NULL ;  NULL       
+REMARK   3   MAIN-CHAIN ANGLE REFINED ATOMS (A**2):  3507 ; 1.721 ; 2.000       
+REMARK   3   SIDE-CHAIN BOND REFINED ATOMS  (A**2):  1673 ; 3.686 ; 3.000       
+REMARK   3   SIDE-CHAIN ANGLE REFINED ATOMS (A**2):  1470 ; 3.799 ; 4.500       
+REMARK   3                                                                      
+REMARK   3 ANISOTROPIC THERMAL FACTOR RESTRAINTS.    COUNT   RMS   WEIGHT       
+REMARK   3   RIGID-BOND RESTRAINTS          (A**2):  3911 ; 3.911 ; 3.000       
+REMARK   3   SPHERICITY; FREE ATOMS         (A**2):   310 ; 4.605 ; 3.000       
+REMARK   3   SPHERICITY; BONDED ATOMS       (A**2):  3583 ; 3.362 ; 3.000       
+REMARK   3                                                                      
+REMARK   3  NCS RESTRAINTS STATISTICS                                           
+REMARK   3   NUMBER OF DIFFERENT NCS GROUPS : NULL                              
+REMARK   3                                                                      
+REMARK   3  TLS DETAILS                                                         
+REMARK   3   NUMBER OF TLS GROUPS  : NULL                                       
+REMARK   3                                                                      
+REMARK   3  BULK SOLVENT MODELLING.                                             
+REMARK   3   METHOD USED : MASK                                                 
+REMARK   3   PARAMETERS FOR MASK CALCULATION                                    
+REMARK   3   VDW PROBE RADIUS   : 1.20                                          
+REMARK   3   ION PROBE RADIUS   : 0.80                                          
+REMARK   3   SHRINKAGE RADIUS   : 0.80                                          
+REMARK   3                                                                      
+REMARK   3  OTHER REFINEMENT REMARKS: NULL                                      
+REMARK   4                                                                      
+REMARK   4 1X54 COMPLIES WITH FORMAT V. 3.30, 13-JUL-11                         
+REMARK 100                                                                      
+REMARK 100 THIS ENTRY HAS BEEN PROCESSED BY PDBJ ON 24-MAY-05.                  
+REMARK 100 THE RCSB ID CODE IS RCSB024390.                                      
+REMARK 200                                                                      
+REMARK 200 EXPERIMENTAL DETAILS                                                 
+REMARK 200  EXPERIMENT TYPE                : X-RAY DIFFRACTION                  
+REMARK 200  DATE OF DATA COLLECTION        : 15-DEC-04                          
+REMARK 200  TEMPERATURE           (KELVIN) : 100                                
+REMARK 200  PH                             : 6.5                                
+REMARK 200  NUMBER OF CRYSTALS USED        : 1                                  
+REMARK 200                                                                      
+REMARK 200  SYNCHROTRON              (Y/N) : Y                                  
+REMARK 200  RADIATION SOURCE               : SPRING-8                           
+REMARK 200  BEAMLINE                       : BL41XU                             
+REMARK 200  X-RAY GENERATOR MODEL          : NULL                               
+REMARK 200  MONOCHROMATIC OR LAUE    (M/L) : M                                  
+REMARK 200  WAVELENGTH OR RANGE        (A) : 1.0                                
+REMARK 200  MONOCHROMATOR                  : NULL                               
+REMARK 200  OPTICS                         : NULL                               
+REMARK 200                                                                      
+REMARK 200  DETECTOR TYPE                  : CCD                                
+REMARK 200  DETECTOR MANUFACTURER          : ADSC QUANTUM 315                   
+REMARK 200  INTENSITY-INTEGRATION SOFTWARE : HKL-2000                           
+REMARK 200  DATA SCALING SOFTWARE          : SCALEPACK                          
+REMARK 200                                                                      
+REMARK 200  NUMBER OF UNIQUE REFLECTIONS   : 97438                              
+REMARK 200  RESOLUTION RANGE HIGH      (A) : 1.450                              
+REMARK 200  RESOLUTION RANGE LOW       (A) : 50.000                             
+REMARK 200  REJECTION CRITERIA  (SIGMA(I)) : -3.000                             
+REMARK 200                                                                      
+REMARK 200 OVERALL.                                                             
+REMARK 200  COMPLETENESS FOR RANGE     (%) : 96.1                               
+REMARK 200  DATA REDUNDANCY                : 4.300                              
+REMARK 200  R MERGE                    (I) : NULL                               
+REMARK 200  R SYM                      (I) : NULL                               
+REMARK 200  <I/SIGMA(I)> FOR THE DATA SET  : NULL                               
+REMARK 200                                                                      
+REMARK 200 IN THE HIGHEST RESOLUTION SHELL.                                     
+REMARK 200  HIGHEST RESOLUTION SHELL, RANGE HIGH (A) : 1.45                     
+REMARK 200  HIGHEST RESOLUTION SHELL, RANGE LOW  (A) : 1.50                     
+REMARK 200  COMPLETENESS FOR SHELL     (%) : 78.1                               
+REMARK 200  DATA REDUNDANCY IN SHELL       : 3.50                               
+REMARK 200  R MERGE FOR SHELL          (I) : NULL                               
+REMARK 200  R SYM FOR SHELL            (I) : NULL                               
+REMARK 200  <I/SIGMA(I)> FOR SHELL         : NULL                               
+REMARK 200                                                                      
+REMARK 200 DIFFRACTION PROTOCOL: SINGLE WAVELENGTH                              
+REMARK 200 METHOD USED TO DETERMINE THE STRUCTURE: MOLECULAR REPLACEMENT        
+REMARK 200 SOFTWARE USED: MOLREP                                                
+REMARK 200 STARTING MODEL: PDB ENTRY 1B8A                                       
+REMARK 200                                                                      
+REMARK 200 REMARK: NULL                                                         
+REMARK 280                                                                      
+REMARK 280 CRYSTAL                                                              
+REMARK 280 SOLVENT CONTENT, VS   (%): 57.10                                     
+REMARK 280 MATTHEWS COEFFICIENT, VM (ANGSTROMS**3/DA): 2.90                     
+REMARK 280                                                                      
+REMARK 280 CRYSTALLIZATION CONDITIONS: PEG8000, PH 6.5, VAPOR DIFFUSION,        
+REMARK 280  SITTING DROP, TEMPERATURE 293K                                      
+REMARK 290                                                                      
+REMARK 290 CRYSTALLOGRAPHIC SYMMETRY                                            
+REMARK 290 SYMMETRY OPERATORS FOR SPACE GROUP: C 1 2 1                          
+REMARK 290                                                                      
+REMARK 290      SYMOP   SYMMETRY                                                
+REMARK 290     NNNMMM   OPERATOR                                                
+REMARK 290       1555   X,Y,Z                                                   
+REMARK 290       2555   -X,Y,-Z                                                 
+REMARK 290       3555   X+1/2,Y+1/2,Z                                           
+REMARK 290       4555   -X+1/2,Y+1/2,-Z                                         
+REMARK 290                                                                      
+REMARK 290     WHERE NNN -> OPERATOR NUMBER                                     
+REMARK 290           MMM -> TRANSLATION VECTOR                                  
+REMARK 290                                                                      
+REMARK 290 CRYSTALLOGRAPHIC SYMMETRY TRANSFORMATIONS                            
+REMARK 290 THE FOLLOWING TRANSFORMATIONS OPERATE ON THE ATOM/HETATM             
+REMARK 290 RECORDS IN THIS ENTRY TO PRODUCE CRYSTALLOGRAPHICALLY                
+REMARK 290 RELATED MOLECULES.                                                   
+REMARK 290   SMTRY1   1  1.000000  0.000000  0.000000        0.00000            
+REMARK 290   SMTRY2   1  0.000000  1.000000  0.000000        0.00000            
+REMARK 290   SMTRY3   1  0.000000  0.000000  1.000000        0.00000            
+REMARK 290   SMTRY1   2 -1.000000  0.000000  0.000000        0.00000            
+REMARK 290   SMTRY2   2  0.000000  1.000000  0.000000        0.00000            
+REMARK 290   SMTRY3   2  0.000000  0.000000 -1.000000        0.00000            
+REMARK 290   SMTRY1   3  1.000000  0.000000  0.000000       63.03550            
+REMARK 290   SMTRY2   3  0.000000  1.000000  0.000000       34.11050            
+REMARK 290   SMTRY3   3  0.000000  0.000000  1.000000        0.00000            
+REMARK 290   SMTRY1   4 -1.000000  0.000000  0.000000       63.03550            
+REMARK 290   SMTRY2   4  0.000000  1.000000  0.000000       34.11050            
+REMARK 290   SMTRY3   4  0.000000  0.000000 -1.000000        0.00000            
+REMARK 290                                                                      
+REMARK 290 REMARK: NULL                                                         
+REMARK 300                                                                      
+REMARK 300 BIOMOLECULE: 1                                                       
+REMARK 300 SEE REMARK 350 FOR THE AUTHOR PROVIDED AND/OR PROGRAM                
+REMARK 300 GENERATED ASSEMBLY INFORMATION FOR THE STRUCTURE IN                  
+REMARK 300 THIS ENTRY. THE REMARK MAY ALSO PROVIDE INFORMATION ON               
+REMARK 300 BURIED SURFACE AREA.                                                 
+REMARK 300 REMARK: THE SECOND PART OF THE BIOLOGICAL ASSEMBLY IS GENERATED      
+REMARK 300 BY THE TWO FOLD AXIS:  -X, Y, -Z.                                    
+REMARK 350                                                                      
+REMARK 350 COORDINATES FOR A COMPLETE MULTIMER REPRESENTING THE KNOWN           
+REMARK 350 BIOLOGICALLY SIGNIFICANT OLIGOMERIZATION STATE OF THE                
+REMARK 350 MOLECULE CAN BE GENERATED BY APPLYING BIOMT TRANSFORMATIONS          
+REMARK 350 GIVEN BELOW.  BOTH NON-CRYSTALLOGRAPHIC AND                          
+REMARK 350 CRYSTALLOGRAPHIC OPERATIONS ARE GIVEN.                               
+REMARK 350                                                                      
+REMARK 350 BIOMOLECULE: 1                                                       
+REMARK 350 AUTHOR DETERMINED BIOLOGICAL UNIT: DIMERIC                           
+REMARK 350 SOFTWARE DETERMINED QUATERNARY STRUCTURE: DIMERIC                    
+REMARK 350 SOFTWARE USED: PISA,PQS                                              
+REMARK 350 TOTAL BURIED SURFACE AREA: 10900 ANGSTROM**2                         
+REMARK 350 SURFACE AREA OF THE COMPLEX: 33160 ANGSTROM**2                       
+REMARK 350 CHANGE IN SOLVENT FREE ENERGY: -92.0 KCAL/MOL                        
+REMARK 350 APPLY THE FOLLOWING TO CHAINS: A                                     
+REMARK 350   BIOMT1   1  1.000000  0.000000  0.000000        0.00000            
+REMARK 350   BIOMT2   1  0.000000  1.000000  0.000000        0.00000            
+REMARK 350   BIOMT3   1  0.000000  0.000000  1.000000        0.00000            
+REMARK 350   BIOMT1   2 -1.000000  0.000000  0.000000      -34.58155            
+REMARK 350   BIOMT2   2  0.000000  1.000000  0.000000        0.00000            
+REMARK 350   BIOMT3   2  0.000000  0.000000 -1.000000       67.34623            
+REMARK 375                                                                      
+REMARK 375 SPECIAL POSITION                                                     
+REMARK 375 THE FOLLOWING ATOMS ARE FOUND TO BE WITHIN 0.15 ANGSTROMS            
+REMARK 375 OF A SYMMETRY RELATED ATOM AND ARE ASSUMED TO BE ON SPECIAL          
+REMARK 375 POSITIONS.                                                           
+REMARK 375                                                                      
+REMARK 375 ATOM RES CSSEQI                                                      
+REMARK 375      HOH A1413  LIES ON A SPECIAL POSITION.                          
+REMARK 375      HOH A1053  LIES ON A SPECIAL POSITION.                          
+REMARK 500                                                                      
+REMARK 500 GEOMETRY AND STEREOCHEMISTRY                                         
+REMARK 500 SUBTOPIC: CLOSE CONTACTS IN SAME ASYMMETRIC UNIT                     
+REMARK 500                                                                      
+REMARK 500 THE FOLLOWING ATOMS ARE IN CLOSE CONTACT.                            
+REMARK 500                                                                      
+REMARK 500  ATM1  RES C  SSEQI   ATM2  RES C  SSEQI           DISTANCE          
+REMARK 500   O    HOH A  1126     O    HOH A  1708              2.07            
+REMARK 500   O    HOH A  1119     O    HOH A  1709              2.08            
+REMARK 500                                                                      
+REMARK 500 REMARK: NULL                                                         
+REMARK 500                                                                      
+REMARK 500 GEOMETRY AND STEREOCHEMISTRY                                         
+REMARK 500 SUBTOPIC: COVALENT BOND ANGLES                                       
+REMARK 500                                                                      
+REMARK 500 THE STEREOCHEMICAL PARAMETERS OF THE FOLLOWING RESIDUES              
+REMARK 500 HAVE VALUES WHICH DEVIATE FROM EXPECTED VALUES BY MORE               
+REMARK 500 THAN 6*RMSD (M=MODEL NUMBER; RES=RESIDUE NAME; C=CHAIN               
+REMARK 500 IDENTIFIER; SSEQ=SEQUENCE NUMBER; I=INSERTION CODE).                 
+REMARK 500                                                                      
+REMARK 500 STANDARD TABLE:                                                      
+REMARK 500 FORMAT: (10X,I3,1X,A3,1X,A1,I4,A1,3(1X,A4,2X),12X,F5.1)              
+REMARK 500                                                                      
+REMARK 500 EXPECTED VALUES PROTEIN: ENGH AND HUBER, 1999                        
+REMARK 500 EXPECTED VALUES NUCLEIC ACID: CLOWNEY ET AL 1996                     
+REMARK 500                                                                      
+REMARK 500  M RES CSSEQI ATM1   ATM2   ATM3                                     
+REMARK 500    ASP A  81   CB  -  CG  -  OD2 ANGL. DEV. =   6.0 DEGREES          
+REMARK 500    ASP A 120   CB  -  CG  -  OD2 ANGL. DEV. =   6.5 DEGREES          
+REMARK 500    ASP A 337   CB  -  CG  -  OD2 ANGL. DEV. =   6.1 DEGREES          
+REMARK 500    ASP A 340   CB  -  CG  -  OD2 ANGL. DEV. =   6.2 DEGREES          
+REMARK 500                                                                      
+REMARK 500 REMARK: NULL                                                         
+REMARK 500                                                                      
+REMARK 500 GEOMETRY AND STEREOCHEMISTRY                                         
+REMARK 500 SUBTOPIC: TORSION ANGLES                                             
+REMARK 500                                                                      
+REMARK 500 TORSION ANGLES OUTSIDE THE EXPECTED RAMACHANDRAN REGIONS:            
+REMARK 500 (M=MODEL NUMBER; RES=RESIDUE NAME; C=CHAIN IDENTIFIER;               
+REMARK 500 SSEQ=SEQUENCE NUMBER; I=INSERTION CODE).                             
+REMARK 500                                                                      
+REMARK 500 STANDARD TABLE:                                                      
+REMARK 500 FORMAT:(10X,I3,1X,A3,1X,A1,I4,A1,4X,F7.2,3X,F7.2)                    
+REMARK 500                                                                      
+REMARK 500 EXPECTED VALUES: GJ KLEYWEGT AND TA JONES (1996). PHI/PSI-           
+REMARK 500 CHOLOGY: RAMACHANDRAN REVISITED. STRUCTURE 4, 1395 - 1400            
+REMARK 500                                                                      
+REMARK 500  M RES CSSEQI        PSI       PHI                                   
+REMARK 500    PHE A 179     -115.01     53.41                                   
+REMARK 500    SER A 188      140.51    178.55                                   
+REMARK 500    GLU A 201      -53.61     68.29                                   
+REMARK 500    TRP A 233      -20.02     78.25                                   
+REMARK 500    ASP A 340       88.97   -150.17                                   
+REMARK 500    TYR A 394       54.61   -114.87                                   
+REMARK 500                                                                      
+REMARK 500 REMARK: NULL                                                         
+REMARK 525                                                                      
+REMARK 525 SOLVENT                                                              
+REMARK 525                                                                      
+REMARK 525 THE SOLVENT MOLECULES HAVE CHAIN IDENTIFIERS THAT                    
+REMARK 525 INDICATE THE POLYMER CHAIN WITH WHICH THEY ARE MOST                  
+REMARK 525 CLOSELY ASSOCIATED. THE REMARK LISTS ALL THE SOLVENT                 
+REMARK 525 MOLECULES WHICH ARE MORE THAN 5A AWAY FROM THE                       
+REMARK 525 NEAREST POLYMER CHAIN (M = MODEL NUMBER;                             
+REMARK 525 RES=RESIDUE NAME; C=CHAIN IDENTIFIER; SSEQ=SEQUENCE                  
+REMARK 525 NUMBER; I=INSERTION CODE):                                           
+REMARK 525                                                                      
+REMARK 525  M RES CSSEQI                                                        
+REMARK 525    HOH A1156        DISTANCE =  5.05 ANGSTROMS                       
+REMARK 525    HOH A1413        DISTANCE =  5.18 ANGSTROMS                       
+REMARK 525    HOH A1417        DISTANCE =  5.16 ANGSTROMS                       
+REMARK 525    HOH A1440        DISTANCE =  6.08 ANGSTROMS                       
+REMARK 620                                                                      
+REMARK 620 METAL COORDINATION                                                   
+REMARK 620 (M=MODEL NUMBER; RES=RESIDUE NAME; C=CHAIN IDENTIFIER;               
+REMARK 620 SSEQ=SEQUENCE NUMBER; I=INSERTION CODE):                             
+REMARK 620                                                                      
+REMARK 620 COORDINATION ANGLES FOR:  M RES CSSEQI METAL                         
+REMARK 620                              MG A2000  MG                            
+REMARK 620 N RES CSSEQI ATOM                                                    
+REMARK 620 1 HOH A1703   O                                                      
+REMARK 620 2 4AD A2001   O2P  86.7                                              
+REMARK 620 3 HOH A1702   O   177.9  91.5                                        
+REMARK 620 4 HOH A1705   O    94.7  90.7  86.4                                  
+REMARK 620 5 GLU A 357   OE1  85.5  89.7  93.4 179.6                            
+REMARK 620 6 HOH A1074   O    97.4 175.1  84.4  86.4  93.2                      
+REMARK 620 N                    1     2     3     4     5                       
+REMARK 800                                                                      
+REMARK 800 SITE                                                                 
+REMARK 800 SITE_IDENTIFIER: AC1                                                 
+REMARK 800 EVIDENCE_CODE: SOFTWARE                                              
+REMARK 800 SITE_DESCRIPTION: BINDING SITE FOR RESIDUE MG A 2000                 
+REMARK 800                                                                      
+REMARK 800 SITE_IDENTIFIER: AC2                                                 
+REMARK 800 EVIDENCE_CODE: SOFTWARE                                              
+REMARK 800 SITE_DESCRIPTION: BINDING SITE FOR RESIDUE 4AD A 2001                
+REMARK 800                                                                      
+REMARK 800 SITE_IDENTIFIER: AC3                                                 
+REMARK 800 EVIDENCE_CODE: SOFTWARE                                              
+REMARK 800 SITE_DESCRIPTION: BINDING SITE FOR RESIDUE MPD A 2002                
+REMARK 900                                                                      
+REMARK 900 RELATED ENTRIES                                                      
+REMARK 900 RELATED ID: 1X55   RELATED DB: PDB                                   
+REMARK 900 RELATED ID: 1X56   RELATED DB: PDB                                   
+REMARK 900 RELATED ID: PHO001000241.3   RELATED DB: TARGETDB                    
+DBREF  1X54 A    1   434  UNP    O57980   SYN_PYRHO        1    434             
+SEQRES   1 A  434  MET ILE GLU LYS VAL TYR CYS GLN GLU VAL LYS PRO GLU          
+SEQRES   2 A  434  LEU ASP GLY LYS LYS VAL ARG LEU ALA GLY TRP VAL TYR          
+SEQRES   3 A  434  THR ASN MET ARG VAL GLY LYS LYS ILE PHE LEU TRP ILE          
+SEQRES   4 A  434  ARG ASP SER THR GLY ILE VAL GLN ALA VAL VAL ALA LYS          
+SEQRES   5 A  434  ASN VAL VAL GLY GLU GLU THR PHE GLU LYS ALA LYS LYS          
+SEQRES   6 A  434  LEU GLY ARG GLU SER SER VAL ILE VAL GLU GLY ILE VAL          
+SEQRES   7 A  434  LYS ALA ASP GLU ARG ALA PRO GLY GLY ALA GLU VAL HIS          
+SEQRES   8 A  434  VAL GLU LYS LEU GLU VAL ILE GLN ALA VAL SER GLU PHE          
+SEQRES   9 A  434  PRO ILE PRO GLU ASN PRO GLU GLN ALA SER PRO GLU LEU          
+SEQRES  10 A  434  LEU LEU ASP TYR ARG HIS LEU HIS ILE ARG THR PRO LYS          
+SEQRES  11 A  434  ALA SER ALA ILE MET LYS VAL LYS GLU THR LEU ILE MET          
+SEQRES  12 A  434  ALA ALA ARG GLU TRP LEU LEU LYS ASP GLY TRP HIS GLU          
+SEQRES  13 A  434  VAL PHE PRO PRO ILE LEU VAL THR GLY ALA VAL GLU GLY          
+SEQRES  14 A  434  GLY ALA THR LEU PHE LYS LEU LYS TYR PHE ASP LYS TYR          
+SEQRES  15 A  434  ALA TYR LEU SER GLN SER ALA GLN LEU TYR LEU GLU ALA          
+SEQRES  16 A  434  ALA ILE PHE GLY LEU GLU LYS VAL TRP SER LEU THR PRO          
+SEQRES  17 A  434  SER PHE ARG ALA GLU LYS SER ARG THR ARG ARG HIS LEU          
+SEQRES  18 A  434  THR GLU PHE TRP HIS LEU GLU LEU GLU ALA ALA TRP MET          
+SEQRES  19 A  434  ASP LEU TRP ASP ILE MET LYS VAL GLU GLU GLU LEU VAL          
+SEQRES  20 A  434  SER TYR MET VAL GLN ARG THR LEU GLU LEU ARG LYS LYS          
+SEQRES  21 A  434  GLU ILE GLU MET PHE ARG ASP ASP LEU THR THR LEU LYS          
+SEQRES  22 A  434  ASN THR GLU PRO PRO PHE PRO ARG ILE SER TYR ASP GLU          
+SEQRES  23 A  434  ALA ILE ASP ILE LEU GLN SER LYS GLY VAL ASN VAL GLU          
+SEQRES  24 A  434  TRP GLY ASP ASP LEU GLY ALA ASP GLU GLU ARG VAL LEU          
+SEQRES  25 A  434  THR GLU GLU PHE ASP ARG PRO PHE PHE VAL TYR GLY TYR          
+SEQRES  26 A  434  PRO LYS HIS ILE LYS ALA PHE TYR MET LYS GLU ASP PRO          
+SEQRES  27 A  434  ASN ASP PRO ARG LYS VAL LEU ALA SER ASP MET LEU ALA          
+SEQRES  28 A  434  PRO GLU GLY TYR GLY GLU ILE ILE GLY GLY SER GLN ARG          
+SEQRES  29 A  434  GLU ASP ASP TYR ASP LYS LEU LEU ASN ARG ILE LEU GLU          
+SEQRES  30 A  434  GLU GLY MET ASP PRO LYS ASP TYR GLU TRP TYR LEU ASP          
+SEQRES  31 A  434  LEU ARG ARG TYR GLY SER VAL PRO HIS SER GLY PHE GLY          
+SEQRES  32 A  434  LEU GLY VAL GLU ARG LEU VAL ALA TRP VAL LEU LYS LEU          
+SEQRES  33 A  434  ASP HIS ILE ARG TRP ALA ALA LEU PHE PRO ARG THR PRO          
+SEQRES  34 A  434  ALA ARG LEU TYR PRO                                          
+HET     MG  A2000       1                                                       
+HET    4AD  A2001      31                                                       
+HET    MPD  A2002       8                                                       
+HETNAM      MG MAGNESIUM ION                                                    
+HETNAM     4AD 4-AMINO-1,4-DIOXOBUTAN-2-AMINIUM ADENOSINE-5'-                   
+HETNAM   2 4AD  MONOPHOSPHATE                                                   
+HETNAM     MPD (4S)-2-METHYL-2,4-PENTANEDIOL                                    
+HETSYN     4AD ASNAMP                                                           
+FORMUL   2   MG    MG 2+                                                        
+FORMUL   3  4AD    C14 H21 N7 O9 P 1+                                           
+FORMUL   4  MPD    C6 H14 O2                                                    
+FORMUL   5  HOH   *309(H2 O)                                                    
+LINK        MG    MG A2000                 O   HOH A1703     1555   1555  2.22  
+LINK        MG    MG A2000                 O2P 4AD A2001     1555   1555  2.08  
+LINK        MG    MG A2000                 O   HOH A1702     1555   1555  2.11  
+LINK        MG    MG A2000                 O   HOH A1705     1555   1555  2.22  
+LINK        MG    MG A2000                 OE1 GLU A 357     1555   1555  2.21  
+LINK        MG    MG A2000                 O   HOH A1074     1555   1555  2.34  
+CISPEP   1 PRO A  277    PRO A  278          0         1.71                     
+CISPEP   2 TYR A  433    PRO A  434          0        -1.21                     
+SITE     1 AC1  6 GLU A 357  HOH A1074  HOH A1702  HOH A1703                    
+SITE     2 AC1  6 HOH A1705  4AD A2001                                          
+SITE     1 AC2 27 GLU A 168  SER A 188  GLN A 190  ARG A 211                    
+SITE     2 AC2 27 HIS A 220  LEU A 221  PHE A 224  HIS A 226                    
+SITE     3 AC2 27 GLU A 228  TYR A 333  GLU A 357  ILE A 358                    
+SITE     4 AC2 27 ILE A 359  GLY A 360  ARG A 364  PHE A 402                    
+SITE     5 AC2 27 GLY A 403  GLY A 405  ARG A 408  HOH A1003                    
+SITE     6 AC2 27 HOH A1008  HOH A1014  HOH A1373  HOH A1702                    
+SITE     7 AC2 27 HOH A1703  HOH A1705   MG A2000                               
+SITE     1 AC3  4 ILE A  98  ASP A 366  SER A 396  HOH A1058                    
+CRYST1  126.071   68.221   75.706  90.00 117.18  90.00 C 1 2 1       4          
+ORIGX1      1.000000  0.000000  0.000000        0.00000                         
+ORIGX2      0.000000  1.000000  0.000000        0.00000                         
+ORIGX3      0.000000  0.000000  1.000000        0.00000                         
+SCALE1      0.007932  0.000000  0.004074        0.00000                         
+SCALE2      0.000000  0.014658  0.000000        0.00000                         
+SCALE3      0.000000  0.000000  0.014849        0.00000                         
+ATOM   1434  N   TYR A 182     -21.215  25.984  41.979  1.00 32.53           N  
+ATOM   1435  CA  TYR A 182     -20.085  25.486  41.201  1.00 31.80           C  
+ATOM   1436  C   TYR A 182     -19.764  24.061  41.599  1.00 30.15           C  
+ATOM   1437  O   TYR A 182     -19.921  23.682  42.760  1.00 29.24           O  
+ATOM   1438  CB  TYR A 182     -18.848  26.371  41.375  1.00 33.27           C  
+ATOM   1439  CG  TYR A 182     -19.017  27.739  40.765  1.00 35.22           C  
+ATOM   1440  CD1 TYR A 182     -18.873  27.932  39.389  1.00 36.94           C  
+ATOM   1441  CD2 TYR A 182     -19.338  28.839  41.559  1.00 37.28           C  
+ATOM   1442  CE1 TYR A 182     -19.035  29.189  38.815  1.00 37.19           C  
+ATOM   1443  CE2 TYR A 182     -19.505  30.102  40.998  1.00 37.81           C  
+ATOM   1444  CZ  TYR A 182     -19.352  30.269  39.625  1.00 37.60           C  
+ATOM   1445  OH  TYR A 182     -19.513  31.520  39.059  1.00 37.67           O  
+ATOM   1446  N   ALA A 183     -19.314  23.286  40.615  1.00 27.96           N  
+ATOM   1447  CA  ALA A 183     -18.887  21.905  40.829  1.00 26.64           C  
+ATOM   1448  C   ALA A 183     -17.480  21.721  40.281  1.00 25.40           C  
+ATOM   1449  O   ALA A 183     -17.002  22.538  39.486  1.00 25.87           O  
+ATOM   1450  CB  ALA A 183     -19.851  20.949  40.139  1.00 26.03           C  
+ATOM   1451  N   TYR A 184     -16.812  20.659  40.725  1.00 24.04           N  
+ATOM   1452  CA  TYR A 184     -15.548  20.239  40.142  1.00 22.71           C  
+ATOM   1453  C   TYR A 184     -15.758  18.882  39.475  1.00 20.95           C  
+ATOM   1454  O   TYR A 184     -16.660  18.133  39.848  1.00 19.74           O  
+ATOM   1455  CB  TYR A 184     -14.465  20.037  41.207  1.00 24.89           C  
+ATOM   1456  CG  TYR A 184     -14.041  21.254  42.006  1.00 27.40           C  
+ATOM   1457  CD1 TYR A 184     -13.817  21.145  43.379  1.00 28.31           C  
+ATOM   1458  CD2 TYR A 184     -13.828  22.489  41.392  1.00 27.68           C  
+ATOM   1459  CE1 TYR A 184     -13.407  22.247  44.134  1.00 29.28           C  
+ATOM   1460  CE2 TYR A 184     -13.425  23.594  42.128  1.00 29.60           C  
+ATOM   1461  CZ  TYR A 184     -13.219  23.466  43.494  1.00 29.89           C  
+ATOM   1462  OH  TYR A 184     -12.814  24.564  44.222  1.00 29.96           O  
+ATOM   1463  N   LEU A 185     -14.910  18.584  38.508  1.00 19.62           N  
+ATOM   1464  CA  LEU A 185     -14.831  17.230  37.963  1.00 18.28           C  
+ATOM   1465  C   LEU A 185     -13.900  16.384  38.821  1.00 17.94           C  
+ATOM   1466  O   LEU A 185     -12.769  16.791  39.127  1.00 18.71           O  
+ATOM   1467  CB  LEU A 185     -14.341  17.264  36.514  1.00 18.13           C  
+ATOM   1468  CG  LEU A 185     -15.253  17.968  35.509  1.00 18.73           C  
+ATOM   1469  CD1 LEU A 185     -14.653  17.858  34.129  1.00 19.13           C  
+ATOM   1470  CD2 LEU A 185     -16.663  17.381  35.543  1.00 18.94           C  
+ATOM   1471  N   SER A 186     -14.373  15.204  39.196  1.00 17.28           N  
+ATOM   1472  CA  SER A 186     -13.600  14.288  40.036  1.00 16.87           C  
+ATOM   1473  C   SER A 186     -12.209  13.983  39.496  1.00 15.67           C  
+ATOM   1474  O   SER A 186     -12.051  13.595  38.345  1.00 15.83           O  
+ATOM   1475  CB  SER A 186     -14.359  12.970  40.168  1.00 17.93           C  
+ATOM   1476  OG  SER A 186     -13.588  12.014  40.901  1.00 22.25           O  
+ATOM   1477  N   GLN A 187     -11.206  14.121  40.350  1.00 15.45           N  
+ATOM   1478  CA  GLN A 187      -9.852  13.655  40.052  1.00 14.62           C  
+ATOM   1479  C   GLN A 187      -9.654  12.169  40.366  1.00 14.58           C  
+ATOM   1480  O   GLN A 187      -8.655  11.580  39.980  1.00 14.63           O  
+ATOM   1481  CB  GLN A 187      -8.848  14.406  40.933  1.00 16.09           C  
+ATOM   1482  CG  GLN A 187      -8.770  15.901  40.670  1.00 16.76           C  
+ATOM   1483  CD  GLN A 187      -8.027  16.615  41.785  1.00 19.61           C  
+ATOM   1484  OE1 GLN A 187      -8.332  16.418  42.969  1.00 20.35           O  
+ATOM   1485  NE2 GLN A 187      -7.022  17.402  41.416  1.00 20.99           N  
+ATOM   1486  N   SER A 188     -10.583  11.607  41.141  1.00 13.98           N  
+ATOM   1487  CA  SER A 188     -10.434  10.290  41.753  1.00 13.94           C  
+ATOM   1488  C   SER A 188     -11.685  10.029  42.583  1.00 13.56           C  
+ATOM   1489  O   SER A 188     -12.177  10.942  43.263  1.00 14.65           O  
+ATOM   1490  CB  SER A 188      -9.209  10.263  42.672  1.00 14.13           C  
+ATOM   1491  OG  SER A 188      -9.255   9.150  43.543  1.00 14.93           O  
+ATOM   1492  N   ALA A 189     -12.181   8.790  42.559  1.00 12.60           N  
+ATOM   1493  CA  ALA A 189     -13.380   8.444  43.335  1.00 12.94           C  
+ATOM   1494  C   ALA A 189     -13.062   8.026  44.769  1.00 12.37           C  
+ATOM   1495  O   ALA A 189     -13.965   7.634  45.524  1.00 13.02           O  
+ATOM   1496  CB  ALA A 189     -14.120   7.317  42.657  1.00 13.55           C  
+ATOM   1497  N   GLN A 190     -11.783   8.102  45.136  1.00 12.99           N  
+ATOM   1498  CA  GLN A 190     -11.305   7.529  46.384  1.00 12.31           C  
+ATOM   1499  C   GLN A 190     -12.156   7.878  47.607  1.00 13.22           C  
+ATOM   1500  O   GLN A 190     -12.486   6.996  48.412  1.00 13.63           O  
+ATOM   1501  CB  GLN A 190      -9.872   7.983  46.652  1.00 12.71           C  
+ATOM   1502  CG  GLN A 190      -9.361   7.483  47.992  1.00 12.65           C  
+ATOM   1503  CD  GLN A 190      -8.023   8.053  48.352  1.00 13.73           C  
+ATOM   1504  OE1 GLN A 190      -7.165   8.228  47.489  1.00 14.30           O  
+ATOM   1505  NE2 GLN A 190      -7.837   8.343  49.634  1.00 14.19           N  
+ATOM   1506  N   LEU A 191     -12.476   9.155  47.775  1.00 13.82           N  
+ATOM   1507  CA  LEU A 191     -13.099   9.549  49.036  1.00 14.20           C  
+ATOM   1508  C   LEU A 191     -14.469   8.927  49.168  1.00 14.03           C  
+ATOM   1509  O   LEU A 191     -14.897   8.574  50.262  1.00 14.57           O  
+ATOM   1510  CB  LEU A 191     -13.164  11.071  49.206  1.00 15.18           C  
+ATOM   1511  CG  LEU A 191     -11.872  11.856  48.938  1.00 16.75           C  
+ATOM   1512  CD1 LEU A 191     -12.097  13.306  49.360  1.00 19.56           C  
+ATOM   1513  CD2 LEU A 191     -10.651  11.267  49.651  1.00 17.84           C  
+ATOM   1514  N   TYR A 192     -15.152   8.789  48.027  1.00 13.37           N  
+ATOM   1515  CA  TYR A 192     -16.457   8.132  47.998  1.00 13.44           C  
+ATOM   1516  C   TYR A 192     -16.368   6.624  48.204  1.00 13.04           C  
+ATOM   1517  O   TYR A 192     -17.237   6.027  48.858  1.00 13.62           O  
+ATOM   1518  CB  TYR A 192     -17.189   8.475  46.698  1.00 14.40           C  
+ATOM   1519  CG  TYR A 192     -17.472   9.954  46.633  1.00 14.46           C  
+ATOM   1520  CD1 TYR A 192     -18.545  10.506  47.327  1.00 14.70           C  
+ATOM   1521  CD2 TYR A 192     -16.617  10.814  45.931  1.00 15.40           C  
+ATOM   1522  CE1 TYR A 192     -18.776  11.874  47.286  1.00 14.58           C  
+ATOM   1523  CE2 TYR A 192     -16.847  12.184  45.886  1.00 17.05           C  
+ATOM   1524  CZ  TYR A 192     -17.927  12.702  46.560  1.00 17.21           C  
+ATOM   1525  OH  TYR A 192     -18.165  14.049  46.527  1.00 18.07           O  
+ATOM   1526  N   LEU A 193     -15.305   6.007  47.676  1.00 12.33           N  
+ATOM   1527  CA  LEU A 193     -15.047   4.590  47.968  1.00 12.08           C  
+ATOM   1528  C   LEU A 193     -14.824   4.383  49.458  1.00 11.79           C  
+ATOM   1529  O   LEU A 193     -15.278   3.404  50.033  1.00 12.22           O  
+ATOM   1530  CB  LEU A 193     -13.877   4.042  47.143  1.00 11.88           C  
+ATOM   1531  CG  LEU A 193     -14.053   4.108  45.621  1.00 12.30           C  
+ATOM   1532  CD1 LEU A 193     -12.876   3.385  44.974  1.00 13.46           C  
+ATOM   1533  CD2 LEU A 193     -15.355   3.397  45.170  1.00 13.31           C  
+ATOM   1534  N   GLU A 194     -14.148   5.336  50.102  1.00 12.12           N  
+ATOM   1535  CA  GLU A 194     -13.945   5.226  51.550  1.00 12.32           C  
+ATOM   1536  C   GLU A 194     -15.279   5.253  52.295  1.00 13.42           C  
+ATOM   1537  O   GLU A 194     -15.434   4.570  53.300  1.00 14.12           O  
+ATOM   1538  CB  GLU A 194     -12.994   6.307  52.065  1.00 12.71           C  
+ATOM   1539  CG  GLU A 194     -11.562   6.142  51.573  1.00 12.73           C  
+ATOM   1540  CD  GLU A 194     -10.653   7.172  52.211  1.00 14.89           C  
+ATOM   1541  OE1 GLU A 194     -10.559   7.179  53.461  1.00 15.46           O  
+ATOM   1542  OE2 GLU A 194     -10.058   7.973  51.471  1.00 14.84           O  
+ATOM   1543  N   ALA A 195     -16.246   6.033  51.812  1.00 11.91           N  
+ATOM   1544  CA  ALA A 195     -17.570   5.993  52.445  1.00 12.60           C  
+ATOM   1545  C   ALA A 195     -18.214   4.615  52.258  1.00 12.80           C  
+ATOM   1546  O   ALA A 195     -18.862   4.093  53.164  1.00 12.48           O  
+ATOM   1547  CB  ALA A 195     -18.471   7.114  51.922  1.00 12.96           C  
+ATOM   1548  N   ALA A 196     -18.035   4.056  51.060  1.00 12.62           N  
+ATOM   1549  CA  ALA A 196     -18.712   2.840  50.670  1.00 12.42           C  
+ATOM   1550  C   ALA A 196     -18.190   1.584  51.378  1.00 12.49           C  
+ATOM   1551  O   ALA A 196     -18.950   0.615  51.508  1.00 13.07           O  
+ATOM   1552  CB  ALA A 196     -18.649   2.679  49.154  1.00 12.67           C  
+ATOM   1553  N   ILE A 197     -16.943   1.598  51.873  1.00 12.68           N  
+ATOM   1554  CA  ILE A 197     -16.425   0.392  52.555  1.00 12.64           C  
+ATOM   1555  C   ILE A 197     -17.186   0.102  53.850  1.00 12.59           C  
+ATOM   1556  O   ILE A 197     -17.187  -1.038  54.306  1.00 12.37           O  
+ATOM   1557  CB  ILE A 197     -14.916   0.449  52.848  1.00 12.54           C  
+ATOM   1558  CG1 ILE A 197     -14.627   1.584  53.829  1.00 13.41           C  
+ATOM   1559  CG2 ILE A 197     -14.129   0.509  51.558  1.00 13.61           C  
+ATOM   1560  CD1 ILE A 197     -13.180   1.667  54.301  1.00 13.45           C  
+ATOM   1561  N   PHE A 198     -17.838   1.117  54.434  1.00 12.22           N  
+ATOM   1562  CA  PHE A 198     -18.562   0.907  55.692  1.00 12.56           C  
+ATOM   1563  C   PHE A 198     -19.798   0.054  55.522  1.00 13.36           C  
+ATOM   1564  O   PHE A 198     -20.260  -0.555  56.480  1.00 14.42           O  
+ATOM   1565  CB  PHE A 198     -18.825   2.239  56.403  1.00 13.91           C  
+ATOM   1566  CG  PHE A 198     -17.558   2.876  56.865  1.00 12.54           C  
+ATOM   1567  CD1 PHE A 198     -16.859   3.725  56.031  1.00 13.89           C  
+ATOM   1568  CD2 PHE A 198     -17.014   2.548  58.103  1.00 14.15           C  
+ATOM   1569  CE1 PHE A 198     -15.638   4.267  56.414  1.00 14.20           C  
+ATOM   1570  CE2 PHE A 198     -15.791   3.096  58.509  1.00 15.46           C  
+ATOM   1571  CZ  PHE A 198     -15.100   3.957  57.663  1.00 15.42           C  
+ATOM   1572  N   GLY A 199     -20.318  -0.007  54.295  1.00 13.60           N  
+ATOM   1573  CA  GLY A 199     -21.429  -0.897  53.994  1.00 13.25           C  
+ATOM   1574  C   GLY A 199     -21.008  -2.177  53.276  1.00 12.92           C  
+ATOM   1575  O   GLY A 199     -21.613  -3.241  53.465  1.00 14.66           O  
+ATOM   1576  N   LEU A 200     -19.972  -2.079  52.439  1.00 12.15           N  
+ATOM   1577  CA  LEU A 200     -19.627  -3.169  51.516  1.00 11.85           C  
+ATOM   1578  C   LEU A 200     -18.244  -3.784  51.710  1.00 11.64           C  
+ATOM   1579  O   LEU A 200     -17.940  -4.814  51.090  1.00 12.09           O  
+ATOM   1580  CB  LEU A 200     -19.799  -2.735  50.048  1.00 12.49           C  
+ATOM   1581  CG  LEU A 200     -21.234  -2.367  49.665  1.00 12.31           C  
+ATOM   1582  CD1 LEU A 200     -21.193  -1.636  48.331  1.00 14.72           C  
+ATOM   1583  CD2 LEU A 200     -22.137  -3.580  49.597  1.00 14.48           C  
+ATOM   1584  N   GLU A 201     -17.438  -3.177  52.585  1.00 12.06           N  
+ATOM   1585  CA  GLU A 201     -16.092  -3.661  53.002  1.00 12.06           C  
+ATOM   1586  C   GLU A 201     -15.000  -3.622  51.945  1.00 12.27           C  
+ATOM   1587  O   GLU A 201     -13.939  -3.057  52.188  1.00 13.10           O  
+ATOM   1588  CB  GLU A 201     -16.117  -5.025  53.697  1.00 13.19           C  
+ATOM   1589  CG  GLU A 201     -16.761  -4.967  55.066  1.00 13.78           C  
+ATOM   1590  CD  GLU A 201     -16.745  -6.331  55.703  1.00 14.57           C  
+ATOM   1591  OE1 GLU A 201     -17.745  -7.055  55.535  1.00 14.41           O  
+ATOM   1592  OE2 GLU A 201     -15.699  -6.710  56.304  1.00 14.66           O  
+ATOM   1593  N   LYS A 202     -15.256  -4.227  50.785  1.00 11.42           N  
+ATOM   1594  CA  LYS A 202     -14.275  -4.258  49.682  1.00 11.50           C  
+ATOM   1595  C   LYS A 202     -14.994  -3.748  48.453  1.00 10.95           C  
+ATOM   1596  O   LYS A 202     -15.956  -4.364  47.996  1.00 11.56           O  
+ATOM   1597  CB  LYS A 202     -13.768  -5.682  49.446  1.00 12.03           C  
+ATOM   1598  CG  LYS A 202     -12.912  -6.209  50.607  1.00 13.88           C  
+ATOM   1599  CD  LYS A 202     -12.659  -7.704  50.567  1.00 15.43           C  
+ATOM   1600  CE  LYS A 202     -11.971  -8.192  49.322  1.00 16.81           C  
+ATOM   1601  NZ  LYS A 202     -11.582  -9.645  49.412  1.00 16.25           N  
+ATOM   1602  N   VAL A 203     -14.551  -2.591  47.949  1.00 10.76           N  
+ATOM   1603  CA  VAL A 203     -15.236  -1.939  46.840  1.00 11.00           C  
+ATOM   1604  C   VAL A 203     -14.264  -1.529  45.750  1.00 10.28           C  
+ATOM   1605  O   VAL A 203     -13.066  -1.337  45.994  1.00 11.13           O  
+ATOM   1606  CB  VAL A 203     -16.037  -0.695  47.315  1.00 11.86           C  
+ATOM   1607  CG1 VAL A 203     -17.089  -1.090  48.360  1.00 12.79           C  
+ATOM   1608  CG2 VAL A 203     -15.089   0.402  47.832  1.00 12.65           C  
+ATOM   1609  N   TRP A 204     -14.799  -1.377  44.546  1.00 10.43           N  
+ATOM   1610  CA  TRP A 204     -14.008  -0.863  43.451  1.00 10.30           C  
+ATOM   1611  C   TRP A 204     -14.878  -0.070  42.504  1.00  9.96           C  
+ATOM   1612  O   TRP A 204     -16.099  -0.239  42.464  1.00 10.56           O  
+ATOM   1613  CB  TRP A 204     -13.293  -2.000  42.711  1.00 11.10           C  
+ATOM   1614  CG  TRP A 204     -14.207  -2.942  41.949  1.00 10.33           C  
+ATOM   1615  CD1 TRP A 204     -14.886  -4.024  42.447  1.00 11.11           C  
+ATOM   1616  CD2 TRP A 204     -14.517  -2.881  40.553  1.00 10.59           C  
+ATOM   1617  NE1 TRP A 204     -15.583  -4.648  41.435  1.00 10.69           N  
+ATOM   1618  CE2 TRP A 204     -15.386  -3.954  40.266  1.00  9.92           C  
+ATOM   1619  CE3 TRP A 204     -14.168  -2.002  39.509  1.00 11.56           C  
+ATOM   1620  CZ2 TRP A 204     -15.877  -4.206  38.968  1.00 11.46           C  
+ATOM   1621  CZ3 TRP A 204     -14.663  -2.242  38.234  1.00 11.26           C  
+ATOM   1622  CH2 TRP A 204     -15.505  -3.335  37.973  1.00 11.32           C  
+ATOM   1623  N   SER A 205     -14.226   0.770  41.713  1.00 10.59           N  
+ATOM   1624  CA  SER A 205     -14.936   1.490  40.655  1.00 10.38           C  
+ATOM   1625  C   SER A 205     -14.016   1.689  39.460  1.00 10.73           C  
+ATOM   1626  O   SER A 205     -12.785   1.715  39.622  1.00 10.54           O  
+ATOM   1627  CB  SER A 205     -15.458   2.851  41.153  1.00 11.59           C  
+ATOM   1628  OG  SER A 205     -14.411   3.661  41.630  1.00 12.02           O  
+ATOM   1629  N   LEU A 206     -14.627   1.835  38.275  1.00 10.44           N  
+ATOM   1630  CA  LEU A 206     -13.899   2.262  37.099  1.00 11.27           C  
+ATOM   1631  C   LEU A 206     -14.576   3.516  36.571  1.00 11.15           C  
+ATOM   1632  O   LEU A 206     -15.720   3.471  36.121  1.00 11.94           O  
+ATOM   1633  CB  LEU A 206     -13.872   1.148  36.039  1.00 10.36           C  
+ATOM   1634  CG  LEU A 206     -13.202   1.496  34.707  1.00 11.91           C  
+ATOM   1635  CD1 LEU A 206     -11.706   1.828  34.900  1.00 11.61           C  
+ATOM   1636  CD2 LEU A 206     -13.409   0.343  33.693  1.00 13.49           C  
+ATOM   1637  N   THR A 207     -13.873   4.649  36.657  1.00 10.97           N  
+ATOM   1638  CA  THR A 207     -14.485   5.933  36.294  1.00 11.63           C  
+ATOM   1639  C   THR A 207     -13.501   6.753  35.510  1.00 12.03           C  
+ATOM   1640  O   THR A 207     -12.294   6.551  35.600  1.00 12.27           O  
+ATOM   1641  CB  THR A 207     -14.915   6.769  37.529  1.00 12.31           C  
+ATOM   1642  OG1 THR A 207     -13.764   7.014  38.345  1.00 12.98           O  
+ATOM   1643  CG2 THR A 207     -15.927   5.992  38.403  1.00 13.73           C  
+ATOM   1644  N   PRO A 208     -14.020   7.701  34.742  1.00 11.70           N  
+ATOM   1645  CA  PRO A 208     -13.160   8.706  34.140  1.00 12.62           C  
+ATOM   1646  C   PRO A 208     -12.786   9.707  35.224  1.00 13.72           C  
+ATOM   1647  O   PRO A 208     -13.650  10.161  35.998  1.00 13.86           O  
+ATOM   1648  CB  PRO A 208     -14.053   9.337  33.062  1.00 12.83           C  
+ATOM   1649  CG  PRO A 208     -15.446   9.203  33.623  1.00 13.50           C  
+ATOM   1650  CD  PRO A 208     -15.441   7.865  34.381  1.00 12.48           C  
+ATOM   1651  N   SER A 209     -11.490  10.013  35.273  1.00 13.40           N  
+ATOM   1652  CA  SER A 209     -10.952  11.021  36.178  1.00 13.87           C  
+ATOM   1653  C   SER A 209     -10.364  12.165  35.370  1.00 15.04           C  
+ATOM   1654  O   SER A 209      -9.924  11.984  34.249  1.00 14.62           O  
+ATOM   1655  CB  SER A 209      -9.873  10.421  37.102  1.00 14.31           C  
+ATOM   1656  OG  SER A 209     -10.415   9.481  38.027  1.00 15.03           O  
+ATOM   1657  N   PHE A 210     -10.364  13.345  35.967  1.00 15.28           N  
+ATOM   1658  CA  PHE A 210     -10.088  14.574  35.216  1.00 16.31           C  
+ATOM   1659  C   PHE A 210      -8.997  15.320  35.910  1.00 17.36           C  
+ATOM   1660  O   PHE A 210      -9.073  15.533  37.118  1.00 18.06           O  
+ATOM   1661  CB  PHE A 210     -11.363  15.416  35.072  1.00 17.12           C  
+ATOM   1662  CG  PHE A 210     -12.465  14.674  34.374  1.00 15.93           C  
+ATOM   1663  CD1 PHE A 210     -12.604  14.752  32.991  1.00 15.60           C  
+ATOM   1664  CD2 PHE A 210     -13.332  13.867  35.094  1.00 15.49           C  
+ATOM   1665  CE1 PHE A 210     -13.601  14.019  32.329  1.00 16.13           C  
+ATOM   1666  CE2 PHE A 210     -14.322  13.118  34.448  1.00 15.59           C  
+ATOM   1667  CZ  PHE A 210     -14.470  13.214  33.064  1.00 16.78           C  
+ATOM   1668  N   ARG A 211      -7.971  15.685  35.145  1.00 17.40           N  
+ATOM   1669  CA  ARG A 211      -6.822  16.391  35.704  1.00 18.77           C  
+ATOM   1670  C   ARG A 211      -6.481  17.564  34.806  1.00 19.58           C  
+ATOM   1671  O   ARG A 211      -6.126  17.371  33.644  1.00 19.93           O  
+ATOM   1672  CB  ARG A 211      -5.616  15.457  35.816  1.00 18.76           C  
+ATOM   1673  CG  ARG A 211      -5.851  14.173  36.643  1.00 20.71           C  
+ATOM   1674  CD  ARG A 211      -6.001  14.413  38.133  1.00 21.19           C  
+ATOM   1675  NE  ARG A 211      -6.240  13.156  38.845  1.00 19.89           N  
+ATOM   1676  CZ  ARG A 211      -5.335  12.484  39.546  1.00 19.83           C  
+ATOM   1677  NH1 ARG A 211      -5.684  11.336  40.128  1.00 18.75           N  
+ATOM   1678  NH2 ARG A 211      -4.089  12.947  39.677  1.00 20.98           N  
+ATOM   1679  N   ALA A 212      -6.602  18.775  35.350  1.00 21.13           N  
+ATOM   1680  CA  ALA A 212      -6.313  19.974  34.579  1.00 23.54           C  
+ATOM   1681  C   ALA A 212      -4.801  20.187  34.624  1.00 25.37           C  
+ATOM   1682  O   ALA A 212      -4.306  21.122  35.245  1.00 26.15           O  
+ATOM   1683  CB  ALA A 212      -7.069  21.153  35.142  1.00 23.62           C  
+ATOM   1684  N   GLU A 213      -4.084  19.265  33.987  1.00 27.47           N  
+ATOM   1685  CA  GLU A 213      -2.632  19.230  34.000  1.00 29.55           C  
+ATOM   1686  C   GLU A 213      -2.160  19.979  32.771  1.00 30.63           C  
+ATOM   1687  O   GLU A 213      -2.425  19.557  31.647  1.00 30.10           O  
+ATOM   1688  CB  GLU A 213      -2.137  17.769  33.991  1.00 30.54           C  
+ATOM   1689  CG  GLU A 213      -0.621  17.594  33.923  1.00 34.31           C  
+ATOM   1690  CD  GLU A 213       0.101  18.200  35.116  1.00 28.65           C  
+ATOM   1691  OE1 GLU A 213      -0.181  17.789  36.261  1.00 39.82           O  
+ATOM   1692  OE2 GLU A 213       0.952  19.090  34.906  1.00 41.84           O  
+ATOM   1693  N   LYS A 214      -1.467  21.092  32.999  1.00 32.36           N  
+ATOM   1694  CA  LYS A 214      -0.995  21.974  31.921  1.00 34.25           C  
+ATOM   1695  C   LYS A 214       0.167  21.368  31.142  1.00 34.34           C  
+ATOM   1696  O   LYS A 214       0.294  21.594  29.935  1.00 34.48           O  
+ATOM   1697  CB  LYS A 214      -0.553  23.325  32.497  1.00 34.56           C  
+ATOM   1698  CG  LYS A 214      -1.689  24.270  32.909  1.00 34.57           C  
+ATOM   1699  CD  LYS A 214      -1.299  25.142  34.120  1.00 46.83           C  
+ATOM   1700  CE  LYS A 214      -0.077  26.031  33.857  1.00 31.38           C  
+ATOM   1701  NZ  LYS A 214      -0.402  27.231  33.026  1.00 49.55           N  
+ATOM   1702  N   SER A 215       1.013  20.611  31.840  1.00 34.86           N  
+ATOM   1703  CA  SER A 215       2.213  20.025  31.245  1.00 35.41           C  
+ATOM   1704  C   SER A 215       1.866  18.930  30.232  1.00 35.41           C  
+ATOM   1705  O   SER A 215       1.170  17.961  30.564  1.00 35.60           O  
+ATOM   1706  CB  SER A 215       3.128  19.478  32.341  1.00 35.56           C  
+ATOM   1707  OG  SER A 215       4.381  19.088  31.808  1.00 36.89           O  
+ATOM   1708  N   ARG A 216       2.364  19.088  29.005  1.00 35.47           N  
+ATOM   1709  CA  ARG A 216       1.982  18.231  27.878  1.00 35.94           C  
+ATOM   1710  C   ARG A 216       2.928  17.050  27.665  1.00 35.03           C  
+ATOM   1711  O   ARG A 216       3.522  16.911  26.588  1.00 35.54           O  
+ATOM   1712  CB  ARG A 216       1.893  19.048  26.585  1.00 35.31           C  
+ATOM   1713  CG  ARG A 216       0.843  20.138  26.599  1.00 35.85           C  
+ATOM   1714  CD  ARG A 216       0.846  20.997  25.345  1.00 33.85           C  
+ATOM   1715  NE  ARG A 216      -0.159  22.053  25.424  1.00 43.24           N  
+ATOM   1716  CZ  ARG A 216      -0.484  22.872  24.427  1.00 26.44           C  
+ATOM   1717  NH1 ARG A 216       0.115  22.775  23.239  1.00 41.24           N  
+ATOM   1718  NH2 ARG A 216      -1.420  23.794  24.621  1.00 43.49           N  
+ATOM   1719  N   THR A 217       3.042  16.188  28.672  1.00 34.21           N  
+ATOM   1720  CA  THR A 217       3.988  15.066  28.622  1.00 33.68           C  
+ATOM   1721  C   THR A 217       3.454  13.885  27.806  1.00 33.31           C  
+ATOM   1722  O   THR A 217       2.340  13.936  27.261  1.00 33.52           O  
+ATOM   1723  CB  THR A 217       4.365  14.589  30.047  1.00 33.77           C  
+ATOM   1724  OG1 THR A 217       3.258  13.886  30.628  1.00 33.65           O  
+ATOM   1725  CG2 THR A 217       4.573  15.775  30.992  1.00 33.68           C  
+ATOM   1726  N   ARG A 218       4.259  12.828  27.729  1.00 32.41           N  
+ATOM   1727  CA  ARG A 218       3.856  11.584  27.081  1.00 32.25           C  
+ATOM   1728  C   ARG A 218       3.142  10.647  28.055  1.00 30.24           C  
+ATOM   1729  O   ARG A 218       2.712   9.569  27.656  1.00 29.57           O  
+ATOM   1730  CB  ARG A 218       5.074  10.876  26.479  1.00 32.40           C  
+ATOM   1731  CG  ARG A 218       6.098  10.404  27.518  1.00 34.19           C  
+ATOM   1732  CD  ARG A 218       7.338   9.763  26.919  1.00 35.12           C  
+ATOM   1733  NE  ARG A 218       8.545  10.095  27.678  1.00 43.53           N  
+ATOM   1734  CZ  ARG A 218       9.770  10.162  27.154  1.00 37.68           C  
+ATOM   1735  NH1 ARG A 218      10.809  10.473  27.924  1.00 47.16           N  
+ATOM   1736  NH2 ARG A 218       9.959   9.925  25.859  1.00 46.47           N  
+ATOM   1737  N   ARG A 219       3.025  11.047  29.325  1.00 28.32           N  
+ATOM   1738  CA  ARG A 219       2.393  10.200  30.354  1.00 27.26           C  
+ATOM   1739  C   ARG A 219       1.139  10.819  30.993  1.00 25.28           C  
+ATOM   1740  O   ARG A 219       0.556  10.247  31.920  1.00 25.32           O  
+ATOM   1741  CB  ARG A 219       3.402   9.801  31.457  1.00 28.22           C  
+ATOM   1742  CG  ARG A 219       3.979  10.973  32.264  1.00 29.81           C  
+ATOM   1743  CD  ARG A 219       4.194  10.681  33.771  1.00 32.49           C  
+ATOM   1744  NE  ARG A 219       5.181   9.627  34.025  1.00 34.00           N  
+ATOM   1745  CZ  ARG A 219       5.555   9.198  35.234  1.00 31.57           C  
+ATOM   1746  NH1 ARG A 219       6.467   8.243  35.333  1.00 36.25           N  
+ATOM   1747  NH2 ARG A 219       5.040   9.717  36.345  1.00 35.34           N  
+ATOM   1748  N   HIS A 220       0.718  11.985  30.506  1.00 23.20           N  
+ATOM   1749  CA  HIS A 220      -0.436  12.668  31.087  1.00 22.33           C  
+ATOM   1750  C   HIS A 220      -1.546  12.890  30.078  1.00 20.67           C  
+ATOM   1751  O   HIS A 220      -1.295  13.308  28.947  1.00 21.33           O  
+ATOM   1752  CB  HIS A 220      -0.019  14.017  31.682  1.00 22.88           C  
+ATOM   1753  CG  HIS A 220       0.785  13.891  32.939  1.00 26.03           C  
+ATOM   1754  ND1 HIS A 220       2.159  13.990  32.956  1.00 29.08           N  
+ATOM   1755  CD2 HIS A 220       0.408  13.648  34.218  1.00 27.22           C  
+ATOM   1756  CE1 HIS A 220       2.595  13.827  34.194  1.00 29.73           C  
+ATOM   1757  NE2 HIS A 220       1.553  13.622  34.980  1.00 29.86           N  
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA

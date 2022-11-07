@@ -1,0 +1,116 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body { 
+	font-family: "Source Sans Pro", "Arial"; 
+	text-size-adjust: 200%;
+	%background-color:#ebe9e7;
+}
+
+
+
+@media only screen and ( min-device-width: 1000px ) {
+	.mobile-display{
+		display:none;
+	}
+}
+
+
+
+body {
+	margin:2%;
+}
+
+#main{
+	%background-color:#d3d3d3;
+	padding:1em;
+	height:2500px;
+}
+
+
+#main a{
+	color: #366BA1;
+}
+
+
+.pdblabel{
+	font-size: 0.9em;
+	font-style:italic;
+}
+
+
+div.svgDiv{
+  width: 100%;
+  %border:1px solid #333;
+  overflow-x: scroll;
+  margin: 1em;
+}
+
+
+.svgDiv canvas{
+	overflow:auto
+}
+
+
+.svgDiv svg{
+	overflow:auto
+}
+
+
+svg{
+  padding: 1em;
+}
+
+.footnote{
+	font-size:0.7em;
+}
+
+
+#tertiaryTable tr td div canvas{
+	border:1px solid #333;
+}
+
+svg text.alpha{
+	fill: #366BA1;
+
+}
+
+
+#notes{
+	text-align:justify;
+	padding:0.5em;
+	
+}
+
+
+#contents{
+	background-color: #d3d3d377;
+	width: 400px;
+}
+
+
+#contents img{
+	width: 25px;
+	height:  25px;
+	vertical-align: middle;
+}
+
+#contents div{
+	padding: 0.2em;
+	margin-left: 0.2em;
+}
+
+
+.dropdownDiv{
+	padding: 1em;
+
+}
+
+.dropdownDiv select{
+	background-color: #696969;
+	color: white;
+	padding: 0.5em;
+	width: 200px;
+}
