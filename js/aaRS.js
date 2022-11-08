@@ -44,7 +44,7 @@ STRAND_ARROW_BASE_WIDTH = 6;
 STRAND_ARROW_HEAD_WIDTH = 13;
 HELIX_WIDTH = 11;
 
-function renderaaRS(aaRS, aaRS_full_name){
+function renderaaRS(aaRS, aaRS_full_name, icon){
 
 
   console.log("rendering", aaRS, aaRS_full_name)
@@ -52,6 +52,10 @@ function renderaaRS(aaRS, aaRS_full_name){
 
   // Page title
   $("title").html(aaRS_full_name);
+
+  // Page icon
+  $("link[rel='icon']").attr("href", icon);
+  $("#alignment").before(`<div id="mainloader" class='loader'><img src='` + icon + `'></img></div>`);
 
 
   // Main header
@@ -112,6 +116,13 @@ function renderaaRS(aaRS, aaRS_full_name){
   });
 
 
+  // Delete loader
+  $("#mainloader").remove();
+
+
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+
   })
 
 	
@@ -134,10 +145,10 @@ function renderTertiary(pdb, id = "tertiary"){
 
 	
 	var options = {
-	  width: 400,
-	  height: 400,
+	  width: 450,
+	  height: 450,
 	  antialias: true,
-	  quality : 'medium'
+	  quality : 'high'
 	};
 	
 	//pv.Viewer.rm("");
@@ -161,7 +172,7 @@ function renderTertiary(pdb, id = "tertiary"){
 		   viewer.cartoon('protein', structure, { color : color.byChain() });
 	  }
 	 
-      viewer.centerOn(structure);
+    viewer.centerOn(structure);
 	  viewer.setZoom(150);
 	  $("#" + id).append("<div class='pdblabel'>" + pdb + "</div>");
 	  

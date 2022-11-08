@@ -85,6 +85,13 @@ svg text.alpha{
 	
 }
 
+.notes{
+	text-align:justify;
+	padding:0.5em;
+	
+}
+
+
 
 #contents{
 	background-color: #d3d3d377;
@@ -123,6 +130,24 @@ svg text.alpha{
 }
 
 #references div{
-	font-size: 0.9em;
+	font-size: 1em;
 	padding: 0.5em;
+}
+
+
+.loader{
+	text-align: center;
+	animation: spin 2.5s linear infinite;
+}
+
+.loader img{
+	width: 150px;
+	height: 150px;
+	padding: 2em;
+
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
