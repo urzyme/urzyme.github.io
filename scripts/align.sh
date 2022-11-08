@@ -25,7 +25,7 @@ done
 ../../../../DeepAlign/3DCOMB -i structures.txt -o align
 
 
-exit
+#exit
 
 
 
