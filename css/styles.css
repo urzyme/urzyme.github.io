@@ -141,7 +141,7 @@ svg text.alpha{
 }
 
 .loader img{
-	width: 200px;
+	width: 150px;
 	%height: 150px;
 	padding: 2em;
 

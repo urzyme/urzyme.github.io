@@ -55,7 +55,7 @@ function renderaaRS(aaRS, aaRS_full_name, icon){
 
   // Page icon
   $("link[rel='icon']").attr("href", icon);
-  $("#alignment").before(`<div id="mainloader" class='loader'><img src='` + icon.replace(".png", "_trna.png") + `'></img></div>`);
+  $("#alignment").before(`<div id="mainloader" class='loader'><img src='` + icon + `'></img></div>`);
 
 
   // Main header
