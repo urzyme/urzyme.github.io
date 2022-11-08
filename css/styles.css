@@ -137,12 +137,12 @@ svg text.alpha{
 
 .loader{
 	text-align: center;
-	animation: spin 2.5s linear infinite;
+	animation: spin 1.5s linear infinite;
 }
 
 .loader img{
-	width: 150px;
-	height: 150px;
+	width: 200px;
+	%height: 150px;
 	padding: 2em;
 
 }
