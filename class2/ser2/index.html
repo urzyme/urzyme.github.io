@@ -1,0 +1,122 @@
+﻿
+
+
+<html>
+<head>
+<title>aaRS</title>
+
+<link rel="icon" >
+<meta name="viewport" content="width=device-width, initial-scale=0.41, maximum-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/styles.css">
+
+<script language='JavaScript' type='text/JavaScript' src="../../js/aaRS.js"></script>
+<script type='text/javascript' src='../../bower_components/bio-pv/bio-pv.min.js'></script>
+
+        
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+
+
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+
+
+
+<script language='JavaScript' type='text/JavaScript'>
+
+
+function init(){
+	
+	renderaaRS("SerRS", "Archaeal Seryl tRNA Synthetase", "../../fig/icon_polar.png");
+}
+
+
+
+</script>
+
+</head>
+<body onload="init()">
+
+
+	<div id="main">
+
+		<h1></h1>
+		
+		<class id="notes">
+		
+			This variant of SerRS is atypical and is found in methanogenic archaea. Like most members of the class II aaRS superfamily, the archaeal SerRS is homodimeric. <br><br>
+		
+			Also see the <a href="../ser1">predominant class II SerRS</a>, evolutionarily distinct from this one, found in most organisms.
+		
+		
+		</div>
+		
+		
+		<div id="alignment" class="svgDiv">
+
+		</div>
+
+
+		<div id="alignment2" class="svgDiv">
+
+		</div>
+
+
+		<div class="svgDiv">
+			<svg id="secondary" height=0 width=0 overflow="auto"></svg>
+		</div>
+
+		<div id="tertiaryTable">
+			
+			<table>
+				<tr>
+					<td>
+						<div id="superposition"> </div>
+					</td>
+					
+					<td>
+						<div id="tertiary"> </div>
+					</td>
+				</tr>
+			
+			</table>
+			
+			
+		
+		</div>
+		
+		
+
+		
+		
+		
+
+		<div id="references">
+		
+			
+
+			<div>
+				Bilokapic, Silvija, et al. "Structure of the unusual seryl-tRNA synthetase reveals a distinct zinc dependent mode of substrate recognition." The EMBO journal 25.11 (2006): 2498-2509.
+			</div>
+
+
+
+
+		</div>
+
+
+
+
+	</div>
+</body>
+</html>
