@@ -22,8 +22,10 @@ do
 done
 
 
-#../../../../../DeepAlign/3DCOMB -i structures.txt -o align
+../../../../DeepAlign/3DCOMB -i structures.txt -o align
 
+
+#exit
 
 
 
@@ -54,7 +56,7 @@ do
 	done
 
 
-	../../../../../../../DeepAlign/3DCOMB -i structures.txt -o align
+	../../../../../../DeepAlign/3DCOMB -i structures.txt -o align
 	cd ../
 
 
