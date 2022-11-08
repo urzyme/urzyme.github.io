@@ -59,7 +59,8 @@ function renderaaRS(aaRS, aaRS_full_name){
   main.children("h1").html(aaRS_full_name + " (" + aaRS + ")");
 
 
-	$("#notes").before("<h2>Notes</h21>");
+	$("#notes").before("<h2>Notes</h2>");
+  $("#references").before("<h2>References</h2>");
 
   loadAllFiles(function(){
 
@@ -91,7 +92,7 @@ function renderaaRS(aaRS, aaRS_full_name){
   }
   $(dropdown).on("change", function(){
     $("#tertiary").html("");
-    renderTertiary("align.pdb", "superposition");
+    renderTertiary("data/align.pdb", "superposition");
   });
 
 	
