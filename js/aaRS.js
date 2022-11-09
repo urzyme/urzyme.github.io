@@ -896,6 +896,7 @@ function loadStructure(structures, resolve = function() { } ){
       var sequence = "";
       var alignmentSequence = DATA.alignment[acc];
       var siteNum = 0;
+      var nMissingRegions = 0; // Missing regions of pdb residues result in an addition line inserted, with symbol '!'
       for (var alnSiteNum = 0; alnSiteNum < alignmentSequence.length; alnSiteNum++){
 
         var alnChar = alignmentSequence[alnSiteNum];
@@ -904,7 +905,13 @@ function loadStructure(structures, resolve = function() { } ){
           sequence += "-";
         }else{
 
-          var line = lines[firstLine + siteNum];
+          var line = lines[firstLine + siteNum + nMissingRegions];
+          var aa = line.substring(13, 14);
+          while (aa == "!"){
+            nMissingRegions ++;
+            line = lines[firstLine + siteNum + nMissingRegions];
+            aa = line.substring(13, 14);
+          }
           var ss = line.substring(16, 17);
           if (ss == " ") ss = "N";
           sequence += ss;
