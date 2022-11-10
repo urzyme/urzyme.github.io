@@ -4,6 +4,12 @@ DATA = {};
 FADE_TIME = 50;
 
 
+PV_VIEWERS = {};
+PV_PDBS = {};
+PV_GEOMS = {};
+
+SELECTED_SITES = {lower: -1, upper: -1};
+
 AA_COLS = {A: "#80a0f0", I: "#80a0f0", L: "#80a0f0", M: "#80a0f0", F: "#80a0f0", W: "#80a0f0", V: "#80a0f0",
           K: "#f01505", R: "#f01505",
           D: "#c048c0", E: "#c048c0",
@@ -21,6 +27,12 @@ AA_COLS_2 = {E: "#FFC20A", H: "#0C7BDC", G: "#0C7BDC", I: "#0C7BDC", T:"#d3d3d3"
 
 
 MIN_SSE_LEN = 3;
+
+
+// Canonical ordering on 3dcomb
+CHAIN_NAMES = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
+               "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
+               "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 
 
 SVG_WIDTH = 800;
@@ -69,7 +81,7 @@ function renderaaRS(aaRS, aaRS_full_name, icon){
   loadAllFiles(function(){
 
 
-    console.log(DATA);
+    //console.log(DATA);
     renderAlignment("alignment", "Primary structure", true);
     renderAlignment("alignment2", "Secondary structure", false);
     renderSecondary($("#secondary"));
@@ -78,8 +90,8 @@ function renderaaRS(aaRS, aaRS_full_name, icon){
 
 
 
-  // Footnote
-   $("#secondary").parent().after("<div class='footnote'>Extended strands and helices are displayed only if at least " + MIN_SSE_LEN + " residues in length.</div>");
+    // Footnote
+   $("#secondary").parent().before("<div class='footnote'>Extended strands and helices are displayed only if at least " + MIN_SSE_LEN + " residues in length.</div>");
   
 
 
@@ -128,20 +140,9 @@ function renderaaRS(aaRS, aaRS_full_name, icon){
 	
 }
 
-function renderTertiary(pdb, id = "tertiary"){
+function renderTertiary(pdb = null, id = "tertiary") {
 	
-	console.log(pdb);
-
-
-  // Which domain?
-  var domain = $("#domainSelect").val();
-  var domainDir = domain.replaceAll(" ", "_");
-  if (domain != "_full"){
-    pdb = pdb.replace("data/", "")
-    pdb = "data/domains/" + domainDir + "/" + pdb ;
-  }else{
-    pdb = pdb;
-  }
+	
 
 	
 	var options = {
@@ -151,42 +152,184 @@ function renderTertiary(pdb, id = "tertiary"){
 	  quality : 'high'
 	};
 	
-	//pv.Viewer.rm("");
-	$("#" + id).html("");
-	//$("#" + id).html("");
-	var viewer = pv.Viewer(document.getElementById(id), options);
-	viewer.rm("*");
+
+  // Reset canvas
+  $("#" + id).html("");
+
+
+  // Try to load it
+  if (pdb == null){
+    pdb = PV_PDBS[id];
+  }
+
+  // Which protein domain?
+  if (pdb != null){
+     
+    var domain = $("#domainSelect").val();
+    var domainDir = domain.replaceAll(" ", "_");
+    if (domain != "_full"){
+      pdb = pdb.replace("data/", "")
+      pdb = "data/domains/" + domainDir + "/" + pdb ;
+    }else{
+      pdb = pdb;
+    }
+
+
+  }
+  PV_PDBS[id] = pdb;
+
+
+  // Load/save viewer
+  var viewer = null;
+  if (PV_VIEWERS[id] == null){
+    viewer = pv.Viewer(document.getElementById(id), options);
+  }else{
+    viewer = PV_VIEWERS[id];
+    viewer.rm("");
+    viewer = pv.Viewer(document.getElementById(id), options);
+    
+  }
+  PV_VIEWERS[id] = viewer;
+
+  console.log(pdb);
+
 	
 	// https://pv.readthedocs.io/en/v1.8.1/intro.html
  // asynchronously load the PDB file for the dengue methyl transferase from the server and display it in the viewer.
   pv.io.fetchPdb(pdb, function(structure) {
-	  
 
 	  
-      // display the protein as cartoon, coloring the secondary structure
-      // elements in a rainbow gradient.
-      //viewer.cartoon('protein', structure, { color : color.ssSuccession() });
+    // Display the protein as cartoon
 	  if (id == "tertiary"){
-		   viewer.cartoon('protein', structure, { color : color.rainbow() });
+      PV_GEOMS[id] = viewer.cartoon('protein', structure, { color : colourSelected(id, color.rainbow) });
 	  }else{
-		   viewer.cartoon('protein', structure, { color : color.byChain() });
+		  PV_GEOMS[id] = viewer.cartoon('protein', structure, { color : colourSelected(id, color.byChain) });
 	  }
 	 
     viewer.centerOn(structure);
 	  viewer.setZoom(150);
+    //viewer.autoZoom();
 	  $("#" + id).append("<div class='pdblabel'>" + pdb + "</div>");
 	  
   });
   
-  
 
-	
-	
 	
 }
 
 
+ // Update tertiary colours
+function recolourTertiaries(){
 
+    for (var id in PV_VIEWERS){
+     // console.log("recolouring", id)
+      //renderTertiary(null, id)
+
+      if (id == "tertiary"){
+        PV_GEOMS[id].colorBy(colourSelected(id, color.rainbow));
+      }else{
+        PV_GEOMS[id].colorBy(colourSelected(id, color.byChain));
+      }
+        PV_VIEWERS[id].requestRedraw();
+    }
+     
+
+}
+
+// Colour pdb structure by highlighting selected residues
+function colourSelected(id, defaultFn) {
+
+  // Default colouring
+  if (SELECTED_SITES.lower == -1) {
+    return defaultFn();
+  }
+
+
+  // Colour function
+  var colorFunc = function(atom, out, index) {
+
+    var chainName = atom.residue().chain().name();
+
+    // Get accession
+    var pdb = PV_PDBS[id];
+    var acc = null;
+    if (id == "tertiary"){
+
+
+      // Main chain only
+      if (chainName != "A") {
+        out[index+0] = 0.6; out[index+1] = 0.6;
+        out[index+2] = 0.6; out[index+3] = 0.8;
+        return;
+      }
+
+      // Single structure
+      acc = pdb.split("/");
+      acc = acc[acc.length-1];
+
+
+    }else{
+
+      // Alignment
+      var chainNum = 0;
+      for (var chainNum = 0; chainNum < CHAIN_NAMES.length; chainNum++){
+        if (CHAIN_NAMES[chainNum] == chainName){
+          acc = DATA.accessions[chainNum];
+          break;
+        }
+      }
+
+    }
+
+
+
+    // Get site in alignment
+    var siteAln = -1;
+    var seq = DATA.alignment[acc];
+    var nsites = seq.length;
+    var resNum = atom.residue().index();
+    var pdbIndex = 0;
+    for (var siteNum = 0; siteNum < nsites; siteNum++){
+
+      if (seq[siteNum] == "-"){
+
+      }else{
+
+        if (pdbIndex == resNum){
+          siteAln = siteNum;
+          break;
+        }
+        pdbIndex++;
+      }
+
+    }
+
+
+    
+    // index + 0, index + 1 etc. are the positions in the output array
+    // at which the red (+0), green (+1), blue (+2) and  alpha (+3)
+    // components are to be written.
+    if (siteAln >= SELECTED_SITES.lower && siteAln <= SELECTED_SITES.upper){
+      out[index+0] = 0.0; out[index+1] = 0.549;
+      out[index+2] = 0.729; out[index+3] = 1.0;
+    }else{
+      out[index+0] = 0.6; out[index+1] = 0.6;
+      out[index+2] = 0.6; out[index+3] = 0.8;
+    }
+
+
+  }
+
+  return new pv.color.ColorOp(colorFunc);
+
+
+}
+
+
+
+/*
+* A domain architecture map in svg
+*/
 function renderSecondary(svg){
 
 
@@ -204,7 +347,14 @@ function renderSecondary(svg){
     svg.hide();
     svg.html("");
     svg.height(SEC_HEIGHT*(nseq+1) + FEATURE_HEIGHT_SEC*5);
-    svg.width(SEC_WIDTH*(nsites+10) + ALN_LABEL_WIDTH);
+    svg.width(SEC_WIDTH*(nsites+100) + ALN_LABEL_WIDTH);
+
+
+    // Groups
+    var svgAnnotation = $(drawSVGobj(svg, "g", {class: "annotation"}));
+    var svgHighlight = $(drawSVGobj(svg, "g", {class: "highlight"}))
+    var svgContent = $(drawSVGobj(svg, "g", {class: "content"}));
+    
 
 
      // Features
@@ -233,19 +383,19 @@ function renderSecondary(svg){
       if (level == 0){
         continue;
       }else{
-		drawSVGobj(svg, "rect", {x: x1-SEC_WIDTH, y: SEC_HEIGHT, width: x2-x1, height:SEC_HEIGHT*nseq + FEATURE_HEIGHT_SEC*(level-1), style:"stroke-width:" +  lw + "px; stroke:black; fill:" + "white"});
-        drawSVGobj(svg, "rect", {x: x1-SEC_WIDTH, y: SEC_HEIGHT, width: x2-x1, height:SEC_HEIGHT*nseq + FEATURE_HEIGHT_SEC*(level-1), style:"stroke-width:" +  lw + "px; stroke:black; fill:" + col});
+		    drawSVGobj(svgAnnotation, "rect", {x: x1-SEC_WIDTH, y: SEC_HEIGHT, width: x2-x1, height:SEC_HEIGHT*nseq + FEATURE_HEIGHT_SEC*(level-1), style:"stroke-width:" +  lw + "px; stroke:black; fill:" + "white"});
+        drawSVGobj(svgAnnotation, "rect", {x: x1-SEC_WIDTH, y: SEC_HEIGHT, width: x2-x1, height:SEC_HEIGHT*nseq + FEATURE_HEIGHT_SEC*(level-1), style:"stroke-width:" +  lw + "px; stroke:black; fill:" + col});
       }
 
 
 	  var points = (x1-NT_WIDTH/4) + "," + (y-SEC_HEIGHT/8) + " " + (x1+NT_WIDTH/4) + "," + (y-SEC_HEIGHT/8) + " " + x1 + "," + (y-SEC_HEIGHT/2);
-	  drawSVGobj(svg, "polygon", {points: points, style: "stroke-width:0px; stroke:black; fill:" + "white"} ) // Triangle
-	  drawSVGobj(svg, "polygon", {points: points, style: "stroke-width:0.7px; stroke:black; fill:" + col} ) // Triangle
+	  drawSVGobj(svgContent, "polygon", {points: points, style: "stroke-width:0px; stroke:black; fill:" + "white"} ) // Triangle
+	  drawSVGobj(svgContent, "polygon", {points: points, style: "stroke-width:0.7px; stroke:black; fill:" + col} ) // Triangle
 	  
 	  if (feature == "Motif 3"){
-		   drawSVGobj(svg, "text", {x: x1+NT_WIDTH/4, y: y-SEC_HEIGHT/20, style: "text-anchor:end; dominant-baseline:hanging; font-size:14px; fill:" + textCol}, value=txt)
+		   drawSVGobj(svgContent, "text", {x: x1+NT_WIDTH/4, y: y-SEC_HEIGHT/20, style: "text-anchor:end; dominant-baseline:hanging; font-size:14px; fill:" + textCol}, value=txt)
 	  }else{
-		   drawSVGobj(svg, "text", {x: x1-NT_WIDTH/4, y: y-SEC_HEIGHT/20, style: "text-anchor:start; dominant-baseline:hanging; font-size:14px; fill:" + textCol}, value=txt)
+		   drawSVGobj(svgContent, "text", {x: x1-NT_WIDTH/4, y: y-SEC_HEIGHT/20, style: "text-anchor:start; dominant-baseline:hanging; font-size:14px; fill:" + textCol}, value=txt)
 	  }
      
     }
@@ -256,7 +406,7 @@ function renderSecondary(svg){
       if (site == 0 || (site+1) % 50 == 0){
         var y = SEC_HEIGHT*0.5;
         var x = SEC_WIDTH*(site) + ALN_LABEL_WIDTH;
-        drawSVGobj(svg, "text", {x: x, y: y, style: "text-anchor:start; dominant-baseline:central; font-family:Source sans pro; font-size:" + NT_FONT_SIZE + "px"}, value=site+1)
+        drawSVGobj(svgContent, "text", {x: x, y: y, style: "text-anchor:start; dominant-baseline:central; font-family:Source sans pro; font-size:" + NT_FONT_SIZE + "px"}, value=site+1)
       }
     }
 
@@ -273,7 +423,7 @@ function renderSecondary(svg){
 	  
 
 	  
-      var ele = drawSVGobj(svg, "text", {x: x, y: y, pdb: acc, style: "text-anchor:end; cursor:pointer; fill:#366BA1; dominant-baseline:central; font-size:" + NT_FONT_SIZE + "px"}, value=accPrint)
+      var ele = drawSVGobj(svgContent, "text", {x: x, y: y, pdb: acc, style: "text-anchor:end; cursor:pointer; fill:#366BA1; dominant-baseline:central; font-size:" + NT_FONT_SIZE + "px"}, value=accPrint)
 		$(ele).bind("click", function(event){
 			renderTertiary("data/structures/" + event.target.getAttribute("pdb"));
 		});
@@ -328,7 +478,7 @@ function renderSecondary(svg){
         else if ((sse.element == "H" || sse.element == "G" || sse.element == "I")  && sse.stop - sse.start + 1 >= MIN_SSE_LEN){
 
           //console.log(acc, "helix", sse);
-          drawSVGobj(svg, "rect", {rx: 2, x: startX, y: y-HELIX_WIDTH/2, width: endX-startX, height: HELIX_WIDTH, style: "stroke-width:1px; stroke:black; fill:" + AA_COLS_2["H"]} );
+          drawSVGobj(svgContent, "rect", {rx: 2, x: startX, y: y-HELIX_WIDTH/2, width: endX-startX, height: HELIX_WIDTH, style: "stroke-width:1px; stroke:black; fill:" + AA_COLS_2["H"]} );
 
         }
 
@@ -348,7 +498,7 @@ function renderSecondary(svg){
           points += " " + x2 + "," + (y+STRAND_ARROW_BASE_WIDTH/2);
           points += " " + startX + "," + (y+STRAND_ARROW_BASE_WIDTH/2);
 
-          drawSVGobj(svg, "polygon", {points: points, style: "stroke-width:1px; stroke:black; fill:" + AA_COLS_2["E"]} )
+          drawSVGobj(svgContent, "polygon", {points: points, style: "stroke-width:1px; stroke:black; fill:" + AA_COLS_2["E"]} )
 
         }
 
@@ -358,7 +508,7 @@ function renderSecondary(svg){
 
           //console.log(acc, "loop", sse);
 
-          drawSVGobj(svg, "line", {x1: startX, x2: endX, y1: y, y2: y, style: "stroke-linecap:round; stroke-width:1px; stroke:black"} )
+          drawSVGobj(svgContent, "line", {x1: startX, x2: endX, y1: y, y2: y, style: "stroke-linecap:round; stroke-width:1px; stroke:black"} )
 
         }
 
@@ -368,9 +518,112 @@ function renderSecondary(svg){
       //console.log("SSE", SSEs);
 
 
-
     }
 
+
+
+    // Residue selection
+    const eleSvg = document.getElementById(svg.attr("id"));
+    eleSvg.addEventListener('mousedown', ({clientX, clientY}) => {
+
+      
+      var x1 = clientX - svg.offset().left;
+      if (x1 <= ALN_LABEL_WIDTH) return;
+
+
+      SELECTED_SITES = {lower: -1, upper: -1};
+
+
+      var clearing = false;
+
+      // Clear selection and draw new rectangle
+      if (svgHighlight.find(".selectionRect").length > 0){
+        svgHighlight.find(".selectionRect").remove();
+        clearing = true;
+      }
+      
+      
+      var res1 = Math.floor((x1 - ALN_LABEL_WIDTH) / SEC_WIDTH) + 1;
+
+      var rect = drawSVGobj(svgHighlight, "rect", {x: x1-SEC_WIDTH/2, y: 0, width: SEC_WIDTH, height: svg.height(), class: "selectionRect", style: "stroke-width:1px; stroke:black; fill:#008cba55"} )
+      var text = drawSVGobj(svgHighlight, "text", {x: SEC_WIDTH*5, y: svg.height() - SEC_WIDTH*5, class: "selectionRect", style: "text-anchor:start; dominant-baseline:auto; font-size:12px"}, "Selected sites " + res1 )
+
+
+
+      var mouseMove = function({clientX, clientY}){
+
+        var x1_ = x1;
+        var x2 = clientX - svg.offset().left;
+
+
+        if (x1_ > x2){
+          var tmp = x1_;
+          x1_ = x2;
+          x2 = tmp;
+        }
+        if (x1_ <= ALN_LABEL_WIDTH+1) x1_ = ALN_LABEL_WIDTH+1;
+        if (x2 <= ALN_LABEL_WIDTH+1) x2 = ALN_LABEL_WIDTH+1;
+        if (x1_ >= svg.width()-2) x1_ = svg.width()-2;
+        if (x2 >= svg.width()-2) x2 = svg.width()-2;
+
+
+        // What are the residue numbers?
+        var res1_ = Math.floor((x1_ - ALN_LABEL_WIDTH) / SEC_WIDTH) + 1;
+        var res2 = Math.ceil((x2 - ALN_LABEL_WIDTH) / SEC_WIDTH) + 1;
+
+        x1_ = res1_ * SEC_WIDTH + ALN_LABEL_WIDTH;
+        x2 = res2 * SEC_WIDTH + ALN_LABEL_WIDTH;
+
+
+        $(rect).attr("x", x1_);
+        $(rect).attr("width", x2-x1_);
+        $(text).html("Selected sites " + res1_ + "-" + res2);
+
+        return {x1: x1_, x2: x2, res1: res1_, res2: res2};
+
+      }
+
+      var mouseUp = function({clientX, clientY}){
+
+
+
+
+        var coords = mouseMove({clientX, clientY});
+
+
+        SELECTED_SITES.lower = coords.res1;
+        SELECTED_SITES.upper = coords.res2;
+
+        // Clear selection
+        if (clearing && SELECTED_SITES.lower >= SELECTED_SITES.upper-1){
+          SELECTED_SITES.lower = -1;
+          SELECTED_SITES.upper = -1;
+          svgHighlight.find(".selectionRect").remove();
+        }
+
+        //console.log(coords);
+
+
+        
+
+        eleSvg.removeEventListener('mouseup', mouseUp);
+        eleSvg.removeEventListener('mouseleave', mouseUp);
+        eleSvg.removeEventListener('mousemove', mouseMove);
+
+
+        // Update tertiary colour
+        recolourTertiaries();
+      }
+
+
+      eleSvg.addEventListener('mouseup', mouseUp);
+      eleSvg.addEventListener('mouseleave', mouseUp);
+      eleSvg.addEventListener('mousemove', mouseMove);
+
+
+      
+
+    });
 
 
 
@@ -410,6 +663,9 @@ createHiDPICanvas = function(w, h, ratio) {
 
 
 
+/*
+* Draw a canvas of primary/secondary as an alignment 
+*/
 function renderAlignment(divID, main, isPrimary = true){
 	
 
@@ -461,7 +717,7 @@ function renderAlignment(divID, main, isPrimary = true){
 	
 	 // Site numbering
     for (var site = 0; site < nsites; site++){
-      if (site == 0 || (site+1) % 10 == 0){
+      if ((site+1) % 10 == 1){
         var y = NT_HEIGHT*0.5;
         var x = NT_WIDTH*(site+0.25) + ALN_LABEL_WIDTH;
       	

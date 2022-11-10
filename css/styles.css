@@ -37,7 +37,7 @@ body {
 
 
 .pdblabel{
-	font-size: 0.9em;
+	font-size: 0.8em;
 	font-style:italic;
 }
 
@@ -61,8 +61,17 @@ div.svgDiv{
 
 
 svg{
-  padding: 1em;
+  %padding: 1em;
 }
+
+
+svg text{
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+
 
 .footnote{
 	font-size:0.7em;
