@@ -82,9 +82,21 @@ function renderaaRS(aaRS, aaRS_full_name, icon){
 
 
     //console.log(DATA);
-    renderAlignment("alignment", "Primary structure", true);
-    renderAlignment("alignment2", "Secondary structure", false);
+    renderAlignment("alignment", true);
+    renderAlignment("alignment2", false);
     renderSecondary($("#secondary"));
+
+
+
+  
+  
+  
+  // Headers and download fasta
+  $("#alignment").before("<h2>Primary structure</h2>");
+  $("#alignment2").before("<h2>Secondary structure</h2>");
+  $("#alignment").after("<a href='data/align.ali' style='float:right'>Download fasta</a>");
+  
+  
 	
 	
 
@@ -108,11 +120,12 @@ function renderaaRS(aaRS, aaRS_full_name, icon){
   }
   $(dropdown).on("change", function(){
     $("#tertiary").html("");
+    clearSelection();
     renderTertiary("data/align.pdb", "superposition");
   });
 
 	
-	$("#tertiaryTable").prepend("<div>Click on a secondary structure above to view its tertiary structure.</div>");
+	$("#tertiaryTable").prepend("<div>Click on an accession or domain above to view its tertiary structure.</div>");
 	$("#tertiaryTable").prepend("<h2>Tertiary structure</h2>");
 	renderTertiary("data/align.pdb", "superposition");
 
@@ -142,9 +155,6 @@ function renderaaRS(aaRS, aaRS_full_name, icon){
 
 function renderTertiary(pdb = null, id = "tertiary") {
 	
-	
-
-	
 	var options = {
 	  width: 450,
 	  height: 450,
@@ -163,19 +173,21 @@ function renderTertiary(pdb = null, id = "tertiary") {
   }
 
   // Which protein domain?
-  if (pdb != null){
+  //if (pdb != null){
      
     var domain = $("#domainSelect").val();
     var domainDir = domain.replaceAll(" ", "_");
+    
     if (domain != "_full"){
       pdb = pdb.replace("data/", "")
       pdb = "data/domains/" + domainDir + "/" + pdb ;
     }else{
-      pdb = pdb;
+      //pdb = pdb.replaceAll("domains/*/", "")
+      //pdb = "data/structures/" + pdb;
     }
 
 
-  }
+  //}
   PV_PDBS[id] = pdb;
 
 
@@ -218,21 +230,44 @@ function renderTertiary(pdb = null, id = "tertiary") {
 }
 
 
+
+
  // Update tertiary colours
 function recolourTertiaries(){
 
-    for (var id in PV_VIEWERS){
-     // console.log("recolouring", id)
-      //renderTertiary(null, id)
 
-      if (id == "tertiary"){
-        PV_GEOMS[id].colorBy(colourSelected(id, color.rainbow));
-      }else{
-        PV_GEOMS[id].colorBy(colourSelected(id, color.byChain));
+  // Full only
+  var redraw = false;
+  if ($("#domainSelect").val() != "_full"){
+    redraw = true;
+    $("#domainSelect").val("_full");
+  }
+
+    for (var id in PV_VIEWERS){
+
+      if (redraw){
+        var pdb = PV_PDBS[id].split("/");
+        pdb = pdb[pdb.length-1];
+        if (id == "tertiary"){
+          pdb = "data/structures/" + pdb;
+        }else{
+          pdb = "data/" + pdb;
+        }
+        
+        renderTertiary(pdb, id);
+
       }
+
+      else {
+        if (id == "tertiary"){
+          PV_GEOMS[id].colorBy(colourSelected(id, color.rainbow));
+        }else{
+          PV_GEOMS[id].colorBy(colourSelected(id, color.byChain));
+        }
         PV_VIEWERS[id].requestRedraw();
+      }
     }
-     
+
 
 }
 
@@ -354,6 +389,114 @@ function renderSecondary(svg){
     var svgAnnotation = $(drawSVGobj(svg, "g", {class: "annotation"}));
     var svgHighlight = $(drawSVGobj(svg, "g", {class: "highlight"}))
     var svgContent = $(drawSVGobj(svg, "g", {class: "content"}));
+
+
+    // Residue selection
+    const eleSvg = $(svg).get(0); //document.getElementById(svg.attr("id"));
+    eleSvg.addEventListener('mousedown', ({clientX, clientY}) => {
+
+      
+      var x1 = clientX - svg.offset().left;
+      if (x1 <= ALN_LABEL_WIDTH) return;
+
+
+      SELECTED_SITES = {lower: -1, upper: -1};
+
+
+      var clearing = false;
+
+      // Clear selection and draw new rectangle
+      if (svgHighlight.find(".selectionRect").length > 0){
+        svgHighlight.find(".selectionRect").remove();
+        clearing = true;
+      }
+      
+      
+      var res1 = Math.floor((x1 - ALN_LABEL_WIDTH) / SEC_WIDTH) + 1;
+
+      var rect = drawSVGobj(svgHighlight, "rect", {x: x1-SEC_WIDTH, y: 0, width: 0, height: svg.height(), class: "selectionRect", style: "stroke-width:1px; stroke:black; fill:#008cba55"} )
+      var text = drawSVGobj(svgHighlight, "text", {x: SEC_WIDTH*5, y: svg.height() - SEC_WIDTH*5, class: "selectionRect", style: "text-anchor:start; dominant-baseline:auto; font-size:12px"}, "Selected sites " + res1 )
+
+
+
+      var mouseMove = function({clientX, clientY}){
+
+        $(svgContent).find("text").attr("class", "");
+
+        var x1_ = x1;
+        var x2 = clientX - svg.offset().left;
+
+
+        if (x1_ > x2){
+          var tmp = x1_;
+          x1_ = x2;
+          x2 = tmp;
+        }
+        if (x1_ <= ALN_LABEL_WIDTH+1) x1_ = ALN_LABEL_WIDTH+1;
+        if (x2 <= ALN_LABEL_WIDTH+1) x2 = ALN_LABEL_WIDTH+1;
+        if (x1_ >= svg.width()-2) x1_ = svg.width()-2;
+        if (x2 >= svg.width()-2) x2 = svg.width()-2;
+
+
+        // What are the residue numbers?
+        var res1_ = Math.floor((x1_ - ALN_LABEL_WIDTH) / SEC_WIDTH) + 1;
+        var res2 = Math.ceil((x2 - ALN_LABEL_WIDTH) / SEC_WIDTH) + 1;
+
+        x1_ = res1_ * SEC_WIDTH + ALN_LABEL_WIDTH;
+        x2 = res2 * SEC_WIDTH + ALN_LABEL_WIDTH;
+
+
+        $(rect).attr("x", x1_);
+        $(rect).attr("width", x2-x1_);
+        $(text).html("Selected sites " + res1_ + "-" + res2);
+
+        return {x1: x1_, x2: x2, res1: res1_, res2: res2};
+
+      }
+
+      var mouseUp = function({clientX, clientY}){
+
+
+
+
+        var coords = mouseMove({clientX, clientY});
+
+
+        SELECTED_SITES.lower = coords.res1;
+        SELECTED_SITES.upper = coords.res2;
+
+        // Clear selection
+        if (clearing && SELECTED_SITES.lower >= SELECTED_SITES.upper-1){
+          SELECTED_SITES.lower = -1;
+          SELECTED_SITES.upper = -1;
+          svgHighlight.find(".selectionRect").remove();
+        }
+
+        selectSites();
+
+
+        eleSvg.removeEventListener('mouseup', mouseUp);
+        eleSvg.removeEventListener('mouseleave', mouseUp);
+        eleSvg.removeEventListener('mousemove', mouseMove);
+
+
+        
+
+
+      }
+
+
+      eleSvg.addEventListener('mouseup', mouseUp);
+      eleSvg.addEventListener('mouseleave', mouseUp);
+      eleSvg.addEventListener('mousemove', mouseMove);
+
+
+      
+
+    });
+
+
+
     
 
 
@@ -365,10 +508,13 @@ function renderSecondary(svg){
       if (range == "") continue;
       range = range.split("-")
       var y = SEC_HEIGHT*(nseq+1) + FEATURE_HEIGHT_SEC*(level-0.5);
-      var x1 = SEC_WIDTH*(parseFloat(range[0])) + ALN_LABEL_WIDTH;
+      var lower = parseFloat(range[0]);
+      var upper = lower;
+      var x1 = SEC_WIDTH*(lower) + ALN_LABEL_WIDTH;
       var x2 = x1 + NT_WIDTH;
       if (range.length == 2){
-        x2 = SEC_WIDTH*(parseFloat(range[1]) + 1) + ALN_LABEL_WIDTH;
+        upper = parseFloat(range[1]);
+        x2 = SEC_WIDTH*(upper + 1) + ALN_LABEL_WIDTH;
       }
 
 
@@ -388,15 +534,29 @@ function renderSecondary(svg){
       }
 
 
-	  var points = (x1-NT_WIDTH/4) + "," + (y-SEC_HEIGHT/8) + " " + (x1+NT_WIDTH/4) + "," + (y-SEC_HEIGHT/8) + " " + x1 + "," + (y-SEC_HEIGHT/2);
-	  drawSVGobj(svgContent, "polygon", {points: points, style: "stroke-width:0px; stroke:black; fill:" + "white"} ) // Triangle
-	  drawSVGobj(svgContent, "polygon", {points: points, style: "stroke-width:0.7px; stroke:black; fill:" + col} ) // Triangle
-	  
-	  if (feature == "Motif 3"){
-		   drawSVGobj(svgContent, "text", {x: x1+NT_WIDTH/4, y: y-SEC_HEIGHT/20, style: "text-anchor:end; dominant-baseline:hanging; font-size:14px; fill:" + textCol}, value=txt)
-	  }else{
-		   drawSVGobj(svgContent, "text", {x: x1-NT_WIDTH/4, y: y-SEC_HEIGHT/20, style: "text-anchor:start; dominant-baseline:hanging; font-size:14px; fill:" + textCol}, value=txt)
-	  }
+  	  var points = (x1-NT_WIDTH/4) + "," + (y-SEC_HEIGHT/8) + " " + (x1+NT_WIDTH/4) + "," + (y-SEC_HEIGHT/8) + " " + x1 + "," + (y-SEC_HEIGHT/2);
+  	  drawSVGobj(svgContent, "polygon", {points: points, style: "stroke-width:0px; stroke:black; fill:" + "white"} ) // Triangle
+  	  drawSVGobj(svgContent, "polygon", {points: points, style: "stroke-width:0.7px; stroke:black; fill:" + col} ) // Triangle
+  	  
+      var text;
+  	  if (feature == "Motif 3"){
+  		   text = drawSVGobj(svgContent, "text", {lower: lower, upper:upper, x: x1+NT_WIDTH/4, y: y-SEC_HEIGHT/20, style: "cursor:pointer; text-anchor:end; dominant-baseline:hanging; font-size:14px; fill:" + textCol}, value=txt)
+  	  }else{
+  		   text = drawSVGobj(svgContent, "text", {lower: lower, upper:upper,  x: x1-NT_WIDTH/4, y: y-SEC_HEIGHT/20, style: "cursor:pointer; text-anchor:start; dominant-baseline:hanging; font-size:14px; fill:" + textCol}, value=txt)
+  	  }
+
+
+      // Click on a feature to select residues
+      $(text).click(function(){
+        var ele = $(this);
+        svgHighlight.find(".selectionRect").remove();
+        $(svgContent).find("text").attr("class", "");
+        $(ele).attr("class", "selected");
+        console.log(ele.attr("lower"), ele.attr("upper"));
+        SELECTED_SITES.lower = parseFloat(ele.attr("lower"));
+        SELECTED_SITES.upper = parseFloat(ele.attr("upper"));
+        selectSites();
+      });
      
     }
 
@@ -522,114 +682,37 @@ function renderSecondary(svg){
 
 
 
-    // Residue selection
-    const eleSvg = document.getElementById(svg.attr("id"));
-    eleSvg.addEventListener('mousedown', ({clientX, clientY}) => {
-
-      
-      var x1 = clientX - svg.offset().left;
-      if (x1 <= ALN_LABEL_WIDTH) return;
-
-
-      SELECTED_SITES = {lower: -1, upper: -1};
-
-
-      var clearing = false;
-
-      // Clear selection and draw new rectangle
-      if (svgHighlight.find(".selectionRect").length > 0){
-        svgHighlight.find(".selectionRect").remove();
-        clearing = true;
-      }
-      
-      
-      var res1 = Math.floor((x1 - ALN_LABEL_WIDTH) / SEC_WIDTH) + 1;
-
-      var rect = drawSVGobj(svgHighlight, "rect", {x: x1-SEC_WIDTH/2, y: 0, width: SEC_WIDTH, height: svg.height(), class: "selectionRect", style: "stroke-width:1px; stroke:black; fill:#008cba55"} )
-      var text = drawSVGobj(svgHighlight, "text", {x: SEC_WIDTH*5, y: svg.height() - SEC_WIDTH*5, class: "selectionRect", style: "text-anchor:start; dominant-baseline:auto; font-size:12px"}, "Selected sites " + res1 )
-
-
-
-      var mouseMove = function({clientX, clientY}){
-
-        var x1_ = x1;
-        var x2 = clientX - svg.offset().left;
-
-
-        if (x1_ > x2){
-          var tmp = x1_;
-          x1_ = x2;
-          x2 = tmp;
-        }
-        if (x1_ <= ALN_LABEL_WIDTH+1) x1_ = ALN_LABEL_WIDTH+1;
-        if (x2 <= ALN_LABEL_WIDTH+1) x2 = ALN_LABEL_WIDTH+1;
-        if (x1_ >= svg.width()-2) x1_ = svg.width()-2;
-        if (x2 >= svg.width()-2) x2 = svg.width()-2;
-
-
-        // What are the residue numbers?
-        var res1_ = Math.floor((x1_ - ALN_LABEL_WIDTH) / SEC_WIDTH) + 1;
-        var res2 = Math.ceil((x2 - ALN_LABEL_WIDTH) / SEC_WIDTH) + 1;
-
-        x1_ = res1_ * SEC_WIDTH + ALN_LABEL_WIDTH;
-        x2 = res2 * SEC_WIDTH + ALN_LABEL_WIDTH;
-
-
-        $(rect).attr("x", x1_);
-        $(rect).attr("width", x2-x1_);
-        $(text).html("Selected sites " + res1_ + "-" + res2);
-
-        return {x1: x1_, x2: x2, res1: res1_, res2: res2};
-
-      }
-
-      var mouseUp = function({clientX, clientY}){
-
-
-
-
-        var coords = mouseMove({clientX, clientY});
-
-
-        SELECTED_SITES.lower = coords.res1;
-        SELECTED_SITES.upper = coords.res2;
-
-        // Clear selection
-        if (clearing && SELECTED_SITES.lower >= SELECTED_SITES.upper-1){
-          SELECTED_SITES.lower = -1;
-          SELECTED_SITES.upper = -1;
-          svgHighlight.find(".selectionRect").remove();
-        }
-
-        //console.log(coords);
-
-
-        
-
-        eleSvg.removeEventListener('mouseup', mouseUp);
-        eleSvg.removeEventListener('mouseleave', mouseUp);
-        eleSvg.removeEventListener('mousemove', mouseMove);
-
-
-        // Update tertiary colour
-        recolourTertiaries();
-      }
-
-
-      eleSvg.addEventListener('mouseup', mouseUp);
-      eleSvg.addEventListener('mouseleave', mouseUp);
-      eleSvg.addEventListener('mousemove', mouseMove);
-
-
-      
-
-    });
-
-
-
     svg.show();
 
 
+}
+
+
+function selectSites(){
+
+    // Update canvas colours
+    renderAlignment("alignment", true);
+    renderAlignment("alignment2", false);
+
+    // Rescroll
+    if (SELECTED_SITES.lower != -1){
+      var xpos = ALN_LABEL_WIDTH + NT_WIDTH*(SELECTED_SITES.lower - 20);
+      $("#alignment").scrollLeft(xpos);
+      $("#alignment2").scrollLeft(xpos);
+    }
+    
+
+
+    // Update tertiary colour async
+    setTimeout(function(){
+      recolourTertiaries();
+    }, 1);
+
+}
+
+function clearSelection(){
+  $("#secondary").find(".selectionRect").remove();
+  SELECTED_SITES = {lower: -1, upper: -1};
 }
 
 
@@ -666,7 +749,7 @@ createHiDPICanvas = function(w, h, ratio) {
 /*
 * Draw a canvas of primary/secondary as an alignment 
 */
-function renderAlignment(divID, main, isPrimary = true){
+function renderAlignment(divID, isPrimary = true){
 	
 
 	// Number of sequences
@@ -685,8 +768,14 @@ function renderAlignment(divID, main, isPrimary = true){
 	var h = NT_HEIGHT*(nseq+1) + FEATURE_HEIGHT_ALN*4.1;
   var maxCanvasWidth = 30000;
   var ratio = Math.min(maxCanvasWidth / w, 3); 
-	var canvas = createHiDPICanvas(w, h, ratio);
-	$("#" + divID).append(canvas);
+	var canvas;
+  if ($("#" + divID).find("canvas").length > 0){
+    canvas = $("#" + divID).find("canvas").get(0);
+  } else{
+    canvas = createHiDPICanvas(w, h, ratio);
+    $("#" + divID).append(canvas);
+  }
+	
 	//var canvas = document.getElementById(canvasID);
 	//Create canvas with a custom resolution.
 	
@@ -723,6 +812,7 @@ function renderAlignment(divID, main, isPrimary = true){
       	
       	//ctx.font = NT_FONT_SIZE + "px Courier New";
       	ctx.textAlign = "start";
+        ctx.fillStyle = "black";
       	ctx.fillText(site+1, x, y);
 
 
@@ -749,30 +839,44 @@ function renderAlignment(divID, main, isPrimary = true){
 
 
         //if (aa == "-" && !isPrimary) continue;
-        if (aa == "-") continue;
+        //if (aa == "-") continue;
 
 
-        // Rect
-        if (aa != "-") {
-          var col = "white";
-          if (isPrimary){
-            col = AA_COLS[aa];
-          }else{
-            col = AA_COLS_2[aa];
-          }
+      // Rect
+      var col = "";
+      var textCol = "black";
+      if (aa == "-"){
+        col = "white";
+      }else if (isPrimary){
+        col = AA_COLS[aa];
+      }else{
+        col = AA_COLS_2[aa];
+      }
+
+
+      // Selected site?
+      if (SELECTED_SITES.lower != -1){
+        if (site+1 >= SELECTED_SITES.lower && site+1 <= SELECTED_SITES.upper ){
+            textCol = "white";
+            col = "#008cba";
+        }
+      }
+      
 		  
 			ctx.beginPath();
 			ctx.fillStyle = col;
-			ctx.fillRect(x-NT_WIDTH/2, y-NT_HEIGHT/2, NT_WIDTH+1, NT_HEIGHT);
+			ctx.fillRect(x-NT_WIDTH/2, y-NT_HEIGHT/2, NT_WIDTH+1, NT_HEIGHT+1);
 			ctx.stroke();
           
+        
+
+
+        // Text
+        if (aa != "-"){
+        	ctx.textAlign = "center";
+        	ctx.fillStyle = textCol;
+        	ctx.fillText(aa, x, y);
         }
-
-
-		// Text
-		ctx.textAlign = "center";
-		ctx.fillStyle = "black";
-		ctx.fillText(aa, x, y);
 
 
 
@@ -798,7 +902,6 @@ function renderAlignment(divID, main, isPrimary = true){
         x2 = NT_WIDTH*(parseFloat(range[1]) + 1) + ALN_LABEL_WIDTH;
       }
 
-      console.log(feature, range, x1, x2);
 
       var textCol = level == 1 || level >= 3 ? "black" : "white";
       var col = level == 1 ? LEVEL_1_COL : level == 2 ? LEVEL_2_COL : level == 3 ? LEVEL_3_COL : LEVEL_4_COL;
@@ -831,14 +934,6 @@ function renderAlignment(divID, main, isPrimary = true){
 
     }
 
-	
-	
-	
-	// Download fasta
-	$("#" + divID).before("<h2>" + main + "</h2>");
-	if (isPrimary) $("#" + divID).after("<a href='data/align.ali' style='float:right'>Download fasta</a>");
-	
-	
 }
 
 

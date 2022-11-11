@@ -72,6 +72,13 @@ svg text{
 }
 
 
+svg text.selected{
+  fill: #008cba !important;
+  font-weight: bold;
+}
+
+
+
 
 .footnote{
 	font-size:0.7em;
