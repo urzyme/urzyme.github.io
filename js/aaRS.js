@@ -767,7 +767,7 @@ function renderAlignment(divID, isPrimary = true){
 	var w = NT_WIDTH*(nsites+2) + ALN_LABEL_WIDTH;
 	var h = NT_HEIGHT*(nseq+1) + FEATURE_HEIGHT_ALN*4.1;
   var maxCanvasWidth = 30000;
-  var ratio = Math.min(maxCanvasWidth / w, 3); 
+  var ratio = Math.min(maxCanvasWidth / w, 2.5); 
 	var canvas;
   if ($("#" + divID).find("canvas").length > 0){
     canvas = $("#" + divID).find("canvas").get(0);
