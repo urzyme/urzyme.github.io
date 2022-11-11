@@ -23,7 +23,7 @@ AA_COLS = {A: "#80a0f0", I: "#80a0f0", L: "#80a0f0", M: "#80a0f0", F: "#80a0f0",
 
 
 // http://bioinformatica.isa.cnr.it/SUSAN/NAR2/dsspweb.html#:~:text=DSSP%20assigns%20seven%20different%20secondary,no%20secondary%20structure%20is%20recognized
-AA_COLS_2 = {E: "#FFC20A", H: "#0C7BDC", G: "#0C7BDC", I: "#0C7BDC", T:"#d3d3d3", N: "#ffffff", S: "#d3d3d3",  B: "#d3d3d3"};
+AA_COLS_2 = {E: "#FFC20A", H: "#0C7BDC", G: "#0C7BDC", I: "#0C7BDC", T:"#d3d3d3", S: "#d3d3d3",  B: "#d3d3d3",  N: "#ffffff",};
 
 
 MIN_SSE_LEN = 4;
@@ -61,6 +61,8 @@ function renderaaRS(aaRS, aaRS_full_name, icon){
 
 
   console.log("rendering", aaRS, aaRS_full_name)
+  
+  
 
 
   // Page title
@@ -69,6 +71,44 @@ function renderaaRS(aaRS, aaRS_full_name, icon){
   // Page icon
   $("link[rel='icon']").attr("href", icon);
   $("#alignment").before(`<div id="mainloader" class='loader'><img src='` + icon + `'></img></div>`);
+  
+  
+  // Header, footer
+  $("body").prepend("<div id='header'><span class='title'>URZYME.GITHUB.IO</span></div>")
+  $("body").append("<div id='footer'></div>")
+  
+  
+  $("#header").append(`<div id='class2Selector' class='dropdown'>
+						<button class='dropbtn'>Class II</button>
+							<div class='dropdown-content'>
+							</div>
+						</button>
+					   </div>`);
+					   
+	$("#header").append(`<div id='class1Selector' class='dropdown'>
+						<button class='dropbtn'>Class I</button>
+							<div class='dropdown-content'>
+							</div>
+						</button>
+					   </div>`);				   
+					   
+	$("#class2Selector div").append(`<a href='/class2/ala'>AlaRS</a>`);
+	$("#class2Selector div").append(`<a href='/class2/asn'>AsnRS</a>`);
+	$("#class2Selector div").append(`<a href='/class2/asp'>AspRS</a>`);
+	$("#class2Selector div").append(`<a href='/class2/his'>HisRS</a>`);
+	$("#class2Selector div").append(`<a href='/class2/gly1'>GlyRS</a>`);
+	$("#class2Selector div").append(`<a href='/class2/gly2'>t-GlyRS</a>`);
+	$("#class2Selector div").append(`<a href='/class2/lys'>LysaRS</a>`);
+	$("#class2Selector div").append(`<a href='/class2/phe1'>&alpha; PheRS</a>`);
+	$("#class2Selector div").append(`<a href='/class2/phe2'>&beta; PheRS</a>`);
+	$("#class2Selector div").append(`<a href='/class2/phe3'>m-PheRS</a>`);
+	$("#class2Selector div").append(`<a href='/class2/sep'>SepRS</a>`);
+	$("#class2Selector div").append(`<a href='/class2/pro'>SepRS</a>`);
+	$("#class2Selector div").append(`<a href='/class2/pyl'>PylRS</a>`);
+	$("#class2Selector div").append(`<a href='/class2/ser1'>SerRS</a>`);
+	$("#class2Selector div").append(`<a href='/class2/ser2'>a-SepRS</a>`);
+	$("#class2Selector div").append(`<a href='/class2/Thr'>ThrRS</a>`);
+
 
 
   // Main header
@@ -608,12 +648,14 @@ function renderSecondary(svg){
       // Find contiguous regions of helix, strand, loop, or gap
       var SSEs = [];
       var symbol = seq[0];
-	  if (symbol == "I" || symbol == "G") symbol = "H";
+	  if (symbol == "I" || symbol == "G") symbol = "H"; // Helix
+	  if (symbol == "S" || symbol == "B" || symbol == "T") symbol = "N"; // Loop etc
       var start = 0;
       for (var site = 1; site < nsites; site++){
 
         var symbol2 = seq[site];
-		if (symbol2 == "I" || symbol2 == "G") symbol2 = "H";
+		if (symbol2 == "I" || symbol2 == "G") symbol2 = "H"; // Helix
+		if (symbol2 == "S" || symbol2 == "B"  || symbol2 == "T") symbol2 = "N"; // Loop etc
         if (symbol != symbol2){
 
           var sse = {start: start, stop: site-1, element: symbol};
