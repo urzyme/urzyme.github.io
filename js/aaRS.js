@@ -183,7 +183,7 @@ function renderTertiary(pdb = null, id = "tertiary") {
       pdb = "data/domains/" + domainDir + "/" + pdb ;
     }else{
       //pdb = pdb.replaceAll("domains/*/", "")
-      //pdb = "data/structures/" + pdb;
+      //pdb = "data/dssp/" + pdb;
     }
 
 
@@ -249,7 +249,7 @@ function recolourTertiaries(){
         var pdb = PV_PDBS[id].split("/");
         pdb = pdb[pdb.length-1];
         if (id == "tertiary"){
-          pdb = "data/structures/" + pdb;
+          pdb = "data/dssp/" + pdb;
         }else{
           pdb = "data/" + pdb;
         }
@@ -585,7 +585,7 @@ function renderSecondary(svg){
 	  
       var ele = drawSVGobj(svgContent, "text", {x: x, y: y, pdb: acc, style: "text-anchor:end; cursor:pointer; fill:#366BA1; dominant-baseline:central; font-size:" + NT_FONT_SIZE + "px"}, value=accPrint)
 		$(ele).bind("click", function(event){
-			renderTertiary("data/structures/" + event.target.getAttribute("pdb"));
+			renderTertiary("data/dssp/" + event.target.getAttribute("pdb"));
 		});
 
 
@@ -1242,6 +1242,8 @@ function loadStructure(structures, resolve = function() { } ){
 
 
       var acc = fileName.replace("data/dssp/", "").replace(".dssp", "");
+
+      console.log(acc);
 
       // Put secondary stucture into alignment
       var sequence = "";

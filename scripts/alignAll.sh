@@ -7,7 +7,7 @@ for c in class*;
 do
 
 	cd $c
-	for a in *;
+	for a in */;
 	do
 
 		cd $a
