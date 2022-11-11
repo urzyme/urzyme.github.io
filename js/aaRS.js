@@ -23,7 +23,7 @@ AA_COLS = {A: "#80a0f0", I: "#80a0f0", L: "#80a0f0", M: "#80a0f0", F: "#80a0f0",
 
 
 // http://bioinformatica.isa.cnr.it/SUSAN/NAR2/dsspweb.html#:~:text=DSSP%20assigns%20seven%20different%20secondary,no%20secondary%20structure%20is%20recognized
-AA_COLS_2 = {E: "#FFC20A", H: "#0C7BDC", G: "#0C7BDC", I: "#0C7BDC", T:"#d3d3d3", N: "white", S: "#d3d3d3",  B: "#d3d3d3"};
+AA_COLS_2 = {E: "#FFC20A", H: "#0C7BDC", G: "#0C7BDC", I: "#0C7BDC", T:"#d3d3d3", N: "#ffffff", S: "#d3d3d3",  B: "#d3d3d3"};
 
 
 MIN_SSE_LEN = 3;
@@ -72,11 +72,16 @@ function renderaaRS(aaRS, aaRS_full_name, icon){
 
   // Main header
   var main = $("#main");
-  main.children("h1").html(aaRS_full_name + " (" + aaRS + ")");
+  if (main.children(".notes").length > 0){
+    main.children(".notes").prepend("<h1>" + aaRS_full_name + " (" + aaRS + ")</h1>");
+  }else{
+    main.children("h1").html(aaRS_full_name + " (" + aaRS + ")");
+  }
+  
 
 
 	$("#notes").before("<h2>Notes</h2>");
-  $("#references").before("<h2>References</h2>");
+  $("#references").prepend("<h2>References</h2>");
 
   loadAllFiles(function(){
 
@@ -696,7 +701,7 @@ function selectSites(){
 
     // Rescroll
     if (SELECTED_SITES.lower != -1){
-      var xpos = ALN_LABEL_WIDTH + NT_WIDTH*(SELECTED_SITES.lower - 20);
+      var xpos = ALN_LABEL_WIDTH + NT_WIDTH*(SELECTED_SITES.lower) - $("#alignment").parent().width()/2;
       $("#alignment").scrollLeft(xpos);
       $("#alignment2").scrollLeft(xpos);
     }
@@ -844,9 +849,9 @@ function renderAlignment(divID, isPrimary = true){
 
       // Rect
       var col = "";
-      var textCol = "black";
+      var textCol = "#000000";
       if (aa == "-"){
-        col = "white";
+        col = "#ffffff";
       }else if (isPrimary){
         col = AA_COLS[aa];
       }else{
@@ -856,9 +861,12 @@ function renderAlignment(divID, isPrimary = true){
 
       // Selected site?
       if (SELECTED_SITES.lower != -1){
-        if (site+1 >= SELECTED_SITES.lower && site+1 <= SELECTED_SITES.upper ){
-            textCol = "white";
-            col = "#008cba";
+        if (site+1 < SELECTED_SITES.lower || site+1 > SELECTED_SITES.upper ){
+            //textCol = "white";
+            if (aa != "-") {
+              col = col + "33";
+              textCol = textCol + "88";
+            }
         }
       }
       
