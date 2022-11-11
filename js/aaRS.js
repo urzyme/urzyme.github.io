@@ -607,10 +607,12 @@ function renderSecondary(svg){
       // Find contiguous regions of helix, strand, loop, or gap
       var SSEs = [];
       var symbol = seq[0];
+	  if (symbol == "I" || symbol == "G") symbol = "H";
       var start = 0;
       for (var site = 1; site < nsites; site++){
 
         var symbol2 = seq[site];
+		if (symbol2 == "I" || symbol2 == "G") symbol2 = "H";
         if (symbol != symbol2){
 
           var sse = {start: start, stop: site-1, element: symbol};
@@ -640,7 +642,7 @@ function renderSecondary(svg){
         }
 
         // Helix
-        else if ((sse.element == "H" || sse.element == "G" || sse.element == "I")  && sse.stop - sse.start + 1 >= MIN_SSE_LEN){
+        else if ((sse.element == "H")  && sse.stop - sse.start + 1 >= MIN_SSE_LEN){
 
           //console.log(acc, "helix", sse);
           drawSVGobj(svgContent, "rect", {rx: 2, x: startX, y: y-HELIX_WIDTH/2, width: endX-startX, height: HELIX_WIDTH, style: "stroke-width:1px; stroke:black; fill:" + AA_COLS_2["H"]} );
@@ -1265,6 +1267,7 @@ function loadStructure(structures, resolve = function() { } ){
 
           sequence += "-";
         }else{
+
 
           var line = lines[firstLine + siteNum + nMissingRegions];
           var aa = line.substring(13, 14);
