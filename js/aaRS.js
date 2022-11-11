@@ -26,7 +26,7 @@ AA_COLS = {A: "#80a0f0", I: "#80a0f0", L: "#80a0f0", M: "#80a0f0", F: "#80a0f0",
 AA_COLS_2 = {E: "#FFC20A", H: "#0C7BDC", G: "#0C7BDC", I: "#0C7BDC", T:"#d3d3d3", N: "#ffffff", S: "#d3d3d3",  B: "#d3d3d3"};
 
 
-MIN_SSE_LEN = 3;
+MIN_SSE_LEN = 4;
 
 
 // Canonical ordering on 3dcomb
@@ -40,7 +40,7 @@ NT_WIDTH = 10;
 NT_HEIGHT = 13;
 FEATURE_HEIGHT_ALN = 18;
 FEATURE_HEIGHT_SEC = 30;
-SEC_WIDTH = 1.2;
+SEC_WIDTH = 1.0;
 SEC_HEIGHT = 20;
 NT_FONT_SIZE = 11;
 ALN_LABEL_WIDTH = 300;
@@ -50,11 +50,12 @@ LEVEL_2_COL = "#a6a6a6";
 LEVEL_3_COL = "#d3d3d3";
 LEVEL_4_COL = "#ffffff";
 
-STRAND_ARROW_HEAD_LEN_1 = 4;
-STRAND_ARROW_HEAD_LEN_2 = 5;
-STRAND_ARROW_BASE_WIDTH = 6;
+STRAND_ARROW_HEAD_LEN_1 = 5;
+STRAND_ARROW_HEAD_LEN_2 = 6;
+STRAND_ARROW_BASE_WIDTH = 7;
 STRAND_ARROW_HEAD_WIDTH = 13;
 HELIX_WIDTH = 11;
+HELIX_CORNER_RADIUS = 3;
 
 function renderaaRS(aaRS, aaRS_full_name, icon){
 
@@ -107,8 +108,8 @@ function renderaaRS(aaRS, aaRS_full_name, icon){
 
 
 
-    // Footnote
-   $("#secondary").parent().before("<div class='footnote'>Extended strands and helices are displayed only if at least " + MIN_SSE_LEN + " residues in length.</div>");
+   // Footnote
+   //$("#secondary").parent().before("<div class='footnote'>Extended strands and helices are displayed only if at least " + MIN_SSE_LEN + " residues in length.</div>");
   
 
 
@@ -420,7 +421,7 @@ function renderSecondary(svg){
       var res1 = Math.floor((x1 - ALN_LABEL_WIDTH) / SEC_WIDTH) + 1;
 
       var rect = drawSVGobj(svgHighlight, "rect", {x: x1-SEC_WIDTH, y: 0, width: 0, height: svg.height(), class: "selectionRect", style: "stroke-width:1px; stroke:black; fill:#008cba55"} )
-      var text = drawSVGobj(svgHighlight, "text", {x: SEC_WIDTH*5, y: svg.height() - SEC_WIDTH*5, class: "selectionRect", style: "text-anchor:start; dominant-baseline:auto; font-size:12px"}, "Selected sites " + res1 )
+      var text = drawSVGobj(svgHighlight, "text", {x: SEC_WIDTH*5, y: svg.height() - SEC_WIDTH*5, class: "selectionRect", style: "text-anchor:start; dominant-baseline:auto; font-size:12px"}, "" )
 
 
 
@@ -445,7 +446,7 @@ function renderSecondary(svg){
 
         // What are the residue numbers?
         var res1_ = Math.floor((x1_ - ALN_LABEL_WIDTH) / SEC_WIDTH) + 1;
-        var res2 = Math.ceil((x2 - ALN_LABEL_WIDTH) / SEC_WIDTH) + 1;
+        var res2 = Math.floor((x2 - ALN_LABEL_WIDTH) / SEC_WIDTH) + 1;
 
         x1_ = res1_ * SEC_WIDTH + ALN_LABEL_WIDTH;
         x2 = res2 * SEC_WIDTH + ALN_LABEL_WIDTH;
@@ -645,7 +646,7 @@ function renderSecondary(svg){
         else if ((sse.element == "H")  && sse.stop - sse.start + 1 >= MIN_SSE_LEN){
 
           //console.log(acc, "helix", sse);
-          drawSVGobj(svgContent, "rect", {rx: 2, x: startX, y: y-HELIX_WIDTH/2, width: endX-startX, height: HELIX_WIDTH, style: "stroke-width:1px; stroke:black; fill:" + AA_COLS_2["H"]} );
+          drawSVGobj(svgContent, "rect", {rx: HELIX_CORNER_RADIUS, x: startX, y: y-HELIX_WIDTH/2, width: endX-startX, height: HELIX_WIDTH, style: "stroke-width:1px; stroke:black; fill:" + AA_COLS_2["H"]} );
 
         }
 

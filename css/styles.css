@@ -47,22 +47,7 @@ body {
 }
 
 
-div.svgDiv{
-  width: 100%;
-  %border:1px solid #333;
-  overflow-x: scroll;
-  margin: 1em;
-}
 
-
-.svgDiv canvas{
-	overflow:auto
-}
-
-
-.svgDiv svg{
-	overflow:auto
-}
 
 
 svg{
@@ -146,6 +131,27 @@ svg text.alpha{
 	
 }
 
+#main h2{
+	margin-left:1em;
+}
+
+
+div.svgDiv{
+  width: 100%;
+  %border:1px solid #333;
+  overflow-x: scroll;
+}
+
+
+.svgDiv canvas{
+	overflow:auto
+}
+
+
+.svgDiv svg{
+	overflow:auto
+}
+
 #references div{
 	font-size: 1em;
 	padding: 0.5em;
@@ -181,7 +187,7 @@ svg text.alpha{
 }
 
 .dropdownDiv select{
-	background-color: #696969;
+	background-color: #008cbadd;
 	color: white;
 	padding: 0.5em;
 	width: 200px;
@@ -204,4 +210,29 @@ svg text.alpha{
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #008cba33;
+  %box-shadow: inset 0 0 5px black;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #008cba99;
+  box-shadow: inset 0 0 5px #008cba;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #008cbadd;
 }
