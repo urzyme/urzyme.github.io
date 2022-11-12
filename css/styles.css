@@ -104,8 +104,8 @@ svg text.alpha{
 	border-radius: 0.3em;
 	border-width: 0px;
 	
-	min-width: 20em;
 	width:100%;
+	min-width:200px;
 	
 	
 }
@@ -123,7 +123,8 @@ svg text.alpha{
 	
 	
 	width:100%;
-	min-width:300px;
+	min-width:200px;
+	max-width:800px;
 }
 
 
@@ -145,13 +146,19 @@ svg text.alpha{
 
 
 .summary tr{
-  border-style:solid;
-  border-width:1px;
-  border-color:#555
+  %border-style:solid;
+  %border-width:1px;
+  %border-color:#555
 }
 
 .summary tr:nth-child(even){
   background-color: #008cba33;
+  %color: #fff;
+}
+
+
+.summary tr:nth-child(odd){
+  background-color: #008cba22;
   %color: #fff;
 }
 
@@ -417,7 +424,7 @@ div.svgDiv{
   flex-flow: row wrap;
   
   /* Then we define how is distributed the remaining space */
-  justify-content: space-around;
+  justify-content: space-between;
   
   padding: 0;
   margin: 0;
