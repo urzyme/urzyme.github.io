@@ -1,0 +1,13 @@
+{
+		"name": "GlyRS",
+		"fullName": "Dimeric glycyl tRNA Synthetase",
+		"icon": "/fig/icon_gly.png",
+		"substrate": "Glycine",
+		"class": "Class II",
+		"oligo": "Homodimer",
+		"codons": "GGU, GGC, GGA, GGG",
+		"editing": ""
+	
+}
+
+

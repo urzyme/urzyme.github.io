@@ -57,20 +57,19 @@ STRAND_ARROW_HEAD_WIDTH = 13;
 HELIX_WIDTH = 11;
 HELIX_CORNER_RADIUS = 3;
 
-function renderaaRS(aaRS, aaRS_full_name, icon){
+function renderaaRS(){
 
 
-  console.log("rendering", aaRS, aaRS_full_name)
-  
   
 
+  
+	// Read info json
+   fetch("info.json").then(response => response.text()).then(text => renderInfo(text));
+   
 
-  // Page title
-  $("title").html(aaRS_full_name);
-
-  // Page icon
-  $("link[rel='icon']").attr("href", icon);
-  $("#alignment").before(`<div id="mainloader" class='loader'><img src='` + icon + `'></img></div>`);
+	// Add loading wheel
+	$("#alignment").before(`<div id="mainloader" class='loader'><img src='/fig/icon_white.png'></img></div>`);
+  
   
   
   // Header, footer
@@ -91,37 +90,37 @@ function renderaaRS(aaRS, aaRS_full_name, icon){
 							</div>
 						</button>
 					   </div>`);				   
-					   
+	$("#class2Selector div").append(`<a href='/class2/'><b>Home</b></a>`);
 	$("#class2Selector div").append(`<a href='/class2/ala'>AlaRS</a>`);
 	$("#class2Selector div").append(`<a href='/class2/asn'>AsnRS</a>`);
 	$("#class2Selector div").append(`<a href='/class2/asp'>AspRS</a>`);
+	$("#class2Selector div").append(`<a href='/class2/gly1'>GlyRS (dimer)</a>`);
+	$("#class2Selector div").append(`<a href='/class2/gly2'>GlyRS (tetramer)</a>`);
 	$("#class2Selector div").append(`<a href='/class2/his'>HisRS</a>`);
-	$("#class2Selector div").append(`<a href='/class2/gly1'>GlyRS</a>`);
-	$("#class2Selector div").append(`<a href='/class2/gly2'>t-GlyRS</a>`);
-	$("#class2Selector div").append(`<a href='/class2/lys'>LysaRS</a>`);
-	$("#class2Selector div").append(`<a href='/class2/phe1'>&alpha; PheRS</a>`);
-	$("#class2Selector div").append(`<a href='/class2/phe2'>&beta; PheRS</a>`);
-	$("#class2Selector div").append(`<a href='/class2/phe3'>m-PheRS</a>`);
-	$("#class2Selector div").append(`<a href='/class2/sep'>SepRS</a>`);
-	$("#class2Selector div").append(`<a href='/class2/pro'>SepRS</a>`);
+	$("#class2Selector div").append(`<a href='/class2/lys'>LysRS</a>`);
+	$("#class2Selector div").append(`<a href='/class2/phe1'>PheRS (&alpha;)</a>`);
+	$("#class2Selector div").append(`<a href='/class2/phe2'>PheRS (&beta;)</a>`);
+	$("#class2Selector div").append(`<a href='/class2/phe3'>PheRS (mito)</a>`);
+	$("#class2Selector div").append(`<a href='/class2/pro'>ProRS</a>`);
 	$("#class2Selector div").append(`<a href='/class2/pyl'>PylRS</a>`);
-	$("#class2Selector div").append(`<a href='/class2/ser1'>SerRS</a>`);
-	$("#class2Selector div").append(`<a href='/class2/ser2'>a-SepRS</a>`);
-	$("#class2Selector div").append(`<a href='/class2/Thr'>ThrRS</a>`);
+	$("#class2Selector div").append(`<a href='/class2/sep'>SepRS</a>`);
+	$("#class2Selector div").append(`<a href='/class2/ser1'>SerRS (standard)</a>`);
+	$("#class2Selector div").append(`<a href='/class2/ser2'>SerRS (Archaeal)</a>`);
+	$("#class2Selector div").append(`<a href='/class2/thr'>ThrRS</a>`);
 
 
 
   // Main header
   var main = $("#main");
-  if (main.children(".notes").length > 0){
-    main.children(".notes").prepend("<h1>" + aaRS_full_name + " (" + aaRS + ")</h1>");
-  }else{
-    main.children("h1").html(aaRS_full_name + " (" + aaRS + ")");
+  if ($(".notes").length > 0){
+    $(".notes").prepend("<h2>Introduction</h2>");
   }
   
+  
 
-
-	$("#notes").before("<h2>Notes</h2>");
+  // Section titles
+  $(".summary").prepend("<h2>Summary</h2>");
+  $("#notes").before("<h2>Notes</h2>");
   $("#references").prepend("<h2>References</h2>");
 
   loadAllFiles(function(){
@@ -137,9 +136,12 @@ function renderaaRS(aaRS, aaRS_full_name, icon){
   
   
   
-  // Headers and download fasta
+  // More section titles and download fasta
   $("#alignment").before("<h2>Primary structure</h2>");
   $("#alignment2").before("<h2>Secondary structure</h2>");
+  $("#secondary").before("<h2>Domain architecture</h2>");
+  $("#tertiaryTable").prepend("<div>Click on an accession or domain above to view its tertiary structure.</div>");
+  $("#tertiaryTable").prepend("<h2>Tertiary structure</h2>");
   $("#alignment").after("<a href='data/align.ali' style='float:right'>Download fasta</a>");
   
   
@@ -171,8 +173,7 @@ function renderaaRS(aaRS, aaRS_full_name, icon){
   });
 
 	
-	$("#tertiaryTable").prepend("<div>Click on an accession or domain above to view its tertiary structure.</div>");
-	$("#tertiaryTable").prepend("<h2>Tertiary structure</h2>");
+
 	renderTertiary("data/align.pdb", "superposition");
 
 
@@ -195,6 +196,57 @@ function renderaaRS(aaRS, aaRS_full_name, icon){
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 
   })
+
+	
+}
+
+
+/*
+* Render meta info stored in json file onto page
+*/
+function renderInfo(text){
+	
+	text = text.replaceAll("\n", "").replaceAll("\r", "");
+	var json = JSON.parse(text);
+
+
+	// Page title
+	$("title").html(json.fullName);
+
+	// Page icon
+	$("link[rel='icon']").attr("href", json.icon);
+	
+	// Page main header
+	 $("#main").prepend("<h1>" + json.fullName + "</h1>");
+	 
+	 
+	// Summary table
+	$(".summary").append("<table></table>");
+	$(".summary table").append(`<tr>
+								<th>Name</th>
+								<td>` + json.name + `</td>
+							</tr>`);
+		$(".summary table").append(`<tr>
+								<th>Class</th>
+								<td>` + json.class + `</td>
+							</tr>`);
+	$(".summary table").append(`<tr title="Amino acid attached to tRNA">
+								<th>Activated substrate</th>
+								<td>` + json.substrate + `</td>
+							</tr>`);
+	$(".summary table").append(`<tr>
+								<th>Oligomerisation</th>
+								<td>` + json.oligo + `</td>
+							</tr>`);
+
+	$(".summary table").append(`<tr title="Codons in the standard genetic code">
+								<th>Codons</th>
+								<td>` + json.codons + `</td>
+							</tr>`);	
+	$(".summary table").append(`<tr>
+								<th>Editing</th>
+								<td>` + json.editing + `</td>
+							</tr>`);
 
 	
 }

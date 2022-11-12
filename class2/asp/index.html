@@ -38,7 +38,7 @@
 
 function init(){
 	
-	renderaaRS("AspRS", "Aspartyl tRNA Synthetase", "../../fig/icon_acidic.png");
+	renderaaRS();
 }
 
 
@@ -51,42 +51,55 @@ function init(){
 
 	<div id="main">
 
-		<h1></h1>
+		<ul id="flexContainer">
+			<li class="summary">
+				
+			</li>
 
 
-		<div class="notes">
-		
-			 Like most members of the class II aaRS superfamily, AspRS is homodimeric. However, AspRS catalyses up to two reactions: <br>
+			<li class="notes">
+				
+				<div>
+				
+			
+					
+					 Like most members of the class II aaRS superfamily, AspRS is homodimeric. However, AspRS catalyses up to two reactions: <br>
 
 
-			<ol>
-				<li>Asp + tRNA<sup>Asp</sup> + ATP &rightarrow; Asp-tRNA<sup>Asp</sup> + AMP + PP<sub>i</sub> </li>
-				<li>Asp + tRNA<sup>Asn</sup> + ATP &rightarrow; Asp-tRNA<sup>Asn</sup> + AMP + PP<sub>i</sub> </li>
-			</ol>
+					<ol>
+						<li>Asp + tRNA<sup>Asp</sup> + ATP &rightarrow; Asp-tRNA<sup>Asp</sup> + AMP + PP<sub>i</sub> </li>
+						<li>Asp + tRNA<sup>Asn</sup> + ATP &rightarrow; Asp-tRNA<sup>Asn</sup> + AMP + PP<sub>i</sub> </li>
+					</ol>
 
 
-				This first (canonical) reaction enables the incorporation of aspartate into the polypeptide, while the second enables incorporation of asparagine for organisms which lack <a href="../asn">AsnRS</a> (Gomez et al. 2020). 
-				D-AspRS is discriminating, meaning they only carry out reaction (1); for example see PDB 1C0A below. 
-				ND-AspRS is non-discriminating, meaning they can carry out both reactions (1) and (2); see PDB 1N9W below. A helix in the anticodon binding domain allows AspRS to discriminate between the two tRNA species  (Charron et al. 2003). Some organisms contain genes for both proteins.   <br><br>
-
-
-
-			The three dimensional structure of AspRS closely resembles that of <a href="../asn">AsnRS</a> and <a href="../lys">LysRS</a>, with an N-terminal anticodon binding domain and a C-terminal catalytic domain. Although the class II superfamily phylogeny is not entirely clear, there is good agreement that these three members are closely related, constituting subclass IIb (Cusack et al. 1991, Valencia-Sánchez et al. 2016, Gomez et al. 2020). The class IIb synthetases of many eukaryotes contain a flexible domain at their N-terminii which help to anchor the synthetase onto the tRNA (Frugier et al. 2000).  <br><br>
-
-
-			In addition to the eukaryotic flexible linker, the bacterial D-AspRS is further characterised by an insertion domain. 
-			This insertion domain exists between motifs 2 and 3 and is composed of a five-stranded antiparallel &beta;-sheet flanked by &alpha; helices, and interacts with the tRNA through a network of water molecules (Eiler et al. 1999). For example, see PDB 1C0A below. However the bacterial ND-AspRS - much like <a href="../asn">AsnRS</a>, <a href="../lys">LysRS</a>, and  the archaeal and eukaryotic D-AspRS - does not possess this domain.   <br><br>
+						This first (canonical) reaction enables the incorporation of aspartate into the polypeptide, while the second enables incorporation of asparagine for organisms which lack <a href="../asn">AsnRS</a> (Gomez et al. 2020). 
+						D-AspRS is discriminating, meaning they only carry out reaction (1); for example see PDB 1C0A below. 
+						ND-AspRS is non-discriminating, meaning they can carry out both reactions (1) and (2); see PDB 1N9W below. A helix in the anticodon binding domain allows AspRS to discriminate between the two tRNA species  (Charron et al. 2003). Some organisms contain genes for both proteins.   <br><br>
 
 
 
-			The C-terminal catalytic domain of AspRS is quite typical of a class II aaRS, however the catalytic domain contains six antiparallel strands rather than seven (same as <a href="../asn">AsnRS</a>). Like most members of the superfamily, ATP binding is coordinated by the arginine tweezers, located in motifs 2 and 3 (Kaiser et al. 2018). <br><br>
+					The three dimensional structure of AspRS closely resembles that of <a href="../asn">AsnRS</a> and <a href="../lys">LysRS</a>, with an N-terminal anticodon binding domain and a C-terminal catalytic domain. Although the class II superfamily phylogeny is not entirely clear, there is good agreement that these three members are closely related, constituting subclass IIb (Cusack et al. 1991, Valencia-Sánchez et al. 2016, Gomez et al. 2020). The class IIb synthetases of many eukaryotes contain a flexible domain at their N-terminii which help to anchor the synthetase onto the tRNA (Frugier et al. 2000).  <br><br>
 
 
-			It appears that AspRS lacks editing activity (Gomez et al. 2020).
+					In addition to the eukaryotic flexible linker, the bacterial D-AspRS is further characterised by an insertion domain. 
+					This insertion domain exists between motifs 2 and 3 and is composed of a five-stranded antiparallel &beta;-sheet flanked by &alpha; helices, and interacts with the tRNA through a network of water molecules (Eiler et al. 1999). For example, see PDB 1C0A below. However the bacterial ND-AspRS - much like <a href="../asn">AsnRS</a>, <a href="../lys">LysRS</a>, and  the archaeal and eukaryotic D-AspRS - does not possess this domain.   <br><br>
 
-		
-		
-		</div>
+
+
+					The C-terminal catalytic domain of AspRS is quite typical of a class II aaRS, however the catalytic domain contains six antiparallel strands rather than seven (same as <a href="../asn">AsnRS</a>). Like most members of the superfamily, ATP binding is coordinated by the arginine tweezers, located in motifs 2 and 3 (Kaiser et al. 2018). <br><br>
+
+
+					It appears that AspRS lacks editing activity (Gomez et al. 2020).
+
+			
+			
+				</div>
+				
+			</li>
+			
+		</ul>
+
+
 
 		<div id="alignment" class="svgDiv">
 

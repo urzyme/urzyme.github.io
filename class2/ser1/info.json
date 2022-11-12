@@ -1,0 +1,11 @@
+{
+		"name": "SerRS",
+		"fullName": "Seryl tRNA Synthetase",
+		"icon": "/fig/icon_polar.png",
+		"substrate": "Serine",
+		"class": "Class II",
+		"oligo": "Homodimer",
+		"codons": "UCU, UCC, UCA, UCG, AGU, AGC",
+		"editing": "Yes"
+	
+}
