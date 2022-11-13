@@ -4,9 +4,10 @@
 		"icon": "/fig/icon_polar.png",
 		"substrate": "Threonine",
 		"class": "Class II",
-		"oligo": "",
-		"codons": "",
-		"editing": ""
+		"subclass": "a",
+		"oligo": "Homodimeric",
+		"codons": "ACU, ACC, ACA, ACG",
+		"editing": "Post-transfer"
 	
 }
 
