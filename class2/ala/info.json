@@ -4,8 +4,8 @@
 		"icon": "/fig/icon_hydrophobic.png",
 		"substrate": "Alanine",
 		"class": "Class II",
-		"oligo": "",
+		"oligo": "Homodimeric",
 		"codons": "GCU, GCC, GCA, GCG",
-		"editing": ""
+		"editing": "Pre-transfer, post-transfer"
 	
 }
