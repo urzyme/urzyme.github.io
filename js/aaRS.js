@@ -226,10 +226,14 @@ function renderInfo(text){
 								<th>Name</th>
 								<td>` + json.name + `</td>
 							</tr>`);
-		$(".summary table").append(`<tr>
+	$(".summary table").append(`<tr>
 								<th>Class</th>
 								<td>` + json.class + `</td>
 							</tr>`);
+  $(".summary table").append(`<tr>
+                <th>Subclass</th>
+                <td>` + json.subclass + `</td>
+              </tr>`);
 	$(".summary table").append(`<tr title="Amino acid attached to tRNA">
 								<th>Activated substrate</th>
 								<td>` + json.substrate + `</td>
