@@ -140,7 +140,7 @@ function renderaaRS(){
   $("#alignment").before("<h2>Primary structure</h2>");
   $("#alignment2").before("<h2>Secondary structure</h2>");
   $("#secondary").before("<h2>Domain architecture</h2>");
-  $("#tertiaryTable").prepend("<div>Click on an accession or domain above to view its tertiary structure.</div>");
+  $("#secondary").before("<div class='helperNote'>Click on an accession or domain below, or drag a region, to select it.</div>");
   $("#tertiaryTable").prepend("<h2>Tertiary structure</h2>");
   $("#alignment").after("<a href='data/align.ali' style='float:right'>Download fasta</a>");
   

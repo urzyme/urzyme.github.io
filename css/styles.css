@@ -88,10 +88,6 @@ svg text.alpha{
 }
 
 
-#notes{
-	text-align:justify;
-	padding:0.5em;
-}
 
 .notes{
 	text-align:justify;
@@ -128,6 +124,11 @@ svg text.alpha{
 }
 
 
+.helperNote{
+	margin-left: 1.5em;
+	margin-bottom: 1em;
+}
+
 
 .summary>table{
 	width:100%;
@@ -137,11 +138,13 @@ svg text.alpha{
 .summary th{
 	text-align:right;
 	padding:0.3em;
+	width: 50%;
 }
 
 .summary td{
 	text-align:left;
 	padding:0.3em;
+	width: 50%;
 }
 
 

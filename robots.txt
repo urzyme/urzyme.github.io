@@ -1,0 +1,7 @@
+User-agent: *
+
+Disallow: bower_components
+Disallow: css
+Disallow: fig
+Disallow: js
+Disallow: scripts
