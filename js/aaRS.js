@@ -238,6 +238,10 @@ function renderInfo(text){
 								<th>Activated substrate</th>
 								<td>` + json.substrate + `</td>
 							</tr>`);
+    $(".summary table").append(`<tr title="Amino acid incorporated onto protein">
+                <th>Incorporates</th>
+                <td>` + json.incorporates + `</td>
+              </tr>`);
 	$(".summary table").append(`<tr>
 								<th>Oligomerisation</th>
 								<td>` + json.oligo + `</td>

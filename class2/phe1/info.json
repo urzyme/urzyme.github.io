@@ -3,7 +3,9 @@
 		"fullName": "&alpha; Phenylalanyl tRNA Synthetase subunit",
 		"icon": "/fig/icon_hydrophobic.png",
 		"substrate": "Phenylalanine",
+		"incorporates": "Phenylalanine",
 		"class": "Class II",
+		"subclass": "",
 		"oligo": "",
 		"codons": "",
 		"editing": ""

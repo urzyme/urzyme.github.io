@@ -3,7 +3,9 @@
 		"fullName": "Prolyl tRNA Synthetase",
 		"icon": "/fig/icon_pro.png",
 		"substrate": "Proline",
+		"incorporates": "Proline",
 		"class": "Class II",
+		"subclass": "a",
 		"oligo": "",
 		"codons": "",
 		"editing": ""

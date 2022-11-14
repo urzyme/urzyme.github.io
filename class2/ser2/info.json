@@ -3,7 +3,9 @@
 		"fullName": "Seryl tRNA Synthetase",
 		"icon": "/fig/icon_polar.png",
 		"substrate": "Serine",
+		"incorporates": "Serine",
 		"class": "Class II",
+		"subclass": "a",
 		"oligo": "",
 		"codons": "UCU, UCC, UCA, UCG, AGU, AGC",
 		"editing": ""

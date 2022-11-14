@@ -3,7 +3,9 @@
 		"fullName": "Mitochondrial Phenylalanyl tRNA Synthetase",
 		"icon": "/fig/icon_hydrophobic.png",
 		"substrate": "Phenylalanine",
+		"incorporates": "Phenylalanine",
 		"class": "Class II",
+		"subclass": "",
 		"oligo": "",
 		"codons": "",
 		"editing": ""

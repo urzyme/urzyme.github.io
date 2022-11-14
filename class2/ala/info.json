@@ -3,6 +3,7 @@
 		"fullName": "Alanyl tRNA Synthetase",
 		"icon": "/fig/icon_hydrophobic.png",
 		"substrate": "Alanine",
+		"incorporates": "Alanine",
 		"class": "Class II",
 		"subclass": "c or d",
 		"oligo": "Homodimeric",

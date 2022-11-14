@@ -3,10 +3,11 @@
 		"fullName": "Aspartyl tRNA Synthetase",
 		"icon": "/fig/icon_acidic.png",
 		"substrate": "Aspartate",
+		"incorporates": "Aspartate, aspargine",
 		"class": "Class II",
 		"subclass": "b",
 		"oligo": "Homodimer",
-		"codons": "GAU, GAC",
+		"codons": "GAU, GAC (Asp), AAU, AAC (Asn)",
 		"editing": "No"
 	
 }

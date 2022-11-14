@@ -3,6 +3,7 @@
 		"fullName": "Threonyl tRNA Synthetase",
 		"icon": "/fig/icon_polar.png",
 		"substrate": "Threonine",
+		"incorporates": "Threonine",
 		"class": "Class II",
 		"subclass": "a",
 		"oligo": "Homodimeric",

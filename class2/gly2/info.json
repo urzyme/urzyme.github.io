@@ -3,6 +3,7 @@
 		"fullName": "Tetrameric glycyl tRNA Synthetase",
 		"icon": "/fig/icon_gly.png",
 		"substrate": "Glycine",
+		"incorporates": "Glycine",
 		"class": "Class II",
 		"oligo": "Heterotetramer",
 		"codons": "GGU, GGC, GGA, GGG",

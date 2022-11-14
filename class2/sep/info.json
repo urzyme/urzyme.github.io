@@ -3,7 +3,9 @@
 		"fullName": "Phosphoseryl tRNA Synthetase",
 		"icon": "/fig/icon_cys.png",
 		"substrate": "O-phosphoserine",
+		"incorporates": "Cysteine",
 		"class": "Class II",
+		"subclass": "",
 		"oligo": "",
 		"codons": "",
 		"editing": ""

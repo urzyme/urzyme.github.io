@@ -3,7 +3,9 @@
 		"fullName": "Histidyl tRNA Synthetase",
 		"icon": "/fig/icon_aromatic.png",
 		"substrate": "Histidine",
+		"incorporates": "Histidine",
 		"class": "Class II",
+		"subclass": "a",
 		"oligo": "Homodimer",
 		"codons": "CAU, CAC",
 		"editing": ""

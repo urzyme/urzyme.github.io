@@ -3,9 +3,11 @@
 		"fullName": "Seryl tRNA Synthetase",
 		"icon": "/fig/icon_polar.png",
 		"substrate": "Serine",
+		"incorporates": "Serine, selenocysteine",
 		"class": "Class II",
+		"subclass": "a",
 		"oligo": "Homodimer",
-		"codons": "UCU, UCC, UCA, UCG, AGU, AGC",
+		"codons": "UCU, UCC, UCA, UCG, AGU, AGC (Ser), UGA (Sep)",
 		"editing": "Pre-transfer"
 	
 }

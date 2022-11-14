@@ -3,7 +3,9 @@
 		"fullName": "Pyrrolysyl tRNA Synthetase",
 		"icon": "/fig/icon_basic.png",
 		"substrate": "Pyrrolysyine",
+		"incorporates": "Pyrrolysyine",
 		"class": "Class II",
+		"subclass": "",
 		"oligo": "",
 		"codons": "",
 		"editing": ""
