@@ -410,7 +410,7 @@ function recolourTertiaries(){
         if (id == "tertiary"){
           PV_GEOMS[id].colorBy(colourSelected(id, color.ssSuccession));
         }else{
-          PV_GEOMS[id].colorBy(colourSelected(id, function() { color.byChain }));
+          PV_GEOMS[id].colorBy(colourSelected(id, color.byChain ));
         }
         PV_VIEWERS[id].requestRedraw();
       }
