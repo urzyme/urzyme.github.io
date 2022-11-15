@@ -1,4 +1,8 @@
-HELIX    1  A1 XXX A  201  XXX A  209  1                                   9
+SHEET    1  E1 2 XXX A 164 XXX  A 165  0
+SHEET    2  E2 3 XXX A 183 XXX  A 185  0
+SHEET    3  E3 3 XXX A 193 XXX  A 195  0
+HELIX    1  H1 XXX A	 201  XXX A  209  1                                   9
+SHEET    4  E4 2 XXX A 215 XXX  A 216  0
 ATOM   2592  N   ASP A 159       1.379  23.696   1.590  1.00 98.44           N  
 ATOM   2593  H   ASP A 159       0.646  23.191   2.068  1.00 98.44           H  
 ATOM   2594  CA  ASP A 159       1.361  25.164   1.694  1.00 98.44           C  

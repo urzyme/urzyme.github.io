@@ -1,3 +1,41 @@
+SHEET    1  E1 3 XXX A   5 XXX  A   7  0
+SHEET    2  E2 2 XXX A  19 XXX  A  20  0
+SHEET    3  E3 6 XXX A  44 XXX  A  49  0
+SHEET    4  E4 5 XXX A  57 XXX  A  61  0
+SHEET    5  E5 4 XXX B   3 XXX  B   6  0
+SHEET    6  E6 2 XXX C  24 XXX  C  25  0
+SHEET    7  E7 3 XXX D   8 XXX  D  10  0
+SHEET    8  E8 3 XXX D  13 XXX  D  15  0
+SHEET    9  E9 2 XXX D  21 XXX  D  22  0
+SHEET   10 E10 3 XXX D  45 XXX  D  47  0
+SHEET   11 E11 2 XXX E   2 XXX  E   3  0
+SHEET   12 E12 2 XXX E  20 XXX  E  21  0
+SHEET   13 E13 2 XXX E  52 XXX  E  53  0
+SHEET   14 E14 2 XXX F  39 XXX  F  40  0
+SHEET   15 E15 3 XXX F  54 XXX  F  56  0
+SHEET   16 E16 5 XXX G  33 XXX  G  37  0
+SHEET   17 E17 2 XXX G  45 XXX  G  46  0
+SHEET   18 E18 2 XXX H  20 XXX  H  21  0
+SHEET   19 E19 2 XXX H  39 XXX  H  40  0
+SHEET   20 E20 2 XXX H  58 XXX  H  59  0
+SHEET   21 E21 5 XXX I   3 XXX  I   7  0
+SHEET   22 E22 2 XXX I  19 XXX  I  20  0
+SHEET   23 E23 3 XXX I  33 XXX  I  35  0
+SHEET   24 E24 4 XXX J   2 XXX  J   5  0
+SHEET   25 E25 2 XXX J  10 XXX  J  11  0
+SHEET   26 E26 3 XXX J  42 XXX  J  44  0
+SHEET   27 E27 2 XXX J  52 XXX  J  53  0
+SHEET   28 E28 2 XXX K 116 XXX  K 117  0
+SHEET   29 E29 2 XXX K 123 XXX  K 124  0
+SHEET   30 E30 2 XXX K 132 XXX  K 133  0
+SHEET   31 E31 3 XXX K 152 XXX  K 154  0
+SHEET   32 E32 2 XXX K 159 XXX  K 160  0
+SHEET   33 E33 2 XXX L  74 XXX  L  75  0
+SHEET   34 E34 2 XXX L  83 XXX  L  84  0
+SHEET   35 E35 4 XXX L  91 XXX  L  94  0
+SHEET   36 E36 6 XXX L 100 XXX  L 105  0
+SHEET   37 E37 2 XXX L 110 XXX  L 111  0
+SHEET   38 E38 3 XXX L 115 XXX  L 117  0
 ATOM      1  N   ILE A   4      -5.646  51.309  -0.296  1.00 89.58      A    N  
 ATOM      2  CA  ILE A   4      -5.426  51.915   1.050  1.00 89.89      A    C  
 ATOM      3  C   ILE A   4      -4.050  52.586   1.098  1.00 89.83      A    C  
@@ -5226,3 +5264,5 @@ ATOM   1840  CB  SER L 119      13.739  44.386  14.896  1.00 96.08      A    C
 ATOM   1844  OG  SER L 119      14.586  45.213  15.677  1.00 96.08      A    O  
 TER                                                                             
 END                                                                             
+
+

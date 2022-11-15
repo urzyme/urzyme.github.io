@@ -1,7 +1,10 @@
-HELIX    1  A1 XXX A  561  XXX A  573  1                                  13
-HELIX    2  A2 XXX A  587  XXX A  596  1                                  10
-HELIX    3  A3 XXX A  607  XXX A  612  1                                   6
-HELIX    4  A4 XXX A  630  XXX A  642  1                                  13
+HELIX    1  H1 XXX A	 561  XXX A  573  1                                  13
+HELIX    2  H2 XXX A	 587  XXX A  596  1                                  10
+SHEET    1  E1 4 XXX A 601 XXX  A 604  0
+HELIX    3  H3 XXX A	 607  XXX A  612  1                                   6
+SHEET    2  E2 6 XXX A 614 XXX  A 619  0
+SHEET    3  E3 5 XXX A 625 XXX  A 629  0
+HELIX    4  H4 XXX A	 630  XXX A  642  1                                  13
 ATOM   9031  N   SER A 558     -37.942  -3.780  28.779  1.00 89.15           N  
 ATOM   9032  H   SER A 558     -37.809  -4.771  28.636  1.00 89.15           H  
 ATOM   9033  CA  SER A 558     -39.144  -3.360  29.511  1.00 89.15           C  

@@ -1,11 +1,18 @@
-HELIX    1  A1 XXX A   63  XXX A   75  1                                  13
-HELIX    2  A2 XXX A  101  XXX A  104  1                                   4
-HELIX    3  A3 XXX A  165  XXX A  174  1                                  10
-HELIX    4  A4 XXX A  175  XXX A  179  1                                   5
-HELIX    5  A5 XXX A  184  XXX A  186  1                                   3
-HELIX    6  A6 XXX A  242  XXX A  250  1                                   9
-HELIX    7  A7 XXX A  255  XXX A  260  1                                   6
-HELIX    8  A8 XXX A  263  XXX A  271  1                                   9
+HELIX    1  H1 XXX A	  63  XXX A   75  1                                  13
+SHEET    1  E1 2 XXX A  80 XXX  A  81  0
+HELIX    2  H2 XXX A	 101  XXX A  104  1                                   4
+SHEET    2  E2 8 XXX A 121 XXX  A 128  0
+SHEET    3  E311 XXX A 146 XXX  A 156  0
+HELIX    3  H3 XXX A	 165  XXX A  174  1                                  10
+HELIX    4  H4 XXX A	 175  XXX A  179  1                                   5
+HELIX    5  H5 XXX A	 184  XXX A  186  1                                   3
+SHEET    4  E4 9 XXX A 188 XXX  A 196  0
+SHEET    5  E510 XXX A 199 XXX  A 208  0
+SHEET    6  E614 XXX A 211 XXX  A 224  0
+SHEET    7  E715 XXX A 227 XXX  A 241  0
+HELIX    6  H6 XXX A	 242  XXX A  250  1                                   9
+HELIX    7  H7 XXX A	 255  XXX A  260  1                                   6
+HELIX    8  H8 XXX A	 263  XXX A  271  1                                   9
 ATOM    977  N   PRO A  60      23.195  16.335 -26.385  1.00 96.65           N  
 ATOM    978  CA  PRO A  60      22.960  15.894 -25.011  1.00 96.65           C  
 ATOM    979  HA  PRO A  60      23.176  14.829 -24.926  1.00 96.65           H  

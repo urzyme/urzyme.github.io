@@ -1,13 +1,22 @@
-HELIX    1  A1 XXX A   72  XXX A   85  1                                  14
-HELIX    2  A2 XXX A  110  XXX A  113  1                                   4
-HELIX    3  A3 XXX A  143  XXX A  145  1                                   3
-HELIX    4  A4 XXX A  165  XXX A  167  1                                   3
-HELIX    5  A5 XXX A  172  XXX A  181  1                                  10
-HELIX    6  A6 XXX A  182  XXX A  186  1                                   5
-HELIX    7  A7 XXX A  191  XXX A  193  1                                   3
-HELIX    8  A8 XXX A  249  XXX A  257  1                                   9
-HELIX    9  A9 XXX A  262  XXX A  266  1                                   5
-HELIX   10 A10 XXX A  268  XXX A  278  1                                  11
+HELIX    1  H1 XXX A	  72  XXX A   85  1                                  14
+SHEET    1  E1 2 XXX A  89 XXX  A  90  0
+HELIX    2  H2 XXX A	 110  XXX A  113  1                                   4
+SHEET    2  E2 4 XXX A 115 XXX  A 118  0
+SHEET    3  E3 4 XXX A 121 XXX  A 124  0
+SHEET    4  E4 8 XXX A 131 XXX  A 138  0
+HELIX    3  H3 XXX A	 143  XXX A  145  1                                   3
+SHEET    5  E5 9 XXX A 155 XXX  A 163  0
+HELIX    4  H4 XXX A	 165  XXX A  167  1                                   3
+HELIX    5  H5 XXX A	 172  XXX A  181  1                                  10
+HELIX    6  H6 XXX A	 182  XXX A  186  1                                   5
+HELIX    7  H7 XXX A	 191  XXX A  193  1                                   3
+SHEET    6  E610 XXX A 194 XXX  A 203  0
+SHEET    7  E710 XXX A 206 XXX  A 215  0
+SHEET    8  E812 XXX A 218 XXX  A 229  0
+SHEET    9  E913 XXX A 236 XXX  A 248  0
+HELIX    8  H8 XXX A	 249  XXX A  257  1                                   9
+HELIX    9  H9 XXX A	 262  XXX A  266  1                                   5
+HELIX   10 H10 XXX A	 268  XXX A  278  1                                  11
 ATOM   1118  N   PHE A  70     -12.020 -17.635  25.225  1.00 97.82           N  
 ATOM   1119  H   PHE A  70     -12.899 -17.342  24.822  1.00 97.82           H  
 ATOM   1120  CA  PHE A  70     -10.821 -17.335  24.456  1.00 97.82           C  

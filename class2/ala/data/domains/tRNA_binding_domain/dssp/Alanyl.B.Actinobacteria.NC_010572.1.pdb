@@ -1,11 +1,13 @@
-HELIX    1  A1 XXX A  273  XXX A  293  1                                  21
-HELIX    2  A2 XXX A  302  XXX A  320  1                                  19
-HELIX    3  A3 XXX A  328  XXX A  339  1                                  12
-HELIX    4  A4 XXX A  345  XXX A  348  1                                   4
-HELIX    5  A5 XXX A  350  XXX A  384  1                                  35
-HELIX    6  A6 XXX A  392  XXX A  400  1                                   9
-HELIX    7  A7 XXX A  406  XXX A  415  1                                  10
-HELIX    8  A8 XXX A  422  XXX A  438  1                                  17
+HELIX    1  H1 XXX A	 273  XXX A  293  1                                  21
+HELIX    2  H2 XXX A	 302  XXX A  320  1                                  19
+HELIX    3  H3 XXX A	 328  XXX A  339  1                                  12
+HELIX    4  H4 XXX A	 345  XXX A  348  1                                   4
+HELIX    5  H5 XXX A	 350  XXX A  384  1                                  35
+SHEET    1  E1 2 XXX A 389 XXX  A 390  0
+HELIX    6  H6 XXX A	 392  XXX A  400  1                                   9
+HELIX    7  H7 XXX A	 406  XXX A  415  1                                  10
+SHEET    2  E2 2 XXX A 419 XXX  A 420  0
+HELIX    8  H8 XXX A	 422  XXX A  438  1                                  17
 ATOM   4196  N   ASN A 272      24.925 -23.930 -15.804  1.00 91.76           N  
 ATOM   4197  H   ASN A 272      25.351 -24.504 -16.517  1.00 91.76           H  
 ATOM   4198  CA  ASN A 272      24.036 -22.841 -16.220  1.00 91.76           C  

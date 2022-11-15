@@ -1,6 +1,11 @@
-HELIX    1  A1 XXX A  178  XXX A  182  1                                   5
-HELIX    2  A2 XXX A  211  XXX A  213  1                                   3
-HELIX    3  A3 XXX A  224  XXX A  232  1                                   9
+HELIX    1  H1 XXX A	 178  XXX A  182  1                                   5
+SHEET    1  E1 2 XXX A 187 XXX  A 188  0
+SHEET    2  E2 2 XXX A 194 XXX  A 195  0
+SHEET    3  E3 4 XXX A 207 XXX  A 210  0
+HELIX    2  H2 XXX A	 211  XXX A  213  1                                   3
+SHEET    4  E4 5 XXX A 215 XXX  A 219  0
+HELIX    3  H3 XXX A	 224  XXX A  232  1                                   9
+SHEET    5  E5 2 XXX A 238 XXX  A 239  0
 ATOM   2968  N   ILE A 177       6.163   6.348   8.508  1.00 98.89           N  
 ATOM   2969  H   ILE A 177       5.458   5.626   8.475  1.00 98.89           H  
 ATOM   2970  CA  ILE A 177       6.722   6.834   7.239  1.00 98.89           C  

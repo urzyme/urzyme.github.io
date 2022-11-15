@@ -1,8 +1,13 @@
-HELIX    1  A1 XXX A  347  XXX A  359  1                                  13
-HELIX    2  A2 XXX A  373  XXX A  383  1                                  11
-HELIX    3  A3 XXX A  393  XXX A  398  1                                   6
-HELIX    4  A4 XXX A  414  XXX A  416  1                                   3
-HELIX    5  A5 XXX A  417  XXX A  427  1                                  11
+SHEET    1  E1 4 XXX A 338 XXX  A 341  0
+HELIX    1  H1 XXX A	 347  XXX A  359  1                                  13
+SHEET    2  E2 2 XXX A 365 XXX  A 366  0
+HELIX    2  H2 XXX A	 373  XXX A  383  1                                  11
+SHEET    3  E3 4 XXX A 388 XXX  A 391  0
+HELIX    3  H3 XXX A	 393  XXX A  398  1                                   6
+SHEET    4  E4 6 XXX A 400 XXX  A 405  0
+SHEET    5  E5 6 XXX A 408 XXX  A 413  0
+HELIX    4  H4 XXX A	 414  XXX A  416  1                                   3
+HELIX    5  H5 XXX A	 417  XXX A  427  1                                  11
 ATOM   5428  N   VAL A 337     -19.218  -8.701  24.366  1.00 98.00           N  
 ATOM   5429  H   VAL A 337     -18.946  -7.731  24.299  1.00 98.00           H  
 ATOM   5430  CA  VAL A 337     -20.381  -9.066  25.186  1.00 98.00           C  

@@ -1,10 +1,15 @@
-HELIX    1  A1 XXX A  385  XXX A  395  1                                  11
-HELIX    2  A2 XXX A  409  XXX A  414  1                                   6
-HELIX    3  A3 XXX A  417  XXX A  420  1                                   4
-HELIX    4  A4 XXX A  422  XXX A  424  1                                   3
-HELIX    5  A5 XXX A  442  XXX A  450  1                                   9
-HELIX    6  A6 XXX A  456  XXX A  458  1                                   3
-HELIX    7  A7 XXX A  475  XXX A  477  1                                   3
+HELIX    1  H1 XXX A	 385  XXX A  395  1                                  11
+SHEET    1  E1 2 XXX A 399 XXX  A 400  0
+SHEET    2  E2 3 XXX A 406 XXX  A 408  0
+HELIX    2  H2 XXX A	 409  XXX A  414  1                                   6
+HELIX    3  H3 XXX A	 417  XXX A  420  1                                   4
+HELIX    4  H4 XXX A	 422  XXX A  424  1                                   3
+SHEET    3  E3 4 XXX A 427 XXX  A 430  0
+SHEET    4  E4 5 XXX A 433 XXX  A 437  0
+HELIX    5  H5 XXX A	 442  XXX A  450  1                                   9
+HELIX    6  H6 XXX A	 456  XXX A  458  1                                   3
+SHEET    5  E5 2 XXX A 463 XXX  A 464  0
+HELIX    7  H7 XXX A	 475  XXX A  477  1                                   3
 ATOM   6059  N   THR A 384     -13.863  -3.661  17.620  1.00 98.17           N  
 ATOM   6060  H   THR A 384     -13.033  -3.405  18.136  1.00 98.17           H  
 ATOM   6061  CA  THR A 384     -14.774  -2.599  17.171  1.00 98.17           C  

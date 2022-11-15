@@ -1,8 +1,13 @@
-HELIX    1  A1 XXX A  350  XXX A  354  1                                   5
-HELIX    2  A2 XXX A  366  XXX A  381  1                                  16
-HELIX    3  A3 XXX A  450  XXX A  459  1                                  10
-HELIX    4  A4 XXX A  467  XXX A  481  1                                  15
-HELIX    5  A5 XXX A  509  XXX A  517  1                                   9
+HELIX    1  H1 XXX A	 350  XXX A  354  1                                   5
+SHEET    1  E1 3 XXX A 357 XXX  A 359  0
+HELIX    2  H2 XXX A	 366  XXX A  381  1                                  16
+SHEET    2  E2 5 XXX A 427 XXX  A 431  0
+SHEET    3  E3 2 XXX A 434 XXX  A 435  0
+HELIX    3  H3 XXX A	 450  XXX A  459  1                                  10
+SHEET    4  E4 6 XXX A 461 XXX  A 466  0
+HELIX    4  H4 XXX A	 467  XXX A  481  1                                  15
+SHEET    5  E5 3 XXX A 505 XXX  A 507  0
+HELIX    5  H5 XXX A	 509  XXX A  517  1                                   9
 HEADER    LIGASE                                  26-DEC-06   2ODR              
 TITLE     METHANOCOCCUS MARIPALUDIS PHOSPHOSERYL-TRNA SYNTHETASE                
 COMPND    MOL_ID: 1;                                                            

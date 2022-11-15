@@ -26,6 +26,9 @@ AA_COLS = {A: "#80a0f0", I: "#80a0f0", L: "#80a0f0", M: "#80a0f0", F: "#80a0f0",
 AA_COLS_2 = {E: "#FFC20A", H: "#0C7BDC", G: "#0C7BDC", I: "#0C7BDC", T:"#d3d3d3", S: "#d3d3d3",  B: "#d3d3d3",  N: "#ffffff",};
 
 
+
+PAIRWISE = false;
+
 MIN_SSE_LEN = 4;
 
 
@@ -57,14 +60,14 @@ STRAND_ARROW_HEAD_WIDTH = 13;
 HELIX_WIDTH = 11;
 HELIX_CORNER_RADIUS = 3;
 
-function renderaaRS(){
+function renderaaRS(isPairwise = false){
 
 
-  
+  PAIRWISE = isPairwise;
 
   
 	// Read info json
-   fetch("info.json").then(response => response.text()).then(text => renderInfo(text));
+  fetch("info.json").then(response => response.text()).then(text => renderInfo(text));
    
 
 	// Add loading wheel
@@ -157,21 +160,25 @@ function renderaaRS(){
 
 
   // Tertiary dropdown
-  $("#tertiaryTable").append("<div class='dropdownDiv'>Domain: <select id='domainSelect'></select></div>");
-  var dropdown = $("#domainSelect");
-  dropdown.append("<option value='_full'> Full protein </option>");
-  for (var f in DATA.features){
-    if (DATA.features[f].level > 1){
-      dropdown.append("<option value='" + f + "'>" + f + "</option>");
+  
+    $("#tertiaryTable").append("<div class='dropdownDiv'>Domain: <select id='domainSelect'></select></div>");
+    var dropdown = $("#domainSelect");
+    dropdown.append("<option value='_full'> Full protein </option>");
+    for (var f in DATA.features){
+      if (DATA.features[f].level > 1){
+        dropdown.append("<option value='" + f + "'>" + f + "</option>");
+      }
+      
     }
-    
-  }
-  $(dropdown).on("change", function(){
-    $("#tertiary").html("");
-    clearSelection();
-    renderTertiary("data/align.pdb", "superposition");
-  });
+    $(dropdown).on("change", function(){
+      $("#tertiary").html("");
+      clearSelection();
+      renderTertiary("data/align.pdb", "superposition");
+    });
 
+  if (PAIRWISE) {
+    dropdown.hide();
+  }
 	
 
 	renderTertiary("data/align.pdb", "superposition");
@@ -220,42 +227,76 @@ function renderInfo(text){
 	 $("#main").prepend("<h1>" + json.fullName + "</h1>");
 	 
 	 
-	// Summary table
+
 	$(".summary").append("<table></table>");
-	$(".summary table").append(`<tr>
-								<th>Name</th>
-								<td>` + json.name + `</td>
-							</tr>`);
-	$(".summary table").append(`<tr>
-								<th>Class</th>
-								<td>` + json.class + `</td>
-							</tr>`);
-  $(".summary table").append(`<tr>
-                <th>Subclass</th>
-                <td>` + json.subclass + `</td>
-              </tr>`);
-	$(".summary table").append(`<tr title="Amino acid attached to tRNA">
-								<th>Activated substrate</th>
-								<td>` + json.substrate + `</td>
-							</tr>`);
-    $(".summary table").append(`<tr title="Amino acid incorporated onto protein">
-                <th>Incorporates</th>
-                <td>` + json.incorporates + `</td>
-              </tr>`);
-	$(".summary table").append(`<tr>
-								<th>Oligomerisation</th>
-								<td>` + json.oligo + `</td>
-							</tr>`);
 
-	$(".summary table").append(`<tr title="Codons in the standard genetic code">
-								<th>Codons</th>
-								<td>` + json.codons + `</td>
-							</tr>`);	
-	$(".summary table").append(`<tr>
-								<th>Editing</th>
-								<td>` + json.editing + `</td>
-							</tr>`);
+  // Summary table for families
+  if (!PAIRWISE) {
+  	$(".summary table").append(`<tr>
+  								<th>Name</th>
+  								<td>` + json.name + `</td>
+  							</tr>`);
+  	$(".summary table").append(`<tr>
+  								<th>Class</th>
+  								<td>` + json.class + `</td>
+  							</tr>`);
+    $(".summary table").append(`<tr>
+                  <th>Subclass</th>
+                  <td>` + json.subclass + `</td>
+                </tr>`);
+  	$(".summary table").append(`<tr title="Amino acid attached to tRNA">
+  								<th>Activated substrate</th>
+  								<td>` + json.substrate + `</td>
+  							</tr>`);
+      $(".summary table").append(`<tr title="Amino acid incorporated onto protein">
+                  <th>Incorporates</th>
+                  <td>` + json.incorporates + `</td>
+                </tr>`);
+  	$(".summary table").append(`<tr>
+  								<th>Oligomerisation</th>
+  								<td>` + json.oligo + `</td>
+  							</tr>`);
 
+  	$(".summary table").append(`<tr title="Codons in the standard genetic code">
+  								<th>Codons</th>
+  								<td>` + json.codons + `</td>
+  							</tr>`);	
+  	$(".summary table").append(`<tr>
+  								<th>Editing</th>
+  								<td>` + json.editing + `</td>
+  							</tr>`);
+
+  }
+
+  // Summary table for pairwise alignments
+  else{
+
+        $(".summary table").append(`<tr>
+                  <th>Class</th>
+                  <td>` + json.class + `</td>
+                </tr>`);
+        $(".summary table").append(`<tr>
+                <th>Family 1</th>
+                  <td>` + json.family1 + `</td>
+                </tr>`);
+        $(".summary table").append(`<tr>
+                <th>Family 2</th>
+                  <td>` + json.family2 + `</td>
+                </tr>`);
+        $(".summary table").append(`<tr>
+                  <th>RMSD</th>
+                  <td>` + json.rmsd + ` &#8491;</td>
+                </tr>`);
+        $(".summary table").append(`<tr>
+                  <th>Cross-family RMSD</th>
+                  <td>` + json.crossFamilyRmsd + ` &#8491;</td>
+                </tr>`);
+
+
+        $(".notes div").html(json.description);
+
+
+  }
 	
 }
 
@@ -319,8 +360,9 @@ function renderTertiary(pdb = null, id = "tertiary") {
 	  
     // Display the protein as cartoon
 	  if (id == "tertiary"){
-      PV_GEOMS[id] = viewer.cartoon('protein', structure, { color : colourSelected(id, color.rainbow) });
+      PV_GEOMS[id] = viewer.cartoon('protein', structure, { color : colourSelected(id, color.ssSuccession) });
 	  }else{
+      //var grad = color.gradient(["red", "blue", "green"]);
 		  PV_GEOMS[id] = viewer.cartoon('protein', structure, { color : colourSelected(id, color.byChain) });
 	  }
 	 
@@ -366,9 +408,9 @@ function recolourTertiaries(){
 
       else {
         if (id == "tertiary"){
-          PV_GEOMS[id].colorBy(colourSelected(id, color.rainbow));
+          PV_GEOMS[id].colorBy(colourSelected(id, color.ssSuccession));
         }else{
-          PV_GEOMS[id].colorBy(colourSelected(id, color.byChain));
+          PV_GEOMS[id].colorBy(colourSelected(id, function() { color.byChain }));
         }
         PV_VIEWERS[id].requestRedraw();
       }
@@ -689,10 +731,15 @@ function renderSecondary(svg){
 	  
 
 	  
+      // Click on an accession to select ot
       var ele = drawSVGobj(svgContent, "text", {x: x, y: y, pdb: acc, style: "text-anchor:end; cursor:pointer; fill:#366BA1; dominant-baseline:central; font-size:" + NT_FONT_SIZE + "px"}, value=accPrint)
-		$(ele).bind("click", function(event){
-			renderTertiary("data/dssp/" + event.target.getAttribute("pdb"));
-		});
+  		$(ele).bind("click", function(event){
+        var a = event.target.getAttribute("pdb");
+        var directory = DATA.directories[a];
+        directory = directory.replace("structures/", "dssp/");
+        if (!PAIRWISE) directory = "data/" + directory;
+  			renderTertiary(directory);
+  		});
 
 
     }
@@ -1194,7 +1241,6 @@ function loadAllFiles(resolve = function() { }){
   fetch("data/features.tsv").then(response => response.text()).then(text => loadFeatures(text, resolve));
 
 
-
 }
 
 
@@ -1234,7 +1280,9 @@ function loadAlignment(fasta, resolve = function() { }){
   var lines = fasta.split("\n");
   var sequences = {};
   var acc = "seq";
+  var dir = "";
   var accessions = [];
+  var directories = {};
   var isAlpha = {};
   var urls = {};
   for (var i = 0; i < lines.length; i ++){
@@ -1244,10 +1292,13 @@ function loadAlignment(fasta, resolve = function() { }){
     if (line.trim() == "") continue;
 
     if (line[0] == ">"){
-      acc = line.substring(1, line.length).trim();
-      acc = acc.replace("structures/", "");
+      dir = line.substring(1, line.length).trim();
+      var acc_split = dir.split("/");
+      //acc = acc.replace("structures/", "");
+      acc = acc_split[acc_split.length -1];
     }else{
       sequences[acc] = line;
+      directories[acc] = dir;
       accessions.push(acc);
 
       // PDB or genbank?
@@ -1280,6 +1331,7 @@ function loadAlignment(fasta, resolve = function() { }){
   DATA.isAlpha = isAlpha;
   DATA.urls = urls;
   DATA.accessions = accessions;
+  DATA.directories = directories;
   DATA.alignment = sequences;
 
   // Load all pdb files
@@ -1354,7 +1406,11 @@ function loadStructure(structures, resolve = function() { } ){
     if (firstLine != -1){
 
 
-      var acc = fileName.replace("data/dssp/", "").replace(".dssp", "");
+      //var acc = fileName.replace("data/dssp/", "").replace(".dssp", "");
+      var acc_split = fileName.split("/");
+      //acc = acc.replace("structures/", "");
+      var acc = acc_split[acc_split.length -1];
+      acc = acc.replace(".dssp", "");
 
       console.log(acc);
 

@@ -1,5 +1,10 @@
-HELIX    1  A1 XXX A  163  XXX A  171  1                                   9
-HELIX    2  A2 XXX A  221  XXX A  225  1                                   5
+SHEET    1  E114 XXX A 120 XXX  A 133  0
+SHEET    2  E2 8 XXX A 137 XXX  A 144  0
+SHEET    3  E3 8 XXX A 147 XXX  A 154  0
+HELIX    1  H1 XXX A	 163  XXX A  171  1                                   9
+SHEET    4  E410 XXX A 180 XXX  A 189  0
+SHEET    5  E512 XXX A 200 XXX  A 211  0
+HELIX    2  H2 XXX A	 221  XXX A  225  1                                   5
 ATOM   1819  N   ASN A 118     -11.937  -0.960  39.541  1.00 87.98           N  
 ATOM   1820  H   ASN A 118     -11.235  -1.483  39.036  1.00 87.98           H  
 ATOM   1821  CA  ASN A 118     -13.345  -1.282  39.263  1.00 87.98           C  

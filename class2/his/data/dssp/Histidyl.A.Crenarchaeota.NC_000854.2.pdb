@@ -1,23 +1,40 @@
-HELIX    1  A1 XXX A   17  XXX A   36  1                                  20
-HELIX    2  A2 XXX A   50  XXX A   53  1                                   4
-HELIX    3  A3 XXX A   59  XXX A   64  1                                   6
-HELIX    4  A4 XXX A   85  XXX A   94  1                                  10
-HELIX    5  A5 XXX A  137  XXX A  154  1                                  18
-HELIX    6  A6 XXX A  166  XXX A  169  1                                   4
-HELIX    7  A7 XXX A  170  XXX A  176  1                                   7
-HELIX    8  A8 XXX A  183  XXX A  189  1                                   7
-HELIX    9  A9 XXX A  192  XXX A  206  1                                  15
-HELIX   10 A10 XXX A  211  XXX A  222  1                                  12
-HELIX   11 A11 XXX A  227  XXX A  238  1                                  12
-HELIX   12 A12 XXX A  242  XXX A  258  1                                  17
-HELIX   13 A13 XXX A  300  XXX A  307  1                                   8
-HELIX   14 A14 XXX A  320  XXX A  329  1                                  10
-HELIX   15 A15 XXX A  350  XXX A  352  1                                   3
-HELIX   16 A16 XXX A  353  XXX A  365  1                                  13
-HELIX   17 A17 XXX A  379  XXX A  388  1                                  10
-HELIX   18 A18 XXX A  399  XXX A  404  1                                   6
-HELIX   19 A19 XXX A  422  XXX A  424  1                                   3
-HELIX   20 A20 XXX A  425  XXX A  432  1                                   8
+HELIX    1  H1 XXX A	  17  XXX A   36  1                                  20
+SHEET    1  E1 2 XXX A  40 XXX  A  41  0
+SHEET    2  E2 3 XXX A  47 XXX  A  49  0
+HELIX    2  H2 XXX A	  50  XXX A   53  1                                   4
+HELIX    3  H3 XXX A	  59  XXX A   64  1                                   6
+SHEET    3  E3 3 XXX A  68 XXX  A  70  0
+SHEET    4  E4 4 XXX A  77 XXX  A  80  0
+HELIX    4  H4 XXX A	  85  XXX A   94  1                                  10
+SHEET    5  E510 XXX A 102 XXX  A 111  0
+SHEET    6  E610 XXX A 123 XXX  A 132  0
+HELIX    5  H5 XXX A	 137  XXX A  154  1                                  18
+SHEET    7  E7 7 XXX A 159 XXX  A 165  0
+HELIX    6  H6 XXX A	 166  XXX A  169  1                                   4
+HELIX    7  H7 XXX A	 170  XXX A  176  1                                   7
+HELIX    8  H8 XXX A	 183  XXX A  189  1                                   7
+HELIX    9  H9 XXX A	 192  XXX A  206  1                                  15
+HELIX   10 H10 XXX A	 211  XXX A  222  1                                  12
+SHEET    8  E8 2 XXX A 224 XXX  A 225  0
+HELIX   11 H11 XXX A	 227  XXX A  238  1                                  12
+HELIX   12 H12 XXX A	 242  XXX A  258  1                                  17
+SHEET    9  E9 4 XXX A 263 XXX  A 266  0
+SHEET   10 E10 7 XXX A 279 XXX  A 285  0
+SHEET   11 E11 7 XXX A 292 XXX  A 298  0
+HELIX   13 H13 XXX A	 300  XXX A  307  1                                   8
+SHEET   12 E12 6 XXX A 313 XXX  A 318  0
+HELIX   14 H14 XXX A	 320  XXX A  329  1                                  10
+SHEET   13 E13 5 XXX A 343 XXX  A 347  0
+HELIX   15 H15 XXX A	 350  XXX A  352  1                                   3
+HELIX   16 H16 XXX A	 353  XXX A  365  1                                  13
+SHEET   14 E14 3 XXX A 370 XXX  A 372  0
+HELIX   17 H17 XXX A	 379  XXX A  388  1                                  10
+SHEET   15 E15 5 XXX A 393 XXX  A 397  0
+HELIX   18 H18 XXX A	 399  XXX A  404  1                                   6
+SHEET   16 E16 6 XXX A 406 XXX  A 411  0
+SHEET   17 E17 6 XXX A 416 XXX  A 421  0
+HELIX   19 H19 XXX A	 422  XXX A  424  1                                   3
+HELIX   20 H20 XXX A	 425  XXX A  432  1                                   8
 ATOM      1  N   VAL A   1     -37.435   9.642 -15.013  1.00 50.12           N  
 ATOM      2  H   VAL A   1     -38.096   9.814 -14.270  1.00 50.12           H  
 ATOM      3  H2  VAL A   1     -36.717  10.352 -14.983  1.00 50.12           H  

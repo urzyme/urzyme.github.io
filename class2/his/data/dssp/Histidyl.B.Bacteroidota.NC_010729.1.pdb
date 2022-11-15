@@ -1,24 +1,40 @@
-HELIX    1  A1 XXX A   15  XXX A   34  1                                  20
-HELIX    2  A2 XXX A   48  XXX A   51  1                                   4
-HELIX    3  A3 XXX A   56  XXX A   60  1                                   5
-HELIX    4  A4 XXX A   78  XXX A   82  1                                   5
-HELIX    5  A5 XXX A   86  XXX A   93  1                                   8
-HELIX    6  A6 XXX A  103  XXX A  113  1                                  11
-HELIX    7  A7 XXX A  157  XXX A  172  1                                  16
-HELIX    8  A8 XXX A  184  XXX A  193  1                                  10
-HELIX    9  A9 XXX A  197  XXX A  199  1                                   3
-HELIX   10 A10 XXX A  200  XXX A  208  1                                   9
-HELIX   11 A11 XXX A  210  XXX A  213  1                                   4
-HELIX   12 A12 XXX A  215  XXX A  224  1                                  10
-HELIX   13 A13 XXX A  229  XXX A  239  1                                  11
-HELIX   14 A14 XXX A  245  XXX A  255  1                                  11
-HELIX   15 A15 XXX A  260  XXX A  276  1                                  17
-HELIX   16 A16 XXX A  326  XXX A  328  1                                   3
-HELIX   17 A17 XXX A  342  XXX A  351  1                                  10
-HELIX   18 A18 XXX A  372  XXX A  387  1                                  16
-HELIX   19 A19 XXX A  401  XXX A  410  1                                  10
-HELIX   20 A20 XXX A  421  XXX A  426  1                                   6
-HELIX   21 A21 XXX A  446  XXX A  453  1                                   8
+HELIX    1  H1 XXX A	  15  XXX A   34  1                                  20
+SHEET    1  E1 2 XXX A  38 XXX  A  39  0
+SHEET    2  E2 3 XXX A  45 XXX  A  47  0
+HELIX    2  H2 XXX A	  48  XXX A   51  1                                   4
+HELIX    3  H3 XXX A	  56  XXX A   60  1                                   5
+SHEET    3  E3 2 XXX A  65 XXX  A  66  0
+HELIX    4  H4 XXX A	  78  XXX A   82  1                                   5
+HELIX    5  H5 XXX A	  86  XXX A   93  1                                   8
+SHEET    4  E4 3 XXX A  96 XXX  A  98  0
+HELIX    6  H6 XXX A	 103  XXX A  113  1                                  11
+SHEET    5  E510 XXX A 121 XXX  A 130  0
+SHEET    6  E610 XXX A 142 XXX  A 151  0
+HELIX    7  H7 XXX A	 157  XXX A  172  1                                  16
+SHEET    7  E7 7 XXX A 177 XXX  A 183  0
+HELIX    8  H8 XXX A	 184  XXX A  193  1                                  10
+HELIX    9  H9 XXX A	 197  XXX A  199  1                                   3
+HELIX   10 H10 XXX A	 200  XXX A  208  1                                   9
+HELIX   11 H11 XXX A	 210  XXX A  213  1                                   4
+HELIX   12 H12 XXX A	 215  XXX A  224  1                                  10
+HELIX   13 H13 XXX A	 229  XXX A  239  1                                  11
+HELIX   14 H14 XXX A	 245  XXX A  255  1                                  11
+HELIX   15 H15 XXX A	 260  XXX A  276  1                                  17
+SHEET    8  E8 4 XXX A 284 XXX  A 287  0
+SHEET    9  E9 7 XXX A 301 XXX  A 307  0
+SHEET   10 E10 6 XXX A 316 XXX  A 321  0
+HELIX   16 H16 XXX A	 326  XXX A  328  1                                   3
+SHEET   11 E11 7 XXX A 335 XXX  A 341  0
+HELIX   17 H17 XXX A	 342  XXX A  351  1                                  10
+SHEET   12 E12 3 XXX A 365 XXX  A 367  0
+HELIX   18 H18 XXX A	 372  XXX A  387  1                                  16
+SHEET   13 E13 3 XXX A 392 XXX  A 394  0
+HELIX   19 H19 XXX A	 401  XXX A  410  1                                  10
+SHEET   14 E14 4 XXX A 415 XXX  A 418  0
+HELIX   20 H20 XXX A	 421  XXX A  426  1                                   6
+SHEET   15 E15 6 XXX A 428 XXX  A 433  0
+SHEET   16 E16 5 XXX A 439 XXX  A 443  0
+HELIX   21 H21 XXX A	 446  XXX A  453  1                                   8
 ATOM      1  N   MET A   1     -38.937   3.008  -6.541  1.00 73.68           N  
 ATOM      2  H   MET A   1     -39.820   3.350  -6.187  1.00 73.68           H  
 ATOM      3  H2  MET A   1     -38.731   3.459  -7.421  1.00 73.68           H  

@@ -1,8 +1,11 @@
-HELIX    1  A1 XXX A  548  XXX A  560  1                                  13
-HELIX    2  A2 XXX A  574  XXX A  579  1                                   6
-HELIX    3  A3 XXX A  580  XXX A  584  1                                   5
-HELIX    4  A4 XXX A  595  XXX A  600  1                                   6
-HELIX    5  A5 XXX A  618  XXX A  629  1                                  12
+HELIX    1  H1 XXX A	 548  XXX A  560  1                                  13
+HELIX    2  H2 XXX A	 574  XXX A  579  1                                   6
+HELIX    3  H3 XXX A	 580  XXX A  584  1                                   5
+SHEET    1  E1 4 XXX A 589 XXX  A 592  0
+HELIX    4  H4 XXX A	 595  XXX A  600  1                                   6
+SHEET    2  E2 6 XXX A 602 XXX  A 607  0
+SHEET    3  E3 5 XXX A 613 XXX  A 617  0
+HELIX    5  H5 XXX A	 618  XXX A  629  1                                  12
 ATOM   8834  N   ALA A 545     -33.821  -5.191  29.029  1.00 95.12           N  
 ATOM   8835  H   ALA A 545     -34.386  -6.014  28.877  1.00 95.12           H  
 ATOM   8836  CA  ALA A 545     -34.491  -3.891  28.968  1.00 95.12           C  

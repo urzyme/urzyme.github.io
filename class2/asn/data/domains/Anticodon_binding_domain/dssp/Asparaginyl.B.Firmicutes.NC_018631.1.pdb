@@ -1,5 +1,10 @@
-HELIX    1  A1 XXX A   10  XXX A   16  1                                   7
-HELIX    2  A2 XXX A   59  XXX A   67  1                                   9
+HELIX    1  H1 XXX A	  10  XXX A   16  1                                   7
+SHEET    1  E114 XXX A  20 XXX  A  33  0
+SHEET    2  E2 7 XXX A  36 XXX  A  42  0
+SHEET    3  E3 7 XXX A  47 XXX  A  53  0
+HELIX    2  H2 XXX A	  59  XXX A   67  1                                   9
+SHEET    4  E410 XXX A  73 XXX  A  82  0
+SHEET    5  E512 XXX A  90 XXX  A 101  0
 ATOM    115  N   ILE A   8     -16.020   7.443  26.011  1.00 98.24           N  
 ATOM    116  H   ILE A   8     -16.755   6.755  26.083  1.00 98.24           H  
 ATOM    117  CA  ILE A   8     -14.696   6.975  25.569  1.00 98.24           C  

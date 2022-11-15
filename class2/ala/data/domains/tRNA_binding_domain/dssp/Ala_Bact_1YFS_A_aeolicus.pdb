@@ -1,11 +1,13 @@
-HELIX    1  A1 XXX A  261  XXX A  281  1                                  21
-HELIX    2  A2 XXX A  290  XXX A  308  1                                  19
-HELIX    3  A3 XXX A  316  XXX A  327  1                                  12
-HELIX    4  A4 XXX A  333  XXX A  372  1                                  40
-HELIX    5  A5 XXX A  380  XXX A  384  1                                   5
-HELIX    6  A6 XXX A  385  XXX A  389  1                                   5
-HELIX    7  A7 XXX A  394  XXX A  402  1                                   9
-HELIX    8  A8 XXX A  410  XXX A  422  1                                  13
+HELIX    1  H1 XXX A	 261  XXX A  281  1                                  21
+HELIX    2  H2 XXX A	 290  XXX A  308  1                                  19
+HELIX    3  H3 XXX A	 316  XXX A  327  1                                  12
+HELIX    4  H4 XXX A	 333  XXX A  372  1                                  40
+SHEET    1  E1 2 XXX A 377 XXX  A 378  0
+HELIX    5  H5 XXX A	 380  XXX A  384  1                                   5
+HELIX    6  H6 XXX A	 385  XXX A  389  1                                   5
+HELIX    7  H7 XXX A	 394  XXX A  402  1                                   9
+SHEET    2  E2 2 XXX A 407 XXX  A 408  0
+HELIX    8  H8 XXX A	 410  XXX A  422  1                                  13
 HEADER    LIGASE                                  03-JAN-05   1YFS              
 TITLE     THE CRYSTAL STRUCTURE OF ALANYL-TRNA SYNTHETASE IN COMPLEX            
 TITLE    2 WITH L-ALANINE                                                       

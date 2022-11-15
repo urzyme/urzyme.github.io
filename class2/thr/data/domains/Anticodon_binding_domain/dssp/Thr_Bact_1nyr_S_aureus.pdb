@@ -1,7 +1,10 @@
-HELIX    1  A1 XXX A  559  XXX A  570  1                                  12
-HELIX    2  A2 XXX A  585  XXX A  595  1                                  11
-HELIX    3  A3 XXX A  605  XXX A  609  1                                   5
-HELIX    4  A4 XXX A  628  XXX A  640  1                                  13
+HELIX    1  H1 XXX A	 559  XXX A  570  1                                  12
+HELIX    2  H2 XXX A	 585  XXX A  595  1                                  11
+SHEET    1  E1 4 XXX A 599 XXX  A 602  0
+HELIX    3  H3 XXX A	 605  XXX A  609  1                                   5
+SHEET    2  E2 6 XXX A 612 XXX  A 617  0
+SHEET    3  E3 3 XXX A 625 XXX  A 627  0
+HELIX    4  H4 XXX A	 628  XXX A  640  1                                  13
 HEADER    LIGASE                                  13-FEB-03   1NYR              
 TITLE     STRUCTURE OF STAPHYLOCOCCUS AUREUS THREONYL-TRNA SYNTHETASE           
 TITLE    2 COMPLEXED WITH ATP                                                   

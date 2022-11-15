@@ -1,14 +1,29 @@
-HELIX    1  A1 XXX A  139  XXX A  146  1                                   8
-HELIX    2  A2 XXX A  155  XXX A  158  1                                   4
-HELIX    3  A3 XXX A  168  XXX A  186  1                                  19
-HELIX    4  A4 XXX A  200  XXX A  206  1                                   7
-HELIX    5  A5 XXX A  232  XXX A  238  1                                   7
-HELIX    6  A6 XXX A  247  XXX A  249  1                                   3
-HELIX    7  A7 XXX A  292  XXX A  294  1                                   3
-HELIX    8  A8 XXX A  295  XXX A  312  1                                  18
-HELIX    9  A9 XXX A  359  XXX A  364  1                                   6
-HELIX   10 A10 XXX A  388  XXX A  398  1                                  11
-HELIX   11 A11 XXX A  410  XXX A  416  1                                   7
+HELIX    1  H1 XXX A	 139  XXX A  146  1                                   8
+SHEET    1  E1 2 XXX A 149 XXX  A 150  0
+HELIX    2  H2 XXX A	 155  XXX A  158  1                                   4
+SHEET    2  E2 2 XXX A 164 XXX  A 165  0
+HELIX    3  H3 XXX A	 168  XXX A  186  1                                  19
+SHEET    3  E3 3 XXX A 190 XXX  A 192  0
+SHEET    4  E4 3 XXX A 197 XXX  A 199  0
+HELIX    4  H4 XXX A	 200  XXX A  206  1                                   7
+SHEET    5  E5 4 XXX A 218 XXX  A 221  0
+SHEET    6  E6 5 XXX A 224 XXX  A 228  0
+HELIX    5  H5 XXX A	 232  XXX A  238  1                                   7
+SHEET    7  E7 3 XXX A 244 XXX  A 246  0
+HELIX    6  H6 XXX A	 247  XXX A  249  1                                   3
+SHEET    8  E810 XXX A 252 XXX  A 261  0
+SHEET    9  E911 XXX A 280 XXX  A 290  0
+HELIX    7  H7 XXX A	 292  XXX A  294  1                                   3
+HELIX    8  H8 XXX A	 295  XXX A  312  1                                  18
+SHEET   10 E10 5 XXX A 317 XXX  A 321  0
+SHEET   11 E11 9 XXX A 333 XXX  A 341  0
+SHEET   12 E1210 XXX A 346 XXX  A 355  0
+HELIX    9  H9 XXX A	 359  XXX A  364  1                                   6
+SHEET   13 E13 3 XXX A 367 XXX  A 369  0
+SHEET   14 E14 3 XXX A 375 XXX  A 377  0
+SHEET   15 E15 9 XXX A 379 XXX  A 387  0
+HELIX   10 H10 XXX A	 388  XXX A  398  1                                  11
+HELIX   11 H11 XXX A	 410  XXX A  416  1                                   7
 ATOM   2143  N   PHE A 134     -25.299  -8.022  26.264  1.00 97.49           N  
 ATOM   2144  H   PHE A 134     -24.338  -7.806  26.041  1.00 97.49           H  
 ATOM   2145  CA  PHE A 134     -26.283  -7.591  25.278  1.00 97.49           C  

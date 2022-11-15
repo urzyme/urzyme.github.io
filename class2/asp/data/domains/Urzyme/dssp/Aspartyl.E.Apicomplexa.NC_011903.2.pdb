@@ -1,4 +1,9 @@
-HELIX    1  A1 XXX A  371  XXX A  379  1                                   9
+SHEET    1  E1 2 XXX A 336 XXX  A 337  0
+SHEET    2  E2 2 XXX A 343 XXX  A 344  0
+SHEET    3  E3 4 XXX A 356 XXX  A 359  0
+SHEET    4  E4 5 XXX A 362 XXX  A 366  0
+HELIX    1  H1 XXX A	 371  XXX A  379  1                                   9
+SHEET    5  E5 2 XXX A 385 XXX  A 386  0
 ATOM   5421  N   LEU A 331      12.088  14.302   5.330  1.00 98.59           N  
 ATOM   5422  H   LEU A 331      11.326  13.661   5.499  1.00 98.59           H  
 ATOM   5423  CA  LEU A 331      11.998  15.657   5.891  1.00 98.59           C  

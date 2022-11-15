@@ -1,8 +1,12 @@
-HELIX    1  A1 XXX A  491  XXX A  503  1                                  13
-HELIX    2  A2 XXX A  511  XXX A  518  1                                   8
-HELIX    3  A3 XXX A  524  XXX A  527  1                                   4
-HELIX    4  A4 XXX A  550  XXX A  560  1                                  11
-HELIX    5  A5 XXX A  572  XXX A  575  1                                   4
+HELIX    1  H1 XXX A	 491  XXX A  503  1                                  13
+SHEET    1  E1 3 XXX A 505 XXX  A 507  0
+HELIX    2  H2 XXX A	 511  XXX A  518  1                                   8
+HELIX    3  H3 XXX A	 524  XXX A  527  1                                   4
+SHEET    2  E2 6 XXX A 541 XXX  A 546  0
+HELIX    4  H4 XXX A	 550  XXX A  560  1                                  11
+SHEET    3  E3 4 XXX A 563 XXX  A 566  0
+HELIX    5  H5 XXX A	 572  XXX A  575  1                                   4
+SHEET    4  E4 6 XXX A 589 XXX  A 594  0
 ATOM   7779  N   GLN A 490      -7.387   6.966  15.213  1.00 98.65           N  
 ATOM   7780  H   GLN A 490      -7.881   7.789  15.527  1.00 98.65           H  
 ATOM   7781  CA  GLN A 490      -6.489   7.096  14.059  1.00 98.65           C  

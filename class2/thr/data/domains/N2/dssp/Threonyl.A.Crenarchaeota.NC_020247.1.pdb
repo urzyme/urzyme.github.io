@@ -1,5 +1,12 @@
-HELIX    1  A1 XXX A    2  XXX A   21  1                                  20
-HELIX    2  A2 XXX A   49  XXX A   54  1                                   6
+HELIX    1  H1 XXX A	   2  XXX A   21  1                                  20
+SHEET    1  E1 7 XXX A  26 XXX  A  32  0
+SHEET    2  E2 6 XXX A  37 XXX  A  42  0
+HELIX    2  H2 XXX A	  49  XXX A   54  1                                   6
+SHEET    3  E3 4 XXX A  64 XXX  A  67  0
+SHEET    4  E4 5 XXX A  73 XXX  A  77  0
+SHEET    5  E5 6 XXX A  80 XXX  A  85  0
+SHEET    6  E613 XXX A  97 XXX  A 109  0
+SHEET    7  E711 XXX A 112 XXX  A 122  0
 ATOM      1  N   MET A   1     -18.213   4.644 -11.248  1.00 67.59           N  
 ATOM      2  H   MET A   1     -17.709   3.858 -11.632  1.00 67.59           H  
 ATOM      3  H2  MET A   1     -18.832   4.321 -10.519  1.00 67.59           H  

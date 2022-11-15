@@ -20,6 +20,15 @@ body {
 }
 
 
+g.matrixcell:hover rect{
+	fill:red !important;
+}
+
+g.matrixcell:hover text{
+	fill:white !important;
+}
+
+
 
 body {
 	%margin:2%;

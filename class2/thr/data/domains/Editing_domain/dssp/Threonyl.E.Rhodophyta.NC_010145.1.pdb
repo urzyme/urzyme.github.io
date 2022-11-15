@@ -1,11 +1,24 @@
-HELIX    1  A1 XXX A   78  XXX A   85  1                                   8
-HELIX    2  A2 XXX A   87  XXX A   92  1                                   6
-HELIX    3  A3 XXX A  123  XXX A  145  1                                  23
-HELIX    4  A4 XXX A  174  XXX A  187  1                                  14
-HELIX    5  A5 XXX A  200  XXX A  207  1                                   8
-HELIX    6  A6 XXX A  211  XXX A  218  1                                   8
-HELIX    7  A7 XXX A  246  XXX A  248  1                                   3
-HELIX    8  A8 XXX A  262  XXX A  264  1                                   3
+SHEET    1  E1 5 XXX A  58 XXX  A  62  0
+SHEET    2  E2 5 XXX A  68 XXX  A  72  0
+HELIX    1  H1 XXX A	  78  XXX A   85  1                                   8
+HELIX    2  H2 XXX A	  87  XXX A   92  1                                   6
+SHEET    3  E3 6 XXX A  93 XXX  A  98  0
+SHEET    4  E4 3 XXX A 101 XXX  A 103  0
+SHEET    5  E5 7 XXX A 113 XXX  A 119  0
+HELIX    3  H3 XXX A	 123  XXX A  145  1                                  23
+SHEET    6  E6 2 XXX A 148 XXX  A 149  0
+SHEET    7  E7 2 XXX A 154 XXX  A 155  0
+SHEET    8  E8 7 XXX A 158 XXX  A 164  0
+HELIX    4  H4 XXX A	 174  XXX A  187  1                                  14
+SHEET    9  E9 7 XXX A 193 XXX  A 199  0
+HELIX    5  H5 XXX A	 200  XXX A  207  1                                   8
+HELIX    6  H6 XXX A	 211  XXX A  218  1                                   8
+SHEET   10 E10 7 XXX A 225 XXX  A 231  0
+SHEET   11 E11 4 XXX A 234 XXX  A 237  0
+HELIX    7  H7 XXX A	 246  XXX A  248  1                                   3
+SHEET   12 E1211 XXX A 251 XXX  A 261  0
+HELIX    8  H8 XXX A	 262  XXX A  264  1                                   3
+SHEET   13 E1310 XXX A 270 XXX  A 279  0
 ATOM    821  N   SER A  52      -1.160  56.227   9.043  1.00 50.60           N  
 ATOM    822  H   SER A  52      -1.521  55.468   9.603  1.00 50.60           H  
 ATOM    823  CA  SER A  52      -1.331  56.107   7.597  1.00 50.60           C  

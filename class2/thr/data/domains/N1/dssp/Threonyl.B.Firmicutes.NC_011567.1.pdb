@@ -1,5 +1,12 @@
-HELIX    1  A1 XXX A   23  XXX A   30  1                                   8
-HELIX    2  A2 XXX A   32  XXX A   37  1                                   6
+SHEET    1  E1 4 XXX A   5 XXX  A   8  0
+SHEET    2  E2 4 XXX A  14 XXX  A  17  0
+SHEET    3  E3 2 XXX A  21 XXX  A  22  0
+HELIX    1  H1 XXX A	  23  XXX A   30  1                                   8
+HELIX    2  H2 XXX A	  32  XXX A   37  1                                   6
+SHEET    4  E4 4 XXX A  40 XXX  A  43  0
+SHEET    5  E5 4 XXX A  46 XXX  A  49  0
+SHEET    6  E6 2 XXX A  53 XXX  A  54  0
+SHEET    7  E7 6 XXX A  58 XXX  A  63  0
 ATOM     42  N   VAL A   4      37.957 -24.623 -27.034  1.00 93.47           N  
 ATOM     43  H   VAL A   4      38.614 -23.965 -27.428  1.00 93.47           H  
 ATOM     44  CA  VAL A   4      37.676 -24.496 -25.602  1.00 93.47           C  

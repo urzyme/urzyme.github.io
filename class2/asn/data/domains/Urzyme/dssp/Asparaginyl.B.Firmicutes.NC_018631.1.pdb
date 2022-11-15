@@ -1,5 +1,10 @@
-HELIX    1  A1 XXX A  146  XXX A  151  1                                   6
-HELIX    2  A2 XXX A  190  XXX A  200  1                                  11
+HELIX    1  H1 XXX A	 146  XXX A  151  1                                   6
+SHEET    1  E1 2 XXX A 155 XXX  A 156  0
+SHEET    2  E2 2 XXX A 162 XXX  A 163  0
+SHEET    3  E3 4 XXX A 175 XXX  A 178  0
+SHEET    4  E4 5 XXX A 181 XXX  A 185  0
+HELIX    2  H2 XXX A	 190  XXX A  200  1                                  11
+SHEET    5  E5 2 XXX A 203 XXX  A 204  0
 ATOM   2320  N   THR A 145       6.346   5.713   6.699  1.00 98.89           N  
 ATOM   2321  H   THR A 145       5.395   5.380   6.627  1.00 98.89           H  
 ATOM   2322  CA  THR A 145       7.016   6.189   5.484  1.00 98.89           C  

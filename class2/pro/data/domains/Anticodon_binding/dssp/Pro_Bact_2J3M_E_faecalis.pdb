@@ -1,8 +1,13 @@
-HELIX    1  A1 XXX A  483  XXX A  498  1                                  16
-HELIX    2  A2 XXX A  512  XXX A  522  1                                  11
-HELIX    3  A3 XXX A  534  XXX A  536  1                                   3
-HELIX    4  A4 XXX A  554  XXX A  556  1                                   3
-HELIX    5  A5 XXX A  557  XXX A  564  1                                   8
+SHEET    1  E1 5 XXX A 473 XXX  A 477  0
+HELIX    1  H1 XXX A	 483  XXX A  498  1                                  16
+SHEET    2  E2 4 XXX A 503 XXX  A 506  0
+HELIX    2  H2 XXX A	 512  XXX A  522  1                                  11
+SHEET    3  E3 5 XXX A 526 XXX  A 530  0
+HELIX    3  H3 XXX A	 534  XXX A  536  1                                   3
+SHEET    4  E4 6 XXX A 538 XXX  A 543  0
+SHEET    5  E5 6 XXX A 548 XXX  A 553  0
+HELIX    4  H4 XXX A	 554  XXX A  556  1                                   3
+HELIX    5  H5 XXX A	 557  XXX A  564  1                                   8
 HEADER    LIGASE                                  22-AUG-06   2J3M              
 TITLE     PROLYL-TRNA SYNTHETASE FROM ENTEROCOCCUS FAECALIS COMPLEXED           
 TITLE    2 WITH ATP, MANGANESE AND PROLINOL                                     

@@ -1,4 +1,8 @@
-HELIX    1  A1 XXX A  200  XXX A  208  1                                   9
+SHEET    1  E1 2 XXX A 163 XXX  A 164  0
+SHEET    2  E2 3 XXX A 182 XXX  A 184  0
+SHEET    3  E3 3 XXX A 192 XXX  A 194  0
+HELIX    1  H1 XXX A	 200  XXX A  208  1                                   9
+SHEET    4  E4 2 XXX A 214 XXX  A 215  0
 ATOM   2611  N   ALA A 158       1.955  16.731  13.702  1.00 98.37           N  
 ATOM   2612  H   ALA A 158       1.400  15.900  13.848  1.00 98.37           H  
 ATOM   2613  CA  ALA A 158       1.624  17.919  14.489  1.00 98.37           C  

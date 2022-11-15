@@ -1,3 +1,27 @@
+SHEET    1  E112 XXX A 359 XXX  A 370  0
+SHEET    2  E221 XXX A 373 XXX  A 393  0
+SHEET    3  E329 XXX A 398 XXX  A 426  0
+SHEET    4  E415 XXX A 429 XXX  A 443  0
+SHEET    5  E5 6 XXX A 446 XXX  A 451  0
+HELIX    1  H1 XXX A	 452  XXX A  455  1                                   4
+SHEET    6  E610 XXX A 456 XXX  A 465  0
+HELIX    2  H2 XXX A	 466  XXX A  469  1                                   4
+SHEET    7  E751 XXX A 470 XXX  A 520  0
+SHEET    8  E812 XXX B 359 XXX  B 370  0
+SHEET    9  E921 XXX B 373 XXX  B 393  0
+SHEET   10 E1029 XXX B 398 XXX  B 426  0
+SHEET   11 E1115 XXX B 429 XXX  B 443  0
+SHEET   12 E1275 XXX B 446 XXX  B 520  0
+SHEET   13 E1312 XXX C 350 XXX  C 361  0
+SHEET   14 E14 4 XXX C 364 XXX  C 367  0
+SHEET   15 E1510 XXX C 372 XXX  C 381  0
+SHEET   16 E1613 XXX C 424 XXX  C 436  0
+HELIX    3  H3 XXX C	 450  XXX A  458  1                                   9
+SHEET   17 E1711 XXX C 460 XXX  C 470  0
+SHEET   18 E18 7 XXX C 473 XXX  C 479  0
+SHEET   19 E19 4 XXX C 504 XXX  C 507  0
+SHEET   20 E20 3 XXX C 511 XXX  C 513  0
+SHEET   21 E21 3 XXX C 516 XXX  C 518  0
 ATOM   3877  N   SER A 358      35.476  47.797 -17.950  1.00 76.63      A    N  
 ATOM   3878  CA  SER A 358      36.843  47.332 -18.129  1.00 52.50      A    C  
 ATOM   3879  C   SER A 358      36.699  45.829 -18.192  1.00 60.98      A    C  
@@ -3485,3 +3509,5 @@ ATOM   3090  O   UNK C1384      44.466   9.673 -21.702  1.00140.95      A    O
 ATOM   3091  CB  UNK C1384      44.627  12.396 -21.975  1.00139.70      A    C  
 TER                                                                             
 END                                                                             
+
+

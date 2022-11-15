@@ -1,11 +1,23 @@
-HELIX    1  A1 XXX A    4  XXX A   13  1                                  10
-HELIX    2  A2 XXX A   31  XXX A   50  1                                  20
-HELIX    3  A3 XXX A   64  XXX A   70  1                                   7
-HELIX    4  A4 XXX A   75  XXX A   80  1                                   6
-HELIX    5  A5 XXX A  103  XXX A  111  1                                   9
-HELIX    6  A6 XXX A  160  XXX A  181  1                                  22
-HELIX    7  A7 XXX A  226  XXX A  230  1                                   5
-HELIX    8  A8 XXX A  255  XXX A  264  1                                  10
+HELIX    1  H1 XXX A	   4  XXX A   13  1                                  10
+HELIX    2  H2 XXX A	  31  XXX A   50  1                                  20
+SHEET    1  E1 2 XXX A  54 XXX  A  55  0
+SHEET    2  E2 3 XXX A  61 XXX  A  63  0
+HELIX    3  H3 XXX A	  64  XXX A   70  1                                   7
+HELIX    4  H4 XXX A	  75  XXX A   80  1                                   6
+SHEET    3  E3 4 XXX A  83 XXX  A  86  0
+SHEET    4  E4 8 XXX A  91 XXX  A  98  0
+HELIX    5  H5 XXX A	 103  XXX A  111  1                                   9
+SHEET    5  E5 5 XXX A 124 XXX  A 128  0
+SHEET    6  E6 8 XXX A 150 XXX  A 157  0
+HELIX    6  H6 XXX A	 160  XXX A  181  1                                  22
+SHEET    7  E7 5 XXX A 186 XXX  A 190  0
+SHEET    8  E8 8 XXX A 201 XXX  A 208  0
+SHEET    9  E911 XXX A 214 XXX  A 224  0
+HELIX    7  H7 XXX A	 226  XXX A  230  1                                   5
+SHEET   10 E10 3 XXX A 234 XXX  A 236  0
+SHEET   11 E11 3 XXX A 242 XXX  A 244  0
+SHEET   12 E12 7 XXX A 246 XXX  A 252  0
+HELIX    8  H8 XXX A	 255  XXX A  264  1                                  10
 HEADER    LIGASE                                  30-DEC-02   1NJ8              
 TITLE     CRYSTAL STRUCTURE OF PROLYL-TRNA SYNTHETASE FROM                      
 TITLE    2 METHANOCALDOCOCCUS JANASCHII                                         

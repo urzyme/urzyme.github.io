@@ -1,3 +1,19 @@
+SHEET    1  E1 2 XXX B 112 XXX  B 113  0
+SHEET    2  E2 3 XXX B 131 XXX  B 133  0
+SHEET    3  E3 2 XXX C 112 XXX  C 113  0
+SHEET    4  E4 3 XXX C 131 XXX  C 133  0
+SHEET    5  E5 3 XXX C 135 XXX  C 137  0
+SHEET    6  E6 2 XXX D 140 XXX  D 141  0
+SHEET    7  E7 2 XXX E 145 XXX  E 146  0
+SHEET    8  E8 3 XXX H 137 XXX  H 139  0
+SHEET    9  E9 3 XXX I 155 XXX  I 157  0
+SHEET   10 E10 2 XXX K 112 XXX  K 113  0
+SHEET   11 E11 2 XXX K 134 XXX  K 135  0
+SHEET   12 E12 2 XXX L 136 XXX  L 137  0
+SHEET   13 E13 2 XXX M 109 XXX  M 110  0
+SHEET   14 E14 2 XXX M 140 XXX  M 141  0
+SHEET   15 E15 2 XXX N 140 XXX  N 141  0
+SHEET   16 E16 3 XXX O 138 XXX  O 140  0
 ATOM    815  N   LEU A  98      21.833   7.025  11.594  1.00 22.95      A    N  
 ATOM    816  CA  LEU A  98      21.575   5.823  12.340  1.00 24.58      A    C  
 ATOM    817  C   LEU A  98      22.868   5.033  12.494  1.00 31.10      A    C  
@@ -7165,3 +7181,5 @@ ATOM   3923  CE2 PHE S 246      16.266 -16.147  11.684  1.00 96.77      A    C
 ATOM   3925  CZ  PHE S 246      15.907 -15.494  12.872  1.00 96.77      A    C  
 TER                                                                             
 END                                                                             
+
+

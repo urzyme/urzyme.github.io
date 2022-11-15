@@ -1,7 +1,12 @@
-HELIX    1  A1 XXX A   11  XXX A   22  1                                  12
-HELIX    2  A2 XXX A   38  XXX A   44  1                                   7
-HELIX    3  A3 XXX A   90  XXX A   93  1                                   4
-HELIX    4  A4 XXX A   95  XXX A  104  1                                  10
+HELIX    1  H1 XXX A	  11  XXX A   22  1                                  12
+HELIX    2  H2 XXX A	  38  XXX A   44  1                                   7
+SHEET    1  E114 XXX A  56 XXX  A  69  0
+SHEET    2  E2 7 XXX A  72 XXX  A  78  0
+SHEET    3  E3 7 XXX A  83 XXX  A  89  0
+HELIX    3  H3 XXX A	  90  XXX A   93  1                                   4
+HELIX    4  H4 XXX A	  95  XXX A  104  1                                  10
+SHEET    4  E410 XXX A 110 XXX  A 119  0
+SHEET    5  E512 XXX A 125 XXX  A 136  0
 ATOM    108  N   CYS A   8     -29.577   1.021   3.762  1.00 84.68           N  
 ATOM    109  H   CYS A   8     -28.588   1.193   3.880  1.00 84.68           H  
 ATOM    110  CA  CYS A   8     -30.070  -0.328   4.062  1.00 84.68           C  

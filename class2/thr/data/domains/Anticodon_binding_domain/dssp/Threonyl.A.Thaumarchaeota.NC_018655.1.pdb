@@ -1,7 +1,10 @@
-HELIX    1  A1 XXX A  519  XXX A  530  1                                  12
-HELIX    2  A2 XXX A  545  XXX A  554  1                                  10
-HELIX    3  A3 XXX A  565  XXX A  568  1                                   4
-HELIX    4  A4 XXX A  588  XXX A  598  1                                  11
+HELIX    1  H1 XXX A	 519  XXX A  530  1                                  12
+HELIX    2  H2 XXX A	 545  XXX A  554  1                                  10
+SHEET    1  E1 3 XXX A 559 XXX  A 561  0
+HELIX    3  H3 XXX A	 565  XXX A  568  1                                   4
+SHEET    2  E2 6 XXX A 572 XXX  A 577  0
+SHEET    3  E3 5 XXX A 583 XXX  A 587  0
+HELIX    4  H4 XXX A	 588  XXX A  598  1                                  11
 ATOM   8280  N   GLU A 516     -29.291   7.275  30.363  1.00 91.44           N  
 ATOM   8281  H   GLU A 516     -30.168   6.787  30.247  1.00 91.44           H  
 ATOM   8282  CA  GLU A 516     -29.289   8.710  30.032  1.00 91.44           C  

@@ -1,3 +1,27 @@
+SHEET    1  E1 2 XXX B  81 XXX  B  82  0
+SHEET    2  E2 4 XXX B  97 XXX  B 100  0
+SHEET    3  E3 3 XXX B 117 XXX  B 119  0
+SHEET    4  E4 2 XXX D  77 XXX  D  78  0
+SHEET    5  E5 2 XXX D  83 XXX  D  84  0
+SHEET    6  E6 4 XXX E  98 XXX  E 101  0
+SHEET    7  E7 4 XXX F 102 XXX  F 105  0
+SHEET    8  E8 2 XXX G 102 XXX  G 103  0
+SHEET    9  E9 2 XXX H  93 XXX  H  94  0
+SHEET   10 E10 2 XXX J  93 XXX  J  94  0
+SHEET   11 E11 2 XXX J 100 XXX  J 101  0
+SHEET   12 E12 7 XXX K 111 XXX  K 117  0
+SHEET   13 E13 2 XXX K 119 XXX  K 120  0
+SHEET   14 E14 2 XXX N 111 XXX  N 112  0
+SHEET   15 E15 2 XXX O  81 XXX  O  82  0
+SHEET   16 E16 4 XXX O  97 XXX  O 100  0
+SHEET   17 E17 2 XXX O 112 XXX  O 113  0
+SHEET   18 E18 4 XXX R 161 XXX  R 164  0
+SHEET   19 E19 6 XXX R 171 XXX  R 176  0
+SHEET   20 E20 2 XXX S 145 XXX  S 146  0
+SHEET   21 E21 2 XXX S 148 XXX  S 149  0
+SHEET   22 E22 2 XXX T 144 XXX  T 145  0
+SHEET   23 E23 3 XXX T 163 XXX  T 165  0
+SHEET   24 E24 2 XXX T 179 XXX  T 180  0
 ATOM    620  N   VAL A  76      -6.436  21.483  -9.395  1.00 38.38      A    N  
 ATOM    621  CA  VAL A  76      -6.144  20.761  -8.162  1.00 35.13      A    C  
 ATOM    622  C   VAL A  76      -6.661  19.340  -8.352  1.00 33.96      A    C  
@@ -7705,3 +7729,5 @@ ATOM   2910  OE1 GLN T 181     -12.574   0.828  -3.553  1.00 91.53      A    O
 ATOM   2907  NE2 GLN T 181     -12.735  -1.313  -3.846  1.00 91.53      A    N  
 TER                                                                             
 END                                                                             
+
+

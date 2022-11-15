@@ -1,0 +1,12 @@
+{
+    "fullName":"HisRS vs m-PheRS pairwise comparison",
+    "class":"Class II",
+    "icon":"/fig/icon_white.png",
+    "family1":"HisRS",
+    "family2":"m-PheRS",
+    "fullName1":"Histidyl tRNA Synthetase",
+    "fullName2":"Mitochondrial Phenylalanyl tRNA Synthetase",
+    "description":"Pairwise comparison of the Class II catalytic domains from the Histidyl tRNA Synthetase (HisRS) and Mitochondrial Phenylalanyl tRNA Synthetase (m-PheRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    1.845,
+    "crossFamilyRmsd":    3.305
+}

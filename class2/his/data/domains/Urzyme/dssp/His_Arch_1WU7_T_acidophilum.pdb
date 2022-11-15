@@ -1,7 +1,12 @@
-HELIX    1  A1 XXX A   32  XXX A   36  1                                   5
-HELIX    2  A2 XXX A   51  XXX A   54  1                                   4
-HELIX    3  A3 XXX A   61  XXX A   64  1                                   4
-HELIX    4  A4 XXX A   83  XXX A   87  1                                   5
+HELIX    1  H1 XXX A	  32  XXX A   36  1                                   5
+SHEET    1  E1 2 XXX A  40 XXX  A  41  0
+SHEET    2  E2 3 XXX A  47 XXX  A  49  0
+HELIX    2  H2 XXX A	  51  XXX A   54  1                                   4
+HELIX    3  H3 XXX A	  61  XXX A   64  1                                   4
+SHEET    3  E3 3 XXX A  67 XXX  A  69  0
+SHEET    4  E4 4 XXX A  75 XXX  A  78  0
+HELIX    4  H4 XXX A	  83  XXX A   87  1                                   5
+SHEET    5  E5 2 XXX A 102 XXX  A 103  0
 HEADER    LIGASE                                  01-DEC-04   1WU7              
 TITLE     CRYSTAL STRUCTURE OF HISTIDYL-TRNA SYNTHETASE FROM                    
 TITLE    2 THERMOPLASMA ACIDOPHILUM                                             

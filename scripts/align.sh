@@ -25,8 +25,9 @@ cd ../
 
 
 
-#../../../../DeepAlign/3DCOMB -i structures.txt -o align
-
+../../../../DeepAlign/3DCOMB -i structures.txt -o align
+mkdssp -i align.pdb -o align.dssp
+Rscript ../../../scripts/dssp2pdb.R align.dssp align.pdb
 
 #exit
 
@@ -62,6 +63,8 @@ do
 	cd ../
 
 	../../../../../../DeepAlign/3DCOMB -i structures.txt -o align
+	mkdssp -i align.pdb -o align.dssp
+	Rscript ../../../../../scripts/dssp2pdb.R align.dssp align.pdb
 	cd ../
 
 

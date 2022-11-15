@@ -1,3 +1,28 @@
+SHEET    1  E1 2 XXX B 357 XXX  B 358  0
+SHEET    2  E2 2 XXX B 364 XXX  B 365  0
+SHEET    3  E3 2 XXX C 344 XXX  C 345  0
+SHEET    4  E4 2 XXX F 420 XXX  F 421  0
+SHEET    5  E5 2 XXX H 360 XXX  H 361  0
+SHEET    6  E6 3 XXX H 383 XXX  H 385  0
+SHEET    7  E7 2 XXX I 368 XXX  I 369  0
+SHEET    8  E8 2 XXX I 396 XXX  I 397  0
+SHEET    9  E9 2 XXX I 400 XXX  I 401  0
+SHEET   10 E10 2 XXX I 411 XXX  I 412  0
+SHEET   11 E11 2 XXX K 334 XXX  K 335  0
+SHEET   12 E12 2 XXX K 358 XXX  K 359  0
+SHEET   13 E13 2 XXX K 372 XXX  K 373  0
+SHEET   14 E14 3 XXX L 384 XXX  L 386  0
+SHEET   15 E15 2 XXX M 383 XXX  M 384  0
+SHEET   16 E16 3 XXX N 396 XXX  N 398  0
+SHEET   17 E17 2 XXX O 358 XXX  O 359  0
+SHEET   18 E18 2 XXX O 366 XXX  O 367  0
+SHEET   19 E19 2 XXX P 352 XXX  P 353  0
+HELIX    1  H1 XXX P	 409  XXX A  414  1                                   6
+HELIX    2  H2 XXX P	 416  XXX A  418  1                                   3
+SHEET   20 E20 3 XXX P 428 XXX  P 430  0
+SHEET   21 E21 2 XXX R 488 XXX  R 489  0
+HELIX    3  H3 XXX R	 499  XXX A  504  1                                   6
+SHEET   22 E22 2 XXX S 416 XXX  S 417  0
 ATOM   2728  N   ASN A 344     -37.588   8.046  30.682  1.00 40.03      A    N  
 ATOM   2729  CA  ASN A 344     -37.255   9.212  29.874  1.00 39.56      A    C  
 ATOM   2730  C   ASN A 344     -36.162   8.933  28.859  1.00 37.98      A    C  
@@ -14551,3 +14576,5 @@ ATOM   8023  CD1 LEU T 499     -11.920  -3.877  19.252  1.00 80.01      A    C
 ATOM   8027  CD2 LEU T 499     -10.609  -3.312  21.277  1.00 80.01      A    C  
 TER                                                                             
 END                                                                             
+
+

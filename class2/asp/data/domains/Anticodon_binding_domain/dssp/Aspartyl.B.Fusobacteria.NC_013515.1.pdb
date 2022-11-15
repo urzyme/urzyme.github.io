@@ -1,4 +1,9 @@
-HELIX    1  A1 XXX A   56  XXX A   62  1                                   7
+SHEET    1  E113 XXX A  18 XXX  A  30  0
+SHEET    2  E2 6 XXX A  35 XXX  A  40  0
+SHEET    3  E3 6 XXX A  45 XXX  A  50  0
+HELIX    1  H1 XXX A	  56  XXX A   62  1                                   7
+SHEET    4  E410 XXX A  70 XXX  A  79  0
+SHEET    5  E512 XXX A  92 XXX  A 103  0
 ATOM    270  N   ASN A  16     -39.966   6.451  24.641  1.00 97.73           N  
 ATOM    271  H   ASN A  16     -39.178   7.043  24.866  1.00 97.73           H  
 ATOM    272  CA  ASN A  16     -40.491   5.653  25.749  1.00 97.73           C  

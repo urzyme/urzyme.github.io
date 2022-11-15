@@ -1,4 +1,9 @@
-HELIX    1  A1 XXX A   57  XXX A   64  1                                   8
+SHEET    1  E114 XXX A  18 XXX  A  31  0
+SHEET    2  E2 7 XXX A  34 XXX  A  40  0
+SHEET    3  E3 7 XXX A  45 XXX  A  51  0
+HELIX    1  H1 XXX A	  57  XXX A   64  1                                   8
+SHEET    4  E410 XXX A  71 XXX  A  80  0
+SHEET    5  E512 XXX A  93 XXX  A 104  0
 ATOM    249  N   GLN A  16       7.879  -4.247 -45.815  1.00 97.60           N  
 ATOM    250  H   GLN A  16       8.454  -3.539 -45.381  1.00 97.60           H  
 ATOM    251  CA  GLN A  16       7.112  -3.821 -46.991  1.00 97.60           C  

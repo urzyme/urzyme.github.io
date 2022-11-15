@@ -1,6 +1,10 @@
-HELIX    1  A1 XXX A  585  XXX A  598  1                                  14
-HELIX    2  A2 XXX A  605  XXX A  613  1                                   9
-HELIX    3  A3 XXX A  626  XXX A  637  1                                  12
+HELIX    1  H1 XXX A	 585  XXX A  598  1                                  14
+SHEET    1  E1 3 XXX A 599 XXX  A 601  0
+HELIX    2  H2 XXX A	 605  XXX A  613  1                                   9
+SHEET    2  E2 6 XXX A 617 XXX  A 622  0
+HELIX    3  H3 XXX A	 626  XXX A  637  1                                  12
+SHEET    3  E3 4 XXX A 657 XXX  A 660  0
+SHEET    4  E4 6 XXX A 683 XXX  A 688  0
 ATOM   9198  N   HIS A 584      11.338  14.489  -4.745  1.00 98.86           N  
 ATOM   9199  H   HIS A 584      12.100  14.923  -4.245  1.00 98.86           H  
 ATOM   9200  CA  HIS A 584      10.099  14.216  -4.019  1.00 98.86           C  

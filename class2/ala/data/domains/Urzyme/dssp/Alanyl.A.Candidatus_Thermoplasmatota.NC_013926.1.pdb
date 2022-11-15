@@ -1,6 +1,8 @@
-HELIX    1  A1 XXX A   67  XXX A   72  1                                   6
-HELIX    2  A2 XXX A   97  XXX A  100  1                                   4
-HELIX    3  A3 XXX A  126  XXX A  131  1                                   6
+HELIX    1  H1 XXX A	  67  XXX A   72  1                                   6
+SHEET    1  E1 2 XXX A  76 XXX  A  77  0
+HELIX    2  H2 XXX A	  97  XXX A  100  1                                   4
+SHEET    2  E2 2 XXX A 117 XXX  A 118  0
+HELIX    3  H3 XXX A	 126  XXX A  131  1                                   6
 ATOM   1107  N   PHE A  66     -20.009  15.832  12.935  1.00 98.70           N  
 ATOM   1108  H   PHE A  66     -20.313  15.251  12.167  1.00 98.70           H  
 ATOM   1109  CA  PHE A  66     -18.907  15.348  13.767  1.00 98.70           C  

@@ -1,3 +1,22 @@
+SHEET    1  E1 2 XXX A 342 XXX  A 343  0
+SHEET    2  E2 6 XXX A 359 XXX  A 364  0
+SHEET    3  E3 3 XXX B 355 XXX  B 357  0
+SHEET    4  E4 2 XXX B 363 XXX  B 364  0
+SHEET    5  E5 2 XXX B 373 XXX  B 374  0
+SHEET    6  E6 2 XXX C 319 XXX  C 320  0
+SHEET    7  E7 2 XXX D 257 XXX  D 258  0
+SHEET    8  E8 2 XXX E 336 XXX  E 337  0
+SHEET    9  E9 2 XXX F 302 XXX  F 303  0
+SHEET   10 E10 5 XXX H 364 XXX  H 368  0
+SHEET   11 E11 2 XXX I 353 XXX  I 354  0
+SHEET   12 E12 3 XXX I 364 XXX  I 366  0
+SHEET   13 E13 4 XXX J 353 XXX  J 356  0
+SHEET   14 E14 3 XXX K 374 XXX  K 376  0
+SHEET   15 E15 2 XXX N 306 XXX  N 307  0
+SHEET   16 E16 2 XXX O 155 XXX  O 156  0
+SHEET   17 E17 2 XXX P 436 XXX  P 437  0
+SHEET   18 E18 2 XXX Q 384 XXX  Q 385  0
+SHEET   19 E19 2 XXX Q 409 XXX  Q 410  0
 ATOM    739  N   TYR A 327      31.489  -2.377  -2.649  1.00 37.46      A    N  
 ATOM    740  CA  TYR A 327      30.393  -3.035  -3.360  1.00 35.91      A    C  
 ATOM    741  C   TYR A 327      29.067  -2.492  -2.853  1.00 36.17      A    C  
@@ -6588,3 +6607,5 @@ ATOM   6899  OG1 THR Q 430       3.142   0.151   3.839  1.00 93.78      A    O
 ATOM   6895  CG2 THR Q 430       1.567  -1.132   2.649  1.00 93.78      A    C  
 TER                                                                             
 END                                                                             
+
+

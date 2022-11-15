@@ -1,4 +1,8 @@
-HELIX    1  A1 XXX A  204  XXX A  212  1                                   9
+SHEET    1  E1 2 XXX A 167 XXX  A 168  0
+SHEET    2  E2 3 XXX A 186 XXX  A 188  0
+SHEET    3  E3 3 XXX A 196 XXX  A 198  0
+HELIX    1  H1 XXX A	 204  XXX A  212  1                                   9
+SHEET    4  E4 2 XXX A 218 XXX  A 219  0
 ATOM   2659  N   ASP A 162      -6.499  21.646  -4.256  1.00 98.47           N  
 ATOM   2660  H   ASP A 162      -6.722  21.081  -3.449  1.00 98.47           H  
 ATOM   2661  CA  ASP A 162      -7.406  22.760  -4.568  1.00 98.47           C  

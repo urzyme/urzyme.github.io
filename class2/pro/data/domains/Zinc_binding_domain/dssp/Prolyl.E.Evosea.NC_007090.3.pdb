@@ -1,6 +1,10 @@
-HELIX    1  A1 XXX A  436  XXX A  448  1                                  13
-HELIX    2  A2 XXX A  456  XXX A  464  1                                   9
-HELIX    3  A3 XXX A  477  XXX A  491  1                                  15
+HELIX    1  H1 XXX A	 436  XXX A  448  1                                  13
+SHEET    1  E1 3 XXX A 450 XXX  A 452  0
+HELIX    2  H2 XXX A	 456  XXX A  464  1                                   9
+SHEET    2  E2 6 XXX A 468 XXX  A 473  0
+HELIX    3  H3 XXX A	 477  XXX A  491  1                                  15
+SHEET    3  E3 4 XXX A 508 XXX  A 511  0
+SHEET    4  E4 6 XXX A 540 XXX  A 545  0
 ATOM   6962  N   GLN A 435      -7.240   4.896  15.205  1.00 98.69           N  
 ATOM   6963  H   GLN A 435      -7.542   5.735  15.679  1.00 98.69           H  
 ATOM   6964  CA  GLN A 435      -6.292   5.031  14.093  1.00 98.69           C  

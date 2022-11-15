@@ -1,6 +1,11 @@
-HELIX    1  A1 XXX A   13  XXX A   26  1                                  14
-HELIX    2  A2 XXX A   42  XXX A   45  1                                   4
-HELIX    3  A3 XXX A   89  XXX A  102  1                                  14
+HELIX    1  H1 XXX A	  13  XXX A   26  1                                  14
+HELIX    2  H2 XXX A	  42  XXX A   45  1                                   4
+SHEET    1  E114 XXX A  55 XXX  A  68  0
+SHEET    2  E2 8 XXX A  71 XXX  A  78  0
+SHEET    3  E3 8 XXX A  81 XXX  A  88  0
+HELIX    3  H3 XXX A	  89  XXX A  102  1                                  14
+SHEET    4  E410 XXX A 108 XXX  A 117  0
+SHEET    5  E512 XXX A 123 XXX  A 134  0
 ATOM    169  N   TYR A  12     -26.293 -28.383  11.451  1.00 89.58           N  
 ATOM    170  H   TYR A  12     -25.439 -28.922  11.465  1.00 89.58           H  
 ATOM    171  CA  TYR A  12     -27.172 -28.442  12.620  1.00 89.58           C  

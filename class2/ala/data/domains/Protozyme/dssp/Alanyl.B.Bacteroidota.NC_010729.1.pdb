@@ -1,5 +1,7 @@
-HELIX    1  A1 XXX A   42  XXX A   46  1                                   5
-HELIX    2  A2 XXX A   47  XXX A   50  1                                   4
+HELIX    1  H1 XXX A	  42  XXX A   46  1                                   5
+HELIX    2  H2 XXX A	  47  XXX A   50  1                                   4
+SHEET    1  E1 2 XXX A  70 XXX  A  71  0
+SHEET    2  E2 2 XXX A  74 XXX  A  75  0
 ATOM    579  N   MET A  37       1.350   5.528  -9.527  1.00 81.30           N  
 ATOM    580  H   MET A  37       1.172   5.279 -10.489  1.00 81.30           H  
 ATOM    581  CA  MET A  37       1.172   4.508  -8.485  1.00 81.30           C  

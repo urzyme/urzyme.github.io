@@ -1,5 +1,10 @@
-HELIX    1  A1 XXX A  260  XXX A  265  1                                   6
-HELIX    2  A2 XXX A  306  XXX A  314  1                                   9
+HELIX    1  H1 XXX A	 260  XXX A  265  1                                   6
+SHEET    1  E1 2 XXX A 269 XXX  A 270  0
+SHEET    2  E2 2 XXX A 276 XXX  A 277  0
+SHEET    3  E3 4 XXX A 289 XXX  A 292  0
+SHEET    4  E4 5 XXX A 297 XXX  A 301  0
+HELIX    2  H2 XXX A	 306  XXX A  314  1                                   9
+SHEET    5  E5 2 XXX A 320 XXX  A 321  0
 ATOM   4096  N   VAL A 259       5.334  -4.136   2.114  1.00 98.65           N  
 ATOM   4097  H   VAL A 259       4.343  -3.968   2.015  1.00 98.65           H  
 ATOM   4098  CA  VAL A 259       6.245  -3.413   1.207  1.00 98.65           C  

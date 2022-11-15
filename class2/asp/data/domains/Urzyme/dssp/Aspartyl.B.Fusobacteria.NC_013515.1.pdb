@@ -1,4 +1,8 @@
-HELIX    1  A1 XXX A  196  XXX A  204  1                                   9
+SHEET    1  E1 2 XXX A 159 XXX  A 160  0
+SHEET    2  E2 3 XXX A 178 XXX  A 180  0
+SHEET    3  E3 3 XXX A 188 XXX  A 190  0
+HELIX    1  H1 XXX A	 196  XXX A  204  1                                   9
+SHEET    4  E4 2 XXX A 210 XXX  A 211  0
 ATOM   2583  N   ASN A 154     -12.475 -13.983  -5.631  1.00 98.02           N  
 ATOM   2584  H   ASN A 154     -12.567 -13.320  -4.875  1.00 98.02           H  
 ATOM   2585  CA  ASN A 154     -13.262 -15.220  -5.590  1.00 98.02           C  

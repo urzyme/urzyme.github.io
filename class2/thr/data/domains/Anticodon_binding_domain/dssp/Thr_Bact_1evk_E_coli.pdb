@@ -1,7 +1,10 @@
-HELIX    1  A1 XXX A  552  XXX A  564  1                                  13
-HELIX    2  A2 XXX A  578  XXX A  587  1                                  10
-HELIX    3  A3 XXX A  598  XXX A  603  1                                   6
-HELIX    4  A4 XXX A  621  XXX A  633  1                                  13
+HELIX    1  H1 XXX A	 552  XXX A  564  1                                  13
+HELIX    2  H2 XXX A	 578  XXX A  587  1                                  10
+SHEET    1  E1 4 XXX A 592 XXX  A 595  0
+HELIX    3  H3 XXX A	 598  XXX A  603  1                                   6
+SHEET    2  E2 6 XXX A 605 XXX  A 610  0
+SHEET    3  E3 6 XXX A 615 XXX  A 620  0
+HELIX    4  H4 XXX A	 621  XXX A  633  1                                  13
 HEADER    LIGASE                                  20-APR-00   1EVK              
 TITLE     CRYSTAL STRUCTURE OF A TRUNCATED FORM OF THREONYL-TRNA                
 TITLE    2 SYNTHETASE WITH THE LIGAND THREONINE                                 

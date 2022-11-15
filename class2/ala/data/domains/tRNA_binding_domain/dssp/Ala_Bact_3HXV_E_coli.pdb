@@ -1,14 +1,16 @@
-HELIX    1  A1 XXX A  278  XXX A  295  1                                  18
-HELIX    2  A2 XXX A  304  XXX A  322  1                                  19
-HELIX    3  A3 XXX A  330  XXX A  333  1                                   4
-HELIX    4  A4 XXX A  334  XXX A  341  1                                   8
-HELIX    5  A5 XXX A  342  XXX A  345  1                                   4
-HELIX    6  A6 XXX A  346  XXX A  350  1                                   5
-HELIX    7  A7 XXX A  352  XXX A  367  1                                  16
-HELIX    8  A8 XXX A  370  XXX A  382  1                                  13
-HELIX    9  A9 XXX A  391  XXX A  401  1                                  11
-HELIX   10 A10 XXX A  405  XXX A  413  1                                   9
-HELIX   11 A11 XXX A  421  XXX A  437  1                                  17
+HELIX    1  H1 XXX A	 278  XXX A  295  1                                  18
+HELIX    2  H2 XXX A	 304  XXX A  322  1                                  19
+HELIX    3  H3 XXX A	 330  XXX A  333  1                                   4
+HELIX    4  H4 XXX A	 334  XXX A  341  1                                   8
+HELIX    5  H5 XXX A	 342  XXX A  345  1                                   4
+HELIX    6  H6 XXX A	 346  XXX A  350  1                                   5
+HELIX    7  H7 XXX A	 352  XXX A  367  1                                  16
+HELIX    8  H8 XXX A	 370  XXX A  382  1                                  13
+SHEET    1  E1 2 XXX A 388 XXX  A 389  0
+HELIX    9  H9 XXX A	 391  XXX A  401  1                                  11
+HELIX   10 H10 XXX A	 405  XXX A  413  1                                   9
+SHEET    2  E2 2 XXX A 418 XXX  A 419  0
+HELIX   11 H11 XXX A	 421  XXX A  437  1                                  17
 HEADER    LIGASE                                  22-JUN-09   3HXV              
 TITLE     CRYSTAL STRUCTURE OF CATALYTIC FRAGMENT OF E. COLI ALARS IN COMPLEX   
 TITLE    2 WITH GLYSA                                                           

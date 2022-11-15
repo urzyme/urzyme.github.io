@@ -1,11 +1,26 @@
-HELIX    1  A1 XXX A   23  XXX A   30  1                                   8
-HELIX    2  A2 XXX A   32  XXX A   37  1                                   6
-HELIX    3  A3 XXX A   68  XXX A   89  1                                  22
-HELIX    4  A4 XXX A  120  XXX A  133  1                                  14
-HELIX    5  A5 XXX A  144  XXX A  153  1                                  10
-HELIX    6  A6 XXX A  157  XXX A  165  1                                   9
-HELIX    7  A7 XXX A  192  XXX A  194  1                                   3
-HELIX    8  A8 XXX A  208  XXX A  210  1                                   3
+SHEET    1  E1 4 XXX A   5 XXX  A   8  0
+SHEET    2  E2 4 XXX A  14 XXX  A  17  0
+SHEET    3  E3 2 XXX A  21 XXX  A  22  0
+HELIX    1  H1 XXX A	  23  XXX A   30  1                                   8
+HELIX    2  H2 XXX A	  32  XXX A   37  1                                   6
+SHEET    4  E4 6 XXX A  38 XXX  A  43  0
+SHEET    5  E5 4 XXX A  46 XXX  A  49  0
+SHEET    6  E6 2 XXX A  53 XXX  A  54  0
+SHEET    7  E7 7 XXX A  58 XXX  A  64  0
+HELIX    3  H3 XXX A	  68  XXX A   89  1                                  22
+SHEET    8  E8 2 XXX A  94 XXX  A  95  0
+SHEET    9  E9 2 XXX A 100 XXX  A 101  0
+SHEET   10 E10 7 XXX A 104 XXX  A 110  0
+HELIX    4  H4 XXX A	 120  XXX A  133  1                                  14
+SHEET   11 E11 6 XXX A 137 XXX  A 142  0
+HELIX    5  H5 XXX A	 144  XXX A  153  1                                  10
+HELIX    6  H6 XXX A	 157  XXX A  165  1                                   9
+SHEET   12 E12 6 XXX A 172 XXX  A 177  0
+SHEET   13 E13 4 XXX A 180 XXX  A 183  0
+HELIX    7  H7 XXX A	 192  XXX A  194  1                                   3
+SHEET   14 E1411 XXX A 197 XXX  A 207  0
+HELIX    8  H8 XXX A	 208  XXX A  210  1                                   3
+SHEET   15 E1510 XXX A 216 XXX  A 225  0
 ATOM     42  N   VAL A   4      37.957 -24.623 -27.034  1.00 93.47           N  
 ATOM     43  H   VAL A   4      38.614 -23.965 -27.428  1.00 93.47           H  
 ATOM     44  CA  VAL A   4      37.676 -24.496 -25.602  1.00 93.47           C  

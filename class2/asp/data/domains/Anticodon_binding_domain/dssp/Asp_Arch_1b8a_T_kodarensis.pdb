@@ -1,5 +1,10 @@
-HELIX    1  A1 XXX A   57  XXX A   62  1                                   6
-HELIX    2  A2 XXX A   63  XXX A   65  1                                   3
+SHEET    1  E114 XXX A  18 XXX  A  31  0
+SHEET    2  E2 8 XXX A  34 XXX  A  41  0
+SHEET    3  E3 8 XXX A  44 XXX  A  51  0
+HELIX    1  H1 XXX A	  57  XXX A   62  1                                   6
+HELIX    2  H2 XXX A	  63  XXX A   65  1                                   3
+SHEET    4  E410 XXX A  71 XXX  A  80  0
+SHEET    5  E512 XXX A  88 XXX  A  99  0
 HEADER    LIGASE                                  27-JAN-99   1B8A              
 TITLE     ASPARTYL-TRNA SYNTHETASE                                              
 COMPND    MOL_ID: 1;                                                            

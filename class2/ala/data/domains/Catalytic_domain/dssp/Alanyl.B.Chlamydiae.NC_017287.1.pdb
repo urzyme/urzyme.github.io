@@ -1,15 +1,24 @@
-HELIX    1  A1 XXX A    2  XXX A   15  1                                  14
-HELIX    2  A2 XXX A   41  XXX A   45  1                                   5
-HELIX    3  A3 XXX A   46  XXX A   49  1                                   4
-HELIX    4  A4 XXX A  102  XXX A  115  1                                  14
-HELIX    5  A5 XXX A  121  XXX A  123  1                                   3
-HELIX    6  A6 XXX A  133  XXX A  139  1                                   7
-HELIX    7  A7 XXX A  145  XXX A  147  1                                   3
-HELIX    8  A8 XXX A  153  XXX A  156  1                                   4
-HELIX    9  A9 XXX A  178  XXX A  180  1                                   3
-HELIX   10 A10 XXX A  228  XXX A  236  1                                   9
-HELIX   11 A11 XXX A  241  XXX A  243  1                                   3
-HELIX   12 A12 XXX A  245  XXX A  258  1                                  14
+HELIX    1  H1 XXX A	   2  XXX A   15  1                                  14
+SHEET    1  E1 2 XXX A  20 XXX  A  21  0
+HELIX    2  H2 XXX A	  41  XXX A   45  1                                   5
+HELIX    3  H3 XXX A	  46  XXX A   49  1                                   4
+SHEET    2  E2 9 XXX A  59 XXX  A  67  0
+SHEET    3  E310 XXX A  88 XXX  A  97  0
+HELIX    4  H4 XXX A	 102  XXX A  115  1                                  14
+HELIX    5  H5 XXX A	 121  XXX A  123  1                                   3
+SHEET    4  E4 6 XXX A 124 XXX  A 129  0
+HELIX    6  H6 XXX A	 133  XXX A  139  1                                   7
+HELIX    7  H7 XXX A	 145  XXX A  147  1                                   3
+SHEET    5  E5 4 XXX A 148 XXX  A 151  0
+HELIX    8  H8 XXX A	 153  XXX A  156  1                                   4
+SHEET    6  E6 3 XXX A 157 XXX  A 159  0
+SHEET    7  E712 XXX A 164 XXX  A 175  0
+HELIX    9  H9 XXX A	 178  XXX A  180  1                                   3
+SHEET    8  E814 XXX A 195 XXX  A 208  0
+SHEET    9  E914 XXX A 214 XXX  A 227  0
+HELIX   10 H10 XXX A	 228  XXX A  236  1                                   9
+HELIX   11 H11 XXX A	 241  XXX A  243  1                                   3
+HELIX   12 H12 XXX A	 245  XXX A  258  1                                  14
 ATOM      1  N   MET A   1      21.985 -16.131 -17.228  1.00 88.25           N  
 ATOM      2  H   MET A   1      22.672 -16.430 -17.906  1.00 88.25           H  
 ATOM      3  H2  MET A   1      21.530 -16.932 -16.814  1.00 88.25           H  

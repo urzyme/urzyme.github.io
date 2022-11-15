@@ -1,7 +1,12 @@
-HELIX    1  A1 XXX A    8  XXX A   21  1                                  14
-HELIX    2  A2 XXX A   37  XXX A   44  1                                   8
-HELIX    3  A3 XXX A   49  XXX A   55  1                                   7
-HELIX    4  A4 XXX A   92  XXX A  105  1                                  14
+HELIX    1  H1 XXX A	   8  XXX A   21  1                                  14
+HELIX    2  H2 XXX A	  37  XXX A   44  1                                   8
+HELIX    3  H3 XXX A	  49  XXX A   55  1                                   7
+SHEET    1  E112 XXX A  58 XXX  A  69  0
+SHEET    2  E2 8 XXX A  74 XXX  A  81  0
+SHEET    3  E3 8 XXX A  84 XXX  A  91  0
+HELIX    4  H4 XXX A	  92  XXX A  105  1                                  14
+SHEET    4  E410 XXX A 111 XXX  A 120  0
+SHEET    5  E512 XXX A 126 XXX  A 137  0
 HEADER    LIGASE                                  22-AUG-08   3E9H              
 TITLE     LYSYL-TRNA SYNTHETASE FROM BACILLUS STEAROTHERMOPHILUS                
 TITLE    2 COMPLEXED WITH L-LYSYLSULFAMOYL ADENOSINE                            

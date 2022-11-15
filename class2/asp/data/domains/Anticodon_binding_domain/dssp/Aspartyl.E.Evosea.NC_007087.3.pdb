@@ -1,5 +1,11 @@
-HELIX    1  A1 XXX A  146  XXX A  150  1                                   5
-HELIX    2  A2 XXX A  170  XXX A  172  1                                   3
+SHEET    1  E114 XXX A  91 XXX  A 104  0
+SHEET    2  E2 7 XXX A 107 XXX  A 113  0
+SHEET    3  E3 7 XXX A 118 XXX  A 124  0
+SHEET    4  E4 4 XXX A 130 XXX  A 133  0
+HELIX    1  H1 XXX A	 146  XXX A  150  1                                   5
+SHEET    5  E510 XXX A 158 XXX  A 167  0
+HELIX    2  H2 XXX A	 170  XXX A  172  1                                   3
+SHEET    6  E612 XXX A 182 XXX  A 193  0
 ATOM   1454  N   GLY A  89     -22.753   0.509  42.732  1.00 96.33           N  
 ATOM   1455  H   GLY A  89     -23.266  -0.034  42.053  1.00 96.33           H  
 ATOM   1456  CA  GLY A  89     -23.515   1.364  43.631  1.00 96.33           C  

@@ -1,8 +1,13 @@
-HELIX    1  A1 XXX A   36  XXX A   41  1                                   6
-HELIX    2  A2 XXX A   55  XXX A   61  1                                   7
-HELIX    3  A3 XXX A   67  XXX A   67  1                                   1
-HELIX    4  A4 XXX A   68  XXX A   72  1                                   5
-HELIX    5  A5 XXX A   92  XXX A  101  1                                  10
+HELIX    1  H1 XXX A	  36  XXX A   41  1                                   6
+SHEET    1  E1 2 XXX A  45 XXX  A  46  0
+SHEET    2  E2 3 XXX A  52 XXX  A  54  0
+HELIX    2  H2 XXX A	  55  XXX A   61  1                                   7
+HELIX    3  H3 XXX A	  67  XXX A   67  1                                   1
+HELIX    4  H4 XXX A	  68  XXX A   72  1                                   5
+SHEET    3  E3 3 XXX A  75 XXX  A  77  0
+SHEET    4  E4 4 XXX A  84 XXX  A  87  0
+HELIX    5  H5 XXX A	  92  XXX A  101  1                                  10
+SHEET    5  E5 2 XXX A 112 XXX  A 113  0
 HEADER    LIGASE                                  13-MAR-12   4E51              
 TITLE     CRYSTAL STRUCTURE OF A HISTIDYL-TRNA SYNTHETASE HISRS FROM            
 TITLE    2 BURKHOLDERIA THAILANDENSIS BOUND TO HISTIDINE                        

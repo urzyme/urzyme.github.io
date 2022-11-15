@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=0.41, maximum-scale=1" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="../css/styles.css">
-
+<script language='JavaScript' type='text/JavaScript' src="/js/pairwise.js"></script>
 
         
 <script type="text/x-mathjax-config">
@@ -35,7 +35,7 @@
 
 function init(){
 	
-	
+		renderPairwiseMatrix();
 }
 
 
@@ -72,8 +72,6 @@ function init(){
 				<a href="asp">Aspartyl tRNA synthetase</a>
 			</div>
 
-
-			
 			<div>
 				<img src="../fig/icon_gly.png" />
 				<a href="gly1">Dimeric glycyl tRNA synthetase</a>
@@ -150,6 +148,19 @@ function init(){
 				<img src="../fig/icon_polar.png" />
 				<a href="thr">Threonyl tRNA synthetase</a>
 			</div>
+
+		</div>
+
+
+
+		<div id="pairwise">
+			<h2>Structural pairwise comparison between families</h1>
+
+				<div style="margin-left:1em">
+					The RMSDs between catalytic domains are displayed below. Click on a cell to visit the alignment.
+				</div>
+				<svg id="pairwiseSVG" height=0 width=0></svg>
+
 
 		</div>
 

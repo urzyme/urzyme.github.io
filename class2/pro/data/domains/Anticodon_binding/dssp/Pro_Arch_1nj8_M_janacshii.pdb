@@ -1,7 +1,12 @@
-HELIX    1  A1 XXX A  292  XXX A  307  1                                  16
-HELIX    2  A2 XXX A  321  XXX A  330  1                                  10
-HELIX    3  A3 XXX A  341  XXX A  345  1                                   5
-HELIX    4  A4 XXX A  367  XXX A  377  1                                  11
+SHEET    1  E1 5 XXX A 281 XXX  A 285  0
+HELIX    1  H1 XXX A	 292  XXX A  307  1                                  16
+SHEET    2  E2 3 XXX A 312 XXX  A 314  0
+HELIX    2  H2 XXX A	 321  XXX A  330  1                                  10
+SHEET    3  E3 5 XXX A 335 XXX  A 339  0
+HELIX    3  H3 XXX A	 341  XXX A  345  1                                   5
+SHEET    4  E4 6 XXX A 348 XXX  A 353  0
+SHEET    5  E5 5 XXX A 359 XXX  A 363  0
+HELIX    4  H4 XXX A	 367  XXX A  377  1                                  11
 HEADER    LIGASE                                  30-DEC-02   1NJ8              
 TITLE     CRYSTAL STRUCTURE OF PROLYL-TRNA SYNTHETASE FROM                      
 TITLE    2 METHANOCALDOCOCCUS JANASCHII                                         

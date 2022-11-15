@@ -1,13 +1,23 @@
-HELIX    1  A1 XXX A  121  XXX A  135  1                                  15
-HELIX    2  A2 XXX A  149  XXX A  152  1                                   4
-HELIX    3  A3 XXX A  154  XXX A  156  1                                   3
-HELIX    4  A4 XXX A  163  XXX A  165  1                                   3
-HELIX    5  A5 XXX A  187  XXX A  196  1                                  10
-HELIX    6  A6 XXX A  237  XXX A  252  1                                  16
-HELIX    7  A7 XXX A  298  XXX A  303  1                                   6
-HELIX    8  A8 XXX A  320  XXX A  328  1                                   9
-HELIX    9  A9 XXX A  334  XXX A  336  1                                   3
-HELIX   10 A10 XXX A  341  XXX A  344  1                                   4
+HELIX    1  H1 XXX A	 121  XXX A  135  1                                  15
+SHEET    1  E1 2 XXX A 139 XXX  A 140  0
+SHEET    2  E2 3 XXX A 146 XXX  A 148  0
+HELIX    2  H2 XXX A	 149  XXX A  152  1                                   4
+HELIX    3  H3 XXX A	 154  XXX A  156  1                                   3
+HELIX    4  H4 XXX A	 163  XXX A  165  1                                   3
+SHEET    3  E3 2 XXX A 172 XXX  A 173  0
+SHEET    4  E4 3 XXX A 180 XXX  A 182  0
+HELIX    5  H5 XXX A	 187  XXX A  196  1                                  10
+SHEET    5  E510 XXX A 201 XXX  A 210  0
+SHEET    6  E611 XXX A 222 XXX  A 232  0
+HELIX    6  H6 XXX A	 237  XXX A  252  1                                  16
+SHEET    7  E7 5 XXX A 258 XXX  A 262  0
+SHEET    8  E811 XXX A 268 XXX  A 278  0
+SHEET    9  E911 XXX A 286 XXX  A 296  0
+HELIX    7  H7 XXX A	 298  XXX A  303  1                                   6
+SHEET   10 E10 8 XXX A 312 XXX  A 319  0
+HELIX    8  H8 XXX A	 320  XXX A  328  1                                   9
+HELIX    9  H9 XXX A	 334  XXX A  336  1                                   3
+HELIX   10 H10 XXX A	 341  XXX A  344  1                                   4
 ATOM   1803  N   GLY A 117      15.749  -3.338  -8.174  1.00 84.63           N  
 ATOM   1804  H   GLY A 117      16.276  -4.148  -7.883  1.00 84.63           H  
 ATOM   1805  CA  GLY A 117      14.325  -3.311  -7.854  1.00 84.63           C  

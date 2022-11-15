@@ -1,3 +1,20 @@
+SHEET    1  E1 3 XXX A 321 XXX  A 323  0
+SHEET    2  E2 9 XXX A 326 XXX  A 334  0
+SHEET    3  E3 5 XXX A 337 XXX  A 341  0
+HELIX    1  H1 XXX A	 342  XXX A  348  1                                   7
+SHEET    4  E419 XXX A 349 XXX  A 367  0
+SHEET    5  E521 XXX A 370 XXX  A 390  0
+HELIX    2  H2 XXX A	 391  XXX A  395  1                                   5
+SHEET    6  E6 3 XXX A 396 XXX  A 398  0
+HELIX    3  H3 XXX A	 399  XXX A  407  1                                   9
+SHEET    7  E7 7 XXX A 408 XXX  A 414  0
+SHEET    8  E8 3 XXX B 321 XXX  B 323  0
+SHEET    9  E9 9 XXX B 326 XXX  B 334  0
+SHEET   10 E1010 XXX B 337 XXX  B 346  0
+HELIX    4  H4 XXX B	 347  XXX A  350  1                                   4
+SHEET   11 E1143 XXX B 351 XXX  B 393  0
+HELIX    5  H5 XXX B	 394  XXX A  400  1                                   7
+SHEET   12 E1214 XXX B 401 XXX  B 414  0
 ATOM   2559  N   PRO A 320     -19.508  36.225   7.621  1.00 45.74      A    N  
 ATOM   2560  CA  PRO A 320     -18.346  37.117   7.609  1.00 44.55      A    C  
 ATOM   2561  C   PRO A 320     -18.690  38.531   8.050  1.00 42.79      A    C  
@@ -1591,3 +1608,5 @@ ATOM   3352  CE2 PHE B 415      12.831  59.973   9.067  1.00123.97      A    C
 ATOM   3353  CZ  PHE B 415      12.262  58.995   9.857  1.00123.57      A    C  
 TER                                                                             
 END                                                                             
+
+

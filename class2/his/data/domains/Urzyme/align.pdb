@@ -1,3 +1,34 @@
+SHEET    1  E1 3 XXX B  98 XXX  B 100  0
+SHEET    2  E2 2 XXX C  66 XXX  C  67  0
+SHEET    3  E3 3 XXX C 102 XXX  C 104  0
+SHEET    4  E4 2 XXX C 121 XXX  C 122  0
+SHEET    5  E5 2 XXX D 109 XXX  D 110  0
+SHEET    6  E6 2 XXX E  74 XXX  E  75  0
+SHEET    7  E7 2 XXX F  81 XXX  F  82  0
+SHEET    8  E8 2 XXX G  72 XXX  G  73  0
+SHEET    9  E9 2 XXX H  31 XXX  H  32  0
+SHEET   10 E10 2 XXX H  59 XXX  H  60  0
+SHEET   11 E11 2 XXX H 121 XXX  H 122  0
+HELIX    1  H1 XXX I	  78  XXX A   82  1                                   5
+HELIX    2  H2 XXX I	  86  XXX A   93  1                                   8
+SHEET   12 E12 2 XXX J 113 XXX  J 114  0
+SHEET   13 E13 2 XXX K 113 XXX  K 114  0
+SHEET   14 E14 2 XXX K 119 XXX  K 120  0
+SHEET   15 E15 2 XXX L  30 XXX  L  31  0
+SHEET   16 E16 2 XXX L 104 XXX  L 105  0
+SHEET   17 E17 2 XXX M  79 XXX  M  80  0
+SHEET   18 E18 3 XXX N  93 XXX  N  95  0
+SHEET   19 E19 5 XXX N 103 XXX  N 107  0
+SHEET   20 E20 2 XXX O  47 XXX  O  48  0
+SHEET   21 E21 3 XXX O  98 XXX  O 100  0
+SHEET   22 E22 2 XXX P  49 XXX  P  50  0
+SHEET   23 E23 3 XXX Q 224 XXX  Q 226  0
+HELIX    3  H3 XXX Q	 239  XXX A  241  1                                   3
+SHEET   24 E24 2 XXX R 155 XXX  R 156  0
+SHEET   25 E25 2 XXX S 118 XXX  S 119  0
+SHEET   26 E26 2 XXX S 121 XXX  S 122  0
+SHEET   27 E27 2 XXX S 140 XXX  S 141  0
+SHEET   28 E28 3 XXX T 163 XXX  T 165  0
 ATOM    247  N   GLU A  31       0.280  -3.732  -6.242  1.00 25.58      A    N  
 ATOM    248  CA  GLU A  31      -0.744  -3.999  -7.241  1.00 27.58      A    C  
 ATOM    249  C   GLU A  31      -1.042  -5.475  -7.482  1.00 26.80      A    C  
@@ -15438,3 +15469,5 @@ ATOM   2910  OE1 GLN T 181       8.766  13.717  -1.474  1.00 91.53      A    O
 ATOM   2907  NE2 GLN T 181      10.360  12.752  -0.369  1.00 91.53      A    N  
 TER                                                                             
 END                                                                             
+
+

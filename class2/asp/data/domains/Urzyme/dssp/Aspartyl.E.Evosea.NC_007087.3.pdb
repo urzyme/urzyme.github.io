@@ -1,4 +1,8 @@
-HELIX    1  A1 XXX A  287  XXX A  295  1                                   9
+SHEET    1  E1 2 XXX A 251 XXX  A 252  0
+SHEET    2  E2 3 XXX A 270 XXX  A 272  0
+SHEET    3  E3 3 XXX A 279 XXX  A 281  0
+HELIX    1  H1 XXX A	 287  XXX A  295  1                                   9
+SHEET    4  E4 2 XXX A 301 XXX  A 302  0
 ATOM   4030  N   ILE A 246       3.836  17.767  11.475  1.00 98.35           N  
 ATOM   4031  H   ILE A 246       3.039  17.180  11.676  1.00 98.35           H  
 ATOM   4032  CA  ILE A 246       3.961  19.045  12.197  1.00 98.35           C  

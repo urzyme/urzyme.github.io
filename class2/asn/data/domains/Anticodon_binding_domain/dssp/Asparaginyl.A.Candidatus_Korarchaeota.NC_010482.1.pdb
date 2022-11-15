@@ -1,5 +1,10 @@
-HELIX    1  A1 XXX A   11  XXX A   16  1                                   6
-HELIX    2  A2 XXX A   61  XXX A   69  1                                   9
+HELIX    1  H1 XXX A	  11  XXX A   16  1                                   6
+SHEET    1  E114 XXX A  22 XXX  A  35  0
+SHEET    2  E2 7 XXX A  38 XXX  A  44  0
+SHEET    3  E3 6 XXX A  49 XXX  A  54  0
+HELIX    2  H2 XXX A	  61  XXX A   69  1                                   9
+SHEET    4  E410 XXX A  75 XXX  A  84  0
+SHEET    5  E512 XXX A  92 XXX  A 103  0
 ATOM    146  N   HIS A   9      10.856  -0.734 -29.679  1.00 95.77           N  
 ATOM    147  H   HIS A   9      11.182   0.208 -29.840  1.00 95.77           H  
 ATOM    148  CA  HIS A   9      11.336  -1.412 -28.474  1.00 95.77           C  

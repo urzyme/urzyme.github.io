@@ -1,7 +1,10 @@
-HELIX    1  A1 XXX A  665  XXX A  677  1                                  13
-HELIX    2  A2 XXX A  691  XXX A  700  1                                  10
-HELIX    3  A3 XXX A  711  XXX A  715  1                                   5
-HELIX    4  A4 XXX A  738  XXX A  750  1                                  13
+HELIX    1  H1 XXX A	 665  XXX A  677  1                                  13
+HELIX    2  H2 XXX A	 691  XXX A  700  1                                  10
+SHEET    1  E1 4 XXX A 705 XXX  A 708  0
+HELIX    3  H3 XXX A	 711  XXX A  715  1                                   5
+SHEET    2  E2 6 XXX A 718 XXX  A 723  0
+SHEET    3  E3 3 XXX A 735 XXX  A 737  0
+HELIX    4  H4 XXX A	 738  XXX A  750  1                                  13
 ATOM  10509  N   ASN A 662      -8.749  13.916  46.489  1.00 95.29           N  
 ATOM  10510  H   ASN A 662      -8.109  14.497  47.012  1.00 95.29           H  
 ATOM  10511  CA  ASN A 662      -8.984  12.556  46.995  1.00 95.29           C  

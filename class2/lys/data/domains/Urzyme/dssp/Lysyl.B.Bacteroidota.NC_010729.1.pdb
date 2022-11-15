@@ -1,5 +1,10 @@
-HELIX    1  A1 XXX A  196  XXX A  200  1                                   5
-HELIX    2  A2 XXX A  242  XXX A  250  1                                   9
+HELIX    1  H1 XXX A	 196  XXX A  200  1                                   5
+SHEET    1  E1 2 XXX A 205 XXX  A 206  0
+SHEET    2  E2 2 XXX A 212 XXX  A 213  0
+SHEET    3  E3 4 XXX A 225 XXX  A 228  0
+SHEET    4  E4 5 XXX A 233 XXX  A 237  0
+HELIX    2  H2 XXX A	 242  XXX A  250  1                                   9
+SHEET    5  E5 2 XXX A 256 XXX  A 257  0
 ATOM   3140  N   MET A 195       2.919  16.092  -8.544  1.00 98.74           N  
 ATOM   3141  H   MET A 195       2.881  15.524  -7.710  1.00 98.74           H  
 ATOM   3142  CA  MET A 195       3.479  15.496  -9.758  1.00 98.74           C  

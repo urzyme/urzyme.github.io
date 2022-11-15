@@ -1,7 +1,12 @@
-HELIX    1  A1 XXX A    5  XXX A   16  1                                  12
-HELIX    2  A2 XXX A   32  XXX A   41  1                                  10
-HELIX    3  A3 XXX A   87  XXX A   90  1                                   4
-HELIX    4  A4 XXX A   92  XXX A  100  1                                   9
+HELIX    1  H1 XXX A	   5  XXX A   16  1                                  12
+HELIX    2  H2 XXX A	  32  XXX A   41  1                                  10
+SHEET    1  E116 XXX A  51 XXX  A  66  0
+SHEET    2  E2 8 XXX A  69 XXX  A  76  0
+SHEET    3  E3 8 XXX A  79 XXX  A  86  0
+HELIX    3  H3 XXX A	  87  XXX A   90  1                                   4
+HELIX    4  H4 XXX A	  92  XXX A  100  1                                   9
+SHEET    4  E410 XXX A 106 XXX  A 115  0
+SHEET    5  E512 XXX A 121 XXX  A 132  0
 ATOM     20  N   ASN A   2     -28.672 -16.527   2.026  1.00 81.52           N  
 ATOM     21  H   ASN A   2     -27.711 -16.773   1.840  1.00 81.52           H  
 ATOM     22  CA  ASN A   2     -29.393 -17.438   2.913  1.00 81.52           C  

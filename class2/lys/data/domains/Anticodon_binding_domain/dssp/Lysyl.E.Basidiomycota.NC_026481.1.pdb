@@ -1,6 +1,11 @@
-HELIX    1  A1 XXX A   76  XXX A   90  1                                  15
-HELIX    2  A2 XXX A  106  XXX A  113  1                                   8
-HELIX    3  A3 XXX A  170  XXX A  176  1                                   7
+HELIX    1  H1 XXX A	  76  XXX A   90  1                                  15
+HELIX    2  H2 XXX A	 106  XXX A  113  1                                   8
+SHEET    1  E112 XXX A 128 XXX  A 139  0
+SHEET    2  E2 8 XXX A 144 XXX  A 151  0
+SHEET    3  E3 8 XXX A 154 XXX  A 161  0
+HELIX    3  H3 XXX A	 170  XXX A  176  1                                   7
+SHEET    4  E410 XXX A 182 XXX  A 191  0
+SHEET    5  E512 XXX A 197 XXX  A 208  0
 ATOM   1113  N   GLN A  75     -39.497  10.365   8.786  1.00 92.86           N  
 ATOM   1114  H   GLN A  75     -39.767   9.835   7.969  1.00 92.86           H  
 ATOM   1115  CA  GLN A  75     -40.337  10.282   9.983  1.00 92.86           C  

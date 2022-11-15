@@ -1,8 +1,14 @@
-HELIX    1  A1 XXX A  754  XXX A  757  1                                   4
-HELIX    2  A2 XXX A  776  XXX A  789  1                                  14
-HELIX    3  A3 XXX A  812  XXX A  815  1                                   4
-HELIX    4  A4 XXX A  821  XXX A  832  1                                  12
-HELIX    5  A5 XXX A  850  XXX A  863  1                                  14
+HELIX    1  H1 XXX A	 754  XXX A  757  1                                   4
+SHEET    1  E1 3 XXX A 760 XXX  A 762  0
+SHEET    2  E2 8 XXX A 765 XXX  A 772  0
+HELIX    2  H2 XXX A	 776  XXX A  789  1                                  14
+SHEET    3  E3 7 XXX A 793 XXX  A 799  0
+SHEET    4  E4 7 XXX A 804 XXX  A 810  0
+HELIX    3  H3 XXX A	 812  XXX A  815  1                                   4
+HELIX    4  H4 XXX A	 821  XXX A  832  1                                  12
+SHEET    5  E5 6 XXX A 834 XXX  A 839  0
+SHEET    6  E6 6 XXX A 842 XXX  A 847  0
+HELIX    5  H5 XXX A	 850  XXX A  863  1                                  14
 ATOM  11899  N   SER A 752     -51.180  -9.391  43.880  1.00 54.81           N  
 ATOM  11900  H   SER A 752     -51.732  -8.782  43.294  1.00 54.81           H  
 ATOM  11901  CA  SER A 752     -49.736  -9.108  43.956  1.00 54.81           C  

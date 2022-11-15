@@ -1,8 +1,8 @@
-HELIX    1  A1 XXX A    2  XXX A   16  1                                  15
-HELIX    2  A2 XXX A   21  XXX A   32  1                                  12
-HELIX    3  A3 XXX A   37  XXX A   43  1                                   7
-HELIX    4  A4 XXX A   44  XXX A   47  1                                   4
-HELIX    5  A5 XXX A   50  XXX A   89  1                                  40
+HELIX    1  H1 XXX A	   2  XXX A   16  1                                  15
+HELIX    2  H2 XXX A	  21  XXX A   32  1                                  12
+HELIX    3  H3 XXX A	  37  XXX A   43  1                                   7
+HELIX    4  H4 XXX A	  44  XXX A   47  1                                   4
+HELIX    5  H5 XXX A	  50  XXX A   89  1                                  40
 ATOM      1  N   MET A   1     -62.187 -35.960  77.600  1.00 46.73           N  
 ATOM      2  H   MET A   1     -61.902 -35.055  77.948  1.00 46.73           H  
 ATOM      3  H2  MET A   1     -61.872 -36.674  78.241  1.00 46.73           H  

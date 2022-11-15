@@ -1,5 +1,10 @@
-HELIX    1  A1 XXX A  127  XXX A  134  1                                   8
-HELIX    2  A2 XXX A  136  XXX A  141  1                                   6
+SHEET    1  E1 5 XXX A 107 XXX  A 111  0
+SHEET    2  E2 5 XXX A 117 XXX  A 121  0
+HELIX    1  H1 XXX A	 127  XXX A  134  1                                   8
+HELIX    2  H2 XXX A	 136  XXX A  141  1                                   6
+SHEET    3  E3 4 XXX A 144 XXX  A 147  0
+SHEET    4  E4 3 XXX A 150 XXX  A 152  0
+SHEET    5  E5 6 XXX A 162 XXX  A 167  0
 ATOM   1656  N   GLN A 106      17.213  20.525 -44.101  1.00 95.99           N  
 ATOM   1657  H   GLN A 106      17.151  19.962 -43.265  1.00 95.99           H  
 ATOM   1658  CA  GLN A 106      15.952  20.938 -44.718  1.00 95.99           C  

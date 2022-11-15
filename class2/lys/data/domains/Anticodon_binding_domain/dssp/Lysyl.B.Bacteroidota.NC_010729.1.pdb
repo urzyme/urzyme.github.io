@@ -1,8 +1,13 @@
-HELIX    1  A1 XXX A    9  XXX A   22  1                                  14
-HELIX    2  A2 XXX A   39  XXX A   44  1                                   6
-HELIX    3  A3 XXX A   90  XXX A   93  1                                   4
-HELIX    4  A4 XXX A  100  XXX A  100  1                                   1
-HELIX    5  A5 XXX A  101  XXX A  109  1                                   9
+HELIX    1  H1 XXX A	   9  XXX A   22  1                                  14
+HELIX    2  H2 XXX A	  39  XXX A   44  1                                   6
+SHEET    1  E114 XXX A  56 XXX  A  69  0
+SHEET    2  E2 7 XXX A  72 XXX  A  78  0
+SHEET    3  E3 7 XXX A  83 XXX  A  89  0
+HELIX    3  H3 XXX A	  90  XXX A   93  1                                   4
+HELIX    4  H4 XXX A	 100  XXX A  100  1                                   1
+HELIX    5  H5 XXX A	 101  XXX A  109  1                                   9
+SHEET    4  E410 XXX A 115 XXX  A 124  0
+SHEET    5  E512 XXX A 130 XXX  A 141  0
 ATOM    117  N   GLU A   8     -11.831 -10.952  28.163  1.00 90.18           N  
 ATOM    118  H   GLU A   8     -10.877 -11.108  28.454  1.00 90.18           H  
 ATOM    119  CA  GLU A   8     -12.794 -10.476  29.166  1.00 90.18           C  

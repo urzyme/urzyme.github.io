@@ -1,5 +1,10 @@
-HELIX    1  A1 XXX A  278  XXX A  283  1                                   6
-HELIX    2  A2 XXX A  324  XXX A  332  1                                   9
+HELIX    1  H1 XXX A	 278  XXX A  283  1                                   6
+SHEET    1  E1 2 XXX A 287 XXX  A 288  0
+SHEET    2  E2 2 XXX A 294 XXX  A 295  0
+SHEET    3  E3 4 XXX A 307 XXX  A 310  0
+SHEET    4  E4 5 XXX A 315 XXX  A 319  0
+HELIX    2  H2 XXX A	 324  XXX A  332  1                                   9
+SHEET    5  E5 2 XXX A 338 XXX  A 339  0
 ATOM   4323  N   ILE A 277      -3.922  14.018   0.164  1.00 98.67           N  
 ATOM   4324  H   ILE A 277      -4.202  13.090   0.446  1.00 98.67           H  
 ATOM   4325  CA  ILE A 277      -3.206  14.155  -1.109  1.00 98.67           C  

@@ -1,4 +1,9 @@
-HELIX    1  A1 XXX A   63  XXX A   71  1                                   9
+SHEET    1  E113 XXX A  25 XXX  A  37  0
+SHEET    2  E2 7 XXX A  41 XXX  A  47  0
+SHEET    3  E3 7 XXX A  52 XXX  A  58  0
+HELIX    1  H1 XXX A	  63  XXX A   71  1                                   9
+SHEET    4  E410 XXX A  77 XXX  A  86  0
+SHEET    5  E512 XXX A  99 XXX  A 110  0
 ATOM    349  N   GLY A  23     -25.298  17.497  35.490  1.00 96.95           N  
 ATOM    350  H   GLY A  23     -25.134  16.508  35.617  1.00 96.95           H  
 ATOM    351  CA  GLY A  23     -26.675  17.966  35.649  1.00 96.95           C  

@@ -1,5 +1,10 @@
-HELIX    1  A1 XXX A  182  XXX A  187  1                                   6
-HELIX    2  A2 XXX A  228  XXX A  236  1                                   9
+HELIX    1  H1 XXX A	 182  XXX A  187  1                                   6
+SHEET    1  E1 2 XXX A 191 XXX  A 192  0
+SHEET    2  E2 2 XXX A 198 XXX  A 199  0
+SHEET    3  E3 5 XXX A 210 XXX  A 214  0
+SHEET    4  E4 5 XXX A 219 XXX  A 223  0
+HELIX    2  H2 XXX A	 228  XXX A  236  1                                   9
+SHEET    5  E5 2 XXX A 242 XXX  A 243  0
 ATOM   2995  N   PHE A 181       3.009   8.646   6.778  1.00 98.78           N  
 ATOM   2996  H   PHE A 181       2.620   7.720   6.880  1.00 98.78           H  
 ATOM   2997  CA  PHE A 181       3.547   9.025   5.466  1.00 98.78           C  

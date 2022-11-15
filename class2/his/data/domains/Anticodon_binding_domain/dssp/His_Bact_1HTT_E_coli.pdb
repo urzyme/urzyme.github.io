@@ -1,7 +1,12 @@
-HELIX    1  A1 XXX A  340  XXX A  354  1                                  15
-HELIX    2  A2 XXX A  369  XXX A  379  1                                  11
-HELIX    3  A3 XXX A  389  XXX A  394  1                                   6
-HELIX    4  A4 XXX A  412  XXX A  423  1                                  12
+SHEET    1  E1 4 XXX A 332 XXX  A 335  0
+HELIX    1  H1 XXX A	 340  XXX A  354  1                                  15
+SHEET    2  E2 2 XXX A 361 XXX  A 362  0
+HELIX    2  H2 XXX A	 369  XXX A  379  1                                  11
+SHEET    3  E3 5 XXX A 383 XXX  A 387  0
+HELIX    3  H3 XXX A	 389  XXX A  394  1                                   6
+SHEET    4  E4 6 XXX A 396 XXX  A 401  0
+SHEET    5  E5 5 XXX A 407 XXX  A 411  0
+HELIX    4  H4 XXX A	 412  XXX A  423  1                                  12
 HEADER    COMPLEX (TRNA SYNTHETASE/HIS-ADENYLATE) 09-MAR-96   1HTT              
 TITLE     HISTIDYL-TRNA SYNTHETASE                                              
 COMPND    MOL_ID: 1;                                                            

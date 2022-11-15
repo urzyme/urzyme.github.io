@@ -1,4 +1,9 @@
-HELIX    1  A1 XXX A  303  XXX A  311  1                                   9
+SHEET    1  E1 2 XXX A 268 XXX  A 269  0
+SHEET    2  E2 2 XXX A 275 XXX  A 276  0
+SHEET    3  E3 4 XXX A 288 XXX  A 291  0
+SHEET    4  E4 5 XXX A 294 XXX  A 298  0
+HELIX    1  H1 XXX A	 303  XXX A  311  1                                   9
+SHEET    5  E5 2 XXX A 317 XXX  A 318  0
 HEADER    LIGASE                                  24-MAR-00   1EOV              
 TITLE     FREE ASPARTYL-TRNA SYNTHETASE (ASPRS) (E.C. 6.1.1.12) FROM YEAST      
 COMPND    MOL_ID: 1;                                                            
