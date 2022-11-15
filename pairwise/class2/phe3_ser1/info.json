@@ -8,5 +8,8 @@
     "fullName2":"Seryl tRNA Synthetase",
     "description":"Pairwise comparison of the Class II catalytic domains from the Mitochondrial Phenylalanyl tRNA Synthetase (m-PheRS) and Seryl tRNA Synthetase (SerRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
     "rmsd":    1.874,
-    "crossFamilyRmsd":    3.853
+    "rmsd1":    0.644,
+    "rmsd2":    1.39,
+    "crossFamilyRmsd":    3.85,
+    "rmsdTotal":    1.84
 }

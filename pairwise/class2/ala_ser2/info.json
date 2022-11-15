@@ -8,5 +8,8 @@
     "fullName2":"Archaeal Seryl tRNA Synthetase",
     "description":"Pairwise comparison of the Class II catalytic domains from the Alanyl tRNA Synthetase (AlaRS) and Archaeal Seryl tRNA Synthetase (a-SerRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
     "rmsd":    2.186,
-    "crossFamilyRmsd":    4.165
+    "rmsd1":    1.69,
+    "rmsd2":    1.18,
+    "crossFamilyRmsd":    4.17,
+    "rmsdTotal":    2.34
 }

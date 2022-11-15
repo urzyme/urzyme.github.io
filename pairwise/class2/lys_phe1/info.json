@@ -8,5 +8,8 @@
     "fullName2":"&alpha; Phenylalanyl tRNA Synthetase subunit",
     "description":"Pairwise comparison of the Class II catalytic domains from the Lysyl tRNA Synthetase (LysRS) and &alpha; Phenylalanyl tRNA Synthetase subunit (&alpha;-PheRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
     "rmsd":    2.145,
-    "crossFamilyRmsd":    2.981
+    "rmsd1":    1.49,
+    "rmsd2":    1.87,
+    "crossFamilyRmsd":    2.98,
+    "rmsdTotal":    2.36
 }

@@ -8,5 +8,8 @@
     "fullName2":"Threonyl tRNA Synthetase",
     "description":"Pairwise comparison of the Class II catalytic domains from the Phosphoseryl tRNA Synthetase (SepRS) and Threonyl tRNA Synthetase (ThrRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
     "rmsd":    1.942,
-    "crossFamilyRmsd":    3.208
+    "rmsd1":    1.05,
+    "rmsd2":    1.28,
+    "crossFamilyRmsd":    3.21,
+    "rmsdTotal":    1.79
 }

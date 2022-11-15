@@ -8,5 +8,8 @@
     "fullName2":"Seryl tRNA Synthetase",
     "description":"Pairwise comparison of the Class II catalytic domains from the Histidyl tRNA Synthetase (HisRS) and Seryl tRNA Synthetase (SerRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
     "rmsd":    1.869,
-    "crossFamilyRmsd":    2.65
+    "rmsd1":    2.37,
+    "rmsd2":    1.52,
+    "crossFamilyRmsd":    2.65,
+    "rmsdTotal":    2.32
 }

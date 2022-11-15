@@ -43,6 +43,7 @@ JSON$rmsd = rmsd
 
 # Cross-family RMSD
 pdb = readLines("data/align.pdb")
+pdb = pdb[grep("^ATOM", pdb)] # Atoms only
 fasta = read.fasta("data/align.ali")
 chains_all = substr(pdb, 22, 22)
 chains = unique(chains_all[chains_all != " "])
@@ -56,10 +57,10 @@ if (nstructures1 + nstructures2 != length(chains)){
 }
 
 
-# Pairwise rmsd across families
-distance.mat = matrix(0, nrow = nstructures1, ncol = nstructures2)
-rownames(distance.mat) = chains[1:nstructures1]
-colnames(distance.mat) = chains[(nstructures1+1):(nstructures1+nstructures2)]
+# Pairwise rmsd within and between families
+distance.mat = matrix(-1, nrow = length(chains), ncol = length(chains))
+rownames(distance.mat) = chains
+colnames(distance.mat) = chains 
 
 for (s1 in rownames(distance.mat)){
 
@@ -70,6 +71,11 @@ for (s1 in rownames(distance.mat)){
 
 
 	for (s2 in colnames(distance.mat)){
+
+
+		if (s1 == s2){
+			next
+		}
 
 
 
@@ -130,8 +136,26 @@ for (s1 in rownames(distance.mat)){
 }
 
 
-JSON$crossFamilyRmsd = signif(mean(distance.mat), 4)
+# Pairwise rmsd within and between families
+fam1 = chains[1:nstructures1]
+fam2 = chains[(nstructures1+1):(nstructures1+nstructures2)]
 
+# Within family 1
+rmsd1 = unlist(distance.mat[fam1,fam1])
+JSON$rmsd1 = signif(mean(rmsd1[rmsd1 >= 0]), 3)
+
+
+# Within family 2
+rmsd2 = unlist(distance.mat[fam2,fam2])
+JSON$rmsd2 = signif(mean(rmsd2[rmsd2  >= 0]), 3)
+
+# Cross families
+rmsd12 = unlist(distance.mat[fam1,fam2])
+JSON$crossFamilyRmsd = signif(mean(rmsd12), 3)
+
+
+total  = unlist(distance.mat)
+JSON$rmsdTotal = signif(mean(total[total >= 0]), 3)
 
 
 exportJSON <- toJSON(JSON, indent=4)

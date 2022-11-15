@@ -177,7 +177,7 @@ function renderaaRS(isPairwise = false){
     });
 
   if (PAIRWISE) {
-    dropdown.hide();
+    $("#tertiaryTable .dropdownDiv").hide();
   }
 	
 
@@ -283,13 +283,21 @@ function renderInfo(text){
                 <th>Family 2</th>
                   <td>` + json.family2 + `</td>
                 </tr>`);
-        $(".summary table").append(`<tr>
-                  <th>RMSD</th>
-                  <td>` + json.rmsd + ` &#8491;</td>
+         $(".summary table").append(`<tr>
+                  <th>Family 1 RMSD</th>
+                  <td>` + json.rmsd1 + ` &#8491;</td>
                 </tr>`);
-        $(".summary table").append(`<tr>
+          $(".summary table").append(`<tr>
+                  <th>Family 2 RMSD</th>
+                  <td>` + json.rmsd2 + ` &#8491;</td>
+                </tr>`);
+           $(".summary table").append(`<tr>
                   <th>Cross-family RMSD</th>
                   <td>` + json.crossFamilyRmsd + ` &#8491;</td>
+                </tr>`);
+        $(".summary table").append(`<tr>
+                  <th>Total RMSD</th>
+                  <td>` + json.rmsdTotal + ` &#8491;</td>
                 </tr>`);
 
 
