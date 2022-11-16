@@ -1,15 +1,15 @@
 {
-    "fullName":"&alpha;-PheRS vs a-SerRS pairwise comparison",
+    "fullName":"b-&alpha;-PheRS vs a-SerRS pairwise comparison",
     "class":"Class II",
     "icon":"/fig/icon_white.png",
-    "family1":"&alpha;-PheRS",
+    "family1":"b-&alpha;-PheRS",
     "family2":"a-SerRS",
-    "fullName1":"&alpha; Phenylalanyl tRNA Synthetase subunit",
+    "fullName1":"&alpha; bacterial Phenylalanyl tRNA Synthetase subunit",
     "fullName2":"Archaeal Seryl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class II catalytic domains from the &alpha; Phenylalanyl tRNA Synthetase subunit (&alpha;-PheRS) and Archaeal Seryl tRNA Synthetase (a-SerRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.156,
-    "rmsd1":    2.03,
-    "rmsd2":    0.906,
-    "crossFamilyRmsd":    3.65,
-    "rmsdTotal":    2.36
+    "description":"Pairwise comparison of the Class II catalytic domains from the &alpha; bacterial Phenylalanyl tRNA Synthetase subunit (b-&alpha;-PheRS) and Archaeal Seryl tRNA Synthetase (a-SerRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.191,
+    "rmsd1":    1.53,
+    "rmsd2":    0.905,
+    "crossFamilyRmsd":    3.62,
+    "rmsdTotal":    2.12
 }

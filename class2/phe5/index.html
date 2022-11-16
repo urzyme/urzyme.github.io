@@ -1,0 +1,145 @@
+﻿
+
+
+<html>
+<head>
+<title>aaRS</title>
+
+<link rel="icon" >
+<meta name="viewport" content="width=device-width, initial-scale=0.41, maximum-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/styles.css">
+
+<script language='JavaScript' type='text/JavaScript' src="../../js/aaRS.js"></script>
+<script type='text/javascript' src='../../bower_components/bio-pv/bio-pv.min.js'></script>
+
+        
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+
+
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+
+
+
+<script language='JavaScript' type='text/JavaScript'>
+
+
+function init(){
+	
+	renderaaRS();
+}
+
+
+
+</script>
+
+</head>
+<body onload="init()">
+
+
+	<div id="main">
+
+		<ul id="flexContainer">
+			<li class="summary">
+				
+			</li>
+
+
+			<li class="notes">
+				
+				<div>
+
+
+						The mitochondrial	phenylalanyl tRNA synthetase (m-PheRS) is an enzyme which attaches phenylalanine to its cognate tRNA: <br><br>
+
+
+					<ul>
+						<li>Phe + tRNA<sup>Phe</sup> + ATP &rightarrow; Phe-tRNA<sup>Phe</sup> + AMP + PP<sub>i</sub> </li>
+					</ul>
+
+					Although it resides in the mitochondria, the gene which encodes m-PheRS is nuclear. <br><br>
+
+
+					PheRS is probably the most complex of amino acyl tRNA synthetases (Klipcan et al. 2010). There are three variants of PheRS.
+					 This variant is the only monomeric member of the class II superfamily. The other two variants are heterotetrameric - one predominantly found in bacteria, and the other in eukaryotes/archaea (Finarov et al. 2010). As the two variants are heterotetrameric, they are comprised of four families: the <a href="../phe1">bacterial &alpha; subunit</a>, the <a href="../phe2">bacterial &beta; subunit</a>, the <a href="../phe3">eukaryotic &alpha; subunit</a>, and the <a href="../phe4">eukaryotic &beta; subunit</a>. <br><br>
+
+
+
+					 	The catalytic core is similar to that of the other PheRS familes, as well as <a href="../sep">SepRS</a> and <a href="../pyl">PylRS</a>. Collectivey, these members constitute subclass IIc (Perona et al. 2012, Valencia-Sánchez et al. 2016, Gomez et al. 2020). <br><br>
+			
+				</div>
+				
+			</li>
+			
+		</ul>
+
+		<div class="svgDiv">
+			<svg id="secondary" height=0 width=0 overflow="auto"></svg>
+		</div>
+
+		
+		<div id="alignment" class="svgDiv">
+
+		</div>
+
+
+		<div id="alignment2" class="svgDiv">
+
+		</div>
+
+
+
+
+		<div id="tertiaryTable">
+			
+			<table>
+				<tr>
+					<td>
+						<div id="superposition"> </div>
+					</td>
+					
+					<td>
+						<div id="tertiary"> </div>
+					</td>
+				</tr>
+			
+			</table>
+			
+			
+		
+		</div>
+		
+		
+		<div id="references">
+
+
+			<div>
+					Klipcan, Liron, et al. "Structural aspects of phenylalanylation and quality control in three major forms of phenylalanyl-tRNA synthetase." Journal of amino acids 2010 (2010).
+				</div>
+
+
+				<div>
+					Finarov, Igal, et al. "Structure of human cytosolic phenylalanyl-tRNA synthetase: evidence for kingdom-specific design of the active sites and tRNA binding patterns." Structure 18.3 (2010): 343-353.
+				</div>
+
+
+			<div>
+				Klipcan, Liron, et al. "The tRNA-induced conformational activation of human mitochondrial phenylalanyl-tRNA synthetase." Structure 16.7 (2008): 1095-1104.
+			</div>
+		</div>
+
+
+	</div>
+</body>
+</html>

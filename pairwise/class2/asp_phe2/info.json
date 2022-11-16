@@ -1,15 +1,15 @@
 {
-    "fullName":"AspRS vs &beta;-PheRS pairwise comparison",
+    "fullName":"AspRS vs b-&beta;-PheRS pairwise comparison",
     "class":"Class II",
     "icon":"/fig/icon_white.png",
     "family1":"AspRS",
-    "family2":"&beta;-PheRS",
+    "family2":"b-&beta;-PheRS",
     "fullName1":"Aspartyl tRNA Synthetase",
-    "fullName2":"&beta; Phenylalanyl tRNA Synthetase subunit",
-    "description":"Pairwise comparison of the Class II catalytic domains from the Aspartyl tRNA Synthetase (AspRS) and &beta; Phenylalanyl tRNA Synthetase subunit (&beta;-PheRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    1.917,
-    "rmsd1":    2.28,
-    "rmsd2":    2.84,
-    "crossFamilyRmsd":    3.29,
-    "rmsdTotal":    2.64
+    "fullName2":"&beta; bacterial Phenylalanyl tRNA Synthetase subunit",
+    "description":"Pairwise comparison of the Class II catalytic domains from the Aspartyl tRNA Synthetase (AspRS) and &beta; bacterial Phenylalanyl tRNA Synthetase subunit (b-&beta;-PheRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    1.919,
+    "rmsd1":    2.07,
+    "rmsd2":    2.27,
+    "crossFamilyRmsd":    3.09,
+    "rmsdTotal":    2.54
 }

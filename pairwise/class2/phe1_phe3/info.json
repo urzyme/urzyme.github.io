@@ -1,15 +1,15 @@
 {
-    "fullName":"&alpha;-PheRS vs m-PheRS pairwise comparison",
+    "fullName":"b-&alpha;-PheRS vs e-&alpha;-PheRS pairwise comparison",
     "class":"Class II",
     "icon":"/fig/icon_white.png",
-    "family1":"&alpha;-PheRS",
-    "family2":"m-PheRS",
-    "fullName1":"&alpha; Phenylalanyl tRNA Synthetase subunit",
-    "fullName2":"Mitochondrial Phenylalanyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class II catalytic domains from the &alpha; Phenylalanyl tRNA Synthetase subunit (&alpha;-PheRS) and Mitochondrial Phenylalanyl tRNA Synthetase (m-PheRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    1.747,
-    "rmsd1":    1.86,
-    "rmsd2":    0.202,
-    "crossFamilyRmsd":    2.1,
-    "rmsdTotal":    1.9
+    "family1":"b-&alpha;-PheRS",
+    "family2":"e-&alpha;-PheRS",
+    "fullName1":"&alpha; bacterial Phenylalanyl tRNA Synthetase subunit",
+    "fullName2":"&alpha; eukaryotic Phenylalanyl tRNA Synthetase subunit",
+    "description":"Pairwise comparison of the Class II catalytic domains from the &alpha; bacterial Phenylalanyl tRNA Synthetase subunit (b-&alpha;-PheRS) and &alpha; eukaryotic Phenylalanyl tRNA Synthetase subunit (e-&alpha;-PheRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    1.53,
+    "rmsd1":    1.54,
+    "rmsd2":    1.48,
+    "crossFamilyRmsd":    1.97,
+    "rmsdTotal":    1.73
 }

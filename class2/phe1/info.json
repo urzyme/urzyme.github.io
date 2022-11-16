@@ -1,14 +1,14 @@
 {
-		"name": "&alpha;-PheRS",
-		"fullName": "&alpha; Phenylalanyl tRNA Synthetase subunit",
+		"name": "b-&alpha;-PheRS",
+		"fullName": "&alpha; bacterial Phenylalanyl tRNA Synthetase subunit",
 		"icon": "/fig/icon_hydrophobic.png",
 		"substrate": "Phenylalanine",
 		"incorporates": "Phenylalanine",
 		"class": "Class II",
-		"subclass": "",
-		"oligo": "",
-		"codons": "",
-		"editing": ""
+		"subclass": "c",
+		"oligo": "Heterotetramer",
+		"codons": "UUU, UUC",
+		"editing": "No"
 	
 }
 

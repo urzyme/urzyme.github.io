@@ -1,10 +1,12 @@
-Anticodon binding domain	310-405	4
-Catalytic domain	2-300	4
+# See Figure s4 of https://www.sciencedirect.com/science/article/pii/S0969212610000353
+Anticodon binding domain	828-852	3
+Catalytic domain	863-1156	4
+DNA binding domains	1-820	4
 #Urzyme	734-843	3
 #Protozyme	795-843	2
-Motif 1	65-74	1
-Motif 2	126-135	1
-Motif 3	265-274	1
-tweezer1	133	0
-tweezer2	272	0
+Motif 1	883-892	1
+Motif 2	1005-1014	1
+Motif 3	1113-1122	1
+tweezer1	1012	0
+tweezer2	1120	0
 

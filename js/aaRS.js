@@ -101,9 +101,11 @@ function renderaaRS(isPairwise = false){
 	$("#class2Selector div").append(`<a href='/class2/gly2'>GlyRS (tetramer)</a>`);
 	$("#class2Selector div").append(`<a href='/class2/his'>HisRS</a>`);
 	$("#class2Selector div").append(`<a href='/class2/lys'>LysRS</a>`);
-	$("#class2Selector div").append(`<a href='/class2/phe1'>PheRS (&alpha;)</a>`);
-	$("#class2Selector div").append(`<a href='/class2/phe2'>PheRS (&beta;)</a>`);
-	$("#class2Selector div").append(`<a href='/class2/phe3'>PheRS (mito)</a>`);
+	$("#class2Selector div").append(`<a href='/class2/phe1'>PheRS (bact &alpha;)</a>`);
+	$("#class2Selector div").append(`<a href='/class2/phe2'>PheRS (bact &beta;)</a>`);
+  $("#class2Selector div").append(`<a href='/class2/phe3'>PheRS (euk &alpha;)</a>`);
+  $("#class2Selector div").append(`<a href='/class2/phe4'>PheRS (euk &beta;)</a>`);
+	$("#class2Selector div").append(`<a href='/class2/phe5'>PheRS (mito)</a>`);
 	$("#class2Selector div").append(`<a href='/class2/pro'>ProRS</a>`);
 	$("#class2Selector div").append(`<a href='/class2/pyl'>PylRS</a>`);
 	$("#class2Selector div").append(`<a href='/class2/sep'>SepRS</a>`);
@@ -440,6 +442,7 @@ function colourSelected(id, defaultFn) {
   var colorFunc = function(atom, out, index) {
 
     var chainName = atom.residue().chain().name();
+    var chain1Name = atom.residue().chain().structure().chains()[0].name();
 
     // Get accession
     var pdb = PV_PDBS[id];
@@ -448,7 +451,7 @@ function colourSelected(id, defaultFn) {
 
 
       // Main chain only
-      if (chainName != "A") {
+      if (chainName != chain1Name) {
         out[index+0] = 0.6; out[index+1] = 0.6;
         out[index+2] = 0.6; out[index+3] = 0.8;
         return;

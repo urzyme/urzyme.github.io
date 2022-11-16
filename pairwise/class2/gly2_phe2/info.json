@@ -1,15 +1,15 @@
 {
-    "fullName":"t-GlyRS vs &beta;-PheRS pairwise comparison",
+    "fullName":"t-GlyRS vs b-&beta;-PheRS pairwise comparison",
     "class":"Class II",
     "icon":"/fig/icon_white.png",
     "family1":"t-GlyRS",
-    "family2":"&beta;-PheRS",
+    "family2":"b-&beta;-PheRS",
     "fullName1":"Tetrameric glycyl tRNA Synthetase",
-    "fullName2":"&beta; Phenylalanyl tRNA Synthetase subunit",
-    "description":"Pairwise comparison of the Class II catalytic domains from the Tetrameric glycyl tRNA Synthetase (t-GlyRS) and &beta; Phenylalanyl tRNA Synthetase subunit (&beta;-PheRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.224,
+    "fullName2":"&beta; bacterial Phenylalanyl tRNA Synthetase subunit",
+    "description":"Pairwise comparison of the Class II catalytic domains from the Tetrameric glycyl tRNA Synthetase (t-GlyRS) and &beta; bacterial Phenylalanyl tRNA Synthetase subunit (b-&beta;-PheRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.271,
     "rmsd1":    1.27,
-    "rmsd2":    2.17,
+    "rmsd2":    1.97,
     "crossFamilyRmsd":    2.89,
-    "rmsdTotal":    2.42
+    "rmsdTotal":    2.39
 }

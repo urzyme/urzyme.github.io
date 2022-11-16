@@ -1,0 +1,15 @@
+{
+    "fullName":"m-PheRS vs SepRS pairwise comparison",
+    "class":"Class II",
+    "icon":"/fig/icon_white.png",
+    "family1":"m-PheRS",
+    "family2":"SepRS",
+    "fullName1":"Mitochondrial Phenylalanyl tRNA Synthetase",
+    "fullName2":"Phosphoseryl tRNA Synthetase",
+    "description":"Pairwise comparison of the Class II catalytic domains from the Mitochondrial Phenylalanyl tRNA Synthetase (m-PheRS) and Phosphoseryl tRNA Synthetase (SepRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    1.997,
+    "rmsd1":    1.71,
+    "rmsd2":    1.38,
+    "crossFamilyRmsd":    2.58,
+    "rmsdTotal":    2.17
+}

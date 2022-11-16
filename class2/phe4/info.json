@@ -1,0 +1,15 @@
+{
+		"name": "e-&beta;-PheRS",
+		"fullName": "&beta; eukaryotic Phenylalanyl tRNA Synthetase subunit",
+		"icon": "/fig/icon_hydrophobic.png",
+		"substrate": "Phenylalanine",
+		"incorporates": "Phenylalanine",
+		"class": "Class II",
+		"subclass": "c",
+		"oligo": "Heterotetramer",
+		"codons": "UUU, UUC",
+		"editing": "Post-transfer"
+	
+}
+
+

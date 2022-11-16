@@ -1,0 +1,15 @@
+{
+    "fullName":"e-&beta;-PheRS vs SerRS pairwise comparison",
+    "class":"Class II",
+    "icon":"/fig/icon_white.png",
+    "family1":"e-&beta;-PheRS",
+    "family2":"SerRS",
+    "fullName1":"&beta; eukaryotic Phenylalanyl tRNA Synthetase subunit",
+    "fullName2":"Seryl tRNA Synthetase",
+    "description":"Pairwise comparison of the Class II catalytic domains from the &beta; eukaryotic Phenylalanyl tRNA Synthetase subunit (e-&beta;-PheRS) and Seryl tRNA Synthetase (SerRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    1.707,
+    "rmsd1":    1.25,
+    "rmsd2":    1.4,
+    "crossFamilyRmsd":    2.83,
+    "rmsdTotal":    1.83
+}

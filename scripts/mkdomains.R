@@ -73,6 +73,9 @@ for (domain in features.df$domain){
 			pdb.df2 = pdb.df[pdb.df$chain == "B",]
 		}
 		if (nrow(pdb.df2) == 0){
+			pdb.df2 = pdb.df[pdb.df$chain == "C",]
+		}
+		if (nrow(pdb.df2) == 0){
 			cat(paste("Skipping", pdbFile, "\n"))
 			next
 		}
