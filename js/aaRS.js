@@ -263,7 +263,7 @@ function renderInfo(text){
   								<th>Codons</th>
   								<td>` + json.codons + `</td>
   							</tr>`);	
-  	$(".summary table").append(`<tr>
+  	$(".summary table").append(`<tr title="Editing is a translational-error prevention mechanism which removes misactivated or mischarged amino acids. It can occur at the pre-transfer level (by removing misactivated resiudes from the active site) or at the post-transfer level (by removing mischarged residues from the tRNA).">
   								<th>Editing</th>
   								<td>` + json.editing + `</td>
   							</tr>`);
