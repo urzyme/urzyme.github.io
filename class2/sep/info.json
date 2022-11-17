@@ -1,14 +1,14 @@
 {
 		"name": "SepRS",
-		"fullName": "Phosphoseryl tRNA Synthetase",
+		"fullName": "O-phosphoseryl tRNA Synthetase",
 		"icon": "/fig/icon_cys.png",
 		"substrate": "O-phosphoserine",
 		"incorporates": "Cysteine",
 		"class": "Class II",
 		"subclass": "c",
-		"oligo": "",
-		"codons": "",
-		"editing": ""
+		"oligo": "Homotetramer",
+		"codons": "UGU, UGC",
+		"editing": "No"
 	
 }
 
