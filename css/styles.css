@@ -429,7 +429,7 @@ div.svgDiv{
 
 
 
-#flexContainer {
+#flexContainer, .flexContainer {
   /* We first create a flex layout context */
   display: flex;
 
@@ -444,6 +444,10 @@ div.svgDiv{
 }
 
 #flexContainer>li {
+	margin-bottom:1em;
+}
+
+.flexContainer>li {
 	margin-bottom:1em;
 }
 

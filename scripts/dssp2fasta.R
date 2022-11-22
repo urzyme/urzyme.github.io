@@ -1,0 +1,74 @@
+library(seqinr)
+
+
+
+# List of dssp files
+dssp.files = list.files(path = "dssp", pattern = "[.]dssp$")
+
+# Load alignment
+fasta = read.fasta("align.ali")
+nsites = length(fasta[[1]])
+
+output.seq = character(0)
+
+
+
+for (f in dssp.files){
+
+
+
+	acc = paste0("structures/", gsub("[.]dssp$", "", f))
+	file = paste0("dssp/", f)
+	fasta.seq = fasta[[acc]]
+
+	dssp = readLines(file)
+	start = grep("#  RESIDUE AA STRUCTURE", dssp) + 1
+	dssp = dssp[start:length(dssp)]
+
+
+
+	# Get secondary structural elements
+	seq = ""
+	dssp.pos = 1
+	for (i in 1:nsites){
+
+		# If gap, then skip
+		aln.char = fasta.seq[i]
+		if (aln.char == "-"){
+			sse = "-"
+		}else{
+
+			line = dssp[dssp.pos]
+			dssp.pos = dssp.pos + 1
+
+
+			# If there is a region of missing residues in the pdb structrue then an extra line with '!' is inserted into the dssp file
+			res = substr(line, 14, 14)
+			if (res == "!"){
+				line = dssp[dssp.pos]
+				dssp.pos = dssp.pos + 1
+			}
+
+			sse = substr(line, 17, 17)
+			if (sse == " ") sse = "N"
+
+		}
+
+
+		seq = paste0(seq, sse)
+		
+
+	}
+
+
+
+	output.seq[acc] = seq
+
+
+
+}
+
+
+# Write to fasta
+write( paste(paste0(">", names(output.seq), "\n", as.character(output.seq)), collapse="\n"), "secondary.fasta")
+
