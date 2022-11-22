@@ -25,13 +25,16 @@ cd ../
 
 
 
-# Make a secondary structure fasta file from dssp
-Rscript ../../../scripts/dssp2fasta.R
-
 
 #../../../../DeepAlign/3DCOMB -i structures.txt -o align
 mkdssp -i align.pdb -o align.dssp
 Rscript ../../../scripts/dssp2pdb.R align.dssp align.pdb
+
+
+# Make a secondary structure fasta file from dssp and alignment
+Rscript ../../../scripts/dssp2fasta.R
+
+
 
 exit
 
@@ -67,12 +70,16 @@ do
 	cd ../
 
 
-	# Make a secondary structure fasta file from dssp
-	Rscript ../../../../../scripts/dssp2fasta.R
+	
 
 	../../../../../../DeepAlign/3DCOMB -i structures.txt -o align
 	mkdssp -i align.pdb -o align.dssp
 	Rscript ../../../../../scripts/dssp2pdb.R align.dssp align.pdb
+
+
+	# Make a secondary structure fasta file from dssp
+	Rscript ../../../../../scripts/dssp2fasta.R
+
 	cd ../
 
 

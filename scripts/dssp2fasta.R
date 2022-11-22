@@ -3,7 +3,12 @@ library(seqinr)
 
 
 # List of dssp files
-dssp.files = list.files(path = "dssp", pattern = "[.]dssp$")
+#dssp.files = list.files(path = "dssp", pattern = "[.]dssp$")
+
+structures = readLines("structures.txt")
+dssp.files = paste0(gsub("structures/", "dssp/", structures), ".dssp")
+
+
 
 # Load alignment
 fasta = read.fasta("align.ali")
@@ -17,8 +22,9 @@ for (f in dssp.files){
 
 
 
-	acc = paste0("structures/", gsub("[.]dssp$", "", f))
-	file = paste0("dssp/", f)
+	acc  =gsub("[.]dssp$", "", f)
+	acc = gsub("dssp/", "structures/", acc)
+	file = f
 	fasta.seq = fasta[[acc]]
 
 	dssp = readLines(file)

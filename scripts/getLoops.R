@@ -38,9 +38,11 @@ for (d in dirs){
 	targetDir = bits[bits != json$refDir]
 
 
-	# Open the alignment
+	# Open the alignments
 	aln = read.fasta(paste0(d, "/data/align.ali"))
+	aln2 = read.fasta(paste0(d, "/data/secondary.fasta"))
 	names(aln) = gsub(".*/", "", names(aln))
+	names(aln2) = names(aln)
 
 	# Reference sequence
 	refSeq = aln[json$ref]
@@ -64,6 +66,16 @@ for (d in dirs){
 	# For each element in structure
 	nsites = length(refSeq[[1]])
 	for (ele in elements){
+
+
+		eleType = substr(ele, 1, 1)
+		if (eleType == "S") eleType = "E" # Strand
+
+		# Come back to loops later
+		if (eleType == "L"){
+			next
+		}
+
 
 		startName = paste0(ele, ".start")
 		endName = paste0(ele, ".end")
@@ -105,6 +117,29 @@ for (d in dirs){
 
 
 			targetSeq = aln[target]
+			targetSeqSS = toupper(as.character(aln2[target][[1]]))
+			targetSeqSS[targetSeqSS == "G" | targetSeqSS == "I"] = "H" # Just one type of helix
+
+
+			# Get mid point
+			targetPos = nchar(gsub("-", "", paste0(targetSeq[[1]][1:ceiling((refStartAln+refEndAln)/2)], collapse="")))
+
+			# Ensure this is the right element
+			if (targetSeqSS[targetPos] != eleType & targetSeqSS[targetPos] != "-"){
+				stop(paste("Expected sse", eleType, "but found", targetSeqSS[targetPos], "for", ele, "in", target))
+			}
+
+			# Extend to the end of the helix/strand. Allow for gaps
+			targetStart = targetPos-1
+			targetEnd = targetPos+1
+			while (targetStart > 1 & (targetSeqSS[targetStart-1] == eleType | targetSeqSS[targetStart-1] == "-")){
+				targetStart = targetStart - 1
+			}
+			while (targetEnd < nsites & (targetSeqSS[targetEnd+1] == eleType | targetSeqSS[targetEnd+1] == "-")){
+				targetEnd = targetEnd + 1
+			}
+
+
 
 			# Subsequence of element
 			targetStart = nchar(gsub("-", "", paste0(targetSeq[[1]][1:refStartAln], collapse="")))
@@ -113,7 +148,7 @@ for (d in dirs){
 
 
 
-			
+
 
 
 			# Add to df
