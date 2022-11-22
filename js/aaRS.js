@@ -50,12 +50,15 @@ NT_FONT_SIZE = 11;
 ALN_LABEL_WIDTH = 300;
 
 CATALYTIC_DOMAIN_WIDTH = 600;
-CATALYTIC_DOMAIN_HEIGHT = 300;
-CATALYTIC_DOMAIN_XPAD = 30;
-CATALYTIC_DOMAIN_YPAD = 30;
+CATALYTIC_DOMAIN_HEIGHT = 350;
+CATALYTIC_DOMAIN_XPAD = 20;
+CATALYTIC_DOMAIN_YPAD = 40;
 CATALYTIC_DOMAIN_STRAND_ARROW_HEAD_LEN_1 = 40;
 CATALYTIC_DOMAIN_STRAND_ARROW_HEAD_LEN_2 = 45;
 CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP = 0.618;
+CATALYTIC_DOMAIN_HELIX_WIDTH_PROP = 0.7;
+CATALYTIC_DOMAIN_CUBIC_RIGHT_DX = 0;
+CATALYTIC_DOMAIN_LOOP_WIDTH = 3;
 
 
 LEVEL_1_COL = "#fa2a5599";
@@ -1545,14 +1548,18 @@ function renderCatalyticDomainInserts(text, classNr){
     $("#catalyticDomainDIV").append("<h2>Catalytic domain</h1>")
     $("#catalyticDomainDIV").append("<ul class='flexContainer'></ul>");
     $("#catalyticDomainDIV .flexContainer").append(`<li>
-                                                      <div class='svgDiv'>
+                                                      <div >
+														<div style='text-align:center'><b>Fig:</b> Map of the class II catalytic domain. Click on an element to select it.</div>
                                                         <svg id='catalyticSVG' height=0 width=0 overflow='auto'></svg>
                                                       </div>
                                                     </li>`);
     $("#catalyticDomainDIV .flexContainer").append(`<li>
-                                                      <table class='summary' id='catalyticTable'>
-                                                      </table>
-                                                    </li>`);
+														<div>
+														<div style='text-align:center'><b>Table:</b> The size (aa) of each element in the catalytic domain relative to the <a href="../gly2">tetrameric GlyRS</a> reference sequence.</div>
+														  <table class='maptable' id='catalyticTable'>
+														  </table>
+														  </div>
+													</li>`);
 
    
 
@@ -1560,15 +1567,16 @@ function renderCatalyticDomainInserts(text, classNr){
 
     // Header
     var tr = $("<tr></tr>")
-    $(tr).append("<th>Accession</th>");
+    $(tr).append("<th class='accession'>Accession</th>");
     for (let eleNr = 0; eleNr < json.elements.length; eleNr++){
       let ele = json.elements[eleNr];
-      $(tr).append("<th>" + ele + "</th>");
+	  let eleType = ele.substring(0, 1);
+      $(tr).append("<th ele='" + ele + "' type='" +eleType + "'>" + ele + "</th>");
     }
     $("#catalyticTable").append(tr);
 
 
-    // Body
+     // Body
      for (var seqNum = 0; seqNum < json.accessions.length; seqNum++){
       let acc = json.accessions[seqNum];
       var accTidy = acc.replace(".pdb", "");
@@ -1577,29 +1585,41 @@ function renderCatalyticDomainInserts(text, classNr){
       // Reference sequence row?
       let isRef = false;
       if (acc == json.refSeq){
-        isRef = true;
-        trAcc.addClass("refSeq");
-        trAcc.attr("title", "Reference structure");
+		  continue;
       }
-      $(trAcc).append("<td style='text-align:right'>" + accTidy + "</td>");
+      $(trAcc).append("<td  class='accession'>" + accTidy + "</td>");
       for (let eleNr = 0; eleNr < json.elements.length; eleNr++){
-
-
         let ele = json.elements[eleNr];
-        var len = json[[acc + "_" + ele + ".length"]];
+		let eleType = ele.substring(0, 1);
         var dlen = json[[acc + "_" + ele + ".dlength"]];
         if (dlen > 0) dlen = "+" + dlen;
         if (dlen == 0) dlen = "";
-        //$(trAcc).append("<td>" + len + "" + dlen + "</td>");
-        if (isRef){
-          $(trAcc).append("<td>" + len + "</td>");
-        }else{
-          $(trAcc).append("<td>" + dlen + "</td>");
-        }
-        
-
+        $(trAcc).append("<td ele='" + ele + "' type='" +eleType + "'>" + dlen + "</td>");
       }
-      $("#catalyticTable").append(trAcc);
+	  $("#catalyticTable").append(trAcc);
+	  
+	 }
+	  
+	  // Ref seq at bottom
+	  for (var seqNum = 0; seqNum < json.accessions.length; seqNum++){
+		  
+		let acc = json.accessions[seqNum];
+		if (acc == json.refSeq){
+			
+			var accTidy = acc.replace(".pdb", "");
+			let trAcc = $("<tr></tr>")
+			$(trAcc).append("<td  class='accession'>" + accTidy + "</td>");
+			trAcc.addClass("refSeq");
+			trAcc.attr("title", "Reference structure");
+			for (let eleNr = 0; eleNr < json.elements.length; eleNr++){
+				let ele = json.elements[eleNr];
+				let eleType = ele.substring(0, 1);
+				var len = json[[acc + "_" + ele + ".length"]];
+				$(trAcc).append("<td ele='" + ele + "' type='" + eleType + "'>" + len + "</td>");
+			}
+			$("#catalyticTable").append(trAcc);
+		}
+		
 
 
     }
@@ -1612,112 +1632,254 @@ function renderCatalyticDomainInserts(text, classNr){
 
 
     // Ele width and height
-    let nElementsHorizontal = 7;
+    let nElementsHorizontal = 9;
     let nElementsVertical = 3;
     let eleWidth = (CATALYTIC_DOMAIN_WIDTH-CATALYTIC_DOMAIN_XPAD) / (nElementsHorizontal+1) - CATALYTIC_DOMAIN_XPAD;
-    let eleHeight = (CATALYTIC_DOMAIN_HEIGHT-4*CATALYTIC_DOMAIN_YPAD);
+    
+	
+	let helixCol  = AA_COLS_2["H"] + "99";
+	let strandCol = AA_COLS_2["E"] + "99";
 
     if (classNr == 2){
 
 
+      // 6 anti parallel strands and 3 parallel helices
+      let odd = false;
+	  let oddLoop = false;
+      for (let i = 0; i <= 9 ; i++){
 
-      // A helix in the top left corner
-      var x = CATALYTIC_DOMAIN_XPAD;
-      var y = CATALYTIC_DOMAIN_YPAD*1;
-      var eleName = "H1";
-      var group = $(drawSVGobj(svg, "g", {element: eleName, style:"cursor:pointer"} ));
-      drawSVGobj(group, "rect", {rx: HELIX_CORNER_RADIUS, x: x, y: y, width: eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP, height: eleHeight/2, style: "stroke-width:1px; stroke:black; fill:" + AA_COLS_2["H"]} );
-      drawSVGobj(group, "text", {x: x+eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2, y: y+eleHeight/4, style: "font-size:18px; text-anchor:middle; dominant-baseline:central; "}, eleName);
-
-
-
-      // A helix in the bottom left corner
-      var y = CATALYTIC_DOMAIN_HEIGHT - CATALYTIC_DOMAIN_YPAD*1;
-      var eleName = "H2";
-      var group = $(drawSVGobj(svg, "g", {element: eleName, style:"cursor:pointer"} ));
-      drawSVGobj(group, "rect", {rx: HELIX_CORNER_RADIUS, x: x, y: y-eleHeight/2, width: eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP, height: eleHeight/2, style: "stroke-width:1px; stroke:black; fill:" + AA_COLS_2["H"]} );
-      drawSVGobj(group, "text", {x: x+eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2, y: y-eleHeight/4, style: "font-size:18px; text-anchor:middle; dominant-baseline:central; "}, eleName);
-
-
-
-
-      // A helix along the bottom
-      var x = CATALYTIC_DOMAIN_XPAD + (CATALYTIC_DOMAIN_XPAD+eleWidth)*3;
-      var y = CATALYTIC_DOMAIN_HEIGHT - CATALYTIC_DOMAIN_YPAD*1.5;
-      var w = (eleWidth+CATALYTIC_DOMAIN_XPAD)*3;
-      var eleName = "H3";
-      var group = $(drawSVGobj(svg, "g", {element: eleName, style:"cursor:pointer"} ));
-      drawSVGobj(group, "rect", {rx: HELIX_CORNER_RADIUS, x: x, y: y, width: w, height: eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP, style: "stroke-width:1px; stroke:black; fill:" + AA_COLS_2["H"]} );
-      drawSVGobj(group, "text", {x: x+w/2, y: y+eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2, style: "font-size:18px; text-anchor:middle; dominant-baseline:central; "}, eleName);
-
-
-
-      // A helix above S6
-      var x = CATALYTIC_DOMAIN_XPAD*4 + eleWidth*2.75;
-      var y = 0;
-      var eleName = "H4";
-      var group = $(drawSVGobj(svg, "g", {element: eleName, style:"cursor:pointer"} ));
-      drawSVGobj(group, "rect", {rx: HELIX_CORNER_RADIUS, x: x, y: y, width: eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP, height: CATALYTIC_DOMAIN_YPAD*2, style: "stroke-width:1px; stroke:black; fill:" + AA_COLS_2["H"]} );
-      drawSVGobj(group, "text", {x: x+eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2, y: y+CATALYTIC_DOMAIN_YPAD, style: "font-size:18px; text-anchor:middle; dominant-baseline:central; "}, eleName);
-
-
-
-
-      // 6 anti parallel strands
-      let odd = true;
-      for (let i = 1; i <= 6 ; i++){
-
-
+		let eleHeight = (CATALYTIC_DOMAIN_HEIGHT-4*CATALYTIC_DOMAIN_YPAD);
 
         var x = CATALYTIC_DOMAIN_XPAD + (CATALYTIC_DOMAIN_XPAD+eleWidth)*i;
         var y = CATALYTIC_DOMAIN_YPAD*2;
+		
 
-        var y1, y2, y3;
-        if (odd){
+		// Loop
+		if (i <= 9){
+			
+			
+			let nr = i;
+			if (i == 5) nr = 8;
+			if (i == 6) nr = 7;
+			if (i == 7) nr = 6;
+			if (i == 8) nr = 5;
+			
+			let eleName = "L" + nr;
+			let xMid = x;
+			let yLoop = y;
+			
 
-          // Up arrow
-          y1 = y+eleHeight;
-          y2 = y+CATALYTIC_DOMAIN_STRAND_ARROW_HEAD_LEN_1;
-          y3 = y+CATALYTIC_DOMAIN_STRAND_ARROW_HEAD_LEN_2;
-          y4 = y;
+			let endPoint, control1, control2 = [];
+			let ylab = y;
+			let xlab = x;
+			
+			// N term
+			if (i == 0){
+				eleName = "N";
+				yLoop = y+eleHeight;
+				xMid = CATALYTIC_DOMAIN_XPAD + (CATALYTIC_DOMAIN_XPAD+eleWidth)*1
+				endPoint = [xMid, yLoop+3*CATALYTIC_DOMAIN_YPAD/4];
+				control1 = [xMid-CATALYTIC_DOMAIN_XPAD/3, yLoop+1*(CATALYTIC_DOMAIN_YPAD)/4];
+				control2 = [xMid+CATALYTIC_DOMAIN_XPAD/3, yLoop+2*(CATALYTIC_DOMAIN_YPAD)/4];	
+				xlab = xMid;
+				ylab = yLoop+CATALYTIC_DOMAIN_YPAD + 5;
+			}
+			
+			// C term
+			else if (i == 9){
+				eleName = "C";
+				yLoop = y;
+				xMid = CATALYTIC_DOMAIN_XPAD + (CATALYTIC_DOMAIN_XPAD+eleWidth)*5
+				endPoint = [xMid, yLoop-3*CATALYTIC_DOMAIN_YPAD/4];
+				control1 = [xMid-CATALYTIC_DOMAIN_XPAD/3, yLoop-1*(CATALYTIC_DOMAIN_YPAD)/4];
+				control2 = [xMid+CATALYTIC_DOMAIN_XPAD/3, yLoop-2*(CATALYTIC_DOMAIN_YPAD)/4];	
+				xlab = xMid;
+				ylab = yLoop-CATALYTIC_DOMAIN_YPAD - 5;
+				
+			}
+			
+			// Loop from S2 to H3 on RHS
+			else if (i == 4){
+				yLoop = y+eleHeight;
+				endPoint = [CATALYTIC_DOMAIN_XPAD + (CATALYTIC_DOMAIN_XPAD+eleWidth)*9, yLoop];
+				control1 = [xMid-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX, yLoop+2.5*CATALYTIC_DOMAIN_YPAD];
+				control2 = [endPoint[0]-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX, yLoop+2.5*CATALYTIC_DOMAIN_YPAD];	
+				ylab = yLoop+2*CATALYTIC_DOMAIN_YPAD-20;
+				xlab = (xMid+endPoint[0])/2-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX;
+				oddLoop = !oddLoop;
+				
+			}
+			
+			
+			// Standard odd loop (top)
+			else if (oddLoop){
+				endPoint = [xMid + CATALYTIC_DOMAIN_XPAD+eleWidth, yLoop];
+				control1 = [xMid-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX, yLoop-CATALYTIC_DOMAIN_YPAD];
+				control2 = [endPoint[0]-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX, yLoop-CATALYTIC_DOMAIN_YPAD];
+				xlab = (xMid+endPoint[0])/2-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX;
+				ylab = yLoop-CATALYTIC_DOMAIN_YPAD-3;
+			}
+			
+			// Standard even loop (bottom)
+			else{
+				yLoop = y+eleHeight;
+				endPoint = [xMid + CATALYTIC_DOMAIN_XPAD+eleWidth, yLoop];
+				control1 = [xMid-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX, yLoop+CATALYTIC_DOMAIN_YPAD];
+				control2 = [endPoint[0]-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX, yLoop+CATALYTIC_DOMAIN_YPAD];
+				xlab = (xMid+endPoint[0])/2-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX;
+				ylab = yLoop+CATALYTIC_DOMAIN_YPAD+3;
+			}
+			
+			
+			
+			let d = "M " + xMid + " " + yLoop  + " C " + control1[0] + " " + control1[1] + ", " + control2[0] + " " + control2[1] + ", " + endPoint[0] + " " + endPoint[1];
+			let group;
+			if (i == 0){
+				group = $(drawSVGobj(svg, "g", {element: eleName, style:""} ));
+			}else{
+				group = $(drawSVGobj(svg, "g", {element: eleName, style:"cursor:pointer"} ));
+			}
+			drawSVGobj(group, "path", {d: d, style: "stroke-width:" + CATALYTIC_DOMAIN_LOOP_WIDTH + "px; stroke:black; fill:transparent; stroke-linecap:round"} );
+			drawSVGobj(group, "text", {x: xlab, y: ylab, style: "font-size:18px; text-anchor:middle; dominant-baseline:central; "}, eleName);
+			
+		
+			
+		}
+	
+		
+		
+		// Helix
+		if (i > 0 && i < 10 && (i <= 2 || i == 5 || i == 9)){
+			
+			
+			let nr = i;
+			if (i == 5) nr = 4;
+			if (i == 9) nr = 3;
+			var eleName = "H" + nr;
+			
+			var group = $(drawSVGobj(svg, "g", {element: eleName, style:"cursor:pointer"} ));
+			let helixY = y;
+			let eleHeightHelix = eleHeight;
+			
+			// The final helix
+			if (i == 5){
+				eleHeightHelix = eleHeightHelix/2;
+			}
+			drawSVGobj(group, "rect", {rx: HELIX_CORNER_RADIUS, x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix, style: "stroke-width:1px; stroke:black; fill:white"} );
+			drawSVGobj(group, "rect", {rx: HELIX_CORNER_RADIUS, x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix, style: "stroke-width:1px; stroke:black; fill:" + helixCol} );
+			drawSVGobj(group, "text", {x: x, y: helixY+eleHeightHelix/2, style: "font-size:18px; text-anchor:middle; dominant-baseline:central; "}, eleName);
+	
+
+			
+		}
+		
+		// Strand
+		if (i > 2 && i < 9){
+			
+			// The final short strand
+			if (i == 5){
+				eleHeight = eleHeight/2;
+				y = CATALYTIC_DOMAIN_YPAD*2 + eleHeight;
+			}
+
+			var y1, y2, y3;
+			if (odd){
+
+			  // Up arrow
+			  y1 = y+eleHeight;
+			  y2 = y+CATALYTIC_DOMAIN_STRAND_ARROW_HEAD_LEN_1;
+			  y3 = y+CATALYTIC_DOMAIN_STRAND_ARROW_HEAD_LEN_2;
+			  y4 = y;
 
 
-        }else{
+			}else{
 
-          // Down arrow
-          y1 = y;
-          y2 = y+eleHeight-CATALYTIC_DOMAIN_STRAND_ARROW_HEAD_LEN_1;
-          y3 = y+eleHeight-CATALYTIC_DOMAIN_STRAND_ARROW_HEAD_LEN_2;
-          y4 = y+eleHeight;
+			  // Down arrow
+			  y1 = y;
+			  y2 = y+eleHeight-CATALYTIC_DOMAIN_STRAND_ARROW_HEAD_LEN_1;
+			  y3 = y+eleHeight-CATALYTIC_DOMAIN_STRAND_ARROW_HEAD_LEN_2;
+			  y4 = y+eleHeight;
 
-        }
+			}
 
-        var points =    (x-eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2) + "," + (y1);
-        points += " " + (x-eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2) + "," + (y2);
-        points += " " + (x-eleWidth/2) + "," + (y3);
-        points += " " + x + "," + y4;
-        points += " " + (x+eleWidth/2) + "," + (y3);
-        points += " " + (x+eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2) + "," + (y2);
-        points += " " + (x+eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2) + "," + (y1);
+			var points =    (x-eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2) + "," + (y1);
+			points += " " + (x-eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2) + "," + (y2);
+			points += " " + (x-eleWidth/2) + "," + (y3);
+			points += " " + x + "," + y4;
+			points += " " + (x+eleWidth/2) + "," + (y3);
+			points += " " + (x+eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2) + "," + (y2);
+			points += " " + (x+eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2) + "," + (y1);
 
 
+		
 
-        // Strand number
-        let nr = i;
-        if (i == 3) nr = 6;
-        if (i == 4) nr = 5;
-        if (i == 5) nr = 4;
-        if (i == 6) nr = 3;
-        var eleName = "S" + nr;
+			// Strand nr
+			let nr = i-2;
+			if (i == 5) nr = 6;
+			if (i == 6) nr = 5;
+			if (i == 7) nr = 4;
+			if (i == 8) nr = 3;
+			var eleName = "S" + nr;
 
-        var group = $(drawSVGobj(svg, "g", {element: eleName, style:"cursor:pointer"} ));
-        drawSVGobj(group, "polygon", {points: points, style: "stroke-width:1px; stroke:black; fill:" + AA_COLS_2["E"]} )
-        drawSVGobj(group, "text", {x: x, y: y+eleHeight/2, style: "font-size:18px; text-anchor:middle; dominant-baseline:central; "}, eleName);
-        odd = !odd;
+			var group = $(drawSVGobj(svg, "g", {element: eleName, style:"cursor:pointer"} ));
+			drawSVGobj(group, "polygon", {points: points, style: "stroke-width:1px; stroke:black; fill:white"} )
+			drawSVGobj(group, "polygon", {points: points, style: "stroke-width:1px; stroke:black; fill:" + strandCol} )
+			drawSVGobj(group, "text", {x: x, y: y+eleHeight/2, style: "font-size:18px; text-anchor:middle; dominant-baseline:central; "}, eleName);
+			
+		
+		}
+		
+		
+		oddLoop = !oddLoop;
+		odd = !odd;
+		
 
       }
 
     }
+	
+	
+	svg.children("g").click(function(){
+		
+		let ele = $(this);
+		var sse = $(ele).attr("element");
+		console.log( sse);
+		
+		$("#secondary").find(".selectionRect").remove();
+		
+		
+		if ($('table.maptable td[ele="' + sse + '"]').hasClass("selected")){
+			$('table.maptable td').removeClass("selected");
+			$('table.maptable th').removeClass("selected");
+			$('table.maptable td').removeClass("deselected");
+			$('table.maptable th').removeClass("deselected");
+			$(svg).children("g").attr("class", "");
+			
+			// Clear selection
+			SELECTED_SITES.lower = -1;
+			SELECTED_SITES.upper = -1;
+			selectSites();
+			return;
+		}
+		
+		$(svg).children("g").attr("class", "deselected");
+		$('table.maptable td').removeClass("selected");
+		$('table.maptable th').removeClass("selected");
+		$('table.maptable td').addClass("deselected");
+		$('table.maptable th').addClass("deselected");
+		$('table.maptable td[ele="' + sse + '"]').removeClass("deselected");
+		$('table.maptable th[ele="' + sse + '"]').removeClass("deselected");
+		$('table.maptable td[ele="' + sse + '"]').addClass("selected");
+		$('table.maptable th[ele="' + sse + '"]').addClass("selected");
+		
+		$(ele).attr("class", "selected");
+		
+
+
+		
+	});
+	
+	
 
 
   }

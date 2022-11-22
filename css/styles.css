@@ -157,18 +157,6 @@ svg text.alpha{
 }
 
 
-.summary tr{
-  %border-style:solid;
-  %border-width:1px;
-  %border-color:#555
-}
-
-
-
-tr.refSeq{
-  background-color: #d3d3d3 !important;
-}
-
 
 .summary tr:nth-child(even){
   background-color: #008cba33;
@@ -180,6 +168,85 @@ tr.refSeq{
   background-color: #008cba22;
   %color: #fff;
 }
+
+
+
+
+table.maptable {
+	width:100%;
+	border-collapse: collapse;
+	font-size:1em;
+}
+
+
+
+table.maptable th{
+	text-align:center;
+	padding:0.3em;
+	width:20px;
+}
+
+table.maptable td{
+	padding:0.3em;
+	text-align:center;
+}
+
+
+table.maptable th.accession, td.accession{
+	text-align:right !important;
+}
+
+
+table.maptable td[type="H"], th[type="H"] {
+	background-color:#0C7BDC99;
+}
+
+table.maptable td[type="S"], th[type="S"] {
+	background-color:#FFC20A99;
+}
+
+
+table.maptable td.deselected, th.deselected {
+	background-color:#d3d3d355;
+	color:black;
+}
+
+table.maptable tr.refSeq td.deselected{
+	background-color: #444 !important;
+	color:white;
+}
+
+
+
+table.maptable td.selected, th.selected {
+	background-color:#008cba;
+	color:white;
+}
+
+
+svg g.selected polygon, svg g.selected rect{
+	fill:#008cba !important;
+}
+
+svg g.selected path{
+	stroke:#008cba !important;
+}
+
+svg g.deselected polygon, svg g.deselected rect{
+	fill:#d3d3d3 !important;
+}
+
+svg g.deselected path{
+	stroke:#696969 !important;
+}
+
+
+table.maptable tr.refSeq{
+	background-color: #444 !important;
+	color:white;
+}
+
+
 
 
 
