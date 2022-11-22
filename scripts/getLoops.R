@@ -12,8 +12,8 @@ loops.df = data.frame( family = json$refDir, structure = json$ref)
 elements = names(json$elements)
 for (ele in elements){
 	r = as.character(json$elements[ele])
-	loops.df[paste0(ele, ".start")] = as.numeric(strsplit(r, "-")[[1]][1]) + 1 - json$alnStartAt
-	loops.df[paste0(ele, ".end")] = as.numeric(strsplit(r, "-")[[1]][2]) + 1 - json$alnStartAt
+	loops.df[paste0(ele, ".start")] = as.numeric(strsplit(r, "-")[[1]][1]) - json$alnStartAt
+	loops.df[paste0(ele, ".end")] = as.numeric(strsplit(r, "-")[[1]][2]) - json$alnStartAt
 	loops.df[paste0(ele, ".seq")] = ""
 	#loops.df[paste0(ele, ".startSeq")] = ""
 	#loops.df[paste0(ele, ".endSeq")] = ""
@@ -28,14 +28,22 @@ pairwise1 = sapply(strsplit(pairwise, "_"), function(ele) ele[1])
 pairwise2 = sapply(strsplit(pairwise, "_"), function(ele) ele[2])
 
 dirs = dirs[pairwise1 == json$refDir | pairwise2 == json$refDir]
+dirs = c(dirs, paste0(json$classDir, "/", json$refDir))
 
 
 startSequences = character(0)
 endSequences = character(0)
 for (d in dirs){
 
-	bits = strsplit(gsub(".*/", "", d), "_")[[1]]
-	targetDir = bits[bits != json$refDir]
+	# The ref family (eg. glyT for class 2) does not have a self-pairwise alignment, so instead use the main alignment 
+	isReferenceFamily = d == paste0(json$classDir, "/", json$refDir)
+	if (isReferenceFamily){
+		targetDir = json$refDir
+	}else{
+		bits = strsplit(gsub(".*/", "", d), "_")[[1]]
+		targetDir = bits[bits != json$refDir]
+	}
+	
 
 
 	# Open the alignments
@@ -46,9 +54,17 @@ for (d in dirs){
 
 	# Reference sequence
 	refSeq = aln[json$ref]
+	refSeqSS = toupper(as.character(aln2[json$ref][[1]]))
+	refSeqSS[targetSeqSS == "G" | targetSeqSS == "I"] = "H" # Just one type of helix
+
 
 	# Remove members outside of the target family
-	keep = as.logical(sapply(names(aln), function(ele) all(ele != json$ignore) && ele != json$ref))
+	if (isReferenceFamily){
+		keep = as.logical(sapply(names(aln), function(ele) all(ele != json$ref)))
+	}else{
+		keep = as.logical(sapply(names(aln), function(ele) all(ele != json$ignore) && ele != json$ref))
+	}
+	
 	aln = aln[keep]
 
 
@@ -63,7 +79,7 @@ for (d in dirs){
 	loops.df = rbind(loops.df, loops.df2)
 
 
-	# For each element in structure
+	# For each mapped helix/strand in structure
 	nsites = length(refSeq[[1]])
 	for (ele in elements){
 
@@ -84,6 +100,8 @@ for (d in dirs){
 		seqEndColName = paste0(ele, ".endSeq")
 		refStart = loops.df[loops.df$structure == json$ref,startName]
 		refEnd = loops.df[loops.df$structure == json$ref,endName]
+
+
 
 
 		# Where are these positions in the alignment?
@@ -108,8 +126,12 @@ for (d in dirs){
 
 		# Reference subsequence
 		refSubseq = paste(toupper(gsub("-", "", refSeq[[1]][refStartAln:refEndAln])), collapse="")
+		refSubseqSS = paste(gsub("-", "", refSeqSS[refStartAln:refEndAln]), collapse="")
 		loops.df[loops.df$structure == json$ref,seqColName] = refSubseq
 		refLen = refEnd - refStart + 1
+
+
+		#loops.df[loops.df$structure == json$ref, seqColName] = refSeq[[1]][refStartAln:refEndAln]
 
 
 		# Get length of each element for each sequence
@@ -122,16 +144,16 @@ for (d in dirs){
 
 
 			# Get mid point
-			targetPos = nchar(gsub("-", "", paste0(targetSeq[[1]][1:ceiling((refStartAln+refEndAln)/2)], collapse="")))
+			targetPos = ceiling((refStartAln+refEndAln)/2) # nchar(gsub("-", "", paste0(targetSeq[[1]][1:ceiling((refStartAln+refEndAln)/2)], collapse="")))
 
 			# Ensure this is the right element
 			if (targetSeqSS[targetPos] != eleType & targetSeqSS[targetPos] != "-"){
-				stop(paste("Expected sse", eleType, "but found", targetSeqSS[targetPos], "for", ele, "in", target))
+				#cat(paste("Expected sse", eleType, "but found", targetSeqSS[targetPos], "for", ele, "in", target, "\n"))
 			}
 
 			# Extend to the end of the helix/strand. Allow for gaps
-			targetStart = targetPos-1
-			targetEnd = targetPos+1
+			targetStart = refStartAln+3
+			targetEnd = refEndAln-3
 			while (targetStart > 1 & (targetSeqSS[targetStart-1] == eleType | targetSeqSS[targetStart-1] == "-")){
 				targetStart = targetStart - 1
 			}
@@ -142,11 +164,8 @@ for (d in dirs){
 
 
 			# Subsequence of element
-			targetStart = nchar(gsub("-", "", paste0(targetSeq[[1]][1:refStartAln], collapse="")))
-			targetEnd = nchar(gsub("-", "", paste0(targetSeq[[1]][1:refEndAln], collapse="")))
 			targetSubseq = paste(toupper(targetSeq[[1]][refStartAln:refEndAln]), collapse="")
-
-
+			targetSubseqSS = paste(toupper(targetSeqSS[refStartAln:refEndAln]), collapse="")
 
 
 
@@ -160,7 +179,7 @@ for (d in dirs){
 
 
 			len = targetEnd - targetStart + 1
-			if (len - refLen >= 10){
+			if (FALSE && len - refLen >= 10){
 
 
 				# Find the inserted part (by looking at alignment)
@@ -274,6 +293,65 @@ for (d in dirs){
 	}
 
 
+
+	# Loops
+	for (ele in elements){
+
+		eleType = substr(ele, 1, 1)
+
+		# Loops later
+		if (eleType != "L"){
+			next
+		}
+
+
+		# Define the loop as being everything between the helix/strand before and after
+		eleBefore = elements[which(elements == ele)-1]
+		eleAfter = elements[which(elements == ele)+1]
+
+
+		startName = paste0(ele, ".start")
+		endName = paste0(ele, ".end")
+		seqColName = paste0(ele, ".seq")
+
+		beforeEndName = paste0(eleBefore, ".end")
+		afterStartName = paste0(eleAfter, ".start")
+
+
+		refStartAln = loops.df[loops.df$structure == json$ref, beforeEndName] + 1
+		refEndAln = loops.df[loops.df$structure == json$ref, afterStartName] - 1
+		refSubseq = paste(toupper(gsub("-", "", refSeq[[1]][refStartAln:refEndAln])), collapse="")
+		loops.df[loops.df$structure == json$ref, seqColName] = refSubseq
+
+
+
+		# Get length of each element for each sequence
+		for (target in names(aln)){
+
+
+			targetStart = loops.df[loops.df$structure == target, beforeEndName] + 1
+			targetEnd = loops.df[loops.df$structure == target, afterStartName] - 1
+
+
+			targetSeq = aln[target]
+			targetSeqSS = toupper(as.character(aln2[target][[1]]))
+			targetSeqSS[targetSeqSS == "G" | targetSeqSS == "I"] = "H" # Just one type of helix
+
+
+			# Subsequence of element
+			targetSubseq = paste(toupper(targetSeq[[1]][targetStart:targetEnd]), collapse="")
+			targetSubseqSS = paste(toupper(targetSeqSS[targetStart:targetEnd]), collapse="")
+
+
+			loops.df[loops.df$structure == target, startName] = targetStart
+			loops.df[loops.df$structure == target, endName] = targetEnd
+			loops.df[loops.df$structure == target, seqColName] = targetSubseq
+
+		}
+
+
+	}
+
 }
 
 
@@ -293,17 +371,20 @@ for (family in summary.df$family){
 		lengthName = paste0(ele, ".dlength")
 		startName = paste0(ele, ".start")
 		endName = paste0(ele, ".end")
+		seqName = paste0(ele, ".seq")
 
 
-		# Ref seq length
-		refStart = loops.df[loops.df$family == json$refDir, startName]
-		refEnd = loops.df[loops.df$family == json$refDir, endName]
-		refLength = refEnd - refStart + 1
+		# Ref seq length (without gaps)
+		#refStart = loops.df[loops.df$family == json$refDir, startName]
+		#refEnd = loops.df[loops.df$family == json$refDir, endName]
+		#refLength = refEnd - refStart + 1
+		refLength = nchar(gsub("-", "", loops.df[loops.df$structure == json$ref, seqName]))
 
 		# Target family lengths
-		starts = loops.df[loops.df$family == family, startName]
-		ends = loops.df[loops.df$family == family, endName]
-		lengths = ends - starts + 1
+		#starts = loops.df[loops.df$family == family, startName]
+		#ends = loops.df[loops.df$family == family, endName]
+		#lengths = ends - starts + 1
+		lengths = nchar(gsub("-", "", loops.df[loops.df$family == family, seqName]))
 		dlength =  mean(lengths) - refLength
 
 		summary.df[summary.df$family == family,lengthName] = round(dlength, 0)
@@ -372,13 +453,56 @@ dev.off()
 
 
 
+# Write JSON files
+for (family in unique(loops.df$family)){
+
+
+	structures = c(json$ref, loops.df[loops.df$family == family,"structure"])
+	structures = unique(structures)
+
+	JSON = list()
+	JSON[["elements"]] = elements
+	JSON[["accessions"]] = structures
+	JSON[["refSeq"]] = json$ref
+
+	for (target in structures){
+
+		for (ele in elements){
+
+			seqName = paste0(ele, ".seq")
+			refLength = nchar(gsub("-", "", loops.df[loops.df$structure == json$ref, seqName]))
+			target.len = nchar(gsub("-", "", loops.df[loops.df$structure == target, seqName]))
+			dlength =  target.len - refLength
+
+
+			startName = paste0(ele, ".start")
+			endName = paste0(ele, ".end")
+			lenName = paste0(ele, ".length")
+			dlenName = paste0(ele, ".dlength")
+			JSON[[paste0(target, "_", startName)]] = loops.df[loops.df$structure == target,startName]
+			JSON[[paste0(target, "_", endName)]] = loops.df[loops.df$structure == target,endName]
+			JSON[[paste0(target, "_", dlenName)]] = dlength
+			JSON[[paste0(target, "_", lenName)]] = target.len
+		}
+
+	}
+
+
+	exportJSON <- toJSON(JSON, indent=4)
+	write(exportJSON, paste0(json$classDir, "/", family, "/catalytic.json"))
+
+
+}
+
+
+
 write.table(loops.df, "loops.tsv", sep="\t", quote=F, row.names=F)
 write.table(summary.df, "summary.tsv", sep="\t", quote=F, row.names=F)
 
 
 
-write(paste(paste0(">", names(startSequences), "\n", as.character(startSequences)), collapse="\n"), "start-loops.fasta")
-write(paste(paste0(">", names(endSequences), "\n", as.character(endSequences)), collapse="\n"), "end-loops.fasta")
+#write(paste(paste0(">", names(startSequences), "\n", as.character(startSequences)), collapse="\n"), "start-loops.fasta")
+#write(paste(paste0(">", names(endSequences), "\n", as.character(endSequences)), collapse="\n"), "end-loops.fasta")
 
 
 

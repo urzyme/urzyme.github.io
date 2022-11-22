@@ -163,6 +163,13 @@ svg text.alpha{
   %border-color:#555
 }
 
+
+
+tr.refSeq{
+  background-color: #d3d3d3 !important;
+}
+
+
 .summary tr:nth-child(even){
   background-color: #008cba33;
   %color: #fff;
@@ -173,6 +180,7 @@ svg text.alpha{
   background-color: #008cba22;
   %color: #fff;
 }
+
 
 
 

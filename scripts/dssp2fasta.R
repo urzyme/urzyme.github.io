@@ -22,7 +22,7 @@ for (f in dssp.files){
 
 
 
-	acc  =gsub("[.]dssp$", "", f)
+	acc = gsub("[.]dssp$", "", f)
 	acc = gsub("dssp/", "structures/", acc)
 	file = f
 	fasta.seq = fasta[[acc]]

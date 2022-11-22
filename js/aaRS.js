@@ -322,7 +322,7 @@ function renderInfo(text){
 
   // Catalytic domain archietcture
   if (json.class == "Class II"){
-    renderCatalyticDomainInserts(2);
+    fetch("catalytic.json").then(response => response.text()).then(text => renderCatalyticDomainInserts(text, 2));
   }
 
 	
@@ -1529,10 +1529,15 @@ function loadStructure(structures, resolve = function() { } ){
 */
 
 // Draw a class I or II catalytic domain layout
-function renderCatalyticDomainInserts(classNr){
+function renderCatalyticDomainInserts(text, classNr){
+
+    if (text == null || text == "") return;
 
 
-  return;
+    text = text.replaceAll("\n", "").replaceAll("\r", "");
+    var json = JSON.parse(text);
+
+    console.log(json);
 
 
     // Prepare html and svg
@@ -1544,7 +1549,63 @@ function renderCatalyticDomainInserts(classNr){
                                                         <svg id='catalyticSVG' height=0 width=0 overflow='auto'></svg>
                                                       </div>
                                                     </li>`);
+    $("#catalyticDomainDIV .flexContainer").append(`<li>
+                                                      <table class='summary' id='catalyticTable'>
+                                                      </table>
+                                                    </li>`);
 
+   
+
+    // Populate the table
+
+    // Header
+    var tr = $("<tr></tr>")
+    $(tr).append("<th>Accession</th>");
+    for (let eleNr = 0; eleNr < json.elements.length; eleNr++){
+      let ele = json.elements[eleNr];
+      $(tr).append("<th>" + ele + "</th>");
+    }
+    $("#catalyticTable").append(tr);
+
+
+    // Body
+     for (var seqNum = 0; seqNum < json.accessions.length; seqNum++){
+      let acc = json.accessions[seqNum];
+      var accTidy = acc.replace(".pdb", "");
+      let trAcc = $("<tr></tr>")
+
+      // Reference sequence row?
+      let isRef = false;
+      if (acc == json.refSeq){
+        isRef = true;
+        trAcc.addClass("refSeq");
+        trAcc.attr("title", "Reference structure");
+      }
+      $(trAcc).append("<td style='text-align:right'>" + accTidy + "</td>");
+      for (let eleNr = 0; eleNr < json.elements.length; eleNr++){
+
+
+        let ele = json.elements[eleNr];
+        var len = json[[acc + "_" + ele + ".length"]];
+        var dlen = json[[acc + "_" + ele + ".dlength"]];
+        if (dlen > 0) dlen = "+" + dlen;
+        if (dlen == 0) dlen = "";
+        //$(trAcc).append("<td>" + len + "" + dlen + "</td>");
+        if (isRef){
+          $(trAcc).append("<td>" + len + "</td>");
+        }else{
+          $(trAcc).append("<td>" + dlen + "</td>");
+        }
+        
+
+      }
+      $("#catalyticTable").append(trAcc);
+
+
+    }
+
+
+    // Populate the svg
     let svg = $("#catalyticSVG");
     svg.width(CATALYTIC_DOMAIN_WIDTH);
     svg.height(CATALYTIC_DOMAIN_HEIGHT);
