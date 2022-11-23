@@ -87,53 +87,7 @@ function renderaaRS(isPairwise = false){
 	$("#alignment").before(`<div id="mainloader" class='loader'><img src='/fig/icon_white.png'></img></div>`);
   
   
-  
-  // Header, footer
-  $("body").prepend("<div id='header'><span class='title'>URZYME.GITHUB.IO</span></div>")
-  $("body").append("<div id='footer'></div>")
-  
-  
-  $("#header").append(`<div id='class2Selector' class='dropdown'>
-						<button class='dropbtn'>Class II</button>
-							<div class='dropdown-content'>
-							</div>
-						</button>
-					   </div>`);
-					   
-	$("#header").append(`<div id='class1Selector' class='dropdown'>
-						<button class='dropbtn'>Class I</button>
-							<div class='dropdown-content'>
-							</div>
-						</button>
-					   </div>`);				   
-	$("#class2Selector div").append(`<a href='/class2/'><b>Home</b></a>`);
-	$("#class2Selector div").append(`<a href='/class2/ala'>AlaRS</a>`);
-	$("#class2Selector div").append(`<a href='/class2/asn'>AsnRS</a>`);
-	$("#class2Selector div").append(`<a href='/class2/asp'>AspRS</a>`);
-	$("#class2Selector div").append(`<a href='/class2/gly1'>GlyRS (dimer)</a>`);
-	$("#class2Selector div").append(`<a href='/class2/gly2'>GlyRS (tetramer)</a>`);
-	$("#class2Selector div").append(`<a href='/class2/his'>HisRS</a>`);
-	$("#class2Selector div").append(`<a href='/class2/lys'>LysRS</a>`);
-	$("#class2Selector div").append(`<a href='/class2/phe1'>PheRS (bact &alpha;)</a>`);
-	$("#class2Selector div").append(`<a href='/class2/phe2'>PheRS (bact &beta;)</a>`);
-  $("#class2Selector div").append(`<a href='/class2/phe3'>PheRS (euk &alpha;)</a>`);
-  $("#class2Selector div").append(`<a href='/class2/phe4'>PheRS (euk &beta;)</a>`);
-	$("#class2Selector div").append(`<a href='/class2/phe5'>PheRS (mito)</a>`);
-	$("#class2Selector div").append(`<a href='/class2/pro'>ProRS</a>`);
-	$("#class2Selector div").append(`<a href='/class2/pyl'>PylRS</a>`);
-	$("#class2Selector div").append(`<a href='/class2/sep'>SepRS</a>`);
-	$("#class2Selector div").append(`<a href='/class2/ser1'>SerRS (standard)</a>`);
-	$("#class2Selector div").append(`<a href='/class2/ser2'>SerRS (Archaeal)</a>`);
-	$("#class2Selector div").append(`<a href='/class2/thr'>ThrRS</a>`);
-
-
-
-  // Main header
-  var main = $("#main");
-  if ($(".notes").length > 0){
-    $(".notes").prepend("<h2>Introduction</h2>");
-  }
-  
+  renderHeader();
   
 
   // Section titles
@@ -942,12 +896,12 @@ function renderAlignment(divID, isPrimary = true){
 	
 
 	// Number of sequences
-    var alignment = isPrimary ? DATA.alignment : DATA.secondary;
-    var accessions = DATA.accessions;
-    var nseq = accessions.length;
-    var nsites = alignment[accessions[0]].length;
+  var alignment = isPrimary ? DATA.alignment : DATA.secondary;
+  var accessions = DATA.accessions;
+  var nseq = accessions.length;
+  var nsites = alignment[accessions[0]].length;
 
-    var features = DATA.features;
+  var features = DATA.features;
 	
 	
 	
@@ -988,6 +942,7 @@ function renderAlignment(divID, isPrimary = true){
   
 	  ctx.font = NT_FONT_SIZE + "px Source sans pro";
 	  ctx.textAlign = "end";
+    ctx.fillStyle = "black";
 	  ctx.fillText(accPrint, x, y);
 
 
@@ -1548,18 +1503,21 @@ function renderCatalyticDomainInserts(text, classNr){
     $("#catalyticDomainDIV").append("<h2>Catalytic domain</h1>")
     $("#catalyticDomainDIV").append("<ul class='flexContainer'></ul>");
     $("#catalyticDomainDIV .flexContainer").append(`<li>
-                                                      <div >
-														<div style='text-align:center'><b>Fig:</b> Map of the class II catalytic domain. Click on an element to select it.</div>
+                                                      <div>
+														                            <div style='text-align:center'><b>Fig:</b> Map of the class II catalytic domain. Click on an element to select it.</div>
                                                         <svg id='catalyticSVG' height=0 width=0 overflow='auto'></svg>
                                                       </div>
                                                     </li>`);
+    
     $("#catalyticDomainDIV .flexContainer").append(`<li>
-														<div>
-														<div style='text-align:center'><b>Table:</b> The size (aa) of each element in the catalytic domain relative to the <a href="../gly2">tetrameric GlyRS</a> reference sequence.</div>
-														  <table class='maptable' id='catalyticTable'>
-														  </table>
-														  </div>
+														<div class='svgDiv'>
+														  <div style='text-align:center'><b>Table:</b> The size (aa) of each element in the catalytic domain relative to the <a href="../gly2">tetrameric GlyRS</a> reference sequence.</div>
+  														  <div style='overflow:auto;'>
+                                  <table class='maptable' id='catalyticTable'></table>
+                                </div>
+													  </div>
 													</li>`);
+
 
    
 
@@ -1587,7 +1545,7 @@ function renderCatalyticDomainInserts(text, classNr){
       if (acc == json.refSeq){
 		  continue;
       }
-      $(trAcc).append("<td  class='accession'>" + accTidy + "</td>");
+      $(trAcc).append("<td class='accession'>" + accTidy + "</td>");
       for (let eleNr = 0; eleNr < json.elements.length; eleNr++){
         let ele = json.elements[eleNr];
 		let eleType = ele.substring(0, 1);
@@ -1734,8 +1692,8 @@ function renderCatalyticDomainInserts(text, classNr){
 			
 			let d = "M " + xMid + " " + yLoop  + " C " + control1[0] + " " + control1[1] + ", " + control2[0] + " " + control2[1] + ", " + endPoint[0] + " " + endPoint[1];
 			let group;
-			if (i == 0){
-				group = $(drawSVGobj(svg, "g", {element: eleName, style:""} ));
+			if (eleName == "N" || eleName == "C"){
+				group = $(drawSVGobj(svg, "g", {element: eleName, style:""} )); // No click events
 			}else{
 				group = $(drawSVGobj(svg, "g", {element: eleName, style:"cursor:pointer"} ));
 			}
@@ -1843,6 +1801,7 @@ function renderCatalyticDomainInserts(text, classNr){
 		
 		let ele = $(this);
 		var sse = $(ele).attr("element");
+    if (sse == "N" || sse == "C") return;
 		console.log( sse);
 		
 		$("#secondary").find(".selectionRect").remove();

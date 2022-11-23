@@ -10,7 +10,7 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="../css/styles.css">
 <script language='JavaScript' type='text/JavaScript' src="/js/pairwise.js"></script>
-
+<script language='JavaScript' type='text/JavaScript' src="/js/util.js"></script>
         
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
@@ -34,7 +34,7 @@
 
 
 function init(){
-	
+		renderHeader(false);
 		renderPairwiseMatrix();
 }
 
@@ -46,7 +46,6 @@ function init(){
 <body onload="init()">
 
 
-	<div id='header'></div>
 
 	<div id="main">
 

@@ -173,9 +173,9 @@ svg text.alpha{
 
 
 table.maptable {
-	width:100%;
+	max-width:300px;
 	border-collapse: collapse;
-	font-size:1em;
+	font-size:0.9em;
 }
 
 
@@ -230,6 +230,7 @@ svg g.selected polygon, svg g.selected rect{
 
 svg g.selected path{
 	stroke:#008cba !important;
+	stroke-width: 6px !important;
 }
 
 svg g.deselected polygon, svg g.deselected rect{
@@ -524,5 +525,6 @@ div.svgDiv{
 
 .flexContainer>li {
 	margin-bottom:1em;
+	max-width: 100%;
 }
 
