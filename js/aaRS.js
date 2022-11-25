@@ -59,7 +59,7 @@ CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP = 0.618;
 CATALYTIC_DOMAIN_HELIX_WIDTH_PROP = 0.7;
 CATALYTIC_DOMAIN_CUBIC_RIGHT_DX = 0;
 CATALYTIC_DOMAIN_LOOP_WIDTH = 3;
-
+CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS = 7;
 
 LEVEL_1_COL = "#fa2a5599";
 LEVEL_2_COL = "#a6a6a6";
@@ -278,11 +278,13 @@ function renderInfo(text){
 
 
   // Catalytic domain archietcture
-  if (json.class == "Class II"){
-    fetch("catalytic.json").then(response => response.text()).then(text => renderCatalyticDomainInserts(text, 2));
+  if (json.class == "Class I"){
+    fetch("catalytic.json").then(response => response.text()).then(text => renderCatalyticDomainInserts(text, 1));
   }
 
-	
+  else if (json.class == "Class II"){
+    fetch("catalytic.json").then(response => response.text()).then(text => renderCatalyticDomainInserts(text, 2));
+  }
 }
 
 function renderTertiary(pdb = null, id = "tertiary") {
@@ -1496,14 +1498,18 @@ function loadStructure(structures, resolve = function() { } ){
 // Draw a class I or II catalytic domain layout
 function renderCatalyticDomainInserts(text, classNr){
 
-    if (text == null || text == "") return;
+	var json = null;
+    //if (text == null || text == "") return;
 
-
-    text = text.replaceAll("\n", "").replaceAll("\r", "");
-    var json = JSON.parse(text);
-
-    console.log(json);
-
+	
+	if (text != null && text != ""){
+		text = text.replaceAll("\n", "").replaceAll("\r", "");
+		json = JSON.parse(text);
+		console.log(json);
+	}
+   
+	
+	let className = classNr == 1 ? "I" : "II";
 
     // Prepare html and svg
     $("#tertiaryTable").after("<div id='catalyticDomainDIV'></div>");
@@ -1511,83 +1517,89 @@ function renderCatalyticDomainInserts(text, classNr){
     $("#catalyticDomainDIV").append("<ul class='flexContainer'></ul>");
     $("#catalyticDomainDIV .flexContainer").append(`<li>
                                                       <div>
-														                            <div style='text-align:center'><b>Fig:</b> Map of the class II catalytic domain. Click on an element to select it.</div>
+														                            <div style='text-align:center'><b>Fig:</b> Map of the class ` + className + ` catalytic domain. Click on an element to select it. Figure is not to scale.</div>
                                                         <svg id='catalyticSVG' height=0 width=0 overflow='auto'></svg>
                                                       </div>
                                                     </li>`);
     
-    $("#catalyticDomainDIV .flexContainer").append(`<li>
-														<div class='svgDiv'>
-														  <div style='text-align:center'><b>Table:</b> The size (aa) of each element in the catalytic domain relative to the <a href="../gly2">tetrameric GlyRS</a> reference sequence.</div>
-  														  <div style='overflow:auto;'>
-                                  <table class='maptable' id='catalyticTable'></table>
-                                </div>
-													  </div>
-													</li>`);
 
 
    
 
     // Populate the table
+	if (json != null){
+		
+		$("#catalyticDomainDIV .flexContainer").append(`<li>
+													<div class='svgDiv'>
+													  <div style='text-align:center'><b>Table:</b> The size (aa) of each element in the catalytic domain relative to the <a href="../gly2">tetrameric GlyRS</a> reference sequence.</div>
+													  <div style='overflow:auto;'>
+							  <table class='maptable' id='catalyticTable'></table>
+							</div>
+												  </div>
+												</li>`);
 
-    // Header
-    var tr = $("<tr></tr>")
-    $(tr).append("<th class='accession'>Accession</th>");
-    for (let eleNr = 0; eleNr < json.elements.length; eleNr++){
-      let ele = json.elements[eleNr];
-	  let eleType = ele.substring(0, 1);
-      $(tr).append("<th ele='" + ele + "' type='" +eleType + "'>" + ele + "</th>");
-    }
-    $("#catalyticTable").append(tr);
+
+		// Header
+		var tr = $("<tr></tr>")
+		$(tr).append("<th class='accession'>Accession</th>");
+		for (let eleNr = 0; eleNr < json.elements.length; eleNr++){
+		  let ele = json.elements[eleNr];
+		  let eleType = ele.substring(0, 1);
+		  $(tr).append("<th ele='" + ele + "' type='" +eleType + "'>" + ele + "</th>");
+		}
+		$("#catalyticTable").append(tr);
 
 
-     // Body
-     for (var seqNum = 0; seqNum < json.accessions.length; seqNum++){
-      let acc = json.accessions[seqNum];
-      var accTidy = acc.replace(".pdb", "");
-      let trAcc = $("<tr></tr>")
+		 // Body
+		 for (var seqNum = 0; seqNum < json.accessions.length; seqNum++){
+		  let acc = json.accessions[seqNum];
+		  var accTidy = acc.replace(".pdb", "");
+		  let trAcc = $("<tr></tr>")
 
-      // Reference sequence row?
-      let isRef = false;
-      if (acc == json.refSeq){
-		  continue;
-      }
-      $(trAcc).append("<td class='accession'>" + accTidy + "</td>");
-      for (let eleNr = 0; eleNr < json.elements.length; eleNr++){
-        let ele = json.elements[eleNr];
-		let eleType = ele.substring(0, 1);
-        var dlen = json[[acc + "_" + ele + ".dlength"]];
-        if (dlen > 0) dlen = "+" + dlen;
-        if (dlen == 0) dlen = "";
-        $(trAcc).append("<td ele='" + ele + "' type='" +eleType + "'>" + dlen + "</td>");
-      }
-	  $("#catalyticTable").append(trAcc);
-	  
-	 }
-	  
-	  // Ref seq at bottom
-	  for (var seqNum = 0; seqNum < json.accessions.length; seqNum++){
+		  // Reference sequence row?
+		  let isRef = false;
+		  if (acc == json.refSeq){
+			  continue;
+		  }
+		  $(trAcc).append("<td class='accession'>" + accTidy + "</td>");
+		  for (let eleNr = 0; eleNr < json.elements.length; eleNr++){
+			let ele = json.elements[eleNr];
+			let eleType = ele.substring(0, 1);
+			var dlen = json[[acc + "_" + ele + ".dlength"]];
+			if (dlen > 0) dlen = "+" + dlen;
+			if (dlen == 0) dlen = "";
+			$(trAcc).append("<td ele='" + ele + "' type='" +eleType + "'>" + dlen + "</td>");
+		  }
+		  $("#catalyticTable").append(trAcc);
 		  
-		let acc = json.accessions[seqNum];
-		if (acc == json.refSeq){
-			
-			var accTidy = acc.replace(".pdb", "");
-			let trAcc = $("<tr></tr>")
-			$(trAcc).append("<td  class='accession'>" + accTidy + "</td>");
-			trAcc.addClass("refSeq");
-			trAcc.attr("title", "Reference structure");
-			for (let eleNr = 0; eleNr < json.elements.length; eleNr++){
-				let ele = json.elements[eleNr];
-				let eleType = ele.substring(0, 1);
-				var len = json[[acc + "_" + ele + ".length"]];
-				$(trAcc).append("<td ele='" + ele + "' type='" + eleType + "'>" + len + "</td>");
+		 }
+		  
+		  // Ref seq at bottom
+		  for (var seqNum = 0; seqNum < json.accessions.length; seqNum++){
+			  
+			let acc = json.accessions[seqNum];
+			if (acc == json.refSeq){
+				
+				var accTidy = acc.replace(".pdb", "");
+				let trAcc = $("<tr></tr>")
+				$(trAcc).append("<td  class='accession'>" + accTidy + "</td>");
+				trAcc.addClass("refSeq");
+				trAcc.attr("title", "Reference structure");
+				for (let eleNr = 0; eleNr < json.elements.length; eleNr++){
+					let ele = json.elements[eleNr];
+					let eleType = ele.substring(0, 1);
+					var len = json[[acc + "_" + ele + ".length"]];
+					$(trAcc).append("<td ele='" + ele + "' type='" + eleType + "'>" + len + "</td>");
+				}
+				$("#catalyticTable").append(trAcc);
 			}
-			$("#catalyticTable").append(trAcc);
+			
+
+
 		}
 		
-
-
-    }
+		
+	}
 
 
     // Populate the svg
@@ -1597,7 +1609,7 @@ function renderCatalyticDomainInserts(text, classNr){
 
 
     // Ele width and height
-    let nElementsHorizontal = 9;
+    let nElementsHorizontal = classNr == 1 ? 9 : 9;
     let nElementsVertical = 3;
     let eleWidth = (CATALYTIC_DOMAIN_WIDTH-CATALYTIC_DOMAIN_XPAD) / (nElementsHorizontal+1) - CATALYTIC_DOMAIN_XPAD;
     
@@ -1605,10 +1617,208 @@ function renderCatalyticDomainInserts(text, classNr){
 	let helixCol  = AA_COLS_2["H"] + "99";
 	let strandCol = AA_COLS_2["E"] + "99";
 
-    if (classNr == 2){
+
+	if (classNr == 1){
+
+	  // 5 parallel strands and 4 helices
+      let odd = true;
+	  let oddLoop = false;
+      for (let i = 0; i <= 9 ; i++){
+		  
+		  
+		let eleHeight = (CATALYTIC_DOMAIN_HEIGHT-4*CATALYTIC_DOMAIN_YPAD);
+		let x = CATALYTIC_DOMAIN_XPAD + (CATALYTIC_DOMAIN_XPAD+eleWidth)*i;
+	    let y = CATALYTIC_DOMAIN_YPAD*2;
+		
+		
+		 // Loop
+		if (i <= 9){
+			let nr = i;
+			if (i == 4) nr = 1;
+			if (i == 3) nr = 2;
+			if (i == 2) nr = 3;
+			if (i == 1) nr = 4;
+			if (i == 0) nr = 5;
+			let eleName = "L" + nr;
+			
+			let xMid = x;
+			let yLoop = y;
+			let endPoint, control1, control2 = [];
+			let ylab = y;
+			let xlab = x;
+			
+			if (i == 5) oddLoop = !oddLoop;
+
+			
+			// N term
+			if (i == 5){
+				eleName = "N";
+				yLoop = y+eleHeight;
+				endPoint = [xMid, yLoop+3*CATALYTIC_DOMAIN_YPAD/4];
+				control1 = [xMid-CATALYTIC_DOMAIN_XPAD/3, yLoop+1*(CATALYTIC_DOMAIN_YPAD)/4];
+				control2 = [xMid+CATALYTIC_DOMAIN_XPAD/3, yLoop+2*(CATALYTIC_DOMAIN_YPAD)/4];	
+				xlab = xMid;
+				ylab = yLoop+CATALYTIC_DOMAIN_YPAD + 5;
+			}
+			
+			// C term
+			else if (i == 9){
+				eleName = "C";
+				endPoint = [xMid, yLoop-3*CATALYTIC_DOMAIN_YPAD/4];
+				control1 = [xMid-CATALYTIC_DOMAIN_XPAD/3, yLoop-1*(CATALYTIC_DOMAIN_YPAD)/4];
+				control2 = [xMid+CATALYTIC_DOMAIN_XPAD/3, yLoop-2*(CATALYTIC_DOMAIN_YPAD)/4];	
+				xlab = xMid;
+				ylab = yLoop-CATALYTIC_DOMAIN_YPAD - 5;
+			}
+			
+			
+			// Long loop between S3 and H3
+			else if (i == 0){
+				xMid = CATALYTIC_DOMAIN_XPAD + (CATALYTIC_DOMAIN_XPAD+eleWidth)*1;
+				endPoint = [CATALYTIC_DOMAIN_XPAD + (CATALYTIC_DOMAIN_XPAD+eleWidth)*6, yLoop];
+				control1 = [xMid-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX, yLoop-2.5*CATALYTIC_DOMAIN_YPAD];
+				control2 = [endPoint[0]-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX, yLoop-2.5*CATALYTIC_DOMAIN_YPAD];
+				xlab = (xMid+endPoint[0])/2-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX;
+				ylab = yLoop-2*CATALYTIC_DOMAIN_YPAD+20;
+				
+				
+				//yLoop = y+eleHeight;
+				//endPoint = [CATALYTIC_DOMAIN_XPAD + (CATALYTIC_DOMAIN_XPAD+eleWidth)*9, yLoop];
+				//control1 = [xMid-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX, yLoop+2.5*CATALYTIC_DOMAIN_YPAD];
+				//control2 = [endPoint[0]-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX, yLoop+2.5*CATALYTIC_DOMAIN_YPAD];	
+				//ylab = yLoop+2*CATALYTIC_DOMAIN_YPAD-20;
+				//xlab = (xMid+endPoint[0])/2-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX;
+				
+			
+			// Top loop
+			}else if (oddLoop){
+				endPoint = [xMid + CATALYTIC_DOMAIN_XPAD+eleWidth, yLoop];
+				control1 = [xMid-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX, yLoop-CATALYTIC_DOMAIN_YPAD];
+				control2 = [endPoint[0]-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX, yLoop-CATALYTIC_DOMAIN_YPAD];
+				xlab = (xMid+endPoint[0])/2-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX;
+				ylab = yLoop-CATALYTIC_DOMAIN_YPAD-3;
+			}
+			
+			// Bottom loop
+			else{
+				yLoop = y+eleHeight;
+				endPoint = [xMid + CATALYTIC_DOMAIN_XPAD+eleWidth, yLoop];
+				control1 = [xMid-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX, yLoop+CATALYTIC_DOMAIN_YPAD];
+				control2 = [endPoint[0]-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX, yLoop+CATALYTIC_DOMAIN_YPAD];
+				xlab = (xMid+endPoint[0])/2-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX;
+				ylab = yLoop+CATALYTIC_DOMAIN_YPAD+3;
+			}
+			
+			
+			
+				
+			let d = "M " + xMid + " " + yLoop  + " C " + control1[0] + " " + control1[1] + ", " + control2[0] + " " + control2[1] + ", " + endPoint[0] + " " + endPoint[1];
+			let group;
+			if (eleName == "N" || eleName == "C"){
+				group = $(drawSVGobj(svg, "g", {element: eleName, style:""} )); // No click events
+			}else{
+				group = $(drawSVGobj(svg, "g", {element: eleName, style:"cursor:pointer"} ));
+			}
+			drawSVGobj(group, "path", {d: d, style: "stroke-width:" + CATALYTIC_DOMAIN_LOOP_WIDTH + "px; stroke:black; fill:transparent; stroke-linecap:round"} );
+			drawSVGobj(group, "text", {x: xlab, y: ylab, style: "font-size:18px; text-anchor:middle; dominant-baseline:central; "}, eleName);
+
+			if (i == 0) continue;
+			oddLoop = !oddLoop;
+
+		}
+		
+		
+		
+		
+		// Helix
+		if (i % 2 == 0){
+			
+			
+			let nr = i;
+			if (i == 4) nr = 1;
+			if (i == 2) nr = 2;
+			if (i == 6) nr = 3;
+			if (i == 8) nr = 4;
+			var eleName = "H" + nr;
+			
+			var group = $(drawSVGobj(svg, "g", {element: eleName, style:"cursor:pointer"} ));
+			let helixY = y;
+			let eleHeightHelix = eleHeight;
 
 
-      // 6 anti parallel strands and 3 parallel helices
+			drawSVGobj(group, "rect", {rx: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix, style: "stroke-width:1px; stroke:black; fill:white"} );
+			drawSVGobj(group, "rect", {rx: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix, style: "stroke-width:1px; stroke:black; fill:" + helixCol} );
+			drawSVGobj(group, "text", {x: x, y: helixY+eleHeightHelix/2, style: "font-size:18px; text-anchor:middle; dominant-baseline:central; "}, eleName);
+	
+
+			
+		}
+		
+		
+		
+		// Strand
+		else if (i % 2 == 1){
+			
+		
+			var y1, y2, y3;
+			if (odd){
+
+			  // Up arrow
+			  y1 = y+eleHeight;
+			  y2 = y+CATALYTIC_DOMAIN_STRAND_ARROW_HEAD_LEN_1;
+			  y3 = y+CATALYTIC_DOMAIN_STRAND_ARROW_HEAD_LEN_2;
+			  y4 = y;
+
+
+			}else{
+
+			  // Down arrow
+			  y1 = y;
+			  y2 = y+eleHeight-CATALYTIC_DOMAIN_STRAND_ARROW_HEAD_LEN_1;
+			  y3 = y+eleHeight-CATALYTIC_DOMAIN_STRAND_ARROW_HEAD_LEN_2;
+			  y4 = y+eleHeight;
+
+			}
+
+			var points =    (x-eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2) + "," + (y1);
+			points += " " + (x-eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2) + "," + (y2);
+			points += " " + (x-eleWidth/2) + "," + (y3);
+			points += " " + x + "," + y4;
+			points += " " + (x+eleWidth/2) + "," + (y3);
+			points += " " + (x+eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2) + "," + (y2);
+			points += " " + (x+eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2) + "," + (y1);
+
+
+		
+
+			// Strand nr
+			let nr = i;
+			if (i == 5) nr = 1;
+			if (i == 3) nr = 2;
+			if (i == 1) nr = 3;
+			if (i == 7) nr = 4;
+			if (i == 9) nr = 5;
+			var eleName = "S" + nr;
+
+			var group = $(drawSVGobj(svg, "g", {element: eleName, style:"cursor:pointer"} ));
+			drawSVGobj(group, "polygon", {points: points, style: "stroke-width:1px; stroke:black; fill:white"} )
+			drawSVGobj(group, "polygon", {points: points, style: "stroke-width:1px; stroke:black; fill:" + strandCol} )
+			drawSVGobj(group, "text", {x: x, y: y+eleHeight/2, style: "font-size:18px; text-anchor:middle; dominant-baseline:central; "}, eleName);
+			
+		
+		}
+
+		
+		odd = !odd;
+		  
+		  
+	  }
+
+
+    }else if (classNr == 2){
+
+
+      // 6 antiparallel strands and 3 helices
       let odd = false;
 	  let oddLoop = false;
       for (let i = 0; i <= 9 ; i++){
@@ -1663,7 +1873,7 @@ function renderCatalyticDomainInserts(text, classNr){
 				
 			}
 			
-			// Loop from S2 to H3 on RHS
+			// Long loop from S2 to H3
 			else if (i == 4){
 				yLoop = y+eleHeight;
 				endPoint = [CATALYTIC_DOMAIN_XPAD + (CATALYTIC_DOMAIN_XPAD+eleWidth)*9, yLoop];
@@ -1730,8 +1940,8 @@ function renderCatalyticDomainInserts(text, classNr){
 			if (i == 5){
 				eleHeightHelix = eleHeightHelix/2;
 			}
-			drawSVGobj(group, "rect", {rx: HELIX_CORNER_RADIUS, x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix, style: "stroke-width:1px; stroke:black; fill:white"} );
-			drawSVGobj(group, "rect", {rx: HELIX_CORNER_RADIUS, x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix, style: "stroke-width:1px; stroke:black; fill:" + helixCol} );
+			drawSVGobj(group, "rect", {rx: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix, style: "stroke-width:1px; stroke:black; fill:white"} );
+			drawSVGobj(group, "rect", {rx: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix, style: "stroke-width:1px; stroke:black; fill:" + helixCol} );
 			drawSVGobj(group, "text", {x: x, y: helixY+eleHeightHelix/2, style: "font-size:18px; text-anchor:middle; dominant-baseline:central; "}, eleName);
 	
 
@@ -1808,13 +2018,16 @@ function renderCatalyticDomainInserts(text, classNr){
 		
 		let ele = $(this);
 		var sse = $(ele).attr("element");
-    if (sse == "N" || sse == "C") return;
+		if (sse == "N" || sse == "C") return;
 		console.log( sse);
 		
 		$("#secondary").find(".selectionRect").remove();
 		
 		
-		if ($('table.maptable td[ele="' + sse + '"]').hasClass("selected")){
+
+		
+		
+		if ($(svg).children("g.selected").length > 0){
 			$('table.maptable td').removeClass("selected");
 			$('table.maptable th').removeClass("selected");
 			$('table.maptable td').removeClass("deselected");

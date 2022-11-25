@@ -220,8 +220,6 @@ for (d in dirs){
 		refEnd = loops.df[loops.df$structure == json$ref,endName]
 
 
-
-
 		# Where are these positions in the alignment?
 		seqPos = 1
 		refStartAln = NA
