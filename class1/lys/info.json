@@ -1,0 +1,13 @@
+{
+		"name": "LysRS",
+		"fullName": "Lysyl tRNA Synthetase",
+		"icon": "/fig/icon_basic.png",
+		"substrate": "Lysine",
+		"incorporates": "Lysine",
+		"class": "Class I",
+		"subclass": "b",
+		"oligo": "Monomeric",
+		"codons": "AAA, AAG",
+		"editing": "No"
+	
+}

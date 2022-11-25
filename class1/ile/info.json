@@ -1,0 +1,13 @@
+{
+		"name": "IleRS",
+		"fullName": "Isoleucyl tRNA Synthetase",
+		"icon": "/fig/icon_hydrophobic.png",
+		"substrate": "Isoleucine",
+		"incorporates": "Isoleucine",
+		"class": "Class I",
+		"subclass": "a",
+		"oligo": "Monomeric",
+		"codons": "AUU, AUC, AUA",
+		"editing": "Post-transfer"
+	
+}

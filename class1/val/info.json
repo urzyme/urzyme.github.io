@@ -1,0 +1,13 @@
+{
+		"name": "ValRS",
+		"fullName": "Valyl tRNA Synthetase",
+		"icon": "/fig/icon_hydrophobic.png",
+		"substrate": "Valine",
+		"incorporates": "Valine",
+		"class": "Class I",
+		"subclass": "a",
+		"oligo": "Monomeric",
+		"codons": "GUA, GUC, GUG, GUU",
+		"editing": "Pre-transfer, post-transfer"
+	
+}

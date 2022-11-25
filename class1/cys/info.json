@@ -1,0 +1,13 @@
+{
+		"name": "CysRS",
+		"fullName": "Cysteinyl tRNA Synthetase",
+		"icon": "/fig/icon_cys.png",
+		"substrate": "Cysteine",
+		"incorporates": "Cysteine",
+		"class": "Class I",
+		"subclass": "?",
+		"oligo": "Monomeric or Homodimeric",
+		"codons": "UCU, UGC",
+		"editing": "No"
+	
+}

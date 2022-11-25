@@ -1,0 +1,13 @@
+{
+		"name": "ArgRS",
+		"fullName": "Arginyl tRNA Synthetase",
+		"icon": "/fig/icon_basic.png",
+		"substrate": "Arginine",
+		"incorporates": "Arginine",
+		"class": "Class I",
+		"subclass": "?",
+		"oligo": "Homodimeric",
+		"codons": "CGU, CGC, CGA, CGG, AGA, AGG",
+		"editing": "No"
+	
+}

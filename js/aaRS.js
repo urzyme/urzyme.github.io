@@ -30,7 +30,7 @@ AA_COLS_2 = {E: "#FFC20A", H: "#0C7BDC", G: "#0C7BDC", I: "#0C7BDC", T:"#d3d3d3"
 
 PAIRWISE = false;
 
-MIN_SSE_LEN = 4;
+MIN_SSE_LEN = 2;
 
 
 // Canonical ordering on 3dcomb
@@ -92,7 +92,7 @@ function renderaaRS(isPairwise = false){
 
   // Section titles
   $(".summary").prepend("<h2>Summary</h2>");
-  $("#notes").before("<h2>Notes</h2>");
+  $("#flexContainer .notes").prepend("<h2>Introduction</h2>");
   $("#references").prepend("<h2>References</h2>");
 
   loadAllFiles(function(){
@@ -673,7 +673,7 @@ function renderSecondary(svg){
   	  drawSVGobj(svgContent, "polygon", {points: points, style: "stroke-width:0.7px; stroke:black; fill:" + col} ) // Triangle
   	  
       var text;
-  	  if (feature == "Motif 3"){
+  	  if (feature == "Motif 3" || feature == "KMSKS"){
   		   text = drawSVGobj(svgContent, "text", {lower: lower, upper:upper, x: x1+NT_WIDTH/4, y: y-SEC_HEIGHT/20, style: "cursor:pointer; text-anchor:end; dominant-baseline:hanging; font-size:14px; fill:" + textCol}, value=txt)
   	  }else{
   		   text = drawSVGobj(svgContent, "text", {lower: lower, upper:upper,  x: x1-NT_WIDTH/4, y: y-SEC_HEIGHT/20, style: "cursor:pointer; text-anchor:start; dominant-baseline:hanging; font-size:14px; fill:" + textCol}, value=txt)
@@ -791,6 +791,13 @@ function renderSecondary(svg){
           // Arrow
           var x2 = endX - STRAND_ARROW_HEAD_LEN_1;
           var x3 = endX - STRAND_ARROW_HEAD_LEN_2;
+
+
+          // To avoid a tiny arrow head
+          if (sse.stop - sse.start + 1 < 4){
+            x2 = x2 + STRAND_ARROW_HEAD_LEN_1/2;
+            x3 = x3 + STRAND_ARROW_HEAD_LEN_1/2;
+          }
 
 
           var points = startX + "," + (y-STRAND_ARROW_BASE_WIDTH/2);

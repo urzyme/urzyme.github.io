@@ -1,0 +1,13 @@
+{
+		"name": "LeuRS",
+		"fullName": "Leucyl tRNA Synthetase",
+		"icon": "/fig/icon_hydrophobic.png",
+		"substrate": "Leucine",
+		"incorporates": "Leucine",
+		"class": "Class I",
+		"subclass": "a",
+		"oligo": "Monomeric",
+		"codons": "CUU, CUA, CUC, CUG",
+		"editing": "Post-transfer"
+	
+}

@@ -1,0 +1,13 @@
+{
+		"name": "TyrRS",
+		"fullName": "Tyrosyl tRNA Synthetase",
+		"icon": "/fig/icon_aromatic.png",
+		"substrate": "Tyrosine",
+		"incorporates": "Tyrosine",
+		"class": "Class I",
+		"subclass": "c",
+		"oligo": "Monomeric",
+		"codons": "UAU, UAC",
+		"editing": "No"
+	
+}

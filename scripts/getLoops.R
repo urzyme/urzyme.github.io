@@ -2,13 +2,130 @@ library(seqinr)
 library(rjson)
 
 
+
+#pdbFileTruncated = truncatePDBFile(pdbFile, aln[[gsub(".*structures", "structures", pdbFile)]], startPositions[k], endPositions[k])
+
+# Truncate a pdb file according to start and stop positions in an alignent
+truncatePDBFile = function(pdbFile, seq, startPos, stopPos){
+
+
+
+	pdb = readLines(pdbFile)
+
+	# Load a pdb file
+	atomLines = grep("^ATOM", pdb)
+	atoms = pdb[atomLines]
+
+
+	pdb.df = data.frame(line = atomLines, chain = substr(atoms, 22, 22), residue = substr(atoms, 18, 20), pos.pdb = as.numeric(substr(atoms, 24, 26)), include = TRUE)
+	pdb.df2 = pdb.df[pdb.df$chain == "A",]
+	if (nrow(pdb.df2) == 0){
+		pdb.df2 = pdb.df[pdb.df$chain == "B",]
+	}
+	if (nrow(pdb.df2) == 0){
+		pdb.df2 = pdb.df[pdb.df$chain == "C",]
+	}
+	if (nrow(pdb.df2) == 0){
+		cat(paste("Skipping", pdbFile, "\n"))
+		next
+	}
+	pdb.df = pdb.df2
+
+
+
+	# Find matching sequence
+	#seq = fasta[[pdbFile]]
+	nsites = length(seq)
+	pdb.site.nums = unique(pdb.df$pos.pdb)
+
+	s=1
+	for (site in 1:nsites){
+
+		
+		targetChar = seq[site]
+		if (targetChar == "-"){
+
+
+		}else{
+
+			pdbTargetSite = pdb.site.nums[s]
+			if (is.na(pdbTargetSite)){
+				next
+			}
+
+			#print(paste(s, site, pdbTargetSite, length(pdb.site.nums)))
+
+			# Keep the site if in range
+			if (site >= startPos & site <= stopPos){
+
+				# Keep this residue
+				pdb.df[pdb.df$pos.pdb == pdbTargetSite,"include"] = TRUE
+
+			}else{
+
+				# Discard this residue
+				pdb.df[pdb.df$pos.pdb == pdbTargetSite,"include"] = FALSE
+
+			}
+
+			s = s + 1
+
+		}
+
+
+
+
+	}
+
+
+
+	nres = unique(pdb.df[pdb.df$include,"pos.pdb"])
+	if (length(nres) < 12){
+		return(NA)
+	}
+
+	atomLinesInclude = pdb.df[pdb.df$include,"line"]
+
+
+
+
+	# Return target structure to save as file
+	pdb.lines = numeric(0)
+	if (atomLines[1] > 1){
+		pdb.lines = 1:(atomLines[1]-1)
+	}
+	pdb.lines = c(pdb.lines, atomLinesInclude)
+	if (atomLines[length(atomLines)] < length(pdb)){
+		pdb.lines = c(pdb.lines, atomLines[(length(atomLines)+1):length(pdb)])
+	}
+	pdb.truncated = pdb[pdb.lines]
+
+
+	# Remove secondary structure
+	sse = grep("^(HELIX|SHEET)", pdb.truncated)
+	if (length(sse) > 0){
+		pdb.truncated = pdb.truncated[-sse]
+	}
+
+
+	pdb.truncated
+
+	#file.name = gsub(".+/", "", pdbFile)
+	#write(paste(pdb.truncated, collapse="\n"), paste0(dirName2, "/", file.name))
+
+
+
+}
+
+
+
 # Read reference json
 json = fromJSON(file = "reference.json")
 
 
 
 # Prepare table
-loops.df = data.frame( family = json$refDir, structure = json$ref)
+loops.df = data.frame(family = json$refDir, structure = json$ref, dir=paste0(json$classDir, "/", json$refDir, ""))
 elements = names(json$elements)
 for (ele in elements){
 	r = as.character(json$elements[ele])
@@ -55,7 +172,7 @@ for (d in dirs){
 	# Reference sequence
 	refSeq = aln[json$ref]
 	refSeqSS = toupper(as.character(aln2[json$ref][[1]]))
-	refSeqSS[targetSeqSS == "G" | targetSeqSS == "I"] = "H" # Just one type of helix
+	refSeqSS[refSeqSS == "G" | refSeqSS == "I"] = "H" # Just one type of helix
 
 
 	# Remove members outside of the target family
@@ -76,6 +193,7 @@ for (d in dirs){
 	}
 	loops.df2$structure = names(aln)
 	loops.df2$family = targetDir
+	loops.df2$dir = d
 	loops.df = rbind(loops.df, loops.df2)
 
 
@@ -465,25 +583,46 @@ for (family in unique(loops.df$family)){
 	JSON[["accessions"]] = structures
 	JSON[["refSeq"]] = json$ref
 
-	for (target in structures){
 
-		for (ele in elements){
+	# Original alignment
+	#alnFam = read.fasta(paste0(json$classDir, "/", family, "/data/align.ali"))
 
-			seqName = paste0(ele, ".seq")
+	
+
+	for (ele in elements){
+
+		seqName = paste0(ele, ".seq")
+		startName = paste0(ele, ".start")
+		endName = paste0(ele, ".end")
+		lenName = paste0(ele, ".length")
+		dlenName = paste0(ele, ".dlength")
+
+
+		# Position in alignment where the element begins and ends
+		aln.start.pos = Inf
+		aln.end.pos = 0
+
+		for (target in structures){
+
+
+			# Find the position of the start/end in the full alignment 'alnFam' (not the domain alignment 'aln')
+			aln.start.pos = min(aln.start.pos, loops.df[loops.df$structure == target, startName])
+			aln.end.pos = max(aln.end.pos, loops.df[loops.df$structure == target, endName])
+
+			
 			refLength = nchar(gsub("-", "", loops.df[loops.df$structure == json$ref, seqName]))
 			target.len = nchar(gsub("-", "", loops.df[loops.df$structure == target, seqName]))
 			dlength =  target.len - refLength
 
 
-			startName = paste0(ele, ".start")
-			endName = paste0(ele, ".end")
-			lenName = paste0(ele, ".length")
-			dlenName = paste0(ele, ".dlength")
 			JSON[[paste0(target, "_", startName)]] = loops.df[loops.df$structure == target,startName]
 			JSON[[paste0(target, "_", endName)]] = loops.df[loops.df$structure == target,endName]
 			JSON[[paste0(target, "_", dlenName)]] = dlength
 			JSON[[paste0(target, "_", lenName)]] = target.len
 		}
+
+		JSON[[paste0(ele, ".aln.start")]] = aln.start.pos
+		JSON[[paste0(ele, ".aln.end")]] = aln.end.pos
 
 	}
 
@@ -503,6 +642,92 @@ write.table(summary.df, "summary.tsv", sep="\t", quote=F, row.names=F)
 
 #write(paste(paste0(">", names(startSequences), "\n", as.character(startSequences)), collapse="\n"), "start-loops.fasta")
 #write(paste(paste0(">", names(endSequences), "\n", as.character(endSequences)), collapse="\n"), "end-loops.fasta")
+
+
+
+
+
+
+# Make a directory for each see with an indel >5 and a sequence >= 12
+MIN.LEN = 15
+for (ele in elements){
+
+	seqName = paste0(ele, ".seq")
+	startName = paste0(ele, ".start")
+	endName = paste0(ele, ".end")
+	ref.len = nchar(gsub("-", "", loops.df[loops.df$structure == json$ref,seqName]))
+	ele.lens = nchar(gsub("-", "", loops.df[,seqName]))
+	ele.insertion.size = ele.lens - ref.len
+	keep = which(ele.lens >= MIN.LEN)# & (ele.insertion.size > 5 | ele.insertion.size < -5))
+
+
+	if (length(keep) > 1){
+
+
+		targets = loops.df[keep,"structure"]
+		families = loops.df[keep,"family"]
+		familiesUnq = sort(unique(families))
+		cat(paste("Found", length(keep), "large indels for", ele, "across", length(familiesUnq), "families:", paste(familiesUnq, collapse=", "), "\n"))
+
+		dir.create(ele, showWarnings = FALSE)
+
+
+
+		# Truncate the pdb files
+		structures = paste0(json$classDir, "/", families, "/data/structures/", targets)
+		alignments = paste0(loops.df[keep,"dir"], "/data/align.ali")
+		startPositions = loops.df[keep,startName]
+		endPositions = loops.df[keep,endName] 
+
+
+		dir.create(paste0(ele, "/data"), showWarnings = FALSE)
+		dir.create(paste0(ele, "/data/structures"), showWarnings = FALSE)
+		for (k in 1:length(keep)){
+			pdbFile = structures[k]
+			aln = read.fasta(alignments[k])
+			names(aln) = gsub(".+/", "", names(aln))
+
+			pdbFileTruncated = truncatePDBFile(pdbFile, aln[[gsub(".+/", "", pdbFile)]], startPositions[k], endPositions[k])
+
+			if (length(pdbFileTruncated) == 1 && is.na(pdbFileTruncated)){
+
+				# Too short to align
+
+			}else{
+
+				write(paste(pdbFileTruncated, collapse="\n"), paste0(ele, "/data/structures/", gsub(".+/", "", pdbFile)))
+
+
+			}
+
+		}
+
+
+
+		# JSON file
+		JSON = list()
+		JSON$fullName = paste(ele, "indel comparison")
+		JSON$class = json$class
+		JSON$icon = "/fig/icon_white.png"
+		JSON$description = paste("Cataytic domain for class", json$class, ele)
+
+
+		exportJSON <- toJSON(JSON, indent=4)
+		write(exportJSON, paste0(ele, "/info.json"))
+
+
+
+
+	}else{
+		cat(paste("Found nothing for", ele, "\n"))
+	}
+
+
+
+}
+
+
+
 
 
 

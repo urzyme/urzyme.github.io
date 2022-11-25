@@ -1,0 +1,13 @@
+{
+		"name": "TrpRS",
+		"fullName": "Tryptophanyl tRNA Synthetase",
+		"icon": "/fig/icon_hydrophobic.png",
+		"substrate": "Tryptophan",
+		"incorporates": "Tryptophan",
+		"class": "Class I",
+		"subclass": "c",
+		"oligo": "Homodimeric",
+		"codons": "UGG",
+		"editing": "No"
+	
+}

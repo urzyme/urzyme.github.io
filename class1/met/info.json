@@ -1,0 +1,13 @@
+{
+		"name": "MetRS",
+		"fullName": "Methionyl tRNA Synthetase",
+		"icon": "/fig/icon_hydrophobic.png",
+		"substrate": "Methionine",
+		"incorporates": "Methionine",
+		"class": "Class I",
+		"subclass": "a",
+		"oligo": "Homodimeric",
+		"codons": "AUG",
+		"editing": "Pre-transfer"
+	
+}

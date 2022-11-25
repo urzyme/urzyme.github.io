@@ -1,0 +1,13 @@
+{
+		"name": "GlnRS",
+		"fullName": "Glutaminyl tRNA Synthetase",
+		"icon": "/fig/icon_polar.png",
+		"substrate": "Glutamine",
+		"incorporates": "Glutamine",
+		"class": "Class I",
+		"subclass": "b",
+		"oligo": "Monomeric",
+		"codons": "CAA, CAG",
+		"editing": "No"
+	
+}

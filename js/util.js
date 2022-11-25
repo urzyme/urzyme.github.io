@@ -25,7 +25,24 @@ function renderHeader(includeFooter = true){
 							<div class='dropdown-content'>
 							</div>
 						</button>
-					   </div>`);				   
+					   </div>`);		
+
+	// Class 1
+	$("#class1Selector div").append(`<a href='/class1/'><b>Home</b></a>`);
+	$("#class1Selector div").append(`<a href='/class1/arg'>ArgRS</a>`);
+	$("#class1Selector div").append(`<a href='/class1/cys'>CysRS</a>`);
+	$("#class1Selector div").append(`<a href='/class1/gln'>GlnRS</a>`);
+	$("#class1Selector div").append(`<a href='/class1/glu'>GluRS</a>`);
+	$("#class1Selector div").append(`<a href='/class1/ile'>IleRS</a>`);
+	$("#class1Selector div").append(`<a href='/class1/leu'>LeuRS</a>`);
+	$("#class1Selector div").append(`<a href='/class1/lys'>LysRS</a>`);
+	$("#class1Selector div").append(`<a href='/class1/met'>MetRS</a>`);
+	$("#class1Selector div").append(`<a href='/class1/trp'>TrpRS</a>`);
+	$("#class1Selector div").append(`<a href='/class1/tyr'>TyrRS</a>`);
+	$("#class1Selector div").append(`<a href='/class1/val'>ValRS</a>`);
+
+
+	// Class 2
 	$("#class2Selector div").append(`<a href='/class2/'><b>Home</b></a>`);
 	$("#class2Selector div").append(`<a href='/class2/ala'>AlaRS</a>`);
 	$("#class2Selector div").append(`<a href='/class2/asn'>AsnRS</a>`);
