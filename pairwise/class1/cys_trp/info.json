@@ -1,0 +1,15 @@
+{
+    "fullName":"CysRS vs TrpRS pairwise comparison",
+    "class":"Class I",
+    "icon":"/fig/icon_white.png",
+    "family1":"CysRS",
+    "family2":"TrpRS",
+    "fullName1":"Cysteinyl tRNA Synthetase",
+    "fullName2":"Tryptophanyl tRNA Synthetase",
+    "description":"Pairwise comparison of the Class I catalytic domains from the Cysteinyl tRNA Synthetase (CysRS) and Tryptophanyl tRNA Synthetase (TrpRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.475,
+    "rmsd1":    2.22,
+    "rmsd2":    2.05,
+    "crossFamilyRmsd":    3.51,
+    "rmsdTotal":    2.84
+}

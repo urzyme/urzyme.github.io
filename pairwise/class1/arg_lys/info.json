@@ -1,0 +1,15 @@
+{
+    "fullName":"ArgRS vs LysRS pairwise comparison",
+    "class":"Class I",
+    "icon":"/fig/icon_white.png",
+    "family1":"ArgRS",
+    "family2":"LysRS",
+    "fullName1":"Arginyl tRNA Synthetase",
+    "fullName2":"Lysyl tRNA Synthetase",
+    "description":"Pairwise comparison of the Class I catalytic domains from the Arginyl tRNA Synthetase (ArgRS) and Lysyl tRNA Synthetase (LysRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.324,
+    "rmsd1":    2.71,
+    "rmsd2":    2.18,
+    "crossFamilyRmsd":    4.11,
+    "rmsdTotal":    3.12
+}

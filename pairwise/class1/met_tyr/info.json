@@ -1,0 +1,15 @@
+{
+    "fullName":"MetRS vs TyrRS pairwise comparison",
+    "class":"Class I",
+    "icon":"/fig/icon_white.png",
+    "family1":"MetRS",
+    "family2":"TyrRS",
+    "fullName1":"Methionyl tRNA Synthetase",
+    "fullName2":"Tyrosyl tRNA Synthetase",
+    "description":"Pairwise comparison of the Class I catalytic domains from the Methionyl tRNA Synthetase (MetRS) and Tyrosyl tRNA Synthetase (TyrRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.557,
+    "rmsd1":    2.26,
+    "rmsd2":    2.37,
+    "crossFamilyRmsd":    3.42,
+    "rmsdTotal":    2.88
+}

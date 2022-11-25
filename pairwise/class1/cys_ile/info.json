@@ -1,0 +1,15 @@
+{
+    "fullName":"CysRS vs IleRS pairwise comparison",
+    "class":"Class I",
+    "icon":"/fig/icon_white.png",
+    "family1":"CysRS",
+    "family2":"IleRS",
+    "fullName1":"Cysteinyl tRNA Synthetase",
+    "fullName2":"Isoleucyl tRNA Synthetase",
+    "description":"Pairwise comparison of the Class I catalytic domains from the Cysteinyl tRNA Synthetase (CysRS) and Isoleucyl tRNA Synthetase (IleRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    1.919,
+    "rmsd1":    1.68,
+    "rmsd2":    3.31,
+    "crossFamilyRmsd":    2.83,
+    "rmsdTotal":    2.69
+}

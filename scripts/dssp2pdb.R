@@ -81,7 +81,7 @@ for (i in 1:nrow(sse.df)){
 		line = paste0(line, str_pad(res1, 4, side = "left", pad = " ")) # Column 22-25: start residue
 		line = paste0(line, "  ") # Column 26-27 spacing
 		line = paste0(line, "XXX ") # Column 28-31: residue name
-		line = paste0(line, "A ") # Column 32-33: chain name
+		line = paste0(line, chain, " ") # Column 32-33: chain name
 		line = paste0(line, str_pad(res2, 4, side = "left", pad = " ")) # Column 34-37: end residue
 		line = paste0(line, "  ") # Column 38 spacing
 		line = paste0(line, "1 ") # Column 39-40: helix code. TODO use other classes

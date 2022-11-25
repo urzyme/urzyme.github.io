@@ -6,7 +6,7 @@
 
 # Prepare all alignments
 cd pairwise
-for c in class*;
+for c in class1;
 do
 
 	cd $c
@@ -60,7 +60,7 @@ do
 
 				# Alignment
 				cd $dir/data
-				#../../../../../DeepAlign/3DCOMB -i structures.txt -o align
+				../../../../../DeepAlign/3DCOMB -i structures.txt -o align
 				mkdssp -i align.pdb -o align.dssp
 
 

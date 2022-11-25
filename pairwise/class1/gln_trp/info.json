@@ -1,0 +1,15 @@
+{
+    "fullName":"GlnRS vs TrpRS pairwise comparison",
+    "class":"Class I",
+    "icon":"/fig/icon_white.png",
+    "family1":"GlnRS",
+    "family2":"TrpRS",
+    "fullName1":"Glutaminyl tRNA Synthetase",
+    "fullName2":"Tryptophanyl tRNA Synthetase",
+    "description":"Pairwise comparison of the Class I catalytic domains from the Glutaminyl tRNA Synthetase (GlnRS) and Tryptophanyl tRNA Synthetase (TrpRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.725,
+    "rmsd1":    1.49,
+    "rmsd2":    2.01,
+    "crossFamilyRmsd":    3.74,
+    "rmsdTotal":    2.79
+}
