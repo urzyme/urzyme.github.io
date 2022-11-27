@@ -1502,7 +1502,7 @@ function renderCatalyticDomainInserts(text, classNr){
     //if (text == null || text == "") return;
 
 	
-	if (text != null && text != "" && text[0] != ">"){
+	if (text != null && text != "" && text[0] != "<"){
     console.log(text);
 		text = text.replaceAll("\n", "").replaceAll("\r", "");
 		json = JSON.parse(text);
