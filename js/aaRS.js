@@ -1503,6 +1503,7 @@ function renderCatalyticDomainInserts(text, classNr){
 
 	
 	if (text != null && text != ""){
+    console.log(text);
 		text = text.replaceAll("\n", "").replaceAll("\r", "");
 		json = JSON.parse(text);
 		console.log(json);
