@@ -1502,7 +1502,7 @@ function renderCatalyticDomainInserts(text, classNr){
     //if (text == null || text == "") return;
 
 	
-	if (text != null && text != ""){
+	if (text != null && text != "" && text[0] != ">"){
     console.log(text);
 		text = text.replaceAll("\n", "").replaceAll("\r", "");
 		json = JSON.parse(text);
@@ -1729,7 +1729,7 @@ function renderCatalyticDomainInserts(text, classNr){
 		}
 		
 		
-		
+		let group;
 		
 		// Helix
 		if (i % 2 == 0){
@@ -1742,7 +1742,7 @@ function renderCatalyticDomainInserts(text, classNr){
 			if (i == 8) nr = 4;
 			var eleName = "H" + nr;
 			
-			var group = $(drawSVGobj(svg, "g", {element: eleName, style:"cursor:pointer"} ));
+			group = $(drawSVGobj(svg, "g", {element: eleName, style:"cursor:pointer"} ));
 			let helixY = y;
 			let eleHeightHelix = eleHeight;
 
@@ -1801,13 +1801,15 @@ function renderCatalyticDomainInserts(text, classNr){
 			if (i == 9) nr = 5;
 			var eleName = "S" + nr;
 
-			var group = $(drawSVGobj(svg, "g", {element: eleName, style:"cursor:pointer"} ));
+			group = $(drawSVGobj(svg, "g", {element: eleName, style:"cursor:pointer"} ));
 			drawSVGobj(group, "polygon", {points: points, style: "stroke-width:1px; stroke:black; fill:white"} )
 			drawSVGobj(group, "polygon", {points: points, style: "stroke-width:1px; stroke:black; fill:" + strandCol} )
 			drawSVGobj(group, "text", {x: x, y: y+eleHeight/2, style: "font-size:18px; text-anchor:middle; dominant-baseline:central; "}, eleName);
 			
 		
 		}
+
+
 
 		
 		odd = !odd;
@@ -1922,6 +1924,8 @@ function renderCatalyticDomainInserts(text, classNr){
 			
 		}
 	
+
+    let group;
 		
 		
 		// Helix
@@ -1932,8 +1936,13 @@ function renderCatalyticDomainInserts(text, classNr){
 			if (i == 5) nr = 4;
 			if (i == 9) nr = 3;
 			var eleName = "H" + nr;
+
+      // Special case: SH1
+      if (i == 5){
+        eleName = "SH1";
+      }
 			
-			var group = $(drawSVGobj(svg, "g", {element: eleName, style:"cursor:pointer"} ));
+			group = $(drawSVGobj(svg, "g", {element: eleName, style:"cursor:pointer"} ));
 			let helixY = y;
 			let eleHeightHelix = eleHeight;
 			
@@ -1941,9 +1950,11 @@ function renderCatalyticDomainInserts(text, classNr){
 			if (i == 5){
 				eleHeightHelix = eleHeightHelix/2;
 			}
+
+
 			drawSVGobj(group, "rect", {rx: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix, style: "stroke-width:1px; stroke:black; fill:white"} );
 			drawSVGobj(group, "rect", {rx: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix, style: "stroke-width:1px; stroke:black; fill:" + helixCol} );
-			drawSVGobj(group, "text", {x: x, y: helixY+eleHeightHelix/2, style: "font-size:18px; text-anchor:middle; dominant-baseline:central; "}, eleName);
+			drawSVGobj(group, "text", {x: x, y: helixY+eleHeightHelix/2, style: "font-size:16px; text-anchor:middle; dominant-baseline:central; "}, eleName);
 	
 
 			
@@ -1991,19 +2002,29 @@ function renderCatalyticDomainInserts(text, classNr){
 
 			// Strand nr
 			let nr = i-2;
-			if (i == 5) nr = 6;
 			if (i == 6) nr = 5;
 			if (i == 7) nr = 4;
 			if (i == 8) nr = 3;
 			var eleName = "S" + nr;
 
-			var group = $(drawSVGobj(svg, "g", {element: eleName, style:"cursor:pointer"} ));
+
+
+      // Special case: SH1 reuses the same group selector
+      if (i == 5){
+        group = group;
+        eleName = "";
+      }else{
+        group = $(drawSVGobj(svg, "g", {element: eleName, style:"cursor:pointer"} ));
+      }
+
+			
 			drawSVGobj(group, "polygon", {points: points, style: "stroke-width:1px; stroke:black; fill:white"} )
 			drawSVGobj(group, "polygon", {points: points, style: "stroke-width:1px; stroke:black; fill:" + strandCol} )
 			drawSVGobj(group, "text", {x: x, y: y+eleHeight/2, style: "font-size:18px; text-anchor:middle; dominant-baseline:central; "}, eleName);
 			
 		
 		}
+
 		
 		
 		oddLoop = !oddLoop;
