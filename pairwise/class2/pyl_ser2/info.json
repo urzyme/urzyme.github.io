@@ -7,9 +7,9 @@
     "fullName1":"Pyrrolysyl tRNA Synthetase",
     "fullName2":"Archaeal Seryl tRNA Synthetase",
     "description":"Pairwise comparison of the Class II catalytic domains from the Pyrrolysyl tRNA Synthetase (PylRS) and Archaeal Seryl tRNA Synthetase (a-SerRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    3.276,
-    "rmsd1":    2.43,
-    "rmsd2":    1.16,
-    "crossFamilyRmsd":    4.22,
-    "rmsdTotal":    3.3
+    "rmsd":    3.242,
+    "rmsd1":    2.06,
+    "rmsd2":    0.576,
+    "crossFamilyRmsd":    4.19,
+    "rmsdTotal":    3.1
 }

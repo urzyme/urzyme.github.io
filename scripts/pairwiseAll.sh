@@ -69,7 +69,7 @@ do
 
 
 				# Make a secondary structure fasta file from dssp and alignment
-				Rscript ../../../scripts/dssp2fasta.R
+				Rscript ../../../../scripts/dssp2fasta.R
 
 
 				# Generate json file

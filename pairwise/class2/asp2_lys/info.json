@@ -1,0 +1,15 @@
+{
+    "fullName":"AsxRS vs LysRS pairwise comparison",
+    "class":"Class II",
+    "icon":"/fig/icon_white.png",
+    "family1":"AsxRS",
+    "family2":"LysRS",
+    "fullName1":"Aspartyl tRNA Synthetase (non-discriminating)",
+    "fullName2":"Lysyl tRNA Synthetase",
+    "description":"Pairwise comparison of the Class II catalytic domains from the Aspartyl tRNA Synthetase (non-discriminating) (AsxRS) and Lysyl tRNA Synthetase (LysRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    1.626,
+    "rmsd1":    1.68,
+    "rmsd2":    1.46,
+    "crossFamilyRmsd":    2.81,
+    "rmsdTotal":    2.05
+}

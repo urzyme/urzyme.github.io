@@ -1,0 +1,15 @@
+{
+    "fullName":"GluRS vs MetRS pairwise comparison",
+    "class":"Class I",
+    "icon":"/fig/icon_white.png",
+    "family1":"GluRS",
+    "family2":"MetRS",
+    "fullName1":"Glutamyl tRNA Synthetase (discriminating)",
+    "fullName2":"Methionyl tRNA Synthetase",
+    "description":"Pairwise comparison of the Class I catalytic domains from the Glutamyl tRNA Synthetase (discriminating) (GluRS) and Methionyl tRNA Synthetase (MetRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.321,
+    "rmsd1":    1.83,
+    "rmsd2":    2.15,
+    "crossFamilyRmsd":    3.25,
+    "rmsdTotal":    2.63
+}

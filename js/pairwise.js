@@ -2,8 +2,8 @@
 
 
 MATRIX_PADDING = 10;
-MATRIX_FONT_SIZE = 12;
-FAMILY_MATRIX_SIZE = 40;
+MATRIX_FONT_SIZE = 11;
+FAMILY_MATRIX_SIZE = 45;
 
 // RMSD colour brewer
 
@@ -82,10 +82,11 @@ plotMatrix = function(text){
 
 
     var family_i = json.families[i];
+    let familyTidyName = json.familyNames[family_i];
 
     var y = (i)*FAMILY_MATRIX_SIZE + MATRIX_PADDING;
     drawSVGobj(svg, "rect", {x:y, y:y, width:FAMILY_MATRIX_SIZE, height:FAMILY_MATRIX_SIZE, style: "fill:white; stroke-width:0.5px; stroke:black;"})
-    drawSVGobj(svg, "text", {x: y+FAMILY_MATRIX_SIZE/2, y: y+FAMILY_MATRIX_SIZE/2, style: "text-anchor:middle; dominant-baseline:central;font-size:" + MATRIX_FONT_SIZE + "px"}, family_i)
+    drawSVGobj(svg, "text", {x: y+FAMILY_MATRIX_SIZE/2, y: y+FAMILY_MATRIX_SIZE/2, style: "text-anchor:middle; dominant-baseline:central;font-size:" + MATRIX_FONT_SIZE + "px"}, familyTidyName)
 
     
     for (var j = i+1; j < nfamilies; j ++){

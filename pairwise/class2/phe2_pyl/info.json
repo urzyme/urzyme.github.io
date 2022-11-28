@@ -7,9 +7,9 @@
     "fullName1":"&beta; bacterial Phenylalanyl tRNA Synthetase subunit",
     "fullName2":"Pyrrolysyl tRNA Synthetase",
     "description":"Pairwise comparison of the Class II catalytic domains from the &beta; bacterial Phenylalanyl tRNA Synthetase subunit (b-&beta;-PheRS) and Pyrrolysyl tRNA Synthetase (PylRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.145,
-    "rmsd1":    2.1,
-    "rmsd2":    2.19,
-    "crossFamilyRmsd":    2.85,
-    "rmsdTotal":    2.53
+    "rmsd":    2.14,
+    "rmsd1":    2.09,
+    "rmsd2":    1.89,
+    "crossFamilyRmsd":    2.86,
+    "rmsdTotal":    2.49
 }

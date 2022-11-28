@@ -1,183 +1,437 @@
-SHEET    1  E1 3 XXX A 136 XXX  A 138  0
-SHEET    2  E2 2 XXX A 171 XXX  A 172  0
-SHEET    3  E3 2 XXX A 185 XXX  A 186  0
-SHEET    4  E4 2 XXX A 225 XXX  A 226  0
-SHEET    5  E5 3 XXX A 266 XXX  A 268  0
-SHEET    6  E6 3 XXX A 355 XXX  A 357  0
-SHEET    7  E7 2 XXX B 114 XXX  B 115  0
-SHEET    8  E8 6 XXX B 178 XXX  B 183  0
-SHEET    9  E9 3 XXX B 222 XXX  B 224  0
-SHEET   10 E10 2 XXX B 233 XXX  B 234  0
-SHEET   11 E11 3 XXX B 254 XXX  B 256  0
-HELIX    1  H1 XXX B	 289  XXX A  296  1                                   8
-HELIX    2  H2 XXX B	 299  XXX A  301  1                                   3
-SHEET   12 E12 3 XXX B 312 XXX  B 314  0
-SHEET   13 E13 5 XXX B 320 XXX  B 324  0
-HELIX    3  H3 XXX B	 335  XXX A  338  1                                   4
-SHEET   14 E14 2 XXX B 400 XXX  B 401  0
-SHEET   15 E15 3 XXX C 249 XXX  C 251  0
-SHEET   16 E16 2 XXX C 316 XXX  C 317  0
-SHEET   17 E17 2 XXX C 319 XXX  C 320  0
-SHEET   18 E18 2 XXX C 352 XXX  C 353  0
-SHEET   19 E19 2 XXX C 384 XXX  C 385  0
-SHEET   20 E20 2 XXX C 399 XXX  C 400  0
-SHEET   21 E21 2 XXX C 403 XXX  C 404  0
-SHEET   22 E22 2 XXX C 443 XXX  C 444  0
-SHEET   23 E23 2 XXX C 467 XXX  C 468  0
-SHEET   24 E24 2 XXX D 182 XXX  D 183  0
-SHEET   25 E25 5 XXX D 186 XXX  D 190  0
-SHEET   26 E26 2 XXX D 193 XXX  D 194  0
-SHEET   27 E27 2 XXX D 201 XXX  D 202  0
-SHEET   28 E28 4 XXX D 214 XXX  D 217  0
-SHEET   29 E29 2 XXX D 226 XXX  D 227  0
-SHEET   30 E30 3 XXX D 234 XXX  D 236  0
-SHEET   31 E31 4 XXX D 337 XXX  D 340  0
-SHEET   32 E32 2 XXX D 363 XXX  D 364  0
-SHEET   33 E33 3 XXX E 116 XXX  E 118  0
-SHEET   34 E34 2 XXX E 171 XXX  E 172  0
-SHEET   35 E35 2 XXX E 327 XXX  E 328  0
-SHEET   36 E36 2 XXX E 358 XXX  E 359  0
-SHEET   37 E37 2 XXX F 136 XXX  F 137  0
-SHEET   38 E38 2 XXX F 171 XXX  F 172  0
-SHEET   39 E39 2 XXX F 192 XXX  F 193  0
-SHEET   40 E40 3 XXX F 266 XXX  F 268  0
-SHEET   41 E41 2 XXX F 285 XXX  F 286  0
-SHEET   42 E42 2 XXX G 176 XXX  G 177  0
-SHEET   43 E43 4 XXX G 204 XXX  G 207  0
-SHEET   44 E44 2 XXX G 216 XXX  G 217  0
-SHEET   45 E45 2 XXX G 228 XXX  G 229  0
-SHEET   46 E46 4 XXX G 259 XXX  G 262  0
-SHEET   47 E47 2 XXX G 286 XXX  G 287  0
-SHEET   48 E48 3 XXX G 368 XXX  G 370  0
-SHEET   49 E49 3 XXX H 116 XXX  H 118  0
-SHEET   50 E50 2 XXX H 124 XXX  H 125  0
-SHEET   51 E51 2 XXX H 144 XXX  H 145  0
-SHEET   52 E52 8 XXX H 179 XXX  H 186  0
-SHEET   53 E5311 XXX H 189 XXX  H 199  0
-SHEET   54 E54 2 XXX H 203 XXX  H 204  0
-SHEET   55 E55 3 XXX H 243 XXX  H 245  0
-SHEET   56 E56 6 XXX H 292 XXX  H 297  0
-SHEET   57 E57 5 XXX H 310 XXX  H 314  0
-SHEET   58 E58 2 XXX H 329 XXX  H 330  0
-SHEET   59 E59 3 XXX H 339 XXX  H 341  0
-SHEET   60 E60 2 XXX I 178 XXX  I 179  0
-SHEET   61 E61 2 XXX I 215 XXX  I 216  0
-SHEET   62 E62 2 XXX I 246 XXX  I 247  0
-SHEET   63 E63 3 XXX I 273 XXX  I 275  0
-SHEET   64 E64 2 XXX I 335 XXX  I 336  0
-SHEET   65 E65 3 XXX I 356 XXX  I 358  0
-SHEET   66 E66 3 XXX J 116 XXX  J 118  0
-SHEET   67 E67 2 XXX J 124 XXX  J 125  0
-SHEET   68 E68 8 XXX J 179 XXX  J 186  0
-SHEET   69 E69 7 XXX J 189 XXX  J 195  0
-SHEET   70 E70 2 XXX J 198 XXX  J 199  0
-SHEET   71 E71 2 XXX J 203 XXX  J 204  0
-SHEET   72 E72 2 XXX J 235 XXX  J 236  0
-SHEET   73 E73 3 XXX J 243 XXX  J 245  0
-SHEET   74 E74 3 XXX J 256 XXX  J 258  0
-SHEET   75 E75 2 XXX J 269 XXX  J 270  0
-SHEET   76 E76 4 XXX J 288 XXX  J 291  0
-SHEET   77 E77 2 XXX J 293 XXX  J 294  0
-SHEET   78 E78 4 XXX J 313 XXX  J 316  0
-SHEET   79 E79 3 XXX J 339 XXX  J 341  0
-SHEET   80 E80 2 XXX J 350 XXX  J 351  0
-SHEET   81 E81 2 XXX J 373 XXX  J 374  0
-SHEET   82 E82 3 XXX K 115 XXX  K 117  0
-SHEET   83 E83 2 XXX K 123 XXX  K 124  0
-SHEET   84 E84 2 XXX K 143 XXX  K 144  0
-SHEET   85 E85 5 XXX K 180 XXX  K 184  0
-HELIX    4  H4 XXX K	 186  XXX A  192  1                                   7
-SHEET   86 E86 5 XXX K 201 XXX  K 205  0
-SHEET   87 E87 2 XXX K 210 XXX  K 211  0
-SHEET   88 E88 2 XXX K 250 XXX  K 251  0
-SHEET   89 E89 4 XXX K 295 XXX  K 298  0
-SHEET   90 E90 4 XXX K 301 XXX  K 304  0
-SHEET   91 E91 3 XXX K 321 XXX  K 323  0
-SHEET   92 E92 2 XXX K 333 XXX  K 334  0
-SHEET   93 E93 6 XXX K 343 XXX  K 348  0
-SHEET   94 E94 2 XXX K 357 XXX  K 358  0
-SHEET   95 E95 2 XXX K 380 XXX  K 381  0
-SHEET   96 E96 2 XXX K 389 XXX  K 390  0
-SHEET   97 E97 2 XXX K 394 XXX  K 395  0
-SHEET   98 E98 3 XXX L 261 XXX  L 263  0
-SHEET   99 E99 3 XXX L 268 XXX  L 270  0
-SHEET  100E100 2 XXX L 363 XXX  L 364  0
-HELIX    5  H5 XXX L	 395  XXX A  398  1                                   4
-SHEET  101E101 2 XXX L 399 XXX  L 400  0
-SHEET  102E102 6 XXX L 487 XXX  L 492  0
-SHEET  103E103 2 XXX L 494 XXX  L 495  0
-SHEET  104E104 4 XXX L 520 XXX  L 523  0
-SHEET  105E105 2 XXX M 261 XXX  M 262  0
-SHEET  106E106 2 XXX M 266 XXX  M 267  0
-SHEET  107E107 3 XXX M 331 XXX  M 333  0
-SHEET  108E108 4 XXX M 357 XXX  M 360  0
-SHEET  109E109 2 XXX M 413 XXX  M 414  0
-SHEET  110E110 3 XXX M 435 XXX  M 437  0
-SHEET  111E111 4 XXX M 439 XXX  M 442  0
-SHEET  112E112 3 XXX N 196 XXX  N 198  0
-SHEET  113E113 2 XXX N 261 XXX  N 262  0
-SHEET  114E114 3 XXX N 267 XXX  N 269  0
-SHEET  115E115 2 XXX N 281 XXX  N 282  0
-SHEET  116E116 2 XXX N 285 XXX  N 286  0
-SHEET  117E117 4 XXX N 293 XXX  N 296  0
-SHEET  118E118 2 XXX N 298 XXX  N 299  0
-SHEET  119E119 5 XXX N 331 XXX  N 335  0
-SHEET  120E120 2 XXX N 375 XXX  N 376  0
-SHEET  121E121 2 XXX N 422 XXX  N 423  0
-SHEET  122E12223 XXX O  25 XXX  O  47  0
-SHEET  123E123 2 XXX O  50 XXX  O  51  0
-HELIX    6  H6 XXX O	  64  XXX A   67  1                                   4
-SHEET  124E124 3 XXX O  68 XXX  O  70  0
-SHEET  125E125 2 XXX O  73 XXX  O  74  0
-SHEET  126E126 4 XXX O  77 XXX  O  80  0
-SHEET  127E127 8 XXX O  87 XXX  O  94  0
-SHEET  128E128 3 XXX O 103 XXX  O 105  0
-SHEET  129E129 4 XXX O 111 XXX  O 114  0
-SHEET  130E130 4 XXX O 129 XXX  O 132  0
-SHEET  131E131 4 XXX O 162 XXX  O 165  0
-HELIX    7  H7 XXX O	 166  XXX A  169  1                                   4
-SHEET  132E13217 XXX O 170 XXX  O 186  0
-SHEET  133E13314 XXX O 192 XXX  O 205  0
-SHEET  134E134 2 XXX O 211 XXX  O 212  0
-SHEET  135E135 3 XXX O 222 XXX  O 224  0
-SHEET  136E136 3 XXX O 229 XXX  O 231  0
-SHEET  137E137 3 XXX O 246 XXX  O 248  0
-SHEET  138E138 5 XXX O 263 XXX  O 267  0
-SHEET  139E13923 XXX P  25 XXX  P  47  0
-HELIX    8  H8 XXX P	  64  XXX A   67  1                                   4
-SHEET  140E140 3 XXX P  68 XXX  P  70  0
-SHEET  141E141 2 XXX P  73 XXX  P  74  0
-SHEET  142E142 4 XXX P  77 XXX  P  80  0
-SHEET  143E143 8 XXX P  87 XXX  P  94  0
-SHEET  144E144 3 XXX P 103 XXX  P 105  0
-SHEET  145E145 4 XXX P 111 XXX  P 114  0
-SHEET  146E146 4 XXX P 129 XXX  P 132  0
-SHEET  147E147 3 XXX P 142 XXX  P 144  0
-SHEET  148E148 4 XXX P 162 XXX  P 165  0
-HELIX    9  H9 XXX P	 166  XXX A  169  1                                   4
-SHEET  149E14917 XXX P 170 XXX  P 186  0
-SHEET  150E15014 XXX P 192 XXX  P 205  0
-SHEET  151E151 2 XXX P 211 XXX  P 212  0
-HELIX   10 H10 XXX P	 216  XXX A  219  1                                   4
-SHEET  152E152 3 XXX P 222 XXX  P 224  0
-SHEET  153E153 3 XXX P 229 XXX  P 231  0
-SHEET  154E154 3 XXX P 246 XXX  P 248  0
-SHEET  155E155 5 XXX P 263 XXX  P 267  0
-SHEET  156E156 1 XXX Q  48 XXX  Q  48  0
-SHEET  157E15719 XXX Q  51 XXX  Q  69  0
-SHEET  158E158 2 XXX Q  72 XXX  Q  73  0
-SHEET  159E159 4 XXX Q  97 XXX  Q 100  0
-SHEET  160E160 8 XXX Q 107 XXX  Q 114  0
-SHEET  161E161 3 XXX Q 123 XXX  Q 125  0
-SHEET  162E162 3 XXX Q 131 XXX  Q 133  0
-SHEET  163E163 2 XXX Q 149 XXX  Q 150  0
-SHEET  164E164 3 XXX Q 162 XXX  Q 164  0
-HELIX   11 H11 XXX Q	 190  XXX A  193  1                                   4
-HELIX   12 H12 XXX Q	 207  XXX A  210  1                                   4
-SHEET  165E165 5 XXX Q 213 XXX  Q 217  0
-SHEET  166E166 3 XXX Q 244 XXX  Q 246  0
-SHEET  167E167 3 XXX Q 261 XXX  Q 263  0
-SHEET  168E168 3 XXX Q 279 XXX  Q 281  0
+HELIX    1  H1 XXX A 115  XXX A  120  1                                   6
+HELIX    2  H2 XXX A 122  XXX A  125  1                                   4
+HELIX    3  H3 XXX A 129  XXX A  151  1                                  23
+HELIX    4  H4 XXX A 170  XXX A  172  1                                   3
+HELIX    5  H5 XXX A 190  XXX A  200  1                                  11
+HELIX    6  H6 XXX A 236  XXX A  257  1                                  22
+HELIX    7  H7 XXX A 259  XXX A  263  1                                   5
+HELIX    8  H8 XXX A 270  XXX A  273  1                                   4
+HELIX    9  H9 XXX A 284  XXX A  293  1                                  10
+HELIX   10 H10 XXX A 306  XXX A  313  1                                   8
+HELIX   11 H11 XXX A 327  XXX A  329  1                                   3
+HELIX   12 H12 XXX A 368  XXX A  377  1                                  10
+HELIX   13 H13 XXX A 382  XXX A  385  1                                   4
+HELIX   14 H14 XXX A 386  XXX A  390  1                                   5
+HELIX   15 H15 XXX A 406  XXX A  413  1                                   8
+SHEET    1  E1 2 XXX A 155 XXX  A 156  0
+SHEET    2  E2 2 XXX A 162 XXX  A 163  0
+SHEET    3  E3 4 XXX A 175 XXX  A 178  0
+SHEET    4  E4 5 XXX A 181 XXX  A 185  0
+SHEET    5  E5 9 XXX A 202 XXX  A 210  0
+SHEET    6  E610 XXX A 223 XXX  A 232  0
+SHEET    7  E7 3 XXX A 281 XXX  A 283  0
+SHEET    8  E8 7 XXX A 320 XXX  A 326  0
+SHEET    9  E9 9 XXX A 343 XXX  A 351  0
+SHEET   10 E10 8 XXX A 356 XXX  A 363  0
+SHEET   11 E11 7 XXX A 399 XXX  A 405  0
+HELIX    1  H1 XXX B 116  XXX B  121  1                                   6
+HELIX    2  H2 XXX B 123  XXX B  126  1                                   4
+HELIX    3  H3 XXX B 130  XXX B  152  1                                  23
+HELIX    4  H4 XXX B 195  XXX B  197  1                                   3
+HELIX    5  H5 XXX B 211  XXX B  221  1                                  11
+HELIX    6  H6 XXX B 257  XXX B  278  1                                  22
+HELIX    7  H7 XXX B 280  XXX B  296  1                                  17
+HELIX    8  H8 XXX B 299  XXX B  301  1                                   3
+HELIX    9  H9 XXX B 307  XXX B  316  1                                  10
+HELIX   10 H10 XXX B 324  XXX B  333  1                                  10
+HELIX   11 H11 XXX B 335  XXX B  338  1                                   4
+HELIX   12 H12 XXX B 355  XXX B  360  1                                   6
+HELIX   13 H13 XXX B 361  XXX B  365  1                                   5
+HELIX   14 H14 XXX B 377  XXX B  379  1                                   3
+HELIX   15 H15 XXX B 416  XXX B  425  1                                  10
+HELIX   16 H16 XXX B 434  XXX B  438  1                                   5
+HELIX   17 H17 XXX B 454  XXX B  462  1                                   9
+SHEET    1  E1 2 XXX B 156 XXX  B 157  0
+SHEET    2  E2 2 XXX B 163 XXX  B 164  0
+SHEET    3  E3 2 XXX B 176 XXX  B 177  0
+SHEET    4  E4 3 XXX B 204 XXX  B 206  0
+SHEET    5  E5 9 XXX B 223 XXX  B 231  0
+SHEET    6  E610 XXX B 244 XXX  B 253  0
+SHEET    7  E7 4 XXX B 320 XXX  B 323  0
+SHEET    8  E8 7 XXX B 370 XXX  B 376  0
+SHEET    9  E9 9 XXX B 392 XXX  B 400  0
+SHEET   10 E10 8 XXX B 404 XXX  B 411  0
+SHEET   11 E11 7 XXX B 447 XXX  B 453  0
+HELIX    1  H1 XXX C 228  XXX C  232  1                                   5
+HELIX    2  H2 XXX C 235  XXX C  238  1                                   4
+HELIX    3  H3 XXX C 242  XXX C  264  1                                  23
+HELIX    4  H4 XXX C 303  XXX C  311  1                                   9
+HELIX    5  H5 XXX C 352  XXX C  366  1                                  15
+HELIX    6  H6 XXX C 369  XXX C  372  1                                   4
+HELIX    7  H7 XXX C 374  XXX C  381  1                                   8
+HELIX    8  H8 XXX C 402  XXX C  411  1                                  10
+HELIX    9  H9 XXX C 424  XXX C  438  1                                  15
+HELIX   10 H10 XXX C 489  XXX C  498  1                                  10
+HELIX   11 H11 XXX C 506  XXX C  513  1                                   8
+HELIX   12 H12 XXX C 529  XXX C  537  1                                   9
+SHEET    1  E1 2 XXX C 268 XXX  C 269  0
+SHEET    2  E2 2 XXX C 275 XXX  C 276  0
+SHEET    3  E3 2 XXX C 297 XXX  C 298  0
+SHEET    4  E4 9 XXX C 316 XXX  C 324  0
+SHEET    5  E510 XXX C 337 XXX  C 346  0
+SHEET    6  E6 4 XXX C 398 XXX  C 401  0
+SHEET    7  E7 5 XXX C 442 XXX  C 446  0
+SHEET    8  E8 5 XXX C 470 XXX  C 474  0
+SHEET    9  E9 8 XXX C 477 XXX  C 484  0
+SHEET   10 E10 7 XXX C 522 XXX  C 528  0
+HELIX    1  H1 XXX D 116  XXX D  121  1                                   6
+HELIX    2  H2 XXX D 123  XXX D  126  1                                   4
+HELIX    3  H3 XXX D 130  XXX D  152  1                                  23
+HELIX    4  H4 XXX D 171  XXX D  173  1                                   3
+HELIX    5  H5 XXX D 191  XXX D  201  1                                  11
+HELIX    6  H6 XXX D 237  XXX D  265  1                                  29
+HELIX    7  H7 XXX D 282  XXX D  291  1                                  10
+HELIX    8  H8 XXX D 304  XXX D  311  1                                   8
+HELIX    9  H9 XXX D 325  XXX D  327  1                                   3
+HELIX   10 H10 XXX D 366  XXX D  375  1                                  10
+HELIX   11 H11 XXX D 380  XXX D  383  1                                   4
+HELIX   12 H12 XXX D 384  XXX D  391  1                                   8
+HELIX   13 H13 XXX D 404  XXX D  411  1                                   8
+SHEET    1  E1 2 XXX D 156 XXX  D 157  0
+SHEET    2  E2 2 XXX D 163 XXX  D 164  0
+SHEET    3  E3 5 XXX D 175 XXX  D 179  0
+SHEET    4  E4 5 XXX D 182 XXX  D 186  0
+SHEET    5  E5 9 XXX D 203 XXX  D 211  0
+SHEET    6  E610 XXX D 224 XXX  D 233  0
+SHEET    7  E7 3 XXX D 279 XXX  D 281  0
+SHEET    8  E8 4 XXX D 318 XXX  D 321  0
+SHEET    9  E9 2 XXX D 334 XXX  D 335  0
+SHEET   10 E10 5 XXX D 338 XXX  D 342  0
+SHEET   11 E11 6 XXX D 344 XXX  D 349  0
+SHEET   12 E12 8 XXX D 354 XXX  D 361  0
+SHEET   13 E13 7 XXX D 397 XXX  D 403  0
+HELIX    1  H1 XXX E 108  XXX E  113  1                                   6
+HELIX    2  H2 XXX E 115  XXX E  118  1                                   4
+HELIX    3  H3 XXX E 122  XXX E  144  1                                  23
+HELIX    4  H4 XXX E 183  XXX E  193  1                                  11
+HELIX    5  H5 XXX E 229  XXX E  257  1                                  29
+HELIX    6  H6 XXX E 262  XXX E  266  1                                   5
+HELIX    7  H7 XXX E 277  XXX E  283  1                                   7
+HELIX    8  H8 XXX E 284  XXX E  287  1                                   4
+HELIX    9  H9 XXX E 299  XXX E  306  1                                   8
+HELIX   10 H10 XXX E 320  XXX E  322  1                                   3
+HELIX   11 H11 XXX E 361  XXX E  370  1                                  10
+HELIX   12 H12 XXX E 375  XXX E  378  1                                   4
+HELIX   13 H13 XXX E 379  XXX E  386  1                                   8
+HELIX   14 H14 XXX E 399  XXX E  407  1                                   9
+SHEET    1  E1 2 XXX E 148 XXX  E 149  0
+SHEET    2  E2 2 XXX E 155 XXX  E 156  0
+SHEET    3  E3 4 XXX E 168 XXX  E 171  0
+SHEET    4  E4 5 XXX E 174 XXX  E 178  0
+SHEET    5  E5 9 XXX E 195 XXX  E 203  0
+SHEET    6  E610 XXX E 216 XXX  E 225  0
+SHEET    7  E7 3 XXX E 274 XXX  E 276  0
+SHEET    8  E8 4 XXX E 313 XXX  E 316  0
+SHEET    9  E9 6 XXX E 339 XXX  E 344  0
+SHEET   10 E10 8 XXX E 349 XXX  E 356  0
+SHEET   11 E11 7 XXX E 392 XXX  E 398  0
+HELIX    1  H1 XXX F 115  XXX F  120  1                                   6
+HELIX    2  H2 XXX F 122  XXX F  125  1                                   4
+HELIX    3  H3 XXX F 129  XXX F  151  1                                  23
+HELIX    4  H4 XXX F 170  XXX F  172  1                                   3
+HELIX    5  H5 XXX F 190  XXX F  200  1                                  11
+HELIX    6  H6 XXX F 236  XXX F  262  1                                  27
+HELIX    7  H7 XXX F 270  XXX F  273  1                                   4
+HELIX    8  H8 XXX F 284  XXX F  293  1                                  10
+HELIX    9  H9 XXX F 306  XXX F  312  1                                   7
+HELIX   10 H10 XXX F 313  XXX F  315  1                                   3
+HELIX   11 H11 XXX F 327  XXX F  329  1                                   3
+HELIX   12 H12 XXX F 368  XXX F  377  1                                  10
+HELIX   13 H13 XXX F 382  XXX F  385  1                                   4
+HELIX   14 H14 XXX F 386  XXX F  390  1                                   5
+HELIX   15 H15 XXX F 406  XXX F  413  1                                   8
+SHEET    1  E1 2 XXX F 155 XXX  F 156  0
+SHEET    2  E2 2 XXX F 162 XXX  F 163  0
+SHEET    3  E3 4 XXX F 175 XXX  F 178  0
+SHEET    4  E4 5 XXX F 181 XXX  F 185  0
+SHEET    5  E5 9 XXX F 202 XXX  F 210  0
+SHEET    6  E610 XXX F 223 XXX  F 232  0
+SHEET    7  E7 3 XXX F 281 XXX  F 283  0
+SHEET    8  E8 4 XXX F 320 XXX  F 323  0
+SHEET    9  E9 6 XXX F 346 XXX  F 351  0
+SHEET   10 E10 8 XXX F 356 XXX  F 363  0
+SHEET   11 E11 7 XXX F 399 XXX  F 405  0
+HELIX    1  H1 XXX G 106  XXX G  111  1                                   6
+HELIX    2  H2 XXX G 113  XXX G  116  1                                   4
+HELIX    3  H3 XXX G 120  XXX G  142  1                                  23
+HELIX    4  H4 XXX G 161  XXX G  163  1                                   3
+HELIX    5  H5 XXX G 181  XXX G  191  1                                  11
+HELIX    6  H6 XXX G 227  XXX G  248  1                                  22
+HELIX    7  H7 XXX G 250  XXX G  255  1                                   6
+HELIX    8  H8 XXX G 263  XXX G  265  1                                   3
+HELIX    9  H9 XXX G 275  XXX G  284  1                                  10
+HELIX   10 H10 XXX G 307  XXX G  314  1                                   8
+HELIX   11 H11 XXX G 328  XXX G  330  1                                   3
+HELIX   12 H12 XXX G 369  XXX G  378  1                                  10
+HELIX   13 H13 XXX G 383  XXX G  386  1                                   4
+HELIX   14 H14 XXX G 387  XXX G  394  1                                   8
+HELIX   15 H15 XXX G 407  XXX G  415  1                                   9
+SHEET    1  E1 2 XXX G 146 XXX  G 147  0
+SHEET    2  E2 2 XXX G 153 XXX  G 154  0
+SHEET    3  E3 4 XXX G 166 XXX  G 169  0
+SHEET    4  E4 5 XXX G 172 XXX  G 176  0
+SHEET    5  E5 8 XXX G 194 XXX  G 201  0
+SHEET    6  E610 XXX G 214 XXX  G 223  0
+SHEET    7  E7 4 XXX G 271 XXX  G 274  0
+SHEET    8  E8 3 XXX G 288 XXX  G 290  0
+SHEET    9  E9 3 XXX G 296 XXX  G 298  0
+SHEET   10 E10 4 XXX G 321 XXX  G 324  0
+SHEET   11 E11 6 XXX G 347 XXX  G 352  0
+SHEET   12 E12 8 XXX G 357 XXX  G 364  0
+SHEET   13 E13 7 XXX G 400 XXX  G 406  0
+HELIX    1  H1 XXX H 118  XXX H  123  1                                   6
+HELIX    2  H2 XXX H 128  XXX H  130  1                                   3
+HELIX    3  H3 XXX H 132  XXX H  154  1                                  23
+HELIX    4  H4 XXX H 184  XXX H  186  1                                   3
+HELIX    5  H5 XXX H 197  XXX H  199  1                                   3
+HELIX    6  H6 XXX H 213  XXX H  223  1                                  11
+HELIX    7  H7 XXX H 259  XXX H  280  1                                  22
+HELIX    8  H8 XXX H 282  XXX H  291  1                                  10
+HELIX    9  H9 XXX H 296  XXX H  305  1                                  10
+HELIX   10 H10 XXX H 313  XXX H  325  1                                  13
+HELIX   11 H11 XXX H 342  XXX H  346  1                                   5
+HELIX   12 H12 XXX H 347  XXX H  353  1                                   7
+HELIX   13 H13 XXX H 364  XXX H  366  1                                   3
+HELIX   14 H14 XXX H 403  XXX H  412  1                                  10
+HELIX   15 H15 XXX H 417  XXX H  428  1                                  12
+HELIX   16 H16 XXX H 441  XXX H  449  1                                   9
+SHEET    1  E1 2 XXX H 158 XXX  H 159  0
+SHEET    2  E2 2 XXX H 165 XXX  H 166  0
+SHEET    3  E3 2 XXX H 178 XXX  H 179  0
+SHEET    4  E4 3 XXX H 206 XXX  H 208  0
+SHEET    5  E5 9 XXX H 225 XXX  H 233  0
+SHEET    6  E610 XXX H 246 XXX  H 255  0
+SHEET    7  E7 4 XXX H 309 XXX  H 312  0
+SHEET    8  E8 7 XXX H 357 XXX  H 363  0
+SHEET    9  E9 9 XXX H 379 XXX  H 387  0
+SHEET   10 E10 8 XXX H 391 XXX  H 398  0
+SHEET   11 E11 7 XXX H 434 XXX  H 440  0
+HELIX    1  H1 XXX I 115  XXX I  120  1                                   6
+HELIX    2  H2 XXX I 122  XXX I  125  1                                   4
+HELIX    3  H3 XXX I 129  XXX I  151  1                                  23
+HELIX    4  H4 XXX I 190  XXX I  200  1                                  11
+HELIX    5  H5 XXX I 236  XXX I  257  1                                  22
+HELIX    6  H6 XXX I 259  XXX I  264  1                                   6
+HELIX    7  H7 XXX I 269  XXX I  274  1                                   6
+HELIX    8  H8 XXX I 285  XXX I  294  1                                  10
+HELIX    9  H9 XXX I 307  XXX I  317  1                                  11
+HELIX   10 H10 XXX I 328  XXX I  330  1                                   3
+HELIX   11 H11 XXX I 369  XXX I  378  1                                  10
+HELIX   12 H12 XXX I 387  XXX I  394  1                                   8
+HELIX   13 H13 XXX I 407  XXX I  415  1                                   9
+SHEET    1  E1 2 XXX I 155 XXX  I 156  0
+SHEET    2  E2 2 XXX I 162 XXX  I 163  0
+SHEET    3  E3 4 XXX I 175 XXX  I 178  0
+SHEET    4  E4 5 XXX I 181 XXX  I 185  0
+SHEET    5  E5 9 XXX I 202 XXX  I 210  0
+SHEET    6  E610 XXX I 223 XXX  I 232  0
+SHEET    7  E7 3 XXX I 282 XXX  I 284  0
+SHEET    8  E8 4 XXX I 321 XXX  I 324  0
+SHEET    9  E9 2 XXX I 337 XXX  I 338  0
+SHEET   10 E10 5 XXX I 341 XXX  I 345  0
+SHEET   11 E11 6 XXX I 347 XXX  I 352  0
+SHEET   12 E12 8 XXX I 357 XXX  I 364  0
+SHEET   13 E13 7 XXX I 400 XXX  I 406  0
+HELIX    1  H1 XXX J 118  XXX J  123  1                                   6
+HELIX    2  H2 XXX J 128  XXX J  130  1                                   3
+HELIX    3  H3 XXX J 132  XXX J  154  1                                  23
+HELIX    4  H4 XXX J 197  XXX J  199  1                                   3
+HELIX    5  H5 XXX J 213  XXX J  223  1                                  11
+HELIX    6  H6 XXX J 259  XXX J  280  1                                  22
+HELIX    7  H7 XXX J 282  XXX J  291  1                                  10
+HELIX    8  H8 XXX J 296  XXX J  305  1                                  10
+HELIX    9  H9 XXX J 313  XXX J  322  1                                  10
+HELIX   10 H10 XXX J 339  XXX J  343  1                                   5
+HELIX   11 H11 XXX J 344  XXX J  349  1                                   6
+HELIX   12 H12 XXX J 361  XXX J  363  1                                   3
+HELIX   13 H13 XXX J 400  XXX J  409  1                                  10
+HELIX   14 H14 XXX J 418  XXX J  422  1                                   5
+HELIX   15 H15 XXX J 438  XXX J  446  1                                   9
+SHEET    1  E1 2 XXX J 158 XXX  J 159  0
+SHEET    2  E2 2 XXX J 165 XXX  J 166  0
+SHEET    3  E3 2 XXX J 178 XXX  J 179  0
+SHEET    4  E4 3 XXX J 206 XXX  J 208  0
+SHEET    5  E5 9 XXX J 225 XXX  J 233  0
+SHEET    6  E610 XXX J 246 XXX  J 255  0
+SHEET    7  E7 4 XXX J 309 XXX  J 312  0
+SHEET    8  E8 7 XXX J 354 XXX  J 360  0
+SHEET    9  E9 9 XXX J 376 XXX  J 384  0
+SHEET   10 E10 8 XXX J 388 XXX  J 395  0
+SHEET   11 E11 7 XXX J 431 XXX  J 437  0
+HELIX    1  H1 XXX K 117  XXX K  122  1                                   6
+HELIX    2  H2 XXX K 124  XXX K  127  1                                   4
+HELIX    3  H3 XXX K 131  XXX K  152  1                                  22
+HELIX    4  H4 XXX K 183  XXX K  192  1                                  10
+HELIX    5  H5 XXX K 204  XXX K  206  1                                   3
+HELIX    6  H6 XXX K 220  XXX K  230  1                                  11
+HELIX    7  H7 XXX K 266  XXX K  287  1                                  22
+HELIX    8  H8 XXX K 289  XXX K  298  1                                  10
+HELIX    9  H9 XXX K 303  XXX K  312  1                                  10
+HELIX   10 H10 XXX K 320  XXX K  328  1                                   9
+HELIX   11 H11 XXX K 331  XXX K  333  1                                   3
+HELIX   12 H12 XXX K 346  XXX K  351  1                                   6
+HELIX   13 H13 XXX K 352  XXX K  356  1                                   5
+HELIX   14 H14 XXX K 368  XXX K  370  1                                   3
+HELIX   15 H15 XXX K 407  XXX K  416  1                                  10
+HELIX   16 H16 XXX K 421  XXX K  424  1                                   4
+HELIX   17 H17 XXX K 425  XXX K  432  1                                   8
+HELIX   18 H18 XXX K 445  XXX K  453  1                                   9
+SHEET    1  E1 2 XXX K 157 XXX  K 158  0
+SHEET    2  E2 2 XXX K 164 XXX  K 165  0
+SHEET    3  E3 2 XXX K 177 XXX  K 178  0
+SHEET    4  E4 3 XXX K 213 XXX  K 215  0
+SHEET    5  E5 9 XXX K 232 XXX  K 240  0
+SHEET    6  E610 XXX K 253 XXX  K 262  0
+SHEET    7  E7 4 XXX K 316 XXX  K 319  0
+SHEET    8  E8 7 XXX K 361 XXX  K 367  0
+SHEET    9  E9 9 XXX K 383 XXX  K 391  0
+SHEET   10 E10 8 XXX K 395 XXX  K 402  0
+SHEET   11 E11 7 XXX K 438 XXX  K 444  0
+HELIX    1  H1 XXX L 260  XXX L  265  1                                   6
+HELIX    2  H2 XXX L 267  XXX L  270  1                                   4
+HELIX    3  H3 XXX L 274  XXX L  296  1                                  23
+HELIX    4  H4 XXX L 315  XXX L  317  1                                   3
+HELIX    5  H5 XXX L 335  XXX L  345  1                                  11
+HELIX    6  H6 XXX L 381  XXX L  401  1                                  21
+HELIX    7  H7 XXX L 403  XXX L  412  1                                  10
+HELIX    8  H8 XXX L 428  XXX L  437  1                                  10
+HELIX    9  H9 XXX L 456  XXX L  466  1                                  11
+HELIX   10 H10 XXX L 477  XXX L  479  1                                   3
+HELIX   11 H11 XXX L 517  XXX L  526  1                                  10
+HELIX   12 H12 XXX L 532  XXX L  534  1                                   3
+HELIX   13 H13 XXX L 535  XXX L  542  1                                   8
+HELIX   14 H14 XXX L 555  XXX L  562  1                                   8
+SHEET    1  E1 2 XXX L 300 XXX  L 301  0
+SHEET    2  E2 2 XXX L 307 XXX  L 308  0
+SHEET    3  E3 4 XXX L 320 XXX  L 323  0
+SHEET    4  E4 5 XXX L 326 XXX  L 330  0
+SHEET    5  E5 8 XXX L 348 XXX  L 355  0
+SHEET    6  E610 XXX L 368 XXX  L 377  0
+SHEET    7  E7 4 XXX L 424 XXX  L 427  0
+SHEET    8  E8 4 XXX L 470 XXX  L 473  0
+SHEET    9  E9 2 XXX L 486 XXX  L 487  0
+SHEET   10 E10 5 XXX L 490 XXX  L 494  0
+SHEET   11 E11 6 XXX L 496 XXX  L 501  0
+SHEET   12 E12 8 XXX L 505 XXX  L 512  0
+SHEET   13 E13 7 XXX L 548 XXX  L 554  0
+HELIX    1  H1 XXX M 176  XXX M  181  1                                   6
+HELIX    2  H2 XXX M 183  XXX M  186  1                                   4
+HELIX    3  H3 XXX M 190  XXX M  212  1                                  23
+HELIX    4  H4 XXX M 251  XXX M  261  1                                  11
+HELIX    5  H5 XXX M 297  XXX M  326  1                                  30
+HELIX    6  H6 XXX M 345  XXX M  354  1                                  10
+HELIX    7  H7 XXX M 373  XXX M  382  1                                  10
+HELIX    8  H8 XXX M 396  XXX M  398  1                                   3
+HELIX    9  H9 XXX M 436  XXX M  445  1                                  10
+HELIX   10 H10 XXX M 451  XXX M  453  1                                   3
+HELIX   11 H11 XXX M 454  XXX M  457  1                                   4
+HELIX   12 H12 XXX M 458  XXX M  460  1                                   3
+HELIX   13 H13 XXX M 474  XXX M  481  1                                   8
+SHEET    1  E1 2 XXX M 216 XXX  M 217  0
+SHEET    2  E2 2 XXX M 223 XXX  M 224  0
+SHEET    3  E3 5 XXX M 235 XXX  M 239  0
+SHEET    4  E4 5 XXX M 242 XXX  M 246  0
+SHEET    5  E5 9 XXX M 263 XXX  M 271  0
+SHEET    6  E610 XXX M 284 XXX  M 293  0
+SHEET    7  E7 4 XXX M 341 XXX  M 344  0
+SHEET    8  E8 4 XXX M 389 XXX  M 392  0
+SHEET    9  E9 6 XXX M 415 XXX  M 420  0
+SHEET   10 E10 8 XXX M 424 XXX  M 431  0
+SHEET   11 E11 7 XXX M 467 XXX  M 473  0
+HELIX    1  H1 XXX N 195  XXX N  200  1                                   6
+HELIX    2  H2 XXX N 202  XXX N  205  1                                   4
+HELIX    3  H3 XXX N 209  XXX N  231  1                                  23
+HELIX    4  H4 XXX N 250  XXX N  252  1                                   3
+HELIX    5  H5 XXX N 270  XXX N  280  1                                  11
+HELIX    6  H6 XXX N 316  XXX N  343  1                                  28
+HELIX    7  H7 XXX N 361  XXX N  370  1                                  10
+HELIX    8  H8 XXX N 391  XXX N  401  1                                  11
+HELIX    9  H9 XXX N 452  XXX N  461  1                                  10
+HELIX   10 H10 XXX N 467  XXX N  469  1                                   3
+HELIX   11 H11 XXX N 470  XXX N  474  1                                   5
+HELIX   12 H12 XXX N 490  XXX N  498  1                                   9
+SHEET    1  E1 2 XXX N 235 XXX  N 236  0
+SHEET    2  E2 2 XXX N 242 XXX  N 243  0
+SHEET    3  E3 4 XXX N 255 XXX  N 258  0
+SHEET    4  E4 5 XXX N 261 XXX  N 265  0
+SHEET    5  E5 8 XXX N 283 XXX  N 290  0
+SHEET    6  E610 XXX N 303 XXX  N 312  0
+SHEET    7  E7 4 XXX N 357 XXX  N 360  0
+SHEET    8  E8 3 XXX N 374 XXX  N 376  0
+SHEET    9  E9 2 XXX N 381 XXX  N 382  0
+SHEET   10 E10 4 XXX N 405 XXX  N 408  0
+SHEET   11 E11 6 XXX N 431 XXX  N 436  0
+SHEET   12 E12 8 XXX N 440 XXX  N 447  0
+SHEET   13 E13 7 XXX N 483 XXX  N 489  0
+HELIX    1  H1 XXX O  32  XXX O   35  1                                   4
+HELIX    2  H2 XXX O  42  XXX O   44  1                                   3
+HELIX    3  H3 XXX O  49  XXX O   67  1                                  19
+HELIX    4  H4 XXX O  86  XXX O   89  1                                   4
+HELIX    5  H5 XXX O  91  XXX O   93  1                                   3
+HELIX    6  H6 XXX O 100  XXX O  102  1                                   3
+HELIX    7  H7 XXX O 104  XXX O  106  1                                   3
+HELIX    8  H8 XXX O 120  XXX O  123  1                                   4
+HELIX    9  H9 XXX O 124  XXX O  129  1                                   6
+HELIX   10 H10 XXX O 166  XXX O  169  1                                   4
+HELIX   11 H11 XXX O 176  XXX O  178  1                                   3
+HELIX   12 H12 XXX O 197  XXX O  219  1                                  23
+HELIX   13 H13 XXX O 260  XXX O  265  1                                   6
+HELIX   14 H14 XXX O 280  XXX O  287  1                                   8
+SHEET    1  E1 3 XXX O  75 XXX  O  77  0
+SHEET    2  E2 3 XXX O  83 XXX  O  85  0
+SHEET    3  E3 3 XXX O 114 XXX  O 116  0
+SHEET    4  E4 9 XXX O 134 XXX  O 142  0
+SHEET    5  E512 XXX O 154 XXX  O 165  0
+SHEET    6  E6 8 XXX O 225 XXX  O 232  0
+SHEET    7  E711 XXX O 235 XXX  O 245  0
+SHEET    8  E811 XXX O 248 XXX  O 258  0
+SHEET    9  E9 9 XXX O 271 XXX  O 279  0
+HELIX    1  H1 XXX P  32  XXX P   35  1                                   4
+HELIX    2  H2 XXX P  42  XXX P   44  1                                   3
+HELIX    3  H3 XXX P  49  XXX P   67  1                                  19
+HELIX    4  H4 XXX P  86  XXX P   89  1                                   4
+HELIX    5  H5 XXX P  91  XXX P   93  1                                   3
+HELIX    6  H6 XXX P 100  XXX P  102  1                                   3
+HELIX    7  H7 XXX P 104  XXX P  106  1                                   3
+HELIX    8  H8 XXX P 120  XXX P  123  1                                   4
+HELIX    9  H9 XXX P 124  XXX P  129  1                                   6
+HELIX   10 H10 XXX P 166  XXX P  169  1                                   4
+HELIX   11 H11 XXX P 176  XXX P  178  1                                   3
+HELIX   12 H12 XXX P 197  XXX P  219  1                                  23
+HELIX   13 H13 XXX P 260  XXX P  265  1                                   6
+HELIX   14 H14 XXX P 280  XXX P  288  1                                   9
+SHEET    1  E1 3 XXX P  75 XXX  P  77  0
+SHEET    2  E2 3 XXX P  83 XXX  P  85  0
+SHEET    3  E3 3 XXX P 114 XXX  P 116  0
+SHEET    4  E4 9 XXX P 134 XXX  P 142  0
+SHEET    5  E511 XXX P 154 XXX  P 164  0
+SHEET    6  E6 8 XXX P 225 XXX  P 232  0
+SHEET    7  E711 XXX P 235 XXX  P 245  0
+SHEET    8  E811 XXX P 248 XXX  P 258  0
+SHEET    9  E9 8 XXX P 272 XXX  P 279  0
+HELIX    1  H1 XXX Q  54  XXX Q   57  1                                   4
+HELIX    2  H2 XXX Q  64  XXX Q   66  1                                   3
+HELIX    3  H3 XXX Q  71  XXX Q   82  1                                  12
+HELIX    4  H4 XXX Q  83  XXX Q   87  1                                   5
+HELIX    5  H5 XXX Q 106  XXX Q  109  1                                   4
+HELIX    6  H6 XXX Q 111  XXX Q  113  1                                   3
+HELIX    7  H7 XXX Q 120  XXX Q  122  1                                   3
+HELIX    8  H8 XXX Q 140  XXX Q  143  1                                   4
+HELIX    9  H9 XXX Q 144  XXX Q  149  1                                   6
+HELIX   10 H10 XXX Q 190  XXX Q  193  1                                   4
+HELIX   11 H11 XXX Q 207  XXX Q  211  1                                   5
+HELIX   12 H12 XXX Q 213  XXX Q  233  1                                  21
+HELIX   13 H13 XXX Q 275  XXX Q  280  1                                   6
+HELIX   14 H14 XXX Q 295  XXX Q  303  1                                   9
+SHEET    1  E1 3 XXX Q  95 XXX  Q  97  0
+SHEET    2  E2 3 XXX Q 103 XXX  Q 105  0
+SHEET    3  E3 3 XXX Q 134 XXX  Q 136  0
+SHEET    4  E4 9 XXX Q 154 XXX  Q 162  0
+SHEET    5  E512 XXX Q 174 XXX  Q 185  0
+SHEET    6  E6 8 XXX Q 240 XXX  Q 247  0
+SHEET    7  E711 XXX Q 250 XXX  Q 260  0
+SHEET    8  E811 XXX Q 263 XXX  Q 273  0
+SHEET    9  E9 9 XXX Q 286 XXX  Q 294  0
 ATOM    870  N   GLN A 112     -14.726 -13.788   9.426  1.00 40.91      A    N  
 ATOM    871  CA  GLN A 112     -15.401 -15.072   9.613  1.00 40.01      A    C  
 ATOM    872  C   GLN A 112     -16.218 -15.452   8.370  1.00 38.74      A    C  
