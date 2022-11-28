@@ -1,82 +1,102 @@
-SHEET    1  E110 XXX A  12 XXX  A  21  0
-SHEET    2  E224 XXX A  24 XXX  A  47  0
-SHEET    3  E3 9 XXX A  50 XXX  A  58  0
-HELIX    1  H1 XXX A	  59  XXX A   67  1                                   9
-SHEET    4  E4 3 XXX A  68 XXX  A  70  0
-SHEET    5  E5 8 XXX A  73 XXX  A  80  0
-SHEET    6  E6 3 XXX A  83 XXX  A  85  0
-HELIX    2  H2 XXX A	  86  XXX A   89  1                                   4
-SHEET    7  E7 5 XXX A  90 XXX  A  94  0
-SHEET    8  E8 2 XXX A  97 XXX  A  98  0
-SHEET    9  E951 XXX A 101 XXX  A 151  0
-SHEET   10 E1052 XXX A 154 XXX  A 205  0
-HELIX    3  H3 XXX A	 206  XXX A  218  1                                  13
-SHEET   11 E1113 XXX A 219 XXX  A 231  0
-SHEET   12 E12 2 XXX A 234 XXX  A 235  0
-SHEET   13 E1352 XXX A 238 XXX  A 289  0
-SHEET   14 E1427 XXX A 292 XXX  A 318  0
-SHEET   15 E15 3 XXX A 321 XXX  A 323  0
-SHEET   16 E16 9 XXX A 326 XXX  A 334  0
-SHEET   17 E1731 XXX A 337 XXX  A 367  0
-SHEET   18 E1832 XXX A 370 XXX  A 401  0
-HELIX    4  H4 XXX A	 404  XXX A  407  1                                   4
-SHEET   19 E19 7 XXX A 408 XXX  A 414  0
-SHEET   20 E2010 XXX B  12 XXX  B  21  0
-SHEET   21 E2124 XXX B  24 XXX  B  47  0
-SHEET   22 E22 4 XXX B  50 XXX  B  53  0
-HELIX    5  H5 XXX B	  54  XXX A   57  1                                   4
-SHEET   23 E23 6 XXX B  58 XXX  B  63  0
-HELIX    6  H6 XXX B	  64  XXX A   67  1                                   4
-SHEET   24 E24 3 XXX B  68 XXX  B  70  0
-SHEET   25 E25 8 XXX B  73 XXX  B  80  0
-SHEET   26 E2612 XXX B  83 XXX  B  94  0
-SHEET   27 E27 2 XXX B  97 XXX  B  98  0
-SHEET   28 E2851 XXX B 101 XXX  B 151  0
-SHEET   29 E2971 XXX B 154 XXX  B 224  0
-SHEET   30 E30 5 XXX B 227 XXX  B 231  0
-SHEET   31 E31 2 XXX B 234 XXX  B 235  0
-SHEET   32 E3252 XXX B 238 XXX  B 289  0
-SHEET   33 E3327 XXX B 292 XXX  B 318  0
-SHEET   34 E34 3 XXX B 321 XXX  B 323  0
-SHEET   35 E35 9 XXX B 326 XXX  B 334  0
-SHEET   36 E3631 XXX B 337 XXX  B 367  0
-SHEET   37 E3732 XXX B 370 XXX  B 401  0
-SHEET   38 E3811 XXX B 404 XXX  B 414  0
-HELIX    7  H7 XXX C	  42  XXX A   45  1                                   4
-SHEET   39 E39 2 XXX C  47 XXX  C  48  0
-SHEET   40 E40 9 XXX C  52 XXX  C  60  0
-SHEET   41 E41 2 XXX C  65 XXX  C  66  0
-HELIX    8  H8 XXX C	  71  XXX A   86  1                                  16
-SHEET   42 E42 4 XXX C  97 XXX  C 100  0
-SHEET   43 E43 9 XXX C 106 XXX  C 114  0
-SHEET   44 E44 2 XXX C 117 XXX  C 118  0
-SHEET   45 E4511 XXX C 123 XXX  C 133  0
-SHEET   46 E46 7 XXX C 137 XXX  C 143  0
-HELIX    9  H9 XXX C	 144  XXX A  147  1                                   4
-SHEET   47 E47 2 XXX C 148 XXX  C 149  0
-SHEET   48 E48 9 XXX C 152 XXX  C 160  0
-SHEET   49 E49 8 XXX C 164 XXX  C 171  0
-SHEET   50 E50 9 XXX C 174 XXX  C 182  0
-HELIX   10 H10 XXX C	 190  XXX A  193  1                                   4
-HELIX   11 H11 XXX C	 209  XXX A  211  1                                   3
-SHEET   51 E51 2 XXX C 213 XXX  C 214  0
-SHEET   52 E5216 XXX C 217 XXX  C 232  0
-SHEET   53 E53 3 XXX C 235 XXX  C 237  0
-SHEET   54 E54 3 XXX C 256 XXX  C 258  0
-SHEET   55 E5521 XXX C 261 XXX  C 281  0
-SHEET   56 E5611 XXX C 285 XXX  C 295  0
-HELIX   12 H12 XXX C	 296  XXX A  303  1                                   8
-SHEET   57 E57 8 XXX C 307 XXX  C 314  0
-SHEET   58 E58 2 XXX C 324 XXX  C 325  0
-SHEET   59 E59 9 XXX C 366 XXX  C 374  0
-SHEET   60 E60 2 XXX C 385 XXX  C 386  0
-SHEET   61 E61 2 XXX C 396 XXX  C 397  0
-SHEET   62 E62 7 XXX C 402 XXX  C 408  0
-SHEET   63 E63 9 XXX C 413 XXX  C 421  0
-SHEET   64 E64 2 XXX C 424 XXX  C 425  0
-HELIX   13 H13 XXX C	 433  XXX A  443  1                                  11
-HELIX   14 H14 XXX C	 446  XXX A  449  1                                   4
-SHEET   65 E65 2 XXX C 452 XXX  C 453  0
+HELIX    1   1 THR A   31  THR A   36  1                                   6    
+HELIX    2   2 ASN A   41  GLN A   45  5                                   5    
+HELIX    3   3 HIS A   48  ARG A   68  1                                  21    
+HELIX    4   4 THR A   86  PHE A   90  1                                   5    
+HELIX    5   5 ASP A   91  LEU A   94  5                                   4    
+HELIX    6   6 HIS A   99  ASN A  107  5                                   9    
+HELIX    7   7 HIS A  119  ALA A  122  5                                   4    
+HELIX    8   8 HIS A  123  ALA A  130  1                                   8    
+HELIX    9   9 LYS A  166  PHE A  170  1                                   5    
+HELIX   10  10 ASP A  175  LEU A  179  5                                   5    
+HELIX   11  11 THR A  196  GLY A  220  1                                  25    
+HELIX   12  12 GLU A  259  ALA A  266  1                                   8    
+HELIX   13  13 LEU A  280  TYR A  288  1                                   9    
+HELIX   14  14 ASP A  292  CYS A  298  5                                   7    
+HELIX   15  15 ASP A  300  LYS A  305  1                                   6    
+HELIX   16  16 GLN A  306  CYS A  308  5                                   3    
+HELIX   17  17 ALA A  341  GLY A  354  1                                  14    
+HELIX   18  18 SER A  390  LEU A  409  1                                  20    
+SHEET    1   A 2 VAL A  14  LEU A  17  0                                        
+SHEET    2   A 2 LYS A  20  PRO A  23 -1  O  TYR A  22   N  VAL A  15           
+SHEET    1   B 7 SER A  75  TYR A  77  0                                        
+SHEET    2   B 7 ALA A 134  TYR A 142  1  O  LEU A 136   N  TYR A  77           
+SHEET    3   B 7 ILE A 154  SER A 165 -1  O  GLU A 159   N  VAL A 137           
+SHEET    4   B 7 ARG A 271  GLY A 279 -1  O  ILE A 272   N  PHE A 164           
+SHEET    5   B 7 GLU A 248  MET A 258 -1  N  GLY A 254   O  GLY A 277           
+SHEET    6   B 7 THR A 235  PHE A 245 -1  N  PHE A 245   O  GLU A 248           
+SHEET    7   B 7 ILE A 225  PHE A 232 -1  N  VAL A 228   O  GLU A 240           
+SHEET    1   C 2 VAL A  83  THR A  85  0                                        
+SHEET    2   C 2 HIS A 114  LEU A 116 -1  O  MET A 115   N  VAL A  84           
+SHEET    1   D 4 VAL A 357  VAL A 367  0                                        
+SHEET    2   D 4 THR A 374  TYR A 382 -1  O  SER A 375   N  PHE A 366           
+SHEET    3   D 4 VAL A 327  TRP A 334 -1  N  ASN A 329   O  ILE A 380           
+SHEET    4   D 4 GLU A 412  GLY A 413 -1  O  GLU A 412   N  TRP A 334           
+HELIX    1   1 THR B   31  THR B   36  1                                   6    
+HELIX    2   2 ASN B   41  GLN B   45  5                                   5    
+HELIX    3   3 HIS B   48  ARG B   68  1                                  21    
+HELIX    4   4 THR B   86  PHE B   90  1                                   5    
+HELIX    5   5 ASP B   91  LEU B   94  5                                   4    
+HELIX    6   6 HIS B   99  ASN B  107  5                                   9    
+HELIX    7   7 HIS B  119  ALA B  122  5                                   4    
+HELIX    8   8 HIS B  123  ALA B  130  1                                   8    
+HELIX    9   9 SER B  165  PHE B  170  1                                   6    
+HELIX   10  10 ASP B  175  LEU B  179  5                                   5    
+HELIX   11  11 THR B  196  GLY B  220  1                                  25    
+HELIX   12  12 GLU B  259  ALA B  266  1                                   8    
+HELIX   13  13 LEU B  280  ASP B  289  1                                  10    
+HELIX   14  14 ASP B  292  TRP B  297  5                                   6    
+HELIX   15  15 ASP B  300  LYS B  305  1                                   6    
+HELIX   16  16 GLN B  306  CYS B  308  5                                   3    
+HELIX   17  17 ALA B  341  GLY B  354  1                                  14    
+HELIX   18  18 SER B  390  GLY B  410  1                                  21    
+SHEET    1   A 2 VAL B  14  LEU B  17  0                                        
+SHEET    2   A 2 LYS B  20  PRO B  23 -1  O  LYS A  20   N  LEU A  17           
+SHEET    1   B 7 SER B  75  TYR B  77  0                                        
+SHEET    2   B 7 ALA B 134  TYR B 142  1  O  VAL A 138   N  TYR A  77           
+SHEET    3   B 7 ILE B 154  PHE B 164 -1  O  GLU A 159   N  VAL A 137           
+SHEET    4   B 7 ILE B 272  GLY B 279 -1  O  ILE A 272   N  PHE A 164           
+SHEET    5   B 7 GLU B 248  MET B 258 -1  N  GLY A 254   O  GLY A 277           
+SHEET    6   B 7 THR B 235  PHE B 245 -1  N  PHE A 245   O  GLU A 248           
+SHEET    7   B 7 ILE B 225  PHE B 232 -1  N  VAL A 228   O  GLU A 240           
+SHEET    1   C 2 VAL B  83  THR B  85  0                                        
+SHEET    2   C 2 HIS B 114  LEU B 116 -1  O  MET A 115   N  VAL A  84           
+SHEET    1   D 4 VAL B 357  VAL B 367  0                                        
+SHEET    2   D 4 THR B 374  TYR B 382 -1  O  ARG A 379   N  ASP A 361           
+SHEET    3   D 4 VAL B 327  TRP B 334 -1  N  VAL A 327   O  TYR A 382           
+SHEET    4   D 4 GLU B 412  GLY B 413 -1  O  GLU A 412   N  TRP A 334           
+HELIX    1  H1 XXX C  42  XXX C   45  1                                   4
+HELIX    2  H2 XXX C  54  XXX C   57  1                                   4
+HELIX    3  H3 XXX C  64  XXX C   66  1                                   3
+HELIX    4  H4 XXX C  71  XXX C   82  1                                  12
+HELIX    5  H5 XXX C  83  XXX C   87  1                                   5
+HELIX    6  H6 XXX C 106  XXX C  109  1                                   4
+HELIX    7  H7 XXX C 111  XXX C  113  1                                   3
+HELIX    8  H8 XXX C 120  XXX C  122  1                                   3
+HELIX    9  H9 XXX C 140  XXX C  143  1                                   4
+HELIX   10 H10 XXX C 144  XXX C  149  1                                   6
+HELIX   11 H11 XXX C 190  XXX C  193  1                                   4
+HELIX   12 H12 XXX C 207  XXX C  211  1                                   5
+HELIX   13 H13 XXX C 213  XXX C  233  1                                  21
+HELIX   14 H14 XXX C 275  XXX C  280  1                                   6
+HELIX   15 H15 XXX C 295  XXX C  303  1                                   9
+HELIX   16 H16 XXX C 308  XXX C  312  1                                   5
+HELIX   17 H17 XXX C 316  XXX C  319  1                                   4
+HELIX   18 H18 XXX C 382  XXX C  393  1                                  12
+HELIX   19 H19 XXX C 394  XXX C  396  1                                   3
+HELIX   20 H20 XXX C 431  XXX C  449  1                                  19
+SHEET    1  E1 3 XXX C  95 XXX  C  97  0
+SHEET    2  E2 3 XXX C 103 XXX  C 105  0
+SHEET    3  E3 3 XXX C 134 XXX  C 136  0
+SHEET    4  E4 9 XXX C 154 XXX  C 162  0
+SHEET    5  E512 XXX C 174 XXX  C 185  0
+SHEET    6  E6 8 XXX C 240 XXX  C 247  0
+SHEET    7  E711 XXX C 250 XXX  C 260  0
+SHEET    8  E811 XXX C 263 XXX  C 273  0
+SHEET    9  E9 9 XXX C 286 XXX  C 294  0
+SHEET   10 E10 9 XXX C 366 XXX  C 374  0
+SHEET   11 E1112 XXX C 397 XXX  C 408  0
+SHEET   12 E1210 XXX C 413 XXX  C 422  0
+SHEET   13 E13 3 XXX C 451 XXX  C 453  0
 ATOM      1  N   PRO A  11      14.606  43.583  26.512  1.00 74.89      A    N  
 ATOM      2  CA  PRO A  11      15.790  42.779  26.904  1.00 74.38      A    C  
 ATOM      3  C   PRO A  11      15.926  42.689  28.422  1.00 73.27      A    C  
@@ -10539,5 +10559,9 @@ ATOM   7384  NH1 ARG C 454      14.654  53.430   0.416  1.00 92.63      A    N
 ATOM   7387  NH2 ARG C 454      13.351  54.971  -0.469  1.00 92.63      A    N  
 TER                                                                             
 END                                                                             
+
+
+
+
 
 

@@ -1,25 +1,31 @@
-SHEET    1  E1 2 XXX A 185 XXX  A 186  0
-SHEET    2  E2 2 XXX B 204 XXX  B 205  0
-SHEET    3  E3 4 XXX B 208 XXX  B 211  0
-SHEET    4  E4 3 XXX B 232 XXX  B 234  0
-SHEET    5  E5 3 XXX D 191 XXX  D 193  0
-SHEET    6  E6 6 XXX D 200 XXX  D 205  0
-SHEET    7  E7 4 XXX D 216 XXX  D 219  0
-SHEET    8  E8 2 XXX F 185 XXX  F 186  0
-SHEET    9  E9 4 XXX H 210 XXX  H 213  0
-SHEET   10 E10 2 XXX I 195 XXX  I 196  0
-SHEET   11 E11 2 XXX I 217 XXX  I 218  0
-SHEET   12 E12 6 XXX J 206 XXX  J 211  0
-SHEET   13 E13 2 XXX J 218 XXX  J 219  0
-SHEET   14 E14 3 XXX J 234 XXX  J 236  0
-SHEET   15 E15 4 XXX K 213 XXX  K 216  0
-SHEET   16 E16 2 XXX L 360 XXX  L 361  0
-SHEET   17 E17 2 XXX L 363 XXX  L 364  0
-SHEET   18 E18 2 XXX M 264 XXX  M 265  0
-SHEET   19 E19 2 XXX M 276 XXX  M 277  0
-SHEET   20 E20 3 XXX N 270 XXX  N 272  0
-SHEET   21 E21 4 XXX N 279 XXX  N 282  0
-SHEET   22 E22 2 XXX N 298 XXX  N 299  0
+HELIX    1  H1 XXX A 190  XXX A  200  1                                  11
+AA
+HELIX    1  H1 XXX B 211  XXX B  221  1                                  11
+BB
+HELIX    1  H1 XXX C 303  XXX C  311  1                                   9
+CC
+HELIX    1  H1 XXX D 191  XXX D  201  1                                  11
+DD
+HELIX    1  H1 XXX E 183  XXX E  193  1                                  11
+EE
+HELIX    1  H1 XXX F 190  XXX F  200  1                                  11
+FF
+HELIX    1  H1 XXX G 181  XXX G  191  1                                  11
+GG
+HELIX    1  H1 XXX H 213  XXX H  223  1                                  11
+HH
+HELIX    1  H1 XXX I 190  XXX I  200  1                                  11
+II
+HELIX    1  H1 XXX J 213  XXX J  223  1                                  11
+JJ
+HELIX    1  H1 XXX K 220  XXX K  230  1                                  11
+KK
+HELIX    1  H1 XXX L 335  XXX L  345  1                                  11
+LL
+HELIX    1  H1 XXX M 251  XXX M  261  1                                  11
+MM
+HELIX    1  H1 XXX N 270  XXX N  280  1                                  11
+NN
 ATOM   1434  N   TYR A 182      21.369 -18.452  -7.157  1.00 32.53      A    N  
 ATOM   1435  CA  TYR A 182      21.066 -17.269  -6.357  1.00 31.80      A    C  
 ATOM   1436  C   TYR A 182      19.947 -16.477  -6.998  1.00 30.15      A    C  

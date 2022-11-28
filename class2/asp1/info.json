@@ -1,0 +1,14 @@
+{
+		"name": "AspRS",
+		"fullName": "Aspartyl tRNA Synthetase (discriminating)",
+		"icon": "/fig/icon_acidic.png",
+		"substrate": "Aspartate",
+		"incorporates": "Aspartate",
+		"class": "Class II",
+		"subclass": "b",
+		"oligo": "Homodimer",
+		"codons": "GAU, GAC",
+		"editing": "No",
+		"ref_str": ["structures/Asp_Bact_1c0a_E_coli.pdb"]
+	
+}

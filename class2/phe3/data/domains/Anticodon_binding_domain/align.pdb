@@ -1,14 +1,19 @@
-SHEET    1  E115 XXX A 194 XXX  A 208  0
-SHEET    2  E2 6 XXX B 190 XXX  B 195  0
-SHEET    3  E3 5 XXX B 197 XXX  B 201  0
-SHEET    4  E4 9 XXX B 204 XXX  B 212  0
-SHEET    5  E5 6 XXX C 183 XXX  C 188  0
-SHEET    6  E6 2 XXX C 195 XXX  C 196  0
-SHEET    7  E7 2 XXX C 204 XXX  C 205  0
-SHEET    8  E8 7 XXX D 262 XXX  D 268  0
-SHEET    9  E9 9 XXX D 273 XXX  D 281  0
-SHEET   10 E10 2 XXX D 283 XXX  D 284  0
-SHEET   11 E1123 XXX E 234 XXX  E 256  0
+HELIX    1  H1 XXX A 194  XXX A  199  1                                   6
+AA
+HELIX    1  H1 XXX B 196  XXX B  201  1                                   6
+HELIX    2  H2 XXX B 203  XXX B  205  1                                   3
+SHEET    1  E1 2 XXX B 190 XXX  B 191  0
+SHEET    2  E2 2 XXX B 208 XXX  B 209  0
+HELIX    1  H1 XXX C 189  XXX C  194  1                                   6
+SHEET    1  E1 2 XXX C 183 XXX  C 184  0
+SHEET    2  E2 2 XXX C 201 XXX  C 202  0
+HELIX    1  H1 XXX D 268  XXX D  272  1                                   5
+HELIX    2  H2 XXX D 275  XXX D  278  1                                   4
+SHEET    1  E1 2 XXX D 262 XXX  D 263  0
+SHEET    2  E2 2 XXX D 280 XXX  D 281  0
+HELIX    1  H1 XXX E 240  XXX E  245  1                                   6
+HELIX    2  H2 XXX E 247  XXX E  249  1                                   3
+EE
 ATOM   1435  N   LYS A 187      41.782  17.754 -31.787  1.00201.14      C    N  
 ATOM   1436  CA  LYS A 187      41.022  17.814 -30.543  1.00201.14      C    C  
 ATOM   1437  C   LYS A 187      40.719  16.435 -29.974  1.00201.14      C    C  

@@ -8,7 +8,8 @@
 		"subclass": "c",
 		"oligo": "Heterotetramer",
 		"codons": "UUU, UUC",
-		"editing": "No"
+		"editing": "No",
+		"ref_str": ["structures/Phe_Euk_3L4G.C_H_sapiens.pdb"]
 	
 }
 

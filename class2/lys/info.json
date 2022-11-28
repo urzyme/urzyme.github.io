@@ -8,7 +8,8 @@
 		"subclass": "b",
 		"oligo": "Homodimer",
 		"codons": "AAA, AAG",
-		"editing": "Pretransfer"
+		"editing": "Pretransfer",
+		"ref_str": ["structures/Lys_Bact_3E9H_G_stearothermophilus.pdb"]
 	
 }
 

@@ -8,6 +8,7 @@
 		"subclass": "c or d",
 		"oligo": "Homodimeric",
 		"codons": "GCU, GCC, GCA, GCG",
-		"editing": "Post-transfer"
+		"editing": "Post-transfer",
+		"ref_str": ["structures/Ala_Bact_3HXV_E_coli.pdb"]
 	
 }

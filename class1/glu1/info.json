@@ -1,0 +1,13 @@
+{
+		"name": "GluRS",
+		"fullName": "Glutamyl tRNA Synthetase (discriminating)",
+		"icon": "/fig/icon_acidic.png",
+		"substrate": "Glutamate",
+		"incorporates": "Glutamate",
+		"class": "Class I",
+		"subclass": "b",
+		"oligo": "Monomeric",
+		"codons": "GAA, GAG",
+		"editing": "No"
+	
+}

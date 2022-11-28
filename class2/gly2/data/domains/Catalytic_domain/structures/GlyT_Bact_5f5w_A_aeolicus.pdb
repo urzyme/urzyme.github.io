@@ -2234,1158 +2234,278 @@ ATOM   1503  CG  GLU A 181     -30.508  -6.022 -17.812  1.00 46.75           C
 ATOM   1504  CD  GLU A 181     -29.258  -6.872 -17.663  1.00 46.75           C  
 ATOM   1505  OE1 GLU A 181     -29.289  -7.849 -16.869  1.00 46.75           O  
 ATOM   1506  OE2 GLU A 181     -28.236  -6.593 -18.365  1.00 46.75           O  
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
+TER   11745      GLU E 280                                                      
+HETATM11746  C   G5A A 300     -47.484  16.521  -4.434  1.00 40.81           C  
+HETATM11747  N   G5A A 300     -47.796  16.137  -2.019  1.00 40.81           N  
+HETATM11748  O   G5A A 300     -48.177  15.537  -4.637  1.00 40.81           O  
+HETATM11749  S   G5A A 300     -47.325  17.024  -6.947  1.00 40.81           S  
+HETATM11750  N1  G5A A 300     -47.912  11.349 -13.879  1.00 40.81           N  
+HETATM11751  C2  G5A A 300     -46.588  11.335 -13.683  1.00 40.81           C  
+HETATM11752  N3  G5A A 300     -46.021  12.085 -12.732  1.00 40.81           N  
+HETATM11753  C4  G5A A 300     -46.786  12.877 -11.948  1.00 40.81           C  
+HETATM11754  C5  G5A A 300     -48.157  12.915 -12.127  1.00 40.81           C  
+HETATM11755  C6  G5A A 300     -48.721  12.123 -13.125  1.00 40.81           C  
+HETATM11756  N6  G5A A 300     -50.060  12.113 -13.343  1.00 40.81           N  
+HETATM11757  N7  G5A A 300     -48.648  13.776 -11.217  1.00 40.81           N  
+HETATM11758  C8  G5A A 300     -47.605  14.254 -10.495  1.00 40.81           C  
+HETATM11759  N9  G5A A 300     -46.473  13.703 -10.956  1.00 40.81           N  
+HETATM11760  CA  G5A A 300     -47.174  16.981  -3.029  1.00 40.81           C  
+HETATM11761  C1' G5A A 300     -45.084  13.909 -10.471  1.00 40.81           C  
+HETATM11762  O1S G5A A 300     -46.749  18.089  -7.718  1.00 40.81           O  
+HETATM11763  C2' G5A A 300     -44.515  15.274 -10.823  1.00 40.81           C  
+HETATM11764  O2' G5A A 300     -43.091  15.122 -10.901  1.00 40.81           O  
+HETATM11765  O2S G5A A 300     -48.744  17.006  -7.119  1.00 40.81           O  
+HETATM11766  C3' G5A A 300     -44.863  16.097  -9.607  1.00 40.81           C  
+HETATM11767  O3' G5A A 300     -44.005  17.231  -9.424  1.00 40.81           O  
+HETATM11768  N3S G5A A 300     -46.961  17.264  -5.406  1.00 40.81           N  
+HETATM11769  C4' G5A A 300     -44.625  15.073  -8.510  1.00 40.81           C  
+HETATM11770  O4' G5A A 300     -45.086  13.830  -9.046  1.00 40.81           O  
+HETATM11771  C5' G5A A 300     -45.329  15.386  -7.205  1.00 40.81           C  
+HETATM11772  O5' G5A A 300     -46.703  15.618  -7.452  1.00 40.81           O  
+HETATM11773  C   G5A B 300     -40.322  38.453  21.531  1.00 47.55           C  
+HETATM11774  N   G5A B 300     -40.546  40.296  23.152  1.00 47.55           N  
+HETATM11775  O   G5A B 300     -40.183  37.694  22.476  1.00 47.55           O  
+HETATM11776  S   G5A B 300     -40.281  36.504  19.860  1.00 47.55           S  
+HETATM11777  N1  G5A B 300     -36.341  28.476  20.659  1.00 47.55           N  
+HETATM11778  C2  G5A B 300     -35.355  29.157  20.062  1.00 47.55           C  
+HETATM11779  N3  G5A B 300     -35.511  30.439  19.714  1.00 47.55           N  
+HETATM11780  C4  G5A B 300     -36.680  31.071  19.962  1.00 47.55           C  
+HETATM11781  C5  G5A B 300     -37.718  30.394  20.575  1.00 47.55           C  
+HETATM11782  C6  G5A B 300     -37.528  29.060  20.928  1.00 47.55           C  
+HETATM11783  N6  G5A B 300     -38.507  28.346  21.539  1.00 47.55           N  
+HETATM11784  N7  G5A B 300     -38.739  31.263  20.692  1.00 47.55           N  
+HETATM11785  C8  G5A B 300     -38.337  32.446  20.165  1.00 47.55           C  
+HETATM11786  N9  G5A B 300     -37.080  32.313  19.716  1.00 47.55           N  
+HETATM11787  CA  G5A B 300     -40.528  39.934  21.742  1.00 47.55           C  
+HETATM11788  C1' G5A B 300     -36.218  33.339  19.076  1.00 47.55           C  
+HETATM11789  O1S G5A B 300     -40.465  36.401  18.440  1.00 47.55           O  
+HETATM11790  C2' G5A B 300     -36.644  33.691  17.660  1.00 47.55           C  
+HETATM11791  O2' G5A B 300     -35.466  34.130  16.969  1.00 47.55           O  
+HETATM11792  O2S G5A B 300     -41.320  35.796  20.541  1.00 47.55           O  
+HETATM11793  C3' G5A B 300     -37.562  34.869  17.878  1.00 47.55           C  
+HETATM11794  O3' G5A B 300     -37.673  35.723  16.731  1.00 47.55           O  
+HETATM11795  N3S G5A B 300     -40.316  38.054  20.261  1.00 47.55           N  
+HETATM11796  C4' G5A B 300     -36.824  35.583  18.998  1.00 47.55           C  
+HETATM11797  O4' G5A B 300     -36.309  34.544  19.834  1.00 47.55           O  
+HETATM11798  C5' G5A B 300     -37.687  36.536  19.800  1.00 47.55           C  
+HETATM11799  O5' G5A B 300     -38.848  35.862  20.248  1.00 47.55           O  
+HETATM11800  C   G5A C 300     -19.523  35.482  48.596  1.00 52.65           C  
+HETATM11801  N   G5A C 300     -19.777  33.393  47.312  1.00 52.65           N  
+HETATM11802  O   G5A C 300     -20.706  35.701  48.394  1.00 52.65           O  
+HETATM11803  S   G5A C 300     -19.314  37.559  50.091  1.00 52.65           S  
+HETATM11804  N1  G5A C 300     -24.138  45.129  49.930  1.00 52.65           N  
+HETATM11805  C2  G5A C 300     -23.137  45.477  49.113  1.00 52.65           C  
+HETATM11806  N3  G5A C 300     -22.130  44.637  48.854  1.00 52.65           N  
+HETATM11807  C4  G5A C 300     -22.108  43.410  49.422  1.00 52.65           C  
+HETATM11808  C5  G5A C 300     -23.127  43.021  50.273  1.00 52.65           C  
+HETATM11809  C6  G5A C 300     -24.164  43.917  50.524  1.00 52.65           C  
+HETATM11810  N6  G5A C 300     -25.194  43.589  51.344  1.00 52.65           N  
+HETATM11811  N7  G5A C 300     -22.843  41.770  50.678  1.00 52.65           N  
+HETATM11812  C8  G5A C 300     -21.679  41.398  50.090  1.00 52.65           C  
+HETATM11813  N9  G5A C 300     -21.237  42.411  49.331  1.00 52.65           N  
+HETATM11814  CA  G5A C 300     -18.855  34.241  48.053  1.00 52.65           C  
+HETATM11815  C1' G5A C 300     -20.016  42.466  48.487  1.00 52.65           C  
+HETATM11816  O1S G5A C 300     -18.257  38.112  50.891  1.00 52.65           O  
+HETATM11817  C2' G5A C 300     -18.728  42.558  49.290  1.00 52.65           C  
+HETATM11818  O2' G5A C 300     -17.769  43.227  48.459  1.00 52.65           O  
+HETATM11819  O2S G5A C 300     -20.404  37.162  50.926  1.00 52.65           O  
+HETATM11820  C3' G5A C 300     -18.332  41.110  49.442  1.00 52.65           C  
+HETATM11821  O3' G5A C 300     -16.929  40.925  49.668  1.00 52.65           O  
+HETATM11822  N3S G5A C 300     -18.737  36.290  49.302  1.00 52.65           N  
+HETATM11823  C4' G5A C 300     -18.721  40.578  48.073  1.00 52.65           C  
+HETATM11824  O4' G5A C 300     -19.933  41.257  47.733  1.00 52.65           O  
+HETATM11825  C5' G5A C 300     -18.918  39.076  48.024  1.00 52.65           C  
+HETATM11826  O5' G5A C 300     -19.818  38.683  49.042  1.00 52.65           O  
+HETATM11827  C   G5A D 300     -75.005  36.770  30.997  1.00 68.05           C  
+HETATM11828  N   G5A D 300     -74.764  39.170  30.485  1.00 68.05           N  
+HETATM11829  O   G5A D 300     -75.196  36.579  29.806  1.00 68.05           O  
+HETATM11830  S   G5A D 300     -75.065  34.251  31.490  1.00 68.05           S  
+HETATM11831  N1  G5A D 300     -79.291  27.726  27.000  1.00 68.05           N  
+HETATM11832  C2  G5A D 300     -80.237  28.039  27.894  1.00 68.05           C  
+HETATM11833  N3  G5A D 300     -80.029  28.979  28.822  1.00 68.05           N  
+HETATM11834  C4  G5A D 300     -78.846  29.632  28.871  1.00 68.05           C  
+HETATM11835  C5  G5A D 300     -77.848  29.331  27.962  1.00 68.05           C  
+HETATM11836  C6  G5A D 300     -78.093  28.347  27.006  1.00 68.05           C  
+HETATM11837  N6  G5A D 300     -77.155  28.014  26.084  1.00 68.05           N  
+HETATM11838  N7  G5A D 300     -76.803  30.129  28.247  1.00 68.05           N  
+HETATM11839  C8  G5A D 300     -77.151  30.903  29.304  1.00 68.05           C  
+HETATM11840  N9  G5A D 300     -78.398  30.585  29.680  1.00 68.05           N  
+HETATM11841  CA  G5A D 300     -74.756  38.160  31.534  1.00 68.05           C  
+HETATM11842  C1' G5A D 300     -79.208  31.175  30.777  1.00 68.05           C  
+HETATM11843  O1S G5A D 300     -74.845  33.458  32.667  1.00 68.05           O  
+HETATM11844  C2' G5A D 300     -78.732  30.776  32.164  1.00 68.05           C  
+HETATM11845  O2' G5A D 300     -79.875  30.835  33.028  1.00 68.05           O  
+HETATM11846  O2S G5A D 300     -74.069  33.956  30.508  1.00 68.05           O  
+HETATM11847  C3' G5A D 300     -77.781  31.893  32.518  1.00 68.05           C  
+HETATM11848  O3' G5A D 300     -77.610  32.068  33.930  1.00 68.05           O  
+HETATM11849  N3S G5A D 300     -74.989  35.797  31.903  1.00 68.05           N  
+HETATM11850  C4' G5A D 300     -78.525  33.079  31.926  1.00 68.05           C  
+HETATM11851  O4' G5A D 300     -79.098  32.596  30.708  1.00 68.05           O  
+HETATM11852  C5' G5A D 300     -77.653  34.290  31.663  1.00 68.05           C  
+HETATM11853  O5' G5A D 300     -76.529  33.907  30.894  1.00 68.05           O  
+HETATM11854  C   G5A E 300     -96.544  47.984   6.829  1.00 74.65           C  
+HETATM11855  N   G5A E 300     -96.335  45.529   6.900  1.00 74.65           N  
+HETATM11856  O   G5A E 300     -95.349  48.051   7.066  1.00 74.65           O  
+HETATM11857  S   G5A E 300     -96.713  50.533   6.566  1.00 74.65           S  
+HETATM11858  N1  G5A E 300     -91.615  56.930  10.265  1.00 74.65           N  
+HETATM11859  C2  G5A E 300     -92.582  56.848  11.186  1.00 74.65           C  
+HETATM11860  N3  G5A E 300     -93.613  56.009  11.034  1.00 74.65           N  
+HETATM11861  C4  G5A E 300     -93.693  55.226   9.935  1.00 74.65           C  
+HETATM11862  C5  G5A E 300     -92.710  55.290   8.964  1.00 74.65           C  
+HETATM11863  C6  G5A E 300     -91.647  56.172   9.149  1.00 74.65           C  
+HETATM11864  N6  G5A E 300     -90.649  56.273   8.235  1.00 74.65           N  
+HETATM11865  N7  G5A E 300     -93.049  54.410   8.004  1.00 74.65           N  
+HETATM11866  C8  G5A E 300     -94.210  53.819   8.376  1.00 74.65           C  
+HETATM11867  N9  G5A E 300     -94.597  54.331   9.553  1.00 74.65           N  
+HETATM11868  CA  G5A E 300     -97.244  46.651   6.712  1.00 74.65           C  
+HETATM11869  C1' G5A E 300     -95.795  53.984  10.359  1.00 74.65           C  
+HETATM11870  O1S G5A E 300     -97.767  51.430   6.187  1.00 74.65           O  
+HETATM11871  C2' G5A E 300     -97.098  54.488   9.758  1.00 74.65           C  
+HETATM11872  O2' G5A E 300     -98.012  54.676  10.847  1.00 74.65           O  
+HETATM11873  O2S G5A E 300     -95.658  50.581   5.603  1.00 74.65           O  
+HETATM11874  C3' G5A E 300     -97.549  53.314   8.925  1.00 74.65           C  
+HETATM11875  O3' G5A E 300     -98.964  53.293   8.692  1.00 74.65           O  
+HETATM11876  N3S G5A E 300     -97.317  49.052   6.646  1.00 74.65           N  
+HETATM11877  C4' G5A E 300     -97.147  52.166   9.835  1.00 74.65           C  
+HETATM11878  O4' G5A E 300     -95.904  52.563  10.419  1.00 74.65           O  
+HETATM11879  C5' G5A E 300     -97.004  50.833   9.127  1.00 74.65           C  
+HETATM11880  O5' G5A E 300     -96.143  50.979   8.013  1.00 74.65           O  
+HETATM11881  O   HOH B 401     -40.363  42.530  19.893  1.00 48.34           O  
+HETATM11882  O   HOH B 402     -38.371  40.235  24.955  1.00 43.43           O  
+CONECT11746117481176011768                                                      
+CONECT1174711760                                                                
+CONECT1174811746                                                                
+CONECT1174911762117651176811772                                                 
+CONECT117501175111755                                                           
+CONECT117511175011752                                                           
+CONECT117521175111753                                                           
+CONECT11753117521175411759                                                      
+CONECT11754117531175511757                                                      
+CONECT11755117501175411756                                                      
+CONECT1175611755                                                                
+CONECT117571175411758                                                           
+CONECT117581175711759                                                           
+CONECT11759117531175811761                                                      
+CONECT117601174611747                                                           
+CONECT11761117591176311770                                                      
+CONECT1176211749                                                                
+CONECT11763117611176411766                                                      
+CONECT1176411763                                                                
+CONECT1176511749                                                                
+CONECT11766117631176711769                                                      
+CONECT1176711766                                                                
+CONECT117681174611749                                                           
+CONECT11769117661177011771                                                      
+CONECT117701176111769                                                           
+CONECT117711176911772                                                           
+CONECT117721174911771                                                           
+CONECT11773117751178711795                                                      
+CONECT1177411787                                                                
+CONECT1177511773                                                                
+CONECT1177611789117921179511799                                                 
+CONECT117771177811782                                                           
+CONECT117781177711779                                                           
+CONECT117791177811780                                                           
+CONECT11780117791178111786                                                      
+CONECT11781117801178211784                                                      
+CONECT11782117771178111783                                                      
+CONECT1178311782                                                                
+CONECT117841178111785                                                           
+CONECT117851178411786                                                           
+CONECT11786117801178511788                                                      
+CONECT117871177311774                                                           
+CONECT11788117861179011797                                                      
+CONECT1178911776                                                                
+CONECT11790117881179111793                                                      
+CONECT1179111790                                                                
+CONECT1179211776                                                                
+CONECT11793117901179411796                                                      
+CONECT1179411793                                                                
+CONECT117951177311776                                                           
+CONECT11796117931179711798                                                      
+CONECT117971178811796                                                           
+CONECT117981179611799                                                           
+CONECT117991177611798                                                           
+CONECT11800118021181411822                                                      
+CONECT1180111814                                                                
+CONECT1180211800                                                                
+CONECT1180311816118191182211826                                                 
+CONECT118041180511809                                                           
+CONECT118051180411806                                                           
+CONECT118061180511807                                                           
+CONECT11807118061180811813                                                      
+CONECT11808118071180911811                                                      
+CONECT11809118041180811810                                                      
+CONECT1181011809                                                                
+CONECT118111180811812                                                           
+CONECT118121181111813                                                           
+CONECT11813118071181211815                                                      
+CONECT118141180011801                                                           
+CONECT11815118131181711824                                                      
+CONECT1181611803                                                                
+CONECT11817118151181811820                                                      
+CONECT1181811817                                                                
+CONECT1181911803                                                                
+CONECT11820118171182111823                                                      
+CONECT1182111820                                                                
+CONECT118221180011803                                                           
+CONECT11823118201182411825                                                      
+CONECT118241181511823                                                           
+CONECT118251182311826                                                           
+CONECT118261180311825                                                           
+CONECT11827118291184111849                                                      
+CONECT1182811841                                                                
+CONECT1182911827                                                                
+CONECT1183011843118461184911853                                                 
+CONECT118311183211836                                                           
+CONECT118321183111833                                                           
+CONECT118331183211834                                                           
+CONECT11834118331183511840                                                      
+CONECT11835118341183611838                                                      
+CONECT11836118311183511837                                                      
+CONECT1183711836                                                                
+CONECT118381183511839                                                           
+CONECT118391183811840                                                           
+CONECT11840118341183911842                                                      
+CONECT118411182711828                                                           
+CONECT11842118401184411851                                                      
+CONECT1184311830                                                                
+CONECT11844118421184511847                                                      
+CONECT1184511844                                                                
+CONECT1184611830                                                                
+CONECT11847118441184811850                                                      
+CONECT1184811847                                                                
+CONECT118491182711830                                                           
+CONECT11850118471185111852                                                      
+CONECT118511184211850                                                           
+CONECT118521185011853                                                           
+CONECT118531183011852                                                           
+CONECT11854118561186811876                                                      
+CONECT1185511868                                                                
+CONECT1185611854                                                                
+CONECT1185711870118731187611880                                                 
+CONECT118581185911863                                                           
+CONECT118591185811860                                                           
+CONECT118601185911861                                                           
+CONECT11861118601186211867                                                      
+CONECT11862118611186311865                                                      
+CONECT11863118581186211864                                                      
+CONECT1186411863                                                                
+CONECT118651186211866                                                           
+CONECT118661186511867                                                           
+CONECT11867118611186611869                                                      
+CONECT118681185411855                                                           
+CONECT11869118671187111878                                                      
+CONECT1187011857                                                                
+CONECT11871118691187211874                                                      
+CONECT1187211871                                                                
+CONECT1187311857                                                                
+CONECT11874118711187511877                                                      
+CONECT1187511874                                                                
+CONECT118761185411857                                                           
+CONECT11877118741187811879                                                      
+CONECT118781186911877                                                           
+CONECT118791187711880                                                           
+CONECT118801185711879                                                           
+MASTER      465    0    5   63   75    0   25    611877    5  135  115          
+END                                                                             

@@ -1,24 +1,24 @@
-HELIX    1  H1 XXX C	 226  XXX A  240  1                                  15
+HELIX    1  H1 XXX C	 226  XXX C  240  1                                  15
 SHEET    1  E1 2 XXX C 244 XXX  C 245  0
 SHEET    2  E2 3 XXX C 252 XXX  C 254  0
-HELIX    2  H2 XXX C	 255  XXX A  258  1                                   4
-HELIX    3  H3 XXX C	 260  XXX A  262  1                                   3
-HELIX    4  H4 XXX C	 269  XXX A  271  1                                   3
-HELIX    5  H5 XXX C	 290  XXX A  301  1                                  12
-HELIX    6  H6 XXX C	 316  XXX A  319  1                                   4
+HELIX    2  H2 XXX C	 255  XXX C  258  1                                   4
+HELIX    3  H3 XXX C	 260  XXX C  262  1                                   3
+HELIX    4  H4 XXX C	 269  XXX C  271  1                                   3
+HELIX    5  H5 XXX C	 290  XXX C  301  1                                  12
+HELIX    6  H6 XXX C	 316  XXX C  319  1                                   4
 SHEET    3  E3 3 XXX C 322 XXX  C 324  0
-HELIX    7  H7 XXX C	 329  XXX A  340  1                                  12
+HELIX    7  H7 XXX C	 329  XXX C  340  1                                  12
 SHEET    4  E410 XXX C 348 XXX  C 357  0
 SHEET    5  E512 XXX C 369 XXX  C 380  0
-HELIX    8  H8 XXX C	 384  XXX A  396  1                                  13
+HELIX    8  H8 XXX C	 384  XXX C  396  1                                  13
 SHEET    6  E6 4 XXX C 404 XXX  C 407  0
 SHEET    7  E7 8 XXX C 416 XXX  C 423  0
 SHEET    8  E8 9 XXX C 428 XXX  C 436  0
-HELIX    9  H9 XXX C	 440  XXX A  443  1                                   4
-HELIX   10 H10 XXX C	 444  XXX A  446  1                                   3
+HELIX    9  H9 XXX C	 440  XXX C  443  1                                   4
+HELIX   10 H10 XXX C	 444  XXX C  446  1                                   3
 SHEET    9  E9 9 XXX C 452 XXX  C 460  0
-HELIX   11 H11 XXX C	 462  XXX A  466  1                                   5
-HELIX   12 H12 XXX C	 484  XXX A  489  1                                   6
+HELIX   11 H11 XXX C	 462  XXX C  466  1                                   5
+HELIX   12 H12 XXX C	 484  XXX C  489  1                                   6
 ATOM   1718  N   GLY C 222      37.986 129.188 -17.236  1.00 96.20      C    N  
 ATOM   1719  CA  GLY C 222      38.715 129.023 -18.477  1.00 94.53      C    C  
 ATOM   1720  C   GLY C 222      37.947 127.965 -19.231  1.00 93.41      C    C  
@@ -2272,6 +2272,6 @@ ATOM   3967  CB  ASP C 496      27.177 114.442 -20.591  1.00174.14      C    C
 ATOM   3968  CG  ASP C 496      26.513 114.797 -19.244  1.00173.23      C    C  
 ATOM   3969  OD1 ASP C 496      25.394 114.310 -18.969  1.00171.87      C    O  
 ATOM   3970  OD2 ASP C 496      27.113 115.559 -18.454  1.00172.11      C    O1-
-NA
+END
 
 

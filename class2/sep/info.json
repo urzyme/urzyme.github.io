@@ -8,7 +8,8 @@
 		"subclass": "c",
 		"oligo": "Homotetramer",
 		"codons": "UGU, UGC",
-		"editing": "No"
+		"editing": "No",
+		"ref_str": ["structures/Sep_Arch_2DU4_A_fulgidus.pdb"]
 	
 }
 

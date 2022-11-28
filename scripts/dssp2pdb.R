@@ -22,6 +22,11 @@ if (length(grep("^HELIX", pdb) > 0)){
 
 # Get secondary structural elements
 sse.df = data.frame(start = numeric(0), stop = numeric(0), sse = character(0), chain = character(0))
+
+
+
+
+
 prevSSE =  substr(dssp[start], 17, 17)
 startsse = as.numeric(substr(dssp[start], 8, 10))
 for (i in (start+1):length(dssp)){
@@ -31,14 +36,18 @@ for (i in (start+1):length(dssp)){
 		next
 	}
 
+
+
+
 	res = substr(line, 14, 14)
 	if (res == "!"){
 		next;
 	}
-	
+
 	
 	sse = substr(line, 17, 17)
 	chain = substr(line, 12, 12)
+
 	
 	if (sse != prevSSE){
 
@@ -54,6 +63,11 @@ for (i in (start+1):length(dssp)){
 	
 
 }
+
+if (nrow(sse.df) == 0){
+	stop(paste("dssp2pdb.R - skipping", args[1], " because there are no SSEs \n"))
+}
+
 
 
 sse.out = character(0)

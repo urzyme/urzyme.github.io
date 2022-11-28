@@ -149,7 +149,7 @@ for (domain in features.df$domain){
 		}
 		pdb.lines = c(pdb.lines, atomLinesInclude)
 		if (atomLines[length(atomLines)] < length(pdb)){
-			pdb.lines = c(pdb.lines, atomLines[(length(atomLines)+1):length(pdb)])
+			pdb.lines = c(pdb.lines, (atomLines[length(atomLines)]+1):length(pdb))
 		}
 		pdb.truncated = pdb[pdb.lines]
 

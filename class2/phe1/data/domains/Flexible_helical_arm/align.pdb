@@ -1,45 +1,58 @@
-SHEET    1  E1 1 XXX A  25 XXX  A  25  0
-HELIX    1  H1 XXX A	  26  XXX A   30  1                                   5
-HELIX    2  H2 XXX A	  49  XXX A   52  1                                   4
-SHEET    2  E2 2 XXX A  84 XXX  A  85  0
-SHEET    3  E3 3 XXX B  30 XXX  B  32  0
-SHEET    4  E4 2 XXX B  49 XXX  B  50  0
-SHEET    5  E5 3 XXX B  55 XXX  B  57  0
-SHEET    6  E6 6 XXX B  66 XXX  B  71  0
-SHEET    7  E7 3 XXX B  91 XXX  B  93  0
-SHEET    8  E8 3 XXX C   2 XXX  C   4  0
-SHEET    9  E9 2 XXX C  56 XXX  C  57  0
-SHEET   10 E10 3 XXX C  61 XXX  C  63  0
-SHEET   11 E11 3 XXX C  77 XXX  C  79  0
-SHEET   12 E12 3 XXX D  12 XXX  D  14  0
-SHEET   13 E13 4 XXX D  20 XXX  D  23  0
-SHEET   14 E14 4 XXX D  56 XXX  D  59  0
-SHEET   15 E15 2 XXX D  88 XXX  D  89  0
-SHEET   16 E16 4 XXX D  93 XXX  D  96  0
-HELIX    3  H3 XXX E	   2  XXX A    9  1                                   8
-SHEET   17 E17 2 XXX E  34 XXX  E  35  0
-SHEET   18 E18 2 XXX E  40 XXX  E  41  0
-SHEET   19 E19 3 XXX E  45 XXX  E  47  0
-HELIX    4  H4 XXX E	  55  XXX A   57  1                                   3
-SHEET   20 E20 3 XXX F  15 XXX  F  17  0
-SHEET   21 E21 5 XXX F  20 XXX  F  24  0
-SHEET   22 E2211 XXX F  36 XXX  F  46  0
-SHEET   23 E23 3 XXX F  56 XXX  F  58  0
-SHEET   24 E24 3 XXX F  84 XXX  F  86  0
-SHEET   25 E25 3 XXX G   2 XXX  G   4  0
-SHEET   26 E26 2 XXX G  22 XXX  G  23  0
-SHEET   27 E27 2 XXX G  92 XXX  G  93  0
-SHEET   28 E28 3 XXX H   9 XXX  H  11  0
-SHEET   29 E29 3 XXX H  18 XXX  H  20  0
-SHEET   30 E30 2 XXX H  29 XXX  H  30  0
-SHEET   31 E31 3 XXX H  35 XXX  H  37  0
-SHEET   32 E32 8 XXX H  45 XXX  H  52  0
-SHEET   33 E33 2 XXX H  85 XXX  H  86  0
-SHEET   34 E34 5 XXX H  90 XXX  H  94  0
-SHEET   35 E35 2 XXX I  10 XXX  I  11  0
-SHEET   36 E3611 XXX I  21 XXX  I  31  0
-SHEET   37 E37 3 XXX I  35 XXX  I  37  0
-SHEET   38 E38 5 XXX I  91 XXX  I  95  0
+HELIX    1  H1 XXX A   9  XXX A   15  1                                   7
+HELIX    2  H2 XXX A  17  XXX A   37  1                                  21
+HELIX    3  H3 XXX A  49  XXX A   51  1                                   3
+HELIX    4  H4 XXX A  52  XXX A   56  1                                   5
+HELIX    5  H5 XXX A  57  XXX A   58  1                                   2
+HELIX    6  H6 XXX A  60  XXX A   70  1                                  11
+HELIX    7  H7 XXX A  73  XXX A   83  1                                  11
+AA
+HELIX    1  H1 XXX B  14  XXX B   30  1                                  17
+HELIX    2  H2 XXX B  34  XXX B   45  1                                  12
+HELIX    3  H3 XXX B  50  XXX B   57  1                                   8
+HELIX    4  H4 XXX B  58  XXX B   60  1                                   3
+HELIX    5  H5 XXX B  63  XXX B  102  1                                  40
+BB
+HELIX    1  H1 XXX C   2  XXX C   13  1                                  12
+HELIX    2  H2 XXX C  20  XXX C   31  1                                  12
+HELIX    3  H3 XXX C  36  XXX C   43  1                                   8
+HELIX    4  H4 XXX C  44  XXX C   46  1                                   3
+HELIX    5  H5 XXX C  52  XXX C   84  1                                  33
+CC
+HELIX    1  H1 XXX D   3  XXX D   18  1                                  16
+HELIX    2  H2 XXX D  24  XXX D   35  1                                  12
+HELIX    3  H3 XXX D  40  XXX D   50  1                                  11
+HELIX    4  H4 XXX D  53  XXX D   92  1                                  40
+DD
+HELIX    1  H1 XXX E   2  XXX E   27  1                                  26
+HELIX    2  H2 XXX E  31  XXX E   42  1                                  12
+HELIX    3  H3 XXX E  47  XXX E   53  1                                   7
+HELIX    4  H4 XXX E  54  XXX E   57  1                                   4
+HELIX    5  H5 XXX E  63  XXX E   99  1                                  37
+EE
+HELIX    1  H1 XXX F   2  XXX F   10  1                                   9
+HELIX    2  H2 XXX F  15  XXX F   26  1                                  12
+HELIX    3  H3 XXX F  31  XXX F   38  1                                   8
+HELIX    4  H4 XXX F  39  XXX F   41  1                                   3
+HELIX    5  H5 XXX F  44  XXX F   83  1                                  40
+FF
+HELIX    1  H1 XXX G   2  XXX G   17  1                                  16
+HELIX    2  H2 XXX G  22  XXX G   33  1                                  12
+HELIX    3  H3 XXX G  38  XXX G   45  1                                   8
+HELIX    4  H4 XXX G  46  XXX G   48  1                                   3
+HELIX    5  H5 XXX G  51  XXX G   90  1                                  40
+GG
+HELIX    1  H1 XXX H   2  XXX H   16  1                                  15
+HELIX    2  H2 XXX H  21  XXX H   32  1                                  12
+HELIX    3  H3 XXX H  37  XXX H   43  1                                   7
+HELIX    4  H4 XXX H  44  XXX H   47  1                                   4
+HELIX    5  H5 XXX H  50  XXX H   89  1                                  40
+HH
+HELIX    1  H1 XXX I   2  XXX I   17  1                                  16
+HELIX    2  H2 XXX I  21  XXX I   32  1                                  12
+HELIX    3  H3 XXX I  37  XXX I   44  1                                   8
+HELIX    4  H4 XXX I  45  XXX I   47  1                                   3
+HELIX    5  H5 XXX I  51  XXX I   90  1                                  40
+II
 ATOM      1  N   LEU A   6      41.245   2.558 -40.164  0.96 80.00      A    N  
 ATOM      2  CA  LEU A   6      42.725   2.522 -39.931  0.96 80.00      A    C  
 ATOM      3  C   LEU A   6      43.502   2.314 -41.247  0.96 80.00      A    C  

@@ -349,8 +349,8 @@ function renderTertiary(pdb = null, id = "tertiary") {
 	  if (id == "tertiary"){
       PV_GEOMS[id] = viewer.cartoon('protein', structure, { color : colourSelected(id, color.ssSuccession) });
 	  }else{
-      //var grad = color.gradient(["red", "blue", "green"]);
-		  PV_GEOMS[id] = viewer.cartoon('protein', structure, { color : colourSelected(id, color.byChain) });
+      var grad = color.gradient(["red", "blue", "green"]);
+		  PV_GEOMS[id] = viewer.cartoon('protein', structure, { color : colourSelected(id, color.bySS) });
 	  }
 	 
     viewer.centerOn(structure);

@@ -1,17 +1,17 @@
-HELIX    1  H1 XXX C	   4  XXX A   16  1                                  13
-HELIX    2  H2 XXX C	  25  XXX A   28  1                                   4
-HELIX    3  H3 XXX C	  37  XXX A   41  1                                   5
-HELIX    4  H4 XXX C	  43  XXX A   46  1                                   4
+HELIX    1  H1 XXX C	   4  XXX C   16  1                                  13
+HELIX    2  H2 XXX C	  25  XXX C   28  1                                   4
+HELIX    3  H3 XXX C	  37  XXX C   41  1                                   5
+HELIX    4  H4 XXX C	  43  XXX C   46  1                                   4
 SHEET    1  E1 9 XXX C  53 XXX  C  61  0
-HELIX    5  H5 XXX C	  65  XXX A   73  1                                   9
-HELIX    6  H6 XXX C	  76  XXX A   83  1                                   8
-HELIX    7  H7 XXX C	  91  XXX A   94  1                                   4
-HELIX    8  H8 XXX C	  98  XXX A  108  1                                  11
+HELIX    5  H5 XXX C	  65  XXX C   73  1                                   9
+HELIX    6  H6 XXX C	  76  XXX C   83  1                                   8
+HELIX    7  H7 XXX C	  91  XXX C   94  1                                   4
+HELIX    8  H8 XXX C	  98  XXX C  108  1                                  11
 SHEET    2  E2 2 XXX C 113 XXX  C 114  0
 SHEET    3  E3 2 XXX C 126 XXX  C 127  0
-HELIX    9  H9 XXX C	 135  XXX A  142  1                                   8
-HELIX   10 H10 XXX C	 143  XXX A  147  1                                   5
-HELIX   11 H11 XXX C	 153  XXX A  161  1                                   9
+HELIX    9  H9 XXX C	 135  XXX C  142  1                                   8
+HELIX   10 H10 XXX C	 143  XXX C  147  1                                   5
+HELIX   11 H11 XXX C	 153  XXX C  161  1                                   9
 SHEET    4  E4 9 XXX C 167 XXX  C 175  0
 ATOM      1  N   MET C   1      -1.792 144.316  -0.610  1.00201.14      C    N  
 ATOM      2  CA  MET C   1      -2.240 144.073   0.790  1.00201.14      C    C  
@@ -1420,6 +1420,6 @@ ATOM   1404  C   SER C 182      10.549 149.577  12.388  1.00162.21      C    C
 ATOM   1405  O   SER C 182      10.714 148.829  11.427  1.00161.94      C    O  
 ATOM   1406  CB  SER C 182      12.795 150.198  13.231  1.00164.32      C    C  
 ATOM   1407  OG  SER C 182      12.561 151.387  12.494  1.00162.52      C    O  
-NA
+END
 
 

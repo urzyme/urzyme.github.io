@@ -2072,780 +2072,186 @@ ATOM   2148  O   THR A 261     -47.031  42.935  14.101  1.00 81.67           O
 ATOM   2149  CB  THR A 261     -45.955  45.080  15.678  1.00 82.31           C  
 ATOM   2150  OG1 THR A 261     -44.838  44.433  16.303  1.00 82.37           O  
 ATOM   2151  CG2 THR A 261     -46.013  46.536  16.122  1.00 82.35           C  
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
-NA
+TER    6037      GLU B 381                                                      
+HETATM 6038  P   TYM A 400     -38.995  29.422  13.796  0.80 44.11           P  
+HETATM 6039  O1P TYM A 400     -39.882  28.687  14.727  0.80 44.00           O  
+HETATM 6040  O2P TYM A 400     -38.281  30.628  14.263  0.80 44.08           O  
+HETATM 6041  O5' TYM A 400     -39.854  29.856  12.499  0.80 44.35           O  
+HETATM 6042  C5' TYM A 400     -40.721  28.913  11.864  0.80 45.07           C  
+HETATM 6043  C4' TYM A 400     -40.727  29.075  10.328  0.80 45.67           C  
+HETATM 6044  O4' TYM A 400     -41.262  30.370   9.960  0.80 45.62           O  
+HETATM 6045  C1' TYM A 400     -40.264  31.107   9.187  0.80 45.67           C  
+HETATM 6046  N9  TYM A 400     -40.446  32.502   9.668  0.80 45.47           N  
+HETATM 6047  C4  TYM A 400     -40.998  33.504   8.984  0.80 45.24           C  
+HETATM 6048  N3  TYM A 400     -41.505  33.617   7.743  0.80 45.23           N  
+HETATM 6049  C2  TYM A 400     -41.997  34.774   7.310  0.80 45.06           C  
+HETATM 6050  N1  TYM A 400     -42.006  35.857   8.077  0.80 44.71           N  
+HETATM 6051  C6  TYM A 400     -41.516  35.813   9.328  0.80 44.89           C  
+HETATM 6052  N6  TYM A 400     -41.530  36.900  10.093  0.80 44.84           N  
+HETATM 6053  C5  TYM A 400     -40.993  34.617   9.811  0.80 45.15           C  
+HETATM 6054  N7  TYM A 400     -40.449  34.250  10.965  0.80 45.25           N  
+HETATM 6055  C8  TYM A 400     -40.121  32.962  10.879  0.80 45.38           C  
+HETATM 6056  C2' TYM A 400     -38.924  30.452   9.531  0.80 46.06           C  
+HETATM 6057  O2' TYM A 400     -38.025  30.559   8.426  0.80 46.22           O  
+HETATM 6058  C3' TYM A 400     -39.320  28.992   9.725  0.80 46.12           C  
+HETATM 6059  O3' TYM A 400     -39.410  28.324   8.456  0.80 46.71           O  
+HETATM 6060  NH3 TYM A 400     -34.986  26.584  14.376  0.80 43.62           N  
+HETATM 6061  CA  TYM A 400     -36.231  26.666  13.599  0.80 43.48           C  
+HETATM 6062  CB  TYM A 400     -36.994  25.348  13.720  0.80 43.35           C  
+HETATM 6063  CG  TYM A 400     -36.687  24.396  12.527  0.80 42.87           C  
+HETATM 6064  CD2 TYM A 400     -36.862  24.632  11.166  0.80 42.33           C  
+HETATM 6065  CE2 TYM A 400     -36.449  23.485  10.475  0.80 42.21           C  
+HETATM 6066  CE3 TYM A 400     -37.343  25.732  10.457  0.80 42.18           C  
+HETATM 6067  CD1 TYM A 400     -36.186  23.144  12.623  0.80 42.76           C  
+HETATM 6068  NE1 TYM A 400     -36.034  22.570  11.348  0.80 42.43           N  
+HETATM 6069  CZ2 TYM A 400     -36.518  23.444   9.087  0.80 41.99           C  
+HETATM 6070  CZ3 TYM A 400     -37.408  25.688   9.063  0.80 42.05           C  
+HETATM 6071  CH2 TYM A 400     -36.997  24.543   8.378  0.80 41.91           C  
+HETATM 6072  C   TYM A 400     -37.106  27.807  14.127  0.80 43.63           C  
+HETATM 6073  O   TYM A 400     -37.046  28.139  15.311  0.80 43.55           O  
+HETATM 6074  OPP TYM A 400     -37.915  28.381  13.175  0.80 43.75           O  
+HETATM 6075  S   SO4 A 393     -40.278  34.983  16.437  0.70 55.44           S  
+HETATM 6076  O1  SO4 A 393     -39.546  35.818  15.493  0.70 55.32           O  
+HETATM 6077  O2  SO4 A 393     -40.093  33.577  16.095  0.70 55.50           O  
+HETATM 6078  O3  SO4 A 393     -39.789  35.234  17.788  0.70 55.40           O  
+HETATM 6079  O4  SO4 A 393     -41.698  35.300  16.374  0.70 55.94           O  
+HETATM 6080  P   TYM B 900     -13.147   3.513  28.732  0.80 43.72           P  
+HETATM 6081  O1P TYM B 900     -13.933   2.694  27.782  0.80 43.57           O  
+HETATM 6082  O2P TYM B 900     -11.905   4.173  28.275  0.80 43.90           O  
+HETATM 6083  O5' TYM B 900     -12.767   2.609  30.009  0.80 43.91           O  
+HETATM 6084  C5' TYM B 900     -13.793   1.881  30.694  0.80 44.62           C  
+HETATM 6085  C4' TYM B 900     -13.488   1.769  32.193  0.80 45.19           C  
+HETATM 6086  O4' TYM B 900     -12.134   1.269  32.376  0.80 45.24           O  
+HETATM 6087  C1' TYM B 900     -11.399   2.207  33.215  0.80 45.50           C  
+HETATM 6088  N9  TYM B 900      -9.978   2.094  32.758  0.80 45.48           N  
+HETATM 6089  C4  TYM B 900      -8.980   1.549  33.453  0.80 45.35           C  
+HETATM 6090  N3  TYM B 900      -8.897   0.996  34.678  0.80 45.35           N  
+HETATM 6091  C2  TYM B 900      -7.744   0.524  35.139  0.80 45.11           C  
+HETATM 6092  N1  TYM B 900      -6.637   0.579  34.413  0.80 44.98           N  
+HETATM 6093  C6  TYM B 900      -6.648   1.116  33.180  0.80 45.27           C  
+HETATM 6094  N6  TYM B 900      -5.528   1.162  32.464  0.80 45.35           N  
+HETATM 6095  C5  TYM B 900      -7.841   1.621  32.668  0.80 45.32           C  
+HETATM 6096  N7  TYM B 900      -8.184   2.201  31.522  0.80 45.33           N  
+HETATM 6097  C8  TYM B 900      -9.488   2.483  31.577  0.80 45.38           C  
+HETATM 6098  C2' TYM B 900     -12.089   3.550  32.989  0.80 45.69           C  
+HETATM 6099  O2' TYM B 900     -11.933   4.381  34.136  0.80 45.76           O  
+HETATM 6100  C3' TYM B 900     -13.552   3.138  32.872  0.80 45.70           C  
+HETATM 6101  O3' TYM B 900     -14.118   2.964  34.182  0.80 46.38           O  
+HETATM 6102  NH3 TYM B 900     -16.033   7.501  28.178  0.80 43.19           N  
+HETATM 6103  CA  TYM B 900     -15.875   6.288  28.991  0.80 43.21           C  
+HETATM 6104  CB  TYM B 900     -17.164   5.466  28.944  0.80 43.13           C  
+HETATM 6105  CG  TYM B 900     -18.122   5.809  30.126  0.80 42.78           C  
+HETATM 6106  CD2 TYM B 900     -17.906   5.629  31.488  0.80 42.29           C  
+HETATM 6107  CE2 TYM B 900     -19.045   6.079  32.169  0.80 42.20           C  
+HETATM 6108  CE3 TYM B 900     -16.828   5.116  32.207  0.80 42.33           C  
+HETATM 6109  CD1 TYM B 900     -19.358   6.347  30.018  0.80 42.80           C  
+HETATM 6110  NE1 TYM B 900     -19.940   6.519  31.288  0.80 42.45           N  
+HETATM 6111  CZ2 TYM B 900     -19.098   6.011  33.556  0.80 42.08           C  
+HETATM 6112  CZ3 TYM B 900     -16.885   5.054  33.600  0.80 42.14           C  
+HETATM 6113  CH2 TYM B 900     -18.020   5.501  34.275  0.80 42.04           C  
+HETATM 6114  C   TYM B 900     -14.721   5.438  28.447  0.80 43.36           C  
+HETATM 6115  O   TYM B 900     -14.396   5.511  27.260  0.80 43.36           O  
+HETATM 6116  OPP TYM B 900     -14.125   4.631  29.386  0.80 43.46           O  
+HETATM 6117  S   SO4 B 393      -7.579   2.296  26.279  0.70 54.90           S  
+HETATM 6118  O1  SO4 B 393      -6.790   3.514  26.109  0.70 54.91           O  
+HETATM 6119  O2  SO4 B 393      -7.178   1.622  27.509  0.70 54.86           O  
+HETATM 6120  O3  SO4 B 393      -9.000   2.621  26.356  0.70 55.17           O  
+HETATM 6121  O4  SO4 B 393      -7.359   1.419  25.136  0.70 55.04           O  
+HETATM 6122  O   HOH A 394     -36.524  44.503   7.183  1.00 53.95           O  
+HETATM 6123  O   HOH A 395     -34.355  12.862  -5.636  1.00 67.63           O  
+HETATM 6124  O   HOH A 396     -50.674  26.847  25.892  1.00 58.74           O  
+HETATM 6125  O   HOH A 397     -48.145  30.414  29.329  1.00 60.33           O  
+HETATM 6126  O   HOH A 398     -42.582  13.195  18.513  1.00 47.01           O  
+HETATM 6127  O   HOH A 399     -15.378  33.610  21.327  1.00 42.58           O  
+HETATM 6128  O   HOH A 401     -34.514   6.000   1.257  1.00 62.20           O  
+HETATM 6129  O   HOH A 402     -30.756   3.313   3.641  1.00 64.54           O  
+HETATM 6130  O   HOH A 403     -29.663   3.130   6.096  1.00 66.34           O  
+HETATM 6131  O   HOH A 404     -15.132  15.752   4.704  1.00 48.21           O  
+HETATM 6132  O   HOH A 405     -37.416  49.459  14.499  1.00 69.12           O  
+HETATM 6133  O   HOH B 394      -8.786  27.084  21.169  1.00 46.87           O  
+CONECT 6038 6039 6040 6041 6074                                                 
+CONECT 6039 6038                                                                
+CONECT 6040 6038                                                                
+CONECT 6041 6038 6042                                                           
+CONECT 6042 6041 6043                                                           
+CONECT 6043 6042 6044 6058                                                      
+CONECT 6044 6043 6045                                                           
+CONECT 6045 6044 6046 6056                                                      
+CONECT 6046 6045 6047 6055                                                      
+CONECT 6047 6046 6048 6053                                                      
+CONECT 6048 6047 6049                                                           
+CONECT 6049 6048 6050                                                           
+CONECT 6050 6049 6051                                                           
+CONECT 6051 6050 6052 6053                                                      
+CONECT 6052 6051                                                                
+CONECT 6053 6047 6051 6054                                                      
+CONECT 6054 6053 6055                                                           
+CONECT 6055 6046 6054                                                           
+CONECT 6056 6045 6057 6058                                                      
+CONECT 6057 6056                                                                
+CONECT 6058 6043 6056 6059                                                      
+CONECT 6059 6058                                                                
+CONECT 6060 6061                                                                
+CONECT 6061 6060 6062 6072                                                      
+CONECT 6062 6061 6063                                                           
+CONECT 6063 6062 6064 6067                                                      
+CONECT 6064 6063 6065 6066                                                      
+CONECT 6065 6064 6068 6069                                                      
+CONECT 6066 6064 6070                                                           
+CONECT 6067 6063 6068                                                           
+CONECT 6068 6065 6067                                                           
+CONECT 6069 6065 6071                                                           
+CONECT 6070 6066 6071                                                           
+CONECT 6071 6069 6070                                                           
+CONECT 6072 6061 6073 6074                                                      
+CONECT 6073 6072                                                                
+CONECT 6074 6038 6072                                                           
+CONECT 6075 6076 6077 6078 6079                                                 
+CONECT 6076 6075                                                                
+CONECT 6077 6075                                                                
+CONECT 6078 6075                                                                
+CONECT 6079 6075                                                                
+CONECT 6080 6081 6082 6083 6116                                                 
+CONECT 6081 6080                                                                
+CONECT 6082 6080                                                                
+CONECT 6083 6080 6084                                                           
+CONECT 6084 6083 6085                                                           
+CONECT 6085 6084 6086 6100                                                      
+CONECT 6086 6085 6087                                                           
+CONECT 6087 6086 6088 6098                                                      
+CONECT 6088 6087 6089 6097                                                      
+CONECT 6089 6088 6090 6095                                                      
+CONECT 6090 6089 6091                                                           
+CONECT 6091 6090 6092                                                           
+CONECT 6092 6091 6093                                                           
+CONECT 6093 6092 6094 6095                                                      
+CONECT 6094 6093                                                                
+CONECT 6095 6089 6093 6096                                                      
+CONECT 6096 6095 6097                                                           
+CONECT 6097 6088 6096                                                           
+CONECT 6098 6087 6099 6100                                                      
+CONECT 6099 6098                                                                
+CONECT 6100 6085 6098 6101                                                      
+CONECT 6101 6100                                                                
+CONECT 6102 6103                                                                
+CONECT 6103 6102 6104 6114                                                      
+CONECT 6104 6103 6105                                                           
+CONECT 6105 6104 6106 6109                                                      
+CONECT 6106 6105 6107 6108                                                      
+CONECT 6107 6106 6110 6111                                                      
+CONECT 6108 6106 6112                                                           
+CONECT 6109 6105 6110                                                           
+CONECT 6110 6107 6109                                                           
+CONECT 6111 6107 6113                                                           
+CONECT 6112 6108 6113                                                           
+CONECT 6113 6111 6112                                                           
+CONECT 6114 6103 6115 6116                                                      
+CONECT 6115 6114                                                                
+CONECT 6116 6080 6114                                                           
+CONECT 6117 6118 6119 6120 6121                                                 
+CONECT 6118 6117                                                                
+CONECT 6119 6117                                                                
+CONECT 6120 6117                                                                
+CONECT 6121 6117                                                                
+MASTER      397    0    4   38   18    0   16    6 6131    2   84   62          
+END                                                                             

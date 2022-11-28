@@ -8,7 +8,8 @@
 		"subclass": "c",
 		"oligo": "Homodimer",
 		"codons": "UAG",
-		"editing": "No"
+		"editing": "No",
+		"ref_str": ["structures/Pyl_Arch_2Q7E_M_mazei.pdb"]
 	
 }
 

@@ -1,8 +1,8 @@
 SHEET    1  E1 4 XXX B 696 XXX  B 699  0
-HELIX    1  H1 XXX B	 707  XXX A  717  1                                  11
+HELIX    1  H1 XXX B	 707  XXX B  717  1                                  11
 SHEET    2  E2 7 XXX B 726 XXX  B 732  0
 SHEET    3  E3 6 XXX B 741 XXX  B 746  0
-HELIX    2  H2 XXX B	 759  XXX A  773  1                                  15
+HELIX    2  H2 XXX B	 759  XXX B  773  1                                  15
 ATOM   5392  N   ALA B 692      37.762   8.021  -6.794  1.00 80.99           N  
 ATOM   5393  CA  ALA B 692      37.598   7.665  -5.392  1.00 87.19           C  
 ATOM   5394  C   ALA B 692      36.999   6.256  -5.203  1.00 91.54           C  
@@ -724,6 +724,6 @@ ATOM   6109  CB  ASP B 783      28.146  -8.255  13.677  1.00 80.00           C
 ATOM   6110  CG  ASP B 783      29.759  -8.131  13.600  1.00 80.00           C  
 ATOM   6111  OD1 ASP B 783      30.495  -9.159  13.730  1.00 80.00           O  
 ATOM   6112  OD2 ASP B 783      30.286  -6.995  13.401  1.00 80.00           O1-
-NA
+END
 
 

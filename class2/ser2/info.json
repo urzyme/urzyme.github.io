@@ -8,7 +8,8 @@
 		"subclass": "a",
 		"oligo": "Homodimer",
 		"codons": "UCU, UCC, UCA, UCG, AGU, AGC",
-		"editing": "No"
+		"editing": "No",
+		"ref_str": ["structures/Ser_Arch_2cim_M_barkeri.pdb"]
 	
 }
 

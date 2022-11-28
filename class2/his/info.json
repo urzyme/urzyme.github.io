@@ -8,7 +8,8 @@
 		"subclass": "a",
 		"oligo": "Homodimer",
 		"codons": "CAU, CAC",
-		"editing": "No"
+		"editing": "No",
+		"ref_str": ["structures/His_Arch_1WU7_T_acidophilum.pdb", "structures/His_Bact_4e51_B_thailandensis.pdb"]
 	
 }
 

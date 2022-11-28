@@ -1,0 +1,14 @@
+{
+		"name": "AsxRS",
+		"fullName": "Aspartyl tRNA Synthetase (non-discriminating)",
+		"icon": "/fig/icon_acidic.png",
+		"substrate": "Aspartate",
+		"incorporates": "Aspartate, aspargine",
+		"class": "Class II",
+		"subclass": "b",
+		"oligo": "Homodimer",
+		"codons": "GAU, GAC (Asp), AAU, AAC (Asn)",
+		"editing": "No",
+		"ref_str": ["structures/Asp_Arch_1b8a_T_kodarensis.pdb"]
+	
+}

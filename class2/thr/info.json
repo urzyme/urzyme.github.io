@@ -8,7 +8,8 @@
 		"subclass": "a",
 		"oligo": "Homodimeric",
 		"codons": "ACU, ACC, ACA, ACG",
-		"editing": "Post-transfer"
+		"editing": "Post-transfer",
+		"ref_str": ["structures/Thr_Bact_1evk_E_coli.pdb"]
 	
 }
 

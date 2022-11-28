@@ -6,7 +6,7 @@
 
 # Prepare all alignments
 cd pairwise
-for c in class1;
+for c in class*;
 do
 
 	cd $c
@@ -61,21 +61,21 @@ do
 				# Alignment
 				cd $dir/data
 				../../../../../DeepAlign/3DCOMB -i structures.txt -o align
-				mkdssp -i align.pdb -o align.dssp
+				
 
 
 				# Make a secondary structure fasta file from dssp
-				Rscript ../../../../scripts/dssp2fasta.R
+				Rscript ../../../../scripts/dssp2pdbMulti.R
 
+
+				# Make a secondary structure fasta file from dssp and alignment
+				Rscript ../../../scripts/dssp2fasta.R
 
 
 				# Generate json file
 				cd ../
 				Rscript ../../../scripts/pairwiseJSON.R ../$d1/info.json ../$d2/info.json
 
-
-				# Secondary structure
-				Rscript ../../../scripts/dssp2pdb.R data/align.dssp data/align.pdb
 
 
 				cd ../

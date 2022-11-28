@@ -8,6 +8,7 @@
 		"subclass": "b",
 		"oligo": "Homodimer",
 		"codons": "AAU, AAC",
-		"editing": "No"
+		"editing": "No",
+		"ref_str": ["structures/Asn_Arch_1X54_P_horikoshii.pdb"]
 	
 }

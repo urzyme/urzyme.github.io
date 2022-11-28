@@ -1,0 +1,13 @@
+{
+		"name": "GlxRS",
+		"fullName": "Glutamyl tRNA Synthetase (non-discriminating)",
+		"icon": "/fig/icon_acidic.png",
+		"substrate": "Glutamate",
+		"incorporates": "Glutamate, glutamine",
+		"class": "Class I",
+		"subclass": "b",
+		"oligo": "Monomeric",
+		"codons": "GAA, GAG",
+		"editing": "No"
+	
+}

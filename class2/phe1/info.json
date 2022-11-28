@@ -8,7 +8,8 @@
 		"subclass": "c",
 		"oligo": "Heterotetramer",
 		"codons": "UUU, UUC",
-		"editing": "No"
+		"editing": "No",
+		"ref_str": ["structures/Phe_Bact_1PYS.A_T_thermophilus.pdb"]
 	
 }
 

@@ -8,7 +8,8 @@
 		"subclass": "a",
 		"oligo": "Homodimer",
 		"codons": "GGU, GGC, GGA, GGG",
-		"editing": "No"
+		"editing": "No",
+		"ref_str": ["structures/Glycyl.A.Candidatus_Thermoplasmatota.NC_002689.2.pdb"]
 	
 }
 

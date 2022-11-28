@@ -1,15 +1,15 @@
 SHEET    1  E1 7 XXX B 213 XXX  B 219  0
-HELIX    1  H1 XXX B	 228  XXX A  235  1                                   8
-HELIX    2  H2 XXX B	 244  XXX A  256  1                                  13
+HELIX    1  H1 XXX B	 228  XXX B  235  1                                   8
+HELIX    2  H2 XXX B	 244  XXX B  256  1                                  13
 SHEET    2  E2 4 XXX B 261 XXX  B 264  0
-HELIX    3  H3 XXX B	 265  XXX A  268  1                                   4
+HELIX    3  H3 XXX B	 265  XXX B  268  1                                   4
 SHEET    3  E3 5 XXX B 272 XXX  B 276  0
 SHEET    4  E4 6 XXX B 298 XXX  B 303  0
 SHEET    5  E5 5 XXX B 308 XXX  B 312  0
 SHEET    6  E6 5 XXX B 330 XXX  B 334  0
-HELIX    4  H4 XXX B	 340  XXX A  350  1                                  11
-HELIX    5  H5 XXX B	 355  XXX A  362  1                                   8
-HELIX    6  H6 XXX B	 369  XXX A  383  1                                  15
+HELIX    4  H4 XXX B	 340  XXX B  350  1                                  11
+HELIX    5  H5 XXX B	 355  XXX B  362  1                                   8
+HELIX    6  H6 XXX B	 369  XXX B  383  1                                  15
 SHEET    7  E7 2 XXX B 387 XXX  B 388  0
 SHEET    8  E8 3 XXX B 393 XXX  B 395  0
 ATOM   1586  N   PRO B 211      17.772  85.139  44.618  1.00 49.91           N  
@@ -1447,6 +1447,6 @@ ATOM   3017  N   GLY B 396      19.690  91.878  47.094  1.00 79.40           N
 ATOM   3018  CA  GLY B 396      20.365  90.843  46.357  1.00 82.06           C  
 ATOM   3019  C   GLY B 396      21.137  91.565  45.292  1.00 86.85           C  
 ATOM   3020  O   GLY B 396      20.556  92.279  44.465  1.00 87.95           O  
-NA
+END
 
 

@@ -14,6 +14,9 @@ args = commandArgs(trailingOnly=TRUE)
 # All directories
 dirs = list.dirs(".", recursive=F)
 aa = unique(unlist(strsplit(gsub("./", "", dirs), "_")))
+aa.names = character(length(aa))
+names(aa.names) = aa
+
 
 # Prepare distance matrix
 distance.mat = matrix(0, nrow = length(aa), ncol = length(aa))
@@ -42,6 +45,11 @@ for (d in dirs){
 	JSON[paste0("d_", key)] = json$crossFamilyRmsd
 
 
+	# get the full name of each 
+	aa.names[aa1] = json$family1
+	aa.names[aa2] = json$family2
+
+
 }
 
 
@@ -52,7 +60,7 @@ ordered = aa[map$rowInd]
 
 
 JSON$families = ordered
-
+JSON$familyNames = aa.names
 
 
 exportJSON <- toJSON(JSON, indent=4)

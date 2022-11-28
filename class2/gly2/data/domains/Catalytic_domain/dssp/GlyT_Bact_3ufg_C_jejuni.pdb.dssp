@@ -1,24 +1,24 @@
-==== Secondary Structure Definition by the program DSSP, CMBI version 3.1.4                          ==== DATE=2022-11-15      .
+==== Secondary Structure Definition by the program DSSP, CMBI version 3.1.4                          ==== DATE=2022-11-28      .
 REFERENCE W. KABSCH AND C.SANDER, BIOPOLYMERS 22 (1983) 2577-2637                                                              .
 HEADER    LIGASE                                  01-NOV-11   3UFG                                                             .
 COMPND    MOL_ID: 1; MOLECULE: GLYCYL-TRNA SYNTHETASE ALPHA SUBUNIT; CHAIN: A, B                                               .
 SOURCE    MOL_ID: 1; ORGANISM_SCIENTIFIC: CAMPYLOBACTER JEJUNI; ORGANISM_TAXID:                                                .
 AUTHOR    K.TAN,M.ZHOU,S.PETERSON,W.F.ANDERSON,A.JOACHIMIAK,CENTER FOR STRUCTURA                                               .
-  181  6  0  0  0 TOTAL NUMBER OF RESIDUES, NUMBER OF CHAINS, NUMBER OF SS-BRIDGES(TOTAL,INTRACHAIN,INTERCHAIN)                .
- 10510.1   ACCESSIBLE SURFACE OF PROTEIN (ANGSTROM**2)                                                                         .
-  125 69.1   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(J)  , SAME NUMBER PER 100 RESIDUES                              .
+  182  7  0  0  0 TOTAL NUMBER OF RESIDUES, NUMBER OF CHAINS, NUMBER OF SS-BRIDGES(TOTAL,INTRACHAIN,INTERCHAIN)                .
+ 10816.5   ACCESSIBLE SURFACE OF PROTEIN (ANGSTROM**2)                                                                         .
+  125 68.7   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(J)  , SAME NUMBER PER 100 RESIDUES                              .
     2  1.1   TOTAL NUMBER OF HYDROGEN BONDS IN     PARALLEL BRIDGES, SAME NUMBER PER 100 RESIDUES                              .
-   47 26.0   TOTAL NUMBER OF HYDROGEN BONDS IN ANTIPARALLEL BRIDGES, SAME NUMBER PER 100 RESIDUES                              .
-    1  0.6   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I-5), SAME NUMBER PER 100 RESIDUES                              .
+   47 25.8   TOTAL NUMBER OF HYDROGEN BONDS IN ANTIPARALLEL BRIDGES, SAME NUMBER PER 100 RESIDUES                              .
+    1  0.5   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I-5), SAME NUMBER PER 100 RESIDUES                              .
     0  0.0   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I-4), SAME NUMBER PER 100 RESIDUES                              .
     2  1.1   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I-3), SAME NUMBER PER 100 RESIDUES                              .
     0  0.0   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I-2), SAME NUMBER PER 100 RESIDUES                              .
     0  0.0   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I-1), SAME NUMBER PER 100 RESIDUES                              .
     0  0.0   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I+0), SAME NUMBER PER 100 RESIDUES                              .
     0  0.0   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I+1), SAME NUMBER PER 100 RESIDUES                              .
-   17  9.4   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I+2), SAME NUMBER PER 100 RESIDUES                              .
+   17  9.3   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I+2), SAME NUMBER PER 100 RESIDUES                              .
    18  9.9   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I+3), SAME NUMBER PER 100 RESIDUES                              .
-   28 15.5   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I+4), SAME NUMBER PER 100 RESIDUES                              .
+   28 15.4   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I+4), SAME NUMBER PER 100 RESIDUES                              .
     4  2.2   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I+5), SAME NUMBER PER 100 RESIDUES                              .
   1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30     *** HISTOGRAMS OF ***           .
   0  0  0  2  0  0  0  0  1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0    RESIDUES PER ALPHA HELIX         .
@@ -212,3 +212,5 @@ AUTHOR    K.TAN,M.ZHOU,S.PETERSON,W.F.ANDERSON,A.JOACHIMIAK,CENTER FOR STRUCTURA
   184  186 A K  E     -J  179   0C 117     -2,-0.8     2,-0.6    -5,-0.2    -5,-0.3  -0.728  14.2-151.3 -95.6 131.5   47.0   21.4  -16.3
   185  187 A I  E      J  178   0C  86     -7,-3.8    -8,-4.0    -2,-0.4    -7,-1.1  -0.904 360.0 360.0 -94.5 122.1   44.4   24.2  -16.1
   186  188 A K              0   0  139     -2,-0.6   -10,-0.2   -10,-0.3   -12,-0.1  -0.534 360.0 360.0 -83.1 360.0   45.0   26.4  -13.1
+  187        !*             0   0    0      0, 0.0     0, 0.0     0, 0.0     0, 0.0   0.000 360.0 360.0 360.0 360.0    0.0    0.0    0.0
+  188  289 B L              0   0  306      0, 0.0     0, 0.0     0, 0.0     0, 0.0   0.000 360.0 360.0 360.0 360.0   18.1   33.9  -30.7

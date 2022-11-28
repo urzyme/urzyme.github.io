@@ -8,6 +8,7 @@
 		"subclass": "c or d",
 		"oligo": "Heterotetramer",
 		"codons": "GGU, GGC, GGA, GGG",
-		"editing": "No"
+		"editing": "No",
+		"ref_str": ["structures/GlyT_Bact_5f5w_A_aeolicus.pdb"]
 	
 }

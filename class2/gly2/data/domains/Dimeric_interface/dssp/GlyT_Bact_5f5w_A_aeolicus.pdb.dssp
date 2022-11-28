@@ -1,12 +1,12 @@
-==== Secondary Structure Definition by the program DSSP, CMBI version 3.1.4                          ==== DATE=2022-11-15      .
+==== Secondary Structure Definition by the program DSSP, CMBI version 3.1.4                          ==== DATE=2022-11-28      .
 REFERENCE W. KABSCH AND C.SANDER, BIOPOLYMERS 22 (1983) 2577-2637                                                              .
 HEADER    LIGASE                                  04-DEC-15   5F5W                                                             .
 COMPND    MOL_ID: 1; MOLECULE: GLYCINE--TRNA LIGASE ALPHA SUBUNIT; CHAIN: A, B,                                                .
 SOURCE    MOL_ID: 1; ORGANISM_SCIENTIFIC: AQUIFEX AEOLICUS (STRAIN VF5); ORGANIS                                               .
 AUTHOR    M.I.VALENCIA-SANCHEZ,A.TORRES-LARIOS                                                                                 .
-   78  1  0  0  0 TOTAL NUMBER OF RESIDUES, NUMBER OF CHAINS, NUMBER OF SS-BRIDGES(TOTAL,INTRACHAIN,INTERCHAIN)                .
-  5540.4   ACCESSIBLE SURFACE OF PROTEIN (ANGSTROM**2)                                                                         .
-   68 87.2   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(J)  , SAME NUMBER PER 100 RESIDUES                              .
+   83  6  0  0  0 TOTAL NUMBER OF RESIDUES, NUMBER OF CHAINS, NUMBER OF SS-BRIDGES(TOTAL,INTRACHAIN,INTERCHAIN)                .
+  8478.2   ACCESSIBLE SURFACE OF PROTEIN (ANGSTROM**2)                                                                         .
+   68 81.9   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(J)  , SAME NUMBER PER 100 RESIDUES                              .
     0  0.0   TOTAL NUMBER OF HYDROGEN BONDS IN     PARALLEL BRIDGES, SAME NUMBER PER 100 RESIDUES                              .
     0  0.0   TOTAL NUMBER OF HYDROGEN BONDS IN ANTIPARALLEL BRIDGES, SAME NUMBER PER 100 RESIDUES                              .
     0  0.0   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I-5), SAME NUMBER PER 100 RESIDUES                              .
@@ -16,10 +16,10 @@ AUTHOR    M.I.VALENCIA-SANCHEZ,A.TORRES-LARIOS                                  
     0  0.0   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I-1), SAME NUMBER PER 100 RESIDUES                              .
     0  0.0   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I+0), SAME NUMBER PER 100 RESIDUES                              .
     0  0.0   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I+1), SAME NUMBER PER 100 RESIDUES                              .
-    2  2.6   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I+2), SAME NUMBER PER 100 RESIDUES                              .
-    2  2.6   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I+3), SAME NUMBER PER 100 RESIDUES                              .
-   61 78.2   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I+4), SAME NUMBER PER 100 RESIDUES                              .
-    2  2.6   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I+5), SAME NUMBER PER 100 RESIDUES                              .
+    2  2.4   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I+2), SAME NUMBER PER 100 RESIDUES                              .
+    2  2.4   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I+3), SAME NUMBER PER 100 RESIDUES                              .
+   61 73.5   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I+4), SAME NUMBER PER 100 RESIDUES                              .
+    2  2.4   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I+5), SAME NUMBER PER 100 RESIDUES                              .
   1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30     *** HISTOGRAMS OF ***           .
   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  2  0  0  0  0  0  0  1  0  0  0    RESIDUES PER ALPHA HELIX         .
   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0    PARALLEL BRIDGES PER LADDER      .
@@ -104,3 +104,13 @@ AUTHOR    M.I.VALENCIA-SANCHEZ,A.TORRES-LARIOS                                  
    76  281 A N     <  +     0   0  147     -4,-1.0    -4,-0.3    -5,-0.5    -3,-0.1   0.883  57.8 149.5  66.0  49.8  -52.7   16.2   25.0
    77  282 A V              0   0   97     -6,-1.0    -5,-0.2    -9,-0.2    -8,-0.1   0.730 360.0 360.0 -81.0 -24.3  -54.9   18.9   23.4
    78  283 A G              0   0   94    -10,-0.1    -9,-0.1    -9,-0.1    -6,-0.1   0.585 360.0 360.0  81.4 360.0  -58.2   18.0   25.4
+   79        !              0   0    0      0, 0.0     0, 0.0     0, 0.0     0, 0.0   0.000 360.0 360.0 360.0 360.0    0.0    0.0    0.0
+   80  300 A X              0   0  588      0, 0.0     0, 0.0     0, 0.0     0, 0.0   0.000 360.0 360.0 360.0 360.0  -47.2   17.0   -3.0
+   81        !*             0   0    0      0, 0.0     0, 0.0     0, 0.0     0, 0.0   0.000 360.0 360.0 360.0 360.0    0.0    0.0    0.0
+   82  300 B X              0   0  585      0, 0.0     0, 0.0     0, 0.0     0, 0.0   0.000 360.0 360.0 360.0 360.0  -40.5   39.9   21.7
+   83        !*             0   0    0      0, 0.0     0, 0.0     0, 0.0     0, 0.0   0.000 360.0 360.0 360.0 360.0    0.0    0.0    0.0
+   84  300 C X              0   0  587      0, 0.0     0, 0.0     0, 0.0     0, 0.0   0.000 360.0 360.0 360.0 360.0  -18.9   34.2   48.1
+   85        !*             0   0    0      0, 0.0     0, 0.0     0, 0.0     0, 0.0   0.000 360.0 360.0 360.0 360.0    0.0    0.0    0.0
+   86  300 D X              0   0  589      0, 0.0     0, 0.0     0, 0.0     0, 0.0   0.000 360.0 360.0 360.0 360.0  -74.8   38.2   31.5
+   87        !*             0   0    0      0, 0.0     0, 0.0     0, 0.0     0, 0.0   0.000 360.0 360.0 360.0 360.0    0.0    0.0    0.0
+   88  300 E X              0   0  588      0, 0.0     0, 0.0     0, 0.0     0, 0.0   0.000 360.0 360.0 360.0 360.0  -97.2   46.7    6.7
