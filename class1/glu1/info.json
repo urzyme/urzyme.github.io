@@ -8,6 +8,7 @@
 		"subclass": "b",
 		"oligo": "Monomeric",
 		"codons": "GAA, GAG",
-		"editing": "No"
+		"editing": "No",
+		"ref_str": ["structures/Glu_Bact_1J09_T_therm.pdb"]
 	
 }

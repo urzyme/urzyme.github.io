@@ -8,6 +8,7 @@
 		"subclass": "c",
 		"oligo": "Monomeric",
 		"codons": "UAU, UAC",
-		"editing": "No"
+		"editing": "No",
+		"ref_str": ["structures/Tyr_Bact_1H3F_T_therm.pdb"]
 	
 }

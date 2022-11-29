@@ -2,7 +2,7 @@
 
 
 
-# Prepare all alignments
+# Prepare all family alignments (but not pairwise alignments)
 for c in class*;
 do
 

@@ -1,9 +1,46 @@
 library(seqinr)
 library(rjson)
+library(stringr)
+library(Biostrings)
 
 
+# Iteratively step left and right until the right element is found
+searchForStart = function(targetPos, ssSEQ, eleType){
 
-#pdbFileTruncated = truncatePDBFile(pdbFile, aln[[gsub(".*structures", "structures", pdbFile)]], startPositions[k], endPositions[k])
+
+	# Step left and right iteratively until we have found the right element
+	left = TRUE
+	targetPos2 = targetPos
+	dx = 1
+	while (ssSEQ[targetPos2] != eleType){
+	
+		targetPos2 = targetPos + ifelse(left, -dx, dx)
+		if (targetPos2 <= 0) targetPos2 = 1
+		if (targetPos2 > length(ssSEQ)) targetPos2 = length(ssSEQ)
+		
+	
+		if (!left){
+			left = TRUE
+			dx = dx + 1
+		}else{
+			left = FALSE
+		}
+		
+		if (dx > 20 & (targetPos - dx <= 0 | targetPos + dx + length(ssSEQ))){
+			return(-1)
+		}
+		
+		
+	}
+	
+	#cat(paste("Performed step search on", target, ele, "with step size", ifelse(!left, -dx, dx), "\n"))
+	
+	targetPos2
+
+
+}
+
+
 
 # Truncate a pdb file according to start and stop positions in an alignent
 truncatePDBFile = function(pdbFile, seq, startPos, stopPos){
@@ -209,7 +246,7 @@ for (d in dirs){
 		eleTypeLeft = eleType
 		eleTypeRight = eleType
 		if (substr(ele, 1, 2) == "SH") {
-			eleTypeLeft = "S"
+			eleTypeLeft = "E"
 			eleTypeRight = "H"
 		}
 
@@ -261,29 +298,86 @@ for (d in dirs){
 		# Get length of each element for each sequence
 		for (target in names(aln)){
 
-
+			
+			#print(paste(ele, target))
+			
 			targetSeq = aln[target]
 			targetSeqSS = toupper(as.character(aln2[target][[1]]))
 			targetSeqSS[targetSeqSS == "G" | targetSeqSS == "I"] = "H" # Just one type of helix
 
 
 			# Get mid point
-			targetPos = ceiling((refStartAln+refEndAln)/2) # nchar(gsub("-", "", paste0(targetSeq[[1]][1:ceiling((refStartAln+refEndAln)/2)], collapse="")))
+			#targetPos = ceiling((refStartAln+refEndAln)/2) # nchar(gsub("-", "", paste0(targetSeq[[1]][1:ceiling((refStartAln+refEndAln)/2)], collapse="")))
 
-			# Ensure this is the right element
-			if (targetSeqSS[targetPos] != eleType & targetSeqSS[targetPos] != "-"){
-				#cat(paste("Expected sse", eleType, "but found", targetSeqSS[targetPos], "for", ele, "in", target, "\n"))
+
+
+			# Find some initial seeds to start the search to the ends of the structure
+			targetStart = searchForStart(refStartAln+1, targetSeqSS, eleTypeLeft)
+			targetEnd = searchForStart(refEndAln-1, targetSeqSS, eleTypeRight)
+			
+			if (targetStart > 0 && targetEnd > 0){
+			
+
+				# Extend to the end of the helix/strand. Allow for gaps
+				while (targetStart > 1 & (targetSeqSS[targetStart-1] == eleTypeLeft | targetSeqSS[targetStart-1] == "-")){
+					targetStart = targetStart - 1
+				}
+				while (targetEnd < nsites & (targetSeqSS[targetEnd+1] == eleTypeRight | targetSeqSS[targetEnd+1] == "-")){
+					targetEnd = targetEnd + 1
+				}
+				
+			
+			}
+		
+			
+			
+			# If the range is negative or 1, then the element does not exist. Just show where it would be, relative to refseq
+			if (targetEnd < targetStart | targetStart == -1 | targetEnd == -1){
+				targetStart = refStartAln
+				targetEnd = refEndAln
+				cat(paste("Warning:", ele, target, "does not seem to exist. Using ref seq positions instead\n"))
+			}else{
+			
+			
+					
+				# Ensure that the SSE does not have any large inserts inside it. If so, then take either the start or the end, which ever is larger
+				SS = gsub(eleTypeRight, eleTypeLeft, gsub("-", eleTypeLeft, toupper(targetSeqSS[targetStart:targetEnd])))
+				insertSize = length(SS[SS != eleTypeLeft])
+			
+				 if (insertSize > 4) {
+				
+					
+					targetStart.candiate.2 = targetEnd
+					while (targetStart.candiate.2 > 1 & (targetSeqSS[targetStart.candiate.2-1] == eleTypeLeft | targetSeqSS[targetStart.candiate.2-1] == "-")){
+						targetStart.candiate.2 = targetStart.candiate.2 - 1
+					}
+				
+					
+					targetEnd.candiate.2 = targetStart
+					while (targetEnd.candiate.2 < nsites & (targetSeqSS[targetEnd.candiate.2+1] == eleTypeRight | targetSeqSS[targetEnd.candiate.2+1] == "-")){
+						targetEnd.candiate.2 = targetEnd.candiate.2 + 1
+					}
+					
+					
+					len_candiate1 = (targetEnd.candiate.2 - targetStart) + 1
+					len_candiate2 = (targetEnd - targetStart.candiate.2) + 1
+					
+					actualInsertSize = targetStart.candiate.2 - targetEnd.candiate.2 - 1
+					if (len_candiate1 >= len_candiate2){
+						cat(paste("Warning: taking the N-terminal of", ele, target, "because there is a", actualInsertSize, "aa insertion inside it\n"))
+						targetStart = targetStart
+						targetEnd = targetEnd.candiate.2
+					}else{
+						cat(paste("Warning: taking the C-terminal of", ele, target, "because there is a", actualInsertSize, "aa insertion inside it\n"))
+						targetStart = targetStart.candiate.2
+						targetEnd = targetEnd
+					}
+					
+				}
+					
+			
 			}
 
-			# Extend to the end of the helix/strand. Allow for gaps
-			targetStart = refStartAln+1
-			targetEnd = refEndAln-1
-			while (targetStart > 1 & (targetSeqSS[targetStart-1] == eleTypeLeft | targetSeqSS[targetStart-1] == "-")){
-				targetStart = targetStart - 1
-			}
-			while (targetEnd < nsites & (targetSeqSS[targetEnd+1] == eleTypeRight | targetSeqSS[targetEnd+1] == "-")){
-				targetEnd = targetEnd + 1
-			}
 
 
 
@@ -420,6 +514,9 @@ for (d in dirs){
 
 	# Loops
 	for (ele in elements){
+	
+	
+
 
 		eleType = substr(ele, 1, 1)
 
@@ -451,6 +548,9 @@ for (d in dirs){
 
 		# Get length of each element for each sequence
 		for (target in names(aln)){
+		
+		
+			#print(paste(ele, target))
 
 
 			targetStart = loops.df[loops.df$structure == target, beforeEndName] + 1
@@ -577,98 +677,61 @@ dev.off()
 
 
 # Get the aligned-position of a site in the full alignment, based on an aligment of a subsequence
-getPosInOriginalAlignment = function(acc, fullAln, subAln, posSubseqAln){
+getPosInOriginalAlignment = function(acc, alnFull, alnSub, posSubseqAln, eleName=""){
 
 
-	fullSeq = fullAln[[acc]]
-	subSeq = subAln[[acc]][posSubseqAln:length(subSeq)]
-
-	fullSeq_nogap = paste(fullSeq[fullSeq != "-"], collapse = "")
-	subSeq_nogap = paste(subSeq[subSeq != "-"], collapse = "")
-
-	posFullSeq = str_locate(fullSeq_nogap, subSeq_nogap)
-
-	# TODO finish
-
-}
-
-
-# Write JSON files
-for (family in unique(loops.df$family)){
-
-
-	structures = c(json$ref, loops.df[loops.df$family == family,"structure"])
-	structures = unique(structures)
-
-	JSON = list()
-	JSON[["elements"]] = elements
-	JSON[["accessions"]] = structures
-	JSON[["refSeq"]] = json$ref
-
-
-	# Original alignment
-	alnFull = read.fasta(paste0(json$classDir, "/", family, "/data/align.ali"))
-
-	
-	# Domain alignment
-	#d = loops.df[loops.df$family == family,"dir"][1]
-	#alnDomain = read.fasta(paste0(d, "/data/align.ali"))
-
-
-	for (ele in elements){
-
-		seqName = paste0(ele, ".seq")
-		startName = paste0(ele, ".start")
-		endName = paste0(ele, ".end")
-		lenName = paste0(ele, ".length")
-		dlenName = paste0(ele, ".dlength")
-
-
-		# Position in alignment where the element begins and ends
-		aln.start.pos = Inf
-		aln.end.pos = 0
-
-		for (target in structures){
-
-
-			# Find the position of the start/end in the full alignment 'alnFam' (not the domain alignment 'aln')
-			aln.start.pos = min(aln.start.pos, loops.df[loops.df$structure == target, startName])
-			aln.end.pos = max(aln.end.pos, loops.df[loops.df$structure == target, endName])
-
-			
-			refLength = nchar(gsub("-", "", loops.df[loops.df$structure == json$ref, seqName]))
-			target.len = nchar(gsub("-", "", loops.df[loops.df$structure == target, seqName]))
-			dlength =  target.len - refLength
-
-
-			JSON[[paste0(target, "_", startName)]] = loops.df[loops.df$structure == target,startName]
-			JSON[[paste0(target, "_", endName)]] = loops.df[loops.df$structure == target,endName]
-			JSON[[paste0(target, "_", dlenName)]] = dlength
-			JSON[[paste0(target, "_", lenName)]] = target.len
-		}
-
-		JSON[[paste0(ele, ".aln.start")]] = aln.start.pos
-		JSON[[paste0(ele, ".aln.end")]] = aln.end.pos
-
+	nsitesDomain = length(alnSub[[acc]])
+	if (posSubseqAln > nsitesDomain){
+		cat(paste("Warning: position", posSubseqAln, "is longer than the alignment", length(alnSub), "for", acc, eleName, "\n"))
+		return(-1)
 	}
 
+	# Position in domain sequence
+	subSeq = alnSub[[acc]][posSubseqAln:nsitesDomain] 
+	subSeq_nogap = paste(subSeq[subSeq != "-"], collapse = "")
+	
+	
+	# Take just the first 20 non gap elements for alignment efficieny
+	subSeq_nogap = substr(subSeq_nogap, 1, 20)
 
-	exportJSON <- toJSON(JSON, indent=4)
-	write(exportJSON, paste0(json$classDir, "/", family, "/catalytic.json"))
+	# Position in full sequence
+	fullSeq = alnFull[[acc]]
+	fullSeq_nogap = paste(fullSeq[fullSeq != "-"], collapse = "")
+	
+	a = pairwiseAlignment(fullSeq_nogap, subSeq_nogap, type="local")
+	posFullSeq = start(pattern(a))
+	
+	#posFullSeq = str_locate_all(fullSeq_nogap, subSeq_nogap)
+	#if (is.na(posFullSeq[[1]][1])){
+		#stop(paste("Warning: cannot find", toupper(subSeq_nogap), "in full alignment for", acc, eleName, "\n"))
+		#return(-1)
+	#}
+	#if (length(posFullSeq) > 1){
+		#cat(paste("Warning: found", length(posFullSeq), "matches in in full alignment of string", toupper(subSeq_nogap), "for", acc, eleName, "- using first match\n"))
+	#}
+	#posFullSeq = posFullSeq[[1]][1]
+	#print(paste(acc, "found match for", toupper(subSeq_nogap), "at", posFullSeq))
 
+	# Position in full alignment
+	nsites = length(fullSeq)
+	seqPosNum = 1
+	for (siteNum in 1:nsites){
+		char = fullSeq[siteNum]
+		if (char == "-"){
+		
+		}else{
+			if (seqPosNum == posFullSeq) {
+				return(siteNum)
+			}
+			seqPosNum = seqPosNum + 1
+		}
+	}
+	
+	cat(paste("Warning: unexpected problem. Could not find pos", seqPosNum, "in", acc, eleName, "\n"))
+	-1
+	
 
 }
-
-
-
-write.table(loops.df, "loops.tsv", sep="\t", quote=F, row.names=F)
-write.table(summary.df, "summary.tsv", sep="\t", quote=F, row.names=F)
-
-
-
-#write(paste(paste0(">", names(startSequences), "\n", as.character(startSequences)), collapse="\n"), "start-loops.fasta")
-#write(paste(paste0(">", names(endSequences), "\n", as.character(endSequences)), collapse="\n"), "end-loops.fasta")
-
 
 
 
@@ -681,7 +744,7 @@ for (family in unique(loops.df$family)){
 referenceStructureNames = gsub(".+/", "", referenceStructures)
 
 
-#stop("")
+
 
 # Make a directory for each see with an indel >5 and a sequence >= 12
 MIN.LEN = 12
@@ -716,16 +779,40 @@ for (ele in elements){
 		alignments = paste0(sub.df[keep,"dir"], "/data/align.ali")
 		startPositions = sub.df[keep,startName]
 		endPositions = sub.df[keep,endName] 
+		
+		
+		
 
 
 		dir.create(paste0(ele, "/data"), showWarnings = FALSE)
 		dir.create(paste0(ele, "/data/structures"), showWarnings = FALSE)
 		for (k in 1:length(keep)){
 			pdbFile = structures[k]
-			aln = read.fasta(alignments[k])
 			names(aln) = gsub(".+/", "", names(aln))
+			
+			family = families[k]
+			target = gsub(".+/", "", pdbFile)
+			
+			
+			# Original alignment
+			alnFull = read.fasta(paste0(json$classDir, "/", family, "/data/align.ali"))
+			names(alnFull) = gsub(".+/", "", names(alnFull))
+			
+			# Domain alignment
+			d = loops.df[loops.df$family == family,"dir"][1]
+			alnDomain = read.fasta(alignments[k])
+			names(alnDomain) = gsub(".+/", "", names(alnDomain))
+				
+			# Position of start/end in domain alignment 
+			aln.start.pos = startPositions[k]
+			aln.end.pos = endPositions[k]
 
-			pdbFileTruncated = truncatePDBFile(pdbFile, aln[[gsub(".+/", "", pdbFile)]], startPositions[k], endPositions[k])
+			# Find the position of the start/end in the full alignment 'alnFam' (not the domain alignment 'aln')
+			aln.full.start.pos = getPosInOriginalAlignment(target, alnFull, alnDomain, aln.start.pos, ele)
+			aln.full.end.pos = getPosInOriginalAlignment(target, alnFull, alnDomain, aln.end.pos, ele)
+
+
+			pdbFileTruncated = truncatePDBFile(pdbFile, alnFull[[target]], aln.full.start.pos, aln.full.end.pos)
 
 			if (length(pdbFileTruncated) == 1 && is.na(pdbFileTruncated)){
 
@@ -744,7 +831,7 @@ for (ele in elements){
 
 		# JSON file
 		JSON = list()
-		JSON$fullName = paste(ele, "indel comparison")
+		JSON$fullName = paste(json$class, "catalytic domain", ele)
 		JSON$class = json$class
 		JSON$icon = "/fig/icon_white.png"
 		JSON$description = paste("Cataytic domain for class", json$class, ele)
@@ -765,6 +852,102 @@ for (ele in elements){
 }
 
 
+
+
+
+
+# Write JSON files per family
+for (family in unique(loops.df$family)){
+
+
+	print(family)
+
+
+	structures = c(json$ref, loops.df[loops.df$family == family,"structure"])
+	structures = unique(structures)
+
+	JSON = list()
+	JSON[["elements"]] = elements
+	JSON[["accessions"]] = structures
+	JSON[["refSeq"]] = json$ref
+
+
+	# Original alignment
+	alnFull = read.fasta(paste0(json$classDir, "/", family, "/data/align.ali"))
+	names(alnFull) = gsub(".+/", "", names(alnFull))
+	
+	# Domain alignment
+	d = loops.df[loops.df$family == family,"dir"][1]
+	alnDomain = read.fasta(paste0(d, "/data/align.ali"))
+	names(alnDomain) = gsub(".+/", "", names(alnDomain))
+
+
+	for (ele in elements){
+
+		seqName = paste0(ele, ".seq")
+		startName = paste0(ele, ".start")
+		endName = paste0(ele, ".end")
+		lenName = paste0(ele, ".length")
+		dlenName = paste0(ele, ".dlength")
+
+
+		# Position in alignment where the element begins and ends
+		aln.start.pos.all = numeric(0)
+		aln.end.pos.all = numeric(0)
+
+		for (target in structures){
+
+
+			if (target != json$ref) {
+			
+				# Position of start/end in domain alignment 
+				aln.start.pos = loops.df[loops.df$structure == target, startName]
+				aln.end.pos = loops.df[loops.df$structure == target, endName]
+
+				# Find the position of the start/end in the full alignment 'alnFam' (not the domain alignment 'aln')
+				aln.full.start.pos = getPosInOriginalAlignment(target, alnFull, alnDomain, aln.start.pos, ele)
+				aln.full.end.pos = getPosInOriginalAlignment(target, alnFull, alnDomain, aln.end.pos, ele)
+				
+				aln.start.pos.all = c(aln.start.pos.all, aln.full.start.pos)
+				aln.end.pos.all = c(aln.end.pos.all, aln.full.end.pos)
+				
+				JSON[[paste0(target, "_", startName)]] = aln.full.start.pos
+				JSON[[paste0(target, "_", endName)]] = aln.full.end.pos
+			
+			}
+			
+			JSON[[paste0("median_", startName)]] = floor(median(aln.start.pos.all))
+			JSON[[paste0("median_", endName)]] = ceiling(median(aln.end.pos.all))
+			
+			refLength = nchar(gsub("-", "", loops.df[loops.df$structure == json$ref, seqName]))
+			target.len = nchar(gsub("-", "", loops.df[loops.df$structure == target, seqName]))
+			dlength =  target.len - refLength
+
+			JSON[[paste0(target, "_", dlenName)]] = dlength
+			JSON[[paste0(target, "_", lenName)]] = target.len
+		}
+
+		JSON[[paste0(ele, ".aln.start")]] = aln.start.pos
+		JSON[[paste0(ele, ".aln.end")]] = aln.end.pos
+
+	}
+
+
+	exportJSON <- toJSON(JSON, indent=4)
+	write(exportJSON, paste0(json$classDir, "/", family, "/catalytic.json"))
+
+
+}
+
+
+
+write.table(loops.df, "loops.tsv", sep="\t", quote=F, row.names=F)
+write.table(summary.df, "summary.tsv", sep="\t", quote=F, row.names=F)
+
+
+
+#write(paste(paste0(">", names(startSequences), "\n", as.character(startSequences)), collapse="\n"), "start-loops.fasta")
+#write(paste(paste0(">", names(endSequences), "\n", as.character(endSequences)), collapse="\n"), "end-loops.fasta")
 
 
 

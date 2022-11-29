@@ -8,6 +8,6 @@
 		"subclass": "?",
 		"oligo": "Homodimeric",
 		"codons": "CGU, CGC, CGA, CGG, AGA, AGG",
-		"editing": "No"
-	
+		"editing": "No",
+		"ref_str": ["structures/Arg_Arch_2ZUF_P.hori.pdb"]
 }

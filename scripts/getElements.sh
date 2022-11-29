@@ -6,7 +6,7 @@
 
 # Prepare all alignments
 cd elements
-for c in class2;
+for c in class*;
 do
 
 	cd $c
@@ -46,9 +46,11 @@ do
 
 
 		../../../../../DeepAlign/3DCOMB -i structures.txt -o align
-		Rscript ../../../../scripts/pdb2fasta.R structures.txt unaligned.fasta
+		
+		#Rscript ../../../../scripts/pdb2fasta.R structures.txt unaligned.fasta
 		#mafft unaligned.fasta > align.ali
 		#rm unaligned.fasta
+		
 		Rscript ../../../../scripts/dssp2pdbMulti.R
 
 		# Make a secondary structure fasta file from dssp

@@ -1,0 +1,44 @@
+{
+    "ref":"Trp_Arch_3JXE_P_hori.pdb",
+    "refDir": "trp",
+	"class": "Class I",
+    "classDir": "../../class1",
+    "wd":"../../pairwise/class1",
+    "alnStartAt":0,
+	
+    "ignore": ["Trp_Bact_3N9I_Y_pestis.pdb", "Trp_Bact_3SZ3_V_chole.pdb", "Trp_Euk_3HZR_E_hist.pdb", "Trp_Euk_3KT3_S_Cerevisiae.pdb", "Tryptophanyl.A.Candidatus_Korarchaeota.NC_010482.1.pdb", "Tryptophanyl.A.Crenarchaeota.NC_014961.1.pdb", "Tryptophanyl.A.Euryarchaeota.NC_000961.1.pdb", "Tryptophanyl.A.Thaumarchaeota.NC_018655.1.pdb", "Tryptophanyl.B.Actinobacteria.NC_004551.1.pdb", "Tryptophanyl.B.Chlamydiae.NC_002620.2.pdb", "Tryptophanyl.B.Cyanobacteria.NC_005042.1.pdb", "Tryptophanyl.B.Firmicutes.NC_004557.1.pdb", "Tryptophanyl.B.Proteobacteria.NC_014500.1.pdb", "Tryptophanyl.B.Spirochaetes.NC_002967.9.pdb", "Tryptophanyl.E.Ascomycota.NC_001136.10.pdb", "Tryptophanyl.E.Bacillariophyta.NC_012087.1.pdb", "Tryptophanyl.E.Evosea.NC_007088.5.pdb"],
+
+    "elements":{
+
+        "S1": "3-8",
+        "L1": "9-15",
+
+        "H1": "16-32",
+        "L2": "33-34",
+
+        "S2": "35-40",
+        "L3": "41-53",
+
+        "H2": "54-69",
+        "L4": "70-77",
+
+        "S3": "78-82",
+        "L5": "83-116",
+
+        "H3": "117-131",
+        "L6": "132-136",
+
+        "S4": "137-142",
+        "L7": "142-142",
+
+        "H4": "143-159",
+        "L8": "160-164",
+        
+        "S5": "165-169"
+
+
+    }
+
+
+
+}

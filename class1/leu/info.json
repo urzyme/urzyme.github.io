@@ -8,6 +8,7 @@
 		"subclass": "a",
 		"oligo": "Monomeric",
 		"codons": "CUU, CUA, CUC, CUG",
-		"editing": "Post-transfer"
+		"editing": "Post-transfer",
+		"ref_str": ["structures/Leu_Bact_2V0C_T_therm.pdb"]
 	
 }

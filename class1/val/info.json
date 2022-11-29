@@ -8,6 +8,7 @@
 		"subclass": "a",
 		"oligo": "Monomeric",
 		"codons": "GUA, GUC, GUG, GUU",
-		"editing": "Pre-transfer, post-transfer"
+		"editing": "Pre-transfer, post-transfer",
+		"ref_str": ["structures/Valyl.A.Candidatus_Korarchaeota.NC_010482.1.pdb"]
 	
 }

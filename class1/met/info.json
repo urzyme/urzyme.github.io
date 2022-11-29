@@ -8,6 +8,7 @@
 		"subclass": "a",
 		"oligo": "Homodimeric",
 		"codons": "AUG",
-		"editing": "Pre-transfer"
+		"editing": "Pre-transfer",
+		"ref_str": ["structures/Met_Bact_1PFV_E_coli.pdb"]
 	
 }

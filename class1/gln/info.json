@@ -8,6 +8,7 @@
 		"subclass": "b",
 		"oligo": "Monomeric",
 		"codons": "CAA, CAG",
-		"editing": "No"
+		"editing": "No",
+		"ref_str": ["structures/Gln_Bact_2HZ7_D_radio.pdb"]
 	
 }

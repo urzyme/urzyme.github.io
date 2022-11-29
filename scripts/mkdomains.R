@@ -62,7 +62,7 @@ for (domain in features.df$domain){
 		pdb = readLines(pdbFile)
 
 		# Load a pdb file
-		atomLines = grep("^ATOM", pdb)
+		atomLines = grep("^(ATOM|HETATM  .........MSE)", pdb)
 		atoms = pdb[atomLines]
 
 

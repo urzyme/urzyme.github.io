@@ -128,12 +128,17 @@ function renderaaRS(isPairwise = false){
 
 
 
-  // Tertiary dropdown
-  
-    $("#tertiaryTable").append("<div class='dropdownDiv'>Domain: <select id='domainSelect'></select></div>");
-    var dropdown = $("#domainSelect");
+	// Tertiary dropdowns
+	$("#tertiaryTable").append("<span class='button' onClick='deselectSites(true)'>Clear selection</span>");
+    $("#tertiaryTable").append("<span class='dropdownDiv'>Domain: <select id='domainSelect'></select></span>");
+	$("#tertiaryTable").append("<span class='dropdownDiv colouring'>Alignment colour: <select id='tertiaryColouringAln'></select></span>");
+	$("#tertiaryTable").append("<span class='dropdownDiv colouring'>Reference colour: <select id='tertiaryColouringSingle'></select></span>");
+	
+	
+	// Domain selection
+    let dropdown = $("#domainSelect");
     dropdown.append("<option value='_full'> Full protein </option>");
-    for (var f in DATA.features){
+    for (let f in DATA.features){
       if (DATA.features[f].level > 1){
         dropdown.append("<option value='" + f + "'>" + f + "</option>");
       }
@@ -144,11 +149,28 @@ function renderaaRS(isPairwise = false){
       clearSelection();
       renderTertiary("data/align.pdb", "superposition");
     });
-
-  if (PAIRWISE) {
-    $("#tertiaryTable .dropdownDiv").hide();
-  }
 	
+		
+	if (PAIRWISE) {
+		$("#tertiaryTable .dropdownDiv").hide();
+	}
+	
+	
+	
+	// Protein colouring
+	let dropdowns = $("#tertiaryTable").find(".colouring");
+	for (let d = 0; d < dropdowns.length; d ++){
+		let dropdownCol = $(dropdowns[d]).find("select");
+		if (d == 0) dropdownCol.append("<option value='byChain'>Chain</option>");
+		dropdownCol.append("<option value='rainbow'>Position</option>");
+		dropdownCol.append("<option value='bySS'>Secondary structure</option>");
+		dropdownCol.append("<option value='ssSuccession'>Secondary structure succession</option>");
+		$(dropdownCol).val("bySS");
+		$(dropdownCol).on("change", function(){
+			 recolourTertiaries();
+		});
+	}
+
 
 	renderTertiary("data/align.pdb", "superposition");
 
@@ -167,9 +189,7 @@ function renderaaRS(isPairwise = false){
   // Delete loader
   $("#mainloader").remove();
 
-
-
-	window.scrollTo({ top: 0, behavior: 'smooth' });
+	
 
   })
 
@@ -289,6 +309,7 @@ function renderInfo(text){
 
 function renderTertiary(pdb = null, id = "tertiary") {
 	
+	
 	var options = {
 	  width: 450,
 	  height: 450,
@@ -347,10 +368,11 @@ function renderTertiary(pdb = null, id = "tertiary") {
 	  
     // Display the protein as cartoon
 	  if (id == "tertiary"){
-      PV_GEOMS[id] = viewer.cartoon('protein', structure, { color : colourSelected(id, color.ssSuccession) });
+		var method = $("#tertiaryColouringSingle").length == 0 ? "color.ssSuccession" : "color." + $("#tertiaryColouringSingle").val();
+		PV_GEOMS[id] = viewer.cartoon('protein', structure, { color : colourSelected(id, eval(method)) });
 	  }else{
-      var grad = color.gradient(["red", "blue", "green"]);
-		  PV_GEOMS[id] = viewer.cartoon('protein', structure, { color : colourSelected(id, color.bySS) });
+		var method = $("#tertiaryColouringAln").length == 0 ? "color.bySS" : "color." + $("#tertiaryColouringAln").val();
+		 PV_GEOMS[id] = viewer.cartoon('protein', structure, { color : colourSelected(id, eval(method)) });
 	  }
 	 
     viewer.centerOn(structure);
@@ -395,9 +417,11 @@ function recolourTertiaries(){
 
       else {
         if (id == "tertiary"){
-          PV_GEOMS[id].colorBy(colourSelected(id, color.ssSuccession));
+		  var method = "color." + $("#tertiaryColouringSingle").val();
+          PV_GEOMS[id].colorBy(colourSelected(id, eval(method)) );
         }else{
-          PV_GEOMS[id].colorBy(colourSelected(id, color.bySS ));
+		  var method = "color." + $("#tertiaryColouringAln").val();
+          PV_GEOMS[id].colorBy(colourSelected(id, eval(method) ));
         }
         PV_VIEWERS[id].requestRedraw();
       }
@@ -485,7 +509,7 @@ function colourSelected(id, defaultFn) {
       out[index+2] = 0.729; out[index+3] = 1.0;
     }else{
       out[index+0] = 0.6; out[index+1] = 0.6;
-      out[index+2] = 0.6; out[index+3] = 0.8;
+      out[index+2] = 0.6; out[index+3] = 0.7;
     }
 
 
@@ -543,7 +567,7 @@ function renderSecondary(svg){
 
       // Clear selection and draw new rectangle
       if (svgHighlight.find(".selectionRect").length > 0){
-        svgHighlight.find(".selectionRect").remove();
+		deselectSites();
         clearing = true;
       }
       
@@ -603,13 +627,10 @@ function renderSecondary(svg){
 
         // Clear selection
         if (clearing && SELECTED_SITES.lower >= SELECTED_SITES.upper-1){
-          SELECTED_SITES.lower = -1;
-          SELECTED_SITES.upper = -1;
-          svgHighlight.find(".selectionRect").remove();
+		  deselectSites();
         }
 
         selectSites();
-
 
         eleSvg.removeEventListener('mouseup', mouseUp);
         eleSvg.removeEventListener('mouseleave', mouseUp);
@@ -840,6 +861,32 @@ function renderSecondary(svg){
 }
 
 
+// Clear selection 
+function deselectSites(refresh = false){
+	
+	console.log("deselectSites");
+	
+	// Clear selecting rectangle
+	$("svg").find(".selectionRect").remove();
+	
+				
+	// Clear selection on catalytic table / svg
+	$('table.maptable td').removeClass("selected");
+	$('table.maptable th').removeClass("selected");
+	$('table.maptable td').removeClass("deselected");
+	$('table.maptable th').removeClass("deselected");
+	$("#catalyticSVG").children("g").attr("class", "");
+	
+	// Clear selection
+	SELECTED_SITES.lower = -1;
+	SELECTED_SITES.upper = -1;
+	
+	if (refresh) selectSites();
+	
+	
+}
+
+
 function selectSites(){
 
     // Update canvas colours
@@ -1043,6 +1090,20 @@ function renderAlignment(divID, isPrimary = true){
 
 
 
+	// Selected sites
+	 if (SELECTED_SITES.lower != -1){
+		 
+		  let x1 = NT_WIDTH*(SELECTED_SITES.lower-1) + ALN_LABEL_WIDTH;
+		  let x2 = NT_WIDTH*(SELECTED_SITES.upper) + ALN_LABEL_WIDTH;
+	  
+		  ctx.beginPath();
+		  ctx.fillStyle = col;
+		  ctx.strokeRect(x1, NT_HEIGHT, x2-x1, NT_HEIGHT*(nseq));
+		  
+		 
+	 }
+
+
 
     // Features
     for (var feature in features){
@@ -1089,141 +1150,6 @@ function renderAlignment(divID, isPrimary = true){
 		//drawSVGobj(svgAlign, "text", {x: x1-NT_WIDTH + (x2-x1)/2, y: y, style: "text-anchor:middle; dominant-baseline:central; font-size:16px; fill:" + textCol}, value=txt)
 
     }
-
-}
-
-
-// Obsolete 
-function renderAlignmentSVG(svgAlign, main, isPrimary = true){
-
-
-
-    // Number of sequences
-    var alignment = isPrimary ? DATA.alignment : DATA.secondary;
-    var accessions = DATA.accessions;
-    var nseq = accessions.length;
-    var nsites = alignment[accessions[0]].length;
-
-    var features = DATA.features;
-
-    //nsites = 200;
-
-    console.log("rendering alignment with", nseq, nsites)
-
-
-    // Render the alignment onto svg
-    
-    svgAlign.hide();
-    svgAlign.html("");
-    svgAlign.height(NT_HEIGHT*(nseq+1) + FEATURE_HEIGHT_ALN*4.1);
-    svgAlign.width(NT_WIDTH*(nsites+2) + ALN_LABEL_WIDTH);
-
-
-
-    // Sequence labels
-    for (var seqNum = 0; seqNum < nseq; seqNum++){
-      var acc = accessions[seqNum];
-      var y = NT_HEIGHT*(seqNum+1.5)
-      var x = ALN_LABEL_WIDTH - 10;
-      var url = DATA.urls[acc];
-
-
-      var accPrint = acc.replace(".pdb", "");
-      var cls = DATA.isAlpha[[acc]] ? "alpha" : "pdb";
-      var textEle = drawSVGobj(svgAlign, "a", {x: x, y: y, href: url, target:"_blank"})
-      drawSVGobj(textEle, "text", {x: x, y: y, class: cls, style: "text-anchor:end; dominant-baseline:central; font-size:" + NT_FONT_SIZE + "px"}, value=accPrint)
-
-    }
-
-    // Site numbering
-    for (var site = 0; site < nsites; site++){
-      if (site == 0 || (site+1) % 10 == 0){
-        var y = NT_HEIGHT*0.5;
-        var x = NT_WIDTH*(site) + ALN_LABEL_WIDTH;
-        drawSVGobj(svgAlign, "text", {x: x, y: y, style: "text-anchor:start; dominant-baseline:central; font-family:Courier New; font-size:" + NT_FONT_SIZE + "px"}, value=site+1)
-      }
-    }
-
-
-    // Draw the alignment
-    for (var seqNum = 0; seqNum < nseq; seqNum++){
-
-      var acc = accessions[seqNum];
-      var seq = alignment[acc];
-      var y = NT_HEIGHT*(seqNum+1.5)
-      //console.log(acc, seq);
-      for (var site = 0; site < nsites; site++){
-        var x = NT_WIDTH*(site+0.5) + ALN_LABEL_WIDTH;
-        var aa = seq[site];
-
-
-        //if (aa == "-" && !isPrimary) continue;
-        if (aa == "-") continue;
-
-
-        // Rect
-        if (aa != "-") {
-          var col = "white";
-          if (isPrimary){
-            col = AA_COLS[aa];
-          }else{
-            col = AA_COLS_2[aa];
-          }
-          drawSVGobj(svgAlign, "rect", {x: x-NT_WIDTH/2, y: y-NT_HEIGHT/2, width: NT_WIDTH, height:NT_HEIGHT, style:"fill:" + col})
-        }
-
-
-
-        // Text
-        drawSVGobj(svgAlign, "text", {x: x, y: y, style: "text-anchor:middle; dominant-baseline:central; font-family:Courier New; font-size:12px"}, value=aa)
-
-      }
-
-
-    }
-
-
-    // Features
-    for (var feature in features){
-
-      var range = features[feature].range;
-      var level = features[feature].level;
-      if (range == "") continue;
-      range = range.split("-")
-      var y = NT_HEIGHT*(nseq+1) + FEATURE_HEIGHT_ALN*(level-0.5);
-      var x1 = NT_WIDTH*(parseFloat(range[0])) + ALN_LABEL_WIDTH;
-      var x2 = x1 + NT_WIDTH;
-      if (range.length == 2){
-        x2 = NT_WIDTH*(parseFloat(range[1]) + 1) + ALN_LABEL_WIDTH;
-      }
-
-      console.log(feature, range, x1, x2);
-
-      var textCol = level == 1 || level >= 3 ? "black" : "white";
-      var col = level == 1 ? LEVEL_1_COL : level == 2 ? LEVEL_2_COL : level == 3 ? LEVEL_3_COL : LEVEL_4_COL;
-      var txt = feature;
-      if (level == 0){
-        txt = "*";
-        textCol = "black";
-        y = y + FEATURE_HEIGHT_ALN;
-      }else{
-        drawSVGobj(svgAlign, "rect", {x: x1-NT_WIDTH, y: y-FEATURE_HEIGHT_ALN/2, width: x2-x1, height:FEATURE_HEIGHT_ALN, style:"stroke-width:0.7px; stroke:black; fill:" + col});
-      }
-
-
-
-      drawSVGobj(svgAlign, "text", {x: x1-NT_WIDTH + (x2-x1)/2, y: y, style: "text-anchor:middle; dominant-baseline:central; font-size:16px; fill:" + textCol}, value=txt)
-
-    }
-
-
-  svgAlign.show();
-
-
-  // Download fasta
-  svgAlign.parent().before("<h2>" + main + "</h2>");
-  if (isPrimary) svgAlign.parent().after("<a href='data/align.ali' style='float:right'>Download fasta</a>");
-
 
 }
 
@@ -1503,7 +1429,6 @@ function renderCatalyticDomainInserts(text, classNr){
 
 	
 	if (text != null && text != "" && text[0] != "<"){
-    console.log(text);
 		text = text.replaceAll("\n", "").replaceAll("\r", "");
 		json = JSON.parse(text);
 		console.log(json);
@@ -1530,9 +1455,12 @@ function renderCatalyticDomainInserts(text, classNr){
     // Populate the table
 	if (json != null){
 		
+		
+		 refSeqLink = classNr == 1 ? '<a href="/class1/trp">TrpRS</a>' :  '<a href="/class2/gly2">tetrameric GlyRS</a>';
+		
 		$("#catalyticDomainDIV .flexContainer").append(`<li>
 													<div class='svgDiv'>
-													  <div style='text-align:center'><b>Table:</b> The size (aa) of each element in the catalytic domain relative to the <a href="../gly2">tetrameric GlyRS</a> reference sequence.</div>
+													  <div style='text-align:center'><b>Table:</b> The size (aa) of each element in the catalytic domain relative to the ` + refSeqLink + ` reference sequence.</div>
 													  <div style='overflow:auto;'>
 							  <table class='maptable' id='catalyticTable'></table>
 							</div>
@@ -1712,13 +1640,19 @@ function renderCatalyticDomainInserts(text, classNr){
 			
 			
 			
+			// Start and stop positions in alignment
+			let eleStart = json == null ? -1 : json["median_" + eleName + ".start"];
+			let eleStop = json == null ? -1 : json["median_" + eleName + ".end"];
+			if (eleStart == null) eleStart = -1;
+			if (eleStop == null) eleStop = -1;
+			
 				
 			let d = "M " + xMid + " " + yLoop  + " C " + control1[0] + " " + control1[1] + ", " + control2[0] + " " + control2[1] + ", " + endPoint[0] + " " + endPoint[1];
 			let group;
 			if (eleName == "N" || eleName == "C"){
 				group = $(drawSVGobj(svg, "g", {element: eleName, style:""} )); // No click events
 			}else{
-				group = $(drawSVGobj(svg, "g", {element: eleName, style:"cursor:pointer"} ));
+				group = $(drawSVGobj(svg, "g", {element: eleName, start:eleStart, end: eleStop, style:"cursor:pointer"} ));
 			}
 			drawSVGobj(group, "path", {d: d, style: "stroke-width:" + CATALYTIC_DOMAIN_LOOP_WIDTH + "px; stroke:black; fill:transparent; stroke-linecap:round"} );
 			drawSVGobj(group, "text", {x: xlab, y: ylab, style: "font-size:18px; text-anchor:middle; dominant-baseline:central; "}, eleName);
@@ -1729,7 +1663,7 @@ function renderCatalyticDomainInserts(text, classNr){
 		}
 		
 		
-		let group;
+		
 		
 		// Helix
 		if (i % 2 == 0){
@@ -1742,7 +1676,14 @@ function renderCatalyticDomainInserts(text, classNr){
 			if (i == 8) nr = 4;
 			var eleName = "H" + nr;
 			
-			group = $(drawSVGobj(svg, "g", {element: eleName, style:"cursor:pointer"} ));
+			
+			// Start and stop positions in alignment
+			let eleStart = json == null ? -1 : json["median_" + eleName + ".start"];
+			let eleStop = json == null ? -1 : json["median_" + eleName + ".end"];
+			if (eleStart == null) eleStart = -1;
+			if (eleStop == null) eleStop = -1;
+			
+			let group = $(drawSVGobj(svg, "g", {element: eleName, start:eleStart, end:eleStop, style:"cursor:pointer"} ));
 			let helixY = y;
 			let eleHeightHelix = eleHeight;
 
@@ -1800,8 +1741,15 @@ function renderCatalyticDomainInserts(text, classNr){
 			if (i == 7) nr = 4;
 			if (i == 9) nr = 5;
 			var eleName = "S" + nr;
+			
+			
+			// Start and stop positions in alignment
+			let eleStart = json == null ? -1 : json["median_" + eleName + ".start"];
+			let eleStop = json == null ? -1 : json["median_" + eleName + ".end"];
+			if (eleStart == null) eleStart = -1;
+			if (eleStop == null) eleStop = -1;
 
-			group = $(drawSVGobj(svg, "g", {element: eleName, style:"cursor:pointer"} ));
+			let group = $(drawSVGobj(svg, "g", {element: eleName, start: eleStart, end: eleStop, style:"cursor:pointer"} ));
 			drawSVGobj(group, "polygon", {points: points, style: "stroke-width:1px; stroke:black; fill:white"} )
 			drawSVGobj(group, "polygon", {points: points, style: "stroke-width:1px; stroke:black; fill:" + strandCol} )
 			drawSVGobj(group, "text", {x: x, y: y+eleHeight/2, style: "font-size:18px; text-anchor:middle; dominant-baseline:central; "}, eleName);
@@ -1908,14 +1856,19 @@ function renderCatalyticDomainInserts(text, classNr){
 				ylab = yLoop+CATALYTIC_DOMAIN_YPAD+3;
 			}
 			
-			
+
+			// Start and stop positions in alignment
+			let eleStart = json == null ? -1 : json["median_" + eleName + ".start"];
+			let eleStop = json == null ? -1 : json["median_" + eleName + ".end"];
+			if (eleStart == null) eleStart = -1;
+			if (eleStop == null) eleStop = -1;
 			
 			let d = "M " + xMid + " " + yLoop  + " C " + control1[0] + " " + control1[1] + ", " + control2[0] + " " + control2[1] + ", " + endPoint[0] + " " + endPoint[1];
 			let group;
 			if (eleName == "N" || eleName == "C"){
 				group = $(drawSVGobj(svg, "g", {element: eleName, style:""} )); // No click events
 			}else{
-				group = $(drawSVGobj(svg, "g", {element: eleName, style:"cursor:pointer"} ));
+				group = $(drawSVGobj(svg, "g", {element: eleName, start:eleStart, end:eleStop, style:"cursor:pointer"} ));
 			}
 			drawSVGobj(group, "path", {d: d, style: "stroke-width:" + CATALYTIC_DOMAIN_LOOP_WIDTH + "px; stroke:black; fill:transparent; stroke-linecap:round"} );
 			drawSVGobj(group, "text", {x: xlab, y: ylab, style: "font-size:18px; text-anchor:middle; dominant-baseline:central; "}, eleName);
@@ -1925,36 +1878,42 @@ function renderCatalyticDomainInserts(text, classNr){
 		}
 	
 
-    let group;
+		let group;
 		
 		
 		// Helix
 		if (i > 0 && i < 10 && (i <= 2 || i == 5 || i == 9)){
 			
-			
-			let nr = i;
-			if (i == 5) nr = 4;
-			if (i == 9) nr = 3;
-			var eleName = "H" + nr;
+				
+				let nr = i;
+				if (i == 5) nr = 4;
+				if (i == 9) nr = 3;
+				var eleName = "H" + nr;
 
-      // Special case: SH1
-      if (i == 5){
-        eleName = "SH1";
-      }
-			
-			group = $(drawSVGobj(svg, "g", {element: eleName, style:"cursor:pointer"} ));
-			let helixY = y;
-			let eleHeightHelix = eleHeight;
-			
-			// The final helix
-			if (i == 5){
-				eleHeightHelix = eleHeightHelix/2;
-			}
+				// Special case: SH1
+				if (i == 5){
+					eleName = "SH1";
+				}
+				
+				
+				let eleStart = json == null ? -1 : json["median_" + eleName + ".start"];
+				let eleStop = json == null ? -1 : json["median_" + eleName + ".end"];
+				if (eleStart == null) eleStart = -1;
+				if (eleStop == null) eleStop = -1;
+				
+				group = $(drawSVGobj(svg, "g", {element: eleName, start: eleStart, end: eleStop, style:"cursor:pointer"} ));
+				let helixY = y;
+				let eleHeightHelix = eleHeight;
+				
+				// The final helix
+				if (i == 5){
+					eleHeightHelix = eleHeightHelix/2;
+				}
 
 
-			drawSVGobj(group, "rect", {rx: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix, style: "stroke-width:1px; stroke:black; fill:white"} );
-			drawSVGobj(group, "rect", {rx: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix, style: "stroke-width:1px; stroke:black; fill:" + helixCol} );
-			drawSVGobj(group, "text", {x: x, y: helixY+eleHeightHelix/2, style: "font-size:16px; text-anchor:middle; dominant-baseline:central; "}, eleName);
+				drawSVGobj(group, "rect", {rx: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix, style: "stroke-width:1px; stroke:black; fill:white"} );
+				drawSVGobj(group, "rect", {rx: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix, style: "stroke-width:1px; stroke:black; fill:" + helixCol} );
+				drawSVGobj(group, "text", {x: x, y: helixY+eleHeightHelix/2, style: "font-size:16px; text-anchor:middle; dominant-baseline:central; "}, eleName);
 	
 
 			
@@ -2014,7 +1973,13 @@ function renderCatalyticDomainInserts(text, classNr){
         group = group;
         eleName = "";
       }else{
-        group = $(drawSVGobj(svg, "g", {element: eleName, style:"cursor:pointer"} ));
+		  
+		let eleStart = json == null ? -1 : json["median_" + eleName + ".start"];
+		let eleStop = json == null ? -1 : json["median_" + eleName + ".end"];
+		if (eleStart == null) eleStart = -1;
+		if (eleStop == null) eleStop = -1;
+		  
+        group = $(drawSVGobj(svg, "g", {element: eleName, start:eleStart, end: eleStop, style:"cursor:pointer"} ));
       }
 
 			
@@ -2035,7 +2000,7 @@ function renderCatalyticDomainInserts(text, classNr){
 
     }
 	
-	
+	// Select an element
 	svg.children("g").click(function(){
 		
 		let ele = $(this);
@@ -2043,37 +2008,32 @@ function renderCatalyticDomainInserts(text, classNr){
 		if (sse == "N" || sse == "C") return;
 		console.log( sse);
 		
-		$("#secondary").find(".selectionRect").remove();
 		
-		
-
-		
-		
-		if ($(svg).children("g.selected").length > 0){
-			$('table.maptable td').removeClass("selected");
-			$('table.maptable th').removeClass("selected");
-			$('table.maptable td').removeClass("deselected");
-			$('table.maptable th').removeClass("deselected");
-			$(svg).children("g").attr("class", "");
-			
-			// Clear selection
-			SELECTED_SITES.lower = -1;
-			SELECTED_SITES.upper = -1;
-			selectSites();
+		// Clear selection
+		if ($(ele).attr("class") == "selected"){
+			deselectSites(true);
 			return;
 		}
 		
+		deselectSites(false);
+		
 		$(svg).children("g").attr("class", "deselected");
-		$('table.maptable td').removeClass("selected");
-		$('table.maptable th').removeClass("selected");
 		$('table.maptable td').addClass("deselected");
 		$('table.maptable th').addClass("deselected");
-		$('table.maptable td[ele="' + sse + '"]').removeClass("deselected");
-		$('table.maptable th[ele="' + sse + '"]').removeClass("deselected");
 		$('table.maptable td[ele="' + sse + '"]').addClass("selected");
 		$('table.maptable th[ele="' + sse + '"]').addClass("selected");
 		
 		$(ele).attr("class", "selected");
+		
+		
+		let start = parseFloat($(ele).attr("start"));
+		let end = parseFloat($(ele).attr("end"));
+		
+		// Residues to select
+		SELECTED_SITES.lower = start;
+        SELECTED_SITES.upper = end;
+		
+		selectSites();
 		
 
 

@@ -8,13 +8,16 @@ dssp = readLines(args[1])
 pdb = readLines(args[2])
 start = grep("#  RESIDUE AA STRUCTURE", dssp) + 1
 
+
+out.file = gsub("[.]dssp", ".pdb", args[1])
+out.file = gsub("[.]pdb[.]pdb", ".pdb", out.file)
+
 if (length(grep("^HELIX", pdb) > 0)){
 	# skip
 
-	out.file = gsub("[.]dssp", ".pdb", args[1])
-	out.file = gsub("[.]pdb[.]pdb", ".pdb", out.file)
 	write(pdb, out.file)
-	stop(paste("Do not need to produce sse for", args[2]))
+	#cat(paste("dssp2pdb.R - do not need to produce sse for", args[2], " - copying pdb to ", out.file, "\n"))
+	return("")
 }
 
 
@@ -65,7 +68,9 @@ for (i in (start+1):length(dssp)){
 }
 
 if (nrow(sse.df) == 0){
-	stop(paste("dssp2pdb.R - skipping", args[1], " because there are no SSEs \n"))
+	write(pdb, out.file)
+	#cat(paste("dssp2pdb.R - skipping", args[1], " because there are no SSEs \n"))
+	return("")
 }
 
 
@@ -153,6 +158,5 @@ for (i in 1:nrow(sse.df)){
 pdb.out = c(paste0(sse.out, collapse = "\n"), paste0(pdb, collapse = "\n"), collapse = "\n")
 
 
-out.file = gsub("[.]dssp", ".pdb", args[1])
-out.file = gsub("[.]pdb[.]pdb", ".pdb", out.file)
+
 write(pdb.out, out.file)

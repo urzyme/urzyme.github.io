@@ -53,6 +53,7 @@ body {
 }
 
 
+
 .pdblabel{
 	font-size: 0.8em;
 	font-style:italic;
@@ -367,8 +368,20 @@ div.svgDiv{
 	background-color: #008cbadd;
 	color: white;
 	padding: 0.5em;
-	width: 200px;
+	font-size:0.9em;
+	max-width: 150px;
 }
+
+.button{
+	background-color: #008cbadd;
+	color: white;
+	padding: 0.5em;
+	min-width: 200px;
+	cursor:pointer;
+	font-size:0.9em;
+	border-radius:1px;
+}
+
 
 
 

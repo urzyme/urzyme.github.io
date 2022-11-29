@@ -8,6 +8,7 @@
 		"subclass": "a",
 		"oligo": "Monomeric",
 		"codons": "AUU, AUC, AUA",
-		"editing": "Post-transfer"
+		"editing": "Post-transfer",
+		"ref_str": ["structures/Ile_Euk_7D5C_S_cere.pdb"]
 	
 }

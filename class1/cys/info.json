@@ -8,6 +8,7 @@
 		"subclass": "?",
 		"oligo": "Monomeric or Homodimeric",
 		"codons": "UCU, UGC",
-		"editing": "No"
+		"editing": "No",
+		"ref_str": ["structures/Cys_Bact_3C8Z_M_smegmatis.pdb"]
 	
 }
