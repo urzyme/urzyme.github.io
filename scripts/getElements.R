@@ -166,8 +166,8 @@ loops.df = data.frame(family = json$refDir, structure = json$ref, dir=paste0(jso
 elements = names(json$elements)
 for (ele in elements){
 	r = as.character(json$elements[ele])
-	loops.df[paste0(ele, ".start")] = as.numeric(strsplit(r, "-")[[1]][1]) - json$alnStartAt
-	loops.df[paste0(ele, ".end")] = as.numeric(strsplit(r, "-")[[1]][2]) - json$alnStartAt
+	loops.df[paste0(ele, ".start")] = as.numeric(strsplit(r, "-")[[1]][1])
+	loops.df[paste0(ele, ".end")] = as.numeric(strsplit(r, "-")[[1]][2])
 	loops.df[paste0(ele, ".seq")] = ""
 	#loops.df[paste0(ele, ".startSeq")] = ""
 	#loops.df[paste0(ele, ".endSeq")] = ""
@@ -263,6 +263,11 @@ for (d in dirs){
 		seqEndColName = paste0(ele, ".endSeq")
 		refStart = loops.df[loops.df$structure == json$ref,startName]
 		refEnd = loops.df[loops.df$structure == json$ref,endName]
+		
+		if (isReferenceFamily){
+			refStart = refStart + json$alnStartAt-1
+			refEnd = refEnd + json$alnStartAt-1
+		}		
 
 
 		# Where are these positions in the alignment?
@@ -314,19 +319,38 @@ for (d in dirs){
 			# Find some initial seeds to start the search to the ends of the structure
 			targetStart = searchForStart(refStartAln+1, targetSeqSS, eleTypeLeft)
 			targetEnd = searchForStart(refEndAln-1, targetSeqSS, eleTypeRight)
-			
-			if (targetStart > 0 && targetEnd > 0){
-			
 
+			if (targetStart > 0){
+			
 				# Extend to the end of the helix/strand. Allow for gaps
 				while (targetStart > 1 & (targetSeqSS[targetStart-1] == eleTypeLeft | targetSeqSS[targetStart-1] == "-")){
 					targetStart = targetStart - 1
 				}
+				
+				# New definition for the end?
+				if (targetEnd < 0){
+					targetEnd = targetStart
+					while (targetEnd < nsites & (targetSeqSS[targetEnd+1] == eleTypeRight | targetSeqSS[targetEnd+1] == "-")){
+						targetEnd = targetEnd + 1
+					}
+				}
+			}
+					
+			if(targetEnd > 0){
+			
+				# Extend to the end of the helix/strand. Allow for gaps
 				while (targetEnd < nsites & (targetSeqSS[targetEnd+1] == eleTypeRight | targetSeqSS[targetEnd+1] == "-")){
 					targetEnd = targetEnd + 1
 				}
 				
-			
+				# New definition for the start?
+				if (targetStart < 0){
+					targetStart = targetEnd
+					while (targetStart > 1 & (targetSeqSS[targetStart-1] == eleTypeLeft | targetSeqSS[targetStart-1] == "-")){
+						targetStart = targetStart - 1
+					}
+				}
+				
 			}
 		
 			
@@ -692,7 +716,16 @@ getPosInOriginalAlignment = function(acc, alnFull, alnSub, posSubseqAln, eleName
 	
 	
 	# Take just the first 20 non gap elements for alignment efficieny
+	startOfPattern = TRUE
 	subSeq_nogap = substr(subSeq_nogap, 1, 20)
+	
+	# Put target at the end of the search, not the beginning
+	if (nchar(subSeq_nogap) < 10){
+	
+		subSeq = alnSub[[acc]][(posSubseqAln-20):posSubseqAln] 
+		subSeq_nogap = paste(subSeq[!is.na(subSeq) & subSeq != "-"], collapse = "")
+		startOfPattern = FALSE
+	}
 
 	# Position in full sequence
 	fullSeq = alnFull[[acc]]
@@ -700,6 +733,9 @@ getPosInOriginalAlignment = function(acc, alnFull, alnSub, posSubseqAln, eleName
 	
 	a = pairwiseAlignment(fullSeq_nogap, subSeq_nogap, type="local")
 	posFullSeq = start(pattern(a))
+	if (!startOfPattern) {
+		posFullSeq = end(pattern(a))+1
+	}
 	
 	#posFullSeq = str_locate_all(fullSeq_nogap, subSeq_nogap)
 	#if (is.na(posFullSeq[[1]][1])){
@@ -732,6 +768,133 @@ getPosInOriginalAlignment = function(acc, alnFull, alnSub, posSubseqAln, eleName
 	
 
 }
+
+
+
+
+# Write JSON files per family
+for (family in unique(loops.df$family)){
+
+
+	print(family)
+
+
+	structures = c(json$ref, loops.df[loops.df$family == family,"structure"])
+	structures = unique(structures)
+
+	JSON = list()
+	JSON[["elements"]] = elements
+	JSON[["accessions"]] = structures
+	JSON[["refSeq"]] = json$ref
+
+
+	# Original alignment
+	alnFull = read.fasta(paste0(json$classDir, "/", family, "/data/align.ali"))
+	names(alnFull) = gsub(".+/", "", names(alnFull))
+	
+	# Domain alignment
+	d = loops.df[loops.df$family == family,"dir"][1]
+	alnDomain = read.fasta(paste0(d, "/data/align.ali"))
+	names(alnDomain) = gsub(".+/", "", names(alnDomain))
+
+
+	for (ele in elements){
+	
+	
+		eleType = substr(ele, 1, 1)
+
+		seqName = paste0(ele, ".seq")
+		startName = paste0(ele, ".start")
+		endName = paste0(ele, ".end")
+		lenName = paste0(ele, ".length")
+		dlenName = paste0(ele, ".dlength")
+
+
+		# Position in alignment where the element begins and ends
+		aln.start.pos.all = numeric(0)
+		aln.end.pos.all = numeric(0)
+
+		for (target in structures){
+
+			
+			
+
+			if (target != json$ref) {
+			
+				# Position of start/end in domain alignment 
+				aln.start.pos = loops.df[loops.df$structure == target, startName][1]
+				aln.end.pos = loops.df[loops.df$structure == target, endName][1]
+
+				# Find the position of the start/end in the full alignment 'alnFam' (not the domain alignment 'aln')
+				aln.full.start.pos = getPosInOriginalAlignment(target, alnFull, alnDomain, aln.start.pos, ele)
+				aln.full.end.pos = getPosInOriginalAlignment(target, alnFull, alnDomain, aln.end.pos, ele)
+				
+				aln.start.pos.all = c(aln.start.pos.all, aln.full.start.pos)
+				aln.end.pos.all = c(aln.end.pos.all, aln.full.end.pos)
+				
+				JSON[[paste0(target, "_", startName)]] = aln.full.start.pos
+				JSON[[paste0(target, "_", endName)]] = aln.full.end.pos
+				
+				
+				if (aln.full.end.pos < aln.full.start.pos){
+					cat(paste("Warning:", ele, target, "has a negative length\n"))
+				}
+			
+			}
+			
+
+			JSON[[paste0("median_", startName)]] = floor(median(aln.start.pos.all))
+			JSON[[paste0("median_", endName)]] = ceiling(median(aln.end.pos.all))
+				
+			
+			
+			refLength = nchar(gsub("-", "", loops.df[loops.df$structure == json$ref, seqName]))
+			target.len = nchar(gsub("-", "", loops.df[loops.df$structure == target, seqName]))[1]
+			dlength =  target.len - refLength
+
+			JSON[[paste0(target, "_", dlenName)]] = dlength
+			JSON[[paste0(target, "_", lenName)]] = target.len
+		}
+
+		JSON[[paste0(ele, ".aln.start")]] = aln.start.pos
+		JSON[[paste0(ele, ".aln.end")]] = aln.end.pos
+
+	}
+
+
+
+	# Redefine median loop positions
+	for (eleNr in 1:length(elements)){
+	
+		ele = elements[eleNr]
+		eleType = substr(ele, 1, 1)
+		if (eleType != "L"){
+			next
+		}
+		
+		startName = paste0("median_",ele, ".start")
+		endName = paste0("median_",ele, ".end")
+		
+		eleBeforeStopName = paste0("median_", elements[eleNr-1], ".end")
+		eleAfterStartName = paste0("median_", elements[eleNr+1], ".start")
+		
+		startPos = as.numeric(unlist(JSON[[eleBeforeStopName]])) + 1
+		endPos = as.numeric(unlist(JSON[[eleAfterStartName]])) - 1
+		
+		JSON[[startName]] = startPos
+		JSON[[endName]] = endPos
+		
+		
+	}
+	
+
+	exportJSON <- toJSON(JSON, indent=4)
+	write(exportJSON, paste0(json$classDir, "/", family, "/catalytic.json"))
+
+
+}
+
+
 
 
 
@@ -854,90 +1017,6 @@ for (ele in elements){
 
 
 
-
-
-# Write JSON files per family
-for (family in unique(loops.df$family)){
-
-
-	print(family)
-
-
-	structures = c(json$ref, loops.df[loops.df$family == family,"structure"])
-	structures = unique(structures)
-
-	JSON = list()
-	JSON[["elements"]] = elements
-	JSON[["accessions"]] = structures
-	JSON[["refSeq"]] = json$ref
-
-
-	# Original alignment
-	alnFull = read.fasta(paste0(json$classDir, "/", family, "/data/align.ali"))
-	names(alnFull) = gsub(".+/", "", names(alnFull))
-	
-	# Domain alignment
-	d = loops.df[loops.df$family == family,"dir"][1]
-	alnDomain = read.fasta(paste0(d, "/data/align.ali"))
-	names(alnDomain) = gsub(".+/", "", names(alnDomain))
-
-
-	for (ele in elements){
-
-		seqName = paste0(ele, ".seq")
-		startName = paste0(ele, ".start")
-		endName = paste0(ele, ".end")
-		lenName = paste0(ele, ".length")
-		dlenName = paste0(ele, ".dlength")
-
-
-		# Position in alignment where the element begins and ends
-		aln.start.pos.all = numeric(0)
-		aln.end.pos.all = numeric(0)
-
-		for (target in structures){
-
-
-			if (target != json$ref) {
-			
-				# Position of start/end in domain alignment 
-				aln.start.pos = loops.df[loops.df$structure == target, startName]
-				aln.end.pos = loops.df[loops.df$structure == target, endName]
-
-				# Find the position of the start/end in the full alignment 'alnFam' (not the domain alignment 'aln')
-				aln.full.start.pos = getPosInOriginalAlignment(target, alnFull, alnDomain, aln.start.pos, ele)
-				aln.full.end.pos = getPosInOriginalAlignment(target, alnFull, alnDomain, aln.end.pos, ele)
-				
-				aln.start.pos.all = c(aln.start.pos.all, aln.full.start.pos)
-				aln.end.pos.all = c(aln.end.pos.all, aln.full.end.pos)
-				
-				JSON[[paste0(target, "_", startName)]] = aln.full.start.pos
-				JSON[[paste0(target, "_", endName)]] = aln.full.end.pos
-			
-			}
-			
-			JSON[[paste0("median_", startName)]] = floor(median(aln.start.pos.all))
-			JSON[[paste0("median_", endName)]] = ceiling(median(aln.end.pos.all))
-			
-			refLength = nchar(gsub("-", "", loops.df[loops.df$structure == json$ref, seqName]))
-			target.len = nchar(gsub("-", "", loops.df[loops.df$structure == target, seqName]))
-			dlength =  target.len - refLength
-
-			JSON[[paste0(target, "_", dlenName)]] = dlength
-			JSON[[paste0(target, "_", lenName)]] = target.len
-		}
-
-		JSON[[paste0(ele, ".aln.start")]] = aln.start.pos
-		JSON[[paste0(ele, ".aln.end")]] = aln.end.pos
-
-	}
-
-
-	exportJSON <- toJSON(JSON, indent=4)
-	write(exportJSON, paste0(json$classDir, "/", family, "/catalytic.json"))
-
-
-}
 
 
 

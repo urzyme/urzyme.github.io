@@ -1,4 +1,4 @@
-HELIX    1  H1 XXX A	 280  XXX A  286  1                                   7
+HELIX    1  H1 XXX A	 280  XXX A  287  1                                   8
 HEADER    LIGASE                                  24-MAR-08   3CMQ              
 TITLE     CRYSTAL STRUCTURE OF HUMAN MITOCHONDRIAL PHENYLALANINE TRNA SYNTHETASE
 COMPND    MOL_ID: 1;                                                            
@@ -516,6 +516,18 @@ ATOM   2272  CB  LEU A 287     -14.080  24.312   8.869  1.00 30.66           C
 ATOM   2273  CG  LEU A 287     -15.334  23.727   9.521  1.00 30.14           C  
 ATOM   2274  CD1 LEU A 287     -15.968  22.675   8.617  1.00 29.07           C  
 ATOM   2275  CD2 LEU A 287     -14.947  23.119  10.862  1.00 28.80           C  
+ATOM   2276  N   TYR A 288     -14.951  27.296   8.406  1.00 33.64           N  
+ATOM   2277  CA  TYR A 288     -15.904  28.366   8.689  1.00 34.05           C  
+ATOM   2278  C   TYR A 288     -15.746  29.581   7.782  1.00 35.46           C  
+ATOM   2279  O   TYR A 288     -16.434  30.588   7.956  1.00 36.34           O  
+ATOM   2280  CB  TYR A 288     -15.760  28.811  10.143  1.00 32.23           C  
+ATOM   2281  CG  TYR A 288     -15.884  27.682  11.132  1.00 32.98           C  
+ATOM   2282  CD1 TYR A 288     -17.012  26.860  11.142  1.00 31.58           C  
+ATOM   2283  CD2 TYR A 288     -14.874  27.428  12.059  1.00 31.99           C  
+ATOM   2284  CE1 TYR A 288     -17.130  25.813  12.049  1.00 32.64           C  
+ATOM   2285  CE2 TYR A 288     -14.984  26.383  12.976  1.00 31.94           C  
+ATOM   2286  CZ  TYR A 288     -16.115  25.579  12.964  1.00 32.97           C  
+ATOM   2287  OH  TYR A 288     -16.235  24.545  13.865  1.00 33.35           O  
 TER    3354      PHE A 415                                                      
 HETATM 3355 MG    MG A 416       2.894  20.258   8.416  1.00 20.00          MG  
 HETATM 3356  C   FA5 A 999       4.639  21.047  11.383  1.00 41.86           C  

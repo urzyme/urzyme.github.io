@@ -705,13 +705,14 @@ function renderSecondary(svg){
 
       // Click on a feature to select residues
       $(text).click(function(){
+		  
+		deselectSites();
+		  
         var ele = $(this);
-        svgHighlight.find(".selectionRect").remove();
-        $(svgContent).find("text").attr("class", "");
         $(ele).attr("class", "selected");
-        console.log(ele.attr("lower"), ele.attr("upper"));
         SELECTED_SITES.lower = parseFloat(ele.attr("lower"));
         SELECTED_SITES.upper = parseFloat(ele.attr("upper"));
+		
         selectSites();
       });
      
@@ -868,6 +869,10 @@ function deselectSites(refresh = false){
 	
 	// Clear selecting rectangle
 	$("svg").find(".selectionRect").remove();
+	
+	
+	// Clear domain selection text 
+	$("svg").find("text").attr("class", "deselected");
 	
 				
 	// Clear selection on catalytic table / svg

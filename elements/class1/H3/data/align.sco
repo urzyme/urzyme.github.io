@@ -1,3 +1,3 @@
 CORE_LEN =    0 
 RMSD =   0.000 
-Ave_TMscore = 0.1488 
+Ave_TMscore = 0.1446 

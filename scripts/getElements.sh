@@ -6,22 +6,23 @@
 
 # Prepare all alignments
 cd elements
-for c in class*;
+for c in class2;
 do
 
 	cd $c
 
 
-	Rscript ../../scripts/getElements.R
+	#Rscript ../../scripts/getElements.R
 
 	for d1 in */;
 	do
 
 
-		echo "Aligning $d1"
+		echo "Aligning $c $d1"
 		cd $d1
 
 		cp ../../template.html index.html
+		cp ../../features.tsv .
 
 		cd data
 

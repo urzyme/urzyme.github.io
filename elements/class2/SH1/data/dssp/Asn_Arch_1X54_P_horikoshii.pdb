@@ -1,4 +1,4 @@
-HELIX    1  H1 XXX A	 406  XXX A  412  1                                   7
+HELIX    1  H1 XXX A	 406  XXX A  413  1                                   8
 HEADER    LIGASE                                  15-MAY-05   1X54              
 TITLE     CRYSTAL STRUCTURE OF ASPARAGINYL-TRNA SYNTHETASE FROM PYROCOCCUS      
 TITLE    2 HORIKOSHII COMPLEXED WITH ASPARAGINYL-ADENYLATE                      
@@ -570,6 +570,14 @@ ATOM   3360  O   VAL A 413       2.919  -4.326  25.986  1.00 14.88           O
 ATOM   3361  CB  VAL A 413       0.511  -3.867  28.229  1.00 13.93           C  
 ATOM   3362  CG1 VAL A 413       0.177  -5.100  27.395  1.00 14.12           C  
 ATOM   3363  CG2 VAL A 413       0.310  -4.156  29.729  1.00 13.89           C  
+ATOM   3364  N   LEU A 414       1.989  -2.281  25.792  1.00 14.40           N  
+ATOM   3365  CA  LEU A 414       2.205  -2.218  24.338  1.00 14.71           C  
+ATOM   3366  C   LEU A 414       3.395  -1.339  23.944  1.00 15.12           C  
+ATOM   3367  O   LEU A 414       3.586  -1.029  22.764  1.00 16.50           O  
+ATOM   3368  CB  LEU A 414       0.933  -1.775  23.618  1.00 14.40           C  
+ATOM   3369  CG  LEU A 414      -0.266  -2.705  23.835  1.00 14.01           C  
+ATOM   3370  CD1 LEU A 414      -1.470  -2.120  23.127  1.00 13.31           C  
+ATOM   3371  CD2 LEU A 414      -0.005  -4.140  23.365  1.00 14.29           C  
 ANISOU 3544  OXT PRO A 434     2903   2850   3000   -163     21     52       O  
 TER    3545      PRO A 434                                                      
 HETATM 3546 MG    MG A2000       0.594   9.283  41.959  1.00 22.63          MG  
