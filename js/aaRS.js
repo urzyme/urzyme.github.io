@@ -444,6 +444,8 @@ function colourSelected(id, defaultFn) {
 
     var chainName = atom.residue().chain().name();
     var chain1Name = atom.residue().chain().structure().chains()[0].name();
+    //console.log(atom.residue().chain().structure().chains())
+
 
     // Get accession
     var pdb = PV_PDBS[id];
