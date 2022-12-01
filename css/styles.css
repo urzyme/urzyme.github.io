@@ -19,6 +19,22 @@ body {
 	}
 }
 
+.alignmentToolBar{
+	font-size: 0.85em;
+	color: #333;
+}
+
+.alignmentToolBar span{
+	padding-left: 1em;
+	padding-right: 0.5em;
+}
+
+.alignmentToolBar span span{
+	min-width: 2em;
+	display:  inline-block;
+}
+
+
 
 g.matrixcell:hover rect{
 	fill:red !important;

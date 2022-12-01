@@ -99,8 +99,8 @@ function renderaaRS(isPairwise = false){
 
 
     //console.log(DATA);
-    renderAlignment("alignment", true);
-    renderAlignment("alignment2", false);
+    renderAlignment("alignment", true, "data/align.ali");
+    renderAlignment("alignment2", false, "data/secondary.fasta");
     renderSecondary($("#secondary"));
 
 
@@ -114,8 +114,7 @@ function renderaaRS(isPairwise = false){
   $("#secondary").before("<h2>Domain architecture</h2>");
   $("#secondary").before("<div class='helperNote'>Click on an accession or domain below, or drag a region, to select it.</div>");
   $("#tertiaryTable").prepend("<h2>Tertiary structure</h2>");
-  $("#alignment").after("<a href='data/align.ali' style='float:right'>Download fasta</a>");
-  $("#alignment2").after("<a href='data/secondary.fasta' style='float:right'>Download fasta</a>");
+
   
 	
 	
@@ -130,7 +129,7 @@ function renderaaRS(isPairwise = false){
 
 	// Tertiary dropdowns
 	$("#tertiaryTable").append("<span class='button' onClick='deselectSites(true)'>Clear selection</span>");
-    $("#tertiaryTable").append("<span class='dropdownDiv'>Domain: <select id='domainSelect'></select></span>");
+  $("#tertiaryTable").append("<span class='dropdownDiv'>Domain: <select id='domainSelect'></select></span>");
 	$("#tertiaryTable").append("<span class='dropdownDiv colouring'>Alignment colour: <select id='tertiaryColouringAln'></select></span>");
 	$("#tertiaryTable").append("<span class='dropdownDiv colouring'>Reference colour: <select id='tertiaryColouringSingle'></select></span>");
 	
@@ -897,8 +896,8 @@ function deselectSites(refresh = false){
 function selectSites(){
 
     // Update canvas colours
-    renderAlignment("alignment", true);
-    renderAlignment("alignment2", false);
+    renderAlignment("alignment", true, "data/align.ali");
+    renderAlignment("alignment2", false, "data/secondary.fasta");
 
     // Rescroll
     if (SELECTED_SITES.lower != -1){
@@ -955,7 +954,7 @@ createHiDPICanvas = function(w, h, ratio) {
 /*
 * Draw a canvas of primary/secondary as an alignment 
 */
-function renderAlignment(divID, isPrimary = true){
+function renderAlignment(divID, isPrimary = true, downloadHref = ""){
 	
 
 	// Number of sequences
@@ -1148,15 +1147,74 @@ function renderAlignment(divID, isPrimary = true){
 
 
 
-		// Text
-		ctx.fillStyle = textCol;
-		ctx.font = "14px Source sans pro";
-		ctx.fillText(txt, x1-NT_WIDTH + (x2-x1)/2, y);
+  		// Text
+  		ctx.fillStyle = textCol;
+  		ctx.font = "14px Source sans pro";
+  		ctx.fillText(txt, x1-NT_WIDTH + (x2-x1)/2, y);
+
 
 
 		//drawSVGobj(svgAlign, "text", {x: x1-NT_WIDTH + (x2-x1)/2, y: y, style: "text-anchor:middle; dominant-baseline:central; font-size:16px; fill:" + textCol}, value=txt)
 
     }
+
+
+    // Toolbar after alignment
+    if ($(`[for="` + divID + `"].alignmentToolBar`).length == 0){
+      $("#" + divID).after($("<div class='alignmentToolBar' for='" + divID + "'></div>"));
+    }
+    let toolbar = $(`[for="` + divID + `"].alignmentToolBar`);
+    toolbar.html("");
+    toolbar.append($(`<a href="` + downloadHref + `">Download fasta</a>`));
+    toolbar.append($(`<span> Site: <span class="siteSel"></span> </span>`));
+    toolbar.append($(`<span> Ungapped: <span class="ungappedSel"></span> </span>`));
+    toolbar.append($(`<span> Accession: <span class="taxonSel"></span> </span>`));
+
+
+
+    $("#" + divID).after(toolbar);
+
+
+    // Hover text
+    canvas.onmousemove = function (e) {
+
+        let rect = this.getBoundingClientRect(),
+                x = e.clientX - rect.left,
+                y = e.clientY - rect.top,
+                i = 0, r;
+
+
+
+        if (x <= ALN_LABEL_WIDTH || y <= NT_HEIGHT || y > NT_HEIGHT*(nseq+1)) {
+          toolbar.find(".siteSel").html("");
+          toolbar.find(".ungappedSel").html("");
+          toolbar.find(".taxonSel").html("");
+          return;
+        }      
+        let siteNum = Math.floor((x - ALN_LABEL_WIDTH) / NT_WIDTH) + 1;
+        let seqNum = Math.floor(y / NT_HEIGHT) - 1;
+        let accHover = accessions[seqNum];
+        let siteNumUngapped = alignment[accHover].substring(0, siteNum).replaceAll("-", "").length;
+       // console.log(accessions[seqNum], siteNum);
+
+
+          toolbar.find(".siteSel").html(siteNum);
+          toolbar.find(".ungappedSel").html(siteNumUngapped);
+          toolbar.find(".taxonSel").html(accHover.replace(".pdb", ""));
+
+
+        
+        //toolbar.html("Site " + siteNum + " ungapped: " + siteNumUngapped + " of " + accHover.replace(".pdb", ""));
+
+
+    };
+
+    canvas.onmouseleave = function (e) {
+        toolbar.find(".siteSel").html("");
+        toolbar.find(".ungappedSel").html("");
+        toolbar.find(".taxonSel").html("");
+    };
+
 
 }
 
