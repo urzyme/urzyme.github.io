@@ -398,9 +398,9 @@ div.svgDiv{
 .dropdownDiv select{
 	background-color: #008cbadd;
 	color: white;
-	padding: 0.5em;
-	font-size:0.9em;
-	max-width: 25em;
+	padding: 0.8em;
+	font-size:0.85em;
+	max-width: 30em;
 }
 
 @media only screen and ( min-device-width: 1000px ) {
