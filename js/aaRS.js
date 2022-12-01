@@ -1226,115 +1226,117 @@ function renderAlignment(divID, isPrimary = true, downloadHref = ""){
     }
 
 
-    // Toolbar after alignment
-    if ($(`[for="` + divID + `"].alignmentToolBar`).length == 0){
-      $("#" + divID).after($("<div class='alignmentToolBar' for='" + divID + "'></div>"));
-    }
-    let toolbar = $(`[for="` + divID + `"].alignmentToolBar`);
-    toolbar.html("");
-    toolbar.append($(`<span><a href="` + downloadHref + `">Download fasta</a> </span>`));
-    toolbar.append($(`<span> Site: <span class="fader siteSel"></span> </span>`));
-    toolbar.append($(`<span> Ungapped: <span class="fader ungappedSel"></span> </span>`));
-    toolbar.append($(`<span> Accession: <span class="fader taxonSel"></span> </span>`));
+	if (!IS_MOBILE) {
+
+		// Toolbar after alignment
+		if ($(`[for="` + divID + `"].alignmentToolBar`).length == 0){
+		  $("#" + divID).after($("<div class='alignmentToolBar' for='" + divID + "'></div>"));
+		}
+		let toolbar = $(`[for="` + divID + `"].alignmentToolBar`);
+		toolbar.html("");
+		toolbar.append($(`<span><a href="` + downloadHref + `">Download fasta</a> </span>`));
+		toolbar.append($(`<span> Site: <span class="fader siteSel"></span> </span>`));
+		toolbar.append($(`<span> Ungapped: <span class="fader ungappedSel"></span> </span>`));
+		toolbar.append($(`<span> Accession: <span class="fader taxonSel"></span> </span>`));
 
 
 
-    $("#" + divID).after(toolbar);
+		$("#" + divID).after(toolbar);
 
 
-    // Canvas mouse hover events
-    canvas.onmousemove = function (e) {
-
-
-
-        let rect = this.getBoundingClientRect(),
-                x = e.clientX - rect.left,
-                y = e.clientY - rect.top,
-                i = 0, r;
-
-
-        // Too far up/down
-        if (y <= NT_HEIGHT || y > NT_HEIGHT*(nseq+1)) {
-          $("body").css("cursor", "auto");
-          toolbar.find(".fader").animate({ opacity: 0 }, SELECT_FONT_FADEOUT_TIME)
-          return;
-        }      
-
-
-        // Hover over accession
-        if (x <= ALN_LABEL_WIDTH){
-          toolbar.find(".fader").animate({ opacity: 0 }, SELECT_FONT_FADEOUT_TIME)
-          $("body").css("cursor", "pointer");
-          return;
-        }
-
-        $("body").css("cursor", "crosshair");
-
-
-        // Stop the fade out animation and bring back the opacity
-        toolbar.find(".fader").stop(true);
-        toolbar.find(".fader").css("opacity", 1);
-
-        let siteNum = Math.floor((x - ALN_LABEL_WIDTH) / NT_WIDTH) + 1;
-        let seqNum = Math.floor(y / NT_HEIGHT) - 1;
-        let accHover = accessions[seqNum];
-        let siteNumUngapped = alignment[accHover].substring(0, siteNum).replaceAll("-", "").length;
-       // console.log(accessions[seqNum], siteNum);
-
-
-          toolbar.find(".siteSel").html(siteNum);
-          toolbar.find(".ungappedSel").html(siteNumUngapped);
-          toolbar.find(".taxonSel").html(accHover.replace(".pdb", ""));
-
-
-        
-        //toolbar.html("Site " + siteNum + " ungapped: " + siteNumUngapped + " of " + accHover.replace(".pdb", ""));
-
-
-    };
-
-
-    // Click on accession to select it
-    canvas.onmousedown = function (e) {
-
-
-        let rect = this.getBoundingClientRect(),
-                x = e.clientX - rect.left,
-                y = e.clientY - rect.top,
-                i = 0, r;
-
-
-        // Click on accession
-        if (x <= ALN_LABEL_WIDTH){
-
-
-          let seqNum = Math.floor(y / NT_HEIGHT) - 1;
-          let a = accessions[seqNum];
-
-          var directory = DATA.directories[a];
-          directory = directory.replace("structures/", "dssp/");
-          deselectSites();
-          SELECTED_ACCESSION = directory.split("/");
-          SELECTED_ACCESSION = SELECTED_ACCESSION[SELECTED_ACCESSION.length-1];
-          selectSites();
-          if (!PAIRWISE) directory = "data/" + directory;
-          renderTertiary(directory);
-
-        }else{
-          deselectSites(true);
-        }
+		// Canvas mouse hover events
+		canvas.onmousemove = function (e) {
 
 
 
-
-    }
-
-    canvas.onmouseleave = function (e) {
-        $("body").css("cursor", "auto");
-        toolbar.find(".fader").animate({ opacity: 0 }, SELECT_FONT_FADEOUT_TIME)
-    };
+			let rect = this.getBoundingClientRect(),
+					x = e.clientX - rect.left,
+					y = e.clientY - rect.top,
+					i = 0, r;
 
 
+			// Too far up/down
+			if (y <= NT_HEIGHT || y > NT_HEIGHT*(nseq+1)) {
+			  $("body").css("cursor", "auto");
+			  toolbar.find(".fader").animate({ opacity: 0 }, SELECT_FONT_FADEOUT_TIME)
+			  return;
+			}      
+
+
+			// Hover over accession
+			if (x <= ALN_LABEL_WIDTH){
+			  toolbar.find(".fader").animate({ opacity: 0 }, SELECT_FONT_FADEOUT_TIME)
+			  $("body").css("cursor", "pointer");
+			  return;
+			}
+
+			$("body").css("cursor", "crosshair");
+
+
+			// Stop the fade out animation and bring back the opacity
+			toolbar.find(".fader").stop(true);
+			toolbar.find(".fader").css("opacity", 1);
+
+			let siteNum = Math.floor((x - ALN_LABEL_WIDTH) / NT_WIDTH) + 1;
+			let seqNum = Math.floor(y / NT_HEIGHT) - 1;
+			let accHover = accessions[seqNum];
+			let siteNumUngapped = alignment[accHover].substring(0, siteNum).replaceAll("-", "").length;
+		   // console.log(accessions[seqNum], siteNum);
+
+
+			  toolbar.find(".siteSel").html(siteNum);
+			  toolbar.find(".ungappedSel").html(siteNumUngapped);
+			  toolbar.find(".taxonSel").html(accHover.replace(".pdb", ""));
+
+
+			
+			//toolbar.html("Site " + siteNum + " ungapped: " + siteNumUngapped + " of " + accHover.replace(".pdb", ""));
+
+
+		};
+
+
+		// Click on accession to select it
+		canvas.onmousedown = function (e) {
+
+
+			let rect = this.getBoundingClientRect(),
+					x = e.clientX - rect.left,
+					y = e.clientY - rect.top,
+					i = 0, r;
+
+
+			// Click on accession
+			if (x <= ALN_LABEL_WIDTH){
+
+
+			  let seqNum = Math.floor(y / NT_HEIGHT) - 1;
+			  let a = accessions[seqNum];
+
+			  var directory = DATA.directories[a];
+			  directory = directory.replace("structures/", "dssp/");
+			  deselectSites();
+			  SELECTED_ACCESSION = directory.split("/");
+			  SELECTED_ACCESSION = SELECTED_ACCESSION[SELECTED_ACCESSION.length-1];
+			  selectSites();
+			  if (!PAIRWISE) directory = "data/" + directory;
+			  renderTertiary(directory);
+
+			}else{
+			  deselectSites(true);
+			}
+
+
+
+
+		}
+
+		canvas.onmouseleave = function (e) {
+			$("body").css("cursor", "auto");
+			toolbar.find(".fader").animate({ opacity: 0 }, SELECT_FONT_FADEOUT_TIME)
+		};
+
+	}
 
 }
 

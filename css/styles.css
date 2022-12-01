@@ -40,7 +40,7 @@ svg {
 
 
 g.matrixcell:hover rect{
-	fill:red !important;
+	fill:#a822a1 !important;
 }
 
 g.matrixcell:hover text{
@@ -391,7 +391,8 @@ div.svgDiv{
 
 .dropdownDiv{
 	padding: 1em;
-
+	margin-top:0.5em;
+	margin-bottom:0.5em;
 }
 
 .dropdownDiv select{
@@ -399,7 +400,13 @@ div.svgDiv{
 	color: white;
 	padding: 0.5em;
 	font-size:0.9em;
-	max-width: 150px;
+	max-width: 25em;
+}
+
+@media only screen and ( min-device-width: 1000px ) {
+	.dropdownDiv{
+		display:inline-block;
+	}
 }
 
 .button{
