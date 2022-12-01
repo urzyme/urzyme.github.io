@@ -1227,6 +1227,9 @@ function renderAlignment(divID, isPrimary = true, downloadHref = ""){
 
 
 	if (!IS_MOBILE) {
+		
+		let aars = accessions[0].split("_");
+		let downloadFileName = aars[0] + (isPrimary ? ".primary" : ".secondary") + ".fasta";
 
 		// Toolbar after alignment
 		if ($(`[for="` + divID + `"].alignmentToolBar`).length == 0){
@@ -1234,7 +1237,7 @@ function renderAlignment(divID, isPrimary = true, downloadHref = ""){
 		}
 		let toolbar = $(`[for="` + divID + `"].alignmentToolBar`);
 		toolbar.html("");
-		toolbar.append($(`<span><a href="` + downloadHref + `">Download fasta</a> </span>`));
+		toolbar.append($(`<span><a href="` + downloadHref + `" download="` + downloadFileName + `">Download fasta</a> </span>`));
 		toolbar.append($(`<span> Site: <span class="fader siteSel"></span> </span>`));
 		toolbar.append($(`<span> Ungapped: <span class="fader ungappedSel"></span> </span>`));
 		toolbar.append($(`<span> Accession: <span class="fader taxonSel"></span> </span>`));
