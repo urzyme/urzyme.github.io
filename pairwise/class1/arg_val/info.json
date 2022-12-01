@@ -7,9 +7,9 @@
     "fullName1":"Arginyl tRNA Synthetase",
     "fullName2":"Valyl tRNA Synthetase",
     "description":"Pairwise comparison of the Class I catalytic domains from the Arginyl tRNA Synthetase (ArgRS) and Valyl tRNA Synthetase (ValRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.665,
+    "rmsd":    2.646,
     "rmsd1":    2.73,
-    "rmsd2":    2.57,
-    "crossFamilyRmsd":    3.64,
-    "rmsdTotal":    3.16
+    "rmsd2":    2.7,
+    "crossFamilyRmsd":    3.69,
+    "rmsdTotal":    3.21
 }

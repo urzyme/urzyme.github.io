@@ -7,9 +7,9 @@
     "fullName1":"Tetrameric glycyl tRNA Synthetase",
     "fullName2":"Threonyl tRNA Synthetase",
     "description":"Pairwise comparison of the Class II catalytic domains from the Tetrameric glycyl tRNA Synthetase (t-GlyRS) and Threonyl tRNA Synthetase (ThrRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    1.646,
-    "rmsd1":    1.52,
+    "rmsd":    1.641,
+    "rmsd1":    1.36,
     "rmsd2":    1.29,
-    "crossFamilyRmsd":    3.38,
-    "rmsdTotal":    1.85
+    "crossFamilyRmsd":    3.05,
+    "rmsdTotal":    1.76
 }

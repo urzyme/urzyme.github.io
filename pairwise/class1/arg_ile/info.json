@@ -7,9 +7,9 @@
     "fullName1":"Arginyl tRNA Synthetase",
     "fullName2":"Isoleucyl tRNA Synthetase",
     "description":"Pairwise comparison of the Class I catalytic domains from the Arginyl tRNA Synthetase (ArgRS) and Isoleucyl tRNA Synthetase (IleRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.647,
-    "rmsd1":    2.64,
-    "rmsd2":    3.23,
-    "crossFamilyRmsd":    3.59,
-    "rmsdTotal":    3.26
+    "rmsd":    2.593,
+    "rmsd1":    2.57,
+    "rmsd2":    3.49,
+    "crossFamilyRmsd":    3.52,
+    "rmsdTotal":    3.27
 }

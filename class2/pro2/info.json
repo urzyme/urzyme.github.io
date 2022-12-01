@@ -1,0 +1,16 @@
+{
+		"name": "ProRS-B",
+		"fullName": "Prolyl tRNA Synthetase (Bacterial-like)",
+		"icon": "/fig/icon_pro.png",
+		"substrate": "Proline",
+		"incorporates": "Proline",
+		"class": "Class II",
+		"subclass": "a",
+		"oligo": "Homodimer",
+		"codons": "CCU, CCC, CCA, CCG",
+		"editing": "Post-transfer",
+		"ref_str": ["structures/Pro_Bact_2J3M_E_faecalis.pdb"]
+	
+}
+
+

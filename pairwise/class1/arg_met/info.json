@@ -8,8 +8,8 @@
     "fullName2":"Methionyl tRNA Synthetase",
     "description":"Pairwise comparison of the Class I catalytic domains from the Arginyl tRNA Synthetase (ArgRS) and Methionyl tRNA Synthetase (MetRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
     "rmsd":    2.547,
-    "rmsd1":    2.82,
-    "rmsd2":    2.33,
-    "crossFamilyRmsd":    3.34,
-    "rmsdTotal":    2.98
+    "rmsd1":    2.72,
+    "rmsd2":    2.27,
+    "crossFamilyRmsd":    3.38,
+    "rmsdTotal":    2.96
 }

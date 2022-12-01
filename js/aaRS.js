@@ -10,6 +10,7 @@ PV_PDBS = {};
 PV_GEOMS = {};
 
 SELECTED_SITES = {lower: -1, upper: -1};
+SELECTED_ACCESSION = null;
 
 AA_COLS = {A: "#80a0f0", I: "#80a0f0", L: "#80a0f0", M: "#80a0f0", F: "#80a0f0", W: "#80a0f0", V: "#80a0f0",
           K: "#f01505", R: "#f01505",
@@ -48,6 +49,8 @@ SEC_WIDTH = 1.0;
 SEC_HEIGHT = 20;
 NT_FONT_SIZE = 11;
 ALN_LABEL_WIDTH = 300;
+
+SELECT_FONT_FADEOUT_TIME = 10000;
 
 CATALYTIC_DOMAIN_WIDTH = 600;
 CATALYTIC_DOMAIN_HEIGHT = 350;
@@ -108,7 +111,7 @@ function renderaaRS(isPairwise = false){
   
   
   
-  // More section titles and download fasta
+  // More section titles
   $("#alignment").before("<h2>Primary structure</h2>");
   $("#alignment2").before("<h2>Secondary structure</h2>");
   $("#secondary").before("<h2>Domain architecture</h2>");
@@ -129,7 +132,7 @@ function renderaaRS(isPairwise = false){
 
 	// Tertiary dropdowns
 	$("#tertiaryTable").append("<span class='button' onClick='deselectSites(true)'>Clear selection</span>");
-  $("#tertiaryTable").append("<span class='dropdownDiv'>Domain: <select id='domainSelect'></select></span>");
+  $("#tertiaryTable").append("<span class='dropdownDiv domainSelect'>Domain: <select id='domainSelect'></select></span>");
 	$("#tertiaryTable").append("<span class='dropdownDiv colouring'>Alignment colour: <select id='tertiaryColouringAln'></select></span>");
 	$("#tertiaryTable").append("<span class='dropdownDiv colouring'>Reference colour: <select id='tertiaryColouringSingle'></select></span>");
 	
@@ -145,13 +148,13 @@ function renderaaRS(isPairwise = false){
     }
     $(dropdown).on("change", function(){
       $("#tertiary").html("");
-      clearSelection();
+      deselectSites();
       renderTertiary("data/align.pdb", "superposition");
     });
 	
 		
 	if (PAIRWISE) {
-		$("#tertiaryTable .dropdownDiv").hide();
+		$("#tertiaryTable .domainSelect").hide();
 	}
 	
 	
@@ -317,6 +320,9 @@ function renderTertiary(pdb = null, id = "tertiary") {
 	};
 	
 
+
+  $("#" + id).hide(0);
+
   // Reset canvas
   $("#" + id).html("");
 
@@ -327,21 +333,12 @@ function renderTertiary(pdb = null, id = "tertiary") {
   }
 
   // Which protein domain?
-  //if (pdb != null){
-     
-    var domain = $("#domainSelect").val();
-    var domainDir = domain.replaceAll(" ", "_");
-    
-    if (domain != "_full"){
-      pdb = pdb.replace("data/", "")
-      pdb = "data/domains/" + domainDir + "/" + pdb ;
-    }else{
-      //pdb = pdb.replaceAll("domains/*/", "")
-      //pdb = "data/dssp/" + pdb;
-    }
-
-
-  //}
+  var domain = $("#domainSelect").val();
+  var domainDir = domain.replaceAll(" ", "_");
+  if (domain != "_full"){
+    pdb = pdb.replace("data/", "")
+    pdb = "data/domains/" + domainDir + "/" + pdb ;
+  }
   PV_PDBS[id] = pdb;
 
 
@@ -359,16 +356,24 @@ function renderTertiary(pdb = null, id = "tertiary") {
 
   console.log(pdb);
 
+
+  // Hide and show again to prevent the annoying scrolling activity 
+  setTimeout(function(){
+    $("#" + id).show(0);
+  }, 1);
+
 	
 	// https://pv.readthedocs.io/en/v1.8.1/intro.html
  // asynchronously load the PDB file for the dengue methyl transferase from the server and display it in the viewer.
   pv.io.fetchPdb(pdb, function(structure) {
 
+   
+
 	  
     // Display the protein as cartoon
 	  if (id == "tertiary"){
 		var method = $("#tertiaryColouringSingle").length == 0 ? "color.ssSuccession" : "color." + $("#tertiaryColouringSingle").val();
-		PV_GEOMS[id] = viewer.cartoon('protein', structure, { color : colourSelected(id, eval(method)) });
+		  PV_GEOMS[id] = viewer.cartoon('protein', structure, { color : colourSelected(id, eval(method)) });
 	  }else{
 		var method = $("#tertiaryColouringAln").length == 0 ? "color.bySS" : "color." + $("#tertiaryColouringAln").val();
 		 PV_GEOMS[id] = viewer.cartoon('protein', structure, { color : colourSelected(id, eval(method)) });
@@ -377,8 +382,16 @@ function renderTertiary(pdb = null, id = "tertiary") {
     viewer.centerOn(structure);
 	  viewer.setZoom(150);
     //viewer.autoZoom();
-	  $("#" + id).append("<div class='pdblabel'>" + pdb + "</div>");
-	  
+
+    let acc = pdb.split("/");
+    acc = acc[acc.length-1];
+	  $("#" + id).append("<div class='pdblabel'>" + acc + "</div>");
+
+
+    // Back to top
+	  //$('html,body').scrollTop(0);
+
+
   });
   
 
@@ -552,7 +565,7 @@ function renderSecondary(svg){
     var svgContent = $(drawSVGobj(svg, "g", {class: "content"}));
 
 
-    // Residue selection
+    // Residue selection dragger
     const eleSvg = $(svg).get(0); //document.getElementById(svg.attr("id"));
     eleSvg.addEventListener('mousedown', ({clientX, clientY}) => {
 
@@ -561,16 +574,17 @@ function renderSecondary(svg){
       if (x1 <= ALN_LABEL_WIDTH) return;
 
 
-      SELECTED_SITES = {lower: -1, upper: -1};
 
 
       var clearing = false;
 
       // Clear selection and draw new rectangle
-      if (svgHighlight.find(".selectionRect").length > 0){
-		deselectSites();
+      if (SELECTED_SITES.lower != -1 || svgHighlight.find(".selectionRect").length > 0){
         clearing = true;
       }
+
+
+       deselectSites();
       
       
       var res1 = Math.floor((x1 - ALN_LABEL_WIDTH) / SEC_WIDTH) + 1;
@@ -618,8 +632,6 @@ function renderSecondary(svg){
       var mouseUp = function({clientX, clientY}){
 
 
-
-
         var coords = mouseMove({clientX, clientY});
 
 
@@ -627,8 +639,8 @@ function renderSecondary(svg){
         SELECTED_SITES.upper = coords.res2;
 
         // Clear selection
-        if (clearing && SELECTED_SITES.lower >= SELECTED_SITES.upper-1){
-		  deselectSites();
+        if (clearing && SELECTED_SITES.upper - SELECTED_SITES.lower < 3){
+		      deselectSites();
         }
 
         selectSites();
@@ -707,14 +719,22 @@ function renderSecondary(svg){
       // Click on a feature to select residues
       $(text).click(function(){
 		  
-		deselectSites();
 		  
         var ele = $(this);
+
+        if (ele.attr("class") == "selected"){
+          deselectSites(true);
+          return;
+        }
+
+        deselectSites();
+
         $(ele).attr("class", "selected");
         SELECTED_SITES.lower = parseFloat(ele.attr("lower"));
         SELECTED_SITES.upper = parseFloat(ele.attr("upper"));
-		
         selectSites();
+
+
       });
      
     }
@@ -748,6 +768,12 @@ function renderSecondary(svg){
         var a = event.target.getAttribute("pdb");
         var directory = DATA.directories[a];
         directory = directory.replace("structures/", "dssp/");
+        deselectSites();
+        SELECTED_ACCESSION = directory.split("/");
+        SELECTED_ACCESSION = SELECTED_ACCESSION[SELECTED_ACCESSION.length-1];
+        selectSites();
+
+
         if (!PAIRWISE) directory = "data/" + directory;
   			renderTertiary(directory);
   		});
@@ -763,42 +789,51 @@ function renderSecondary(svg){
       var y = SEC_HEIGHT*(seqNum+1.5)
 
 
+      let sseGroup = drawSVGobj(svgContent, "g", { accession: acc, class: "domainSeq", select: "na" });
+
+
       // Find contiguous regions of helix, strand, loop, or gap
       var SSEs = [];
       var symbol = seq[0];
-	  if (symbol == "I" || symbol == "G") symbol = "H"; // Helix
-	  if (symbol == "S" || symbol == "B" || symbol == "T") symbol = "N"; // Loop etc
+  	  if (symbol == "I" || symbol == "G") symbol = "H"; // Helix
+  	  if (symbol == "S" || symbol == "B" || symbol == "T") symbol = "N"; // Loop etc
       var start = 0;
       for (var site = 1; site < nsites; site++){
 
-        var symbol2 = seq[site];
-		if (symbol2 == "I" || symbol2 == "G") symbol2 = "H"; // Helix
-		if (symbol2 == "S" || symbol2 == "B"  || symbol2 == "T") symbol2 = "N"; // Loop etc
-        if (symbol != symbol2){
+          var symbol2 = seq[site];
+      		if (symbol2 == "I" || symbol2 == "G") symbol2 = "H"; // Helix
+      		if (symbol2 == "S" || symbol2 == "B"  || symbol2 == "T") symbol2 = "N"; // Loop etc
+          if (symbol != symbol2){
 
-          var sse = {start: start, stop: site-1, element: symbol};
-          symbol = symbol2;
-          start = site;
-          SSEs.push(sse);
+              var sse = {seqNum: seqNum, start: start, stop: site-1, element: symbol};
+              symbol = symbol2;
+              start = site;
+              SSEs.push(sse);
 
-        }
+          }
       }
 
 
       // Plot them
       for (var i = 0; i < SSEs.length; i ++){
 
+
+
         var sse = SSEs[i];
 
+
+        
 
         var startX = (sse.start)*SEC_WIDTH + ALN_LABEL_WIDTH;
         var endX = (sse.stop+1)*SEC_WIDTH + ALN_LABEL_WIDTH;
 
 
+        let colourModifier = "";
+
+
         // Gap - do nothing
         if (sse.element == "-"){
           //console.log(acc, "gaps", sse);
-
 
         }
 
@@ -806,7 +841,7 @@ function renderSecondary(svg){
         else if ((sse.element == "H")  && sse.stop - sse.start + 1 >= MIN_SSE_LEN){
 
           //console.log(acc, "helix", sse);
-          drawSVGobj(svgContent, "rect", {rx: HELIX_CORNER_RADIUS, x: startX, y: y-HELIX_WIDTH/2, width: endX-startX, height: HELIX_WIDTH, style: "stroke-width:1px; stroke:black; fill:" + AA_COLS_2["H"]} );
+          drawSVGobj(sseGroup, "rect", {rx: HELIX_CORNER_RADIUS, x: startX, y: y-HELIX_WIDTH/2, width: endX-startX, height: HELIX_WIDTH, style: "stroke-width:1px; stroke:black; fill:" + AA_COLS_2["H"] + colourModifier} );
 
         }
 
@@ -833,7 +868,7 @@ function renderSecondary(svg){
           points += " " + x2 + "," + (y+STRAND_ARROW_BASE_WIDTH/2);
           points += " " + startX + "," + (y+STRAND_ARROW_BASE_WIDTH/2);
 
-          drawSVGobj(svgContent, "polygon", {points: points, style: "stroke-width:1px; stroke:black; fill:" + AA_COLS_2["E"]} )
+          drawSVGobj(sseGroup, "polygon", {points: points, style: "stroke-width:1px; stroke:black; fill:" + AA_COLS_2["E"] + colourModifier} )
 
         }
 
@@ -843,7 +878,7 @@ function renderSecondary(svg){
 
           //console.log(acc, "loop", sse);
 
-          drawSVGobj(svgContent, "line", {x1: startX, x2: endX, y1: y, y2: y, style: "stroke-linecap:round; stroke-width:1px; stroke:black"} )
+          drawSVGobj(sseGroup, "line", {x1: startX, x2: endX, y1: y, y2: y, style: "stroke-linecap:round; stroke-width:1px; stroke:#000000" + colourModifier} )
 
         }
 
@@ -867,6 +902,7 @@ function renderSecondary(svg){
 function deselectSites(refresh = false){
 	
 	console.log("deselectSites");
+  //console.trace();
 	
 	// Clear selecting rectangle
 	$("svg").find(".selectionRect").remove();
@@ -874,6 +910,7 @@ function deselectSites(refresh = false){
 	
 	// Clear domain selection text 
 	$("svg").find("text").attr("class", "deselected");
+  $("#secondary g.domainSeq").attr("select", "na");
 	
 				
 	// Clear selection on catalytic table / svg
@@ -886,6 +923,7 @@ function deselectSites(refresh = false){
 	// Clear selection
 	SELECTED_SITES.lower = -1;
 	SELECTED_SITES.upper = -1;
+  SELECTED_ACCESSION = null;
 	
 	if (refresh) selectSites();
 	
@@ -898,6 +936,14 @@ function selectSites(){
     // Update canvas colours
     renderAlignment("alignment", true, "data/align.ali");
     renderAlignment("alignment2", false, "data/secondary.fasta");
+
+
+    // Domain architecture fade out other sequences
+    if (SELECTED_ACCESSION != null){
+      $("#secondary g.domainSeq").attr("select", "false");
+      $(`#secondary g.domainSeq[accession="` + SELECTED_ACCESSION + `"]`).attr("select", "true");
+      console.log("settigng to deselected");
+    }
 
     // Rescroll
     if (SELECTED_SITES.lower != -1){
@@ -915,10 +961,7 @@ function selectSites(){
 
 }
 
-function clearSelection(){
-  $("#secondary").find(".selectionRect").remove();
-  SELECTED_SITES = {lower: -1, upper: -1};
-}
+
 
 
 var PIXEL_RATIO = (function () {
@@ -1002,10 +1045,10 @@ function renderAlignment(divID, isPrimary = true, downloadHref = ""){
       var accPrint = acc.replace(".pdb", "");
       var cls = DATA.isAlpha[[acc]] ? "alpha" : "pdb";
   
-	  ctx.font = NT_FONT_SIZE + "px Source sans pro";
-	  ctx.textAlign = "end";
-    ctx.fillStyle = "black";
-	  ctx.fillText(accPrint, x, y);
+  	  ctx.font = NT_FONT_SIZE + "px Source sans pro";
+  	  ctx.textAlign = "end";
+      ctx.fillStyle = "#366BA1";
+  	  ctx.fillText(accPrint, x, y);
 
 
     }
@@ -1070,6 +1113,14 @@ function renderAlignment(divID, isPrimary = true, downloadHref = ""){
             }
         }
       }
+
+      // Selected accession?
+      else if (SELECTED_ACCESSION != null){
+        if (acc != SELECTED_ACCESSION){
+          col = col + "33";
+          textCol = textCol + "88";
+        }
+      }
       
 		  
 			ctx.beginPath();
@@ -1096,7 +1147,7 @@ function renderAlignment(divID, isPrimary = true, downloadHref = ""){
 
 
 
-	// Selected sites
+	 // Rect around selected sites
 	 if (SELECTED_SITES.lower != -1){
 		 
 		  let x1 = NT_WIDTH*(SELECTED_SITES.lower-1) + ALN_LABEL_WIDTH;
@@ -1105,9 +1156,25 @@ function renderAlignment(divID, isPrimary = true, downloadHref = ""){
 		  ctx.beginPath();
 		  ctx.fillStyle = col;
 		  ctx.strokeRect(x1, NT_HEIGHT, x2-x1, NT_HEIGHT*(nseq));
-		  
 		 
 	 }
+
+   // Rect around selected accession
+   else if (SELECTED_ACCESSION != null){
+
+      let selectedSeqNr = -1;
+      for (let seqNum = 0; seqNum < nseq; seqNum++){
+        if (accessions[seqNum] == SELECTED_ACCESSION){
+          selectedSeqNr = seqNum;
+          break;
+        }
+      }
+    
+      ctx.beginPath();
+      ctx.fillStyle = col;
+      ctx.strokeRect(0, (selectedSeqNr+1)*NT_HEIGHT, ALN_LABEL_WIDTH + NT_WIDTH*nsites, NT_HEIGHT);
+
+   }
 
 
 
@@ -1165,18 +1232,20 @@ function renderAlignment(divID, isPrimary = true, downloadHref = ""){
     }
     let toolbar = $(`[for="` + divID + `"].alignmentToolBar`);
     toolbar.html("");
-    toolbar.append($(`<a href="` + downloadHref + `">Download fasta</a>`));
-    toolbar.append($(`<span> Site: <span class="siteSel"></span> </span>`));
-    toolbar.append($(`<span> Ungapped: <span class="ungappedSel"></span> </span>`));
-    toolbar.append($(`<span> Accession: <span class="taxonSel"></span> </span>`));
+    toolbar.append($(`<span><a href="` + downloadHref + `">Download fasta</a> </span>`));
+    toolbar.append($(`<span> Site: <span class="fader siteSel"></span> </span>`));
+    toolbar.append($(`<span> Ungapped: <span class="fader ungappedSel"></span> </span>`));
+    toolbar.append($(`<span> Accession: <span class="fader taxonSel"></span> </span>`));
 
 
 
     $("#" + divID).after(toolbar);
 
 
-    // Hover text
+    // Canvas mouse hover events
     canvas.onmousemove = function (e) {
+
+
 
         let rect = this.getBoundingClientRect(),
                 x = e.clientX - rect.left,
@@ -1184,13 +1253,28 @@ function renderAlignment(divID, isPrimary = true, downloadHref = ""){
                 i = 0, r;
 
 
-
-        if (x <= ALN_LABEL_WIDTH || y <= NT_HEIGHT || y > NT_HEIGHT*(nseq+1)) {
-          toolbar.find(".siteSel").html("");
-          toolbar.find(".ungappedSel").html("");
-          toolbar.find(".taxonSel").html("");
+        // Too far up/down
+        if (y <= NT_HEIGHT || y > NT_HEIGHT*(nseq+1)) {
+          $("body").css("cursor", "auto");
+          toolbar.find(".fader").animate({ opacity: 0 }, SELECT_FONT_FADEOUT_TIME)
           return;
         }      
+
+
+        // Hover over accession
+        if (x <= ALN_LABEL_WIDTH){
+          toolbar.find(".fader").animate({ opacity: 0 }, SELECT_FONT_FADEOUT_TIME)
+          $("body").css("cursor", "pointer");
+          return;
+        }
+
+        $("body").css("cursor", "crosshair");
+
+
+        // Stop the fade out animation and bring back the opacity
+        toolbar.find(".fader").stop(true);
+        toolbar.find(".fader").css("opacity", 1);
+
         let siteNum = Math.floor((x - ALN_LABEL_WIDTH) / NT_WIDTH) + 1;
         let seqNum = Math.floor(y / NT_HEIGHT) - 1;
         let accHover = accessions[seqNum];
@@ -1209,11 +1293,47 @@ function renderAlignment(divID, isPrimary = true, downloadHref = ""){
 
     };
 
+
+    // Click on accession to select it
+    canvas.onmousedown = function (e) {
+
+
+        let rect = this.getBoundingClientRect(),
+                x = e.clientX - rect.left,
+                y = e.clientY - rect.top,
+                i = 0, r;
+
+
+        // Click on accession
+        if (x <= ALN_LABEL_WIDTH){
+
+
+          let seqNum = Math.floor(y / NT_HEIGHT) - 1;
+          let a = accessions[seqNum];
+
+          var directory = DATA.directories[a];
+          directory = directory.replace("structures/", "dssp/");
+          deselectSites();
+          SELECTED_ACCESSION = directory.split("/");
+          SELECTED_ACCESSION = SELECTED_ACCESSION[SELECTED_ACCESSION.length-1];
+          selectSites();
+          if (!PAIRWISE) directory = "data/" + directory;
+          renderTertiary(directory);
+
+        }else{
+          deselectSites(true);
+        }
+
+
+
+
+    }
+
     canvas.onmouseleave = function (e) {
-        toolbar.find(".siteSel").html("");
-        toolbar.find(".ungappedSel").html("");
-        toolbar.find(".taxonSel").html("");
+        $("body").css("cursor", "auto");
+        toolbar.find(".fader").animate({ opacity: 0 }, SELECT_FONT_FADEOUT_TIME)
     };
+
 
 
 }

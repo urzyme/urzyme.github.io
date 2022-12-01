@@ -12,6 +12,9 @@ body {
 }
 
 
+svg {
+	user-select: none;
+}
 
 @media only screen and ( min-device-width: 1000px ) {
 	.mobile-display{
@@ -25,8 +28,8 @@ body {
 }
 
 .alignmentToolBar span{
-	padding-left: 1em;
-	padding-right: 0.5em;
+	padding-left: 0.1em;
+	padding-right: 1em;
 }
 
 .alignmentToolBar span span{
@@ -91,11 +94,22 @@ svg text{
 }
 
 
-svg text.selected{
+#secondary text.selected{
   fill: #008cba !important;
   font-weight: bold;
 }
 
+#secondary g[select="na"]{
+	opacity: 1.0
+}
+
+#secondary g[select="false"]{
+	opacity: 0.4;
+}
+
+#secondary g[select="true"]{
+	opacity: 1.0;
+}
 
 
 
@@ -241,20 +255,20 @@ table.maptable td.selected, th.selected {
 }
 
 
-svg g.selected polygon, svg g.selected rect{
+#catalyticSVG g.selected polygon, #catalyticSVG g.selected rect{
 	fill:#008cba !important;
 }
 
-svg g.selected path{
+#catalyticSVG g.selected path{
 	stroke:#008cba !important;
 	stroke-width: 6px !important;
 }
 
-svg g.deselected polygon, svg g.deselected rect{
+#catalyticSVG g.deselected polygon, #catalyticSVG g.deselected rect{
 	fill:#d3d3d3 !important;
 }
 
-svg g.deselected path{
+#catalyticSVG g.deselected path{
 	stroke:#696969 !important;
 }
 

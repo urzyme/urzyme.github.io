@@ -7,9 +7,9 @@
     "fullName1":"Glutaminyl tRNA Synthetase",
     "fullName2":"Leucyl tRNA Synthetase",
     "description":"Pairwise comparison of the Class I catalytic domains from the Glutaminyl tRNA Synthetase (GlnRS) and Leucyl tRNA Synthetase (LeuRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.556,
-    "rmsd1":    1.09,
-    "rmsd2":    2.84,
-    "crossFamilyRmsd":    3.71,
-    "rmsdTotal":    2.79
+    "rmsd":    2.468,
+    "rmsd1":    1.08,
+    "rmsd2":    2.54,
+    "crossFamilyRmsd":    3.59,
+    "rmsdTotal":    2.67
 }

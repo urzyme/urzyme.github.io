@@ -7,9 +7,9 @@
     "fullName1":"Glutaminyl tRNA Synthetase",
     "fullName2":"Glutamyl tRNA Synthetase (discriminating)",
     "description":"Pairwise comparison of the Class I catalytic domains from the Glutaminyl tRNA Synthetase (GlnRS) and Glutamyl tRNA Synthetase (discriminating) (GluRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.331,
-    "rmsd1":    1.27,
-    "rmsd2":    1.81,
-    "crossFamilyRmsd":    3.43,
-    "rmsdTotal":    2.47
+    "rmsd":    2.269,
+    "rmsd1":    1.2,
+    "rmsd2":    1.85,
+    "crossFamilyRmsd":    3.47,
+    "rmsdTotal":    2.48
 }

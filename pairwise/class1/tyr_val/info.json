@@ -7,9 +7,9 @@
     "fullName1":"Tyrosyl tRNA Synthetase",
     "fullName2":"Valyl tRNA Synthetase",
     "description":"Pairwise comparison of the Class I catalytic domains from the Tyrosyl tRNA Synthetase (TyrRS) and Valyl tRNA Synthetase (ValRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.486,
+    "rmsd":    2.596,
     "rmsd1":    2.44,
-    "rmsd2":    2.2,
-    "crossFamilyRmsd":    3.14,
-    "rmsdTotal":    2.75
+    "rmsd2":    2.73,
+    "crossFamilyRmsd":    3.87,
+    "rmsdTotal":    3.19
 }

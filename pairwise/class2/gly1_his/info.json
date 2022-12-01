@@ -7,7 +7,7 @@
     "fullName1":"Dimeric glycyl tRNA Synthetase",
     "fullName2":"Histidyl tRNA Synthetase",
     "description":"Pairwise comparison of the Class II catalytic domains from the Dimeric glycyl tRNA Synthetase (GlyRS) and Histidyl tRNA Synthetase (HisRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    1.828,
+    "rmsd":    1.822,
     "rmsd1":    1.65,
     "rmsd2":    2.38,
     "crossFamilyRmsd":    2.48,

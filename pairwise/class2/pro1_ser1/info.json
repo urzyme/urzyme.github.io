@@ -1,0 +1,15 @@
+{
+    "fullName":"ProRS-A vs SerRS pairwise comparison",
+    "class":"Class II",
+    "icon":"/fig/icon_white.png",
+    "family1":"ProRS-A",
+    "family2":"SerRS",
+    "fullName1":"Prolyl tRNA Synthetase (Archaeal-like)",
+    "fullName2":"Seryl tRNA Synthetase",
+    "description":"Pairwise comparison of the Class II catalytic domains from the Prolyl tRNA Synthetase (Archaeal-like) (ProRS-A) and Seryl tRNA Synthetase (SerRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    1.839,
+    "rmsd1":    1.27,
+    "rmsd2":    1.39,
+    "crossFamilyRmsd":    2.51,
+    "rmsdTotal":    1.9
+}

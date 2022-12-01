@@ -1,0 +1,15 @@
+{
+    "fullName":"GlyRS vs ProRS-B pairwise comparison",
+    "class":"Class II",
+    "icon":"/fig/icon_white.png",
+    "family1":"GlyRS",
+    "family2":"ProRS-B",
+    "fullName1":"Dimeric glycyl tRNA Synthetase",
+    "fullName2":"Prolyl tRNA Synthetase (Bacterial-like)",
+    "description":"Pairwise comparison of the Class II catalytic domains from the Dimeric glycyl tRNA Synthetase (GlyRS) and Prolyl tRNA Synthetase (Bacterial-like) (ProRS-B) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.03,
+    "rmsd1":    1.92,
+    "rmsd2":    2.12,
+    "crossFamilyRmsd":    2.91,
+    "rmsdTotal":    2.45
+}

@@ -7,9 +7,9 @@
     "fullName1":"Cysteinyl tRNA Synthetase",
     "fullName2":"Valyl tRNA Synthetase",
     "description":"Pairwise comparison of the Class I catalytic domains from the Cysteinyl tRNA Synthetase (CysRS) and Valyl tRNA Synthetase (ValRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    1.948,
-    "rmsd1":    1.68,
-    "rmsd2":    2.21,
-    "crossFamilyRmsd":    2.68,
-    "rmsdTotal":    2.3
+    "rmsd":    1.98,
+    "rmsd1":    1.7,
+    "rmsd2":    2.24,
+    "crossFamilyRmsd":    2.73,
+    "rmsdTotal":    2.34
 }

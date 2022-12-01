@@ -8,7 +8,7 @@
     "fullName2":"Threonyl tRNA Synthetase",
     "description":"Pairwise comparison of the Class II catalytic domains from the &alpha; bacterial Phenylalanyl tRNA Synthetase subunit (b-&alpha;-PheRS) and Threonyl tRNA Synthetase (ThrRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
     "rmsd":    2.294,
-    "rmsd1":    1.93,
+    "rmsd1":    1.94,
     "rmsd2":    1.29,
     "crossFamilyRmsd":    3.17,
     "rmsdTotal":    2.32

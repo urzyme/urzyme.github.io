@@ -7,9 +7,9 @@
     "fullName1":"Cysteinyl tRNA Synthetase",
     "fullName2":"Glutaminyl tRNA Synthetase",
     "description":"Pairwise comparison of the Class I catalytic domains from the Cysteinyl tRNA Synthetase (CysRS) and Glutaminyl tRNA Synthetase (GlnRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.162,
-    "rmsd1":    1.97,
+    "rmsd":    2.263,
+    "rmsd1":    2,
     "rmsd2":    1.07,
-    "crossFamilyRmsd":    3.26,
-    "rmsdTotal":    2.47
+    "crossFamilyRmsd":    3.29,
+    "rmsdTotal":    2.5
 }

@@ -9,7 +9,7 @@
     "description":"Pairwise comparison of the Class II catalytic domains from the Asparginyl tRNA Synthetase (AsnRS) and Threonyl tRNA Synthetase (ThrRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
     "rmsd":    2.494,
     "rmsd1":    1.71,
-    "rmsd2":    1.29,
-    "crossFamilyRmsd":    3.6,
+    "rmsd2":    1.28,
+    "crossFamilyRmsd":    3.61,
     "rmsdTotal":    2.56
 }

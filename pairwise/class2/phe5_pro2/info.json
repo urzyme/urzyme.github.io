@@ -1,0 +1,15 @@
+{
+    "fullName":"m-PheRS vs ProRS-B pairwise comparison",
+    "class":"Class II",
+    "icon":"/fig/icon_white.png",
+    "family1":"m-PheRS",
+    "family2":"ProRS-B",
+    "fullName1":"Mitochondrial Phenylalanyl tRNA Synthetase",
+    "fullName2":"Prolyl tRNA Synthetase (Bacterial-like)",
+    "description":"Pairwise comparison of the Class II catalytic domains from the Mitochondrial Phenylalanyl tRNA Synthetase (m-PheRS) and Prolyl tRNA Synthetase (Bacterial-like) (ProRS-B) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.591,
+    "rmsd1":    1.02,
+    "rmsd2":    2.12,
+    "crossFamilyRmsd":    3.75,
+    "rmsdTotal":    2.74
+}

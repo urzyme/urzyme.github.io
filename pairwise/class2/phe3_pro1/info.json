@@ -1,0 +1,15 @@
+{
+    "fullName":"e-&alpha;-PheRS vs ProRS-A pairwise comparison",
+    "class":"Class II",
+    "icon":"/fig/icon_white.png",
+    "family1":"e-&alpha;-PheRS",
+    "family2":"ProRS-A",
+    "fullName1":"&alpha; eukaryotic Phenylalanyl tRNA Synthetase subunit",
+    "fullName2":"Prolyl tRNA Synthetase (Archaeal-like)",
+    "description":"Pairwise comparison of the Class II catalytic domains from the &alpha; eukaryotic Phenylalanyl tRNA Synthetase subunit (e-&alpha;-PheRS) and Prolyl tRNA Synthetase (Archaeal-like) (ProRS-A) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.437,
+    "rmsd1":    1.55,
+    "rmsd2":    1.2,
+    "crossFamilyRmsd":    3.37,
+    "rmsdTotal":    2.27
+}

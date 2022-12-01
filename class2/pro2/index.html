@@ -1,0 +1,195 @@
+﻿
+
+
+<html>
+<head>
+<title>aaRS</title>
+
+<link rel="icon" >
+<meta name="viewport" content="width=device-width, initial-scale=0.41, maximum-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/styles.css">
+
+<script language='JavaScript' type='text/JavaScript' src="/js/aaRS.js"></script>
+<script language='JavaScript' type='text/JavaScript' src="/js/util.js"></script>
+<script type='text/javascript' src='../../bower_components/bio-pv/bio-pv.min.js'></script>
+
+        
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+
+
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+
+
+
+<script language='JavaScript' type='text/JavaScript'>
+
+
+function init(){
+	
+	renderaaRS();
+}
+
+
+
+</script>
+
+</head>
+<body onload="init()">
+
+
+	<div id="main">
+
+		<ul id="flexContainer">
+			<li class="summary">
+				
+			</li>
+
+
+			<li class="notes">
+				
+				<div>
+
+
+					The bacterial-like prolyl tRNA synthetase (ProRS-B) is an enzyme which attaches proline to its cognate tRNA: <br>
+
+
+					<ul>
+						<li>Pro + tRNA<sup>Pro</sup> + ATP &rightarrow; Pro-tRNA<sup>Thr</sup> + AMP + PP<sub>i</sub> </li>
+					</ul>
+
+
+					<a href="../pro1">ProRS-A</a> is a closely related enzyme which is instead found in most archaea and eukaryotes, as well as some bacteria.  
+					ProRS-A and ProRS-B are both part of subclass IIa alongside <a href="../his">HisRS</a>, <a href="../ser1">SerRS</a>, <a href="../thr">ThrRS</a>, and the <a href="../gly1">dimeric GlyRS</a> (Gomez et al. 2020, Valencia-Sánchez et al. 2016, Perona et al. 2012). With the exception of SerRS, the anticodon binding domains of subclass IIa are homologous and reside at the C-terminal (Wolf et al. 1999). <br><br> 
+
+
+
+						ProRS-A and B possess distinct domain architectures (Musier-Forsyth et al. 2005). The bacterial-like form ProRS-B contains an editing domain inserted within the catalytic domain. The archaeal-like form ProRS-A instead have a C-terminal zinc binding domain around 80 amino acids in length. The functional activity of the zinc binding domain remains elusive, however it appears to be essential for ProRS catalytic activity (Vasu et al. 2021). <br><br>
+
+
+							The catalytic domain of ProRS is quite typical of a class II aaRS. Like most members of the superfamily, ATP binding is coordinated by the arginine tweezers, located in motifs 2 and 3 (Kaiser et al. 2018). The catalytic domain contains six antiparallel strands. <br><br>
+
+
+						Editing in ProRS occurs at the post-transfer level. In ProRS-B, the deacylation of mischarged cysteine and alanine can occur through an edit domain located between motifs 2 and 3 of the catalytic domain. However, this domain is lacking in ProRS-A, and the process is quite inefficient for cysteine in particular. As such, there are trans-acting factors which remove these mischarged residues from tRNA<sup>Pro</sup> - YbaK for cysteine and ProXp-ala for alanine. These factors are paralogs of the ProRS-B editing domain (Vargas-Rodriguez and Musier-Forsyth 2013, An and Musier-Forsyth 2004). <br><br>
+
+
+						There is also a fused glutamyl-prolyl tRNA synthetase (EPRS) which exists in most animals. This protein contains the catalytic domains from both GluRS and ProRS, as well as the ProRS zinc binding domain (Vasu et al. 2021). Glumatic acid is a metabolic precursor for proline, which leads a possible explanation for how this protein originated (Eswarappa et al. 2018). 
+
+
+
+
+			
+				</div>
+				
+			</li>
+			
+		</ul>
+
+
+		<div class="svgDiv">
+			<svg id="secondary" height=0 width=0 overflow="auto"></svg>
+		</div>
+		
+		<div id="alignment" class="svgDiv">
+
+		</div>
+
+
+		<div id="alignment2" class="svgDiv">
+
+		</div>
+
+
+
+
+		<div id="tertiaryTable">
+			
+			<table>
+				<tr>
+					<td>
+						<div id="superposition"> </div>
+					</td>
+					
+					<td>
+						<div id="tertiary"> </div>
+					</td>
+				</tr>
+			
+			</table>
+			
+			
+		
+		</div>
+		
+		
+		<div id="references">
+
+
+
+
+				<div>
+				An, Songon, and Karin Musier-Forsyth. "Trans-editing of Cys-tRNAPro by Haemophilus influenzae YbaK protein." Journal of Biological Chemistry 279.41 (2004): 42359-42362.
+			</div>
+
+			<div>
+				Danhart, Eric M., et al. "Conformational and chemical selection by a trans-acting editing domain." Proceedings of the National Academy of Sciences 114.33 (2017): E6774-E6783.
+			</div>
+
+
+			<div>
+				Vasu, Kommireddy, et al. "The zinc-binding domain of mammalian prolyl-tRNA synthetase is indispensable for catalytic activity and organism viability." Iscience 24.3 (2021): 102215.
+			</div>
+
+				<div>
+				Vargas-Rodriguez, Oscar, and Karin Musier-Forsyth. "Exclusive use of trans-editing domains prevents proline mistranslation." Journal of Biological Chemistry 288.20 (2013): 14391-14399.
+				</div>
+
+
+			<div>
+				Wolf, Yuri I., et al. "Evolution of aminoacyl-tRNA synthetases—analysis of unique domain architectures and phylogenetic trees reveals a complex history of horizontal gene transfer events." Genome research 9.8 (1999): 689-710.
+			</div>
+
+			<div>
+				Perona, John J., and Andrew Hadd. "Structural diversity and protein engineering of the aminoacyl-tRNA synthetases." Biochemistry 51.44 (2012): 8705-8729.
+			</div>
+
+				<div>
+				Gomez, Miguel Angel Rubio, and Michael Ibba. "Aminoacyl-tRNA synthetases." Rna 26.8 (2020): 910-936.
+			</div>
+
+
+				<div>
+					Valencia-Sánchez, Marco Igor, et al. "Structural Insights into the Polyphyletic Origins of Glycyl tRNA Synthetases." Journal of Biological Chemistry 291.28 (2016): 14430-14446.
+			</div>
+
+
+					<div>
+				Musier-Forsyth, Karin,  et al. "The Aminoacyl-tRNA Synthetases" CRC Press (2005): Chapter 15: Prolyl-tRNA Synthetases.
+			</div>
+
+
+			<div>
+				Eswarappa, Sandeep M., et al. "Metabolic origin of the fused aminoacyl-tRNA synthetase, glutamyl-prolyl-tRNA synthetase." Journal of Biological Chemistry 293.49 (2018): 19148-19156.
+			</div>
+
+
+
+
+		
+		</div>
+
+
+	</div>
+</body>
+</html>

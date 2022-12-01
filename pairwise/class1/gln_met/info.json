@@ -7,9 +7,9 @@
     "fullName1":"Glutaminyl tRNA Synthetase",
     "fullName2":"Methionyl tRNA Synthetase",
     "description":"Pairwise comparison of the Class I catalytic domains from the Glutaminyl tRNA Synthetase (GlnRS) and Methionyl tRNA Synthetase (MetRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.5,
+    "rmsd":    2.501,
     "rmsd1":    1.07,
-    "rmsd2":    2.22,
-    "crossFamilyRmsd":    3.63,
-    "rmsdTotal":    2.74
+    "rmsd2":    2.13,
+    "crossFamilyRmsd":    3.6,
+    "rmsdTotal":    2.7
 }
