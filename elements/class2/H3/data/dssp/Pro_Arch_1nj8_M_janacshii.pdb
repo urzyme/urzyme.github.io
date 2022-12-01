@@ -1,4 +1,4 @@
-HELIX    1  H1 XXX A	 161  XXX A  181  1                                  21
+HELIX    1  H1 XXX A	 161  XXX A  180  1                                  20
 HEADER    LIGASE                                  30-DEC-02   1NJ8              
 TITLE     CRYSTAL STRUCTURE OF PROLYL-TRNA SYNTHETASE FROM                      
 TITLE    2 METHANOCALDOCOCCUS JANASCHII                                         
@@ -984,10 +984,6 @@ ATOM   1527  CB  LEU A 181      90.084  51.454  39.187  1.00 23.07           C
 ATOM   1528  CG  LEU A 181      91.197  51.233  38.158  1.00 25.18           C  
 ATOM   1529  CD1 LEU A 181      92.281  50.334  38.753  1.00  9.50           C  
 ATOM   1530  CD2 LEU A 181      90.617  50.570  36.919  1.00 22.74           C  
-ATOM   1531  N   GLY A 182      87.067  52.323  40.429  1.00 25.07           N  
-ATOM   1532  CA  GLY A 182      85.950  51.925  41.272  1.00 22.80           C  
-ATOM   1533  C   GLY A 182      86.301  50.917  42.346  1.00 16.71           C  
-ATOM   1534  O   GLY A 182      85.548  49.986  42.576  1.00 27.41           O  
 TER   15092      TYR D 455                                                      
 HETATM15093  O   HOH A 456     104.580  49.104  28.558  1.00  7.30           O  
 HETATM15094  O   HOH A 457      94.403  30.771  26.639  1.00  7.30           O  
