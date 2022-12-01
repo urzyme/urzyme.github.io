@@ -2,23 +2,23 @@ SHEET    1  E1 4 XXX A   3 XXX  A   6  0
 HELIX    1  H1 XXX A	  16  XXX A   32  1                                  17
 SHEET    2  E2 4 XXX A  35 XXX  A  38  0
 HELIX    2  H2 XXX A	  48  XXX A   50  1                                   3
-HELIX    3  H3 XXX A	  51  XXX A   55  1                                   5
-HELIX    4  H4 XXX A	  59  XXX A   63  1                                   5
-HELIX    5  H5 XXX A	  82  XXX A   85  1                                   4
-HELIX    6  H6 XXX A	  86  XXX A   98  1                                  13
+HELIX    3  H3 XXX A	  51  XXX A   63  1                                  13
+HELIX    4  H4 XXX A	  82  XXX A   85  1                                   4
+HELIX    5  H5 XXX A	  86  XXX A   98  1                                  13
 SHEET    3  E3 4 XXX A 102 XXX  A 105  0
-HELIX    7  H7 XXX A	 117  XXX A  121  1                                   5
-HELIX    8  H8 XXX A	 139  XXX A  147  1                                   9
+HELIX    6  H6 XXX A	 113  XXX A  121  1                                   9
+HELIX    7  H7 XXX A	 139  XXX A  147  1                                   9
 SHEET    4  E4 4 XXX A 153 XXX  A 156  0
 SHEET    5  E5 5 XXX A 163 XXX  A 167  0
 SHEET    6  E6 5 XXX A 171 XXX  A 175  0
 SHEET    7  E7 2 XXX A 183 XXX  A 184  0
-HELIX    9  H9 XXX A	 194  XXX A  201  1                                   8
+HELIX    8  H8 XXX A	 194  XXX A  201  1                                   8
 SHEET    8  E8 5 XXX A 209 XXX  A 213  0
-HELIX   10 H10 XXX A	 214  XXX A  216  1                                   3
-HELIX   11 H11 XXX A	 217  XXX A  229  1                                  13
+HELIX    9  H9 XXX A	 214  XXX A  216  1                                   3
+HELIX   10 H10 XXX A	 217  XXX A  229  1                                  13
 SHEET    9  E9 5 XXX A 236 XXX  A 240  0
-HELIX   12 H12 XXX A	 253  XXX A  255  1                                   3
+HELIX   11 H11 XXX A	 253  XXX A  255  1                                   3
+HELIX   12 H12 XXX A	 260  XXX A  264  1                                   5
 HEADER    LIGASE                                  06-DEC-06   2O5R              
 TITLE     CRYSTAL STRUCTURE OF GLUTAMYL-TRNA SYNTHETASE 1 (EC 6.1.1.17)         
 TITLE    2 (GLUTAMATE-TRNA LIGASE 1) (GLURS 1) (TM1351) FROM THERMOTOGA MARITIMA
@@ -1041,6 +1041,14 @@ ATOM    459  CB  LEU A  56     -30.372  12.464  52.339  1.00 36.96           C
 ATOM    460  CG  LEU A  56     -31.908  12.508  52.505  1.00 37.04           C  
 ATOM    461  CD1 LEU A  56     -32.582  13.274  51.366  1.00 36.69           C  
 ATOM    462  CD2 LEU A  56     -32.533  11.113  52.653  1.00 37.23           C  
+HETATM  463  N   MSE A  57     -29.334  10.006  54.091  1.00 35.99           N  
+HETATM  464  CA  MSE A  57     -29.518   8.759  54.865  1.00 35.82           C  
+HETATM  465  C   MSE A  57     -28.873   8.843  56.258  1.00 34.82           C  
+HETATM  466  O   MSE A  57     -29.427   8.317  57.231  1.00 34.69           O  
+HETATM  467  CB  MSE A  57     -28.932   7.554  54.114  1.00 35.86           C  
+HETATM  468  CG  MSE A  57     -29.695   7.138  52.858  1.00 36.29           C  
+HETATM  469 SE   MSE A  57     -28.930   5.546  51.995  0.75 37.83          SE  
+HETATM  470  CE  MSE A  57     -26.998   5.849  52.165  1.00 37.17           C  
 ATOM    471  N   GLU A  58     -27.701   9.484  56.329  1.00 33.78           N  
 ATOM    472  CA  GLU A  58     -26.976   9.699  57.589  1.00 33.06           C  
 ATOM    473  C   GLU A  58     -27.801  10.579  58.539  1.00 31.99           C  
@@ -1519,6 +1527,14 @@ ATOM    945  CG  GLU A 114     -39.070  29.906  21.877  1.00 44.73           C
 ATOM    946  CD  GLU A 114     -38.439  29.723  20.490  1.00 44.82           C  
 ATOM    947  OE1 GLU A 114     -39.042  30.138  19.471  1.00 45.02           O  
 ATOM    948  OE2 GLU A 114     -37.317  29.176  20.421  1.00 45.16           O  
+HETATM  949  N   MSE A 115     -43.449  28.928  22.707  1.00 45.12           N  
+HETATM  950  CA  MSE A 115     -44.916  28.932  22.490  1.00 45.53           C  
+HETATM  951  C   MSE A 115     -45.705  29.099  23.801  1.00 45.15           C  
+HETATM  952  O   MSE A 115     -46.862  29.512  23.772  1.00 45.17           O  
+HETATM  953  CB  MSE A 115     -45.401  27.708  21.697  1.00 45.57           C  
+HETATM  954  CG  MSE A 115     -45.666  26.445  22.486  1.00 45.84           C  
+HETATM  955 SE   MSE A 115     -45.946  24.945  21.298  0.75 47.28          SE  
+HETATM  956  CE  MSE A 115     -46.545  23.678  22.636  1.00 46.28           C  
 ATOM    957  N   ARG A 116     -45.091  28.720  24.924  1.00 44.95           N  
 ATOM    958  CA  ARG A 116     -45.635  28.956  26.269  1.00 44.84           C  
 ATOM    959  C   ARG A 116     -45.849  30.468  26.426  1.00 44.51           C  
@@ -2655,6 +2671,29 @@ ATOM   2129  CD2 PHE A 263     -31.995  22.411  62.445  1.00 21.20           C
 ATOM   2130  CE1 PHE A 263     -32.189  24.775  63.914  1.00 21.28           C  
 ATOM   2131  CE2 PHE A 263     -32.951  23.384  62.095  1.00 21.18           C  
 ATOM   2132  CZ  PHE A 263     -33.047  24.566  62.831  1.00 21.12           C  
+ATOM   2133  N   ARG A 264     -27.271  20.036  63.850  1.00 22.04           N  
+ATOM   2134  CA  ARG A 264     -26.291  19.090  64.412  1.00 22.39           C  
+ATOM   2135  C   ARG A 264     -24.942  19.777  64.675  1.00 22.66           C  
+ATOM   2136  O   ARG A 264     -24.325  19.533  65.712  1.00 22.77           O  
+ATOM   2137  CB  ARG A 264     -26.105  17.898  63.467  1.00 22.43           C  
+ATOM   2138  CG  ARG A 264     -25.184  16.800  63.965  1.00 22.42           C  
+ATOM   2139  CD  ARG A 264     -25.209  15.628  63.014  1.00 22.60           C  
+ATOM   2140  NE  ARG A 264     -24.456  14.482  63.521  1.00 22.92           N  
+ATOM   2141  CZ  ARG A 264     -24.266  13.329  62.870  1.00 23.03           C  
+ATOM   2142  NH1 ARG A 264     -24.758  13.129  61.638  1.00 23.52           N  
+ATOM   2143  NH2 ARG A 264     -23.563  12.359  63.456  1.00 23.04           N  
+ATOM   2144  N   ASP A 265     -24.501  20.619  63.734  1.00 23.04           N  
+ATOM   2145  CA  ASP A 265     -23.251  21.392  63.870  1.00 23.44           C  
+ATOM   2146  C   ASP A 265     -23.314  22.437  64.997  1.00 23.68           C  
+ATOM   2147  O   ASP A 265     -22.318  22.638  65.688  1.00 23.56           O  
+ATOM   2148  CB  ASP A 265     -22.855  22.072  62.543  1.00 23.49           C  
+ATOM   2149  CG  ASP A 265     -22.369  21.081  61.483  1.00 24.08           C  
+ATOM   2150  OD1 ASP A 265     -21.548  20.186  61.801  1.00 24.69           O  
+ATOM   2151  OD2 ASP A 265     -22.773  21.226  60.311  1.00 24.49           O  
+ATOM   2160  N   GLY A 267     -25.174  22.120  67.662  1.00 22.93           N  
+ATOM   2161  CA  GLY A 267     -25.291  21.351  68.909  1.00 22.18           C  
+ATOM   2162  C   GLY A 267     -26.688  20.999  69.400  1.00 21.50           C  
+ATOM   2163  O   GLY A 267     -26.915  20.970  70.613  1.00 21.45           O  
 TER    3829      GLY A 468                                                      
 HETATM 3830 CL    CL A 470     -43.619  13.064  46.778  1.00 58.08          CL  
 HETATM 3831 CL    CL A 471     -38.596  17.747  26.404  1.00 84.27          CL  

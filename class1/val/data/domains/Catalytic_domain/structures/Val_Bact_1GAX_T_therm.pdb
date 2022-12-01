@@ -619,19 +619,7 @@ REMARK 900 RELATED ID: TRT001000217.1   RELATED DB: TARGETDB
 DBREF  1GAX A    1   862  UNP    P96142   SYV_THETH        1    862             
 DBREF  1GAX B    1   862  UNP    P96142   SYV_THETH        1    862             
 DBREF  1GAX C  901   975  PDB    1GAX     1GAX           901    975             
-DBREF  1GAX D  901   975  PDB    1GAX     1GAX           901    975             
-SEQRES   1 C   75    G   G   G   C   G   G   C   U   A   G   C   U   C          
-SEQRES   2 C   75    A   G   C   G   G   A   A   G   A   G   C   G   C          
-SEQRES   3 C   75    U   C   G   C   C   U   C   A   C   A   C   G   C          
-SEQRES   4 C   75    G   A   G   A   G   G   U   C   G   U   A   G   G          
-SEQRES   5 C   75    U   U   C   A   A   G   U   C   C   U   A   C   G          
-SEQRES   6 C   75    C   C   G   C   C   C   A   C   C   A                      
-SEQRES   1 D   75    G   G   G   C   G   G   C   U   A   G   C   U   C          
-SEQRES   2 D   75    A   G   C   G   G   A   A   G   A   G   C   G   C          
-SEQRES   3 D   75    U   C   G   C   C   U   C   A   C   A   C   G   C          
-SEQRES   4 D   75    G   A   G   A   G   G   U   C   G   U   A   G   G          
-SEQRES   5 D   75    U   U   C   A   A   G   U   C   C   U   A   C   G          
-SEQRES   6 D   75    C   C   G   C   C   C   A   C   C   A                      
+DBREF  1GAX D  901   975  PDB    1GAX     1GAX           901    975                  
 SEQRES   1 A  862  MET ASP LEU PRO LYS ALA TYR ASP PRO LYS SER VAL GLU          
 SEQRES   2 A  862  PRO LYS TRP ALA GLU LYS TRP ALA LYS ASN PRO PHE VAL          
 SEQRES   3 A  862  ALA ASN PRO LYS SER GLY LYS PRO PRO PHE VAL ILE PHE          
@@ -765,7 +753,19 @@ SEQRES  63 B  862  LYS ARG LEU LYS GLU LEU LEU ALA LEU ALA GLU ARG SER
 SEQRES  64 B  862  GLN ARG LYS LEU ALA SER PRO GLY PHE ARG GLU LYS ALA          
 SEQRES  65 B  862  PRO LYS GLU VAL VAL GLU ALA GLU GLU ALA ARG LEU LYS          
 SEQRES  66 B  862  GLU ASN LEU GLU GLN ALA GLU ARG ILE ARG GLU ALA LEU          
-SEQRES  67 B  862  SER GLN ILE GLY                                              
+SEQRES  67 B  862  SER GLN ILE GLY  
+SEQRES   1 C   75    G   G   G   C   G   G   C   U   A   G   C   U   C          
+SEQRES   2 C   75    A   G   C   G   G   A   A   G   A   G   C   G   C          
+SEQRES   3 C   75    U   C   G   C   C   U   C   A   C   A   C   G   C          
+SEQRES   4 C   75    G   A   G   A   G   G   U   C   G   U   A   G   G          
+SEQRES   5 C   75    U   U   C   A   A   G   U   C   C   U   A   C   G          
+SEQRES   6 C   75    C   C   G   C   C   C   A   C   C   A                      
+SEQRES   1 D   75    G   G   G   C   G   G   C   U   A   G   C   U   C          
+SEQRES   2 D   75    A   G   C   G   G   A   A   G   A   G   C   G   C          
+SEQRES   3 D   75    U   C   G   C   C   U   C   A   C   A   C   G   C          
+SEQRES   4 D   75    G   A   G   A   G   G   U   C   G   U   A   G   G          
+SEQRES   5 D   75    U   U   C   A   A   G   U   C   C   U   A   C   G          
+SEQRES   6 D   75    C   C   G   C   C   C   A   C   C   A                                                             
 HET     ZN  A 998       1                                                       
 HET     ZN  A 999       1                                                       
 HET     ZN  B 998       1                                                       
@@ -814,7 +814,7 @@ ORIGX2      0.000000  1.000000  0.000000        0.00000
 ORIGX3      0.000000  0.000000  1.000000        0.00000                         
 SCALE1      0.002428  0.000000  0.000000        0.00000                         
 SCALE2      0.000000  0.002428  0.000000        0.00000                         
-SCALE3      0.000000  0.000000  0.012200        0.00000                         
+SCALE3      0.000000  0.000000  0.012200        0.00000                                                   
 ATOM   3465  N   LYS A  33     103.940  32.543  -2.161  1.00 44.51           N  
 ATOM   3466  CA  LYS A  33     104.266  33.920  -1.804  1.00 45.56           C  
 ATOM   3467  C   LYS A  33     104.409  33.906  -0.272  1.00 48.60           C  
@@ -4938,7 +4938,48 @@ ATOM   7584  O   PRO A 539      81.779  53.060  15.807  1.00 34.12           O
 ATOM   7585  CB  PRO A 539      83.042  50.324  17.134  1.00 35.09           C  
 ATOM   7586  CG  PRO A 539      82.148  49.129  17.301  1.00 34.72           C  
 ATOM   7587  CD  PRO A 539      81.526  49.388  18.644  1.00 33.78           C  
-TER   17150      GLY B 862                                                      
+ATOM   7588  N   LEU A 540      80.209  51.471  16.072  1.00 38.40           N  
+ATOM   7589  CA  LEU A 540      79.369  51.932  14.967  1.00 36.58           C  
+ATOM   7590  C   LEU A 540      78.713  53.265  15.254  1.00 37.04           C  
+ATOM   7591  O   LEU A 540      78.436  54.031  14.341  1.00 40.22           O  
+ATOM   7592  CB  LEU A 540      78.292  50.897  14.651  1.00 34.26           C  
+ATOM   7593  CG  LEU A 540      78.816  49.499  14.319  1.00 32.46           C  
+ATOM   7594  CD1 LEU A 540      77.647  48.617  13.928  1.00 31.87           C  
+ATOM   7595  CD2 LEU A 540      79.838  49.566  13.186  1.00 30.18           C  
+ATOM   7596  N   GLU A 541      78.444  53.531  16.526  1.00 40.16           N  
+ATOM   7597  CA  GLU A 541      77.854  54.802  16.931  1.00 43.15           C  
+ATOM   7598  C   GLU A 541      78.869  55.880  16.555  1.00 38.68           C  
+ATOM   7599  O   GLU A 541      78.518  57.003  16.196  1.00 35.91           O  
+ATOM   7600  CB  GLU A 541      77.611  54.801  18.443  1.00 49.76           C  
+ATOM   7601  CG  GLU A 541      77.409  56.172  19.072  1.00 62.10           C  
+ATOM   7602  CD  GLU A 541      77.305  56.102  20.590  1.00 71.39           C  
+ATOM   7603  OE1 GLU A 541      77.360  57.167  21.249  1.00 75.51           O  
+ATOM   7604  OE2 GLU A 541      77.165  54.979  21.127  1.00 77.25           O  
+ATOM   7605  N   MET A 542      80.140  55.512  16.630  1.00 37.18           N  
+ATOM   7606  CA  MET A 542      81.208  56.424  16.291  1.00 36.61           C  
+ATOM   7607  C   MET A 542      81.422  56.480  14.788  1.00 36.65           C  
+ATOM   7608  O   MET A 542      81.691  57.545  14.248  1.00 43.15           O  
+ATOM   7609  CB  MET A 542      82.501  56.002  16.980  1.00 38.22           C  
+ATOM   7610  CG  MET A 542      82.442  56.083  18.496  1.00 44.39           C  
+ATOM   7611  SD  MET A 542      82.204  57.757  19.138  1.00 47.33           S  
+ATOM   7612  CE  MET A 542      80.441  57.758  19.505  1.00 47.25           C  
+ATOM   7613  N   VAL A 543      81.307  55.353  14.095  1.00 36.54           N  
+ATOM   7614  CA  VAL A 543      81.519  55.400  12.650  1.00 38.46           C  
+ATOM   7615  C   VAL A 543      80.452  56.304  12.057  1.00 38.57           C  
+ATOM   7616  O   VAL A 543      80.741  57.168  11.226  1.00 37.27           O  
+ATOM   7617  CB  VAL A 543      81.438  53.985  11.968  1.00 35.52           C  
+ATOM   7618  CG1 VAL A 543      82.066  52.939  12.862  1.00 36.97           C  
+ATOM   7619  CG2 VAL A 543      80.005  53.619  11.639  1.00 35.96           C  
+ATOM   7620  N   GLU A 544      79.219  56.114  12.512  1.00 38.02           N  
+ATOM   7621  CA  GLU A 544      78.111  56.893  12.013  1.00 40.72           C  
+ATOM   7622  C   GLU A 544      78.365  58.364  12.267  1.00 42.09           C  
+ATOM   7623  O   GLU A 544      78.079  59.209  11.421  1.00 47.97           O  
+ATOM   7624  CB  GLU A 544      76.819  56.452  12.693  1.00 46.63           C  
+ATOM   7625  CG  GLU A 544      75.548  57.082  12.126  1.00 59.70           C  
+ATOM   7626  CD  GLU A 544      75.287  58.496  12.642  1.00 66.04           C  
+ATOM   7627  OE1 GLU A 544      74.282  59.112  12.213  1.00 67.15           O  
+ATOM   7628  OE2 GLU A 544      76.077  58.991  13.477  1.00 73.04           O  
+TER    3208        A D 975                                                      
 HETATM17151 ZN    ZN A 998      78.737  33.374  39.525  1.00 54.10          ZN  
 HETATM17152 ZN    ZN A 999      84.500  -0.954  34.613  1.00 42.78          ZN  
 HETATM17153  N   VAA A 990      87.265  34.922  23.574  1.00 21.99           N  
