@@ -12,7 +12,7 @@ do
 	cd $c
 
 
-	#Rscript ../../scripts/getElements.R
+	Rscript ../../scripts/getElements.R
 
 	for d1 in */;
 	do

@@ -52,7 +52,7 @@ FEATURE_FONT_SIZE = 14;
 SEC_WIDTH = 1.0;
 SEC_HEIGHT = 20;
 NT_FONT_SIZE = 11;
-ALN_LABEL_WIDTH = 300;
+ALN_LABEL_WIDTH = 450;
 
 
 
@@ -787,10 +787,10 @@ function renderSecondary(svg){
 
     // Sequence labels
     for (var seqNum = 0; seqNum < nseq; seqNum++){
-      var acc = accessions[seqNum];
-      var y = SEC_HEIGHT*(seqNum+1.5)
-      var x = ALN_LABEL_WIDTH - 10;
-      var url = DATA.urls[acc];
+      let acc = accessions[seqNum];
+      let y = SEC_HEIGHT*(seqNum+1.5)
+      let x = ALN_LABEL_WIDTH - 10;
+      let url = DATA.urls[acc];
 
 
       var accPrint = acc.replace(".pdb", "");
@@ -799,7 +799,7 @@ function renderSecondary(svg){
 
 	  
       // Click on an accession to select ot
-      var ele = drawSVGobj(svgContent, "text", {x: x, y: y, pdb: acc, style: "text-anchor:end; cursor:pointer; fill:#366BA1; dominant-baseline:central; font-size:" + NT_FONT_SIZE + "px"}, value=accPrint)
+      let ele = drawSVGobj(svgContent, "text", {x: x, y: y, pdb: acc, style: "text-anchor:end; cursor:pointer; fill:#366BA1; dominant-baseline:central; font-size:" + NT_FONT_SIZE + "px"}, value=accPrint)
   		$(ele).bind("click", function(event){
         var a = event.target.getAttribute("pdb");
         var directory = DATA.directories[a];
@@ -813,6 +813,12 @@ function renderSecondary(svg){
         if (!PAIRWISE) directory = "data/" + directory;
   			renderTertiary(directory);
   		});
+
+
+      ele.addEventListener('contextmenu', function(evt) { 
+        console.log("right click", acc);
+        evt.preventDefault();
+      }, false);
 
 
     }

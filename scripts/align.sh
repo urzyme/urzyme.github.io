@@ -35,7 +35,7 @@ Rscript ../../../scripts/dssp2fasta.R
 
 
 
-#exit
+exit
 
 
 
