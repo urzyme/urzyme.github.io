@@ -52,7 +52,7 @@ FEATURE_FONT_SIZE = 14;
 SEC_WIDTH = 1.0;
 SEC_HEIGHT = 20;
 NT_FONT_SIZE = 11;
-ALN_LABEL_WIDTH = 450;
+ALN_LABEL_WIDTH = 300;
 
 
 
@@ -123,6 +123,21 @@ function renderaaRS(isPairwise = false){
   
   renderHeader();
   
+  
+	// Accession metadata dialog
+	let metadata = $(`<div id="metadataDlg">
+						<table>
+						</table>
+					</div>`);
+	$("#main").append(metadata);
+	$("#metadataDlg").hide(0);
+	
+	// Right click 
+  	$("#main")[0].addEventListener('contextmenu', function(evt) { 
+		$("#metadataDlg").hide(0);
+	});
+
+  
 
   // Section titles
   $(".summary").prepend("<h2>Summary</h2>");
@@ -146,7 +161,7 @@ function renderaaRS(isPairwise = false){
   $("#alignment").before("<h2>Primary structure</h2>");
   $("#alignment2").before("<h2>Secondary structure</h2>");
   $("#secondary").before("<h2>Domain architecture</h2>");
-  $("#secondary").before("<div class='helperNote'>Click on an accession or domain below, or drag a region, to select it.</div>");
+  $("#secondary").before("<div class='helperNote'>Click on an accession or domain below, or drag a region, to select it. Right click on an accession for more information.</div>");
   $("#tertiaryTable").prepend("<h2>Tertiary structure</h2>");
 
   
@@ -224,6 +239,11 @@ function renderaaRS(isPairwise = false){
   });
 
 
+
+	
+
+
+
   // Delete loader
   $("#mainloader").remove();
 
@@ -231,6 +251,69 @@ function renderaaRS(isPairwise = false){
 
   })
 
+	
+}
+
+
+// Return the official name of a sequence, indepenedent of its file name
+function getNameOfAccession(acc){
+	
+	acc = acc.replace(".pdb", "");
+	let metadata = DATA.metadata[acc];
+	if (metadata == null){
+		console.log("cannot find", acc);
+		return "error";
+	}
+	
+	let isPDB = metadata.pdb != "" && metadata.pdb != "NA";
+	
+	if (isPDB){
+		//return metadata.name + "_" + metadata.species;
+	}else{
+		//return metadata.name + "_" + metadata.species;
+	}
+	
+	let species = metadata.species.split("_");
+	if (species.length > 1){
+		species = species[0] + " " + species[1];
+	}
+	let str = metadata.name + " - " + species;
+	return str;
+	
+	
+}
+
+
+// Return the domain (of life) for a sequence
+function getLifeDomainOfAccession(acc){
+	
+	acc = acc.replace(".pdb", "");
+	let metadata = DATA.metadata[acc];
+	if (metadata == null){
+		console.log("cannot find", acc);
+		return null;
+	}
+
+	return metadata.domain;
+	
+	
+}
+
+
+
+// Is the structure wet-lab experimental (ie. on rcsb) or is it alphafold
+function accessionIsExperimental(acc){
+	
+	acc = acc.replace(".pdb", "");
+	let metadata = DATA.metadata[acc];
+	if (metadata == null){
+		console.log("cannot find", acc);
+		return null;
+	}
+
+	let isPDB = metadata.pdb != "" && metadata.pdb != "NA";
+	return isPDB;
+	
 	
 }
 
@@ -736,7 +819,7 @@ function renderSecondary(svg){
         continue;
       }else{
 		    drawSVGobj(svgAnnotation, "rect", {x: x1-SEC_WIDTH, y: SEC_HEIGHT, width: x2-x1, height:SEC_HEIGHT*nseq + FEATURE_HEIGHT_SEC*(level-1), style:"stroke-width:" +  lw + "px; stroke:black; fill:" + "white"});
-        drawSVGobj(svgAnnotation, "rect", {x: x1-SEC_WIDTH, y: SEC_HEIGHT, width: x2-x1, height:SEC_HEIGHT*nseq + FEATURE_HEIGHT_SEC*(level-1), style:"stroke-width:" +  lw + "px; stroke:black; fill:" + col});
+			drawSVGobj(svgAnnotation, "rect", {x: x1-SEC_WIDTH, y: SEC_HEIGHT, width: x2-x1, height:SEC_HEIGHT*nseq + FEATURE_HEIGHT_SEC*(level-1), style:"stroke-width:" +  lw + "px; stroke:black; fill:" + col});
       }
 
 
@@ -788,18 +871,35 @@ function renderSecondary(svg){
     // Sequence labels
     for (var seqNum = 0; seqNum < nseq; seqNum++){
       let acc = accessions[seqNum];
+	  let accPrint = getNameOfAccession(acc);
       let y = SEC_HEIGHT*(seqNum+1.5)
-      let x = ALN_LABEL_WIDTH - 10;
+      let x = ALN_LABEL_WIDTH - 5*NT_FONT_SIZE;
       let url = DATA.urls[acc];
+	  
+	  
+	  // Domain image
+	  let domainOfLife = getLifeDomainOfAccession(acc);
+	  if (domainOfLife != null){
+		   let domainEle = drawSVGobj(svgContent, "image", {href:"/fig/" + domainOfLife + ".png", x: x+NT_FONT_SIZE, y: y-NT_FONT_SIZE/2, pdb: acc, height:SEC_HEIGHT*0.7})
+		   drawSVGobj(domainEle, "title", {}, domainOfLife);
+		   
+		   
+		   // PDB / alphafold 
+		   let isPDB = accessionIsExperimental(acc);
+		   let pdbImg = isPDB ? "xray" : "alphafold";
+		   let pdbtitle = isPDB ? "Structure was determined experimentally (eg. x-ray or NMR)" : "Structure was predicted computationally using AlphaFold";
+		   let methodEle = drawSVGobj(svgContent, "image", {href:"/fig/" + pdbImg + ".png", x: x+NT_FONT_SIZE*3, y: y-NT_FONT_SIZE/2, pdb: acc, height:SEC_HEIGHT*0.7})
+		   drawSVGobj(methodEle, "title", {}, pdbtitle);
+		   
+	  }
+	 
 
-
-      var accPrint = acc.replace(".pdb", "");
       //var textEle = drawSVGobj(svg, "a", {x: x, y: y, href: url, target:"_blank"})
 	  
 
 	  
-      // Click on an accession to select ot
-      let ele = drawSVGobj(svgContent, "text", {x: x, y: y, pdb: acc, style: "text-anchor:end; cursor:pointer; fill:#366BA1; dominant-baseline:central; font-size:" + NT_FONT_SIZE + "px"}, value=accPrint)
+      // Click on an accession to select it
+		let ele = drawSVGobj(svgContent, "text", {x: x, y: y, pdb: acc, style: "text-anchor:end; cursor:pointer; fill:#366BA1; dominant-baseline:central; font-size:" + NT_FONT_SIZE + "px"}, value=accPrint)
   		$(ele).bind("click", function(event){
         var a = event.target.getAttribute("pdb");
         var directory = DATA.directories[a];
@@ -816,12 +916,107 @@ function renderSecondary(svg){
 
 
       ele.addEventListener('contextmenu', function(evt) { 
-        console.log("right click", acc);
+	  
+		let metadata = DATA.metadata[acc.replace(".pdb", "")];
+	  
+        //console.log("right click", acc, metadata);
+		if (metadata == null){
+			$("#metadataDlg").hide(0);
+			return;
+		}
+		$("#metadataDlg").css({top: y + svg.offset().top, left: ALN_LABEL_WIDTH + svg.offset().left + 5});
+		$("#metadataDlg table").html("");
+		
+		
+		let species = metadata.species.replaceAll("_", " ");
+		let domain = metadata.domain == "Mitochondrial" ? "Eukaryote mitochondrial" : metadata.domain;
+		let domainImg =  "/fig/" + metadata.domain + ".png";
+		   
+		let isPDB = metadata.pdb != "" && metadata.pdb != "NA";
+		let methodImg =  "/fig/" + (isPDB ? "xray" : "alphafold") + ".png";
+		
+		$("#metadataDlg table").append(`<tr>
+  								<td colspan="2">
+									<div style="text-align:center">` + getNameOfAccession(acc) + `</div>
+									
+								</td>
+  							</tr>`);
+							//<div>` + metadata.desc + `</div>
+		
+		$("#metadataDlg table").append(`<tr>
+  								<th>Family</th>
+  								<td>` + metadata.name + `</td>
+  							</tr>`);
+							
+		$("#metadataDlg table").append(`<tr>
+  								<th>Domain</th>
+  								<td>` + domain + ` <img src="` + domainImg + `" height="14px" style="vertical-align:middle"></img></td>
+  							</tr>`);
+							
+		$("#metadataDlg table").append(`<tr>
+  								<th>Phylum</th>
+  								<td>` + metadata.phylum + `</td>
+  							</tr>`);
+							
+		$("#metadataDlg table").append(`<tr>
+  								<th>Species</th>
+  								<td><i>` + species + `</i></td>
+  							</tr>`);
+							
+		if (isPDB){
+			
+			$("#metadataDlg table").append(`<tr>
+									<th>Structure</th>
+									<td><a target="_blank" href="https://www.rcsb.org/structure/` + metadata.pdb + `">` + metadata.pdb.toUpperCase() + `</a> 
+										<img src="` + methodImg + `" height="12px" style="vertical-align:middle"></img></td>
+								</tr>`);
+								
+								
+		}else{
+									
+			$("#metadataDlg table").append(`<tr>
+									<th>Genome</th>
+									<td><a target="_blank" href="https://www.ncbi.nlm.nih.gov/nuccore/` + metadata.genbank + `">` + metadata.genbank + `</a></td>
+								</tr>`);
+								
+			$("#metadataDlg table").append(`<tr>
+									<th>Gene</th>
+									<td><a target="_blank" href="https://www.ncbi.nlm.nih.gov/gene/` + metadata.gene + `">` + metadata.gene + `</a></td>
+								</tr>`);
+								
+			$("#metadataDlg table").append(`<tr>
+									<th>Genetic code</th>
+									<td><a target="_blank" href="https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi#SG` + metadata.transl_table + `">` + metadata.transl_table + `</a></td>
+								</tr>`);
+								
+			$("#metadataDlg table").append(`<tr>
+									<th>Structure</th>
+									<td><a target="_blank" href="data/dssp/` + acc + `">Download AlphaFold</a> 
+											<img src="` + methodImg + `" height="12px" style="vertical-align:middle"></img></td>
+								</tr>`);
+
+							
+							
+		}
+							
+	
+
+  
+		
+		$("#metadataDlg").show(100);
         evt.preventDefault();
+		evt.stopPropagation()
       }, false);
+	  
+	  
 
 
     }
+	
+	// Disable right clicks on svg
+	svg[0].addEventListener('contextmenu', function(evt) { 
+		evt.preventDefault();
+	}, false);
 
 
     // Secondary structure
@@ -944,15 +1139,18 @@ function renderSecondary(svg){
 function deselectSites(refresh = false){
 	
 	console.log("deselectSites");
-  //console.trace();
 	
 	// Clear selecting rectangle
 	$("svg").find(".selectionRect").remove();
 	
 	
+	// Hide accession dialog
+	$("#metadataDlg").hide(0);
+	
+	
 	// Clear domain selection text 
 	$("svg").find("text").attr("class", "deselected");
-  $("#secondary g.domainSeq").attr("select", "na");
+	$("#secondary g.domainSeq").attr("select", "na");
 	
 				
 	// Clear selection on catalytic table / svg
@@ -1078,14 +1276,13 @@ function renderAlignment(divID, isPrimary = true, downloadHref = ""){
 	
 	// Sequence labels
     for (var seqNum = 0; seqNum < nseq; seqNum++){
-      var acc = accessions[seqNum];
-      var y = NT_HEIGHT*(seqNum+1.5)
-      var x = ALN_LABEL_WIDTH - 10;
-      var url = DATA.urls[acc];
+      let acc = accessions[seqNum];
+	  let accPrint = getNameOfAccession(acc);
+      let y = NT_HEIGHT*(seqNum+1.5)
+      let x = ALN_LABEL_WIDTH - 10;
 
 
-      var accPrint = acc.replace(".pdb", "");
-      var cls = DATA.isAlpha[[acc]] ? "alpha" : "pdb";
+      let cls = DATA.isAlpha[[acc]] ? "alpha" : "pdb";
   
   	  ctx.font = NT_FONT_SIZE + "px Source sans pro";
   	  ctx.textAlign = "end";
@@ -1321,13 +1518,14 @@ function renderAlignment(divID, isPrimary = true, downloadHref = ""){
 			let siteNum = Math.floor((x - ALN_LABEL_WIDTH) / NT_WIDTH) + 1;
 			let seqNum = Math.floor(y / NT_HEIGHT) - 1;
 			let accHover = accessions[seqNum];
+			let accHoverName = getNameOfAccession(accHover);
 			let siteNumUngapped = alignment[accHover].substring(0, siteNum).replaceAll("-", "").length;
 		   // console.log(accessions[seqNum], siteNum);
 
 
 			  toolbar.find(".siteSel").html(siteNum);
 			  toolbar.find(".ungappedSel").html(siteNumUngapped);
-			  toolbar.find(".taxonSel").html(accHover.replace(".pdb", ""));
+			  toolbar.find(".taxonSel").html(accHoverName);
 
 
 			
@@ -1386,11 +1584,29 @@ function renderAlignment(divID, isPrimary = true, downloadHref = ""){
 function loadAllFiles(resolve = function() { }){
 
   DATA = {};
+  
+  // Load accessions
+  fetch("/data/accessions.json").then(response => response.text()).then(text => loadAcccessionMetadata(text, resolve));
 
-  // Load features
-  fetch("data/features.tsv").then(response => response.text()).then(text => loadFeatures(text, resolve));
+ 
 
 
+}
+
+
+function loadAcccessionMetadata(text, resolve = function() { }){
+	
+	
+	
+	text = text.replaceAll("\n", "").replaceAll("\r", "");
+	let json = JSON.parse(text);
+	console.log(json);
+	DATA.metadata = json;
+	
+	
+	// Load features
+	fetch("data/features.tsv").then(response => response.text()).then(text => loadFeatures(text, resolve));
+	
 }
 
 
