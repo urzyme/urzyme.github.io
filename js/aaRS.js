@@ -69,6 +69,7 @@ CATALYTIC_DOMAIN_HELIX_WIDTH_PROP = 0.7;
 CATALYTIC_DOMAIN_CUBIC_RIGHT_DX = 0;
 CATALYTIC_DOMAIN_LOOP_WIDTH = 3;
 CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS = 7;
+CATALYTIC_DOMAIN_FONT_SIZE = 18;
 
 
 STRAND_ARROW_HEAD_LEN_1 = 5;
@@ -98,6 +99,7 @@ if (IS_MOBILE){
 	HELIX_CORNER_RADIUS *= factor;
 	CATALYTIC_DOMAIN_WIDTH *= 1.25;
 	CATALYTIC_DOMAIN_HEIGHT *= 1.25;
+	CATALYTIC_DOMAIN_FONT_SIZE *= 1.25;
 }
 
 LEVEL_1_COL = "#fa2a5599";
@@ -130,11 +132,17 @@ function renderaaRS(isPairwise = false){
 						</table>
 					</div>`);
 	$("#main").append(metadata);
+	if (IS_MOBILE) $("#metadataDlg").addClass("mobile");
 	$("#metadataDlg").hide(0);
 	
-	// Right click 
-  	$("#main")[0].addEventListener('contextmenu', function(evt) { 
+	// Click on anything to clear it...
+  	$("#main")[0].addEventListener('click', function(evt) { 
 		$("#metadataDlg").hide(0);
+	});
+	
+	// ... except for the table itself
+  	$("#metadataDlg")[0].addEventListener('click', function(evt) { 
+		evt.stopPropagation();
 	});
 
   
@@ -162,6 +170,15 @@ function renderaaRS(isPairwise = false){
   $("#alignment2").before("<h2>Secondary structure</h2>");
   $("#secondary").before("<h2>Domain architecture</h2>");
   $("#secondary").before("<div class='helperNote'>Click on an accession or domain below, or drag a region, to select it. Right click on an accession for more information.</div>");
+  let imgWidth = IS_MOBILE ? 30 : 15;
+  $("#secondary").after(`<div class='helperNote'>
+							<span><img src="/fig/Archaea.png"  height="` + imgWidth + `px"></img> - Archaea </span>
+							<span><img src="/fig/Bacteria.png"  height="` + imgWidth + `px"></img> - Bacteria </span>
+							<span><img src="/fig/Eukaryota.png"  height="` + imgWidth + `px"></img> - Eukaryota </span>
+							<span><img src="/fig/Mitochondrial.png"  height="` + imgWidth + `px"></img> - Eukaryotic organelle </span>
+							<span><img src="/fig/xray.png" height="` + imgWidth + `px"></img> - Solved structure </span>
+							<span><img src="/fig/alphafold.png"  height="` + imgWidth + `px"></img> - Computational prediction </span>
+						</div>`);
   $("#tertiaryTable").prepend("<h2>Tertiary structure</h2>");
 
   
@@ -199,7 +216,7 @@ function renderaaRS(isPairwise = false){
     }
     $(dropdown).on("change", function(){
       $("#tertiary").html("");
-      deselectSites();
+      //deselectSites();
       renderTertiary("data/align.pdb", "superposition");
     });
 	
@@ -277,7 +294,7 @@ function getNameOfAccession(acc){
 	if (species.length > 1){
 		species = species[0] + " " + species[1];
 	}
-	let str = metadata.name + " - " + species;
+	let str = species + " (" + metadata.name + ")";
 	return str;
 	
 	
@@ -432,15 +449,21 @@ function renderTertiary(pdb = null, id = "tertiary") {
 	
 	
 	var options = {
-	  width: 450,
-	  height: 450,
-	  antialias: true,
+	  width: IS_MOBILE ? 700 : 450,
+	  height: IS_MOBILE ? 700 : 450,
+	  antialias: !IS_MOBILE,
 	  quality : 'high'
 	};
 	
+	// Hide and show again to prevent the annoying scrolling activity, unless already in viewport
+	let hideAndShow = true;// $('#' + id).isInViewport();
 
-
-  $("#" + id).hide(0);
+	if (hideAndShow){
+		$("#" + id).hide(0);
+	}else{
+		$("#" + id).show(0);
+	}
+  
 
   // Reset canvas
   $("#" + id).html("");
@@ -473,14 +496,15 @@ function renderTertiary(pdb = null, id = "tertiary") {
   }
   PV_VIEWERS[id] = viewer;
 
-  console.log(pdb);
+  //console.log(pdb);
 
 
-  // Hide and show again to prevent the annoying scrolling activity 
-  setTimeout(function(){
-    $("#" + id).show(0);
-  }, 1);
-
+  
+  if (hideAndShow){
+	  setTimeout(function(){
+		$("#" + id).show(0);
+	  }, 1);
+  }
 	
 	// https://pv.readthedocs.io/en/v1.8.1/intro.html
  // asynchronously load the PDB file for the dengue methyl transferase from the server and display it in the viewer.
@@ -769,9 +793,6 @@ function renderSecondary(svg){
         eleSvg.removeEventListener('mousemove', mouseMove);
 
 
-        
-
-
       }
 
 
@@ -779,8 +800,6 @@ function renderSecondary(svg){
       eleSvg.addEventListener('mouseleave', mouseUp);
       eleSvg.addEventListener('mousemove', mouseMove);
 
-
-      
 
     });
 
@@ -864,8 +883,10 @@ function renderSecondary(svg){
       if (site == 0 || (site+1) % 50 == 0){
         var y = SEC_HEIGHT*0.5;
         var x = SEC_WIDTH*(site) + ALN_LABEL_WIDTH;
-        drawSVGobj(svgContent, "text", {x: x, y: y, style: "text-anchor:start; dominant-baseline:central; font-family:Source sans pro; font-size:" + NT_FONT_SIZE + "px"}, value=site+1)
-      }
+        drawSVGobj(svgContent, "text", {x: x + 2, y: y, style: "text-anchor:start; dominant-baseline:central; font-family:Source sans pro; font-size:" + NT_FONT_SIZE + "px"}, value=site+1)
+		drawSVGobj(svgContent, "line", {x1:x, x2:x, y1:SEC_HEIGHT*0.25, y2:SEC_HEIGHT, style:"stroke:black;stroke-width:1px"})
+   
+	  }
     }
 
     // Sequence labels
@@ -898,19 +919,29 @@ function renderSecondary(svg){
 	  
 
 	  
-      // Click on an accession to select it
+		// Click on an accession to select it
 		let ele = drawSVGobj(svgContent, "text", {x: x, y: y, pdb: acc, style: "text-anchor:end; cursor:pointer; fill:#366BA1; dominant-baseline:central; font-size:" + NT_FONT_SIZE + "px"}, value=accPrint)
-  		$(ele).bind("click", function(event){
-        var a = event.target.getAttribute("pdb");
-        var directory = DATA.directories[a];
-        directory = directory.replace("structures/", "dssp/");
-        deselectSites();
-        SELECTED_ACCESSION = directory.split("/");
-        SELECTED_ACCESSION = SELECTED_ACCESSION[SELECTED_ACCESSION.length-1];
-        selectSites();
+		$(ele).bind("click", function(event){
+			var a = event.target.getAttribute("pdb");
+			var directory = DATA.directories[a];
+			directory = directory.replace("structures/", "dssp/");
+			
+			let sln = directory.split("/");
+			sln = sln[sln.length-1];
+			
+			
+			// Already selected. Deselect it
+			if (SELECTED_ACCESSION == sln){
+				deselectSites(true);
+				return;
+			}
+			
+			deselectSites();
+			SELECTED_ACCESSION = sln;
+			selectSites();
 
 
-        if (!PAIRWISE) directory = "data/" + directory;
+			if (!PAIRWISE) directory = "data/" + directory;
   			renderTertiary(directory);
   		});
 
@@ -924,17 +955,24 @@ function renderSecondary(svg){
 			$("#metadataDlg").hide(0);
 			return;
 		}
-		$("#metadataDlg").css({top: y + svg.offset().top, left: ALN_LABEL_WIDTH + svg.offset().left + 5});
+		
+		let dlgTop = y + svg.offset().top;
+		let dlgLeft = ALN_LABEL_WIDTH + svg.offset().left + 5;
+		if (IS_MOBILE){
+			dlgTop += NT_FONT_SIZE;
+			dlgLeft = svg.offset().left;
+		}
+		$("#metadataDlg").css({top: dlgTop, left: dlgLeft});
 		$("#metadataDlg table").html("");
 		
 		
 		let species = metadata.species.replaceAll("_", " ");
-		let domain = metadata.domain == "Mitochondrial" ? "Eukaryote mitochondrial" : metadata.domain;
+		let domain = metadata.domain == "Mitochondrial" ? "Eukaryote organelle" : metadata.domain;
 		let domainImg =  "/fig/" + metadata.domain + ".png";
 		   
 		let isPDB = metadata.pdb != "" && metadata.pdb != "NA";
 		let methodImg =  "/fig/" + (isPDB ? "xray" : "alphafold") + ".png";
-		
+		let imgWidth = IS_MOBILE ? 28 : 14;
 		$("#metadataDlg table").append(`<tr>
   								<td colspan="2">
 									<div style="text-align:center">` + getNameOfAccession(acc) + `</div>
@@ -950,7 +988,7 @@ function renderSecondary(svg){
 							
 		$("#metadataDlg table").append(`<tr>
   								<th>Domain</th>
-  								<td>` + domain + ` <img src="` + domainImg + `" height="14px" style="vertical-align:middle"></img></td>
+  								<td>` + domain + ` <img src="` + domainImg + `" height="` + imgWidth + `px" style="vertical-align:middle"></img></td>
   							</tr>`);
 							
 		$("#metadataDlg table").append(`<tr>
@@ -968,7 +1006,7 @@ function renderSecondary(svg){
 			$("#metadataDlg table").append(`<tr>
 									<th>Structure</th>
 									<td><a target="_blank" href="https://www.rcsb.org/structure/` + metadata.pdb + `">` + metadata.pdb.toUpperCase() + `</a> 
-										<img src="` + methodImg + `" height="12px" style="vertical-align:middle"></img></td>
+										<img src="` + methodImg + `" height="` + imgWidth + `px" style="vertical-align:middle"></img></td>
 								</tr>`);
 								
 								
@@ -992,7 +1030,7 @@ function renderSecondary(svg){
 			$("#metadataDlg table").append(`<tr>
 									<th>Structure</th>
 									<td><a target="_blank" href="data/dssp/` + acc + `">Download AlphaFold</a> 
-											<img src="` + methodImg + `" height="12px" style="vertical-align:middle"></img></td>
+											<img src="` + methodImg + `" height="` + imgWidth + `px" style="vertical-align:middle"></img></td>
 								</tr>`);
 
 							
@@ -1554,9 +1592,19 @@ function renderAlignment(divID, isPrimary = true, downloadHref = ""){
 
 			  var directory = DATA.directories[a];
 			  directory = directory.replace("structures/", "dssp/");
+			  
+			  let sln = directory.split("/");
+			  sln = sln[sln.length-1];
+			  
+			  // Already selected? Deselect it
+				if (SELECTED_ACCESSION == sln){
+					deselectSites(true);
+					return;
+				}
+			  
+			  // Select it
 			  deselectSites();
-			  SELECTED_ACCESSION = directory.split("/");
-			  SELECTED_ACCESSION = SELECTED_ACCESSION[SELECTED_ACCESSION.length-1];
+			  SELECTED_ACCESSION = sln;
 			  selectSites();
 			  if (!PAIRWISE) directory = "data/" + directory;
 			  renderTertiary(directory);
@@ -2099,7 +2147,7 @@ function renderCatalyticDomainInserts(text, classNr){
 				group = $(drawSVGobj(svg, "g", {element: eleName, start:eleStart, end: eleStop, style:"cursor:pointer"} ));
 			}
 			drawSVGobj(group, "path", {d: d, style: "stroke-width:" + CATALYTIC_DOMAIN_LOOP_WIDTH + "px; stroke:black; fill:transparent; stroke-linecap:round"} );
-			drawSVGobj(group, "text", {x: xlab, y: ylab, style: "font-size:18px; text-anchor:middle; dominant-baseline:central; "}, eleName);
+			drawSVGobj(group, "text", {x: xlab, y: ylab, style: "font-size:" + CATALYTIC_DOMAIN_FONT_SIZE + "px; text-anchor:middle; dominant-baseline:central; "}, eleName);
 
 			if (i == 0) continue;
 			oddLoop = !oddLoop;
@@ -2134,7 +2182,7 @@ function renderCatalyticDomainInserts(text, classNr){
 
 			drawSVGobj(group, "rect", {rx: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix, style: "stroke-width:1px; stroke:black; fill:white"} );
 			drawSVGobj(group, "rect", {rx: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix, style: "stroke-width:1px; stroke:black; fill:" + helixCol} );
-			drawSVGobj(group, "text", {x: x, y: helixY+eleHeightHelix/2, style: "font-size:18px; text-anchor:middle; dominant-baseline:central; "}, eleName);
+			drawSVGobj(group, "text", {x: x, y: helixY+eleHeightHelix/2, style: "font-size:" + CATALYTIC_DOMAIN_FONT_SIZE + "px; text-anchor:middle; dominant-baseline:central; "}, eleName);
 	
 
 			
@@ -2196,7 +2244,7 @@ function renderCatalyticDomainInserts(text, classNr){
 			let group = $(drawSVGobj(svg, "g", {element: eleName, start: eleStart, end: eleStop, style:"cursor:pointer"} ));
 			drawSVGobj(group, "polygon", {points: points, style: "stroke-width:1px; stroke:black; fill:white"} )
 			drawSVGobj(group, "polygon", {points: points, style: "stroke-width:1px; stroke:black; fill:" + strandCol} )
-			drawSVGobj(group, "text", {x: x, y: y+eleHeight/2, style: "font-size:18px; text-anchor:middle; dominant-baseline:central; "}, eleName);
+			drawSVGobj(group, "text", {x: x, y: y+eleHeight/2, style: "font-size:" + CATALYTIC_DOMAIN_FONT_SIZE + "px; text-anchor:middle; dominant-baseline:central; "}, eleName);
 			
 		
 		}
@@ -2315,7 +2363,7 @@ function renderCatalyticDomainInserts(text, classNr){
 				group = $(drawSVGobj(svg, "g", {element: eleName, start:eleStart, end:eleStop, style:"cursor:pointer"} ));
 			}
 			drawSVGobj(group, "path", {d: d, style: "stroke-width:" + CATALYTIC_DOMAIN_LOOP_WIDTH + "px; stroke:black; fill:transparent; stroke-linecap:round"} );
-			drawSVGobj(group, "text", {x: xlab, y: ylab, style: "font-size:18px; text-anchor:middle; dominant-baseline:central; "}, eleName);
+			drawSVGobj(group, "text", {x: xlab, y: ylab, style: "font-size:" + CATALYTIC_DOMAIN_FONT_SIZE + "px; text-anchor:middle; dominant-baseline:central; "}, eleName);
 			
 		
 			
@@ -2357,7 +2405,7 @@ function renderCatalyticDomainInserts(text, classNr){
 
 				drawSVGobj(group, "rect", {rx: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix, style: "stroke-width:1px; stroke:black; fill:white"} );
 				drawSVGobj(group, "rect", {rx: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix, style: "stroke-width:1px; stroke:black; fill:" + helixCol} );
-				drawSVGobj(group, "text", {x: x, y: helixY+eleHeightHelix/2, style: "font-size:16px; text-anchor:middle; dominant-baseline:central; "}, eleName);
+				drawSVGobj(group, "text", {x: x, y: helixY+eleHeightHelix/2, style: "font-size:" + CATALYTIC_DOMAIN_FONT_SIZE + "px; text-anchor:middle; dominant-baseline:central; "}, eleName);
 	
 
 			
@@ -2429,7 +2477,7 @@ function renderCatalyticDomainInserts(text, classNr){
 			
 			drawSVGobj(group, "polygon", {points: points, style: "stroke-width:1px; stroke:black; fill:white"} )
 			drawSVGobj(group, "polygon", {points: points, style: "stroke-width:1px; stroke:black; fill:" + strandCol} )
-			drawSVGobj(group, "text", {x: x, y: y+eleHeight/2, style: "font-size:18px; text-anchor:middle; dominant-baseline:central; "}, eleName);
+			drawSVGobj(group, "text", {x: x, y: y+eleHeight/2, style: "font-size:" + CATALYTIC_DOMAIN_FONT_SIZE + "px; text-anchor:middle; dominant-baseline:central; "}, eleName);
 			
 		
 		}

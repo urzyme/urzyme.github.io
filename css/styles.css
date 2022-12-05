@@ -113,7 +113,7 @@ svg text{
 
 
 #tertiaryTable tr td div canvas{
-	border:1px solid #333;
+	border:2px solid #333;
 }
 
 svg text.alpha{
@@ -161,7 +161,20 @@ svg text.alpha{
 .helperNote{
 	margin-left: 1.5em;
 	margin-bottom: 1em;
+	font-size:0.95em;
 }
+
+
+.helperNote span{
+	padding-left:0.5em;
+	padding-right:0.5em;
+}
+
+
+.helperNote img{
+	vertical-align:middle;
+}
+
 
 
 .summary>table{
@@ -588,8 +601,9 @@ div.svgDiv{
 }
 
 
-#metadataDlg{
-	
+#metadataDlg.mobile{
+	width:90%;
+	max-width:50em;
 }
 
 
