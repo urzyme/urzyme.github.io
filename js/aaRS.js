@@ -884,15 +884,15 @@ function renderSecondary(svg){
         var y = SEC_HEIGHT*0.5;
         var x = SEC_WIDTH*(site) + ALN_LABEL_WIDTH;
         drawSVGobj(svgContent, "text", {x: x + 2, y: y, style: "text-anchor:start; dominant-baseline:central; font-family:Source sans pro; font-size:" + NT_FONT_SIZE + "px"}, value=site+1)
-		drawSVGobj(svgContent, "line", {x1:x, x2:x, y1:SEC_HEIGHT*0.25, y2:SEC_HEIGHT, style:"stroke:black;stroke-width:1px"})
+			drawSVGobj(svgContent, "line", {x1:x, x2:x, y1:SEC_HEIGHT*0.25, y2:SEC_HEIGHT, style:"stroke:black;stroke-width:1px"})
    
-	  }
+	  	}
     }
 
     // Sequence labels
-    for (var seqNum = 0; seqNum < nseq; seqNum++){
+    for (let seqNum = 0; seqNum < nseq; seqNum++){
       let acc = accessions[seqNum];
-	  let accPrint = getNameOfAccession(acc);
+	  	let accPrint = getNameOfAccession(acc);
       let y = SEC_HEIGHT*(seqNum+1.5)
       let x = ALN_LABEL_WIDTH - 5*NT_FONT_SIZE;
       let url = DATA.urls[acc];
@@ -946,94 +946,101 @@ function renderSecondary(svg){
   		});
 
 
-      ele.addEventListener('contextmenu', function(evt) { 
-	  
-		let metadata = DATA.metadata[acc.replace(".pdb", "")];
-	  
-        //console.log("right click", acc, metadata);
-		if (metadata == null){
-			$("#metadataDlg").hide(0);
-			return;
-		}
-		
-		let dlgTop = y + svg.offset().top;
-		let dlgLeft = ALN_LABEL_WIDTH + svg.offset().left + 5;
-		if (IS_MOBILE){
-			dlgTop += NT_FONT_SIZE;
-			dlgLeft = svg.offset().left;
-		}
-		$("#metadataDlg").css({top: dlgTop, left: dlgLeft});
-		$("#metadataDlg table").html("");
-		
-		
-		let species = metadata.species.replaceAll("_", " ");
-		let domain = metadata.domain == "Mitochondrial" ? "Eukaryote organelle" : metadata.domain;
-		let domainImg =  "/fig/" + metadata.domain + ".png";
-		   
-		let isPDB = metadata.pdb != "" && metadata.pdb != "NA";
-		let methodImg =  "/fig/" + (isPDB ? "xray" : "alphafold") + ".png";
-		let imgWidth = IS_MOBILE ? 28 : 14;
-		$("#metadataDlg table").append(`<tr>
-  								<td colspan="2">
-									<div style="text-align:center">` + getNameOfAccession(acc) + `</div>
+    ele.addEventListener('contextmenu', function(evt) { 
+			  
+				let metadata = DATA.metadata[acc.replace(".pdb", "")];
+			  
+		        //console.log("right click", acc, metadata);
+				if (metadata == null){
+					$("#metadataDlg").hide(0);
+					return;
+				}
+				
+				let dlgTop = y + svg.offset().top;
+				let dlgLeft = ALN_LABEL_WIDTH + svg.offset().left + 5;
+				if (IS_MOBILE){
+					dlgTop += NT_FONT_SIZE;
+					dlgLeft = svg.offset().left;
+				}
+				$("#metadataDlg").css({top: dlgTop, left: dlgLeft});
+				$("#metadataDlg table").html("");
+				
+				
+				let species = metadata.species.replaceAll("_", " ");
+				let domain = metadata.domain == "Mitochondrial" ? "Eukaryote organelle" : metadata.domain;
+				let domainImg =  "/fig/" + metadata.domain + ".png";
+				   
+				let isPDB = metadata.pdb != "" && metadata.pdb != "NA";
+				let methodImg =  "/fig/" + (isPDB ? "xray" : "alphafold") + ".png";
+				let imgWidth = IS_MOBILE ? 28 : 14;
+				$("#metadataDlg table").append(`<tr>
+		  								<td colspan="2">
+											<div style="text-align:center">` + getNameOfAccession(acc) + `</div>
+											
+										</td>
+		  							</tr>`);
+									//<div>` + metadata.desc + `</div>
+				
+				$("#metadataDlg table").append(`<tr>
+		  								<th>Family</th>
+		  								<td>` + metadata.name + `</td>
+		  							</tr>`);
 									
-								</td>
-  							</tr>`);
-							//<div>` + metadata.desc + `</div>
-		
-		$("#metadataDlg table").append(`<tr>
-  								<th>Family</th>
-  								<td>` + metadata.name + `</td>
-  							</tr>`);
-							
-		$("#metadataDlg table").append(`<tr>
-  								<th>Domain</th>
-  								<td>` + domain + ` <img src="` + domainImg + `" height="` + imgWidth + `px" style="vertical-align:middle"></img></td>
-  							</tr>`);
-							
-		$("#metadataDlg table").append(`<tr>
-  								<th>Phylum</th>
-  								<td>` + metadata.phylum + `</td>
-  							</tr>`);
-							
-		$("#metadataDlg table").append(`<tr>
-  								<th>Species</th>
-  								<td><i>` + species + `</i></td>
-  							</tr>`);
-							
-		if (isPDB){
-			
-			$("#metadataDlg table").append(`<tr>
-									<th>Structure</th>
-									<td><a target="_blank" href="https://www.rcsb.org/structure/` + metadata.pdb + `">` + metadata.pdb.toUpperCase() + `</a> 
-										<img src="` + methodImg + `" height="` + imgWidth + `px" style="vertical-align:middle"></img></td>
-								</tr>`);
-								
-								
-		}else{
-									
-			$("#metadataDlg table").append(`<tr>
-									<th>Genome</th>
-									<td><a target="_blank" href="https://www.ncbi.nlm.nih.gov/nuccore/` + metadata.genbank + `">` + metadata.genbank + `</a></td>
-								</tr>`);
-								
-			$("#metadataDlg table").append(`<tr>
-									<th>Gene</th>
-									<td><a target="_blank" href="https://www.ncbi.nlm.nih.gov/gene/` + metadata.gene + `">` + metadata.gene + `</a></td>
-								</tr>`);
-								
-			$("#metadataDlg table").append(`<tr>
-									<th>Genetic code</th>
-									<td><a target="_blank" href="https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi#SG` + metadata.transl_table + `">` + metadata.transl_table + `</a></td>
-								</tr>`);
-								
-			$("#metadataDlg table").append(`<tr>
-									<th>Structure</th>
-									<td><a target="_blank" href="data/dssp/` + acc + `">Download AlphaFold</a> 
-											<img src="` + methodImg + `" height="` + imgWidth + `px" style="vertical-align:middle"></img></td>
-								</tr>`);
+				$("#metadataDlg table").append(`<tr>
+		  								<th>Length</th>
+		  								<td>` + DATA.alignment[acc].replaceAll("-", "").length + ` aa</td>
+		  							</tr>`);
 
-							
+				$("#metadataDlg table").append(`<tr>
+		  								<th>Domain</th>
+		  								<td>` + domain + ` <img src="` + domainImg + `" height="` + imgWidth + `px" style="vertical-align:middle"></img></td>
+		  							</tr>`);
+									
+				$("#metadataDlg table").append(`<tr>
+		  								<th>Phylum</th>
+		  								<td>` + metadata.phylum + `</td>
+		  							</tr>`);
+									
+				$("#metadataDlg table").append(`<tr>
+		  								<th>Species</th>
+		  								<td><i>` + species + `</i></td>
+		  							</tr>`);
+
+				
+									
+				if (isPDB){
+					
+					$("#metadataDlg table").append(`<tr>
+											<th>Structure</th>
+											<td><a target="_blank" href="https://www.rcsb.org/structure/` + metadata.pdb + `">` + metadata.pdb.toUpperCase() + `</a> 
+												<img src="` + methodImg + `" height="` + imgWidth + `px" style="vertical-align:middle"></img></td>
+										</tr>`);
+										
+										
+				}else{
+											
+					$("#metadataDlg table").append(`<tr>
+											<th>Nucleotide</th>
+											<td><a target="_blank" href="https://www.ncbi.nlm.nih.gov/nuccore/` + metadata.genbank + `">` + metadata.genbank + `</a></td>
+										</tr>`);
+										
+					$("#metadataDlg table").append(`<tr>
+											<th>Gene</th>
+											<td><a target="_blank" href="https://www.ncbi.nlm.nih.gov/gene/` + metadata.gene + `">` + metadata.gene + `</a></td>
+										</tr>`);
+										
+					$("#metadataDlg table").append(`<tr>
+											<th>Genetic code</th>
+											<td><a target="_blank" href="https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi#SG` + metadata.transl_table + `">` + metadata.transl_table + `</a></td>
+										</tr>`);
+										
+					$("#metadataDlg table").append(`<tr>
+											<th>Structure</th>
+											<td><a target="_blank" href="data/dssp/` + acc + `">Download AlphaFold</a> 
+													<img src="` + methodImg + `" height="` + imgWidth + `px" style="vertical-align:middle"></img></td>
+										</tr>`);
+
+									
 							
 		}
 							
