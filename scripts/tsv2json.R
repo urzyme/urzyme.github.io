@@ -7,7 +7,7 @@ if (length(args) != 2){
 	stop("Use: Rscript tsv2json.R <file.tsv> <idCol>")
 }
 
-in.df = read.table(args[1], sep="\t", header=T)
+in.df = read.table(args[1], sep="\t", header=T, quote="`")
 idCol = args[2]
 if (!any(colnames(in.df) == idCol)){
 	stop(paste("Cannot find column", idCol))

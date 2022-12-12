@@ -1,12 +1,12 @@
-Catalytic domain	538-773	4
-Anticodon binding domain	785-879	4
+#Catalytic domain	538-773	4
+#tRNA binding domain	785-879	4
 # Editing domain defined as B3-B4 of 1PYS, Mosyak 1995. 211 - 396 (PHFT...LEAG)
-Editing domain	235-430	4
+#Editing domain	235-430	4
 #Urzyme	734-843	3
 #Protozyme	795-843	2
-Motif 1	1947-1956	1
-Motif 2	2122-2131	1
-Motif 3	2285-2294	1
+#Motif 1	1947-1956	1
+#Motif 2	2122-2131	1
+#Motif 3	2285-2294	1
 #tweezer1	832	0
 #tweezer2	1074	0
 
