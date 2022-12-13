@@ -26,7 +26,7 @@ cd ../
 
 
 
-../../../../DeepAlign/3DCOMB -i structures.txt -o align
+~/DeepAlign/3DCOMB -i structures.txt -o align
 Rscript ../../../scripts/dssp2pdbMulti.R
 
 
@@ -71,7 +71,7 @@ do
 
 	
 
-	../../../../../../DeepAlign/3DCOMB -i structures.txt -o align
+	~/DeepAlign/3DCOMB -i structures.txt -o align
 	Rscript ../../../../../scripts/dssp2pdbMulti.R
 
 

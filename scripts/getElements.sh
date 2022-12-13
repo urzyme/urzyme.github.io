@@ -46,7 +46,7 @@ do
 
 
 
-		../../../../../DeepAlign/3DCOMB -i structures.txt -o align
+		~/DeepAlign/3DCOMB -i structures.txt -o align
 		
 		#Rscript ../../../../scripts/pdb2fasta.R structures.txt unaligned.fasta
 		#mafft unaligned.fasta > align.ali
