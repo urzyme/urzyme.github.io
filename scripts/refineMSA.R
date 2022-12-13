@@ -1,4 +1,4 @@
-if (!requireNamespace("BiocManager", quietly=TRUE)) install.packages("BiocManager")
+#if (!requireNamespace("BiocManager", quietly=TRUE)) install.packages("BiocManager")
 #BiocManager::install("msa")
 library(msa)
 library(seqinr)
@@ -94,7 +94,7 @@ for (i in 2:nsites){
 
 		# Append with previous sse?
 		if (nrow(sse.df) > 0 && sse.df[nrow(sse.df),"element"] == prevSSE){
-			cat(paste("Appending", stopNr, "\n"))
+			#cat(paste("Appending", stopNr, "\n"))
 			sse.df[nrow(sse.df),"stop"] = stopNr
 		}else{
 			sse.df2 = data.frame(element = prevSSE, start = startsse, stop = stopNr)
@@ -111,6 +111,23 @@ for (i in 2:nsites){
 
 }
 
+
+# Last one
+if (prevSSE == sse){
+
+
+	stopNr = nsites
+
+	# Append with previous sse?
+	if (sse.df[nrow(sse.df),"element"] == prevSSE){
+		cat(paste("Appending", stopNr, "\n"))
+		sse.df[nrow(sse.df),"stop"] = stopNr
+	}else{
+		sse.df2 = data.frame(element = prevSSE, start = startsse, stop = stopNr)
+		sse.df = rbind(sse.df, sse.df2)
+	}
+
+}
 
 
 # If there is a short gap between two identical elements, then join the three together
@@ -173,38 +190,121 @@ sse.df = sse.df[!is.na(sse.df$element),]
 
 
 
+
+
+# New alignment
+aln.1.refined = character(length(aln.1))
+names(aln.1.refined) = names(aln.1)
+
+
+
 # Realign all of the unstructured N regions
+refine.nr = 0
+retain.nr = 0
 for (s in 1:nrow(sse.df)){
 
-
+	start = sse.df[s,"start"]
+	stop = sse.df[s,"stop"]
+	subseq = toupper(sapply(aln.1, function(seq) paste(seq[start:stop], collapse="")))
 
 	c1 = sse.df[s,"element"]
-	c1.len = sse.df[s,"stop"] - sse.df[s,"start"] + 1
+	c1.len = stop - start + 1
 	if (c1 != "N" | c1.len < MIN.REFINE.LEN){
+
+
+		# Keep it as is
+		for (seqNum in 1:length(aln.1.refined)){
+			taxon = names(aln.1.refined)[seqNum]
+			aln.1.refined[taxon] = paste0(aln.1.refined[taxon], subseq[taxon])
+		}
+		retain.nr = retain.nr + as.numeric(nchar(subseq)[1])
 		next
 	}
 
 
-	start = sse.df[s,"start"]
-	stop = sse.df[s,"stop"]
+
+
+
+	# Remove gaps to realign
+	subseq.nogap = gsub("-", "", subseq)
+	subseq.nogap = subseq.nogap[nchar(subseq.nogap) > 0]
+	if (length(subseq.nogap) < 2){
+
+		# Keep it as is
+		for (seqNum in 1:length(aln.1.refined)){
+			taxon = names(aln.1.refined)[seqNum]
+
+			if (all(names(subseq.nogap) != taxon)){
+				newSeq = paste0(rep("-", nchar(subseq.nogap)), collapse="")
+			}else{
+				newSeq = subseq.nogap[taxon]
+			}
+			aln.1.refined[taxon] = paste0(aln.1.refined[taxon], newSeq)
+		}
+
+		retain.nr = retain.nr + as.numeric(nchar(subseq.nogap)[1])
+		next
+	}
 
 
 	# Write to fasta and read it back in
-	subseq = sapply(aln.1, function(seq) seq[start:stop])
-	write("tmp.fasta", paste(paste0(">", names(subseq), "\n", as.character(subseq)), collapse="\n") )
-	sequenceFile = system.file(".", "tmp.fasta", package="msa")
-	file.in = readAAStringSet(sequenceFile)
-	file.remove("tmp.fasta")
+	write(paste(paste0(">", names(subseq.nogap), "\n", as.character(subseq.nogap)), collapse="\n"), "tmp.fasta")
+	file.in = readAAStringSet(filepath="tmp.fasta")
+	f = file.remove("tmp.fasta")
 
 
 
 	# Realign
+	N.refined = as.character(msa(file.in, type="protein", method="ClustalW"))
+	nsites.refine = as.numeric(nchar(N.refined)[1])
+
+	# Did it help?
+	if (nsites.refine >= as.numeric(nchar(subseq)[1])){
+
+		# Keep it as is
+		for (seqNum in 1:length(aln.1.refined)){
+			taxon = names(aln.1.refined)[seqNum]
+			aln.1.refined[taxon] = paste0(aln.1.refined[taxon], subseq[taxon])
+		}
+		retain.nr = retain.nr + as.numeric(nchar(subseq)[1])
+		cat(paste0("Rejected refinement because it is longer than original\n"))
+		next
+
+	}
+
+	refine.nr = refine.nr + nsites.refine
+
+	# Append to alignment
+	for (seqNum in 1:length(aln.1.refined)){
+		taxon = names(aln.1.refined)[seqNum]
+
+		if (all(names(N.refined) != taxon)){
+			newSeq = paste0(rep("-", nchar(N.refined[1])), collapse="")
+		}else{
+			newSeq = N.refined[taxon]
+		}
+		aln.1.refined[taxon] = paste0(aln.1.refined[taxon], newSeq)
+	}
 
 
 
-	# Compare scores
+
+	
+
+	#print(N.refined, show="complete")
 
 
 
 }
+
+
+
+nsites.after = as.numeric(nchar(aln.1.refined[1]))
+
+
+outfile = "refined.fasta"
+cat(paste("Pruned", (nsites - nsites.after), "sites from the alignment. Saving fasta to", outfile, "\n"))
+cat(paste0("Refined ", refine.nr, " sites (", signif(refine.nr/nsites.after*100, 2), "%)\n"))
+write(paste(paste0(">", names(aln.1.refined), "\n", as.character(aln.1.refined)), collapse="\n"), outfile)
+
 

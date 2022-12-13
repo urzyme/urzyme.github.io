@@ -26,7 +26,7 @@ cd ../
 
 
 
-~/DeepAlign/3DCOMB -i structures.txt -o align
+~/DeepAlign/3DCOMB -i structures.txt -r -o align
 Rscript ../../../scripts/dssp2pdbMulti.R
 
 
@@ -35,7 +35,15 @@ Rscript ../../../scripts/dssp2fasta.R
 
 
 
+
+# Refine the alignment
+Rscript ../../../scripts/refineMSA.R align.ali secondary.fasta
+mv align.ali unrefined.fasta
+mv refined.fasta align.ali
+Rscript ../../../scripts/dssp2fasta.R
+
 exit
+
 
 
 
