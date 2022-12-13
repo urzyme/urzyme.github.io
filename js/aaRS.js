@@ -29,7 +29,7 @@ AA_COLS = {A: "#80a0f0", I: "#80a0f0", L: "#80a0f0", M: "#80a0f0", F: "#80a0f0",
 
 // http://bioinformatica.isa.cnr.it/SUSAN/NAR2/dsspweb.html#:~:text=DSSP%20assigns%20seven%20different%20secondary,no%20secondary%20structure%20is%20recognized
 AA_COLS_2 = {E: "#FFC20A", H: "#0C7BDC", G: "#0C7BDC", I: "#0C7BDC", T:"#d3d3d3", S: "#d3d3d3",  B: "#d3d3d3",  N: "#ffffff",};
-
+AA_FONT_COLS_2 = {E: "#222222", H: "#222222", G: "#222222", I: "#222222", T:"#222222", S: "#222222",  B: "#222222",  N: "#111111",};
 
 
 PAIRWISE = false;
@@ -194,7 +194,7 @@ function renderaaRS(isPairwise = false){
 
 
 	// Tertiary dropdowns
-	$("#tertiaryTable").append("<span class='button' onClick='deselectSites(true)'>Clear selection</span>");
+	$("#tertiaryTable").append("<span class='button' onClick='deselectSites(); deselectTaxa(true)'>Clear selection</span>");
 	$("#tertiaryTable").append("<span class='dropdownDiv domainSelect'>Domain: <select id='domainSelect'></select></span>");
 	$("#tertiaryTable").append("<span class='dropdownDiv colouring'>Alignment colour: <select id='tertiaryColouringAln'></select></span>");
 	$("#tertiaryTable").append("<span class='dropdownDiv colouring'>Reference colour: <select id='tertiaryColouringSingle'></select></span>");
@@ -216,7 +216,6 @@ function renderaaRS(isPairwise = false){
     }
     $(dropdown).on("change", function(){
       $("#tertiary").html("");
-      //deselectSites();
       renderTertiary("data/align.pdb", "superposition");
     });
 	
@@ -714,8 +713,9 @@ function renderSecondary(svg){
 
       
       var x1 = clientX - svg.offset().left;
+	  var y1 = clientY - svg.offset().top;
       if (x1 <= ALN_LABEL_WIDTH) return;
-
+	  if (y1 >= SEC_HEIGHT*(nseq+1)) return;
 
 
 
@@ -732,7 +732,7 @@ function renderSecondary(svg){
       
       var res1 = Math.floor((x1 - ALN_LABEL_WIDTH) / SEC_WIDTH) + 1;
 
-      var rect = drawSVGobj(svgHighlight, "rect", {x: x1-SEC_WIDTH, y: 0, width: 0, height: svg.height(), class: "selectionRect", style: "stroke-width:1px; stroke:black; fill:#008cba55"} )
+      var rect = drawSVGobj(svgHighlight, "rect", {x: x1-SEC_WIDTH, y: 0, width: 0, height: SEC_HEIGHT*(nseq+1), class: "selectionRect", style: "stroke-width:1px; stroke:black; fill:#008cba55"} )
       var text = drawSVGobj(svgHighlight, "text", {x: SEC_WIDTH*5, y: svg.height() - SEC_WIDTH*5, class: "selectionRect", style: "text-anchor:start; dominant-baseline:auto; font-size:12px"}, "" )
 
 
@@ -783,8 +783,14 @@ function renderSecondary(svg){
 
         // Clear selection
         if (clearing && SELECTED_SITES.upper - SELECTED_SITES.lower < 3){
-		      deselectSites();
+			deselectTaxa();
+		    deselectSites();
         }
+		if (coords.x1 == coords.x2){
+			deselectTaxa();
+			deselectSites();
+		}
+		
 
         selectSites();
 
@@ -915,10 +921,6 @@ function renderSecondary(svg){
 	  }
 	 
 
-      //var textEle = drawSVGobj(svg, "a", {x: x, y: y, href: url, target:"_blank"})
-	  
-
-	  
 		// Click on an accession to select it
 		let ele = drawSVGobj(svgContent, "text", {x: x, y: y, pdb: acc, style: "text-anchor:end; cursor:pointer; fill:#366BA1; dominant-baseline:central; font-size:" + NT_FONT_SIZE + "px"}, value=accPrint)
 		$(ele).bind("click", function(event){
@@ -932,13 +934,13 @@ function renderSecondary(svg){
 			
 			// Already selected. Deselect it
 			if (SELECTED_ACCESSION == sln){
-				deselectSites(true);
+				deselectTaxa(true);
 				return;
 			}
 			
-			deselectSites();
+			deselectTaxa();
 			SELECTED_ACCESSION = sln;
-			selectSites();
+			selectSites(false);
 
 
 			if (!PAIRWISE) directory = "data/" + directory;
@@ -1181,6 +1183,16 @@ function renderSecondary(svg){
 
 
 // Clear selection 
+function deselectTaxa(refresh = false){
+	
+	// Clear domain selection text
+	$("#secondary g.domainSeq").attr("select", "na");
+	SELECTED_ACCESSION = null;
+	if (refresh) selectSites();
+	
+}
+
+// Clear selection 
 function deselectSites(refresh = false){
 	
 	console.log("deselectSites");
@@ -1195,7 +1207,7 @@ function deselectSites(refresh = false){
 	
 	// Clear domain selection text 
 	$("svg").find("text").attr("class", "deselected");
-	$("#secondary g.domainSeq").attr("select", "na");
+	
 	
 				
 	// Clear selection on catalytic table / svg
@@ -1208,7 +1220,7 @@ function deselectSites(refresh = false){
 	// Clear selection
 	SELECTED_SITES.lower = -1;
 	SELECTED_SITES.upper = -1;
-  SELECTED_ACCESSION = null;
+	
 	
 	if (refresh) selectSites();
 	
@@ -1216,27 +1228,29 @@ function deselectSites(refresh = false){
 }
 
 
-function selectSites(){
-
-    // Update canvas colours
-    renderAlignment("alignment", true, "data/align.ali");
-    renderAlignment("alignment2", false, "data/secondary.fasta");
-
-
-    // Domain architecture fade out other sequences
+function selectSites(rescroll = true){
+	
+	// Domain architecture fade out other sequences
     if (SELECTED_ACCESSION != null){
       $("#secondary g.domainSeq").attr("select", "false");
       $(`#secondary g.domainSeq[accession="` + SELECTED_ACCESSION + `"]`).attr("select", "true");
-      console.log("settigng to deselected");
+      console.log("setting to deselected");
     }
 
-    // Rescroll
-    if (SELECTED_SITES.lower != -1){
-      var xpos = ALN_LABEL_WIDTH + NT_WIDTH*(SELECTED_SITES.lower) - $("#alignment").parent().width()/2;
-      $("#alignment").scrollLeft(xpos);
-      $("#alignment2").scrollLeft(xpos);
-    }
+	// Update canvas colours async
+    setTimeout(function(){
+		
+		renderAlignment("alignment", true, "data/align.ali");
+		renderAlignment("alignment2", false, "data/secondary.fasta");
+
+		// Rescroll
+		if (SELECTED_SITES.lower != -1 && rescroll){
+		  var xpos = ALN_LABEL_WIDTH + NT_WIDTH*(SELECTED_SITES.lower) - $("#alignment").parent().width()/2;
+		  $("#alignment").scrollLeft(xpos);
+		  $("#alignment2").scrollLeft(xpos);
+		}
     
+	}, 1);
 
 
     // Update tertiary colour async
@@ -1299,7 +1313,7 @@ function renderAlignment(divID, isPrimary = true, downloadHref = ""){
 	// Canvas size
 	var w = NT_WIDTH*(nsites+2) + ALN_LABEL_WIDTH;
 	var h = NT_HEIGHT*(nseq+1) + FEATURE_HEIGHT_ALN*4.1;
-  var maxCanvasWidth = 30000;
+  var maxCanvasWidth = 20000;
   var ratio = Math.min(maxCanvasWidth / w, 2.5); 
 	var canvas;
   if ($("#" + divID).find("canvas").length > 0){
@@ -1376,16 +1390,19 @@ function renderAlignment(divID, isPrimary = true, downloadHref = ""){
 
 
       // Rect
-      var col = "";
-      var textCol = "#000000";
+      let col = "";
+      let textCol = "#000000";
       if (aa == "-"){
         col = "#ffffff";
       }else if (isPrimary){
         col = AA_COLS[aa];
       }else{
+		textCol = AA_FONT_COLS_2[aa];
         col = AA_COLS_2[aa];
       }
 
+
+	
 
       // Selected site?
       if (SELECTED_SITES.lower != -1){
@@ -1393,24 +1410,26 @@ function renderAlignment(divID, isPrimary = true, downloadHref = ""){
             //textCol = "white";
             if (aa != "-") {
               col = col + "33";
-              textCol = textCol + "88";
+              textCol = textCol + "aa";
             }
         }
       }
 
       // Selected accession?
-      else if (SELECTED_ACCESSION != null){
-        if (acc != SELECTED_ACCESSION){
+      if (SELECTED_ACCESSION != null){
+        if (acc != SELECTED_ACCESSION && col.length != 9){
           col = col + "33";
-          textCol = textCol + "88";
+          textCol = textCol + "aa";
         }
       }
       
+	  
+		
 		  
-			ctx.beginPath();
-			ctx.fillStyle = col;
-			ctx.fillRect(x-NT_WIDTH/2, y-NT_HEIGHT/2, NT_WIDTH+1, NT_HEIGHT+1);
-			ctx.stroke();
+		ctx.beginPath();
+		ctx.fillStyle = col;
+		ctx.fillRect(x-NT_WIDTH/2, y-NT_HEIGHT/2, NT_WIDTH+0.5, NT_HEIGHT+0.5);
+		ctx.stroke();
           
         
 
@@ -1431,34 +1450,46 @@ function renderAlignment(divID, isPrimary = true, downloadHref = ""){
 
 
 
-	 // Rect around selected sites
-	 if (SELECTED_SITES.lower != -1){
+	 // Rect around selected sites / taxon
+	 if (SELECTED_SITES.lower != -1 || SELECTED_ACCESSION != null){
 		 
-		  let x1 = NT_WIDTH*(SELECTED_SITES.lower-1) + ALN_LABEL_WIDTH;
-		  let x2 = NT_WIDTH*(SELECTED_SITES.upper) + ALN_LABEL_WIDTH;
+		 
+		 let x1 = 0;
+		 let x2 = ALN_LABEL_WIDTH + NT_WIDTH*nsites;
+		 let y1 = NT_HEIGHT;
+		 let h = NT_HEIGHT*(nseq);
+		 
+		 
+		 // Width of rect
+		 if (SELECTED_SITES.lower != -1){
+			 x1 = NT_WIDTH*(SELECTED_SITES.lower-1) + ALN_LABEL_WIDTH;
+		     x2 = NT_WIDTH*(SELECTED_SITES.upper) + ALN_LABEL_WIDTH;
+		 }
+		 
+		 
+		 // Height of rect
+		 if (SELECTED_ACCESSION != null){
+			 
+			 
+			 let selectedSeqNr = -1;
+			  for (let seqNum = 0; seqNum < nseq; seqNum++){
+				if (accessions[seqNum] == SELECTED_ACCESSION){
+				  selectedSeqNr = seqNum;
+				  break;
+				}
+			  }
+					 
+			 y1 = (selectedSeqNr+1)*NT_HEIGHT;
+			 h = NT_HEIGHT;
+		 }
+
 	  
 		  ctx.beginPath();
 		  ctx.fillStyle = col;
-		  ctx.strokeRect(x1, NT_HEIGHT, x2-x1, NT_HEIGHT*(nseq));
+		  ctx.strokeRect(x1, y1, x2-x1, h);
 		 
 	 }
 
-   // Rect around selected accession
-   else if (SELECTED_ACCESSION != null){
-
-      let selectedSeqNr = -1;
-      for (let seqNum = 0; seqNum < nseq; seqNum++){
-        if (accessions[seqNum] == SELECTED_ACCESSION){
-          selectedSeqNr = seqNum;
-          break;
-        }
-      }
-    
-      ctx.beginPath();
-      ctx.fillStyle = col;
-      ctx.strokeRect(0, (selectedSeqNr+1)*NT_HEIGHT, ALN_LABEL_WIDTH + NT_WIDTH*nsites, NT_HEIGHT);
-
-   }
 
 
 
@@ -1521,6 +1552,19 @@ function renderAlignment(divID, isPrimary = true, downloadHref = ""){
 		toolbar.append($(`<span> Site: <span class="fader siteSel"></span> </span>`));
 		toolbar.append($(`<span> Ungapped: <span class="fader ungappedSel"></span> </span>`));
 		toolbar.append($(`<span> Accession: <span class="fader taxonSel"></span> </span>`));
+		
+		// SSE legend
+		if (!isPrimary){
+			toolbar.append($(`<span class="sseLegend" > <span style="color:` + AA_FONT_COLS_2["N"] + `; background-color:` + AA_COLS_2["N"] + `">N</span> - none </span>`));
+			toolbar.append($(`<span class="sseLegend" > <span style="color:` + AA_FONT_COLS_2["S"] + `; background-color:` + AA_COLS_2["S"] + `">S</span> - bend </span>`));
+			toolbar.append($(`<span class="sseLegend" > <span style="color:` + AA_FONT_COLS_2["T"] + `; background-color:` + AA_COLS_2["T"] + `">T</span> - H-bonded turn </span>`));
+			toolbar.append($(`<span class="sseLegend" > <span style="color:` + AA_FONT_COLS_2["B"] + `; background-color:` + AA_COLS_2["B"] + `">B</span> - b-bridge </span>`));
+			toolbar.append($(`<span class="sseLegend" > <span style="color:` + AA_FONT_COLS_2["I"] + `; background-color:` + AA_COLS_2["I"] + `">I</span> - p-helix </span>`));
+			toolbar.append($(`<span class="sseLegend" > <span style="color:` + AA_FONT_COLS_2["G"] + `;background-color:` + AA_COLS_2["G"] + `">G</span> - 310 helix </span>`));
+			toolbar.append($(`<span class="sseLegend" > <span style="color:` + AA_FONT_COLS_2["H"] + `;background-color:` + AA_COLS_2["H"] + `">H</span> - &alpha; helix </span>`));
+			toolbar.append($(`<span class="sseLegend" > <span style="color:` + AA_FONT_COLS_2["E"] + `;background-color:` + AA_COLS_2["E"] + `">E</span> - extended &beta; strand </span><br>`));
+			
+		}
 
 
 
@@ -1605,19 +1649,20 @@ function renderAlignment(divID, isPrimary = true, downloadHref = ""){
 			  
 			  // Already selected? Deselect it
 				if (SELECTED_ACCESSION == sln){
-					deselectSites(true);
+					deselectTaxa(true);
 					return;
 				}
 			  
 			  // Select it
-			  deselectSites();
+			  deselectTaxa();
 			  SELECTED_ACCESSION = sln;
-			  selectSites();
+			  selectSites(false);
 			  if (!PAIRWISE) directory = "data/" + directory;
 			  renderTertiary(directory);
 
 			}else{
-			  deselectSites(true);
+			   deselectSites();
+			  deselectTaxa(true);
 			}
 
 
@@ -2508,7 +2553,7 @@ function renderCatalyticDomainInserts(text, classNr){
 		console.log( sse);
 		
 		
-		// Clear selection
+		// Clear site selection
 		if ($(ele).attr("class") == "selected"){
 			deselectSites(true);
 			return;
