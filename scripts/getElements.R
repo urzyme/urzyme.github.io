@@ -42,7 +42,7 @@ searchForStart = function(targetPos, ssSEQ, eleType){
 
 
 
-# Truncate a pdb file according to start and stop positions in an alignent
+# Truncate a pdb file according to start and stop positions in an alignment
 truncatePDBFile = function(pdbFile, seq, startPos, stopPos){
 
 

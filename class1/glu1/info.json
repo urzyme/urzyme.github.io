@@ -9,6 +9,8 @@
 		"oligo": "Monomeric",
 		"codons": "GAA, GAG",
 		"editing": "No",
-		"ref_str": ["structures/GluRS_PDB_Bact_T_therm_1J09.pdb"]
+		"ref_str": ["structures/GluRS_PDB_Bact_T_therm_1J09.pdb"],
+		"hinge_str": "structures/GluRS_AF_Mito_Cyanidioschyzon_merolae_strain_10D_gene16997617.pdb",
+		"hinges": [558]
 	
 }

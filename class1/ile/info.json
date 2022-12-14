@@ -9,6 +9,8 @@
 		"oligo": "Monomeric",
 		"codons": "AUU, AUC, AUA",
 		"editing": "Post-transfer",
-		"ref_str": ["structures/IleRS_PDB_Euk_S_cere_7D5C.pdb"]
+		"ref_str": ["structures/IleRS_PDB_Euk_S_cere_7D5C.pdb"],
+		"hinge_str": "structures/IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
+		"hinges": [787]
 	
 }

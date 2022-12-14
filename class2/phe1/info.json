@@ -9,7 +9,9 @@
 		"oligo": "Heterotetramer",
 		"codons": "UUU, UUC",
 		"editing": "No",
-		"ref_str": ["structures/PheRS-Bα_PDB_Bact.A_T_thermophilus_1PYS.pdb"]
+		"ref_str": ["structures/PheRS-Bα_PDB_Bact.A_T_thermophilus_1PYS.pdb"],
+		"hinge_str": "structures/PheRS-Bα_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440383.pdb",
+		"hinges": [102]
 	
 }
 

@@ -9,6 +9,8 @@
 		"oligo": "Homodimeric",
 		"codons": "UGG",
 		"editing": "No",
-		"ref_str": ["structures/TrpRS_PDB_Arch_P_hori_3JXE.pdb"]
+		"ref_str": ["structures/TrpRS_PDB_Arch_P_hori_3JXE.pdb"],
+		"hinge_str": "structures/TrpRS_AF_Arch_Natrialba_magadii_ATCC_43099_gene8824932.pdb",
+		"hinges": [134]
 	
 }

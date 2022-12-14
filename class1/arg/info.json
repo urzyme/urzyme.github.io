@@ -9,5 +9,7 @@
 		"oligo": "Homodimeric",
 		"codons": "CGU, CGC, CGA, CGG, AGA, AGG",
 		"editing": "No",
-		"ref_str": ["structures/ArgRS_PDB_Arch_2ZUF.pdb"]
+		"ref_str": ["structures/ArgRS_PDB_Arch_2ZUF.pdb"],
+		"hinge_str": "structures/ArgRS_AF_Arch_Desulfurococcus_mucosus_DSM_2162_gene10153309.pdb",
+		"hinges": [100]
 }

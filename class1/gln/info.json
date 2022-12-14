@@ -9,6 +9,8 @@
 		"oligo": "Monomeric",
 		"codons": "CAA, CAG",
 		"editing": "No",
-		"ref_str": ["structures/GlnRS_Bact_D_radio_2HZ7.pdb"]
+		"ref_str": ["structures/GlnRS_Bact_D_radio_2HZ7.pdb"],
+		"hinge_str": "structures/GlnRS_AF_Euk_Myodes_glareolus_gene125393344.pdb",
+		"hinges": [203]
 	
 }

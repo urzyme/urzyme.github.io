@@ -9,6 +9,8 @@
 		"oligo": "Monomeric or Homodimeric",
 		"codons": "UCU, UGC",
 		"editing": "No",
-		"ref_str": ["structures/CysRS_PDB_Bact_M_smegmatis_3C8Z.pdb"]
+		"ref_str": ["structures/CysRS_PDB_Bact_M_smegmatis_3C8Z.pdb"],
+		"hinge_str": "structures/CysRS_AF_Bact_Mycobacterium_canettii_CIPT_140010059_gene45427568.pdb",
+		"hinges": [402]
 	
 }
