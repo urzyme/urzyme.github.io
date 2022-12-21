@@ -9,7 +9,9 @@
 		"oligo": "Heterotetramer",
 		"codons": "UUU, UUC",
 		"editing": "No",
-		"ref_str": ["structures/Phe_Euk_3L4G.C_H_sapiens.pdb"]
+		"ref_str": ["structures/Phe_Euk_3L4G.C_H_sapiens.pdb"],
+		"hinge_str": "structures/PheRS-Aα_AF_Arch_Haloterrigena_turkmenica_DSM_5511_gene8744248.pdb",
+		"hinges": [235]
 	
 }
 

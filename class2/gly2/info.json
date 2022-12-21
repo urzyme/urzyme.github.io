@@ -9,6 +9,9 @@
 		"oligo": "Heterotetramer",
 		"codons": "GGU, GGC, GGA, GGG",
 		"editing": "No",
-		"ref_str": ["structures/GlyRS-α_PDB_Bact_A_aeolicus_5f5w.pdb"]
+		"ref_str": ["structures/GlyRS-α_PDB_Bact_A_aeolicus_5f5w.pdb"],
+		"hinge_str": "structures/GlyRS-α_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440230.pdb",
+		"hinges": []
+	
 	
 }

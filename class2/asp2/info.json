@@ -9,6 +9,8 @@
 		"oligo": "Homodimer",
 		"codons": "GAU, GAC (Asp), AAU, AAC (Asn)",
 		"editing": "No",
-		"ref_str": ["structures/AsxRS_PDB_Arch_T_kodarensis_1b8a.pdb"]
+		"ref_str": ["structures/AsxRS_PDB_Arch_T_kodarensis_1b8a.pdb"],
+		"hinge_str": "structures/AsxRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094477.pdb",
+		"hinges": [95]
 	
 }

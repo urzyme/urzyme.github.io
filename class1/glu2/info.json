@@ -11,6 +11,7 @@
 		"editing": "No",
 		"ref_str": ["structures/GlxRS_PDB_Arch_M_thermau_3AII.pdb"],
 		"hinge_str": "structures/GlxRS_AF_Euk_Castor_canadensis_gene109691970.pdb",
-		"hinges": [211]
+		"hinges": [],
+		"refine": [{"start": 544, "stop": 629}]
 	
 }

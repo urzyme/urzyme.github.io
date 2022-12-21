@@ -9,7 +9,11 @@
 		"oligo": "Homodimer",
 		"codons": "GGU, GGC, GGA, GGG",
 		"editing": "No",
-		"ref_str": ["structures/GlyRS_PDB_Bact_T_thermophilus_1ati.pdb"]
+		"ref_str": ["structures/GlyRS_PDB_Bact_T_thermophilus_1ati.pdb"],
+		"hinge_str": "structures/GlyRS_AF_Arch_Sulfolobus_islandicus_YN1551_gene7810979.pdb",
+		"hinges": [372],
+		"refine": [{"start": 650, "stop": 851 }]
+
 	
 }
 

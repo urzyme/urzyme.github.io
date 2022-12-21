@@ -9,7 +9,9 @@
 		"oligo": "Homodimer",
 		"codons": "CCU, CCC, CCA, CCG",
 		"editing": "Post-transfer",
-		"ref_str": ["structures/ProRS-A_PDB_Arch_M_janacshii_1nj8.pdb"]
+		"ref_str": ["structures/ProRS-A_PDB_Arch_M_janacshii_1nj8.pdb"],
+		"hinge_str": "structures/ProRS-A_AF_Euk_Scheffersomyces_stipitis_CBS_6054_gene4840393.pdb",
+		"hinges": [171]
 	
 }
 

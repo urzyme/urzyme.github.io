@@ -9,6 +9,8 @@
 		"oligo": "Homodimer",
 		"codons": "GAU, GAC",
 		"editing": "No",
-		"ref_str": ["structures/AspRS_PDB_Bact_E_coli_1c0a.pdb"]
+		"ref_str": ["structures/AspRS_PDB_Bact_E_coli_1c0a.pdb"],
+		"hinge_str": "structures/AspRS_AF_Bact_Bacillus_anthracis_str_Ames_Ancestor_gene45024275.pdb",
+		"hinges": [119]
 	
 }

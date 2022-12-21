@@ -11,6 +11,7 @@
 		"editing": "Post-transfer",
 		"ref_str": ["structures/LeuRS_PDB_Bact_T_therm_2V0C.pdb"],
 		"hinge_str": "structures/LeuRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb",
-		"hinges": [174, 800]
+		"hinges": [174, 461, 800],
+		"refine": [{"start": 1558, "stop": 1796}]
 	
 }

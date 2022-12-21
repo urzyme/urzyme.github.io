@@ -9,7 +9,8 @@
 		"oligo": "Heterotetramer",
 		"codons": "UUU, UUC",
 		"editing": "Post-transfer",
-		"ref_str": ["structures/PheRS-Bβ_PDB_Bact.B_T_thermophilus_1PYS.pdb"]
+		"ref_str": ["structures/PheRS-Bβ_PDB_Bact.B_T_thermophilus_1PYS.pdb"],
+		"refine": [{"start": 34, "stop": 219}]
 	
 }
 

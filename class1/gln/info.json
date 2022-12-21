@@ -11,6 +11,8 @@
 		"editing": "No",
 		"ref_str": ["structures/GlnRS_Bact_D_radio_2HZ7.pdb"],
 		"hinge_str": "structures/GlnRS_AF_Euk_Myodes_glareolus_gene125393344.pdb",
-		"hinges": [203]
+		"hinges": [203],
+		"refine": [{"start": 422, "stop": 491}]
 	
 }
+

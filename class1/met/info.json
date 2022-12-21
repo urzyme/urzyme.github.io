@@ -11,6 +11,7 @@
 		"editing": "Pre-transfer",
 		"ref_str": ["structures/MetRS_PDB_Bact_E_coli_1PFV.pdb"],
 		"hinge_str": "structures/MetRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827030.pdb",
-		"hinges": [114, 524]
+		"hinges": [114, 524],
+		"refine": [{"start": 830}]
 	
 }

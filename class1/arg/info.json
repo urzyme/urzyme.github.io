@@ -10,6 +10,7 @@
 		"codons": "CGU, CGC, CGA, CGG, AGA, AGG",
 		"editing": "No",
 		"ref_str": ["structures/ArgRS_PDB_Arch_2ZUF.pdb"],
-		"hinge_str": "structures/ArgRS_AF_Arch_Desulfurococcus_mucosus_DSM_2162_gene10153309.pdb",
-		"hinges": [100]
+		"hinge_str": "structures/ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb",
+		"hinges": [114],
+		"refine": [{"start": 198, "stop": 255}]
 }

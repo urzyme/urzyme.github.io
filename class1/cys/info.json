@@ -10,7 +10,8 @@
 		"codons": "UCU, UGC",
 		"editing": "No",
 		"ref_str": ["structures/CysRS_PDB_Bact_M_smegmatis_3C8Z.pdb"],
-		"hinge_str": "structures/CysRS_AF_Bact_Mycobacterium_canettii_CIPT_140010059_gene45427568.pdb",
-		"hinges": [402]
+		"hinge_str": "structures/CysRS_AF_Mito_Saccharomyces_cerevisiae_S288C_gene855474.pdb",
+		"hinges": [681],
+		"refine": [{"start": 850}]
 	
 }

@@ -9,8 +9,8 @@
 		"oligo": "Homodimer",
 		"codons": "CAU, CAC",
 		"editing": "No",
-		"ref_str": ["structures/HisRS_PDB_Bact_E_coli_1HTT.pdb"]
-	
+		"ref_str": ["structures/HisRS_PDB_Bact_E_coli_1HTT.pdb"],
+		"refine": [{"start": 1037, "stop": 1197 }]
 }
 
 

@@ -9,7 +9,9 @@
 		"oligo": "Homodimeric",
 		"codons": "ACU, ACC, ACA, ACG",
 		"editing": "Post-transfer",
-		"ref_str": ["structures/ThrRS_PDB_Bact_E_coli_1evk.pdb"]
+		"ref_str": ["structures/ThrRS_PDB_Bact_E_coli_1evk.pdb"],
+		"hinge_str": "structures/ThrRS_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578309.pdb",
+		"hinges": [251],
 	
 }
 

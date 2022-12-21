@@ -9,6 +9,9 @@
 		"oligo": "Monomeric",
 		"codons": "GUA, GUC, GUG, GUU",
 		"editing": "Pre-transfer, post-transfer",
-		"ref_str": ["structures/ValRS_PDB_Bact_T_therm_1GAX.pdb"]
+		"ref_str": ["structures/ValRS_PDB_Bact_T_therm_1GAX.pdb"],
+		"hinge_str": "structures/ValRS_AF_Bact_Brucella_abortus_2308_gene3789053.pdb",
+		"hinges": [840],
+		"refine": [{"start": 1724 }]
 	
 }
