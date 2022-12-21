@@ -50,10 +50,13 @@ getSSEOfSite = function(siteNum, aln.2){
 # Load alignments
 aln.1 = read.fasta(file=args[1])
 aln.2 = read.fasta(file=args[2])
+
 nsites = length(aln.2[[1]])
 if (length(aln.1[[1]]) != nsites){
 	stop(paste("Mismatching site count", length(aln.1[[1]]), "!=", nsites))
 }
+
+
 
 
 # Find all regions of the alignment where there is extended secondary structure
@@ -144,7 +147,7 @@ for (s in 1:nrow(sse.df)){
 
 	c2.len = sse.df[s,"stop"] - sse.df[s,"start"] + 1
 	if (c2.len > MAX.GAP.LEN){
-		next
+		#next
 	}
 
 	if (c2 == "-" && (c1 == c3 | is.na(c1) | is.na(c3)) ){
@@ -300,6 +303,14 @@ for (s in 1:nrow(sse.df)){
 
 
 nsites.after = as.numeric(nchar(aln.1.refined[1]))
+
+
+
+
+
+
+
+
 
 
 outfile = "refined.fasta"

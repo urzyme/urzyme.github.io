@@ -711,11 +711,11 @@ function renderSecondary(svg){
     const eleSvg = $(svg).get(0); //document.getElementById(svg.attr("id"));
     eleSvg.addEventListener('mousedown', ({clientX, clientY}) => {
 
-      
-      var x1 = clientX - svg.offset().left;
-	  var y1 = clientY - svg.offset().top;
-      if (x1 <= ALN_LABEL_WIDTH) return;
-	  if (y1 >= SEC_HEIGHT*(nseq+1)) return;
+			  
+			var x1 = clientX - svg.offset().left;
+			var y1 = clientY - svg.offset().top;
+			if (x1 <= ALN_LABEL_WIDTH) return;
+			if (y1 >= SEC_HEIGHT*(nseq+1)) return;
 
 
 
@@ -835,16 +835,16 @@ function renderSecondary(svg){
       var textCol = "black";
       var col = level == 1 ? LEVEL_1_COL : level == 2 ? LEVEL_2_COL : level == 3 ? LEVEL_3_COL : LEVEL_4_COL;
       var txt = feature;
-	  var lw = 0; //0.7;
-	  if (level == 4){
-       lw = 0.7;
+		  var lw = 0; //0.7;
+		  if (level == 4){
+	       lw = 0.7;
       }
 	  
       if (level == 0){
         continue;
       }else{
 		    drawSVGobj(svgAnnotation, "rect", {x: x1-SEC_WIDTH, y: SEC_HEIGHT, width: x2-x1, height:SEC_HEIGHT*nseq + FEATURE_HEIGHT_SEC*(level-1), style:"stroke-width:" +  lw + "px; stroke:black; fill:" + "white"});
-			drawSVGobj(svgAnnotation, "rect", {x: x1-SEC_WIDTH, y: SEC_HEIGHT, width: x2-x1, height:SEC_HEIGHT*nseq + FEATURE_HEIGHT_SEC*(level-1), style:"stroke-width:" +  lw + "px; stroke:black; fill:" + col});
+				drawSVGobj(svgAnnotation, "rect", {x: x1-SEC_WIDTH, y: SEC_HEIGHT, width: x2-x1, height:SEC_HEIGHT*nseq + FEATURE_HEIGHT_SEC*(level-1), style:"stroke-width:" +  lw + "px; stroke:black; fill:" + col});
       }
 
 
@@ -884,14 +884,18 @@ function renderSecondary(svg){
     }
 
 
-	// Site numbering
+		// Site numbering
     for (var site = 0; site < nsites; site++){
-      if (site == 0 || (site+1) % 50 == 0){
-        var y = SEC_HEIGHT*0.5;
+       
         var x = SEC_WIDTH*(site) + ALN_LABEL_WIDTH;
+
+      if (site == 0 || (site+1) % 50 == 0){
+      	var y = SEC_HEIGHT*0.5;
         drawSVGobj(svgContent, "text", {x: x + 2, y: y, style: "text-anchor:start; dominant-baseline:central; font-family:Source sans pro; font-size:" + NT_FONT_SIZE + "px"}, value=site+1)
-			drawSVGobj(svgContent, "line", {x1:x, x2:x, y1:SEC_HEIGHT*0.25, y2:SEC_HEIGHT, style:"stroke:black;stroke-width:1px"})
+				drawSVGobj(svgContent, "line", {x1:x, x2:x, y1:SEC_HEIGHT*0.25, y2:SEC_HEIGHT, style:"stroke:black;stroke-width:1px"})
    
+	  	}else if((site+1) % 25 == 0){
+	  		//drawSVGobj(svgContent, "line", {x1:x, x2:x, y1:SEC_HEIGHT, y2:SEC_HEIGHT*0.5, style:"stroke:black;stroke-width:1px"})
 	  	}
     }
 
@@ -1087,14 +1091,32 @@ function renderSecondary(svg){
           var symbol2 = seq[site];
       		if (symbol2 == "I" || symbol2 == "G") symbol2 = "H"; // Helix
       		if (symbol2 == "S" || symbol2 == "B"  || symbol2 == "T") symbol2 = "N"; // Loop etc
-          if (symbol != symbol2){
 
+
+
+
+      		// Ignore all gaps / loops of length 1 within an sse for asthetic purposes
+
+      		if (site < nsites-1 && (symbol2 == "-" || symbol2 == "N")){
+      				let symbolNext = seq[site+1];
+      				if (symbolNext == "I" || symbolNext == "G") symbolNext = "H"; // Helix
+      				if (symbolNext == "S" || symbolNext == "B"  || symbolNext == "T") symbolNext = "N"; // Loop etc
+      				if (symbol == symbolNext){
+      					symbol2 = symbolNext;
+      				}
+      				
+      		}
+
+          if (symbol != symbol2){
               var sse = {seqNum: seqNum, start: start, stop: site-1, element: symbol};
               symbol = symbol2;
               start = site;
               SSEs.push(sse);
-
           }
+
+
+
+
       }
 
 

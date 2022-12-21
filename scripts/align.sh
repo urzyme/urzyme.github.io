@@ -24,7 +24,7 @@ done
 cd ../
 
 # Structural alignment
-~/DeepAlign/3DCOMB -i structures.txt -o align
+~/DeepAlign/3DCOMB -r -i structures.txt -o align
 
 
 # Hinge alignment
@@ -35,53 +35,66 @@ Rscript ../../../../scripts/prepareHinges.R ../../info.json 1
 
 
 # Pairwise alignment each structure with the ref hinge to get the hinge position in every sequence
-for r in region*;
-do
-	echo $r
-	cd $r
-	echo "structure,startPos" > startPos.csv
-	for f in ../../dssp/*.pdb;
+if [ -d "region1" ] 
+then
+
+	for r in region*;
 	do
-		#echo $f
-		~/DeepAlign/DeepAlign hinge_str.pdb $f -o alignment &> out.err
-		
-		# Extract start position
-		line=$(sed '5!d' alignment.local)
-		startPos=${line:16:5}
-		echo "$f,$startPos" >> startPos.csv
-		
-		rm alignment*
-		rm out.err
-		
+		echo $r
+		cd $r
+		touch structuresAll.txt
+		for f in ../../dssp/*.pdb;
+		do
+			#echo $f
+			~/DeepAlign/DeepAlign hinge_str.pdb $f -o $f &> out.err
+
+			mv $f.pdb .
+			mv $f.local .
+			mv $f.fasta .
+			mv $f.score .
+			
+			# Extract start position
+			#line=$(sed '5!d' alignment.local)
+			#startPos=${line:13:5}
+			echo "$f" >> structuresAll.txt
+			
+			#rm alignment*
+			#rm out.err
+			
+		done
+		cd ../
+
 	done
-	cd ../
-
-done
 
 
 
-
-# Truncate all pdb files to fit in the hinges
-Rscript ../../../../scripts/prepareHinges.R ../../info.json 2
+	#exit
 
 
-# Multiple alignment
-for r in region*;
-do
-	echo $r
-	cd $r
-	~/DeepAlign/3DCOMB -i structures.txt -r -o align
-	
-	cd ../
-done
+	# Truncate all pdb files to fit in the hinges
+	Rscript ../../../../scripts/prepareHinges.R ../../info.json 2
 
 
-# Glue the alignments back together
-Rscript ../../../../scripts/prepareHinges.R ../../info.json 3
+	# Multiple alignment
+	for r in region*;
+	do
+		echo $r
+		cd $r
+		~/DeepAlign/3DCOMB -r -i structures.txt -o align
+		
+		cd ../
+	done
+
+
+	# Glue the alignments back together
+	Rscript ../../../../scripts/prepareHinges.R ../../info.json 3
+
+fi
+
+#exit
 
 cd ../
 rm -rf hinges
-mv align.hinge.ali align.ali
 
 
 # DSSP
@@ -100,7 +113,14 @@ mv align.ali unrefined.fasta
 mv refined.fasta align.ali
 Rscript ../../../scripts/dssp2fasta.R
 
-exit
+
+# Realign some regions?
+Rscript ../../../scripts/realignRegions.R align.ali secondary.fasta ../info.json
+mv align.ali refined.fasta
+mv realigned.fasta align.ali
+Rscript ../../../scripts/dssp2fasta.R
+
+#exit
 
 
 
@@ -137,7 +157,7 @@ do
 
 	
 
-	~/DeepAlign/3DCOMB -i structures.txt -o align
+	~/DeepAlign/3DCOMB -r -i structures.txt -o align
 	Rscript ../../../../../scripts/dssp2pdbMulti.R
 
 

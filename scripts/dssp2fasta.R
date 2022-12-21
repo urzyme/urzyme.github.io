@@ -39,9 +39,10 @@ for (f in dssp.files){
 	for (i in 1:nsites){
 
 		# If gap, then skip
-		aln.char = fasta.seq[i]
+		aln.char = toupper(fasta.seq[i])
 		if (aln.char == "-"){
 			sse = "-"
+
 		}else{
 
 			line = dssp[dssp.pos]
@@ -53,6 +54,18 @@ for (f in dssp.files){
 			if (res == "!"){
 				line = dssp[dssp.pos]
 				dssp.pos = dssp.pos + 1
+			}
+
+			else if (i > 1){
+
+				# To correct for a weird mismatch between dssp and 3dcomb on missing residues
+				ssePrev = fasta.seq[i-1]
+				if (res == "X" && ssePrev == "-" && aln.char != "X"){
+					line = dssp[dssp.pos]
+					dssp.pos = dssp.pos + 1
+				}
+
+				
 			}
 
 			sse = substr(line, 17, 17)
