@@ -1029,11 +1029,21 @@ function renderSecondary(svg){
 											<th>Nucleotide</th>
 											<td><a target="_blank" href="https://www.ncbi.nlm.nih.gov/nuccore/` + metadata.genbank + `">` + metadata.genbank + `</a></td>
 										</tr>`);
-										
-					$("#metadataDlg table").append(`<tr>
-											<th>Gene</th>
-											<td><a target="_blank" href="https://www.ncbi.nlm.nih.gov/gene/` + metadata.gene + `">` + metadata.gene + `</a></td>
-										</tr>`);
+									
+
+					if (metadata.gene != null && metadata.gene != "" && metadata.gene != "NA"){
+						$("#metadataDlg table").append(`<tr>
+												<th>Gene</th>
+												<td><a target="_blank" href="https://www.ncbi.nlm.nih.gov/gene/` + metadata.gene + `">` + metadata.gene + `</a></td>
+											</tr>`);
+					}
+
+					if (metadata.protein != null && metadata.protein != "" && metadata.protein != "NA"){
+						$("#metadataDlg table").append(`<tr>
+												<th>Protein</th>
+												<td><a target="_blank" href="https://www.ncbi.nlm.nih.gov/protein/` + metadata.protein + `">` + metadata.protein + `</a></td>
+											</tr>`);
+					}
 										
 					$("#metadataDlg table").append(`<tr>
 											<th>Genetic code</th>
@@ -1752,7 +1762,7 @@ function loadFeatures(tsv, resolve = function() { }){
 
   }
 
-  DATA.features = features;
+  DATA.features = {}; // tmp: remove all annotations features;
 
 
   // Load alignment
