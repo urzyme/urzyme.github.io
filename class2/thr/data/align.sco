@@ -1,3 +1,3 @@
-CORE_LEN =  362 
-RMSD =   2.057 
-Ave_TMscore = 0.7797 
+CORE_LEN =  201 
+RMSD =   2.453 
+Ave_TMscore = 0.7902 
