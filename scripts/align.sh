@@ -24,7 +24,7 @@ done
 cd ../
 
 # Structural alignment
-~/DeepAlign/3DCOMB -r -i structures.txt -o align
+~/DeepAlign/3DCOMB -i structures.txt -o align
 
 
 # Hinge alignment
@@ -80,7 +80,7 @@ then
 	do
 		echo $r
 		cd $r
-		~/DeepAlign/3DCOMB -r -i structures.txt -o align
+		~/DeepAlign/3DCOMB -i structures.txt -o align
 		
 		cd ../
 	done
@@ -120,7 +120,7 @@ mv align.ali refined.fasta
 mv realigned.fasta align.ali
 Rscript ../../../scripts/dssp2fasta.R
 
-#exit
+exit
 
 
 

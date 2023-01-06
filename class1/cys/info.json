@@ -12,6 +12,6 @@
 		"ref_str": ["structures/CysRS_PDB_Bact_M_smegmatis_3C8Z.pdb"],
 		"hinge_str": "structures/CysRS_AF_Mito_Saccharomyces_cerevisiae_S288C_gene855474.pdb",
 		"hinges": [681],
-		"refine": [{"start": 850}]
+		"refine": [{"start": 834, "stop": 1146}]
 	
 }
