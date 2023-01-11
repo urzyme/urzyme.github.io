@@ -45,7 +45,6 @@ do
 				mkdir -p $dir/data
 				rm -f $dir/data/structures.txt
 				touch $dir/data/structures.txt
-				cp ../features.tsv $dir/data/
 
 				for f in $d1/data/domains/Catalytic_domain/structures/*.pdb;
 				do
@@ -60,7 +59,7 @@ do
 
 				# Alignment
 				cd $dir/data
-				~/DeepAlign/3DCOMB -i structures.txt -o align
+				~/DeepAlign/3DCOMB -r -i structures.txt -o align
 				
 
 
@@ -69,6 +68,13 @@ do
 
 
 				# Make a secondary structure fasta file from dssp and alignment
+				Rscript ../../../../scripts/dssp2fasta.R
+
+
+				# Refine the alignment
+				Rscript ../../../../scripts/refineMSA.R align.ali secondary.fasta
+				mv align.ali unrefined.fasta
+				mv refined.fasta align.ali
 				Rscript ../../../../scripts/dssp2fasta.R
 
 
@@ -98,5 +104,3 @@ do
 
 
 done
-
-

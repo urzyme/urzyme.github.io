@@ -1,96 +1,132 @@
->../../../../class2/asp1//data/domains/Catalytic_domain/structures/Aspartyl.B.Bacteroidota.NC_010729.1.pdb
- 0.622459 -0.314232  0.716801    -7.658801
--0.684181 -0.663212  0.303392     2.975679
- 0.380055 -0.679270 -0.627814    -0.737230
->../../../../class2/asp1//data/domains/Catalytic_domain/structures/Aspartyl.B.Chlamydiae.NC_002620.2.pdb
- 0.802351 -0.595039  0.046484    -2.502450
- 0.564810  0.731795 -0.381400     3.004124
- 0.192931  0.332271  0.923241     0.901864
->../../../../class2/asp1//data/domains/Catalytic_domain/structures/Aspartyl.B.Firmicutes.NC_015687.1.pdb
- 0.999456  0.023997  0.022611    -9.223513
- 0.001346  0.655505 -0.755189     3.569802
--0.032943  0.754809  0.655117    -3.202511
->../../../../class2/asp1//data/domains/Catalytic_domain/structures/Aspartyl.B.Fusobacteria.NC_013515.1.pdb
- 0.240094  0.563565 -0.790411    -9.042466
--0.032263 -0.809145 -0.586723     6.053805
--0.970213  0.166369 -0.176088    -0.534140
->../../../../class2/asp1//data/domains/Catalytic_domain/structures/Aspartyl.B.Spirochaetes.NC_014330.1.pdb
- 0.900639 -0.281766 -0.330843    -7.009770
- 0.292778  0.956026 -0.017193     4.498518
- 0.321139 -0.081379  0.943529    -2.350027
->../../../../class2/asp1//data/domains/Catalytic_domain/structures/Aspartyl.E.Evosea.NC_007087.3.pdb
- 0.718882 -0.596001 -0.357760    -3.306455
- 0.614794  0.785311 -0.072902     4.956732
- 0.324402 -0.167540  0.930964     1.353675
->../../../../class2/asp1//data/domains/Catalytic_domain/structures/Asp_Bact_1c0a_E_coli.pdb
- 0.522981 -0.439569 -0.730253   -25.651630
--0.363305  0.660070 -0.657508    -2.248657
- 0.771038  0.609169  0.185507   -69.492206
->../../../../class2/thr//data/domains/Catalytic_domain/structures/Thr_Bact_1evk_E_coli.pdb
- 0.198508  0.813392 -0.546798   -53.324922
--0.419328 -0.433776 -0.797498    56.502871
--0.885866  0.387597  0.254970     4.977102
->../../../../class2/thr//data/domains/Catalytic_domain/structures/Thr_Bact_1nyr_S_aureus.pdb
--0.205536  0.144102 -0.967982    41.689581
--0.446408  0.866399  0.223767   -45.672965
- 0.870905  0.478107 -0.113748   -29.500631
->../../../../class2/thr//data/domains/Catalytic_domain/structures/Threonyl.A.Candidatus_Thermoplasmatota.NC_020913.1.pdb
- 0.632854 -0.741432 -0.223103    -0.741265
- 0.758185  0.651852 -0.015612     3.414682
- 0.157006 -0.159274  0.974670     2.318844
->../../../../class2/thr//data/domains/Catalytic_domain/structures/Threonyl.A.Crenarchaeota.NC_020247.1.pdb
--0.525862 -0.031629 -0.849982    -7.966461
- 0.789584 -0.389730 -0.473992     6.466289
--0.316271 -0.920386  0.229917     1.641818
->../../../../class2/thr//data/domains/Catalytic_domain/structures/Threonyl.A.Euryarchaeota.NC_019974.1.pdb
- 1.000000  0.000000  0.000000     0.000000
- 0.000000  1.000000  0.000000     0.000000
+>../../../../class2/asp1//data/domains/Catalytic_domain/structures/AspRS_AF_Arch_Candidatus_Methanomassiliicoccus_intestinalis_Issoire-Mx1_gene16154434.pdb
+-0.845274 -0.460267 -0.271414    -3.325163
+-0.307752  0.004119  0.951458    -1.510618
+-0.436807  0.887771 -0.145130    -1.036035
+>../../../../class2/asp1//data/domains/Catalytic_domain/structures/AspRS_AF_Arch_unclassified_Euryarchaeota_proteinHHT76046.1.pdb
+-0.762386 -0.527307 -0.375120    -0.509649
+-0.234419 -0.315264  0.919596    -3.856821
+-0.603171  0.789023  0.116742     4.599090
+>../../../../class2/asp1//data/domains/Catalytic_domain/structures/AspRS_AF_Bact_Bacillus_anthracis_str_Ames_Ancestor_gene45024275.pdb
+-0.567118  0.465886 -0.679210    -6.071423
+ 0.820935  0.386475 -0.420361    -0.407304
+ 0.066657 -0.795982 -0.601639     4.505448
+>../../../../class2/asp1//data/domains/Catalytic_domain/structures/AspRS_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440011.pdb
+-0.825418 -0.317209 -0.466973    -0.297505
+-0.259788 -0.520965  0.813084    -3.280831
+-0.501194  0.792448  0.347607     2.983621
+>../../../../class2/asp1//data/domains/Catalytic_domain/structures/AspRS_AF_Bact_Chlamydia_muridarum_str_Nigg_gene1246197.pdb
+-0.929739  0.296123 -0.218854     0.721356
+-0.362840 -0.635548  0.681488    -3.499596
+ 0.062712  0.713014  0.698339     3.219606
+>../../../../class2/asp1//data/domains/Catalytic_domain/structures/AspRS_AF_Bact_Mycoplasma_hyopneumoniae_168-L_gene57101115.pdb
+-0.559110 -0.828830  0.020911    -0.162488
+-0.388069  0.283905  0.876813    -3.068629
+-0.732665  0.482120 -0.480377    -2.968591
+>../../../../class2/asp1//data/domains/Catalytic_domain/structures/AspRS_AF_Bact_Nocardia_cyriacigeorgica_GUH-2_gene45501717.pdb
+ 0.492296 -0.144574  0.858338     4.514355
+-0.764274  0.400137  0.505743    -5.668719
+-0.416570 -0.904980  0.086492     3.950414
+>../../../../class2/asp1//data/domains/Catalytic_domain/structures/AspRS_AF_Bact_Porphyromonas_gingivalis_ATCC_33277_gene29255515.pdb
+ 0.370986  0.928638 -0.000792     0.095442
+ 0.457728 -0.183602 -0.869929    -0.936742
+-0.807994  0.322369 -0.493177     3.629587
+>../../../../class2/asp1//data/domains/Catalytic_domain/structures/AspRS_AF_Bact_Prochlorococcus_marinus_subsp_marinus_str_CCMP1375_gene54201182.pdb
+-0.886158  0.334044 -0.321152    -5.849131
+-0.442367 -0.403487  0.800943    -2.283934
+ 0.137970  0.851829  0.505323     3.525664
+>../../../../class2/asp1//data/domains/Catalytic_domain/structures/AspRS_AF_Bact_Xylella_fastidiosa_Temecula1_gene58016479.pdb
+ 0.476432 -0.081842  0.875394    -0.490269
+-0.803164  0.364548  0.471203    -2.350719
+-0.357687 -0.927581  0.107950     6.201535
+>../../../../class2/asp1//data/domains/Catalytic_domain/structures/AspRS_AF_Mito_Oryza_sativa_Japonica_Group_gene4324505.pdb
+ 0.842839 -0.415355  0.342201     5.636553
+ 0.288445 -0.188164 -0.938826    -3.305961
+ 0.454336  0.889986 -0.038785     3.860572
+>../../../../class2/asp1//data/domains/Catalytic_domain/structures/AspRS_AF_Mito_Oryzias_melastigma_gene112147132.pdb
+-0.052569 -0.998507  0.014830    -1.134484
+-0.487727  0.038631  0.872141    -3.340259
+-0.871412  0.038615 -0.489029     5.615377
+>../../../../class2/asp1//data/domains/Catalytic_domain/structures/AspRS_PDB_Bact_E_coli_1c0a.pdb
+-0.200097 -0.746980  0.634021    43.065486
+ 0.514118  0.470813  0.716950   -46.945876
+-0.834053  0.469421  0.289827    36.706306
+>../../../../class2/thr//data/domains/Catalytic_domain/structures/ThrRS_AF_Arch_Candidatus_Methanomethylophilus_alvus_Mx1201_gene15140074.pdb
+ 1.000000  0.000000  0.000000    -0.000000
+ 0.000000  1.000000  0.000000    -0.000000
  0.000000  0.000000  1.000000     0.000000
->../../../../class2/thr//data/domains/Catalytic_domain/structures/Threonyl.A.Thaumarchaeota.NC_018655.1.pdb
- 0.479263 -0.874420 -0.075469    -7.572660
- 0.866292  0.485099 -0.119239     4.312945
- 0.140875 -0.008231  0.989993     1.577788
->../../../../class2/thr//data/domains/Catalytic_domain/structures/Threonyl.B.Actinobacteria.NC_013929.1.pdb
--0.553787  0.799053 -0.234168    -2.274115
- 0.381406 -0.006562 -0.924384     0.801603
--0.740168 -0.601225 -0.301130    -0.407839
->../../../../class2/thr//data/domains/Catalytic_domain/structures/Threonyl.B.Bacteroidota.NC_010729.1.pdb
- 0.228596  0.973521 -0.000152    -3.320506
--0.572385  0.134530  0.808874     2.908116
- 0.787476 -0.184819  0.587982    -1.587484
->../../../../class2/thr//data/domains/Catalytic_domain/structures/Threonyl.B.Chlamydiae.NC_017287.1.pdb
- 0.845705 -0.291695  0.446875    -4.644938
- 0.488327  0.760724 -0.427594     1.095919
--0.215221  0.579839  0.785791    -0.496237
->../../../../class2/thr//data/domains/Catalytic_domain/structures/Threonyl.B.Cyanobacteria.NC_005042.1.pdb
--0.487062  0.122022  0.864801    -1.080677
- 0.459759 -0.806062  0.372673     3.906452
- 0.742558  0.579116  0.336502    -0.949572
->../../../../class2/thr//data/domains/Catalytic_domain/structures/Threonyl.B.Firmicutes.NC_011567.1.pdb
- 0.888566 -0.451090 -0.083475     2.391785
- 0.449944  0.892441 -0.033148     1.168206
- 0.089449 -0.008105  0.995958     1.203277
->../../../../class2/thr//data/domains/Catalytic_domain/structures/Threonyl.B.Fusobacteria.NC_013515.1.pdb
- 0.862580 -0.497626 -0.091240    -1.770995
- 0.503636  0.861727  0.061469    -0.507824
- 0.048035 -0.098974  0.993930    -0.762589
->../../../../class2/thr//data/domains/Catalytic_domain/structures/Threonyl.B.Proteobacteria.NC_009379.1.pdb
- 0.982464  0.000077 -0.186450    -1.122526
- 0.130900  0.711827  0.690049     2.301137
- 0.132773 -0.702355  0.699334    -0.838072
->../../../../class2/thr//data/domains/Catalytic_domain/structures/Threonyl.B.Spirochaetes.NC_016842.1.pdb
- 0.450782 -0.627868 -0.634490    -2.194716
- 0.349069 -0.530209  0.772677     4.292083
--0.821551 -0.569790 -0.019839     2.083965
->../../../../class2/thr//data/domains/Catalytic_domain/structures/Threonyl.E.Ascomycota.NC_001143.9.pdb
- 0.139275 -0.913973 -0.381125   -11.273550
- 0.974884  0.194098 -0.109213    12.786624
- 0.173793 -0.356342  0.918050     9.157424
->../../../../class2/thr//data/domains/Catalytic_domain/structures/Threonyl.E.Basidiomycota.NC_026494.1.pdb
- 0.177910  0.526249 -0.831511     0.870361
--0.755705 -0.468153 -0.457976     1.862837
--0.630284  0.709856  0.314400    -1.242579
->../../../../class2/thr//data/domains/Catalytic_domain/structures/Threonyl.E.Rhodophyta.NC_010145.1.pdb
--0.423014  0.903554 -0.068191    -0.975263
- 0.361483  0.099268 -0.927079     1.475148
--0.830897 -0.416817 -0.368611    -0.654487
+>../../../../class2/thr//data/domains/Catalytic_domain/structures/ThrRS_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13725077.pdb
+-0.870548  0.339604 -0.356112    -8.147608
+-0.364484  0.041193  0.930298    -0.715450
+ 0.330603  0.939666  0.087920     3.966140
+>../../../../class2/thr//data/domains/Catalytic_domain/structures/ThrRS_AF_Arch_Pyrococcus_furiosus_DSM_3638_gene1469226.pdb
+-0.828709  0.075554 -0.554557    -6.507910
+-0.532937  0.196100  0.823118    -2.174927
+ 0.170939  0.977669 -0.122244     4.259856
+>../../../../class2/thr//data/domains/Catalytic_domain/structures/ThrRS_AF_Arch_Sulfolobus_islandicus_M164_gene7940156.pdb
+ 0.330285  0.924583 -0.189892    -0.965749
+ 0.201889 -0.265727 -0.942672     3.946838
+-0.922037  0.273013 -0.274428     5.563968
+>../../../../class2/thr//data/domains/Catalytic_domain/structures/ThrRS_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578309.pdb
+-0.360312 -0.413175 -0.836338    -0.590082
+-0.336202 -0.778786  0.529586    -3.855225
+-0.870140  0.471995  0.141695    -1.821539
+>../../../../class2/thr//data/domains/Catalytic_domain/structures/ThrRS_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56439092.pdb
+-0.199837  0.415807 -0.887226     1.138116
+ 0.514347 -0.726184 -0.456184    -1.361087
+-0.833974 -0.547504 -0.068751    -2.217555
+>../../../../class2/thr//data/domains/Catalytic_domain/structures/ThrRS_AF_Bact_Brucella_abortus_2308_gene3787745.pdb
+ 0.124070  0.035063  0.991654     0.870734
+-0.032903 -0.998681  0.039428    -2.008133
+ 0.991728 -0.037520 -0.122752    -2.292272
+>../../../../class2/thr//data/domains/Catalytic_domain/structures/ThrRS_AF_Bact_Lactobacillus_acidophilus_La-14_gene56943112.pdb
+-0.971029 -0.234061  0.048152     0.057544
+-0.210464  0.933112  0.291558    -4.632196
+-0.113173  0.272977 -0.955340    -5.760766
+>../../../../class2/thr//data/domains/Catalytic_domain/structures/ThrRS_AF_Bact_Mycoplasma_hyopneumoniae_168-L_gene57101460.pdb
+ 0.832235 -0.535897  0.142125     0.664506
+ 0.553935  0.814468 -0.172619    -1.058474
+-0.023251  0.222387  0.974681     1.456637
+>../../../../class2/thr//data/domains/Catalytic_domain/structures/ThrRS_AF_Bact_Porphyromonas_gingivalis_ATCC_33277_gene29256174.pdb
+ 0.020357 -0.229884 -0.973005    -0.100694
+ 0.848732 -0.510405  0.138346    -3.849729
+-0.528430 -0.828637  0.184720    -0.778490
+>../../../../class2/thr//data/domains/Catalytic_domain/structures/ThrRS_AF_Bact_Prochlorococcus_marinus_subsp_marinus_str_CCMP1375_gene54200406.pdb
+ 0.049322  0.995866 -0.076284    -1.938320
+-0.910819  0.076188  0.405715    -3.721827
+ 0.409849  0.049470  0.910811    -3.784065
+>../../../../class2/thr//data/domains/Catalytic_domain/structures/ThrRS_AF_Bact_Streptobacillus_moniliformis_DSM_12112_gene29674242.pdb
+-0.920606  0.030889 -0.389270     0.184636
+-0.307966  0.555475  0.772402    -2.503460
+ 0.240088  0.830959 -0.501861    -2.560473
+>../../../../class2/thr//data/domains/Catalytic_domain/structures/ThrRS_AF_Euk_Arabidopsis_thaliana_gene832741.pdb
+-0.372850 -0.797950 -0.473560    -0.444346
+-0.482920 -0.268920  0.833349    -5.796690
+-0.792320  0.539406 -0.285079    -1.243324
+>../../../../class2/thr//data/domains/Catalytic_domain/structures/ThrRS_AF_Euk_Cryptococcus_gattii_WM276_gene10188143.pdb
+-0.595207 -0.313955 -0.739703     1.294423
+-0.504238 -0.570812  0.648010    -5.006547
+-0.625678  0.758687  0.181444    -3.266577
+>../../../../class2/thr//data/domains/Catalytic_domain/structures/ThrRS_AF_Euk_Cyanidioschyzon_merolae_strain_10D_gene16997242.pdb
+-0.085135  0.480024  0.873115     0.507873
+-0.168720 -0.870587  0.462182    -4.057689
+ 0.981980 -0.107964  0.155107    -3.893947
+>../../../../class2/thr//data/domains/Catalytic_domain/structures/ThrRS_AF_Euk_Zymoseptoria_tritici_IPO323_gene13396560.pdb
+-0.631485 -0.770171 -0.089798     3.867847
+-0.388348  0.414385 -0.823086   -18.541130
+ 0.671128 -0.484894 -0.560772    -6.753309
+>../../../../class2/thr//data/domains/Catalytic_domain/structures/ThrRS_AF_Mito_Cyanidioschyzon_merolae_strain_10D_gene16995590.pdb
+-0.724278  0.589647 -0.357405    -0.193646
+-0.488431 -0.072885  0.869553    -2.295314
+ 0.486680  0.804366  0.340791    -2.487231
+>../../../../class2/thr//data/domains/Catalytic_domain/structures/ThrRS_AF_Mito_Oryza_sativa_Japonica_Group_gene4345200.pdb
+-0.481230 -0.528358 -0.699468     0.368698
+ 0.462850  0.524487 -0.714621    -5.389539
+ 0.744438 -0.667646 -0.007849    -3.125407
+>../../../../class2/thr//data/domains/Catalytic_domain/structures/ThrRS_PDB_Bact_E_coli_1evk.pdb
+ 0.727998 -0.011989  0.685475   -36.439913
+-0.682125  0.087575  0.725972     6.906113
+-0.068734 -0.996086  0.055577    62.431689
+>../../../../class2/thr//data/domains/Catalytic_domain/structures/ThrRS_PDB_Bact_S_aureus_1nyr.pdb
+ 0.011124 -0.993798  0.110642    42.775249
+ 0.957130  0.042611  0.286508   -32.086403
+-0.289446  0.102712  0.951668   -51.192010

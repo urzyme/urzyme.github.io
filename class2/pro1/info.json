@@ -1,5 +1,7 @@
 {
 		"name": "ProRS-A",
+		"id": "pro1",
+		"classID": "class2",
 		"fullName": "Prolyl tRNA Synthetase (Archaeal-like)",
 		"icon": "/fig/icon_pro.png",
 		"substrate": "Proline",
@@ -11,7 +13,13 @@
 		"editing": "Post-transfer",
 		"ref_str": ["structures/ProRS-A_PDB_Arch_M_janacshii_1nj8.pdb"],
 		"hinge_str": "structures/ProRS-A_AF_Euk_Scheffersomyces_stipitis_CBS_6054_gene4840393.pdb",
-		"hinges": [171]
+		"hinges": [171],
+		"features": {"Catalytic domain": {"acc": "ProRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697692.pdb", "range": "42-280", "level": 4},
+					"Motif 1": {"acc": "ProRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697692.pdb", "range": "64-73", "level": 1},
+					"Motif 2": {"acc": "ProRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697692.pdb", "range": "137-146", "level": 1},
+					"Motif 3": {"acc": "ProRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697692.pdb", "range": "260-269", "level": 1},
+					"Tweezer 1": {"acc": "ProRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697692.pdb", "range": "144", "level": 0},
+					"Tweezer 2": {"acc": "ProRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697692.pdb", "range": "267", "level": 0}}
 	
 }
 

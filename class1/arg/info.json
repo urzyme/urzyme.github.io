@@ -1,5 +1,7 @@
 {
 		"name": "ArgRS",
+		"id": "arg",
+		"classID": "class1",
 		"fullName": "Arginyl tRNA Synthetase",
 		"icon": "/fig/icon_basic.png",
 		"substrate": "Arginine",
@@ -12,5 +14,10 @@
 		"ref_str": ["structures/ArgRS_PDB_Arch_2ZUF.pdb"],
 		"hinge_str": "structures/ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb",
 		"hinges": [114],
-		"refine": [{"start": 198, "stop": 255}]
+		"refine": [{"start": 198, "stop": 255}],
+		"features": {"Catalytic domain": {"acc": "ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb", "range": "117-468", "level": 4},
+					"Crossover 1": {"acc": "ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb", "range": "121-166", "level": 2},
+					"Crossover 2": {"acc": "ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb", "range": "397-432", "level": 2},
+					"HIGH": {"acc": "ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb", "range": "136-139", "level": 1},
+					"KMSKS": {"acc": "ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb", "range": "441-446", "level": 1}}
 }

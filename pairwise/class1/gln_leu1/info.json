@@ -1,0 +1,37 @@
+{
+    "fullName":"GlnRS vs LeuRS-B pairwise comparison",
+    "class":"Class I",
+    "icon":"/fig/icon_white.png",
+    "family1":"GlnRS",
+    "family2":"LeuRS-B",
+    "fullName1":"Glutaminyl tRNA Synthetase",
+    "fullName2":"Leucyl tRNA Synthetase (Bacterial-like)",
+    "description":"Pairwise comparison of the Class I catalytic domains from the Glutaminyl tRNA Synthetase (<a href='/class1/gln'>GlnRS</a>) and Leucyl tRNA Synthetase (Bacterial-like) (<a href='/class1/leu1'>LeuRS-B</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.602,
+    "rmsd1":    1.62,
+    "rmsd2":    3.38,
+    "crossFamilyRmsd":    6.34,
+    "rmsdTotal":    4.49,
+    "features":{
+        "Crossover 1":{
+            "acc":"GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb",
+            "range":"2-39",
+            "level":            2
+        },
+        "Crossover 2":{
+            "acc":"GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb",
+            "range":"200-232",
+            "level":            2
+        },
+        "HIGH":{
+            "acc":"LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb",
+            "range":"60-63",
+            "level":            1
+        },
+        "KMSKS":{
+            "acc":"GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb",
+            "range":"241-245",
+            "level":            1
+        }
+    }
+}

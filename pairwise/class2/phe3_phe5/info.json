@@ -1,15 +1,42 @@
 {
-    "fullName":"e-&alpha;-PheRS vs m-PheRS pairwise comparison",
+    "fullName":"PheRS-A&alpha; vs PheRS-M pairwise comparison",
     "class":"Class II",
     "icon":"/fig/icon_white.png",
-    "family1":"e-&alpha;-PheRS",
-    "family2":"m-PheRS",
+    "family1":"PheRS-A&alpha;",
+    "family2":"PheRS-M",
     "fullName1":"&alpha; eukaryotic Phenylalanyl tRNA Synthetase subunit",
     "fullName2":"Mitochondrial Phenylalanyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class II catalytic domains from the &alpha; eukaryotic Phenylalanyl tRNA Synthetase subunit (e-&alpha;-PheRS) and Mitochondrial Phenylalanyl tRNA Synthetase (m-PheRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    1.625,
-    "rmsd1":    1.38,
-    "rmsd2":    0.694,
-    "crossFamilyRmsd":    2.04,
-    "rmsdTotal":    1.66
+    "description":"Pairwise comparison of the Class II catalytic domains from the &alpha; eukaryotic Phenylalanyl tRNA Synthetase subunit (<a href='/class2/phe3'>PheRS-A&alpha;</a>) and Mitochondrial Phenylalanyl tRNA Synthetase (<a href='/class2/phe5'>PheRS-M</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    1.539,
+    "rmsd1":    1.23,
+    "rmsd2":    4.02,
+    "crossFamilyRmsd":    1.99,
+    "rmsdTotal":    2.12,
+    "features":{
+        "Motif 1":{
+            "acc":"PheRS-A\u03b1_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724458.pdb",
+            "range":"18-27",
+            "level":            1
+        },
+        "Motif 2":{
+            "acc":"PheRS-A\u03b1_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724458.pdb",
+            "range":"116-125",
+            "level":            1
+        },
+        "Motif 3":{
+            "acc":"PheRS-A\u03b1_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724458.pdb",
+            "range":"219-228",
+            "level":            1
+        },
+        "Tweezer 1":{
+            "acc":"PheRS-A\u03b1_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724458.pdb",
+            "range":"123",
+            "level":            0
+        },
+        "Tweezer 2":{
+            "acc":"PheRS-A\u03b1_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724458.pdb",
+            "range":"226",
+            "level":            0
+        }
+    }
 }

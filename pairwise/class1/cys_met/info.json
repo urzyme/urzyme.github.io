@@ -6,10 +6,32 @@
     "family2":"MetRS",
     "fullName1":"Cysteinyl tRNA Synthetase",
     "fullName2":"Methionyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class I catalytic domains from the Cysteinyl tRNA Synthetase (CysRS) and Methionyl tRNA Synthetase (MetRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.038,
-    "rmsd1":    1.7,
-    "rmsd2":    2.29,
-    "crossFamilyRmsd":    2.84,
-    "rmsdTotal":    2.43
+    "description":"Pairwise comparison of the Class I catalytic domains from the Cysteinyl tRNA Synthetase (<a href='/class1/cys'>CysRS</a>) and Methionyl tRNA Synthetase (<a href='/class1/met'>MetRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.133,
+    "rmsd1":    2.45,
+    "rmsd2":    3.4,
+    "crossFamilyRmsd":    3.31,
+    "rmsdTotal":    3.14,
+    "features":{
+        "Crossover 1":{
+            "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
+            "range":"3-49",
+            "level":            2
+        },
+        "Crossover 2":{
+            "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
+            "range":"200-237",
+            "level":            2
+        },
+        "HIGH":{
+            "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
+            "range":"18-21",
+            "level":            1
+        },
+        "KMSKS":{
+            "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
+            "range":"246-250",
+            "level":            1
+        }
+    }
 }

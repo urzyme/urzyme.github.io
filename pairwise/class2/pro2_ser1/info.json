@@ -6,10 +6,37 @@
     "family2":"SerRS",
     "fullName1":"Prolyl tRNA Synthetase (Bacterial-like)",
     "fullName2":"Seryl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class II catalytic domains from the Prolyl tRNA Synthetase (Bacterial-like) (ProRS-B) and Seryl tRNA Synthetase (SerRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    1.929,
-    "rmsd1":    2.06,
-    "rmsd2":    1.54,
-    "crossFamilyRmsd":    2.57,
-    "rmsdTotal":    2.06
+    "description":"Pairwise comparison of the Class II catalytic domains from the Prolyl tRNA Synthetase (Bacterial-like) (<a href='/class2/pro2'>ProRS-B</a>) and Seryl tRNA Synthetase (<a href='/class2/ser1'>SerRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    1.659,
+    "rmsd1":    3.07,
+    "rmsd2":    1.43,
+    "crossFamilyRmsd":    2.63,
+    "rmsdTotal":    2.13,
+    "features":{
+        "Motif 1":{
+            "acc":"ProRS-B_AF_Bact_Acinetobacter_baylyi_ADP1_gene45233245.pdb",
+            "range":"22-31",
+            "level":            1
+        },
+        "Motif 2":{
+            "acc":"ProRS-B_AF_Bact_Acinetobacter_baylyi_ADP1_gene45233245.pdb",
+            "range":"90-99",
+            "level":            1
+        },
+        "Motif 3":{
+            "acc":"ProRS-B_AF_Bact_Acinetobacter_baylyi_ADP1_gene45233245.pdb",
+            "range":"403-412",
+            "level":            1
+        },
+        "Tweezer 1":{
+            "acc":"ProRS-B_AF_Bact_Acinetobacter_baylyi_ADP1_gene45233245.pdb",
+            "range":"97",
+            "level":            0
+        },
+        "Tweezer 2":{
+            "acc":"ProRS-B_AF_Bact_Acinetobacter_baylyi_ADP1_gene45233245.pdb",
+            "range":"410",
+            "level":            0
+        }
+    }
 }

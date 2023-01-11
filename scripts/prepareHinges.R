@@ -320,7 +320,7 @@ if (pass.nr == 1) {
 			s_dir = paste0(wd, "dssp/", s2)
 		
 			startPos = regions.df[regions.df$structure == s, paste0("hinge",i-1)]
-			stopPos = regions.df[regions.df$structure == s, paste0("hinge",i)] - 1
+			stopPos = regions.df[regions.df$structure == s, paste0("hinge",i)]
 			
 			if (stopPos < startPos){
 				cat(paste("Warning: skipping", s2, "for region", i, "because it has negative length\n"))

@@ -1,15 +1,42 @@
 {
-    "fullName":"HisRS vs m-PheRS pairwise comparison",
+    "fullName":"HisRS vs PheRS-M pairwise comparison",
     "class":"Class II",
     "icon":"/fig/icon_white.png",
     "family1":"HisRS",
-    "family2":"m-PheRS",
+    "family2":"PheRS-M",
     "fullName1":"Histidyl tRNA Synthetase",
     "fullName2":"Mitochondrial Phenylalanyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class II catalytic domains from the Histidyl tRNA Synthetase (HisRS) and Mitochondrial Phenylalanyl tRNA Synthetase (m-PheRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    1.908,
-    "rmsd1":    2.31,
-    "rmsd2":    0.761,
-    "crossFamilyRmsd":    3.11,
-    "rmsdTotal":    2.48
+    "description":"Pairwise comparison of the Class II catalytic domains from the Histidyl tRNA Synthetase (<a href='/class2/his'>HisRS</a>) and Mitochondrial Phenylalanyl tRNA Synthetase (<a href='/class2/phe5'>PheRS-M</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    1.877,
+    "rmsd1":    2.88,
+    "rmsd2":    5.33,
+    "crossFamilyRmsd":    4.1,
+    "rmsdTotal":    3.49,
+    "features":{
+        "Motif 1":{
+            "acc":"HisRS_AF_Arch_Candidatus_Methanomassiliicoccus_intestinalis_Issoire-Mx1_gene16154026.pdb",
+            "range":"23-32",
+            "level":            1
+        },
+        "Motif 2":{
+            "acc":"HisRS_AF_Arch_Candidatus_Methanomassiliicoccus_intestinalis_Issoire-Mx1_gene16154026.pdb",
+            "range":"89-98",
+            "level":            1
+        },
+        "Motif 3":{
+            "acc":"HisRS_AF_Arch_Candidatus_Methanomassiliicoccus_intestinalis_Issoire-Mx1_gene16154026.pdb",
+            "range":"290-299",
+            "level":            1
+        },
+        "Tweezer 1":{
+            "acc":"HisRS_AF_Arch_Candidatus_Methanomassiliicoccus_intestinalis_Issoire-Mx1_gene16154026.pdb",
+            "range":"96",
+            "level":            0
+        },
+        "Tweezer 2":{
+            "acc":"HisRS_AF_Arch_Candidatus_Methanomassiliicoccus_intestinalis_Issoire-Mx1_gene16154026.pdb",
+            "range":"297",
+            "level":            0
+        }
+    }
 }

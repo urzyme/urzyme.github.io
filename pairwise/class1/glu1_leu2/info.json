@@ -1,0 +1,37 @@
+{
+    "fullName":"GluRS vs LeuRS-A pairwise comparison",
+    "class":"Class I",
+    "icon":"/fig/icon_white.png",
+    "family1":"GluRS",
+    "family2":"LeuRS-A",
+    "fullName1":"Discriminating Glutamyl tRNA Synthetase",
+    "fullName2":"Leucyl tRNA Synthetase (Archaeal-like)",
+    "description":"Pairwise comparison of the Class I catalytic domains from the Discriminating Glutamyl tRNA Synthetase (<a href='/class1/glu1'>GluRS</a>) and Leucyl tRNA Synthetase (Archaeal-like) (<a href='/class1/leu2'>LeuRS-A</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.336,
+    "rmsd1":    1.92,
+    "rmsd2":    4.86,
+    "crossFamilyRmsd":    5.45,
+    "rmsdTotal":    3.92,
+    "features":{
+        "Crossover 1":{
+            "acc":"GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
+            "range":"1-38",
+            "level":            2
+        },
+        "Crossover 2":{
+            "acc":"GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
+            "range":"204-240",
+            "level":            2
+        },
+        "HIGH":{
+            "acc":"GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
+            "range":"13-16",
+            "level":            1
+        },
+        "KMSKS":{
+            "acc":"GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
+            "range":"249-253",
+            "level":            1
+        }
+    }
+}

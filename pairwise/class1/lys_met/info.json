@@ -1,15 +1,37 @@
 {
-    "fullName":"LysRS vs MetRS pairwise comparison",
+    "fullName":"LysRS-I vs MetRS pairwise comparison",
     "class":"Class I",
     "icon":"/fig/icon_white.png",
-    "family1":"LysRS",
+    "family1":"LysRS-I",
     "family2":"MetRS",
     "fullName1":"Class I Lysyl tRNA Synthetase",
     "fullName2":"Methionyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class I catalytic domains from the Class I Lysyl tRNA Synthetase (LysRS) and Methionyl tRNA Synthetase (MetRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.456,
-    "rmsd1":    2.49,
-    "rmsd2":    2.63,
-    "crossFamilyRmsd":    3.88,
-    "rmsdTotal":    3.03
+    "description":"Pairwise comparison of the Class I catalytic domains from the Class I Lysyl tRNA Synthetase (<a href='/class1/lys'>LysRS-I</a>) and Methionyl tRNA Synthetase (<a href='/class1/met'>MetRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.41,
+    "rmsd1":    2.3,
+    "rmsd2":    3.07,
+    "crossFamilyRmsd":    3.89,
+    "rmsdTotal":    3.36,
+    "features":{
+        "Crossover 1":{
+            "acc":"LysRS-I_AF_Arch_Candidatus_Bathyarchaeota_archaeon_proteinRJS75864.1.pdb",
+            "range":"2-45",
+            "level":            2
+        },
+        "Crossover 2":{
+            "acc":"LysRS-I_AF_Arch_Candidatus_Bathyarchaeota_archaeon_proteinRJS75864.1.pdb",
+            "range":"222-256",
+            "level":            2
+        },
+        "HIGH":{
+            "acc":"LysRS-I_AF_Arch_Candidatus_Bathyarchaeota_archaeon_proteinRJS75864.1.pdb",
+            "range":"15-18",
+            "level":            1
+        },
+        "KMSKS":{
+            "acc":"LysRS-I_AF_Arch_Candidatus_Bathyarchaeota_archaeon_proteinRJS75864.1.pdb",
+            "range":"266-270",
+            "level":            1
+        }
+    }
 }

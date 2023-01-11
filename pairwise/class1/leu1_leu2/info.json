@@ -1,0 +1,37 @@
+{
+    "fullName":"LeuRS-B vs LeuRS-A pairwise comparison",
+    "class":"Class I",
+    "icon":"/fig/icon_white.png",
+    "family1":"LeuRS-B",
+    "family2":"LeuRS-A",
+    "fullName1":"Leucyl tRNA Synthetase (Bacterial-like)",
+    "fullName2":"Leucyl tRNA Synthetase (Archaeal-like)",
+    "description":"Pairwise comparison of the Class I catalytic domains from the Leucyl tRNA Synthetase (Bacterial-like) (<a href='/class1/leu1'>LeuRS-B</a>) and Leucyl tRNA Synthetase (Archaeal-like) (<a href='/class1/leu2'>LeuRS-A</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.533,
+    "rmsd1":    3.3,
+    "rmsd2":    3.63,
+    "crossFamilyRmsd":    3.71,
+    "rmsdTotal":    3.55,
+    "features":{
+        "Crossover 1":{
+            "acc":"LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb",
+            "range":"44-86",
+            "level":            2
+        },
+        "Crossover 2":{
+            "acc":"LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb",
+            "range":"654-694",
+            "level":            2
+        },
+        "HIGH":{
+            "acc":"LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb",
+            "range":"60-63",
+            "level":            1
+        },
+        "KMSKS":{
+            "acc":"LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb",
+            "range":"743-747",
+            "level":            1
+        }
+    }
+}

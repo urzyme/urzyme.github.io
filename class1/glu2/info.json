@@ -1,5 +1,7 @@
 {
 		"name": "GlxRS",
+		"id": "glu2",
+		"classID": "class1",
 		"fullName": "Non-discriminating Glutamyl tRNA Synthetase",
 		"icon": "/fig/icon_polaracidic.png",
 		"substrate": "Glutamate",
@@ -12,6 +14,11 @@
 		"ref_str": ["structures/GlxRS_PDB_Arch_M_thermau_3AII.pdb"],
 		"hinge_str": "structures/GlxRS_AF_Euk_Castor_canadensis_gene109691970.pdb",
 		"hinges": [],
-		"refine": [{"start": 544, "stop": 629}]
+		"refine": [{"start": 544, "stop": 629}],
+		"features": {"Catalytic domain": {"acc": "GlxRS_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb", "range": "204-459", "level": 4},
+					"Crossover 1": {"acc": "GlxRS_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb", "range": "208-246", "level": 2},
+					"Crossover 2": {"acc": "GlxRS_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb", "range": "402-433", "level": 2},
+					"HIGH": {"acc": "GlxRS_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb", "range": "220-223", "level": 1},
+					"KMSKS": {"acc": "GlxRS_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb", "range": "442-446", "level": 1}}
 	
 }

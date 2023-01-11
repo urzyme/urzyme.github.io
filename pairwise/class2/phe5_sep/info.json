@@ -1,15 +1,42 @@
 {
-    "fullName":"m-PheRS vs SepRS pairwise comparison",
+    "fullName":"PheRS-M vs SepRS pairwise comparison",
     "class":"Class II",
     "icon":"/fig/icon_white.png",
-    "family1":"m-PheRS",
+    "family1":"PheRS-M",
     "family2":"SepRS",
     "fullName1":"Mitochondrial Phenylalanyl tRNA Synthetase",
     "fullName2":"O-phosphoseryl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class II catalytic domains from the Mitochondrial Phenylalanyl tRNA Synthetase (m-PheRS) and O-phosphoseryl tRNA Synthetase (SepRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    1.997,
-    "rmsd1":    1.71,
-    "rmsd2":    1.38,
-    "crossFamilyRmsd":    2.58,
-    "rmsdTotal":    2.17
+    "description":"Pairwise comparison of the Class II catalytic domains from the Mitochondrial Phenylalanyl tRNA Synthetase (<a href='/class2/phe5'>PheRS-M</a>) and O-phosphoseryl tRNA Synthetase (<a href='//'>SepRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    1.774,
+    "rmsd1":    4.07,
+    "rmsd2":    1.45,
+    "crossFamilyRmsd":    2.36,
+    "rmsdTotal":    2.65,
+    "features":{
+        "Motif 1":{
+            "acc":"PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb",
+            "range":"23-32",
+            "level":            1
+        },
+        "Motif 2":{
+            "acc":"PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb",
+            "range":"84-93",
+            "level":            1
+        },
+        "Motif 3":{
+            "acc":"PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb",
+            "range":"199-208",
+            "level":            1
+        },
+        "Tweezer 1":{
+            "acc":"PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb",
+            "range":"91",
+            "level":            0
+        },
+        "Tweezer 2":{
+            "acc":"PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb",
+            "range":"206",
+            "level":            0
+        }
+    }
 }

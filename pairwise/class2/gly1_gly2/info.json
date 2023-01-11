@@ -1,15 +1,42 @@
 {
-    "fullName":"GlyRS vs t-GlyRS pairwise comparison",
+    "fullName":"GlyRS-A vs GlyRS-B&alpha; pairwise comparison",
     "class":"Class II",
     "icon":"/fig/icon_white.png",
-    "family1":"GlyRS",
-    "family2":"t-GlyRS",
-    "fullName1":"Dimeric glycyl tRNA Synthetase",
-    "fullName2":"Tetrameric glycyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class II catalytic domains from the Dimeric glycyl tRNA Synthetase (GlyRS) and Tetrameric glycyl tRNA Synthetase (t-GlyRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    1.879,
-    "rmsd1":    1.78,
-    "rmsd2":    1.3,
-    "crossFamilyRmsd":    3.26,
-    "rmsdTotal":    2.25
+    "family1":"GlyRS-A",
+    "family2":"GlyRS-B&alpha;",
+    "fullName1":"Dimeric glycyl tRNA Synthetase (Archaeal-like)",
+    "fullName2":"Glycyl tRNA Synthetase (Bacterial-like)",
+    "description":"Pairwise comparison of the Class II catalytic domains from the Dimeric glycyl tRNA Synthetase (Archaeal-like) (<a href='/class2/gly1'>GlyRS-A</a>) and Glycyl tRNA Synthetase (Bacterial-like) (<a href='/class2/gly2'>GlyRS-B&alpha;</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.068,
+    "rmsd1":    2.75,
+    "rmsd2":    1.6,
+    "crossFamilyRmsd":    6.47,
+    "rmsdTotal":    4.23,
+    "features":{
+        "Motif 1":{
+            "acc":"GlyRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697160.pdb",
+            "range":"27-36",
+            "level":            1
+        },
+        "Motif 2":{
+            "acc":"GlyRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697160.pdb",
+            "range":"153-162",
+            "level":            1
+        },
+        "Motif 3":{
+            "acc":"GlyRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697160.pdb",
+            "range":"319-328",
+            "level":            1
+        },
+        "Tweezer 1":{
+            "acc":"GlyRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697160.pdb",
+            "range":"160",
+            "level":            0
+        },
+        "Tweezer 2":{
+            "acc":"GlyRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697160.pdb",
+            "range":"326",
+            "level":            0
+        }
+    }
 }

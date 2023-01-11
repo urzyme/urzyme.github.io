@@ -1,15 +1,42 @@
 {
-    "fullName":"b-&alpha;-PheRS vs a-SerRS pairwise comparison",
+    "fullName":"PheRS-B&alpha; vs SerRS-A pairwise comparison",
     "class":"Class II",
     "icon":"/fig/icon_white.png",
-    "family1":"b-&alpha;-PheRS",
-    "family2":"a-SerRS",
+    "family1":"PheRS-B&alpha;",
+    "family2":"SerRS-A",
     "fullName1":"&alpha; bacterial Phenylalanyl tRNA Synthetase subunit",
     "fullName2":"Archaeal Seryl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class II catalytic domains from the &alpha; bacterial Phenylalanyl tRNA Synthetase subunit (b-&alpha;-PheRS) and Archaeal Seryl tRNA Synthetase (a-SerRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.346,
-    "rmsd1":    1.63,
-    "rmsd2":    0.904,
-    "crossFamilyRmsd":    3.67,
-    "rmsdTotal":    2.2
+    "description":"Pairwise comparison of the Class II catalytic domains from the &alpha; bacterial Phenylalanyl tRNA Synthetase subunit (<a href='/class2/phe1'>PheRS-B&alpha;</a>) and Archaeal Seryl tRNA Synthetase (<a href='/class2/ser2'>SerRS-A</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.187,
+    "rmsd1":    1.66,
+    "rmsd2":    1.59,
+    "crossFamilyRmsd":    3.77,
+    "rmsdTotal":    2.71,
+    "features":{
+        "Motif 1":{
+            "acc":"PheRS-B\u03b1_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440383.pdb",
+            "range":"19-28",
+            "level":            1
+        },
+        "Motif 2":{
+            "acc":"PheRS-B\u03b1_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440383.pdb",
+            "range":"83-92",
+            "level":            1
+        },
+        "Motif 3":{
+            "acc":"PheRS-B\u03b1_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440383.pdb",
+            "range":"201-210",
+            "level":            1
+        },
+        "Tweezer 1":{
+            "acc":"PheRS-B\u03b1_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440383.pdb",
+            "range":"90",
+            "level":            0
+        },
+        "Tweezer 2":{
+            "acc":"PheRS-B\u03b1_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440383.pdb",
+            "range":"208",
+            "level":            0
+        }
+    }
 }

@@ -3,7 +3,7 @@
 
 
 # Prepare all family alignments (but not pairwise alignments)
-for c in class*;
+for c in class2;
 do
 
 	cd $c
@@ -21,5 +21,7 @@ do
 
 
 done
+
+
 
 

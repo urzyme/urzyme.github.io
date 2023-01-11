@@ -1,5 +1,7 @@
 {
 		"name": "AsxRS",
+		"id": "asp2",
+		"classID": "class2",
 		"fullName": "Non-discriminating Aspartyl tRNA Synthetase",
 		"icon": "/fig/icon_polaracidic.png",
 		"substrate": "Aspartate",
@@ -11,6 +13,12 @@
 		"editing": "No",
 		"ref_str": ["structures/AsxRS_PDB_Arch_T_kodarensis_1b8a.pdb"],
 		"hinge_str": "structures/AsxRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094477.pdb",
-		"hinges": [95]
+		"hinges": [95],
+		"features": {"Catalytic domain": {"acc": "AsxRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094477.pdb", "range": "106-406", "level": 4},
+					"Motif 1": {"acc": "AsxRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094477.pdb", "range": "144-153", "level": 1},
+					"Motif 2": {"acc": "AsxRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094477.pdb", "range": "196-205", "level": 1},
+					"Motif 3": {"acc": "AsxRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094477.pdb", "range": "392-401", "level": 1},
+					"Tweezer 1": {"acc": "AsxRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094477.pdb", "range": "203", "level": 0},
+					"Tweezer 2": {"acc": "AsxRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094477.pdb", "range": "399", "level": 0}}
 	
 }

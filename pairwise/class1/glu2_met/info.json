@@ -4,12 +4,34 @@
     "icon":"/fig/icon_white.png",
     "family1":"GlxRS",
     "family2":"MetRS",
-    "fullName1":"Glutamyl tRNA Synthetase (non-discriminating)",
+    "fullName1":"Non-discriminating Glutamyl tRNA Synthetase",
     "fullName2":"Methionyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class I catalytic domains from the Glutamyl tRNA Synthetase (non-discriminating) (GlxRS) and Methionyl tRNA Synthetase (MetRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.376,
-    "rmsd1":    1.56,
-    "rmsd2":    2.62,
-    "crossFamilyRmsd":    3.5,
-    "rmsdTotal":    2.92
+    "description":"Pairwise comparison of the Class I catalytic domains from the Non-discriminating Glutamyl tRNA Synthetase (<a href='/class1/glu2'>GlxRS</a>) and Methionyl tRNA Synthetase (<a href='/class1/met'>MetRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.414,
+    "rmsd1":    1.64,
+    "rmsd2":    3.07,
+    "crossFamilyRmsd":    5.68,
+    "rmsdTotal":    4.08,
+    "features":{
+        "Crossover 1":{
+            "acc":"GlxRS_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb",
+            "range":"4-42",
+            "level":            2
+        },
+        "Crossover 2":{
+            "acc":"GlxRS_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb",
+            "range":"198-229",
+            "level":            2
+        },
+        "HIGH":{
+            "acc":"GlxRS_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb",
+            "range":"16-19",
+            "level":            1
+        },
+        "KMSKS":{
+            "acc":"GlxRS_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb",
+            "range":"238-242",
+            "level":            1
+        }
+    }
 }

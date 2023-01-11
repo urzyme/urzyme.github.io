@@ -1,28 +1,60 @@
->../../../../class2/pyl//data/domains/Catalytic_domain/structures/Pyl_Arch_2Q7E_M_mazei.pdb
+>../../../../class2/pyl//data/domains/Catalytic_domain/structures/PylRS_AF_Arch_Candidatus_Methanomassiliicoccus_intestinalis_Issoire-Mx1_gene16153983.pdb
+ 0.003163  0.186759 -0.982401    -4.596086
+ 0.336772 -0.925218 -0.174804     3.206514
+-0.941581 -0.330292 -0.065822    -3.420545
+>../../../../class2/pyl//data/domains/Catalytic_domain/structures/PylRS_AF_Arch_Methanosalsum_zhilinae_DSM_4017_gene10822650.pdb
+ 0.843851 -0.473154 -0.253064     1.026093
+ 0.525450  0.633122  0.568382     5.091270
+-0.108712 -0.612602  0.782879    -2.368805
+>../../../../class2/pyl//data/domains/Catalytic_domain/structures/PylRS_AF_Arch_Unclassified_Candidatus_Bathyarchaeota_proteinUCH69683.1.pdb
+-0.489484  0.559985  0.668448    -4.223667
+ 0.684617 -0.227997  0.692327     1.671036
+ 0.540097  0.796514 -0.271774    -2.099564
+>../../../../class2/pyl//data/domains/Catalytic_domain/structures/PylRS_AF_Bact_Unclassified_Actinobacteria_proteinMBU2601214.1.pdb
+-0.515922  0.575428  0.634592    -4.497570
+ 0.673009 -0.186044  0.715853     1.898267
+ 0.529984  0.796411 -0.291284    -1.543746
+>../../../../class2/pyl//data/domains/Catalytic_domain/structures/PylRS_AF_Bact_Unclassified_Aerophobetes_proteinMCD6471581.1.pdb
+-0.333716  0.597110  0.729447    -4.980283
+ 0.694853 -0.367105  0.618395     2.000734
+ 0.637034  0.713227 -0.292395    -2.207613
+>../../../../class2/pyl//data/domains/Catalytic_domain/structures/PylRS_AF_Bact_unclassified_Desulfosarcina_proteinMBC2741817.pdb
+-0.335456  0.491681  0.803567     1.772109
+ 0.449948 -0.665786  0.595211     2.321827
+ 0.827657  0.561230  0.002111    -5.988087
+>../../../../class2/pyl//data/domains/Catalytic_domain/structures/PylRS_AF_Bact_unclassified_Lachnospiraceae_proteinHCE77498.1.pdb
  1.000000  0.000000  0.000000     0.000000
  0.000000  1.000000  0.000000     0.000000
- 0.000000  0.000000  1.000000     0.000000
->../../../../class2/pyl//data/domains/Catalytic_domain/structures/Pyl_Arch_2ZNJ_D_hafniense.pdb
- 0.018262  0.402833  0.915091    41.844706
--0.552993  0.766582 -0.326422    47.641623
--0.832986 -0.500078  0.236763    78.330663
->../../../../class2/pyl//data/domains/Catalytic_domain/structures/Pyl_Arch_6jp2_M_alvus.pdb
- 0.172916  0.984739  0.019725   -12.363489
--0.984628  0.173328 -0.021549    71.398544
--0.024639 -0.015696  0.999573    16.929656
->../../../../class2/pyl//data/domains/Catalytic_domain/structures/Pyrrolysyl.A.Euryarchaeota.NC_007955.1.pdb
--0.418997  0.809758  0.410772    12.531715
- 0.495083  0.582976 -0.644229    37.811137
--0.761140 -0.066564 -0.645163    24.532416
->../../../../class2/sep//data/domains/Catalytic_domain/structures/Sep_Arch_2DU4_A_fulgidus.pdb
--0.638869 -0.703701  0.310888    99.545304
--0.345984  0.623750  0.700879    14.490674
--0.687125  0.340208 -0.641964    14.713681
->../../../../class2/sep//data/domains/Catalytic_domain/structures/Sep_Arch_2DU6_A_fulgidus.pdb
--0.629683 -0.710056  0.315150    99.286404
--0.341632  0.617445  0.708554    15.023113
--0.697701  0.338499 -0.631373    15.474866
->../../../../class2/sep//data/domains/Catalytic_domain/structures/Sep_Arch_2ODR_M_maripadulis.pdb
--0.218415  0.259806 -0.940636    70.650244
--0.452365  0.827132  0.333494    44.125117
- 0.864674  0.498351 -0.063131   -35.293159
+ 0.000000  0.000000  1.000000    -0.000000
+>../../../../class2/pyl//data/domains/Catalytic_domain/structures/PylRS_PDB_Arch_M_mazei_2Q7E.pdb
+-0.966333  0.257290  0.001496     1.553577
+ 0.031317  0.123388 -0.991864    26.985580
+-0.255381 -0.958424 -0.127291    42.579808
+>../../../../class2/pyl//data/domains/Catalytic_domain/structures/PylRS_PDB_Bact_D_hafniense_2ZNJ.pdb
+-0.144227 -0.203047 -0.968489   -26.987597
+ 0.764633  0.598382 -0.239322   -43.489163
+ 0.628120 -0.775056  0.068953   -22.835070
+>../../../../class2/sep//data/domains/Catalytic_domain/structures/SepRS_AF_Arch_Methanothrix_thermoacetophila_PT_gene4462697.pdb
+ 0.982625  0.147397 -0.112794   -18.819415
+-0.056830  0.817466  0.573166     5.884078
+ 0.176688 -0.556797  0.811639     2.113529
+>../../../../class2/sep//data/domains/Catalytic_domain/structures/SepRS_AF_Arch_unclassified_Candidatus_Bathyarchaeota_proteinUCD26266.1.pdb
+-0.872941 -0.152837  0.463265   -21.861700
+ 0.114667  0.858758  0.499385    -0.816927
+-0.474157  0.489055 -0.732120    -3.123210
+>../../../../class2/sep//data/domains/Catalytic_domain/structures/SepRS_AF_Arch_unclassified_Lokiarchaeota_proteinTFF69421.1.pdb
+-0.571123 -0.734291  0.366927   -21.841029
+-0.562970  0.025070 -0.826097    -3.552039
+ 0.597396 -0.678372 -0.427702     0.860777
+>../../../../class2/sep//data/domains/Catalytic_domain/structures/SepRS_AF_Arch_unclassified_Thermoprotei_proteinRLF12424.1.pdb
+-0.331284  0.197837  0.922557   -21.713153
+ 0.914458 -0.173528  0.365588     4.121026
+ 0.232416  0.964753 -0.123427    -4.212386
+>../../../../class2/sep//data/domains/Catalytic_domain/structures/SepRS_PDB_Arch_2DU4_A_fulgidus.pdb
+ 0.526564  0.840878 -0.125118   -91.026284
+ 0.619904 -0.279066  0.733376    16.921074
+ 0.581764 -0.463731 -0.668210     1.570863
+>../../../../class2/sep//data/domains/Catalytic_domain/structures/SepRS_PDB_Arch_2ODR_M_maripadulis.pdb
+ 0.107431 -0.038737  0.993458   -56.295555
+-0.924030 -0.372662  0.085393    69.022373
+ 0.366916 -0.927158 -0.075830   -12.154717

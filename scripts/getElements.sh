@@ -22,7 +22,6 @@ do
 		cd $d1
 
 		cp ../../template.html index.html
-		cp ../../features.tsv .
 
 		cd data
 
@@ -46,7 +45,7 @@ do
 
 
 
-		~/DeepAlign/3DCOMB -i structures.txt -o align
+		~/DeepAlign/3DCOMB -r -i structures.txt -o align
 		
 		#Rscript ../../../../scripts/pdb2fasta.R structures.txt unaligned.fasta
 		#mafft unaligned.fasta > align.ali

@@ -1,9 +1,40 @@
 library(seqinr)
-
+library(rjson)
 
 # Make truncated domain files
-features.df = read.table("features.tsv", sep="\t", header=F, comment="#")
-colnames(features.df) = c("domain", "range", "level")
+#features.df = read.table("features.tsv", sep="\t", header=F, comment="#")
+#colnames(features.df) = c("domain", "range", "level")
+
+
+
+
+#Find the position in alignment from ungapped position within one sequence
+getAlignmentPosFromUngapped = function(accession, accPos, alignment){
+
+
+	names(alignment) = gsub(".+/", "", names(alignment))
+
+	nsites = length(alignment[[1]])
+	siteSeq = 0
+	for (siteAln in 1:nsites){
+
+
+		if (siteSeq == accPos){
+			return(siteAln)
+		}
+
+		symbol = alignment[[accession]][siteAln]
+		if (symbol != "-"){
+			siteSeq = siteSeq + 1
+		}
+
+	}
+
+	-1
+
+}
+
+
 
 
 # All structures
@@ -13,31 +44,46 @@ pdbFiles = readLines("structures.txt")
 fasta = read.fasta(file="align.ali")
 
 
+# Json: parse domains
+json = fromJSON(file = "../info.json")
+features = json$features
+features.df = data.frame(domain = character(0), lower = numeric(0), upper = numeric(0))
+for (d in names(features)){
+
+	if (features[[d]]$level <= 1){
+		next
+	}
+
+
+	refSeq = features[[d]]$acc
+	lower = as.numeric(strsplit(features[[d]]$range, "-")[[1]][1])
+	upper = as.numeric(strsplit(features[[d]]$range, "-")[[1]][2])
+
+
+	# Convert from ungapped pos to alignment pos
+	lower = getAlignmentPosFromUngapped(refSeq, lower, fasta)
+	upper = getAlignmentPosFromUngapped(refSeq, upper, fasta)
+
+
+	if (lower == -1 | upper == -1){
+		cat(paste("Unexpected: domain boundary is -1 for", d, "\n"))
+	}else{
+		features.df2 = data.frame(domain = d, lower = lower, upper = upper)
+		features.df = rbind(features.df, features.df2)
+	}
+
+
+}
+
 
 nsites = length(fasta[[1]])
 for (domain in features.df$domain){
 
-	if (domain == ""){
-		next
-	}
 
-	domainRange = features.df[features.df$domain == domain, "range"]
-	level = features.df[features.df$domain == domain, "level"]
-	if (level <= 1){
-		next
-	}
+	domainRange = features.df[features.df$domain == domain, "lower"]:features.df[features.df$domain == domain, "upper"]
 
 
 	cat(paste(domain, "\n"))
-
-
-	
-	
-	if (length(strsplit(domainRange, "-")[[1]]) == 1){
-		next
-	}
-	domainRange = as.numeric(strsplit(domainRange, "-")[[1]])
-	domainRange = domainRange[1]:domainRange[2]
 
 
 	if (!dir.exists("domains/")){

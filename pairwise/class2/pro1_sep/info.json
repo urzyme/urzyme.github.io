@@ -6,10 +6,37 @@
     "family2":"SepRS",
     "fullName1":"Prolyl tRNA Synthetase (Archaeal-like)",
     "fullName2":"O-phosphoseryl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class II catalytic domains from the Prolyl tRNA Synthetase (Archaeal-like) (ProRS-A) and O-phosphoseryl tRNA Synthetase (SepRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.332,
-    "rmsd1":    1.21,
-    "rmsd2":    1.51,
-    "crossFamilyRmsd":    3.57,
-    "rmsdTotal":    2.13
+    "description":"Pairwise comparison of the Class II catalytic domains from the Prolyl tRNA Synthetase (Archaeal-like) (<a href='/class2/pro1'>ProRS-A</a>) and O-phosphoseryl tRNA Synthetase (<a href='//'>SepRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    1.969,
+    "rmsd1":    1.24,
+    "rmsd2":    1.54,
+    "crossFamilyRmsd":    4.45,
+    "rmsdTotal":    2.64,
+    "features":{
+        "Motif 1":{
+            "acc":"ProRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697692.pdb",
+            "range":"22-31",
+            "level":            1
+        },
+        "Motif 2":{
+            "acc":"ProRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697692.pdb",
+            "range":"95-104",
+            "level":            1
+        },
+        "Motif 3":{
+            "acc":"ProRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697692.pdb",
+            "range":"218-227",
+            "level":            1
+        },
+        "Tweezer 1":{
+            "acc":"ProRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697692.pdb",
+            "range":"102",
+            "level":            0
+        },
+        "Tweezer 2":{
+            "acc":"ProRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697692.pdb",
+            "range":"225",
+            "level":            0
+        }
+    }
 }

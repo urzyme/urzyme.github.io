@@ -6,10 +6,32 @@
     "family2":"MetRS",
     "fullName1":"Glutaminyl tRNA Synthetase",
     "fullName2":"Methionyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class I catalytic domains from the Glutaminyl tRNA Synthetase (GlnRS) and Methionyl tRNA Synthetase (MetRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.501,
-    "rmsd1":    1.07,
-    "rmsd2":    2.13,
-    "crossFamilyRmsd":    3.6,
-    "rmsdTotal":    2.7
+    "description":"Pairwise comparison of the Class I catalytic domains from the Glutaminyl tRNA Synthetase (<a href='/class1/gln'>GlnRS</a>) and Methionyl tRNA Synthetase (<a href='/class1/met'>MetRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.29,
+    "rmsd1":    1.68,
+    "rmsd2":    3.49,
+    "crossFamilyRmsd":    7.25,
+    "rmsdTotal":    5.07,
+    "features":{
+        "Crossover 1":{
+            "acc":"GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb",
+            "range":"2-39",
+            "level":            2
+        },
+        "Crossover 2":{
+            "acc":"GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb",
+            "range":"200-232",
+            "level":            2
+        },
+        "HIGH":{
+            "acc":"MetRS_AF_Euk_Drosophila_melanogaster_gene37177.pdb",
+            "range":"20-23",
+            "level":            1
+        },
+        "KMSKS":{
+            "acc":"GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb",
+            "range":"241-245",
+            "level":            1
+        }
+    }
 }

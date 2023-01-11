@@ -1,15 +1,57 @@
 {
-    "fullName":"t-GlyRS vs e-&beta;-PheRS pairwise comparison",
+    "fullName":"GlyRS-B&alpha; vs PheRS-A&beta; pairwise comparison",
     "class":"Class II",
     "icon":"/fig/icon_white.png",
-    "family1":"t-GlyRS",
-    "family2":"e-&beta;-PheRS",
-    "fullName1":"Tetrameric glycyl tRNA Synthetase",
+    "family1":"GlyRS-B&alpha;",
+    "family2":"PheRS-A&beta;",
+    "fullName1":"Glycyl tRNA Synthetase (Bacterial-like)",
     "fullName2":"&beta; eukaryotic Phenylalanyl tRNA Synthetase subunit",
-    "description":"Pairwise comparison of the Class II catalytic domains from the Tetrameric glycyl tRNA Synthetase (t-GlyRS) and &beta; eukaryotic Phenylalanyl tRNA Synthetase subunit (e-&beta;-PheRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.157,
-    "rmsd1":    1.27,
-    "rmsd2":    1.37,
-    "crossFamilyRmsd":    3.01,
-    "rmsdTotal":    2.29
+    "description":"Pairwise comparison of the Class II catalytic domains from the Glycyl tRNA Synthetase (Bacterial-like) (<a href='/class2/gly2'>GlyRS-B&alpha;</a>) and &beta; eukaryotic Phenylalanyl tRNA Synthetase subunit (<a href='/class2/phe4'>PheRS-A&beta;</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    1.992,
+    "rmsd1":    3.12,
+    "rmsd2":    2.79,
+    "crossFamilyRmsd":    3.78,
+    "rmsdTotal":    3.4,
+    "features":{
+        "Motif 1*":{
+            "acc":"PheRS-A\u03b2_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724457.pdb",
+            "range":"22-31",
+            "level":            1
+        },
+        "Motif 2*":{
+            "acc":"PheRS-A\u03b2_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724457.pdb",
+            "range":"89-98",
+            "level":            1
+        },
+        "Motif 3*":{
+            "acc":"PheRS-A\u03b2_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724457.pdb",
+            "range":"163-172",
+            "level":            1
+        },
+        "Motif 1":{
+            "acc":"GlyRS-B\u03b1_AF_Euk_Ostreococcus_tauri_gene9837276.pdb",
+            "range":"17-26",
+            "level":            1
+        },
+        "Motif 2":{
+            "acc":"GlyRS-B\u03b1_AF_Euk_Ostreococcus_tauri_gene9837276.pdb",
+            "range":"51-60",
+            "level":            1
+        },
+        "Motif 3":{
+            "acc":"GlyRS-B\u03b1_AF_Euk_Ostreococcus_tauri_gene9837276.pdb",
+            "range":"156-165",
+            "level":            1
+        },
+        "Tweezer 1":{
+            "acc":"GlyRS-B\u03b1_AF_Euk_Ostreococcus_tauri_gene9837276.pdb",
+            "range":"58",
+            "level":            0
+        },
+        "Tweezer 2":{
+            "acc":"GlyRS-B\u03b1_AF_Euk_Ostreococcus_tauri_gene9837276.pdb",
+            "range":"163",
+            "level":            0
+        }
+    }
 }

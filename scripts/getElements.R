@@ -42,6 +42,51 @@ searchForStart = function(targetPos, ssSEQ, eleType){
 
 
 
+getUngappedPosition = function(seq, gappedPosition){
+
+	seq = seq[[1]]
+
+	ungappedPosition_ = 0
+	for (site in 1:length(seq)){
+
+		if (seq[site] != "-"){
+			ungappedPosition_ = ungappedPosition_ + 1
+		}
+
+		if (site == gappedPosition){
+			return (ungappedPosition_)
+		}
+
+	}
+
+	-1
+
+
+}
+
+getGappedPosition = function(seq, ungappedPosition){
+
+	seq = seq[[1]]
+	
+	ungappedPosition_ = 0
+	for (site in 1:length(seq)){
+
+		if (seq[site] != "-"){
+			ungappedPosition_ = ungappedPosition_ + 1
+		}
+
+		if (ungappedPosition_ == ungappedPosition){
+			return (site)
+		}
+
+	}
+
+	-1
+
+}
+
+
+
 # Truncate a pdb file according to start and stop positions in an alignment
 truncatePDBFile = function(pdbFile, seq, startPos, stopPos){
 
@@ -166,12 +211,13 @@ loops.df = data.frame(family = json$refDir, structure = json$ref, dir=paste0(jso
 elements = names(json$elements)
 for (ele in elements){
 	r = as.character(json$elements[ele])
-	loops.df[paste0(ele, ".start")] = as.numeric(strsplit(r, "-")[[1]][1])
-	loops.df[paste0(ele, ".end")] = as.numeric(strsplit(r, "-")[[1]][2])
+	loops.df[paste0(ele, ".start")] = as.numeric(strsplit(r, "-")[[1]][1]) - json$alnStartAt + 1
+	loops.df[paste0(ele, ".end")] = as.numeric(strsplit(r, "-")[[1]][2]) - json$alnStartAt + 1
 	loops.df[paste0(ele, ".seq")] = ""
 	#loops.df[paste0(ele, ".startSeq")] = ""
 	#loops.df[paste0(ele, ".endSeq")] = ""
 }
+
 
 
 
@@ -274,6 +320,7 @@ for (d in dirs){
 		seqPos = 1
 		refStartAln = NA
 		refEndAln = NA
+		afterStart = 0
 		for (site in 1:nsites){
 			symbol = refSeq[[1]][site]
 			if (symbol != "-"){
@@ -286,15 +333,58 @@ for (d in dirs){
 					refEndAln = site
 				}
 
+
+
 				seqPos = seqPos + 1
 			}
 		}
 
 		# Reference subsequence
+		refSubseqGaps = toupper(refSeq[[1]][refStartAln:refEndAln])
 		refSubseq = paste(toupper(gsub("-", "", refSeq[[1]][refStartAln:refEndAln])), collapse="")
 		refSubseqSS = paste(gsub("-", "", refSeqSS[refStartAln:refEndAln]), collapse="")
 		loops.df[loops.df$structure == json$ref,seqColName] = refSubseq
 		refLen = refEnd - refStart + 1
+
+
+
+		# Starting positions a few residues from the end - especially helpful for finding the start of SH1
+		startInit = refStartAln+1
+		endInit = refEndAln-1
+		if (nchar(refSubseq) > 15){
+
+			# Add 2 real positions to the start init
+			addStartInit = 1
+			if (eleType == "SH"){
+				addStartInit = 7
+			}
+			for (g in 2:length(refSubseqGaps)){
+				startInit = startInit + 1
+				if (refSubseqGaps[g] != "-"){
+					addStartInit = addStartInit - 1
+				}
+				if (addStartInit <= 0){
+					break
+				}
+			}
+
+
+
+			# Subtract 2 real positions from the end init
+			addEndInit = 1
+			for (g in (length(refSubseqGaps)-1):1){
+				endInit = endInit - 1
+				if (refSubseqGaps[g] != "-"){
+					addEndInit = addEndInit - 1
+				}
+				if (addEndInit <= 0){
+					break
+				}
+			}
+
+
+
+		} 
 
 
 		#loops.df[loops.df$structure == json$ref, seqColName] = refSeq[[1]][refStartAln:refEndAln]
@@ -315,10 +405,11 @@ for (d in dirs){
 			#targetPos = ceiling((refStartAln+refEndAln)/2) # nchar(gsub("-", "", paste0(targetSeq[[1]][1:ceiling((refStartAln+refEndAln)/2)], collapse="")))
 
 
+		
 
 			# Find some initial seeds to start the search to the ends of the structure
-			targetStart = searchForStart(refStartAln+1, targetSeqSS, eleTypeLeft)
-			targetEnd = searchForStart(refEndAln-1, targetSeqSS, eleTypeRight)
+			targetStart = searchForStart(startInit, targetSeqSS, eleTypeLeft)
+			targetEnd = searchForStart(endInit, targetSeqSS, eleTypeRight)
 
 			if (targetStart > 0){
 			
@@ -326,6 +417,8 @@ for (d in dirs){
 				while (targetStart > 1 & (targetSeqSS[targetStart-1] == eleTypeLeft | targetSeqSS[targetStart-1] == "-")){
 					targetStart = targetStart - 1
 				}
+
+
 				
 				# New definition for the end?
 				if (targetEnd < 0){
@@ -352,7 +445,19 @@ for (d in dirs){
 				}
 				
 			}
-		
+
+
+			# If it landed on an end gap, roll back to the element
+			if (targetStart > 0){
+				while (targetSeqSS[targetStart] == "-"){
+					targetStart = targetStart + 1
+				}
+			}
+			if (targetEnd > 0){
+				while (targetSeqSS[targetEnd] == "-"){
+					targetEnd = targetEnd - 1
+				}
+			}
 			
 			
 			# If the range is negative or 1, then the element does not exist. Just show where it would be, relative to refseq
@@ -400,6 +505,13 @@ for (d in dirs){
 				}
 					
 			
+			}
+
+
+
+			# Allow the start position to be 1 instead of 2 since first element is N
+			if (getUngappedPosition(targetSeq, targetStart) == 2){
+				targetStart = getGappedPosition(targetSeq, 1)
 			}
 
 
@@ -644,6 +756,10 @@ for (family in summary.df$family){
 }
 
 
+write.table(loops.df, "loops.tsv", sep="\t", quote=F, row.names=F)
+
+
+
 
 min.size = 7
 
@@ -699,7 +815,7 @@ axis(2, las=2)
 dev.off()
 
 
-
+#getPosInOriginalAlignment(target, alnFull, alnDomain, aln.end.pos, ele)
 # Get the aligned-position of a site in the full alignment, based on an aligment of a subsequence
 getPosInOriginalAlignment = function(acc, alnFull, alnSub, posSubseqAln, eleName=""){
 
@@ -734,19 +850,9 @@ getPosInOriginalAlignment = function(acc, alnFull, alnSub, posSubseqAln, eleName
 	a = pairwiseAlignment(fullSeq_nogap, subSeq_nogap, type="local")
 	posFullSeq = start(pattern(a))
 	if (!startOfPattern) {
-		posFullSeq = end(pattern(a))+1
+		posFullSeq = end(pattern(a))
 	}
-	
-	#posFullSeq = str_locate_all(fullSeq_nogap, subSeq_nogap)
-	#if (is.na(posFullSeq[[1]][1])){
-		#stop(paste("Warning: cannot find", toupper(subSeq_nogap), "in full alignment for", acc, eleName, "\n"))
-		#return(-1)
-	#}
-	#if (length(posFullSeq) > 1){
-		#cat(paste("Warning: found", length(posFullSeq), "matches in in full alignment of string", toupper(subSeq_nogap), "for", acc, eleName, "- using first match\n"))
-	#}
-	#posFullSeq = posFullSeq[[1]][1]
-	#print(paste(acc, "found match for", toupper(subSeq_nogap), "at", posFullSeq))
+
 
 	# Position in full alignment
 	nsites = length(fullSeq)
@@ -773,7 +879,7 @@ getPosInOriginalAlignment = function(acc, alnFull, alnSub, posSubseqAln, eleName
 
 
 # Write JSON files per family
-for (family in unique(loops.df$family)){
+for (family in rev(unique(loops.df$family))) {
 
 
 	print(family)
@@ -843,8 +949,7 @@ for (family in unique(loops.df$family)){
 			}
 			
 
-			JSON[[paste0("median_", startName)]] = floor(median(aln.start.pos.all))
-			JSON[[paste0("median_", endName)]] = ceiling(median(aln.end.pos.all))
+
 				
 			
 			
@@ -855,6 +960,9 @@ for (family in unique(loops.df$family)){
 			JSON[[paste0(target, "_", dlenName)]] = dlength
 			JSON[[paste0(target, "_", lenName)]] = target.len
 		}
+
+		JSON[[paste0("median_", startName)]] = floor(median(aln.start.pos.all))
+		JSON[[paste0("median_", endName)]] = ceiling(median(aln.end.pos.all))
 
 		JSON[[paste0(ele, ".aln.start")]] = aln.start.pos
 		JSON[[paste0(ele, ".aln.end")]] = aln.end.pos
@@ -896,7 +1004,7 @@ for (family in unique(loops.df$family)){
 
 
 
-
+stop("")
 
 # 1-2 reference structures per family, to keep the alignment tractable
 referenceStructures = character(0)
@@ -1020,7 +1128,6 @@ for (ele in elements){
 
 
 
-write.table(loops.df, "loops.tsv", sep="\t", quote=F, row.names=F)
 write.table(summary.df, "summary.tsv", sep="\t", quote=F, row.names=F)
 
 

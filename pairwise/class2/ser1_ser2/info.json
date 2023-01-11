@@ -1,15 +1,42 @@
 {
-    "fullName":"SerRS vs a-SerRS pairwise comparison",
+    "fullName":"SerRS vs SerRS-A pairwise comparison",
     "class":"Class II",
     "icon":"/fig/icon_white.png",
     "family1":"SerRS",
-    "family2":"a-SerRS",
+    "family2":"SerRS-A",
     "fullName1":"Seryl tRNA Synthetase",
     "fullName2":"Archaeal Seryl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class II catalytic domains from the Seryl tRNA Synthetase (SerRS) and Archaeal Seryl tRNA Synthetase (a-SerRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    1.502,
-    "rmsd1":    1.39,
-    "rmsd2":    0.55,
-    "crossFamilyRmsd":    2.46,
-    "rmsdTotal":    1.58
+    "description":"Pairwise comparison of the Class II catalytic domains from the Seryl tRNA Synthetase (<a href='/class2/ser1'>SerRS</a>) and Archaeal Seryl tRNA Synthetase (<a href='/class2/ser2'>SerRS-A</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    1.545,
+    "rmsd1":    1.45,
+    "rmsd2":    1.43,
+    "crossFamilyRmsd":    3.15,
+    "rmsdTotal":    2.06,
+    "features":{
+        "Motif 1":{
+            "acc":"SerRS_AF_Arch_Candidatus_Methanomassiliicoccus_intestinalis_Issoire-Mx1_gene16154337.pdb",
+            "range":"22-31",
+            "level":            1
+        },
+        "Motif 2":{
+            "acc":"SerRS_AF_Arch_Candidatus_Methanomassiliicoccus_intestinalis_Issoire-Mx1_gene16154337.pdb",
+            "range":"87-96",
+            "level":            1
+        },
+        "Motif 3":{
+            "acc":"SerRS_AF_Arch_Candidatus_Methanomassiliicoccus_intestinalis_Issoire-Mx1_gene16154337.pdb",
+            "range":"215-224",
+            "level":            1
+        },
+        "Tweezer 1":{
+            "acc":"SerRS_AF_Arch_Candidatus_Methanomassiliicoccus_intestinalis_Issoire-Mx1_gene16154337.pdb",
+            "range":"94",
+            "level":            0
+        },
+        "Tweezer 2":{
+            "acc":"SerRS_AF_Arch_Candidatus_Methanomassiliicoccus_intestinalis_Issoire-Mx1_gene16154337.pdb",
+            "range":"222",
+            "level":            0
+        }
+    }
 }

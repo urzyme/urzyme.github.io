@@ -1,32 +1,68 @@
->../../../../class2/phe2//data/domains/Catalytic_domain/structures/Phe_Bact_1EIY.B_T_thermophilus.pdb
- 0.999974 -0.000047 -0.007181     0.266207
- 0.000076  0.999992  0.004050     0.303877
- 0.007180 -0.004051  0.999966     0.138898
->../../../../class2/phe2//data/domains/Catalytic_domain/structures/Phe_Bact_1PYS.B_T_thermophilus.pdb
- 1.000000  0.000000  0.000000     0.000000
- 0.000000  1.000000  0.000000     0.000000
- 0.000000  0.000000  1.000000     0.000000
->../../../../class2/phe2//data/domains/Catalytic_domain/structures/Phe_Bact_3PCO.B_E_coli.pdb
- 0.236950 -0.513310  0.824844   -27.218887
--0.115805 -0.857892 -0.500610    78.250114
- 0.964595  0.023099 -0.262721    52.548096
->../../../../class2/phe2//data/domains/Catalytic_domain/structures/Phenylalanyl.B.Firmicutes.NC_014334.2.pdb
- 0.966014 -0.132736  0.221807     4.383120
--0.177074  0.285315  0.941934    64.936766
--0.188313 -0.949198  0.252114    25.995678
->../../../../class2/phe2//data/domains/Catalytic_domain/structures/Phenylalanyl.E.Bacillariophyta.NC_025310.1.pdb
--0.832425  0.253838 -0.492580     8.657387
- 0.545455  0.532088 -0.647582    62.541771
- 0.097715 -0.807743 -0.581380    21.837784
->../../../../class2/phe5//data/domains/Catalytic_domain/structures/Phe_Euk_3CMQ.H_sapiens.pdb
--0.544625  0.632504 -0.550747    13.821507
--0.194783  0.543333  0.816608    11.356368
- 0.815747  0.552021 -0.172712    11.613940
->../../../../class2/phe5//data/domains/Catalytic_domain/structures/Phe_Euk_3TEG.H_sapiens.pdb
--0.545129  0.633619 -0.548964    13.819340
--0.186018  0.547073  0.816155    11.120089
- 0.817455  0.547026 -0.180361    11.891296
->../../../../class2/phe5//data/domains/Catalytic_domain/structures/Phenylalanyl.E.Evosea.NC_007088.5.pdb
- 0.256848 -0.756967 -0.600858    23.208811
--0.177500  0.574192 -0.799248    34.999019
- 0.950012  0.311937  0.013118    23.197152
+>../../../../class2/phe2//data/domains/Catalytic_domain/structures/PheRS-Bβ_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb
+-0.689900  0.361513  0.627173    24.787945
+-0.204553 -0.928422  0.310146     7.826238
+ 0.694403  0.085680  0.714467     7.345674
+>../../../../class2/phe2//data/domains/Catalytic_domain/structures/PheRS-Bβ_AF_Bact_Chlamydia_psittaci_6BC_gene12242429.pdb
+-0.628299 -0.422254  0.653408    26.765925
+ 0.244801  0.689916  0.681241     3.305609
+-0.738453  0.587978 -0.330106     8.763607
+>../../../../class2/phe2//data/domains/Catalytic_domain/structures/PheRS-Bβ_AF_Bact_Ferrimonas_balearica_DSM_9799_gene67181907.pdb
+-0.372706 -0.039288  0.927117    26.317369
+-0.851928  0.410536 -0.325083     6.619018
+-0.367844 -0.910997 -0.186480    11.465043
+>../../../../class2/phe2//data/domains/Catalytic_domain/structures/PheRS-Bβ_AF_Bact_Lacticaseibacillus_paracasei_gene61269867.pdb
+-0.712177  0.249368  0.656216    28.692521
+ 0.071599 -0.904103  0.421273     6.958576
+ 0.698339  0.347005  0.626027     4.246848
+>../../../../class2/phe2//data/domains/Catalytic_domain/structures/PheRS-Bβ_AF_Bact_Mycobacterium_intracellulare_ATCC_13950_gene11909688.pdb
+-0.396804 -0.238083  0.886489    26.783547
+-0.368993  0.925679  0.083442     6.220158
+-0.840471 -0.293998 -0.455164    10.265147
+>../../../../class2/phe2//data/domains/Catalytic_domain/structures/PheRS-Bβ_AF_Bact_Mycoplasma_hyopneumoniae_168-L_gene57101148.pdb
+-0.826641 -0.074424  0.557786    31.048456
+ 0.511519 -0.512522  0.689688    13.989069
+ 0.234549  0.855443  0.461741     9.913881
+>../../../../class2/phe2//data/domains/Catalytic_domain/structures/PheRS-Bβ_AF_Bact_Porphyromonas_gingivalis_ATCC_33277_gene29257179.pdb
+ 0.427802  0.627761 -0.650308    22.693320
+ 0.815194 -0.578754 -0.022417     8.330130
+-0.390441 -0.520537 -0.759340    10.257404
+>../../../../class2/phe2//data/domains/Catalytic_domain/structures/PheRS-Bβ_AF_Bact_Prochlorococcus_marinus_subsp_marinus_str_CCMP1375_gene54200309.pdb
+-0.722337 -0.293297  0.626264    26.872670
+ 0.275948  0.708135  0.649921     4.400928
+-0.634099  0.642278 -0.430577    10.817400
+>../../../../class2/phe2//data/domains/Catalytic_domain/structures/PheRS-Bβ_PDB_Bact.B_E_coli_3PCO.pdb
+-0.113190 -0.308142 -0.944583    62.887308
+ 0.766400 -0.632101  0.114365    10.294112
+-0.632312 -0.710983  0.307708   -22.769297
+>../../../../class2/phe2//data/domains/Catalytic_domain/structures/PheRS-Bβ_PDB_Bact.B_T_thermophilus_1PYS.pdb
+-0.647137  0.750191  0.135748   -20.389473
+ 0.619242  0.413378  0.667576   -40.883209
+ 0.444694  0.516074 -0.732062   -13.055747
+>../../../../class2/phe5//data/domains/Catalytic_domain/structures/PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb
+ 0.449150 -0.871304  0.197723     1.857686
+ 0.599843  0.130060 -0.789476     5.316906
+ 0.662158  0.473196  0.581062     1.561629
+>../../../../class2/phe5//data/domains/Catalytic_domain/structures/PheRS-M_AF_Mito_Babesia_bovis_T2Bo_gene5478469.pdb
+-0.837056  0.382042 -0.391640    -3.461898
+ 0.397892  0.916399  0.043522     1.181665
+ 0.375526 -0.119400 -0.919089     2.539353
+>../../../../class2/phe5//data/domains/Catalytic_domain/structures/PheRS-M_AF_Mito_Candida_albicans_SC5314_gene3638806.pdb
+ 0.999966  0.004139 -0.007175     0.001778
+-0.004092  0.999970  0.006518     0.008708
+ 0.007202 -0.006489  0.999953     0.008998
+>../../../../class2/phe5//data/domains/Catalytic_domain/structures/PheRS-M_AF_Mito_Crassostrea_gigas_gene105329377.pdb
+-0.647057 -0.478477 -0.593614    -6.760632
+-0.597362 -0.165663  0.784674     1.798327
+-0.473789  0.862331 -0.178631    -7.467671
+>../../../../class2/phe5//data/domains/Catalytic_domain/structures/PheRS-M_AF_Mito_Drosophila_melanogaster_gene36547.pdb
+ 0.411999  0.511604  0.754001    -1.209573
+-0.871424  0.463007  0.162002    -0.230310
+-0.266227 -0.723799  0.636583     4.227458
+>../../../../class2/phe5//data/domains/Catalytic_domain/structures/PheRS-M_AF_Mito_Syngnathus_acus_gene119139175.pdb
+ 0.563860 -0.680871  0.467414    -3.262798
+-0.741878 -0.168908  0.648912     1.676673
+-0.362875 -0.712660 -0.600364    -2.970546
+>../../../../class2/phe5//data/domains/Catalytic_domain/structures/PheRS-M_PDB_Mito.H_sapiens_3CMQ.pdb
+ 0.329782  0.093591  0.939406   -19.492730
+ 0.171992  0.972465 -0.157263   -19.413943
+-0.928258  0.213433  0.304604   -10.645546

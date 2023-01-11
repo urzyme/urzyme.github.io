@@ -4,12 +4,34 @@
     "icon":"/fig/icon_white.png",
     "family1":"GluRS",
     "family2":"MetRS",
-    "fullName1":"Glutamyl tRNA Synthetase (discriminating)",
+    "fullName1":"Discriminating Glutamyl tRNA Synthetase",
     "fullName2":"Methionyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class I catalytic domains from the Glutamyl tRNA Synthetase (discriminating) (GluRS) and Methionyl tRNA Synthetase (MetRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.348,
-    "rmsd1":    1.85,
-    "rmsd2":    2.22,
-    "crossFamilyRmsd":    3.29,
-    "rmsdTotal":    2.68
+    "description":"Pairwise comparison of the Class I catalytic domains from the Discriminating Glutamyl tRNA Synthetase (<a href='/class1/glu1'>GluRS</a>) and Methionyl tRNA Synthetase (<a href='/class1/met'>MetRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.251,
+    "rmsd1":    2.12,
+    "rmsd2":    3,
+    "crossFamilyRmsd":    4.47,
+    "rmsdTotal":    3.59,
+    "features":{
+        "Crossover 1":{
+            "acc":"GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
+            "range":"1-38",
+            "level":            2
+        },
+        "Crossover 2":{
+            "acc":"GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
+            "range":"204-240",
+            "level":            2
+        },
+        "HIGH":{
+            "acc":"GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
+            "range":"13-16",
+            "level":            1
+        },
+        "KMSKS":{
+            "acc":"GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
+            "range":"249-253",
+            "level":            1
+        }
+    }
 }

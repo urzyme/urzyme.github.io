@@ -1,15 +1,42 @@
 {
-    "fullName":"AspRS vs LysRS pairwise comparison",
+    "fullName":"AspRS vs LysRS-II pairwise comparison",
     "class":"Class II",
     "icon":"/fig/icon_white.png",
     "family1":"AspRS",
-    "family2":"LysRS",
-    "fullName1":"Aspartyl tRNA Synthetase (discriminating)",
+    "family2":"LysRS-II",
+    "fullName1":"Discriminating Aspartyl tRNA Synthetase",
     "fullName2":"Class II Lysyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class II catalytic domains from the Aspartyl tRNA Synthetase (discriminating) (AspRS) and Class II Lysyl tRNA Synthetase (LysRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.111,
-    "rmsd1":    1.89,
-    "rmsd2":    1.56,
-    "crossFamilyRmsd":    3.22,
-    "rmsdTotal":    2.4
+    "description":"Pairwise comparison of the Class II catalytic domains from the Discriminating Aspartyl tRNA Synthetase (<a href='/class2/asp1'>AspRS</a>) and Class II Lysyl tRNA Synthetase (<a href='/class2/lys'>LysRS-II</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    1.835,
+    "rmsd1":    2.24,
+    "rmsd2":    1.95,
+    "crossFamilyRmsd":    3.08,
+    "rmsdTotal":    2.56,
+    "features":{
+        "Motif 1":{
+            "acc":"AspRS_AF_Arch_Candidatus_Methanomassiliicoccus_intestinalis_Issoire-Mx1_gene16154434.pdb",
+            "range":"41-50",
+            "level":            1
+        },
+        "Motif 2":{
+            "acc":"AspRS_AF_Arch_Candidatus_Methanomassiliicoccus_intestinalis_Issoire-Mx1_gene16154434.pdb",
+            "range":"95-104",
+            "level":            1
+        },
+        "Motif 3":{
+            "acc":"AspRS_AF_Arch_Candidatus_Methanomassiliicoccus_intestinalis_Issoire-Mx1_gene16154434.pdb",
+            "range":"416-425",
+            "level":            1
+        },
+        "Tweezer 1":{
+            "acc":"AspRS_AF_Arch_Candidatus_Methanomassiliicoccus_intestinalis_Issoire-Mx1_gene16154434.pdb",
+            "range":"102",
+            "level":            0
+        },
+        "Tweezer 2":{
+            "acc":"AspRS_AF_Arch_Candidatus_Methanomassiliicoccus_intestinalis_Issoire-Mx1_gene16154434.pdb",
+            "range":"423",
+            "level":            0
+        }
+    }
 }

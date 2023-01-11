@@ -1,5 +1,7 @@
 {
 		"name": "ValRS",
+		"id": "val",
+		"classID": "class1",
 		"fullName": "Valyl tRNA Synthetase",
 		"icon": "/fig/icon_hydrophobic.png",
 		"substrate": "Valine",
@@ -12,6 +14,11 @@
 		"ref_str": ["structures/ValRS_PDB_Bact_T_therm_1GAX.pdb"],
 		"hinge_str": "structures/ValRS_AF_Bact_Brucella_abortus_2308_gene3789053.pdb",
 		"hinges": [840],
-		"refine": [{"start": 1724 }]
+		"refine": [{"start": 1724 }],
+		"features": {"Catalytic domain": {"acc": "ValRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094666.pdb", "range": "36-550", "level": 4},
+					"Crossover 1": {"acc": "ValRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094666.pdb", "range": "40-85", "level": 2},
+					"Crossover 2": {"acc": "ValRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094666.pdb", "range": "488-529", "level": 2},
+					"HIGH": {"acc": "ValRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094666.pdb", "range": "55-58", "level": 1},
+					"KMSKS": {"acc": "ValRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094666.pdb", "range": "534-538", "level": 1}}
 	
 }

@@ -6,10 +6,32 @@
     "family2":"TyrRS",
     "fullName1":"Isoleucyl tRNA Synthetase",
     "fullName2":"Tyrosyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class I catalytic domains from the Isoleucyl tRNA Synthetase (IleRS) and Tyrosyl tRNA Synthetase (TyrRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.696,
-    "rmsd1":    3.03,
-    "rmsd2":    2.41,
-    "crossFamilyRmsd":    3.5,
-    "rmsdTotal":    3.1
+    "description":"Pairwise comparison of the Class I catalytic domains from the Isoleucyl tRNA Synthetase (<a href='/class1/ile'>IleRS</a>) and Tyrosyl tRNA Synthetase (<a href='/class1/tyr'>TyrRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.822,
+    "rmsd1":    3.48,
+    "rmsd2":    3.31,
+    "crossFamilyRmsd":    5.24,
+    "rmsdTotal":    4.34,
+    "features":{
+        "Crossover 1":{
+            "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
+            "range":"2-48",
+            "level":            2
+        },
+        "Crossover 2":{
+            "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
+            "range":"517-555",
+            "level":            2
+        },
+        "HIGH":{
+            "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
+            "range":"18-21",
+            "level":            1
+        },
+        "KMSKS":{
+            "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
+            "range":"565-569",
+            "level":            1
+        }
+    }
 }

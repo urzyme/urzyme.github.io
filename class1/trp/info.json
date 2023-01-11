@@ -1,5 +1,7 @@
 {
 		"name": "TrpRS",
+		"id": "trp",
+		"classID": "class1",
 		"fullName": "Tryptophanyl tRNA Synthetase",
 		"icon": "/fig/icon_hydrophobic.png",
 		"substrate": "Tryptophan",
@@ -11,6 +13,11 @@
 		"editing": "No",
 		"ref_str": ["structures/TrpRS_PDB_Arch_P_hori_3JXE.pdb"],
 		"hinge_str": "structures/TrpRS_AF_Arch_Natrialba_magadii_ATCC_43099_gene8824932.pdb",
-		"hinges": [134]
+		"hinges": [134],
+		"features": {"Catalytic domain": {"acc": "TrpRS_AF_Mito_Cyanidioschyzon_merolae_strain_10D_gene16992222.pdb", "range": "122-362", "level": 4},
+					"Crossover 1": {"acc": "TrpRS_AF_Mito_Cyanidioschyzon_merolae_strain_10D_gene16992222.pdb", "range": "127-163", "level": 2},
+					"Crossover 2": {"acc": "TrpRS_AF_Mito_Cyanidioschyzon_merolae_strain_10D_gene16992222.pdb", "range": "266-319", "level": 2},
+					"HIGH": {"acc": "TrpRS_AF_Mito_Cyanidioschyzon_merolae_strain_10D_gene16992222.pdb", "range": "139-142", "level": 1},
+					"KMSKS": {"acc": "TrpRS_AF_Mito_Cyanidioschyzon_merolae_strain_10D_gene16992222.pdb", "range": "330-334", "level": 1}}
 	
 }

@@ -1,48 +1,88 @@
->../../../../class2/gly2//data/domains/Catalytic_domain/structures/GlyT_Bact_1j5w_T_maritima.pdb
- 0.006560  0.654454 -0.756073   -80.584223
--0.227011 -0.735374 -0.638507    68.677135
--0.973870  0.175825  0.143744    26.170215
->../../../../class2/gly2//data/domains/Catalytic_domain/structures/GlyT_Bact_3ufg_C_jejuni.pdb
- 0.384807 -0.922706  0.023186   -31.967776
--0.070233 -0.004224  0.997522    13.798993
--0.920321 -0.385482 -0.066430    32.061519
->../../../../class2/gly2//data/domains/Catalytic_domain/structures/GlyT_Bact_5f5w_A_aeolicus.pdb
+>../../../../class2/gly2//data/domains/Catalytic_domain/structures/GlyRS-Bα_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440230.pdb
+-0.154192 -0.987428  0.034781   -50.182413
+-0.486495  0.045236 -0.872512    11.967378
+ 0.859969 -0.151455 -0.487354    -1.557241
+>../../../../class2/gly2//data/domains/Catalytic_domain/structures/GlyRS-Bα_AF_Bact_Chlamydia_pneumoniae_TW-183_gene45051002.pdb
+ 0.114540 -0.227529  0.967012   -50.379893
+-0.300106  0.920013  0.252017    32.122776
+-0.947004 -0.319072  0.037096   -10.006634
+>../../../../class2/gly2//data/domains/Catalytic_domain/structures/GlyRS-Bα_AF_Bact_Lacticaseibacillus_paracasei_gene61269714.pdb
+ 0.269584  0.950367 -0.155331   -48.612101
+-0.830302  0.147693 -0.537388    11.172225
+-0.487774  0.273843  0.828907    -2.173538
+>../../../../class2/gly2//data/domains/Catalytic_domain/structures/GlyRS-Bα_AF_Bact_Prochlorococcus_marinus_subsp_marinus_str_CCMP1375_gene54200602.pdb
+-0.506636  0.794605 -0.334549   -48.340621
+-0.634203 -0.606341 -0.479726    11.024861
+-0.584043 -0.030874  0.811135    -1.868306
+>../../../../class2/gly2//data/domains/Catalytic_domain/structures/GlyRS-Bα_AF_Bact_Salmonella_enterica_subsp_enterica_serovar_Typhimurium_str_LT2_gene1255180.pdb
+-0.461366 -0.258318 -0.848771   -47.407881
+-0.106232 -0.933708  0.341912    12.495328
+-0.880827  0.247914  0.403340    -2.311916
+>../../../../class2/gly2//data/domains/Catalytic_domain/structures/GlyRS-Bα_AF_Bact_Streptobacillus_moniliformis_DSM_12112_gene29673275.pdb
+-0.336561  0.935715 -0.105661   -48.512459
+-0.762427 -0.336634 -0.552615    11.498068
+-0.552659 -0.105430  0.826712    -1.903920
+>../../../../class2/gly2//data/domains/Catalytic_domain/structures/GlyRS-Bα_AF_Euk_Ostreococcus_tauri_gene9837276.pdb
+-0.160045 -0.862135  0.480738   -51.125949
+ 0.597089  0.303264  0.742641    30.405488
+-0.786047  0.405899  0.466236    -9.650446
+>../../../../class2/gly2//data/domains/Catalytic_domain/structures/GlyRS-Bα_AF_Euk_Vulpes_lagopus_gene121489478.pdb
+-0.377660 -0.442457  0.813391   -48.577329
+ 0.577479  0.574125  0.580430     8.751977
+-0.723803  0.688921  0.038686     0.711456
+>../../../../class2/gly2//data/domains/Catalytic_domain/structures/GlyRS-Bα_AF_Mito_Nymphaea_colorata_gene116265348.pdb
+-0.178951  0.073984  0.981072   -51.076253
+-0.367078  0.920143 -0.136346    32.822477
+-0.912815 -0.384529 -0.137502    -8.537886
+>../../../../class2/gly2//data/domains/Catalytic_domain/structures/GlyRS-Bα_PDB_Bact_A_aeolicus_5f5w.pdb
  1.000000  0.000000  0.000000     0.000000
  0.000000  1.000000  0.000000     0.000000
  0.000000  0.000000  1.000000     0.000000
->../../../../class2/pro2//data/domains/Catalytic_domain/structures/Pro_Bact_2J3M_E_faecalis.pdb
- 0.101583 -0.784121  0.612237   -61.915632
- 0.905009 -0.182705 -0.384158    -7.935611
- 0.413086  0.593104  0.691077   -24.461581
->../../../../class2/pro2//data/domains/Catalytic_domain/structures/Pro_Bact_5znj_S_aureus.pdb
- 0.015513 -0.980903 -0.193880   -38.703890
- 0.812029  0.125498 -0.569964    25.222503
- 0.583411 -0.148594  0.798468   -29.237768
->../../../../class2/pro2//data/domains/Catalytic_domain/structures/Prolyl.B.Actinobacteria.NC_012590.1.pdb
--0.063453 -0.973204 -0.221015   -41.648510
- 0.997620 -0.055871 -0.040396    16.188940
- 0.026966 -0.223052  0.974433   -13.851578
->../../../../class2/pro2//data/domains/Catalytic_domain/structures/Prolyl.B.Chlamydiae.NC_002620.2.pdb
--0.151232  0.498328 -0.853697   -41.870750
--0.957089  0.142161  0.252531    16.892751
- 0.247205  0.855254  0.455445   -14.521249
->../../../../class2/pro2//data/domains/Catalytic_domain/structures/Prolyl.B.Cyanobacteria.NC_005042.1.pdb
--0.186983 -0.863172  0.469010   -43.660950
- 0.427957 -0.501320 -0.752018    16.682449
- 0.884245  0.060101  0.463139   -11.619311
->../../../../class2/pro2//data/domains/Catalytic_domain/structures/Prolyl.B.Firmicutes.NC_015875.1.pdb
--0.932327 -0.294263 -0.210182   -41.266990
--0.016481  0.615200 -0.788199    15.885010
- 0.361241 -0.731395 -0.578418   -12.884248
->../../../../class2/pro2//data/domains/Catalytic_domain/structures/Prolyl.B.Fusobacteria.NC_013515.1.pdb
- 0.129603 -0.322848  0.937535   -43.272207
- 0.913497 -0.328861 -0.239526    14.184176
- 0.385650  0.887479  0.252299   -10.697016
->../../../../class2/pro2//data/domains/Catalytic_domain/structures/Prolyl.B.Proteobacteria.NC_006526.2.pdb
--0.519093  0.833900  0.187491   -38.135208
- 0.844676  0.534026 -0.036587     6.486901
--0.130635  0.139377 -0.981585    -9.502828
->../../../../class2/pro2//data/domains/Catalytic_domain/structures/Prolyl.B.Spirochaetes.NC_014330.1.pdb
--0.275530 -0.923754  0.266013   -42.726319
- 0.372029 -0.357629 -0.856560    15.091013
- 0.886385 -0.137043  0.442201   -11.197239
+>../../../../class2/gly2//data/domains/Catalytic_domain/structures/GlyRS-Bα_PDB_Bact_C_jejuni_3ufg.pdb
+ 0.387302 -0.921701  0.021568   -32.037239
+-0.072836 -0.007269  0.997317    13.925241
+-0.919071 -0.387834 -0.069948    32.103591
+>../../../../class2/gly2//data/domains/Catalytic_domain/structures/GlyRS-Bα_PDB_Bact_T_maritima_1j5w.pdb
+ 0.007081  0.654430 -0.756089   -80.586442
+-0.231279 -0.734535 -0.637940    68.801396
+-0.972862  0.179385  0.146155    25.914543
+>../../../../class2/pro2//data/domains/Catalytic_domain/structures/ProRS-B_AF_Bact_Acinetobacter_baylyi_ADP1_gene45233245.pdb
+-0.151713 -0.896137  0.417039   -43.701246
+ 0.559043 -0.425750 -0.711483    15.708255
+ 0.815140  0.125201  0.565571   -11.629170
+>../../../../class2/pro2//data/domains/Catalytic_domain/structures/ProRS-B_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56438966.pdb
+-0.906477 -0.389710 -0.162559   -42.851479
+ 0.071339  0.238100 -0.968617    14.532000
+ 0.416185 -0.889626 -0.188031   -10.633468
+>../../../../class2/pro2//data/domains/Catalytic_domain/structures/ProRS-B_AF_Bact_Chlamydia_psittaci_6BC_gene12242703.pdb
+ 0.092845 -0.786469 -0.610611   -39.257034
+-0.502044 -0.566573  0.653411    18.031027
+-0.859844  0.245888 -0.447446   -10.771233
+>../../../../class2/pro2//data/domains/Catalytic_domain/structures/ProRS-B_AF_Bact_Clostridium_acetobutylicum_DSM_1731_gene44999665.pdb
+-0.238010 -0.919331  0.313340   -42.768226
+ 0.398169 -0.386611 -0.831861    15.216417
+ 0.885897 -0.073229  0.458066   -10.742879
+>../../../../class2/pro2//data/domains/Catalytic_domain/structures/ProRS-B_AF_Bact_Corynebacterium_ulcerans_809_gene75260584.pdb
+-0.138718  0.107993 -0.984426   -42.000238
+-0.650401 -0.759545  0.008327    16.765268
+-0.746817  0.641427  0.175601   -10.981528
+>../../../../class2/pro2//data/domains/Catalytic_domain/structures/ProRS-B_AF_Bact_Prochlorococcus_marinus_subsp_marinus_str_CCMP1375_gene54199876.pdb
+-0.186569 -0.865962  0.464006   -43.719214
+ 0.441775 -0.495803 -0.747673    16.718515
+ 0.877512  0.065494  0.475062   -11.658834
+>../../../../class2/pro2//data/domains/Catalytic_domain/structures/ProRS-B_AF_Bact_Streptobacillus_moniliformis_DSM_12112_gene29673723.pdb
+ 0.119770 -0.473126  0.872815   -42.768945
+ 0.826298 -0.439842 -0.351812    14.276233
+ 0.550352  0.763342  0.338263   -10.670988
+>../../../../class2/pro2//data/domains/Catalytic_domain/structures/ProRS-B_AF_Euk_Candida_albicans_SC5314_gene3640100.pdb
+ 0.078796 -0.717154  0.692445   -39.417024
+ 0.432486 -0.601242 -0.671911    14.168105
+ 0.898191  0.352417  0.262783   -10.870622
+>../../../../class2/pro2//data/domains/Catalytic_domain/structures/ProRS-B_PDB_Bact_S_aureus_5znj.pdb
+ 0.019342 -0.979438 -0.200815   -38.383881
+ 0.815648  0.131617 -0.563378    25.016386
+ 0.578225 -0.152897  0.801423   -29.282829
+>../../../../class2/pro2//data/domains/Catalytic_domain/structures/ProRS_PDB_Bact_E_faecalis_2J3M.pdb
+ 0.101447 -0.783729  0.612762   -61.924132
+ 0.906696 -0.180637 -0.381146    -8.050482
+ 0.409402  0.594255  0.692279   -24.339640

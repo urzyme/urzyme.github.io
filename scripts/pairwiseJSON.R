@@ -27,8 +27,12 @@ JSON$fullName1 = json1$fullName
 JSON$fullName2 = json2$fullName
 
 
+
+
 # Introduction
-JSON$description = paste0("Pairwise comparison of the ", JSON$class, " catalytic domains from the ", json1$fullName, " (", json1$name, ") and ", json2$fullName, " (", json2$name, ") families. 
+href1 = paste0("<a href='/", json1$classID, "/", json1$id, "'>", json1$name, "</a>")
+href2 = paste0("<a href='/", json2$classID, "/", json2$id, "'>", json2$name, "</a>")
+JSON$description = paste0("Pairwise comparison of the ", JSON$class, " catalytic domains from the ", json1$fullName, " (", href1, ") and ", json2$fullName, " (", href2, ") families. 
 	Monomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is
 	 larger than the total RMSD, which compares structures both within- and between-families. ")
 
@@ -156,6 +160,65 @@ JSON$crossFamilyRmsd = signif(mean(rmsd12), 3)
 
 total  = unlist(distance.mat)
 JSON$rmsdTotal = signif(mean(total[total >= 0]), 3)
+
+
+
+
+# Adjust range of features so that the they are relative to the catalytic domain
+adjustFeatures = function(json){
+
+	featuresAdj = list()
+	features = json$features
+	for (f in names(features)){
+
+		# Only consider sub-domain level features
+		level = features[[f]]$level
+		if (level >= 4){
+			next
+		}
+
+
+		# Adjust range according to catalytic domain
+		refSeq = features[[f]]$acc
+		r = as.numeric(strsplit(features[[f]]$range, "-")[[1]])
+		cd = features[["Catalytic domain"]]
+
+		if (cd$acc == refSeq){
+
+			cdStart = as.numeric(strsplit(cd$range, "-")[[1]][1])
+			cdStop = as.numeric(strsplit(cd$range, "-")[[1]][2])
+			cdLen = cdStop - cdStart + 1
+			r = r - cdStart
+
+			if (r[1] < 1 | r[1] > cdLen){
+				next
+			}
+
+
+			features[[f]]$range = paste(r, collapse="-")
+			featuresAdj[[f]] = features[[f]]
+
+		}
+
+
+	}
+
+
+	featuresAdj
+
+}
+
+
+# Features
+featuresAdj1 = adjustFeatures(json1)
+featuresAdj2 = adjustFeatures(json2)
+for (f in names(featuresAdj1)){
+	featuresAdj2[[f]] = featuresAdj1[[f]]
+}
+
+
+
+JSON$features = featuresAdj2
 
 
 exportJSON <- toJSON(JSON, indent=4)

@@ -1,36 +1,72 @@
->../../../../class2/phe3//data/domains/Catalytic_domain/structures/Phe_Euk_3L4G.C_H_sapiens.pdb
- 0.263501  0.661226  0.702387   -64.118596
--0.259306 -0.652770  0.711795   112.891384
- 0.929154 -0.369692 -0.000546     6.173539
->../../../../class2/phe3//data/domains/Catalytic_domain/structures/Phenylalanyl.A.Candidatus_Thermoplasmatota.NC_021592.1.pdb
- 1.000000  0.000000  0.000000     0.000000
- 0.000000  1.000000  0.000000     0.000000
- 0.000000  0.000000  1.000000     0.000000
->../../../../class2/phe3//data/domains/Catalytic_domain/structures/Phenylalanyl.A.Euryarchaeota.NC_013741.1.pdb
- 0.230579 -0.493250 -0.838771    -5.634303
- 0.746349 -0.463431  0.477698     4.032358
--0.624337 -0.736163  0.261279    -1.754251
->../../../../class2/phe3//data/domains/Catalytic_domain/structures/Phenylalanyl.E.Apicomplexa.NC_011903.2.pdb
--0.918279 -0.256837 -0.301327    -3.603076
--0.234278  0.965993 -0.109413    -0.603914
- 0.319181 -0.029878 -0.947223   -10.345690
->../../../../class2/phe3//data/domains/Catalytic_domain/structures/Phenylalanyl.E.Basidiomycota.NC_026480.1.pdb
--0.940344  0.271071 -0.205606     2.605594
- 0.241053  0.957293  0.159637     1.536333
- 0.240098  0.100552 -0.965527   -14.915986
->../../../../class2/pyl//data/domains/Catalytic_domain/structures/Pyl_Arch_2Q7E_M_mazei.pdb
- 0.894972  0.125043 -0.428239   -13.791932
--0.438003  0.063988 -0.896693    35.113321
--0.084722  0.990086  0.112037   -39.910814
->../../../../class2/pyl//data/domains/Catalytic_domain/structures/Pyl_Arch_2ZNJ_D_hafniense.pdb
- 0.312061  0.672007  0.671583    -4.655780
- 0.722500  0.291166 -0.627069   -50.472664
--0.616937  0.680903 -0.394664    10.457906
->../../../../class2/pyl//data/domains/Catalytic_domain/structures/Pyl_Arch_6jp2_M_alvus.pdb
- 0.017450  0.904748 -0.425589   -22.253948
--0.113581 -0.421105 -0.899872    30.097134
--0.993375  0.064042  0.095414    34.057071
->../../../../class2/pyl//data/domains/Catalytic_domain/structures/Pyrrolysyl.A.Euryarchaeota.NC_007955.1.pdb
- 0.040810  0.822194  0.567742    -8.330209
- 0.899555 -0.277555  0.337288    10.037126
- 0.434896  0.496951 -0.750936    -0.752265
+>../../../../class2/phe3//data/domains/Catalytic_domain/structures/PheRS-Aα_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724458.pdb
+ 0.463323 -0.449459  0.763753   -17.135170
+-0.484320 -0.850170 -0.206506     0.625143
+ 0.742136 -0.274222 -0.611585     6.340170
+>../../../../class2/phe3//data/domains/Catalytic_domain/structures/PheRS-Aα_AF_Arch_Haloterrigena_turkmenica_DSM_5511_gene8744248.pdb
+-0.389777  0.644303  0.657987    -5.833569
+ 0.548292 -0.411695  0.727930     3.055804
+ 0.739898  0.644500 -0.192797     3.248856
+>../../../../class2/phe3//data/domains/Catalytic_domain/structures/PheRS-Aα_AF_Arch_Thermoplasma_volcanium_GSS1_gene1441177.pdb
+ 0.412684 -0.637332 -0.650768    -4.553508
+ 0.897265  0.161399  0.410933     4.326783
+-0.156867 -0.753497  0.638463     3.941107
+>../../../../class2/phe3//data/domains/Catalytic_domain/structures/PheRS-Aα_AF_Arch_Thermosphaera_aggregans_DSM_11486_gene9165306.pdb
+ 0.061386 -0.256946  0.964474     0.950272
+-0.390246 -0.895556 -0.213747     2.954440
+ 0.918662 -0.363261 -0.155247     1.542626
+>../../../../class2/phe3//data/domains/Catalytic_domain/structures/PheRS-Aα_AF_Euk_Cyanidioschyzon_merolae_strain_10D_gene16993638.pdb
+-0.170924  0.113018 -0.978781    -8.304645
+ 0.269081 -0.950282 -0.156716     5.101067
+-0.947829 -0.290158  0.132015    -5.175650
+>../../../../class2/phe3//data/domains/Catalytic_domain/structures/PheRS-Aα_AF_Euk_Megalobrama_amblycephala_gene125266654.pdb
+ 0.999989  0.000491 -0.004664     0.040860
+-0.000471  0.999990  0.004345    -0.134917
+ 0.004666 -0.004343  0.999980     0.071561
+>../../../../class2/phe3//data/domains/Catalytic_domain/structures/PheRS-Aα_AF_Euk_Plasmodium_falciparum_3D7_gene813233.pdb
+-0.660333 -0.743543  0.105373    -3.505119
+-0.708612  0.570462 -0.415262    -3.714084
+ 0.248654 -0.348880 -0.903579    -5.010283
+>../../../../class2/phe3//data/domains/Catalytic_domain/structures/PheRS-Aα_AF_Euk_Schizosaccharomyces_pombe_gene2543647.pdb
+-0.874307  0.452312  0.176071    -8.333882
+ 0.448521  0.614242  0.649258     3.292974
+ 0.185517  0.646622 -0.739907    -4.326637
+>../../../../class2/phe3//data/domains/Catalytic_domain/structures/PheRS-Aα_PDB_Euk.B_H_sapiens_3L4G.C.pdb
+-0.103616  0.980719 -0.165692  -122.371630
+ 0.358386  0.192212  0.913572    -2.322001
+ 0.927806  0.035279 -0.371392   -48.852226
+>../../../../class2/pyl//data/domains/Catalytic_domain/structures/PylRS_AF_Arch_Candidatus_Methanomassiliicoccus_intestinalis_Issoire-Mx1_gene16153983.pdb
+-0.274549  0.157835  0.948531   -11.418664
+ 0.668698 -0.677517  0.306291    -0.939438
+ 0.690989  0.718372  0.080468     4.704565
+>../../../../class2/pyl//data/domains/Catalytic_domain/structures/PylRS_AF_Arch_Methanosalsum_zhilinae_DSM_4017_gene10822650.pdb
+-0.990445  0.080574  0.111918   -17.100526
+ 0.104492  0.968094  0.227760    -2.278003
+-0.089995  0.237278 -0.967264     3.217082
+>../../../../class2/pyl//data/domains/Catalytic_domain/structures/PylRS_AF_Arch_Unclassified_Candidatus_Bathyarchaeota_proteinUCH69683.1.pdb
+ 0.248976 -0.306489 -0.918736   -10.988365
+ 0.525445 -0.754120  0.393968    -2.897999
+-0.813584 -0.580833 -0.026715     4.205165
+>../../../../class2/pyl//data/domains/Catalytic_domain/structures/PylRS_AF_Bact_Unclassified_Actinobacteria_proteinMBU2601214.1.pdb
+ 0.270049 -0.330242 -0.904441   -10.717253
+ 0.530602 -0.732796  0.425996    -2.831968
+-0.803452 -0.594938 -0.022663     3.622884
+>../../../../class2/pyl//data/domains/Catalytic_domain/structures/PylRS_AF_Bact_Unclassified_Aerophobetes_proteinMCD6471581.1.pdb
+ 0.114565 -0.295579 -0.948424   -10.463293
+ 0.421766 -0.849921  0.315827    -2.317301
+-0.899438 -0.436196  0.027294     4.131700
+>../../../../class2/pyl//data/domains/Catalytic_domain/structures/PylRS_AF_Bact_unclassified_Desulfosarcina_proteinMBC2741817.pdb
+ 0.235770 -0.094772 -0.967177   -17.268683
+ 0.149191 -0.979906  0.132388    -3.224831
+-0.960289 -0.175507 -0.216893     7.715336
+>../../../../class2/pyl//data/domains/Catalytic_domain/structures/PylRS_AF_Bact_unclassified_Lachnospiraceae_proteinHCE77498.1.pdb
+-0.904806 -0.401258  0.142540   -13.773360
+-0.421886  0.799304 -0.427931    -6.916433
+ 0.057778 -0.447330 -0.892501     3.341204
+>../../../../class2/pyl//data/domains/Catalytic_domain/structures/PylRS_PDB_Arch_M_mazei_2Q7E.pdb
+ 0.822944 -0.419291  0.383351   -20.033064
+ 0.546691  0.400863 -0.735144    -4.437953
+ 0.154568  0.814557  0.559111   -46.660585
+>../../../../class2/pyl//data/domains/Catalytic_domain/structures/PylRS_PDB_Bact_D_hafniense_2ZNJ.pdb
+-0.091686 -0.168508  0.981427    25.060008
+ 0.408941  0.892262  0.191403   -20.605935
+-0.907943  0.418895 -0.012898    41.275601

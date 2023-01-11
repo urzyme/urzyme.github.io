@@ -1,5 +1,7 @@
 {
 		"name": "MetRS",
+		"id": "met",
+		"classID": "class1",
 		"fullName": "Methionyl tRNA Synthetase",
 		"icon": "/fig/icon_hydrophobic.png",
 		"substrate": "Methionine",
@@ -11,7 +13,12 @@
 		"editing": "Pre-transfer",
 		"ref_str": ["structures/MetRS_PDB_Bact_E_coli_1PFV.pdb"],
 		"hinge_str": "structures/MetRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827030.pdb",
-		"hinges": [114, 524],
-		"refine": [{"start": 381, "stop":779 }]
+		"hinges": [114],
+		"refine": [{"start": 800}],
+		"features": {"Catalytic domain": {"acc": "MetRS_AF_Euk_Drosophila_melanogaster_gene37177.pdb", "range": "250-605", "level": 4},
+					"Crossover 1": {"acc": "MetRS_AF_Euk_Drosophila_melanogaster_gene37177.pdb", "range": "255-302", "level": 2},
+					"Crossover 2": {"acc": "MetRS_AF_Euk_Drosophila_melanogaster_gene37177.pdb", "range": "538-576", "level": 2},
+					"HIGH": {"acc": "MetRS_AF_Euk_Drosophila_melanogaster_gene37177.pdb", "range": "270-273", "level": 1},
+					"KMSKS": {"acc": "MetRS_AF_Euk_Drosophila_melanogaster_gene37177.pdb", "range": "585-589", "level": 1}}
 	
 }

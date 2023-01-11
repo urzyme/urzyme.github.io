@@ -1,15 +1,37 @@
 {
-    "fullName":"IleRS vs LysRS pairwise comparison",
+    "fullName":"IleRS vs LysRS-I pairwise comparison",
     "class":"Class I",
     "icon":"/fig/icon_white.png",
     "family1":"IleRS",
-    "family2":"LysRS",
+    "family2":"LysRS-I",
     "fullName1":"Isoleucyl tRNA Synthetase",
     "fullName2":"Class I Lysyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class I catalytic domains from the Isoleucyl tRNA Synthetase (IleRS) and Class I Lysyl tRNA Synthetase (LysRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.809,
-    "rmsd1":    3.18,
-    "rmsd2":    2.19,
-    "crossFamilyRmsd":    5.08,
-    "rmsdTotal":    3.74
+    "description":"Pairwise comparison of the Class I catalytic domains from the Isoleucyl tRNA Synthetase (<a href='/class1/ile'>IleRS</a>) and Class I Lysyl tRNA Synthetase (<a href='/class1/lys'>LysRS-I</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.913,
+    "rmsd1":    3.37,
+    "rmsd2":    2.57,
+    "crossFamilyRmsd":    6.19,
+    "rmsdTotal":    4.53,
+    "features":{
+        "Crossover 1":{
+            "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
+            "range":"2-48",
+            "level":            2
+        },
+        "Crossover 2":{
+            "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
+            "range":"517-555",
+            "level":            2
+        },
+        "HIGH":{
+            "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
+            "range":"18-21",
+            "level":            1
+        },
+        "KMSKS":{
+            "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
+            "range":"565-569",
+            "level":            1
+        }
+    }
 }

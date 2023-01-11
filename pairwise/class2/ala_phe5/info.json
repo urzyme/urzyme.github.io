@@ -1,15 +1,42 @@
 {
-    "fullName":"AlaRS vs m-PheRS pairwise comparison",
+    "fullName":"AlaRS vs PheRS-M pairwise comparison",
     "class":"Class II",
     "icon":"/fig/icon_white.png",
     "family1":"AlaRS",
-    "family2":"m-PheRS",
+    "family2":"PheRS-M",
     "fullName1":"Alanyl tRNA Synthetase",
     "fullName2":"Mitochondrial Phenylalanyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class II catalytic domains from the Alanyl tRNA Synthetase (AlaRS) and Mitochondrial Phenylalanyl tRNA Synthetase (m-PheRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    1.961,
-    "rmsd1":    1.71,
-    "rmsd2":    1.16,
-    "crossFamilyRmsd":    3,
-    "rmsdTotal":    2.14
+    "description":"Pairwise comparison of the Class II catalytic domains from the Alanyl tRNA Synthetase (<a href='/class2/ala'>AlaRS</a>) and Mitochondrial Phenylalanyl tRNA Synthetase (<a href='/class2/phe5'>PheRS-M</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    1.752,
+    "rmsd1":    2.21,
+    "rmsd2":    3.98,
+    "crossFamilyRmsd":    3.92,
+    "rmsdTotal":    3.03,
+    "features":{
+        "Motif 1":{
+            "acc":"AlaRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094822.pdb",
+            "range":"16-25",
+            "level":            1
+        },
+        "Motif 2":{
+            "acc":"AlaRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094822.pdb",
+            "range":"61-70",
+            "level":            1
+        },
+        "Motif 3":{
+            "acc":"AlaRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094822.pdb",
+            "range":"176-185",
+            "level":            1
+        },
+        "Tweezer 1":{
+            "acc":"AlaRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094822.pdb",
+            "range":"68",
+            "level":            0
+        },
+        "Tweezer 2":{
+            "acc":"AlaRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094822.pdb",
+            "range":"183",
+            "level":            0
+        }
+    }
 }

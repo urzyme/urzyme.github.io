@@ -1,15 +1,57 @@
 {
-    "fullName":"e-&beta;-PheRS vs m-PheRS pairwise comparison",
+    "fullName":"PheRS-A&beta; vs PheRS-M pairwise comparison",
     "class":"Class II",
     "icon":"/fig/icon_white.png",
-    "family1":"e-&beta;-PheRS",
-    "family2":"m-PheRS",
+    "family1":"PheRS-A&beta;",
+    "family2":"PheRS-M",
     "fullName1":"&beta; eukaryotic Phenylalanyl tRNA Synthetase subunit",
     "fullName2":"Mitochondrial Phenylalanyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class II catalytic domains from the &beta; eukaryotic Phenylalanyl tRNA Synthetase subunit (e-&beta;-PheRS) and Mitochondrial Phenylalanyl tRNA Synthetase (m-PheRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.146,
-    "rmsd1":    1.19,
-    "rmsd2":    0.979,
-    "crossFamilyRmsd":    2.66,
-    "rmsdTotal":    2
+    "description":"Pairwise comparison of the Class II catalytic domains from the &beta; eukaryotic Phenylalanyl tRNA Synthetase subunit (<a href='/class2/phe4'>PheRS-A&beta;</a>) and Mitochondrial Phenylalanyl tRNA Synthetase (<a href='/class2/phe5'>PheRS-M</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.043,
+    "rmsd1":    2.11,
+    "rmsd2":    2.06,
+    "crossFamilyRmsd":    3.51,
+    "rmsdTotal":    2.84,
+    "features":{
+        "Motif 1":{
+            "acc":"PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb",
+            "range":"23-32",
+            "level":            1
+        },
+        "Motif 2":{
+            "acc":"PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb",
+            "range":"84-93",
+            "level":            1
+        },
+        "Motif 3":{
+            "acc":"PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb",
+            "range":"199-208",
+            "level":            1
+        },
+        "Tweezer 1":{
+            "acc":"PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb",
+            "range":"91",
+            "level":            0
+        },
+        "Tweezer 2":{
+            "acc":"PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb",
+            "range":"206",
+            "level":            0
+        },
+        "Motif 1*":{
+            "acc":"PheRS-A\u03b2_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724457.pdb",
+            "range":"22-31",
+            "level":            1
+        },
+        "Motif 2*":{
+            "acc":"PheRS-A\u03b2_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724457.pdb",
+            "range":"89-98",
+            "level":            1
+        },
+        "Motif 3*":{
+            "acc":"PheRS-A\u03b2_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724457.pdb",
+            "range":"163-172",
+            "level":            1
+        }
+    }
 }

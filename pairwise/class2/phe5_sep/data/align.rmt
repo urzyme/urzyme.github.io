@@ -1,24 +1,52 @@
->../../../../class2/phe5//data/domains/Catalytic_domain/structures/Phe_Euk_3CMQ.H_sapiens.pdb
- 1.000000  0.000000  0.000000     0.000000
- 0.000000  1.000000  0.000000     0.000000
- 0.000000  0.000000  1.000000     0.000000
->../../../../class2/phe5//data/domains/Catalytic_domain/structures/Phe_Euk_3TEG.H_sapiens.pdb
- 0.999971  0.004718 -0.005962    -0.007519
--0.004697  0.999983  0.003545    -0.092230
- 0.005978 -0.003516  0.999976    -0.033161
->../../../../class2/phe5//data/domains/Catalytic_domain/structures/Phenylalanyl.E.Evosea.NC_007088.5.pdb
- 0.698088  0.545916  0.463301    -0.092640
- 0.554296 -0.002445 -0.832316    25.171322
--0.453242  0.837836 -0.304306    12.057580
->../../../../class2/sep//data/domains/Catalytic_domain/structures/Sep_Arch_2DU4_A_fulgidus.pdb
--0.498757  0.731985 -0.464154   -52.038204
--0.505443 -0.680664 -0.530305    85.283446
--0.704108 -0.029890  0.709463    53.518673
->../../../../class2/sep//data/domains/Catalytic_domain/structures/Sep_Arch_2DU6_A_fulgidus.pdb
--0.508658  0.726464 -0.462078   -50.977117
--0.502426 -0.686295 -0.525897    85.320388
--0.699167 -0.035342  0.714084    53.582904
->../../../../class2/sep//data/domains/Catalytic_domain/structures/Sep_Arch_2ODR_M_maripadulis.pdb
- 0.719307  0.597042  0.355159   -77.777291
- 0.520444 -0.124500 -0.844771    27.222763
--0.460146  0.792490 -0.400281    53.450099
+>../../../../class2/phe5//data/domains/Catalytic_domain/structures/PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb
+-0.961865  0.267086  0.058992   -11.989727
+ 0.256399  0.805311  0.534540     3.102847
+ 0.095262  0.529281 -0.843082    -3.834791
+>../../../../class2/phe5//data/domains/Catalytic_domain/structures/PheRS-M_AF_Mito_Babesia_bovis_T2Bo_gene5478469.pdb
+ 0.137358 -0.734993  0.664016    -6.589172
+ 0.651244 -0.438096 -0.619640     7.121896
+ 0.746334  0.517549  0.418484    -4.016572
+>../../../../class2/phe5//data/domains/Catalytic_domain/structures/PheRS-M_AF_Mito_Candida_albicans_SC5314_gene3638806.pdb
+-0.643830 -0.598836 -0.476317    -6.783530
+-0.472888 -0.177983  0.862959     3.677140
+-0.601548  0.780844 -0.168592    -6.748032
+>../../../../class2/phe5//data/domains/Catalytic_domain/structures/PheRS-M_AF_Mito_Crassostrea_gigas_gene105329377.pdb
+ 0.999999  0.000998  0.000801     0.049588
+-0.001002  0.999987  0.004951     0.058578
+-0.000796 -0.004952  0.999987     0.006488
+>../../../../class2/phe5//data/domains/Catalytic_domain/structures/PheRS-M_AF_Mito_Drosophila_melanogaster_gene36547.pdb
+ 0.377446 -0.259027 -0.889067    -7.997503
+-0.275332 -0.948055  0.159323     7.820691
+-0.884153  0.184653 -0.429158    -6.879733
+>../../../../class2/phe5//data/domains/Catalytic_domain/structures/PheRS-M_AF_Mito_Syngnathus_acus_gene119139175.pdb
+ 0.252133  0.877915 -0.407056    -4.291296
+-0.462799 -0.260026 -0.847469     2.267514
+-0.849851  0.402060  0.340737    -2.959485
+>../../../../class2/phe5//data/domains/Catalytic_domain/structures/PheRS-M_PDB_Mito.H_sapiens_3CMQ.pdb
+ 0.121289 -0.742171 -0.659144    22.428887
+-0.986722 -0.017882 -0.161433     6.807915
+ 0.108024  0.669972 -0.734485    -8.502661
+>../../../../class2/sep//data/domains/Catalytic_domain/structures/SepRS_AF_Arch_Methanothrix_thermoacetophila_PT_gene4462697.pdb
+ 0.961201  0.172083  0.215594   -16.742011
+-0.268796  0.408679  0.872198    16.173255
+ 0.061981 -0.896308  0.439078     1.430455
+>../../../../class2/sep//data/domains/Catalytic_domain/structures/SepRS_AF_Arch_unclassified_Candidatus_Bathyarchaeota_proteinUCD26266.1.pdb
+-0.921003  0.164645  0.353052   -22.353345
+ 0.157198  0.986307 -0.049881     9.423638
+-0.356430  0.009559 -0.934273     0.579863
+>../../../../class2/sep//data/domains/Catalytic_domain/structures/SepRS_AF_Arch_unclassified_Lokiarchaeota_proteinTFF69421.1.pdb
+-0.511503 -0.855912  0.076022   -21.961144
+-0.042170 -0.063361 -0.997099     8.458216
+ 0.858246 -0.513225 -0.003685     5.135801
+>../../../../class2/sep//data/domains/Catalytic_domain/structures/SepRS_AF_Arch_unclassified_Thermoprotei_proteinRLF12424.1.pdb
+-0.057955  0.457736  0.887197   -21.163511
+ 0.973507  0.222812 -0.051363    13.322486
+-0.221188  0.860716 -0.458523    -1.399166
+>../../../../class2/sep//data/domains/Catalytic_domain/structures/SepRS_PDB_Arch_2DU4_A_fulgidus.pdb
+ 0.775791  0.616990 -0.132181   -82.723262
+ 0.615792 -0.694607  0.371917    47.365373
+ 0.137655 -0.369926 -0.918807     4.657625
+>../../../../class2/sep//data/domains/Catalytic_domain/structures/SepRS_PDB_Arch_2ODR_M_maripadulis.pdb
+-0.001589 -0.351620  0.936141   -42.270147
+-0.657517 -0.704959 -0.265902    74.945256
+ 0.753438 -0.615951 -0.230076   -36.872387

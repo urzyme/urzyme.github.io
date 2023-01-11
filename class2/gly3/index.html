@@ -1,0 +1,165 @@
+﻿
+
+
+<html>
+<head>
+<title>aaRS</title>
+
+<link rel="icon" >
+<meta name="viewport" content="width=device-width, initial-scale=0.41, maximum-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/styles.css">
+
+<script language='JavaScript' type='text/JavaScript' src="/js/aaRS.js"></script>
+<script language='JavaScript' type='text/JavaScript' src="/js/util.js"></script>
+<script type='text/javascript' src='../../bower_components/bio-pv/bio-pv.min.js'></script>
+
+        
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+
+
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+
+
+
+<script language='JavaScript' type='text/JavaScript'>
+
+
+function init(){
+	
+	renderaaRS();
+}
+
+
+
+</script>
+
+</head>
+<body onload="init()">
+
+
+	<div id="main">
+
+		<ul id="flexContainer">
+		
+			<li class="summary">
+				
+			</li>
+
+
+			<li class="notes">
+				
+				<div>
+											The dimeric GlyRS is part of subclass IIa alongside <a href="../pro1">ProRS</a>, <a href="../ser1">SerRS</a>, <a href="../thr">ThrRS</a>, and <a href="../his">HisRS</a> (Gomez et al. 2020, Valencia-Sánchez et al. 2016, Perona et al. 2012). With the exception of SerRS, the anticodon binding domains of subclass IIa are homologous and reside at the C-terminal (Wolf et al. 1999). <br><br> 
+
+
+											The domain architecture of GlyRS is minimal, similar to HisRS. There is no editing domain and it appears that GlyRS may lack editing activity altogether (Gomez et al. 2020). Many species possess an insertion domain between motifs 2 and 3 of the catalytic domain. This domain exists in many archaea and eukaryotes, including <i>Saccharomyces cerevisiae</i>, but is lacking in humans. It's functional and structural roles remain unclear. <br><br>
+
+
+
+												GlyRS is present in most archaea, eukaryotes, and some bacteria and is phylogenetically distinct from the <a href="../gly2">tetrameric GlyRS</a>, which is present in most bacteria (Shiba 2005). Some species of yeast possess a second GlyRS gene, which does not contain the lysine rich inserts between motifs 1 and 2 (Chen et al. 2012).
+
+
+													<!-- 
+												TODO
+												Tetramer in yeast? https://www.sciencedirect.com/science/article/pii/S0014579307005856#bib1
+												Two translation start sites in humans
+												This gly3 specific insertion is missing from the pdb structure but part of the sequence
+
+												In most eukaryotes, the nuclear and mitochondrial glyRS are the same. There are some exceptions on this database
+												https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5985729/
+
+												-->
+			
+				</div>
+				
+			</li>
+			
+		</ul>
+
+
+		<div class="svgDiv">
+			<svg id="secondary" height=0 width=0 overflow="auto"></svg>
+		</div>
+		
+		
+		<div id="alignment" class="svgDiv">
+
+		</div>
+
+
+		<div id="alignment2" class="svgDiv">
+
+		</div>
+
+
+
+
+		<div id="tertiaryTable">
+			
+			<table>
+				<tr>
+					<td>
+						<div id="superposition"> </div>
+					</td>
+					
+					<td>
+						<div id="tertiary"> </div>
+					</td>
+				</tr>
+			
+			</table>
+			
+			
+		
+		</div>
+		
+
+
+		<div id="references">
+
+			<div>
+				Wolf, Yuri I., et al. "Evolution of aminoacyl-tRNA synthetases—analysis of unique domain architectures and phylogenetic trees reveals a complex history of horizontal gene transfer events." Genome research 9.8 (1999): 689-710.
+			</div>
+
+			<div>
+				Perona, John J., and Andrew Hadd. "Structural diversity and protein engineering of the aminoacyl-tRNA synthetases." Biochemistry 51.44 (2012): 8705-8729.
+			</div>
+
+				<div>
+				Gomez, Miguel Angel Rubio, and Michael Ibba. "Aminoacyl-tRNA synthetases." Rna 26.8 (2020): 910-936.
+			</div>
+
+
+				<div>
+					Valencia-Sánchez, Marco Igor, et al. "Structural Insights into the Polyphyletic Origins of Glycyl tRNA Synthetases." Journal of Biological Chemistry 291.28 (2016): 14430-14446.
+			</div>
+
+
+							<div>
+				Shiba, Kiyotaka. "The Aminoacyl-tRNA Synthetases" CRC Press (2005): Chapter 13: Glycyl-tRNA Synthetases.
+			</div>
+
+			<div>
+				Chen, Shun-Jia, et al. "Saccharomyces cerevisiae possesses a stress-inducible glycyl-tRNA synthetase gene." PloS one 7.3 (2012): e33363.
+			</div>
+
+
+		
+		</div>
+
+
+	</div>
+</body>
+</html>

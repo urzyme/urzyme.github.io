@@ -1,15 +1,37 @@
 {
-    "fullName":"GlnRS vs LysRS pairwise comparison",
+    "fullName":"GlnRS vs LysRS-I pairwise comparison",
     "class":"Class I",
     "icon":"/fig/icon_white.png",
     "family1":"GlnRS",
-    "family2":"LysRS",
+    "family2":"LysRS-I",
     "fullName1":"Glutaminyl tRNA Synthetase",
     "fullName2":"Class I Lysyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class I catalytic domains from the Glutaminyl tRNA Synthetase (GlnRS) and Class I Lysyl tRNA Synthetase (LysRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.18,
-    "rmsd1":    1.08,
-    "rmsd2":    2.07,
-    "crossFamilyRmsd":    3.39,
-    "rmsdTotal":    2.05
+    "description":"Pairwise comparison of the Class I catalytic domains from the Glutaminyl tRNA Synthetase (<a href='/class1/gln'>GlnRS</a>) and Class I Lysyl tRNA Synthetase (<a href='/class1/lys'>LysRS-I</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.232,
+    "rmsd1":    1.47,
+    "rmsd2":    2.96,
+    "crossFamilyRmsd":    5.15,
+    "rmsdTotal":    3.57,
+    "features":{
+        "Crossover 1":{
+            "acc":"GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb",
+            "range":"2-39",
+            "level":            2
+        },
+        "Crossover 2":{
+            "acc":"GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb",
+            "range":"200-232",
+            "level":            2
+        },
+        "HIGH":{
+            "acc":"LysRS-I_AF_Arch_Candidatus_Bathyarchaeota_archaeon_proteinRJS75864.1.pdb",
+            "range":"15-18",
+            "level":            1
+        },
+        "KMSKS":{
+            "acc":"GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb",
+            "range":"241-245",
+            "level":            1
+        }
+    }
 }

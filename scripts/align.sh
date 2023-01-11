@@ -91,7 +91,7 @@ then
 
 fi
 
-#exit
+
 
 cd ../
 rm -rf hinges
@@ -119,8 +119,6 @@ Rscript ../../../scripts/realignRegions.R align.ali secondary.fasta ../info.json
 mv align.ali refined.fasta
 mv realigned.fasta align.ali
 Rscript ../../../scripts/dssp2fasta.R
-
-exit
 
 
 

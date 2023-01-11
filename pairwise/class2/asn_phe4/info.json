@@ -1,15 +1,57 @@
 {
-    "fullName":"AsnRS vs e-&beta;-PheRS pairwise comparison",
+    "fullName":"AsnRS vs PheRS-A&beta; pairwise comparison",
     "class":"Class II",
     "icon":"/fig/icon_white.png",
     "family1":"AsnRS",
-    "family2":"e-&beta;-PheRS",
+    "family2":"PheRS-A&beta;",
     "fullName1":"Asparginyl tRNA Synthetase",
     "fullName2":"&beta; eukaryotic Phenylalanyl tRNA Synthetase subunit",
-    "description":"Pairwise comparison of the Class II catalytic domains from the Asparginyl tRNA Synthetase (AsnRS) and &beta; eukaryotic Phenylalanyl tRNA Synthetase subunit (e-&beta;-PheRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    1.91,
-    "rmsd1":    1.5,
-    "rmsd2":    1.38,
-    "crossFamilyRmsd":    3.31,
-    "rmsdTotal":    2.16
+    "description":"Pairwise comparison of the Class II catalytic domains from the Asparginyl tRNA Synthetase (<a href='/class2/asn'>AsnRS</a>) and &beta; eukaryotic Phenylalanyl tRNA Synthetase subunit (<a href='/class2/phe4'>PheRS-A&beta;</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    1.901,
+    "rmsd1":    1.75,
+    "rmsd2":    2.75,
+    "crossFamilyRmsd":    4.2,
+    "rmsdTotal":    2.92,
+    "features":{
+        "Motif 1*":{
+            "acc":"PheRS-A\u03b2_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724457.pdb",
+            "range":"22-31",
+            "level":            1
+        },
+        "Motif 2*":{
+            "acc":"PheRS-A\u03b2_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724457.pdb",
+            "range":"89-98",
+            "level":            1
+        },
+        "Motif 3*":{
+            "acc":"PheRS-A\u03b2_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724457.pdb",
+            "range":"163-172",
+            "level":            1
+        },
+        "Motif 1":{
+            "acc":"AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb",
+            "range":"38-47",
+            "level":            1
+        },
+        "Motif 2":{
+            "acc":"AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb",
+            "range":"90-99",
+            "level":            1
+        },
+        "Motif 3":{
+            "acc":"AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb",
+            "range":"284-293",
+            "level":            1
+        },
+        "Tweezer 1":{
+            "acc":"AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb",
+            "range":"97",
+            "level":            0
+        },
+        "Tweezer 2":{
+            "acc":"AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb",
+            "range":"291",
+            "level":            0
+        }
+    }
 }

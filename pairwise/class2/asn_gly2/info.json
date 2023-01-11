@@ -1,15 +1,42 @@
 {
-    "fullName":"AsnRS vs t-GlyRS pairwise comparison",
+    "fullName":"AsnRS vs GlyRS-B&alpha; pairwise comparison",
     "class":"Class II",
     "icon":"/fig/icon_white.png",
     "family1":"AsnRS",
-    "family2":"t-GlyRS",
+    "family2":"GlyRS-B&alpha;",
     "fullName1":"Asparginyl tRNA Synthetase",
-    "fullName2":"Tetrameric glycyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class II catalytic domains from the Asparginyl tRNA Synthetase (AsnRS) and Tetrameric glycyl tRNA Synthetase (t-GlyRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    1.795,
-    "rmsd1":    1.51,
-    "rmsd2":    1.35,
-    "crossFamilyRmsd":    2.91,
-    "rmsdTotal":    1.94
+    "fullName2":"Glycyl tRNA Synthetase (Bacterial-like)",
+    "description":"Pairwise comparison of the Class II catalytic domains from the Asparginyl tRNA Synthetase (<a href='/class2/asn'>AsnRS</a>) and Glycyl tRNA Synthetase (Bacterial-like) (<a href='/class2/gly2'>GlyRS-B&alpha;</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.1,
+    "rmsd1":    1.87,
+    "rmsd2":    1.76,
+    "crossFamilyRmsd":    4.81,
+    "rmsdTotal":    3.28,
+    "features":{
+        "Motif 1":{
+            "acc":"AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb",
+            "range":"38-47",
+            "level":            1
+        },
+        "Motif 2":{
+            "acc":"AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb",
+            "range":"90-99",
+            "level":            1
+        },
+        "Motif 3":{
+            "acc":"AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb",
+            "range":"284-293",
+            "level":            1
+        },
+        "Tweezer 1":{
+            "acc":"AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb",
+            "range":"97",
+            "level":            0
+        },
+        "Tweezer 2":{
+            "acc":"AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb",
+            "range":"291",
+            "level":            0
+        }
+    }
 }

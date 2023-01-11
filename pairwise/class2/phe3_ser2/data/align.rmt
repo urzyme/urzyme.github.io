@@ -1,28 +1,60 @@
->../../../../class2/phe3//data/domains/Catalytic_domain/structures/Phe_Euk_3L4G.C_H_sapiens.pdb
--0.711228 -0.107268  0.694729    63.101390
--0.695906  0.247112 -0.674278   -27.076068
--0.099348 -0.963031 -0.250401   102.963748
->../../../../class2/phe3//data/domains/Catalytic_domain/structures/Phenylalanyl.A.Candidatus_Thermoplasmatota.NC_021592.1.pdb
- 0.230579  0.746349 -0.624337    -2.805637
--0.493250 -0.463431 -0.736163    -2.201817
--0.838771  0.477698  0.261279    -6.193794
->../../../../class2/phe3//data/domains/Catalytic_domain/structures/Phenylalanyl.A.Euryarchaeota.NC_013741.1.pdb
- 1.000000  0.000000  0.000000    -0.000000
- 0.000000  1.000000  0.000000    -0.000000
- 0.000000  0.000000  1.000000     0.000000
->../../../../class2/phe3//data/domains/Catalytic_domain/structures/Phenylalanyl.E.Apicomplexa.NC_011903.2.pdb
--0.581005  0.684443  0.440422     2.234179
- 0.329198 -0.297267  0.896249     7.437349
- 0.744353  0.665711 -0.052604    -6.315349
->../../../../class2/phe3//data/domains/Catalytic_domain/structures/Phenylalanyl.E.Basidiomycota.NC_026480.1.pdb
--0.183398  0.715919  0.673665     8.145380
- 0.177386 -0.649938  0.738995     6.808465
- 0.966902  0.255029 -0.007797   -11.608286
->../../../../class2/ser2//data/domains/Catalytic_domain/structures/Ser_Arch_2cim_M_barkeri.pdb
--0.979497 -0.197212 -0.041147    37.027714
--0.155628  0.870415 -0.467073    45.196016
- 0.127928 -0.451093 -0.883261    76.070229
->../../../../class2/ser2//data/domains/Catalytic_domain/structures/Ser_Arch_2cjb_M_barkeri.pdb
--0.975789 -0.204239 -0.078247    40.005271
--0.150039  0.885394 -0.439962    43.110525
- 0.159136 -0.417570 -0.894601    76.033530
+>../../../../class2/phe3//data/domains/Catalytic_domain/structures/PheRS-Aα_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724458.pdb
+ 0.215484  0.003699  0.976500     0.647111
+ 0.487572 -0.866829 -0.104309     1.441623
+ 0.846073  0.498591 -0.188591   -10.850051
+>../../../../class2/phe3//data/domains/Catalytic_domain/structures/PheRS-Aα_AF_Arch_Haloterrigena_turkmenica_DSM_5511_gene8744248.pdb
+-0.821567  0.390886  0.415013    10.800267
+ 0.570090  0.556957  0.603984     6.724416
+ 0.004944  0.732808 -0.680417   -14.409164
+>../../../../class2/phe3//data/domains/Catalytic_domain/structures/PheRS-Aα_AF_Arch_Thermoplasma_volcanium_GSS1_gene1441177.pdb
+ 0.138586 -0.265979 -0.953965    11.174715
+ 0.588228 -0.752830  0.295354     8.511945
+-0.796732 -0.602081  0.052125   -15.022386
+>../../../../class2/phe3//data/domains/Catalytic_domain/structures/PheRS-Aα_AF_Arch_Thermosphaera_aggregans_DSM_11486_gene9165306.pdb
+-0.226168  0.215561  0.949938    17.359396
+ 0.436950 -0.849136  0.296720     9.116055
+ 0.870587  0.482184  0.097858   -15.252092
+>../../../../class2/phe3//data/domains/Catalytic_domain/structures/PheRS-Aα_AF_Euk_Cyanidioschyzon_merolae_strain_10D_gene16993638.pdb
+ 0.175246  0.519158 -0.836519    11.640725
+-0.576735 -0.634484 -0.514594     0.914960
+-0.797913  0.572630  0.188225   -21.316812
+>../../../../class2/phe3//data/domains/Catalytic_domain/structures/PheRS-Aα_AF_Euk_Megalobrama_amblycephala_gene125266654.pdb
+ 0.841333 -0.311128 -0.441994    18.123564
+ 0.539969  0.520604  0.661366     6.156559
+ 0.024335 -0.795092  0.606001   -13.730396
+>../../../../class2/phe3//data/domains/Catalytic_domain/structures/PheRS-Aα_AF_Euk_Plasmodium_falciparum_3D7_gene813233.pdb
+-0.439535 -0.660005  0.609264    18.331646
+-0.560807 -0.328206 -0.760116    -1.044800
+ 0.701644 -0.675777 -0.225877   -14.247519
+>../../../../class2/phe3//data/domains/Catalytic_domain/structures/PheRS-Aα_AF_Euk_Schizosaccharomyces_pombe_gene2543647.pdb
+-0.959291 -0.095212  0.265886    11.873793
+-0.114024  0.991887 -0.056198     0.540877
+-0.258379 -0.084228 -0.962365   -19.285212
+>../../../../class2/phe3//data/domains/Catalytic_domain/structures/PheRS-Aα_PDB_Euk.B_H_sapiens_3L4G.C.pdb
+-0.599056  0.755938 -0.263988   -63.799481
+ 0.749784  0.645292  0.146366   -92.604864
+ 0.280993 -0.110253 -0.953356   -44.420171
+>../../../../class2/ser2//data/domains/Catalytic_domain/structures/SerRS-A_AF_Arch_Conexivisphaera_calida_protein1635512986.pdb
+ 0.668505  0.712727 -0.212418    -0.310648
+-0.690548  0.488818 -0.533104     1.962486
+-0.276124  0.503067  0.818950    -0.669885
+>../../../../class2/ser2//data/domains/Catalytic_domain/structures/SerRS-A_AF_Arch_Ignisphaera_aggregans_protein304378874.pdb
+ 0.999967 -0.000034  0.008136     0.092691
+ 0.000074  0.999988 -0.004914    -0.090476
+-0.008135  0.004914  0.999955    -0.159209
+>../../../../class2/ser2//data/domains/Catalytic_domain/structures/SerRS-A_AF_Arch_Methanosarcina_barkeri_protein805401349.pdb
+-0.064400  0.617552 -0.783889     0.127826
+-0.184454 -0.779351 -0.598823     2.264127
+-0.980729  0.106027  0.164101     1.746894
+>../../../../class2/ser2//data/domains/Catalytic_domain/structures/SerRS-A_AF_Arch_Unclassified_Thermoplasmata_protein1635512986.pdb
+ 0.474341  0.818316 -0.324590    -2.022912
+-0.782525  0.223016 -0.581308     2.865304
+-0.403305  0.529738  0.746138     1.717506
+>../../../../class2/ser2//data/domains/Catalytic_domain/structures/SerRS-A_PDB_Arch_M_barkeri_2cim.pdb
+-0.329849  0.927304  0.176937     1.937311
+ 0.471296 -0.000644  0.881975   -93.495996
+ 0.817973  0.374308 -0.436822    -1.395033
+>../../../../class2/ser2//data/domains/Catalytic_domain/structures/SerRS-A_PDB_Arch_M_barkeri_2cjb.pdb
+-0.337031  0.919394  0.202794     0.178616
+ 0.445605 -0.033972  0.894585   -94.030640
+ 0.829365  0.391869 -0.398237    -4.919420

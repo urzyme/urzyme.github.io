@@ -1,0 +1,37 @@
+{
+    "fullName":"GlxRS vs LeuRS-B pairwise comparison",
+    "class":"Class I",
+    "icon":"/fig/icon_white.png",
+    "family1":"GlxRS",
+    "family2":"LeuRS-B",
+    "fullName1":"Non-discriminating Glutamyl tRNA Synthetase",
+    "fullName2":"Leucyl tRNA Synthetase (Bacterial-like)",
+    "description":"Pairwise comparison of the Class I catalytic domains from the Non-discriminating Glutamyl tRNA Synthetase (<a href='/class1/glu2'>GlxRS</a>) and Leucyl tRNA Synthetase (Bacterial-like) (<a href='/class1/leu1'>LeuRS-B</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.727,
+    "rmsd1":    1.61,
+    "rmsd2":    3.36,
+    "crossFamilyRmsd":    5.38,
+    "rmsdTotal":    4.11,
+    "features":{
+        "Crossover 1":{
+            "acc":"GlxRS_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb",
+            "range":"4-42",
+            "level":            2
+        },
+        "Crossover 2":{
+            "acc":"GlxRS_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb",
+            "range":"198-229",
+            "level":            2
+        },
+        "HIGH":{
+            "acc":"GlxRS_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb",
+            "range":"16-19",
+            "level":            1
+        },
+        "KMSKS":{
+            "acc":"GlxRS_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb",
+            "range":"238-242",
+            "level":            1
+        }
+    }
+}

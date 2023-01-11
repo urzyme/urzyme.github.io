@@ -1,5 +1,7 @@
 {
 		"name": "PheRS-B&beta;",
+		"id": "phe2",
+		"classID": "class2",
 		"fullName": "&beta; bacterial Phenylalanyl tRNA Synthetase subunit",
 		"icon": "/fig/icon_hydrophobic.png",
 		"substrate": "Phenylalanine",
@@ -10,7 +12,11 @@
 		"codons": "UUU, UUC",
 		"editing": "Post-transfer",
 		"ref_str": ["structures/PheRS-Bβ_PDB_Bact.B_T_thermophilus_1PYS.pdb"],
-		"refine": [{"start": 34, "stop": 219}]
+		"refine": [{"start": 34, "stop": 219}],
+		"features": {"Catalytic domain": {"acc": "PheRS-Bβ_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb", "range": "527-706", "level": 4},
+					"Motif 1*": {"acc": "PheRS-Bβ_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb", "range": "540-549", "level": 1},
+					"Motif 2*": {"acc": "PheRS-Bβ_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb", "range": "584-593", "level": 1},
+					"Motif 3*": {"acc": "PheRS-Bβ_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb", "range": "687-696", "level": 1}}
 	
 }
 

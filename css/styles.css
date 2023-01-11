@@ -231,6 +231,7 @@ table.maptable td{
 
 
 table.maptable th.accession, td.accession{
+	min-width: 20em;
 	text-align:right !important;
 }
 

@@ -4,12 +4,39 @@
     "icon":"/fig/icon_white.png",
     "family1":"AsxRS",
     "family2":"SepRS",
-    "fullName1":"Aspartyl tRNA Synthetase (non-discriminating)",
+    "fullName1":"Non-discriminating Aspartyl tRNA Synthetase",
     "fullName2":"O-phosphoseryl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class II catalytic domains from the Aspartyl tRNA Synthetase (non-discriminating) (AsxRS) and O-phosphoseryl tRNA Synthetase (SepRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.363,
-    "rmsd1":    1.55,
-    "rmsd2":    2.14,
-    "crossFamilyRmsd":    3.24,
-    "rmsdTotal":    2.52
+    "description":"Pairwise comparison of the Class II catalytic domains from the Non-discriminating Aspartyl tRNA Synthetase (<a href='/class2/asp2'>AsxRS</a>) and O-phosphoseryl tRNA Synthetase (<a href='//'>SepRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    1.822,
+    "rmsd1":    1.88,
+    "rmsd2":    1.63,
+    "crossFamilyRmsd":    3.13,
+    "rmsdTotal":    2.4,
+    "features":{
+        "Motif 1":{
+            "acc":"AsxRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094477.pdb",
+            "range":"38-47",
+            "level":            1
+        },
+        "Motif 2":{
+            "acc":"AsxRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094477.pdb",
+            "range":"90-99",
+            "level":            1
+        },
+        "Motif 3":{
+            "acc":"AsxRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094477.pdb",
+            "range":"286-295",
+            "level":            1
+        },
+        "Tweezer 1":{
+            "acc":"AsxRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094477.pdb",
+            "range":"97",
+            "level":            0
+        },
+        "Tweezer 2":{
+            "acc":"AsxRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094477.pdb",
+            "range":"293",
+            "level":            0
+        }
+    }
 }

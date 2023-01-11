@@ -6,10 +6,32 @@
     "family2":"ValRS",
     "fullName1":"Isoleucyl tRNA Synthetase",
     "fullName2":"Valyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class I catalytic domains from the Isoleucyl tRNA Synthetase (IleRS) and Valyl tRNA Synthetase (ValRS) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.744,
-    "rmsd1":    3.15,
-    "rmsd2":    1.83,
-    "crossFamilyRmsd":    3.17,
-    "rmsdTotal":    2.92
+    "description":"Pairwise comparison of the Class I catalytic domains from the Isoleucyl tRNA Synthetase (<a href='/class1/ile'>IleRS</a>) and Valyl tRNA Synthetase (<a href='/class1/val'>ValRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.29,
+    "rmsd1":    3.5,
+    "rmsd2":    2.2,
+    "crossFamilyRmsd":    3.34,
+    "rmsdTotal":    3.13,
+    "features":{
+        "Crossover 1":{
+            "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
+            "range":"2-48",
+            "level":            2
+        },
+        "Crossover 2":{
+            "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
+            "range":"517-555",
+            "level":            2
+        },
+        "HIGH":{
+            "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
+            "range":"18-21",
+            "level":            1
+        },
+        "KMSKS":{
+            "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
+            "range":"565-569",
+            "level":            1
+        }
+    }
 }

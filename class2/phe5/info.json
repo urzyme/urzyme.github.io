@@ -1,5 +1,7 @@
 {
 		"name": "PheRS-M",
+		"id": "phe5",
+		"classID": "class2",
 		"fullName": "Mitochondrial Phenylalanyl tRNA Synthetase",
 		"icon": "/fig/icon_hydrophobic.png",
 		"substrate": "Phenylalanine",
@@ -11,7 +13,13 @@
 		"editing": "No",
 		"ref_str": ["structures/PheRS-M_PDB_Mito.H_sapiens_3CMQ.pdb"],
 		"hinge_str": "structures/PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb",
-		"hinges": [332]
+		"hinges": [332],
+		"features": {"Catalytic domain": {"acc": "PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb", "range": "94-308", "level": 4},
+					"Motif 1": {"acc": "PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb", "range": "117-126", "level": 1},
+					"Motif 2": {"acc": "PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb", "range": "178-187", "level": 1},
+					"Motif 3": {"acc": "PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb", "range": "293-302", "level": 1},
+					"Tweezer 1": {"acc": "PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb", "range": "185", "level": 0},
+					"Tweezer 2": {"acc": "PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb", "range": "300", "level": 0}}
 	
 }
 
