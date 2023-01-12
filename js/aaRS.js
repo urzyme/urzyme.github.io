@@ -1869,8 +1869,6 @@ function loadAlignment(fasta, resolve = function() { }){
   // Load secondary structure alignment
   fetch("data/secondary.fasta").then(response => response.text()).then(text => loadSecondaryStructureAlignment(text, resolve));
 
-  // Load all pdb files
-  //fetch("data/structures.txt").then(response => response.text()).then(text => loadStructures(text, resolve));
 
 }
 

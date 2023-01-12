@@ -11,10 +11,10 @@
 		"oligo": "Monomeric",
 		"codons": "CUU, CUA, CUC, CUG",
 		"editing": "Post-transfer",
-		"ref_str": ["structures/LeuRS-B_PDB_Bact_T_therm_2V0C.pdb"],
+		"ref_str": ["structures/LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb"],
 		"refine": [{"start": 1138, "stop": 1397}],
 		"features": {"Catalytic domain": {"acc": "LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb", "range": "17-791", "level": 4},
-					"Crossover 1": {"acc": "LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb", "range": "61-103", "level": 2},
+					"Protozyme": {"acc": "LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb", "range": "61-103", "level": 2},
 					"Crossover 2": {"acc": "LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb", "range": "671-711", "level": 2},
 					"HIGH": {"acc": "LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb", "range": "77-80", "level": 1},
 					"KMSKS": {"acc": "LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb", "range": "760-764", "level": 1}}

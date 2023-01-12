@@ -13,6 +13,7 @@
 		"editing": "No",
 		"ref_str": ["structures/GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb"],
 		"features": {"Catalytic domain": {"acc": "GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb", "range": "196-560", "level": 4},
+					"Protozyme": {"acc": "GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb", "range": "258-309", "level": 2},
 					"GlyRS-E insert": {"acc": "GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb", "range": "450-535", "level": 3},
 					"Motif 1": {"acc": "GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb", "range": "225-234", "level": 1},
 					"Motif 2": {"acc": "GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb", "range": "290-299", "level": 1},

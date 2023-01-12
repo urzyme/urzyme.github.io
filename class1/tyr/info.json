@@ -11,7 +11,7 @@
 		"oligo": "Homodimeric",
 		"codons": "UAU, UAC",
 		"editing": "No",
-		"ref_str": ["structures/TyrRS_PDB_E_coli_Bact_1WQ4.pdb"],
+		"ref_str": ["structures/TyrRS_AF_Bact_Chlamydia_psittaci_6BC_gene12242888.pdb"],
 		"hinge_str": "structures/TyrRS_AF_Euk_Seriola_dumerili_gene111223086.pdb",
 		"hinges": [359],
 		"refine": [{"start": 800}],

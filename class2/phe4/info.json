@@ -11,11 +11,12 @@
 		"oligo": "Heterotetramer",
 		"codons": "UUU, UUC",
 		"editing": "Post-transfer",
-		"ref_str": ["structures/PheRS-Aβ_PDB_Euk.B_H_sapiens_3L4G.pdb"],
+		"ref_str": ["structures/PheRS-Aβ_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724457.pdb"],
 		"features": {"Catalytic domain": {"acc": "PheRS-Aβ_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724457.pdb", "range": "351-529", "level": 4},
-					"Motif 1*": {"acc": "PheRS-Aβ_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724457.pdb", "range": "373-382", "level": 1},
-					"Motif 2*": {"acc": "PheRS-Aβ_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724457.pdb", "range": "440-449", "level": 1},
-					"Motif 3*": {"acc": "PheRS-Aβ_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724457.pdb", "range": "514-523", "level": 1}}
+					"Protozyme": {"acc": "PheRS-Aβ_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724457.pdb", "range": "413-451", "level": 2},
+					"Motif 1": {"acc": "PheRS-Aβ_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724457.pdb", "range": "373-382", "level": 1},
+					"Motif 2": {"acc": "PheRS-Aβ_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724457.pdb", "range": "440-449", "level": 1},
+					"Motif 3": {"acc": "PheRS-Aβ_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724457.pdb", "range": "514-523", "level": 1}}
 	
 }
 

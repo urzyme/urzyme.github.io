@@ -162,6 +162,13 @@ do
 	# Make a secondary structure fasta file from dssp
 	Rscript ../../../../../scripts/dssp2fasta.R
 
+
+	# Refine the alignment
+	Rscript ../../../../../scripts/refineMSA.R align.ali secondary.fasta
+	mv align.ali unrefined.fasta
+	mv refined.fasta align.ali
+	Rscript ../../../../../scripts/dssp2fasta.R
+
 	cd ../
 
 
