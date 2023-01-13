@@ -13,7 +13,7 @@ do
 
 	cd $c
 	
-	for d in Pro*/
+	for d in Cat*/
 	do
 
 		echo "$c $d"

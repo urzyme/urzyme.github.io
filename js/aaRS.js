@@ -108,7 +108,7 @@ if (IS_MOBILE){
 LEVEL_1_COL = "#fa2a5599";
 LEVEL_2_COL = "#a6a6a6";
 LEVEL_3_COL = "#d3d3d3";
-LEVEL_4_COL = "#ffffff";
+LEVEL_4_COL = "transparent";
 
 
 

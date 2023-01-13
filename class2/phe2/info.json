@@ -13,7 +13,7 @@
 		"editing": "Post-transfer",
 		"ref_str": ["structures/PheRS-Bβ_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb"],
 		"refine": [{"start": 34, "stop": 219}],
-		"features": {"Catalytic domain": {"acc": "PheRS-Bβ_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb", "range": "527-706", "level": 4},
+		"features": {"Catalytic domain": {"acc": "PheRS-Bβ_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb", "range": "498-706", "level": 4},
 					"Protozyme": {"acc": "PheRS-Bβ_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb", "range": "554-593", "level": 2},
 					"Motif 1": {"acc": "PheRS-Bβ_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb", "range": "540-549", "level": 1},
 					"Motif 2": {"acc": "PheRS-Bβ_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb", "range": "584-593", "level": 1},

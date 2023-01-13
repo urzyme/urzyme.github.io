@@ -62,14 +62,15 @@ function init(){
 				
 				<div>
 
-					The catalytic domain of the Class II amino acyl tRNA synthetase (AARS-II) activates amino acids in order to charge their cognate tRNAs. 
-					In total, twelve of the twenty two proteinogenic amino acids are charged by AARS-II. 
-					These amino acids are alanine, asparagine, aspartate, cysteine, glycine, histidine, lysine, phenylalaline, proline, pyrrolysine, serine, and threonine. 
-					Lysine and cysteine are also processed by the Class I amino acyl tRNA synthetases. These twelve amino acids are processed by twenty one distinct AARS-II families, a single representative from each of which is displayed below. <br><br>
+					The catalytic domain of the Class II amino acyl tRNA synthetase (AARS-II) activates amino acids so that their cognate tRNA can be charged. 
+					In total, thirteen of the 22 proteinogenic amino acids are incorporated into the protein, through 21 distinct AARS-II families; a single representative from each of which is displayed below.
+					These amino acids are alanine, asparagine, aspartate, cysteine, glycine, histidine, lysine, phenylalaline, proline, pyrrolysine, selenocysteine, serine, and threonine. 
+					Lysine and cysteine are also incorporated during translation via the Class I amino acyl tRNA synthetases <a href="/class1/lys">LysRS-I</a> and <a href="/class1/cys">CysRS</a>. 
+					 <br><br>
 
 
 
-					Most AARS-II families are homodimeric. However, <a href="/class2/phe1">PheRS</a> and the bacterial <a href="/class2/gly2">GlyRS</a> exist as heterotetramers, while   <a href="/class2/sep">SepRS</a> is homotetrameric, and the <a href="/class2/phe5">mitochondrial PheRS</a> is monomeric.  <br><br>
+					Most AARS-II families are homodimeric. However, the <a href="/class2/phe1">cytosolic PheRS</a> and the bacterial <a href="/class2/gly2">GlyRS</a> exist as heterotetramers, while   <a href="/class2/sep">SepRS</a> is homotetrameric, and the <a href="/class2/phe5">mitochondrial PheRS</a> is monomeric.  <br><br>
 					
 
 					Although they are part of the class II catalytic domain superfamily, the &beta; subunits of the <a href="/class2/phe2">bacterial PheRS</a> and <a href="/class2/phe4">archaeal PheRS</a> families do not in fact catalyse amino acid activation (Klipcan et al. 2020). Instead, catalysis in these enzymes is performed by the respective &alpha; subunits <a href="/class2/phe1">PheRS-B&alpha;</a> and <a href="/class2/phe3">PheRS-A&alpha;</a>  .
@@ -77,20 +78,26 @@ function init(){
 
 
 
-					 The common structure of AARS-II is described by three &alpha;-helices H1-H3, five &beta;-strands S1-S5, and a strand followed immediately by a helix SH1.
-					 The catalytic domain itself is a six stranded anti-parallel &beta; fold. The first five strands are denoted by S1-S5, while the sixth strand is denoted by SH1, as it is immediately followed by a helix. There is also a very short &beta;-strand, typically 2-3 residues in length, which resides within motif 1 and runs parallel with S1. The two arginine tweezers reside in S1 and SH1, which are close proximity with one other.
-					 The loops which connect these secondary structural elements are quite variable in length and contain a multitude of family- or clade-specific insertion modules (IM). <br><br>
+					 The universal structure of AARS-II is described by three &alpha;-helices H1-H3, five &beta;-strands S1-S5, and a strand followed immediately by a helix SH1.
+					 The catalytic domain itself is a six stranded anti-parallel &beta; fold. The first five strands are denoted by S1-S5, while the sixth strand is part of SH1. 
+					 There is also a very short &beta;-strand, 2-3 residues in length, which resides within motif 1 and runs parallel with S1. 
+					 The two arginine tweezers reside in S1 and SH1, which are in close proximity with one other.
+					 The loops which connect these secondary structural elements are quite variable in length and contain a multitude of insertion modules (IM). <br><br>
 
 
-
-					 Most AARS-II members contain the same core six antiparallel &beta;-strands (plus a short strand parallel to S1).
-					 This anti-parallel fold is bounded between S1 (near the N-terminus) and S3 (>50 residues downstream). However, some members contain additional strands which run parallel with S3. 
-					 First, the GlyRS-AE insertion module 2 is a small ~40 residue module which contains a &beta;-hairpin. This hairpin runs parallel with S3, and adds an two additional strands to the fold for both dimeric GlyRS families <a href="/class2/gly1">GlyRS-A</a> and <a href="/class2/gly3">GlyRS-E</a>.
-					 Second, the subclass 2b insertion module is a ~80 residue module with a short &beta; strand at its N-terminus which runs parallel to S3. This insertion module is found in <a href="/class2/lys">LysRS-II</a>, <a href="/class2/asn">AsnRS</a>, <a href="/class2/asp1">AspRS</a>, and <a href="/class2/asp2">AsxRS</a>. 
+					 All AARS-II members contain the same six antiparallel &beta;-strands bound by S1 (near the N-terminus) and S3 (>50 residues downstream), plus the short strand parallel to S1. 
+					 However, some members contain additional strands which run parallel with S3. 
+					 First, GlyRS-AE insertion module 2 is a small ~40 residue module which contains a &beta;-hairpin. This hairpin runs parallel with S3, and adds two additional strands to the fold for both dimeric GlyRS families <a href="/class2/gly1">GlyRS-A</a> and <a href="/class2/gly3">GlyRS-E</a>.
+					 Second, the subclass 2b insertion module is over 70 residues and contains a short &beta; strand at its N-terminus which runs parallel to S3. 
+					 This insertion module is found in <a href="/class2/lys">LysRS-II</a>, <a href="/class2/asn">AsnRS</a>, <a href="/class2/asp1">AspRS</a>, and <a href="/class2/asp2">AsxRS</a>. <br><br>
 
 					 <!--  TODO: 3. His 4. Ala 5. Thr. Are Ala and Thr related, or is it convergent evolution?-->
 
 
+					
+					 There is a &beta; hairpin located between motifs 1 and 2; its two strands are denoted by BH1 and BH2. 
+					 This element exists in most members of the superfamily, with the exception of subclass 2d (<a href="/class2/ala">AlaRS</a> and <a href="/class2/gly2">GlyRS-B&alpha;</a>). 
+					 The hairpin is likely to have arisen early in the evolutionary history of AARS-II, and its loop has since seen the appearance of three insertion modules: SepRS IM, SerRS-A IM, and PheRS-A&alpha;-IM.
 
 
 
