@@ -1,40 +1,40 @@
 {
-    "ref":"GlyT_Bact_5f5w_A_aeolicus.pdb",
+    "ref":"GlyRS-Bα_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440230.pdb",
     "refDir": "gly2",
     "class": "Class II",
     "classDir": "../../class2",
     "wd":"../../pairwise/class2",
-    "alnStartAt":2,
+    "alnStartAt":3,
 
-    "ignore": ["GlyT_Bact_1j5w_T_maritima.pdb", "GlyT_Bact_3ufg_C_jejuni.pdb"],
+    "ignore": ["GlyRS-Bα_AF_Mito_Nymphaea_colorata_gene116265348.pdb", "GlyRS-Bα_AF_Bact_Chlamydia_pneumoniae_TW-183_gene45051002.pdb", "GlyRS-Bα_AF_Bact_Lacticaseibacillus_paracasei_gene61269714.pdb", "GlyRS-Bα_AF_Bact_Prochlorococcus_marinus_subsp_marinus_str_CCMP1375_gene54200602.pdb", "GlyRS-Bα_AF_Bact_Salmonella_enterica_subsp_enterica_serovar_Typhimurium_str_LT2_gene1255180.pdb", "GlyRS-Bα_AF_Bact_Streptobacillus_moniliformis_DSM_12112_gene29673275.pdb", "GlyRS-Bα_AF_Euk_Ostreococcus_tauri_gene9837276.pdb", "GlyRS-Bα_AF_Euk_Vulpes_lagopus_gene121489478.pdb", "GlyRS-Bα_PDB_Bact_A_aeolicus_5f5w.pdb", "GlyRS-Bα_PDB_Bact_C_jejuni_3ufg.pdb", "GlyRS-Bα_PDB_Bact_T_maritima_1j5w.pdb"],
 
     "elements":{
 
-        "H1": "2-15",
-        "L1": "16-30",
+        "H1": "3-16",
+        "L1": "17-31",
 
-        "H2": "31-39",
-        "L2": "40-46",
+        "H2": "32-39",
+        "L2": "40-47",
 
-        "S1": "47-56",
-        "L3": "57-71",
+        "S1": "48-57",
+        "L3": "58-72",
 
-        "S2": "72-81",
-        "L4": "82-86",
+        "S2": "73-82",
+        "L4": "83-87",
 
-        "H3": "87-97",
-        "L5": "98-106",
+        "H3": "88-98",
+        "L5": "99-107",
 
-        "S3": "107-116",
-        "L6": "117-120",
+        "S3": "108-117",
+        "L6": "118-121",
 
-        "S4": "121-130",
-        "L7": "131-132",
+        "S4": "122-131",
+        "L7": "132-133",
 
-        "S5": "133-144",
-        "L8": "145-153",   
+        "S5": "134-145",
+        "L8": "146-147",   
 
-        "SH1": "154-167"
+        "SH1": "148-169"
 
     }
 

@@ -17,13 +17,17 @@ classNr = as.numeric(gsub("[a-z]", "", tolower(classNr)))
 classNr = ifelse(classNr == 1, "Class I", "Class II")
 
 
-output = character(0)
+output_small = character(0)
+output_full = character(0)
+
 
 dirs = list.dirs(wd, recursive=F)
 for (d in dirs){
 
 	json = fromJSON(file = paste0(d, "/info.json"))
 	ref_str = json$ref_str
+
+
 
 
 	# Does the domain exist?
@@ -34,15 +38,24 @@ for (d in dirs){
 
 		if (file.exists(fileDir)){
 
-			output = c(output, fileDir)
+			# Ref str
+			output_small = c(output_small, fileDir)
+
+			# All structures
+			structuresD = readLines(paste0(domainDir, "/structures.txt"))
+			is.alphafold = sapply(strsplit(gsub(".+/", "", structuresD), "_"), function(ele) ele[2] == "AF")
+			structuresD = paste0(domainDir, "/", structuresD[is.alphafold])
+			output_full = c(output_full, structuresD)
+
+			
 		}else{
-			cat(paste0("Warning cannot find", fileDir, "\n"))
+			#cat(paste0("Warning cannot find", fileDir, "\n"))
 		}
 
 		
 
 	}else{
-		cat(paste0("Warning cannot find", domainDir, "\n"))
+		#cat(paste0("Warning cannot find", domainDir, "\n"))
 	}
 
 	
@@ -50,22 +63,17 @@ for (d in dirs){
 }
 
 
-write(paste(output, collapse="\n"), outfile)
+set.seed(1234)
+if (length(output_full) > 20){
+	write(paste(output_small, collapse="\n"), outfile)
+}else{
+	if (length(output_full) > 30){
+		#output_full = sample(output_full, 30)
+	}
+	write(paste(output_full, collapse="\n"), outfile)
+}
 
 
-# Output json file
-domainNameTidy = gsub("_", " ", domain)
-JSON = list()
-JSON[["fullName"]] = paste0(classNr, " ", domainNameTidy)
-JSON[["class"]] = classNr
-JSON[["icon"]] = "/fig/icon_white.png"
-JSON[["description"]] = paste0("Structural alignment of the ", classNr, " superfamily's ", tolower(domainNameTidy), ".")
-
-
-
-exportJSON <- toJSON(JSON, indent=4)
-cat(paste("Saving json to", outfile, "\n"))
-write(exportJSON, outfileJSON)
 
 
 

@@ -2,7 +2,7 @@
 
 
 #domains=( "Protozyme" "Catalytic_domain" )
-domains=( "Crossover_1" "Catalytic_domain" )
+#domains=( "Crossover_1" "Catalytic_domain" )
 
 
 
@@ -13,7 +13,7 @@ do
 
 	cd $c
 	
-	for d in "${domains[@]}"
+	for d in Pro*/
 	do
 
 		echo "$c $d"
@@ -22,9 +22,6 @@ do
 
 		cd $d
 		
-		# html and json
-		cp ../../template.html index.html
-
 
 		mkdir -p data
 		cd data
@@ -47,6 +44,14 @@ do
 		mv align.ali unrefined.fasta
 		mv refined.fasta align.ali
 		Rscript ../../../../scripts/dssp2fasta.R
+
+
+		# Realign some regions?
+		Rscript ../../../../scripts/realignRegions.R align.ali secondary.fasta ../info.json
+		mv align.ali refined.fasta
+		mv realigned.fasta align.ali
+		Rscript ../../../../scripts/dssp2fasta.R
+
 
 
 

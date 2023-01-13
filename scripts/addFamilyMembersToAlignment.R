@@ -169,7 +169,7 @@ for (d in dirs){
 
 
 # Save all structures to structure file
-write(paste(structures, collapse="\n"), structuresFile)
+#write(paste(structures, collapse="\n"), structuresFile)
 
 
 #out.fasta = out.fasta[order(names(out.fasta))]

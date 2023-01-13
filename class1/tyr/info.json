@@ -16,7 +16,7 @@
 		"hinges": [359],
 		"refine": [{"start": 800}],
 		"features": {"Catalytic domain": {"acc": "TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb", "range": "36-246", "level": 4},
-					"Crossover 1": {"acc": "TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb", "range": "37-74", "level": 2},
+					"Protozyme": {"acc": "TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb", "range": "37-74", "level": 2},
 					"Crossover 2": {"acc": "TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb", "range": "173-211", "level": 2},
 					"HIGH": {"acc": "TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb", "range": "50-53", "level": 1},
 					"KMSKS": {"acc": "TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb", "range": "221-225", "level": 1}}

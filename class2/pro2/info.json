@@ -13,6 +13,7 @@
 		"editing": "Post-transfer",
 		"ref_str": ["structures/ProRS-B_AF_Bact_Acinetobacter_baylyi_ADP1_gene45233245.pdb"],
 		"features": {"Catalytic domain": {"acc": "ProRS-B_AF_Bact_Acinetobacter_baylyi_ADP1_gene45233245.pdb", "range": "43-466", "level": 4},
+					"ProRS-B IM": {"acc": "ProRS-B_AF_Bact_Acinetobacter_baylyi_ADP1_gene45233245.pdb", "range": "218-404", "level": 3},
 					"Protozyme": {"acc": "ProRS-B_AF_Bact_Acinetobacter_baylyi_ADP1_gene45233245.pdb", "range": "94-149", "level": 2},
 					"Motif 1": {"acc": "ProRS-B_AF_Bact_Acinetobacter_baylyi_ADP1_gene45233245.pdb", "range": "65-74", "level": 1},
 					"Motif 2": {"acc": "ProRS-B_AF_Bact_Acinetobacter_baylyi_ADP1_gene45233245.pdb", "range": "133-142", "level": 1},

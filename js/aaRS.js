@@ -32,6 +32,7 @@ AA_COLS_2 = {E: "#FFC20A", H: "#0C7BDC", G: "#0C7BDC", I: "#0C7BDC", T:"#d3d3d3"
 AA_FONT_COLS_2 = {E: "#222222", H: "#222222", G: "#222222", I: "#222222", T:"#222222", S: "#222222",  B: "#222222",  N: "#111111",};
 
 
+IS_SUPERFAMILY = false;
 PAIRWISE = false;
 
 MIN_SSE_LEN = 2;
@@ -111,11 +112,11 @@ LEVEL_4_COL = "#ffffff";
 
 
 
-function renderaaRS(isPairwise = false){
+function renderaaRS(isPairwise = false, isSuperfamily = false){
 
 
   PAIRWISE = isPairwise;
-
+  IS_SUPERFAMILY = isSuperfamily
   
 
    
@@ -358,46 +359,36 @@ function renderInfo(text, resolve=function() { }){
 
 	$(".summary").append("<table></table>");
 
-  // Summary table for families
-  if (!PAIRWISE) {
-  	$(".summary table").append(`<tr>
-  								<th>Family</th>
-  								<td>` + json.name + `</td>
-  							</tr>`);
-  	$(".summary table").append(`<tr>
-  								<th>Superfamily</th>
-  								<td>` + json.class + `</td>
-  							</tr>`);
-    $(".summary table").append(`<tr>
-                  <th>Subclass</th>
-                  <td>` + json.subclass + `</td>
+
+
+	// Summary table for superfamily alignments
+	if (IS_SUPERFAMILY){
+
+
+
+        $(".summary table").append(`<tr>
+                  <th>Superfamily</th>
+                  <td>` + json.class + `</td>
                 </tr>`);
-  	$(".summary table").append(`<tr title="Amino acid attached to tRNA">
-  								<th>Activated substrate</th>
+        $(".summary table").append(`<tr title="Amino acids attached to tRNA">
+  								<th>Activated substrates</th>
   								<td>` + json.substrate + `</td>
   							</tr>`);
-      $(".summary table").append(`<tr title="Amino acid incorporated onto protein">
+      $(".summary table").append(`<tr title="Amino acids incorporated onto protein">
                   <th>Incorporates</th>
                   <td>` + json.incorporates + `</td>
                 </tr>`);
-  	$(".summary table").append(`<tr>
+      	$(".summary table").append(`<tr>
   								<th>Oligomerisation</th>
   								<td>` + json.oligo + `</td>
   							</tr>`);
 
-  	$(".summary table").append(`<tr title="Codons in the standard genetic code">
-  								<th>Codons</th>
-  								<td>` + json.codons + `</td>
-  							</tr>`);	
-  	$(".summary table").append(`<tr title="Editing is a translational-error prevention mechanism which removes misactivated or mischarged amino acids. It can occur at the pre-transfer level (by removing misactivated resiudes from the active site) or at the post-transfer level (by removing mischarged residues from the tRNA).">
-  								<th>Editing</th>
-  								<td>` + json.editing + `</td>
-  							</tr>`);
 
-  }
+	}
+
 
   // Summary table for pairwise alignments
-  else{
+  else if (PAIRWISE) {
 
         $(".summary table").append(`<tr>
                   <th>Superfamily</th>
@@ -431,6 +422,45 @@ function renderInfo(text, resolve=function() { }){
 
         $(".notes div").html(json.description);
 
+
+  }
+
+
+  // Summary table for families
+  else {
+  	$(".summary table").append(`<tr>
+  								<th>Family</th>
+  								<td>` + json.name + `</td>
+  							</tr>`);
+  	$(".summary table").append(`<tr>
+  								<th>Superfamily</th>
+  								<td>` + json.class + `</td>
+  							</tr>`);
+    $(".summary table").append(`<tr>
+                  <th>Subclass</th>
+                  <td>` + json.subclass + `</td>
+                </tr>`);
+  	$(".summary table").append(`<tr title="Amino acid attached to tRNA">
+  								<th>Activated substrate</th>
+  								<td>` + json.substrate + `</td>
+  							</tr>`);
+      $(".summary table").append(`<tr title="Amino acid incorporated onto protein">
+                  <th>Incorporates</th>
+                  <td>` + json.incorporates + `</td>
+                </tr>`);
+  	$(".summary table").append(`<tr>
+  								<th>Oligomerisation</th>
+  								<td>` + json.oligo + `</td>
+  							</tr>`);
+
+  	$(".summary table").append(`<tr title="Codons in the standard genetic code">
+  								<th>Codons</th>
+  								<td>` + json.codons + `</td>
+  							</tr>`);	
+  	$(".summary table").append(`<tr title="Editing is a translational-error prevention mechanism which removes misactivated or mischarged amino acids. It can occur at the pre-transfer level (by removing misactivated resiudes from the active site) or at the post-transfer level (by removing mischarged residues from the tRNA).">
+  								<th>Editing</th>
+  								<td>` + json.editing + `</td>
+  							</tr>`);
 
   }
 

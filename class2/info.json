@@ -271,7 +271,7 @@
     "d_gly1_thr":    3.1,
     "url_gly2_gly3":"/pairwise/class2/gly2_gly3",
     "name_gly2_gly3":"GlyRS-B&alpha; vs GlyRS-E pairwise comparison",
-    "d_gly2_gly3":    13.3,
+    "d_gly2_gly3":    5.11,
     "url_gly2_his":"/pairwise/class2/gly2_his",
     "name_gly2_his":"GlyRS-B&alpha; vs HisRS pairwise comparison",
     "d_gly2_his":    4.79,
@@ -631,8 +631,8 @@
     "d_ser2_thr":    3.27,
     "families":[
 "gly3",
-"ala",
 "gly2",
+"ala",
 "phe2",
 "pro2",
 "pro1",

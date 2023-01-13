@@ -1,8 +1,8 @@
-SHEET    1  E1 6 XXX A 379 XXX  A 384  0
+SHEET    1  E1 5 XXX A 380 XXX  A 384  0
 HELIX    1  H1 XXX A	 385  XXX A  387  1                                   3
 HELIX    2  H2 XXX A	 388  XXX A  400  1                                  13
 HELIX    3  H3 XXX A	 404  XXX A  408  1                                   5
-SHEET    2  E2 6 XXX A 410 XXX  A 415  0
+SHEET    2  E2 5 XXX A 411 XXX  A 415  0
 HEADER    LIGASE/RNA                              16-OCT-08   2ZUF              
 TITLE     CRYSTAL STRUCTURE OF PYROCOCCUS HORIKOSHII ARGINYL-TRNA               
 TITLE    2 SYNTHETASE COMPLEXED WITH TRNA(ARG)                                  
@@ -424,14 +424,6 @@ ORIGX3      0.000000  0.000000  1.000000        0.00000
 SCALE1      0.013122  0.000000  0.004027        0.00000                         
 SCALE2      0.000000  0.016628  0.000000        0.00000                         
 SCALE3      0.000000  0.000000  0.009481        0.00000                         
-ATOM   3066  N   ILE A 378      19.849  -3.093  46.442  1.00 18.71           N  
-ATOM   3067  CA  ILE A 378      20.326  -3.900  45.346  1.00 16.93           C  
-ATOM   3068  C   ILE A 378      21.521  -3.231  44.696  1.00 18.29           C  
-ATOM   3069  O   ILE A 378      21.564  -2.003  44.558  1.00 16.43           O  
-ATOM   3070  CB  ILE A 378      19.201  -4.055  44.302  1.00 17.88           C  
-ATOM   3071  CG1 ILE A 378      17.983  -4.711  44.964  1.00 18.62           C  
-ATOM   3072  CG2 ILE A 378      19.700  -4.859  43.101  1.00 19.24           C  
-ATOM   3073  CD1 ILE A 378      16.675  -4.556  44.197  1.00 17.72           C  
 ATOM   3074  N   VAL A 379      22.496  -4.042  44.306  1.00 17.38           N  
 ATOM   3075  CA  VAL A 379      23.679  -3.522  43.658  1.00 19.58           C  
 ATOM   3076  C   VAL A 379      23.924  -4.350  42.417  1.00 20.46           C  
@@ -731,16 +723,6 @@ ATOM   3369  CG  GLU A 416      31.785 -13.111  26.522  1.00 25.09           C
 ATOM   3370  CD  GLU A 416      32.860 -13.695  27.446  1.00 28.99           C  
 ATOM   3371  OE1 GLU A 416      34.072 -13.453  27.210  1.00 29.44           O  
 ATOM   3372  OE2 GLU A 416      32.491 -14.414  28.405  1.00 30.75           O  
-ATOM   3373  N   HIS A 417      34.167  -9.415  25.629  1.00 25.08           N  
-ATOM   3374  CA  HIS A 417      34.720  -8.279  24.925  1.00 28.93           C  
-ATOM   3375  C   HIS A 417      34.265  -8.060  23.489  1.00 30.04           C  
-ATOM   3376  O   HIS A 417      33.687  -8.938  22.846  1.00 28.75           O  
-ATOM   3377  CB  HIS A 417      36.245  -8.373  24.919  1.00 34.74           C  
-ATOM   3378  CG  HIS A 417      36.881  -8.066  26.239  1.00 43.09           C  
-ATOM   3379  ND1 HIS A 417      36.208  -7.429  27.262  1.00 46.14           N  
-ATOM   3380  CD2 HIS A 417      38.151  -8.243  26.676  1.00 43.89           C  
-ATOM   3381  CE1 HIS A 417      37.037  -7.224  28.270  1.00 46.81           C  
-ATOM   3382  NE2 HIS A 417      38.223  -7.708  27.939  1.00 47.50           N  
 TER    6748        C B 974                                                      
 HETATM 6749  O   HOH A1001      -2.407 -31.960  25.395  1.00 22.60           O  
 HETATM 6750  O   HOH A1004       5.246 -14.978   9.052  1.00 30.40           O  

@@ -15,6 +15,7 @@
 		"hinge_str": "structures/AsxRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094477.pdb",
 		"hinges": [95],
 		"features": {"Catalytic domain": {"acc": "AsxRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094477.pdb", "range": "106-406", "level": 4},
+					"Subclass 2b IM": {"acc": "AsxRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094477.pdb", "range": "270-312", "level": 3},
 					"Protozyme": {"acc": "AsxRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094477.pdb", "range": "171-212", "level": 2},
 					"Motif 1": {"acc": "AsxRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094477.pdb", "range": "144-153", "level": 1},
 					"Motif 2": {"acc": "AsxRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094477.pdb", "range": "196-205", "level": 1},

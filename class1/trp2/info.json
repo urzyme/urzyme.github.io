@@ -1,0 +1,23 @@
+{
+		"name": "TrpRS-B",
+		"id": "trp2",
+		"classID": "class1",
+		"fullName": "Tryptophanyl tRNA Synthetase (Bacterial-like)",
+		"icon": "/fig/icon_hydrophobic.png",
+		"substrate": "Tryptophan",
+		"incorporates": "Tryptophan",
+		"class": "Class I",
+		"subclass": "c",
+		"oligo": "Homodimeric",
+		"codons": "UGG",
+		"editing": "No",
+		"ref_str": ["structures/TrpRS-B_AF_Mito_Cyanidioschyzon_merolae_strain_10D_gene16992222.pdb"],
+		"hinge_str": "structures/TrpRS-B_AF_Arch_Natrialba_magadii_ATCC_43099_gene8824932.pdb",
+		"hinges": [134],
+		"features": {"Catalytic domain": {"acc": "TrpRS-B_AF_Mito_Cyanidioschyzon_merolae_strain_10D_gene16992222.pdb", "range": "122-362", "level": 4},
+					"Protozyme": {"acc": "TrpRS-B_AF_Mito_Cyanidioschyzon_merolae_strain_10D_gene16992222.pdb", "range": "127-163", "level": 2},
+					"Crossover 2": {"acc": "TrpRS-B_AF_Mito_Cyanidioschyzon_merolae_strain_10D_gene16992222.pdb", "range": "266-319", "level": 2},
+					"HIGH": {"acc": "TrpRS-B_AF_Mito_Cyanidioschyzon_merolae_strain_10D_gene16992222.pdb", "range": "139-142", "level": 1},
+					"KMSKS": {"acc": "TrpRS-B_AF_Mito_Cyanidioschyzon_merolae_strain_10D_gene16992222.pdb", "range": "330-334", "level": 1}}
+	
+}
