@@ -21,7 +21,8 @@
                     "AlaRS": {"acc": "AlaRS_AF_Bact_Nocardia_farcinica_IFM_10152_gene61134339.pdb", "range": "130-163", "level": 3, "count": 1, "href": "../AlaRS_IM"},
                     "SC2b.1": {"acc": "AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb", "range": "142-203", "level": 3, "count": 4, "href": "../Subclass_2b_IM_1"},
                     "SC2b.2": {"acc": "AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb", "range": "248-279", "level": 3, "count": 4, "href": "../Subclass_2b_IM_2"},
-					"SE": {"acc": "GlyRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697160.pdb", "range": "35-47", "level": 3, "count": 15},
+					"Gate 1": {"acc": "ProRS-A_AF_Euk_Ostreococcus_tauri_gene9837972.pdb", "range": "35-50", "level": 3, "count": 15},
+					"Gate 2": {"acc": "ProRS-A_AF_Euk_Ostreococcus_tauri_gene9837972.pdb", "range": "195-202", "level": 3, "count": 15},
                     "Hairpin": {"acc": "AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb", "range": "59-65", "level": 3, "count": 19},
 
 					"Protozyme": {"acc": "ProRS-B_AF_Bact_Acinetobacter_baylyi_ADP1_gene45233245.pdb", "range": "60-103", "level": 3, "href": "../Protozyme"},

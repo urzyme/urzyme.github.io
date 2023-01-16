@@ -665,3 +665,15 @@ span.sseLegend span{
 	margin-left: 2em !important;
 	font-size: 0.9em;
 }
+
+
+div.reaction{
+	margin-left: 2em;
+	padding: 1em;
+}
+
+div.reaction span{
+	padding: 1em;
+	
+}
+
