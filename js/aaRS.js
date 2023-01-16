@@ -870,6 +870,7 @@ function renderSecondary(svg){
 
       var range = features[feature].range;
       var level = features[feature].level;
+      let featureCount = features[feature].count; 
       if (range == "") continue;
       range = range.split("-")
       var y = SEC_HEIGHT*(nseq+1) + FEATURE_HEIGHT_SEC*(level-0.5);
@@ -893,48 +894,113 @@ function renderSecondary(svg){
 	       lw = 0.7;
       }
 	  
+
+	  	let textFeature = null;
+	  	let featureBg = null;
       if (level == 0){
         continue;
-      }else{
+      }else if (featureCount != null){
+
+      	// Only draw around a few sequences
+      	let yAcc = -1;
+      	for (let seqNum = 0; seqNum < nseq; seqNum++){
+		      let accSeq = accessions[seqNum];
+		      if (accSeq == features[feature].acc){
+		      	yAcc = (seqNum+1)*SEC_HEIGHT;
+		      	break;
+		      }
+
+		    }
+
+		    if (yAcc != -1){
+
+
+      		drawSVGobj(svgAnnotation, "rect", {x: x1-SEC_WIDTH, y: yAcc, width: x2-x1, height:SEC_HEIGHT*featureCount, style:"stroke-width:" +  lw + "px; stroke:black; fill:" + "white"});
+					featureBg = drawSVGobj(svgAnnotation, "rect", {x: x1-SEC_WIDTH, y: yAcc, width: x2-x1, height:SEC_HEIGHT*featureCount, style:"stroke-width:" +  lw + "px; stroke:black; fill:" + col});
+
+	      	// Triangle
+	      	let yBtm = yAcc + SEC_HEIGHT*(featureCount+0.5);
+					let points = (x1-NT_WIDTH/4) + "," + (yBtm-SEC_HEIGHT/8) + " " + (x1+NT_WIDTH/4) + "," + (yBtm-SEC_HEIGHT/8) + " " + x1 + "," + (yBtm-SEC_HEIGHT/2);
+	  	  	drawSVGobj(svgContent, "polygon", {points: points, style: "stroke-width:0px; stroke:black; fill:" + "white"} ) // Triangle
+	  	  	drawSVGobj(svgContent, "polygon", {points: points, style: "stroke-width:0.7px; stroke:black; fill:" + col} ) // Triangle
+
+
+	  	  	// Test
+	  	  	textFeature = drawSVGobj(svgContent, "text", {lower: lower, upper:upper,  x: x1-NT_WIDTH/4, y: yBtm-SEC_HEIGHT/20, style: "cursor:pointer; text-anchor:start; dominant-baseline:hanging; font-size:" + FEATURE_FONT_SIZE*0.8 + "px; fill:" + textCol}, value=txt)
+	  	  
+
+
+
+      	}
+      }else {
 		    drawSVGobj(svgAnnotation, "rect", {x: x1-SEC_WIDTH, y: SEC_HEIGHT, width: x2-x1, height:SEC_HEIGHT*nseq + FEATURE_HEIGHT_SEC*(level-1), style:"stroke-width:" +  lw + "px; stroke:black; fill:" + "white"});
-				drawSVGobj(svgAnnotation, "rect", {x: x1-SEC_WIDTH, y: SEC_HEIGHT, width: x2-x1, height:SEC_HEIGHT*nseq + FEATURE_HEIGHT_SEC*(level-1), style:"stroke-width:" +  lw + "px; stroke:black; fill:" + col});
+				featureBg = drawSVGobj(svgAnnotation, "rect", {x: x1-SEC_WIDTH, y: SEC_HEIGHT, width: x2-x1, height:SEC_HEIGHT*nseq + FEATURE_HEIGHT_SEC*(level-1), style:"stroke-width:" +  lw + "px; stroke:black; fill:" + col});
+      
+
+      	// Triangle
+				let points = (x1-NT_WIDTH/4) + "," + (y-SEC_HEIGHT/8) + " " + (x1+NT_WIDTH/4) + "," + (y-SEC_HEIGHT/8) + " " + x1 + "," + (y-SEC_HEIGHT/2);
+  	  	drawSVGobj(svgContent, "polygon", {points: points, style: "stroke-width:0px; stroke:black; fill:" + "white"} ) // Triangle
+  	  	drawSVGobj(svgContent, "polygon", {points: points, style: "stroke-width:0.7px; stroke:black; fill:" + col} ) // Triangle
+  	  	
+
+
+  	  	// Test
+	  	  if (feature == "Motif 3" || feature == "KMSKS"){
+	  		   textFeature = drawSVGobj(svgContent, "text", {lower: lower, upper:upper, x: x1+NT_WIDTH/4, y: y-SEC_HEIGHT/20, style: "cursor:pointer; text-anchor:end; dominant-baseline:hanging; font-size:" + FEATURE_FONT_SIZE + "px; fill:" + textCol}, value=txt)
+	  	  }else{
+	  		   textFeature = drawSVGobj(svgContent, "text", {lower: lower, upper:upper,  x: x1-NT_WIDTH/4, y: y-SEC_HEIGHT/20, style: "cursor:pointer; text-anchor:start; dominant-baseline:hanging; font-size:" + FEATURE_FONT_SIZE + "px; fill:" + textCol}, value=txt)
+	  	  }
+
+
+
       }
 
 
-  	  var points = (x1-NT_WIDTH/4) + "," + (y-SEC_HEIGHT/8) + " " + (x1+NT_WIDTH/4) + "," + (y-SEC_HEIGHT/8) + " " + x1 + "," + (y-SEC_HEIGHT/2);
-  	  drawSVGobj(svgContent, "polygon", {points: points, style: "stroke-width:0px; stroke:black; fill:" + "white"} ) // Triangle
-  	  drawSVGobj(svgContent, "polygon", {points: points, style: "stroke-width:0.7px; stroke:black; fill:" + col} ) // Triangle
-  	  
-      var text;
-  	  if (feature == "Motif 3" || feature == "KMSKS"){
-  		   text = drawSVGobj(svgContent, "text", {lower: lower, upper:upper, x: x1+NT_WIDTH/4, y: y-SEC_HEIGHT/20, style: "cursor:pointer; text-anchor:end; dominant-baseline:hanging; font-size:" + FEATURE_FONT_SIZE + "px; fill:" + textCol}, value=txt)
-  	  }else{
-  		   text = drawSVGobj(svgContent, "text", {lower: lower, upper:upper,  x: x1-NT_WIDTH/4, y: y-SEC_HEIGHT/20, style: "cursor:pointer; text-anchor:start; dominant-baseline:hanging; font-size:" + FEATURE_FONT_SIZE + "px; fill:" + textCol}, value=txt)
-  	  }
 
+      // Click on rect to go to link?
+	  	let href = features[feature].href;
+	  	if (href != null){
+	  		$(featureBg).css("cursor", "pointer");
+	  		$(featureBg).css("stroke-width", "0.5px");
+	  		drawSVGobj(featureBg, "title", {}, "View alignment of " + txt);
+	  		$(featureBg).bind("click", function(event){var u = $(this).attr("url");
+  	  		let e = window.event;
+  	  		if (e.ctrlKey){
+  	  			window.open(href, '_blank');
+  	  		}else{
+   				 window.location.href = href;
+  	  		}
+	  		});
+
+	  	}
+
+  	 
+ 
 
       // Click on a feature to select residues
-      $(text).click(function(){
-		  
-		  
-        var ele = $(this);
+      if (textFeature != null){
+	      $(textFeature).click(function(){
+			  
+			  
+	        var ele = $(this);
 
-        if (ele.attr("class") == "selected"){
-          deselectSites(true);
-          return;
-        }
+	        if (ele.attr("class") == "selected"){
+	          deselectSites(true);
+	          return;
+	        }
 
-        deselectSites();
+	        deselectSites();
 
-        $(ele).attr("class", "selected");
-        SELECTED_SITES.lower = parseFloat(ele.attr("lower"));
-        SELECTED_SITES.upper = parseFloat(ele.attr("upper"));
-        selectSites();
+	        $(ele).attr("class", "selected");
+	        SELECTED_SITES.lower = parseFloat(ele.attr("lower"));
+	        SELECTED_SITES.upper = parseFloat(ele.attr("upper"));
+	        selectSites();
 
 
-      });
-     
-    }
+	      });
+	     
+	    }
+  	}
 
 
 		// Site numbering

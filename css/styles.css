@@ -660,3 +660,8 @@ span.sseLegend span{
 	font-size:1.1em;
 	margin-top:0.3em;
 }
+
+.indent{
+	margin-left: 2em !important;
+	font-size: 0.9em;
+}

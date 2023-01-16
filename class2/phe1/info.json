@@ -15,7 +15,7 @@
 		"hinge_str": "structures/PheRS-Bα_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440383.pdb",
 		"hinges": [105],
 		"features": {"Catalytic domain": {"acc": "PheRS-Bα_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440383.pdb", "range": "106-323", "level": 4},
-					"Protozyme": {"acc": "PheRS-Bα_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440383.pdb", "range": "165-205", "level": 2},
+					"Protozyme": {"acc": "PheRS-Bα_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440383.pdb", "range": "165-205", "level": 2, "href": "/superfamily/class2/Protozyme"},
 					"Motif 1": {"acc": "PheRS-Bα_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440383.pdb", "range": "125-134", "level": 1},
 					"Motif 2": {"acc": "PheRS-Bα_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440383.pdb", "range": "189-198", "level": 1},
 					"Motif 3": {"acc": "PheRS-Bα_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440383.pdb", "range": "307-316", "level": 1},

@@ -117,8 +117,8 @@ plotMatrix = function(text){
 
       var x = (j)*FAMILY_MATRIX_SIZE + MATRIX_PADDING;
       var group = $(drawSVGobj(svg, "g", {url:url, title: name, class:"matrixcell", style: "cursor:pointer;" }));
-      var rect1 = drawSVGobj(group, "rect", {x: x, y:y, width:FAMILY_MATRIX_SIZE, height:FAMILY_MATRIX_SIZE, style: "fill:" + col + "; stroke-width:0.5px; stroke:black;"})
-      var rect2 = drawSVGobj(group, "rect", {x: y, y:x, width:FAMILY_MATRIX_SIZE, height:FAMILY_MATRIX_SIZE, style: "fill:" + col + "; stroke-width:0.5px; stroke:black;"})
+      let rect1 = drawSVGobj(group, "rect", {x: x, y:y, width:FAMILY_MATRIX_SIZE, height:FAMILY_MATRIX_SIZE, style: "fill:" + col + "; stroke-width:0.5px; stroke:black;"})
+      let rect2 = drawSVGobj(group, "rect", {x: y, y:x, width:FAMILY_MATRIX_SIZE, height:FAMILY_MATRIX_SIZE, style: "fill:" + col + "; stroke-width:0.5px; stroke:black;"})
 
 
       var text1 = drawSVGobj(group, "text", {x: x+FAMILY_MATRIX_SIZE/2, y: y+FAMILY_MATRIX_SIZE/2, url:url, style: "text-anchor:middle; dominant-baseline:central; fill:" + fontCol + ";font-size:" + MATRIX_FONT_SIZE + "px"}, rmsd)
@@ -126,8 +126,13 @@ plotMatrix = function(text){
 
 
       $(group).click(function(){
-        var u = $(this).attr("url");
-        window.location.href = u;
+        let href = $(this).attr("url");
+        let e = window.event;
+        if (e.ctrlKey){
+          window.open(href, '_blank');
+        }else{
+         window.location.href = href;
+        }
       });
 
 

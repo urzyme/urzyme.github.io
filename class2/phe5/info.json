@@ -15,7 +15,7 @@
 		"hinge_str": "structures/PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb",
 		"hinges": [332],
 		"features": {"Catalytic domain": {"acc": "PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb", "range": "94-308", "level": 4},
-					"Protozyme": {"acc": "PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb", "range": "156-194", "level": 2},
+					"Protozyme": {"acc": "PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb", "range": "156-194", "level": 2, "href": "/superfamily/class2/Protozyme"},
 					"Motif 1": {"acc": "PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb", "range": "117-126", "level": 1},
 					"Motif 2": {"acc": "PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb", "range": "178-187", "level": 1},
 					"Motif 3": {"acc": "PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb", "range": "293-302", "level": 1},

@@ -13,7 +13,7 @@
 		"editing": "No",
 		"ref_str": ["structures/PylRS_AF_Arch_Candidatus_Methanomassiliicoccus_intestinalis_Issoire-Mx1_gene16153983.pdb"],
 		"features": {"Catalytic domain": {"acc": "PylRS_AF_Arch_Candidatus_Methanomassiliicoccus_intestinalis_Issoire-Mx1_gene16153983.pdb", "range": "60-255", "level": 4},
-					"Protozyme": {"acc": "PylRS_AF_Arch_Candidatus_Methanomassiliicoccus_intestinalis_Issoire-Mx1_gene16153983.pdb", "range": "115-159", "level": 2},
+					"Protozyme": {"acc": "PylRS_AF_Arch_Candidatus_Methanomassiliicoccus_intestinalis_Issoire-Mx1_gene16153983.pdb", "range": "115-159", "level": 2, "href": "/superfamily/class2/Protozyme"},
 					"Motif 1": {"acc": "PylRS_AF_Arch_Candidatus_Methanomassiliicoccus_intestinalis_Issoire-Mx1_gene16153983.pdb", "range": "78-87", "level": 1},
 					"Motif 2": {"acc": "PylRS_AF_Arch_Candidatus_Methanomassiliicoccus_intestinalis_Issoire-Mx1_gene16153983.pdb", "range": "143-152", "level": 1},
 					"Motif 3": {"acc": "PylRS_AF_Arch_Candidatus_Methanomassiliicoccus_intestinalis_Issoire-Mx1_gene16153983.pdb", "range": "240-249", "level": 1},

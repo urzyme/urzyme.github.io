@@ -43,8 +43,9 @@ for (d in dirs){
 
 			# All structures
 			structuresD = readLines(paste0(domainDir, "/structures.txt"))
-			is.alphafold = sapply(strsplit(gsub(".+/", "", structuresD), "_"), function(ele) ele[2] == "AF")
-			structuresD = paste0(domainDir, "/", structuresD[is.alphafold])
+			#is.alphafold = sapply(strsplit(gsub(".+/", "", structuresD), "_"), function(ele) ele[2] == "AF")
+			#structuresD = structuresD[is.alphafold]
+			structuresD = paste0(domainDir, "/", structuresD)
 			output_full = c(output_full, structuresD)
 
 			
@@ -64,7 +65,7 @@ for (d in dirs){
 
 
 set.seed(1234)
-if (length(output_full) > 20){
+if (length(output_full) > 25){
 	write(paste(output_small, collapse="\n"), outfile)
 }else{
 	if (length(output_full) > 30){
