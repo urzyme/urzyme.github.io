@@ -11,7 +11,7 @@
 		"oligo": "Homodimer",
 		"codons": "UCU, UCC, UCA, UCG, AGU, AGC",
 		"editing": "No",
-		"ref_str": ["structures/SerRS-A_AF_Arch_Conexivisphaera_calida_protein1635512986.pdb"],
+		"ref_str": ["structures/SerRS-A_AF_Arch_Ignisphaera_aggregans_protein304378874.pdb"],
 		"features": {"Catalytic domain": {"acc": "SerRS-A_AF_Arch_Conexivisphaera_calida_protein1635512986.pdb", "range": "223-502", "level": 4},
 					"SerRS-A IM": {"acc": "SerRS-A_AF_Arch_Conexivisphaera_calida_protein1635512986.pdb", "range": "278-313", "level": 3, "href": "/superfamily/class2/SerRS-A_IM"},
 					"Protozyme": {"acc": "SerRS-A_AF_Arch_Conexivisphaera_calida_protein1635512986.pdb", "range": "315-361", "level": 2, "href": "/superfamily/class2/Protozyme"},

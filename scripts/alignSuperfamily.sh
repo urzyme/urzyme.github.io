@@ -13,7 +13,7 @@ do
 
 	cd $c
 	
-	for d in AlaR*/
+	for d in *RS*/
 	do
 
 		echo "$c $d"
@@ -47,10 +47,10 @@ do
 
 
 		# Realign some regions?
-		Rscript ../../../../scripts/realignRegions.R align.ali secondary.fasta ../info.json
-		mv align.ali refined.fasta
-		mv realigned.fasta align.ali
-		Rscript ../../../../scripts/dssp2fasta.R
+		#Rscript ../../../../scripts/realignRegions.R align.ali secondary.fasta ../info.json
+		#mv align.ali refined.fasta
+		#mv realigned.fasta align.ali
+		#Rscript ../../../../scripts/dssp2fasta.R
 
 
 
