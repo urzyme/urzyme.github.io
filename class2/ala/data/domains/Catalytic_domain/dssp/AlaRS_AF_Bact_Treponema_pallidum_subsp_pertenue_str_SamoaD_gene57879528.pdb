@@ -1,4 +1,4 @@
-HELIX    1  H1 XXX A	   8  XXX A   20  1                                  13
+HELIX    1  H1 XXX A	   9  XXX A   20  1                                  12
 SHEET    1  E1 2 XXX A  24 XXX  A  25  0
 HELIX    2  H2 XXX A	  47  XXX A   49  1                                   3
 HELIX    3  H3 XXX A	  50  XXX A   53  1                                   4
@@ -16,16 +16,6 @@ SHEET    7  E7 7 XXX A 178 XXX  A 184  0
 SHEET    8  E814 XXX A 203 XXX  A 216  0
 SHEET    9  E914 XXX A 222 XXX  A 235  0
 HELIX    9  H9 XXX A	 236  XXX A  243  1                                   8
-ATOM    107  N   ALA A   7      -4.416   4.140 -18.948  1.00 95.27           N  
-ATOM    108  H   ALA A   7      -4.978   4.879 -18.551  1.00 95.27           H  
-ATOM    109  CA  ALA A   7      -3.826   3.176 -18.022  1.00 95.27           C  
-ATOM    110  HA  ALA A   7      -2.744   3.310 -18.002  1.00 95.27           H  
-ATOM    111  C   ALA A   7      -4.082   1.714 -18.410  1.00 95.27           C  
-ATOM    112  CB  ALA A   7      -4.396   3.482 -16.633  1.00 95.27           C  
-ATOM    113  HB1 ALA A   7      -4.184   4.520 -16.379  1.00 95.27           H  
-ATOM    114  HB2 ALA A   7      -5.477   3.337 -16.628  1.00 95.27           H  
-ATOM    115  HB3 ALA A   7      -3.944   2.827 -15.888  1.00 95.27           H  
-ATOM    116  O   ALA A   7      -3.173   0.887 -18.361  1.00 95.27           O  
 ATOM    117  N   ASP A   8      -5.298   1.393 -18.850  1.00 94.02           N  
 ATOM    118  H   ASP A   8      -5.966   2.136 -19.001  1.00 94.02           H  
 ATOM    119  CA  ASP A   8      -5.667   0.071 -19.360  1.00 94.02           C  

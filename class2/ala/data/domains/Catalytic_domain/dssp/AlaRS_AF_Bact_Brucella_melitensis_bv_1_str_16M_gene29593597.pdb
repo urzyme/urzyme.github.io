@@ -1,4 +1,4 @@
-HELIX    1  H1 XXX A	   5  XXX A   17  1                                  13
+HELIX    1  H1 XXX A	   6  XXX A   17  1                                  12
 SHEET    1  E1 2 XXX A  21 XXX  A  22  0
 HELIX    2  H2 XXX A	  42  XXX A   46  1                                   5
 HELIX    3  H3 XXX A	  47  XXX A   50  1                                   4
@@ -19,22 +19,6 @@ SHEET    7  E712 XXX A 167 XXX  A 178  0
 SHEET    8  E814 XXX A 198 XXX  A 211  0
 SHEET    9  E914 XXX A 217 XXX  A 230  0
 HELIX   12 H12 XXX A	 231  XXX A  238  1                                   8
-ATOM     37  N   VAL A   4      -7.608  -3.032  30.484  1.00 95.24           N  
-ATOM     38  H   VAL A   4      -8.191  -2.208  30.517  1.00 95.24           H  
-ATOM     39  CA  VAL A   4      -7.506  -3.789  29.215  1.00 95.24           C  
-ATOM     40  HA  VAL A   4      -7.983  -4.760  29.347  1.00 95.24           H  
-ATOM     41  C   VAL A   4      -6.044  -4.074  28.824  1.00 95.24           C  
-ATOM     42  CB  VAL A   4      -8.267  -3.033  28.103  1.00 95.24           C  
-ATOM     43  HB  VAL A   4      -8.077  -1.964  28.200  1.00 95.24           H  
-ATOM     44  O   VAL A   4      -5.712  -5.182  28.399  1.00 95.24           O  
-ATOM     45  CG1 VAL A   4      -7.880  -3.462  26.687  1.00 95.24           C  
-ATOM     46 HG11 VAL A   4      -8.006  -4.541  26.602  1.00 95.24           H  
-ATOM     47 HG12 VAL A   4      -6.848  -3.188  26.471  1.00 95.24           H  
-ATOM     48 HG13 VAL A   4      -8.525  -2.972  25.958  1.00 95.24           H  
-ATOM     49  CG2 VAL A   4      -9.772  -3.294  28.226  1.00 95.24           C  
-ATOM     50 HG21 VAL A   4     -10.322  -2.579  27.614  1.00 95.24           H  
-ATOM     51 HG22 VAL A   4     -10.097  -3.196  29.262  1.00 95.24           H  
-ATOM     52 HG23 VAL A   4     -10.010  -4.305  27.896  1.00 95.24           H  
 ATOM     53  N   ASN A   5      -5.138  -3.116  29.047  1.00 93.92           N  
 ATOM     54  H   ASN A   5      -5.475  -2.234  29.404  1.00 93.92           H  
 ATOM     55  CA  ASN A   5      -3.706  -3.277  28.766  1.00 93.92           C  

@@ -1,4 +1,4 @@
-HELIX    1  H1 XXX A	 266  XXX A  283  1                                  18
+HELIX    1  H1 XXX A	 267  XXX A  283  1                                  17
 HELIX    2  H2 XXX A	 292  XXX A  311  1                                  20
 HELIX    3  H3 XXX A	 313  XXX A  318  1                                   6
 HELIX    4  H4 XXX A	 323  XXX A  334  1                                  12
@@ -7,17 +7,6 @@ HELIX    6  H6 XXX A	 345  XXX A  379  1                                  35
 HELIX    7  H7 XXX A	 387  XXX A  397  1                                  11
 HELIX    8  H8 XXX A	 401  XXX A  410  1                                  10
 HELIX    9  H9 XXX A	 417  XXX A  433  1                                  17
-ATOM   4237  N   SER A 265       2.881 -17.463 -26.984  1.00 90.90           N  
-ATOM   4238  H   SER A 265       2.759 -18.336 -26.491  1.00 90.90           H  
-ATOM   4239  CA  SER A 265       1.708 -16.609 -27.166  1.00 90.90           C  
-ATOM   4240  HA  SER A 265       1.566 -16.471 -28.238  1.00 90.90           H  
-ATOM   4241  C   SER A 265       1.884 -15.223 -26.530  1.00 90.90           C  
-ATOM   4242  CB  SER A 265       0.446 -17.296 -26.631  1.00 90.90           C  
-ATOM   4243  HB2 SER A 265      -0.431 -16.813 -27.063  1.00 90.90           H  
-ATOM   4244  HB3 SER A 265       0.435 -18.346 -26.922  1.00 90.90           H  
-ATOM   4245  O   SER A 265       2.663 -15.025 -25.590  1.00 90.90           O  
-ATOM   4246  OG  SER A 265       0.371 -17.183 -25.226  1.00 90.90           O  
-ATOM   4247  HG  SER A 265      -0.522 -17.459 -25.010  1.00 90.90           H  
 ATOM   4248  N   THR A 266       1.118 -14.241 -27.014  1.00 90.31           N  
 ATOM   4249  H   THR A 266       0.553 -14.422 -27.831  1.00 90.31           H  
 ATOM   4250  CA  THR A 266       1.052 -12.890 -26.431  1.00 90.31           C  
