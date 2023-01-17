@@ -15,13 +15,14 @@
 <script type='text/javascript' src='../../bower_components/bio-pv/bio-pv.min.js'></script>
 
         
-<script type="text/x-mathjax-config">
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
 </script>
 
 
@@ -66,13 +67,18 @@ function init(){
 				
 				<div>
 
-					 Seryl tRNA synthetase (SerRS) is an enzyme which can attach serine to its cognate tRNA as well as the tRNA of selenocysteine: <br><br>
 
 
-					<ol>
-						<li>Ser + tRNA<sup>Ser</sup> + ATP &rightarrow; Ser-tRNA<sup>Ser</sup> + AMP + PP<sub>i</sub> </li>
-						<li>Ser + tRNA<sup>Sec</sup> + ATP &rightarrow; Ser-tRNA<sup>Sec</sup> + AMP + PP<sub>i</sub> </li>
-					</ol>
+				Seryl-tRNA synthetase (SerRS) is an enzyme that plays a crucial role in protein synthesis by catalysing the attachment of the amino acid serine to its cognate tRNA, as well as the tRNA of selenocysteine. These reactions proceed through the following mechanisms:
+
+
+
+					<div class="reaction">
+						<span>
+							$ \text{Ser} + \text{tRNA}^\text{Ser} + \text{ATP} \xrightarrow{\text{SerRS}} \text{Ser-tRNA}^\text{Ser} + \text{AMP} + \text{PP}_i  $<br>
+							$ \text{Ser} + \text{tRNA}^\text{Sec} + \text{ATP} \xrightarrow{\text{SerRS}} \text{Ser-tRNA}^\text{Sec} + \text{AMP} + \text{PP}_i  $
+						</span>
+					</div>
 
 
 					This first reaction enables the incorporation of serine into the polypeptide, while the second enables incorporation of the 21st proteogenic amino acid selenocysteine (Lee et al. 1989). The latter is achieved by incorporating selenocysteine at the position of the UGA stop codon, rather than stopping translation. The efficieny of ths process is determined by a range of regulatory factors. <br><br>

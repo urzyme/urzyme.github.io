@@ -15,14 +15,16 @@
 <script type='text/javascript' src='../../bower_components/bio-pv/bio-pv.min.js'></script>
 
         
-<script type="text/x-mathjax-config">
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
 </script>
+
 
 
 
@@ -62,30 +64,29 @@ function init(){
 				<div>
 
 
-					The archaeal-like prolyl tRNA synthetase (ProRS-A) is an enzyme which attaches proline to its cognate tRNA: <br>
 
-
-					<ul>
-						<li>Pro + tRNA<sup>Pro</sup> + ATP &rightarrow; Pro-tRNA<sup>Thr</sup> + AMP + PP<sub>i</sub> </li>
-					</ul>
-
-
-					<a href="../pro2">ProRS-B</a> is a closely related enzyme which is instead found in most bacteria.  
-					ProRS-A and ProRS-B are both part of subclass IIa alongside <a href="../his">HisRS</a>, <a href="../ser1">SerRS</a>, <a href="../thr">ThrRS</a>, and the <a href="../gly1">dimeric GlyRS</a> (Gomez et al. 2020, Valencia-Sánchez et al. 2016, Perona et al. 2012). With the exception of SerRS, the anticodon binding domains of subclass IIa are homologous and reside at the C-terminal (Wolf et al. 1999). <br><br> 
+					The archaeal-like prolyl-tRNA synthetase (ProRS-A) is an enzyme that plays a crucial role in protein synthesis by catalysing the attachment of the amino acid proline to its cognate tRNA:
 
 
 
-
-						ProRS-A and B possess distinct domain architectures (Musier-Forsyth et al. 2005). The bacterial-like form ProRS-B contains an editing domain inserted within the catalytic domain. The eukaryote-like form ProRS-A instead have a C-terminal zinc binding domain around 80 amino acids in length. The functional activity of the zinc binding domain remains elusive, however it appears to be essential for ProRS catalytic activity (Vasu et al. 2021). <br><br>
-
-
-							The catalytic domain of ProRS is quite typical of a class II aaRS. Like most members of the superfamily, ATP binding is coordinated by the arginine tweezers, located in motifs 2 and 3 (Kaiser et al. 2018). The catalytic domain contains six antiparallel strands. <br><br>
-
-
-						Editing in ProRS occurs at the post-transfer level. In ProRS-B, the deacylation of mischarged cysteine and alanine can occur through an edit domain located between motifs 2 and 3 of the catalytic domain. However, this domain is lacking in ProRS-A, and the process is quite inefficient for cysteine in particular. As such, there are trans-acting factors which remove these mischarged residues from tRNA<sup>Pro</sup> - YbaK for cysteine and ProXp-ala for alanine. These factors are paralogs of the ProRS-B editing domain (Vargas-Rodriguez and Musier-Forsyth 2013, An and Musier-Forsyth 2004). <br><br>
+					<div class="reaction">
+						<span>
+							$ \text{Pro} + \text{tRNA}^\text{Pro} + \text{ATP} \xrightarrow{\text{ProRS-A}} \text{Pro-tRNA}^\text{Pro} + \text{AMP} + \text{PP}_i  $
+						</span>
+					</div>
 
 
-						There is also a fused glutamyl-prolyl tRNA synthetase (EPRS) which exists in most animals. This protein contains the catalytic domains from both GluRS and ProRS, as well as the ProRS zinc binding domain (Vasu et al. 2021). Glumatic acid is a metabolic precursor for proline, which leads a possible explanation for how this protein originated (Eswarappa et al. 2018). 
+				ProRS-A is closely related to another enzyme, <a href="../pro2">ProRS-B</a>, which is found in most bacteria. Both ProRS-A and ProRS-B belong to the subclass IIa, which also includes enzymes such as <a href="../his">HisRS</a>, <a href="../ser1">SerRS</a>, <a href="../thr">ThrRS</a>, and the <a href="../gly1">dimeric GlyRS</a> (Gomez et al. 2020, Valencia-Sánchez et al. 2016, Perona et al. 2012).
+				 The <a href="/superfamily/class2/tRNA_binding_domain_HGPT">anticodon binding domains</a> of subclass IIa, with the exception of SerRS, are homologous and are located at the C-terminal end (Wolf et al. 1999).<br><br> 
+
+				ProRS-A and ProRS-B possess distinct domain architectures (Musier-Forsyth et al. 2005). ProRS-B contains an editing domain inserted within the catalytic domain (the <a href="/superfamily/class2/ProRS-B_IM/">ProRS-B insertion module</a>), while ProRS-A has a C-terminal zinc binding domain that is around 80 amino acids in length. The functional activity of the zinc binding domain remains unclear, but it appears to be essential for ProRS catalytic activity (Vasu et al. 2021). The catalytic domains of ProRS-A and B are quite typical of class II aminoacyl-tRNA synthetases. Like most members of the superfamily, ATP binding is coordinated by the arginine tweezers, located in motifs 2 and 3 (Kaiser et al. 2018).  <br><br>
+
+				ProRS-A also has an editing function, which occurs at the post-transfer level to remove mischarged residues. In ProRS-B, the deacylation of mischarged cysteine and alanine can occur through an edit domain located between motifs 2 and 3 of the catalytic domain. However, this domain is absent in ProRS-A, and the process is quite inefficient for cysteine in particular. As such, there are trans-acting factors which remove these mischarged residues from tRNA<sup>Pro</sup>, such as YbaK for cysteine and ProXp-ala for alanine. These factors are paralogs of the ProRS-B editing domain (Vargas-Rodriguez and Musier-Forsyth 2013, An and Musier-Forsyth 2004). <br><br>
+
+				A fused glutamyl-prolyl tRNA synthetase (EPRS) also exists in most animals. This protein contains the catalytic domains from both <a href="/class1/glu1">GluRS</a> and ProRS-A, as well as the ProRS-A zinc binding domain. Glutamic acid is a metabolic precursor for proline, which suggests a possible explanation for the origin of this protein (Eswarappa et al. 2018).
+
+
+
 
 
 

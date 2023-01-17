@@ -21,6 +21,8 @@ output_small = character(0)
 output_full = character(0)
 
 
+
+nfamilies = 0
 dirs = list.dirs(wd, recursive=F)
 for (d in dirs){
 
@@ -37,6 +39,9 @@ for (d in dirs){
 		fileDir = paste0(domainDir, "/", ref_str)
 
 		if (file.exists(fileDir)){
+
+
+			nfamilies = nfamilies + 1
 
 			# Ref str
 			output_small = c(output_small, fileDir)
@@ -65,7 +70,7 @@ for (d in dirs){
 
 
 set.seed(1234)
-if (length(output_full) > 25){
+if (nfamilies >= 4){
 	write(paste(output_small, collapse="\n"), outfile)
 }else{
 	if (length(output_full) > 30){

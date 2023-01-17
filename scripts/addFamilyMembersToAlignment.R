@@ -2,7 +2,7 @@ library(rjson)
 library(seqinr)
 
 
-# Add family members to the alignment by using the existsing alignment to their reference structure
+# Add family members to the alignment by using the exissing alignment to their reference structure
 args = commandArgs(trailingOnly=TRUE)
 wd = args[1]
 domain = args[2]

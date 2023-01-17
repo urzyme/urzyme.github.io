@@ -15,13 +15,15 @@
 <script type='text/javascript' src='../../bower_components/bio-pv/bio-pv.min.js'></script>
 
         
-<script type="text/x-mathjax-config">
+        
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
 </script>
 
 
@@ -64,30 +66,27 @@ function init(){
 
 
 
-					Threonyl tRNA synthetase (ThrRS) is an enzyme which attaches threonine to its cognate tRNA: <br>
 
-
-					<ul>
-						<li>Thr + tRNA<sup>Thr</sup> + ATP &rightarrow; Thr-tRNA<sup>Thr</sup> + AMP + PP<sub>i</sub> </li>
-					</ul>
-
-
-					ThrRS is part of subclass IIa alongside <a href="../his">HisRS</a>, <a href="../pro1">ProRS</a>, <a href="../ser1">SerRS</a>, and the <a href="../gly1">dimeric GlyRS</a> (Gomez et al. 2020, Valencia-Sánchez et al. 2016, Perona et al. 2012). With the exception of SerRS, the anticodon binding domains of subclass IIa are homologous and reside at the C-terminal (Wolf et al. 1999). <br><br> 
+				Threonyl-tRNA synthetase (ThrRS) is an enzyme that plays a crucial role in protein synthesis by catalysing the attachment of the amino acid threonine to its cognate tRNA:
 
 
 
-					The catalytic domain of ThrRS is quite typical of a class II aaRS. Like most members of the superfamily, ATP binding is coordinated by the arginine tweezers, located in motifs 2 and 3 (Kaiser et al. 2018). The catalytic domain contains six or seven antiparallel strands. <br><br>
+					<div class="reaction">
+						<span>
+							$ \text{Thr} + \text{tRNA}^\text{Thr} + \text{ATP} \xrightarrow{\text{ThrRS}} \text{Thr-tRNA}^\text{Thr} + \text{AMP} + \text{PP}_i  $
+						</span>
+					</div>
 
 
-					Editing in ThrRS occurs at the post-transfer level. This process has been characterised for the removal of mischarged serines from tRNA<sup>Thr</sup> (Dock-Bregeon et al. 2000). This function is achieved through the two N-termimal domains N1 and N2 (Dock-Bregeon et a. 2004). A non-homologous N-terminal editing domain (which also targets mischarged serine) is present in some archaea instead of the N1 and N2 domains (Hussain et al. 2006).
-					The editing domain of ThrRS is upstream of the catalytic domain, and is homologous with that of <a href="../ala">AlaRS</a>, which conversely resides downstream of the catalytic domain (Sankaranarayanan et al. 1999). 
-				
-				<!--
-					Interesting N-terminal domains (<a href="https://www.rcsb.org/groups/sequence/polymer_entity/Q8NW68">rcsb</a>) including one from beta-grasp superfamily (<a href="http://www.cathdb.info/version/latest/superfamily/3.10.20.30">CATH</a>). Their functions are unclear to me. C-terminal anticodon binding domain part of a superfamily alongside that of HisRS, GlyRS, and ProRS (<a href="http://www.ebi.ac.uk/interpro/entry/InterPro/IPR036621/">interpro</a>).
-		
-				
-				-->
-				
+
+				ThrRS belongs to the subclass IIa, which includes other enzymes such as <a href="../his">HisRS</a>, <a href="../pro1">ProRS</a>, <a href="../ser1">SerRS</a>, and the <a href="../gly1">dimeric GlyRS</a> (Gomez et al. 2020, Valencia-Sánchez et al. 2016, Perona et al. 2012). The <a href="/superfamily/class2/tRNA_binding_domain_HGPT">anticodon binding domains</a> of subclass IIa, with the exception of SerRS, are homologous and are located at the C-terminal end (Wolf et al. 1999). 
+				The catalytic domain of ThrRS is typical of a class II aminoacyl-tRNA synthetase. Like most members of the superfamily, ATP binding is coordinated by the arginine tweezers, located in motifs 2 and 3 (Kaiser et al. 2018). 
+				The catalytic domain is characterised by the ~40 residue <a href="/superfamily/class2/ThrRS_IM/">ThrRS insertion module</a> which resides between motits 2 and 3 and contains a short &beta; strand which runs parallel with the six stranded anti-parallel fold. <br><br>
+
+				ThrRS also has an editing function, which occurs at the post-transfer level to remove mischarged serines from tRNA<sup>Thr</sup> (Dock-Bregeon et al. 2000). This is achieved through the two N-terminal domains N1 and N2 (Dock-Bregeon et a. 2004). In some archaea, a non-homologous N-terminal editing domain, which also targets mischarged serine, is present instead of the N1 and N2 domains (Hussain et al. 2006).
+				The <a href="/superfamily/class2/Editing_domain_AT/">editing domain</a> of ThrRS is located upstream of the catalytic domain and is homologous with that of <a href="../ala">AlaRS</a>, which is conversely located downstream of the catalytic domain (Sankaranarayanan et al. 1999). This highlights the complex evolutionary history of aminoacyl-tRNA synthetases and the diversity of structural arrangements observed among these enzymes.
+
+
 			
 				</div>
 				

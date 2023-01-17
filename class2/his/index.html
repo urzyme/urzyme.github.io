@@ -15,14 +15,16 @@
 <script type='text/javascript' src='../../bower_components/bio-pv/bio-pv.min.js'></script>
 
         
-<script type="text/x-mathjax-config">
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
 </script>
+
 
 
 
@@ -63,22 +65,27 @@ function init(){
 				<div>
 
 
-					Histidyl tRNA synthetase (HisRS) is an enzyme which attaches histidine to its cognate tRNA: <br>
 
-
-					<ul>
-						<li>His + tRNA<sup>His</sup> + ATP &rightarrow; His-tRNA<sup>His</sup> + AMP + PP<sub>i</sub> </li>
-					</ul>
-
-							HisRS is part of subclass IIa alongside <a href="../pro1">ProRS</a>, <a href="../ser1">SerRS</a>, <a href="../thr">ThrRS</a>, and the <a href="../gly1">dimeric GlyRS</a> (Gomez et al. 2020, Valencia-Sánchez et al. 2016, Perona et al. 2012). With the exception of SerRS, the anticodon binding domains of subclass IIa are homologous and reside at the C-terminal (Wolf et al. 1999). <br><br> 
+				Histidyl-tRNA synthetase (HisRS) is an enzyme that plays a crucial role in protein synthesis by catalysing the attachment of the amino acid histidine to its cognate tRNA:
 
 
 
+					<div class="reaction">
+						<span>
+							$ \text{His} + \text{tRNA}^\text{His} + \text{ATP} \xrightarrow{\text{HisRS}} \text{His-tRNA}^\text{Thr} + \text{AMP} + \text{PP}_i  $
+						</span>
+					</div>
 
-						The C-terminal catalytic domain of the archaeal HisRS is quite typical of a class II aaRS. Like most members of the superfamily, ATP binding is coordinated by the arginine tweezers, located in motifs 2 and 3 (Kaiser et al. 2018). The catalytic domain contains six or seven antiparallel strands. Short urzyme constructs of around 130 amino acids - centered around motifs 1 and 2 - can yield fast catalytic activity, suggesting that the regions downstream of motif 2 may not have been essential for early ancestral class II catalysis (Li et al. 2011).  <br><br>
+
+					HisRS belongs to the subclass IIa, which includes other enzymes such as <a href="../pro1">ProRS</a>, <a href="../ser1">SerRS</a>, <a href="../thr">ThrRS</a>, and the <a href="../gly1">dimeric GlyRS</a> (Gomez et al. 2020, Valencia-Sánchez et al. 2016, Perona et al. 2012). The <a href="/superfamily/class2/tRNA_binding_domain_HGPT">anticodon binding domains</a> of subclass IIa, with the exception of SerRS, are homologous and are located at the C-terminal end (Wolf et al. 1999). Unlike some other enzymes in this subclass, HisRS does not have editing activity (Gomez et al. 2020).<br><br>
+
+					The C-terminal catalytic domain of the archaeal HisRS is typical of a class II aminoacyl-tRNA synthetase. Like most members of the superfamily, ATP binding is coordinated by the arginine tweezers, located in motifs 2 and 3 (Kaiser et al. 2018). Studies have shown that even short enzyme constructs, around 130 amino acids, centered around motifs 1 and 2, can yield fast catalytic activity, suggesting that the regions downstream of motif 2 may have been later additions in early evolutionary history  (Li et al. 2011). 
+					The catalytic domain is characterised by the ~100 residue <a href="/superfamily/class2/HisRS_IM/">HisRS insertion module</a> which resides between motits 2 and 3 and contains a short &beta; strand which runs parallel with the six stranded anti-parallel fold. <br><br>
+
+  <br><br>
 
 
-							It appears that HisRS lacks editing activity (Gomez et al. 2020).
+							
 			
 			
 				</div>

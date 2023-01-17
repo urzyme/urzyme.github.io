@@ -14,15 +14,18 @@
 <script language='JavaScript' type='text/JavaScript' src="/js/util.js"></script>
 <script type='text/javascript' src='../../bower_components/bio-pv/bio-pv.min.js'></script>
 
+
         
-<script type="text/x-mathjax-config">
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
 </script>
+
 
 
 
@@ -68,33 +71,37 @@ function init(){
 				-->
 
 
-					Alanyl tRNA synthetase (AlaRS) is an enzyme which attaches alanine to its cognate tRNA: <br>
+					Alanyl-tRNA synthetase (AlaRS) is an enzyme that plays a crucial role in protein synthesis by catalysing the attachment of the amino acid alanine to its cognate tRNA:
+
+
 
 
 					<div class="reaction">
 						<span>
-							Ala + tRNA<sup>Ala</sup> + ATP 	&#129094; Ala-tRNA<sup>Ala</sup> + AMP + PP<sub>i</sub> 
+							$ \text{Ala} + \text{tRNA}^\text{Ala} + \text{ATP} \xrightarrow{\text{AlaRS}} \text{Ala-tRNA}^\text{Ala} + \text{AMP} + \text{PP}_i  $
 						</span>
 					</div>
-					
+
+
 					
 					
 					The catalytic core of AlaRS is similar to the <a href="../gly2">tetrameric GlyRS</a> found mainly in bacteria and belongs to subclass IId (Valencia-Sánchez et al. 2016). 
-					AlaRS is one of the larger members of the class II superfamily, and contains a unique domain architecture. 
-					However, its catalytic domain is one of the smallest.
+
+					Although the catalytic domain of AlaRS is one of the smallest in the superfamily, the full enzyme is quite large and contains a unique domain architecture. 
 					Homodimerization in AlaRS occurs via a C-terminal coiled coil, unlike most class II families which dimerize at the catalytic core  (Naganuma et al. 2009).  
 					The alpha helix rich tRNA binding domain primarily recognizes elements within the acceptor stem of tRNA, as opposed to the anticodon (Naganuma et al. 2009). <br><br>
 
 					The catalytic domain of AlaRS lacks a stretch of short secondary structural elements between motifs 1 and 2, which are typically found in other class II proteins. 
 					The sequences at the positions of motifs 1 and 2 are also quite distant from other class members. 
 					Aside from these idiosyncrasies, the catalytic domain is fairly standard and contains all seven antiparallel strands. 
-					Like most members of the superfamily, ATP binding is coordinated by the arginine tweezers, located in motifs 2 and 3 (Kaiser et al. 2018). <br><br>
+					Like most members of the superfamily, ATP binding is coordinated by the arginine tweezers, located in motifs 2 and 3 (Kaiser et al. 2018).
+					The bacterial and eukaryotic catalytic domain is characterised by the 30-40 residue <a href="/superfamily/class2/AlaRS_IM/">AlaRS insertion module</a> which resides between motits 2 and 3 and contains a short &beta; strand which runs parallel with the six stranded anti-parallel fold.   <br><br>
 
 					Editing in AlaRS occurs at the post-transfer level through an editing domain which expunges mischarged glycyl and seryl groups from tRNA<sup>Ala</sup> (Tsui et al. 1981, Guo et al. 2009b).  
 					AlaX proteins, which are homologous with the editing domain, also target Ser-tRNA<sup>Ala</sup> (Beebe et al. 2008). 
 					This double checkpoint system minimizes serine-for-alanine mistranslations, which are known to cause profound problems in nature (Guo et al. 2009a, Schimmel 2011). 
 					The C-ala domain is tethered to the editing domain through a coiled coil and promotes cooperative binding between the catalytic core and the editing domains to tRNA<sup>Ala</sup> (Guo et al. 2009b). 
-					The editing domain of AlaRS is downstream of the catalytic domain and is homologous with that of <a href="../thr">ThrRS</a>, which conversely resides upstream of the catalytic domain (Sankaranarayanan et al. 1999).
+					The <a href="/superfamily/class2/Editing_domain_AT/">editing domain</a> of AlaRS is downstream of the catalytic domain and is homologous with that of <a href="../thr">ThrRS</a>, which conversely resides upstream of the catalytic domain (Sankaranarayanan et al. 1999).
 										
 										
 

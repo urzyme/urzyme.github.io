@@ -15,13 +15,14 @@
 <script type='text/javascript' src='../../bower_components/bio-pv/bio-pv.min.js'></script>
 
         
-<script type="text/x-mathjax-config">
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
 </script>
 
 
@@ -61,26 +62,25 @@ function init(){
 			<li class="notes">
 				
 				<div>
-											The dimeric GlyRS is part of subclass IIa alongside <a href="../pro1">ProRS</a>, <a href="../ser1">SerRS</a>, <a href="../thr">ThrRS</a>, and <a href="../his">HisRS</a> (Gomez et al. 2020, Valencia-Sánchez et al. 2016, Perona et al. 2012). With the exception of SerRS, the anticodon binding domains of subclass IIa are homologous and reside at the C-terminal (Wolf et al. 1999). <br><br> 
-
-
-											The domain architecture of GlyRS is minimal, similar to HisRS. There is no editing domain and it appears that GlyRS may lack editing activity altogether (Gomez et al. 2020). Many species possess an insertion domain between motifs 2 and 3 of the catalytic domain. This domain exists in many archaea and eukaryotes, including <i>Saccharomyces cerevisiae</i>, but is lacking in humans. It's functional and structural roles remain unclear. <br><br>
 
 
 
-												GlyRS is present in most archaea, eukaryotes, and some bacteria and is phylogenetically distinct from the <a href="../gly2">tetrameric GlyRS</a>, which is present in most bacteria (Shiba 2005). Some species of yeast possess a second GlyRS gene, which does not contain the lysine rich inserts between motifs 1 and 2 (Chen et al. 2012).
+						The Eukaryote-like glycyl-tRNA synthetase (GlyRS-E) is a homodimeric enzyme that plays a crucial role in protein synthesis by catalysing the attachment of the amino acid glycine to its cognate tRNA:
 
 
-													<!-- 
-												TODO
-												Tetramer in yeast? https://www.sciencedirect.com/science/article/pii/S0014579307005856#bib1
-												Two translation start sites in humans
-												This gly3 specific insertion is missing from the pdb structure but part of the sequence
 
-												In most eukaryotes, the nuclear and mitochondrial glyRS are the same. There are some exceptions on this database
-												https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5985729/
+							<div class="reaction">
+								<span>
+									$ \text{Gly} + \text{tRNA}^\text{Gly} + \text{ATP} \xrightarrow{\text{GlyRS-E}} \text{Gly-tRNA}^\text{Gly} + \text{AMP} + \text{PP}_i  $
+								</span>
+							</div>
 
-												-->
+							GlyRS-E belongs to the subclass IIa of aminoacyl tRNA synthetases, which also includes <a href="../pro1">ProRS</a>, <a href="../ser1">SerRS</a>, <a href="../thr">ThrRS</a>, <a href="../his">HisRS</a>, and the archaeal-like <a href="../gly3">GlyRS-E</a> (Gomez et al., 2020; Valencia-Sánchez et al., 2016; Perona et al., 2012). The <a href="/superfamily/class2/tRNA_binding_domain_HGPT">anticodon binding domains</a> of subclass IIa, with the exception of SerRS, are homologous and are located at the C-terminal end (Wolf et al., 1999). The catalytic domains of GlyRS-A and GlyRS-E are characterised by the presence of two insertion modules, GlyRS-AE insertion modules <a href="/superfamily/class2/GlyRS-AE_IM1/">1</a> and <a href="/superfamily/class2/GlyRS-AE_IM2/">2</a>, which are located between motifs 2 and 3. Insertion module 1 contains a short &beta; strand which runs parallel with the six stranded anti-parallel fold. Insertion module 2 contains a lysine rich insert in GlyRS-E, which is absent from GlyRS-A. The lysine rich insertion may be involved in differentiating between cytoplasmic and mitochondrial tRNA Gly acceptor stems (Chen et al. 2012). The entire module is absent in bacteria. <br><br>
+
+							The domain architecture of GlyRS-E is minimal, similar to HisRS and it appears to lack editing activity altogether (Gomez et al., 2020). GlyRS-E is present in eukaryotes and it stands apart from other aminoacyl tRNA synthetases because it is involved in translation in both the cytoplasm as well as the mitochondria, unlike most aminoacyl-tRNA synthetases which are localised into one of the two compartments (Boczonadi et al., 2018).
+
+
+	
 			
 				</div>
 				
@@ -153,6 +153,10 @@ function init(){
 
 			<div>
 				Chen, Shun-Jia, et al. "Saccharomyces cerevisiae possesses a stress-inducible glycyl-tRNA synthetase gene." PloS one 7.3 (2012): e33363.
+			</div>
+
+			<div>
+				Boczonadi, Veronika, et al. "Mutations in glycyl-tRNA synthetase impair mitochondrial metabolism in neurons." Human molecular genetics 27.12 (2018): 2187-2204.
 			</div>
 
 

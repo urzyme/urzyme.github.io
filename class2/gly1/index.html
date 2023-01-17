@@ -15,13 +15,14 @@
 <script type='text/javascript' src='../../bower_components/bio-pv/bio-pv.min.js'></script>
 
         
-<script type="text/x-mathjax-config">
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
 </script>
 
 
@@ -62,20 +63,27 @@ function init(){
 				
 				<div>
 
-											The dimeric GlyRS is part of subclass IIa alongside <a href="../pro1">ProRS</a>, <a href="../ser1">SerRS</a>, <a href="../thr">ThrRS</a>, and <a href="../his">HisRS</a> (Gomez et al. 2020, Valencia-Sánchez et al. 2016, Perona et al. 2012). With the exception of SerRS, the anticodon binding domains of subclass IIa are homologous and reside at the C-terminal (Wolf et al. 1999). <br><br> 
 
 
-											The domain architecture of GlyRS is minimal, similar to HisRS. There is no editing domain and it appears that GlyRS may lack editing activity altogether (Gomez et al. 2020). Many species possess an insertion domain between motifs 2 and 3 of the catalytic domain. This domain exists in many archaea and eukaryotes, including <i>Saccharomyces cerevisiae</i>, but is lacking in humans. It's functional and structural roles remain unclear. <br><br>
+						The Archael-like glycyl-tRNA synthetase (GlyRS-A) is a homodimeric enzyme that plays a crucial role in protein synthesis by catalysing the attachment of the amino acid glycine to its cognate tRNA:
 
 
 
-												GlyRS is present in most archaea, eukaryotes, and some bacteria and is phylogenetically distinct from the <a href="../gly2">tetrameric GlyRS</a>, which is present in most bacteria (Shiba 2005). Some species of yeast possess a second GlyRS gene, which does not contain the lysine rich inserts between motifs 1 and 2 (Chen et al. 2012).
+							<div class="reaction">
+								<span>
+									$ \text{Gly} + \text{tRNA}^\text{Gly} + \text{ATP} \xrightarrow{\text{GlyRS-A}} \text{Gly-tRNA}^\text{Gly} + \text{AMP} + \text{PP}_i  $
+								</span>
+							</div>
 
-												<!-- 
-												TODO
-												Tetramer in yeast? https://www.sciencedirect.com/science/article/pii/S0014579307005856#bib1
-												Two translation start sites in humans
-												-->
+
+
+								GlyRS-A belongs to the subclass IIa of aminoacyl tRNA synthetases, which also includes <a href="../pro1">ProRS</a>, <a href="../ser1">SerRS</a>, <a href="../thr">ThrRS</a>, <a href="../his">HisRS</a>, and the eukaryotic-like <a href="../gly3">GlyRS-E</a> (Gomez et al. 2020, Valencia-Sánchez et al. 2016, Perona et al. 2012). The <a href="/superfamily/class2/tRNA_binding_domain_HGPT">anticodon binding domains</a> of subclass IIa, with the exception of SerRS, are homologous and are located at the C-terminal end (Wolf et al. 1999). 
+								 The catalytic domains of GlyRS-A and GlyRS-E are characterized by the presence of two insertion modules, GlyRS-AE insertion modules <a href="/superfamily/class2/GlyRS-AE_IM1/">1</a> and <a href="/superfamily/class2/GlyRS-AE_IM2/">2</a>, which are located between motifs 2 and 3. Insertion module 1 contains a short &beta; strand which runs parallel with the six stranded anti-parallel fold. Insertion module 2 is absent in bacteria. <br><br> 
+
+								The domain architecture of GlyRS-A is minimal, similar to HisRS and it appears to lack editing activity altogether (Gomez et al. 2020). GlyRS-A is present in most archaea and some bacteria, and is phylogenetically distinct from the <a href="../gly2">tetrameric GlyRS</a>, which is present in most bacteria (Shiba 2005). 
+
+
+
 
 				</div>
 				
@@ -146,9 +154,6 @@ function init(){
 				Shiba, Kiyotaka. "The Aminoacyl-tRNA Synthetases" CRC Press (2005): Chapter 13: Glycyl-tRNA Synthetases.
 			</div>
 
-			<div>
-				Chen, Shun-Jia, et al. "Saccharomyces cerevisiae possesses a stress-inducible glycyl-tRNA synthetase gene." PloS one 7.3 (2012): e33363.
-			</div>
 
 
 		
