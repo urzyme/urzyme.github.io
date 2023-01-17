@@ -15,13 +15,14 @@
 <script type='text/javascript' src='../../bower_components/bio-pv/bio-pv.min.js'></script>
 
         
-<script type="text/x-mathjax-config">
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
 </script>
 
 
@@ -62,26 +63,24 @@ function init(){
 				
 				<div>
 
-						Pyrrolysyl tRNA synthetase (PylRS) is an enzyme which attaches pyrrolysine - the 22nd genetically encoded amino acid - to its cognate tRNA: <br><br>
 
 
-					<ul>
-						<li>Pyl + tRNA<sup>Pyl</sup> + ATP &rightarrow; Pyl-tRNA<sup>Pyl</sup> + AMP + PP<sub>i</sub> </li>
-					</ul>
-
-					Pyrrolysine is encoded by the stop codon UAG in some archaea and bacteria (Srinivasan et al. 2002). This is achieved through a specialised molecule tRNA<sup>Pyl</sup> which recognises the UAG stop codon.   <br><br>
+				Pyrrolysyl-tRNA synthetase (PylRS) is an enzyme that plays a crucial role in protein synthesis by catalysing the attachment of the amino acid pyrrolysine to its cognate tRNA:
 
 
-					This domain architecture differs between archaea and bacteria (Srinivasan et al. 2002).
-					The archael PylRS contains two domains - an N-terminal domain involved in tRNA recognition, and a C-terminal catalytic domain, which is also involved in tRNA binding. 
-					The full-length archael PylRS was found to be quite insoluble, and hence the structures of the domains have been solved in isolation (Suzuki et al. 2017).
-					However, the bacterial PylRS is encoded by two genes - <i>pylSn</i> (encoding the N-terminal domain), and <i>pylCn</i> (encoding the C-terminal domain). The latter protein is dimeric (Lee et al. 2008), but the full bacterial enzyme has not been studied as extensively as the archaeal enzyme, and likely exists as a heterotetramer. <br><br>
+
+					<div class="reaction">
+						<span>
+							$ \text{Pyl} + \text{tRNA}^\text{Pyl} + \text{ATP} \xrightarrow{\text{PylRS}} \text{Pyl-tRNA}^\text{Pyl} + \text{AMP} + \text{PP}_i  $
+						</span>
+					</div>
 
 
-					 	The catalytic domain of PylRS is similar to that of <a href="../sep">SepRS</a> and the five PheRS familes. Collectivey, these members constitute subclass IIc (Kavran et al. 2007, Perona et al. 2012, Valencia-Sánchez et al. 2016, Gomez et al. 2020). The catalytic domain itself is quite typical among class II, and contains six antiparallel strands.  Like most members of the superfamily, ATP binding is coordinated by the arginine tweezers, located in motifs 2 and 3 (Kaiser et al. 2018).<br><br>
 
-					 	The N-terminal domain binds the T-loop and variable loop of tRNA<sup>Pyl</sup> (Suzuki et al. 2017), in contrast with many amino acyl tRNA synthetases which instead recognise the anticodon. It appears that PylRS lacks editing activity (Gomez et al. 2020).
 
+				Pyrrolysine is encoded by the stop codon UAG in some archaea and bacteria (Srinivasan et al. 2002), which is achieved through a specialized molecule tRNA<sup>Pyl</sup> that recognizes the UAG stop codon. The domain architecture of PylRS differs between archaea and bacteria (Srinivasan et al. 2002). The archaeal PylRS contains two domains: an N-terminal domain involved in tRNA recognition, and a C-terminal catalytic domain, which is also involved in tRNA binding. The full-length archaeal PylRS was found to be quite insoluble (Suzuki et al. 2017). In contrast, the bacterial PylRS is encoded by two genes, pylSn (encoding the N-terminal domain), and pylCn (encoding the C-terminal domain). The latter protein is dimeric (Lee et al. 2008), but the full bacterial enzyme has not been studied as extensively as the archaeal enzyme, and likely exists as a heterotetramer.  <br><br>
+
+				The catalytic domain of PylRS is similar to that of <a href="../sep">SepRS</a> and the five PheRS families, which collectively constitute subclass IIc (Kavran et al. 2007, Perona et al. 2012, Valencia-Sánchez et al. 2016, Gomez et al. 2020). The catalytic domain is typical among class II enzymes, containing six antiparallel strands. The binding of ATP is coordinated by the arginine tweezers, located in motifs 2 and 3 (Kaiser et al. 2018). The N-terminal domain binds the T-loop and variable loop of tRNA<sup>Pyl</sup> (Suzuki et al. 2017) in contrast with many amino acyl tRNA synthetases which instead recognize the anticodon. It appears that PylRS lacks editing activity (Gomez et al. 2020).
 
 			
 				</div>

@@ -1,6 +1,6 @@
 {
 		"name": "SepRS",
-		"fullName": "O-phosphoseryl tRNA Synthetase",
+		"fullName": "O-phosphoseryl-tRNA Synthetase",
 		"icon": "/fig/icon_cys.png",
 		"substrate": "O-phosphoserine",
 		"incorporates": "Cysteine",
@@ -11,6 +11,7 @@
 		"editing": "No",
 		"ref_str": ["structures/SepRS_AF_Arch_Methanothrix_thermoacetophila_PT_gene4462697.pdb"],
 		"features": {"Catalytic domain": {"acc": "SepRS_AF_Arch_Methanothrix_thermoacetophila_PT_gene4462697.pdb", "range": "45-344", "level": 4},
+					"tRNA binding domain": {"acc": "SepRS_AF_Arch_Methanothrix_thermoacetophila_PT_gene4462697.pdb", "range": "433-524", "level": 4},
 					"SepRS IM": {"acc": "SepRS_AF_Arch_Methanothrix_thermoacetophila_PT_gene4462697.pdb", "range": "100-176", "level": 3, "href": "/superfamily/class2/SepRS_IM"},
 					"Protozyme": {"acc": "SepRS_AF_Arch_Methanothrix_thermoacetophila_PT_gene4462697.pdb", "range": "180-229", "level": 2, "href": "/superfamily/class2/Protozyme"},
 					"Motif 1": {"acc": "SepRS_AF_Arch_Methanothrix_thermoacetophila_PT_gene4462697.pdb", "range": "64-73", "level": 1},
