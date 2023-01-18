@@ -263,7 +263,7 @@ table.maptable td.selected, th.selected {
 }
 
 
-#catalyticSVG g.selected polygon, #catalyticSVG g.selected rect{
+#catalyticSVG g.selected polygon, #catalyticSVG g.selected rect, #catalyticSVG g.selected ellipse{
 	fill:#008cba !important;
 }
 
@@ -272,7 +272,7 @@ table.maptable td.selected, th.selected {
 	stroke-width: 6px !important;
 }
 
-#catalyticSVG g.deselected polygon, #catalyticSVG g.deselected rect{
+#catalyticSVG g.deselected polygon, #catalyticSVG g.deselected rect, #catalyticSVG g.deselected ellipse{
 	fill:#d3d3d3 !important;
 }
 

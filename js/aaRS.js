@@ -72,6 +72,7 @@ CATALYTIC_DOMAIN_LOOP_WIDTH = 3;
 CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS = 7;
 CATALYTIC_DOMAIN_FONT_SIZE = 18;
 CATALYTIC_DOMAIN_MOTIF_FONT_SIZE = 15;
+CATALYTIC_DOMAIN_ARROW_BG_WIDTH = 4;
 
 
 STRAND_ARROW_HEAD_LEN_1 = 5;
@@ -79,7 +80,7 @@ STRAND_ARROW_HEAD_LEN_2 = 6;
 STRAND_ARROW_BASE_WIDTH = 7;
 STRAND_ARROW_HEAD_WIDTH = 13;
 HELIX_WIDTH = 11;
-HELIX_CORNER_RADIUS = 3;
+HELIX_CORNER_RADIUS = 1.75;
 
 if (IS_MOBILE){
 	
@@ -103,6 +104,7 @@ if (IS_MOBILE){
 	CATALYTIC_DOMAIN_HEIGHT *= 1.25;
 	CATALYTIC_DOMAIN_FONT_SIZE *= 1.25;
 	CATALYTIC_DOMAIN_MOTIF_FONT_SIZE *= 1.25;
+	CATALYTIC_DOMAIN_ARROW_BG_WIDTH *= 1.25;
 }
 
 LEVEL_1_COL = "#fa2a5599";
@@ -1250,18 +1252,18 @@ function renderSecondary(svg){
 
 
       // Plot them
-      for (var i = 0; i < SSEs.length; i ++){
+      for (let i = SSEs.length-1; i >= 0; i --){
 
 
 
-        var sse = SSEs[i];
+        let sse = SSEs[i];
 
 
         
 
-        var startX = (sse.start)*SEC_WIDTH + ALN_LABEL_WIDTH;
-        var endX = (sse.stop+1)*SEC_WIDTH + ALN_LABEL_WIDTH;
-
+        let startX = (sse.start)*SEC_WIDTH + ALN_LABEL_WIDTH;
+        let endX = (sse.stop+1)*SEC_WIDTH + ALN_LABEL_WIDTH;
+        let sseLen = sse.stop - sse.start + 1;
 
         let colourModifier = "";
 
@@ -1273,15 +1275,41 @@ function renderSecondary(svg){
         }
 
         // Helix
-        else if ((sse.element == "H")  && sse.stop - sse.start + 1 >= MIN_SSE_LEN){
+        else if ((sse.element == "H")  && sseLen >= MIN_SSE_LEN){
 
           //console.log(acc, "helix", sse);
-          drawSVGobj(sseGroup, "rect", {rx: HELIX_CORNER_RADIUS, x: startX, y: y-HELIX_WIDTH/2, width: endX-startX, height: HELIX_WIDTH, style: "stroke-width:1px; stroke:black; fill:" + AA_COLS_2["H"] + colourModifier} );
+
+          // Cylinder if long, rect if short
+          if (sseLen > 1){
+
+
+          	startX = startX + HELIX_CORNER_RADIUS/2;
+          	endX = endX - HELIX_CORNER_RADIUS/2;
+
+          	// Right circle
+          	drawSVGobj(sseGroup, "ellipse", {cx: endX, cy: y, rx: HELIX_CORNER_RADIUS, ry: HELIX_WIDTH/2, style: "stroke-width:1px; stroke:black; fill:" + AA_COLS_2["H"] + colourModifier} );
+       
+       			// Rect
+          	drawSVGobj(sseGroup, "rect", {x: startX, y: y-HELIX_WIDTH/2, width: endX-startX, height: HELIX_WIDTH, style: "stroke-width:0px; fill:" + AA_COLS_2["H"] + colourModifier} );
+         
+         		// Border around rect
+	         	drawSVGobj(sseGroup, "line", {x1: startX, x2: endX, y1: y-HELIX_WIDTH/2, y2: y-HELIX_WIDTH/2, style: "stroke-width:1px; stroke: black"} );
+	         	drawSVGobj(sseGroup, "line", {x1: startX, x2: endX, y1: y+HELIX_WIDTH/2, y2: y+HELIX_WIDTH/2, style: "stroke-width:1px; stroke: black"} );
+         
+
+         		// Left circle
+	          drawSVGobj(sseGroup, "ellipse", {cx: startX, cy: y, rx: HELIX_CORNER_RADIUS, ry: HELIX_WIDTH/2, style: "stroke-width:0px; fill:white"} );
+          	drawSVGobj(sseGroup, "ellipse", {cx: startX, cy: y, rx: HELIX_CORNER_RADIUS, ry: HELIX_WIDTH/2, style: "stroke-width:1px; stroke:black; fill:" + AA_COLS_2["H"] + "aa"} );
+         
+          }else{
+          	 drawSVGobj(sseGroup, "rect", {rx: HELIX_CORNER_RADIUS, x: startX, y: y-HELIX_WIDTH/2, width: endX-startX, height: HELIX_WIDTH, style: "stroke-width:1px; stroke:black; fill:" + AA_COLS_2["H"] + colourModifier} );
+         
+          }
 
         }
 
         // Strand
-        else if (sse.element == "E" && sse.stop - sse.start + 1 >= MIN_SSE_LEN){
+        else if (sse.element == "E" && sseLen >= MIN_SSE_LEN){
 
           // Arrow
           var x2 = endX - STRAND_ARROW_HEAD_LEN_1;
@@ -1366,7 +1394,7 @@ function deselectSites(refresh = false){
 	$('table.maptable th').removeClass("selected");
 	$('table.maptable td').removeClass("deselected");
 	$('table.maptable th').removeClass("deselected");
-	$("#catalyticSVG").children("g").attr("class", "");
+	$("#catalyticSVG").children("g").children("g").attr("class", "");
 	
 	// Clear selection
 	SELECTED_SITES.lower = -1;
@@ -2162,7 +2190,7 @@ function renderCatalyticDomainInserts(text, classNr){
 		 refSeqLink = classNr == 1 ? '<a href="/class1/trp">TrpRS</a>' :  '<a href="/class2/gly2">tetrameric GlyRS</a>';
 		
 		$("#catalyticDomainDIV .flexContainer").append(`<li>
-													<div class='svgDiv'>
+													<div id='tableDiv' class='svgDiv'>
 													  <div style='text-align:center'><b>Table:</b> The size (aa) of each element in the catalytic domain relative to the ` + refSeqLink + ` reference sequence.</div>
 													  <div style='overflow:auto;'>
 							  <table class='maptable' id='catalyticTable'></table>
@@ -2172,7 +2200,7 @@ function renderCatalyticDomainInserts(text, classNr){
 
 
 		// Header
-		var tr = $("<tr></tr>")
+		let tr = $("<tr></tr>")
 		$(tr).append("<th class='accession'>Sequence</th>");
 		for (let eleNr = 0; eleNr < json.elements.length; eleNr++){
 		  let ele = json.elements[eleNr];
@@ -2231,6 +2259,9 @@ function renderCatalyticDomainInserts(text, classNr){
 
 
 		}
+
+
+		$("#tableDiv").hide(0);
 		
 		
 	}
@@ -2251,9 +2282,15 @@ function renderCatalyticDomainInserts(text, classNr){
     let helixGradient = $(drawSVGobj(defs, "linearGradient", {id: "helixGradient"} ));
     $(drawSVGobj(helixGradient, "stop", {offset: "0%", stop_color: AA_COLS_2["H"] + "99"} ));
     $(drawSVGobj(helixGradient, "stop", {offset: "100%", stop_color: AA_COLS_2["H"] + "cc"} ));
+    let helixBackgroundGradient = $(drawSVGobj(defs, "linearGradient", {id: "helixBackgroundGradient"} ));
+    $(drawSVGobj(helixBackgroundGradient, "stop", {offset: "0%", stop_color: "#111111aa"} ));
+    $(drawSVGobj(helixBackgroundGradient, "stop", {offset: "100%", stop_color: "#111111bb"} ));
     let strandGradient = $(drawSVGobj(defs, "linearGradient", {id: "strandGradient"} ));
     $(drawSVGobj(strandGradient, "stop", {offset: "0%", stop_color: AA_COLS_2["E"] + "77"} ));
     $(drawSVGobj(strandGradient, "stop", {offset: "100%", stop_color: AA_COLS_2["E"] + "cc"} ));
+    let strandBackgroundGradient = $(drawSVGobj(defs, "linearGradient", {id: "strandBackgroundGradient"} ));
+    $(drawSVGobj(strandBackgroundGradient, "stop", {offset: "0%", stop_color: "#111111aa"} ));
+    $(drawSVGobj(strandBackgroundGradient, "stop", {offset: "100%", stop_color: "#111111ee"} ));
     let motifGradient = $(drawSVGobj(defs, "linearGradient", {id: "motifGradient"} ));
     $(drawSVGobj(motifGradient, "stop", {offset: "0%", stop_color: motifColBase + "99"} ));
     $(drawSVGobj(motifGradient, "stop", {offset: "100%", stop_color: motifColBase + "ee"} ));
@@ -2266,7 +2303,8 @@ function renderCatalyticDomainInserts(text, classNr){
     let strandCol = "url(#strandGradient)";
     let motifCol = "url(#motifGradient)";
     let highlightCol = "url(#highlightGradient)";
-
+    let helixBgCol  = "url(#helixBackgroundGradient)";
+    let strandBgCol  = "url(#strandBackgroundGradient)";
 
     // Ele width and height
     let nElementsHorizontal = classNr == 1 ? 9 : 9;
@@ -2275,6 +2313,11 @@ function renderCatalyticDomainInserts(text, classNr){
     
 	
 
+
+	// Top and bottom layers
+	let bottomLayer = $(drawSVGobj(svg, "g", {element: eleName, style:""} )); 
+	let topLayer = $(drawSVGobj(svg, "g", {element: eleName, style:""} )); 
+	
 
 
 	if (classNr == 1){
@@ -2285,15 +2328,15 @@ function renderCatalyticDomainInserts(text, classNr){
 		let crossover_ly = CATALYTIC_DOMAIN_YPAD*0.7;
 		let c1_x1 = CATALYTIC_DOMAIN_XPAD + (CATALYTIC_DOMAIN_XPAD+eleWidth)*2.7;
 		let c1_x2 = CATALYTIC_DOMAIN_XPAD + (CATALYTIC_DOMAIN_XPAD+eleWidth)*5.3;
-		drawSVGobj(svg, "rect", {rx: 2, x: c1_x1, width: c1_x2-c1_x1, y: crossover_ly, height: eleHeight+CATALYTIC_DOMAIN_YPAD*2.7, style: "fill:" + highlightCol + "; stroke:black; stroke-width:1px;"});
-		drawSVGobj(svg, "text", {x: (c1_x1+c1_x2)/2, y: crossover_ly+eleHeight+CATALYTIC_DOMAIN_YPAD*3.0, style: "font-size:" + CATALYTIC_DOMAIN_MOTIF_FONT_SIZE + "px; text-anchor:middle; dominant-baseline:middle; "}, "Crossover 1");
+		drawSVGobj(bottomLayer, "rect", {rx: 2, x: c1_x1, width: c1_x2-c1_x1, y: crossover_ly, height: eleHeight+CATALYTIC_DOMAIN_YPAD*2.7, style: "fill:" + highlightCol + "; stroke:black; stroke-width:1px;"});
+		drawSVGobj(bottomLayer, "text", {x: (c1_x1+c1_x2)/2, y: crossover_ly+eleHeight+CATALYTIC_DOMAIN_YPAD*3.0, style: "font-size:" + CATALYTIC_DOMAIN_MOTIF_FONT_SIZE + "px; text-anchor:middle; dominant-baseline:middle; "}, "Crossover 1");
 	
 
 		// Crossover 2
 		let c2_x1 = CATALYTIC_DOMAIN_XPAD + (CATALYTIC_DOMAIN_XPAD+eleWidth)*6.7;
 		let c2_x2 = CATALYTIC_DOMAIN_XPAD + (CATALYTIC_DOMAIN_XPAD+eleWidth)*9.3;
-		drawSVGobj(svg, "rect", {rx: 2, x: c2_x1, width: c2_x2-c2_x1, y: crossover_ly, height: eleHeight+CATALYTIC_DOMAIN_YPAD*2.7, style: "fill:" + highlightCol + "; stroke:black; stroke-width:1px;"});
-		drawSVGobj(svg, "text", {x: (c2_x1+c2_x2)/2, y: crossover_ly+eleHeight+CATALYTIC_DOMAIN_YPAD*3.0, style: "font-size:" + CATALYTIC_DOMAIN_MOTIF_FONT_SIZE + "px; text-anchor:middle; dominant-baseline:middle; "}, "Crossover 2");
+		drawSVGobj(bottomLayer, "rect", {rx: 2, x: c2_x1, width: c2_x2-c2_x1, y: crossover_ly, height: eleHeight+CATALYTIC_DOMAIN_YPAD*2.7, style: "fill:" + highlightCol + "; stroke:black; stroke-width:1px;"});
+		drawSVGobj(bottomLayer, "text", {x: (c2_x1+c2_x2)/2, y: crossover_ly+eleHeight+CATALYTIC_DOMAIN_YPAD*3.0, style: "font-size:" + CATALYTIC_DOMAIN_MOTIF_FONT_SIZE + "px; text-anchor:middle; dominant-baseline:middle; "}, "Crossover 2");
 	
 
 
@@ -2324,6 +2367,7 @@ function renderCatalyticDomainInserts(text, classNr){
 			let endPoint, control1, control2 = [];
 			let ylab = y;
 			let xlab = x;
+			let onTop = false;
 			
 			if (i == 5) oddLoop = !oddLoop;
 
@@ -2350,6 +2394,7 @@ function renderCatalyticDomainInserts(text, classNr){
 				xlab = xMid;
 				ylab = yLoop-CATALYTIC_DOMAIN_YPAD - 5;
 				loopCol = motifColBase;
+				onTop = true;
 			}
 			
 			
@@ -2361,15 +2406,9 @@ function renderCatalyticDomainInserts(text, classNr){
 				control2 = [endPoint[0]-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX, yLoop-2.5*CATALYTIC_DOMAIN_YPAD];
 				xlab = (xMid+endPoint[0])/2-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX;
 				ylab = yLoop-2*CATALYTIC_DOMAIN_YPAD+20;
+				onTop = true;
 				
-				
-				//yLoop = y+eleHeight;
-				//endPoint = [CATALYTIC_DOMAIN_XPAD + (CATALYTIC_DOMAIN_XPAD+eleWidth)*9, yLoop];
-				//control1 = [xMid-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX, yLoop+2.5*CATALYTIC_DOMAIN_YPAD];
-				//control2 = [endPoint[0]-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX, yLoop+2.5*CATALYTIC_DOMAIN_YPAD];	
-				//ylab = yLoop+2*CATALYTIC_DOMAIN_YPAD-20;
-				//xlab = (xMid+endPoint[0])/2-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX;
-				
+
 			
 			// Top loop
 			}else if (oddLoop){
@@ -2378,6 +2417,7 @@ function renderCatalyticDomainInserts(text, classNr){
 				control2 = [endPoint[0]-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX, yLoop-CATALYTIC_DOMAIN_YPAD];
 				xlab = (xMid+endPoint[0])/2-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX;
 				ylab = yLoop-CATALYTIC_DOMAIN_YPAD-3;
+				onTop = true;
 			}
 			
 			// Bottom loop
@@ -2402,9 +2442,9 @@ function renderCatalyticDomainInserts(text, classNr){
 			let d = "M " + xMid + " " + yLoop  + " C " + control1[0] + " " + control1[1] + ", " + control2[0] + " " + control2[1] + ", " + endPoint[0] + " " + endPoint[1];
 			let group;
 			if (eleName == "N" || eleName == "C"){
-				group = $(drawSVGobj(svg, "g", {element: eleName, style:""} )); // No click events
+				group = $(drawSVGobj(onTop ? topLayer : bottomLayer, "g", {element: eleName, style:""} )); // No click events
 			}else{
-				group = $(drawSVGobj(svg, "g", {element: eleName, start:eleStart, end: eleStop, style:"cursor:pointer"} ));
+				group = $(drawSVGobj(onTop ? topLayer : bottomLayer, "g", {element: eleName, start:eleStart, end: eleStop, style:"cursor:pointer"} ));
 			}
 			drawSVGobj(group, "path", {d: d, style: "stroke-width:" + CATALYTIC_DOMAIN_LOOP_WIDTH + "px; stroke:" + loopCol + "; fill:transparent; stroke-linecap:round"} );
 			drawSVGobj(group, "text", {x: xlab, y: ylab, style: "font-size:" + CATALYTIC_DOMAIN_FONT_SIZE + "px; text-anchor:middle; dominant-baseline:central; "}, eleName);
@@ -2442,27 +2482,69 @@ function renderCatalyticDomainInserts(text, classNr){
 			if (eleStart == null) eleStart = -1;
 			if (eleStop == null) eleStop = -1;
 			
-			let group = $(drawSVGobj(svg, "g", {element: eleName, start:eleStart, end:eleStop, style:"cursor:pointer"} ));
+			let group = $(drawSVGobj(bottomLayer, "g", {element: eleName, start:eleStart, end:eleStop, style:"cursor:pointer"} ));
 			let helixY = y;
 			let eleHeightHelix = eleHeight;
 
 
-			drawSVGobj(group, "rect", {rx: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix, style: "stroke-width:1px; stroke:black; fill:white"} );
-			drawSVGobj(group, "rect", {rx: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix, style: "stroke-width:1px; stroke:black; fill:" + helixCol} );
+			let thisCol = helixCol;
+
+			// Bottom circle
+			drawSVGobj(group, "ellipse", {cx: x, cy: helixY+eleHeightHelix, rx: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, ry: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, style: "stroke-width:0px; fill:white"} );
+			drawSVGobj(group, "ellipse", {cx: x, cy: helixY+eleHeightHelix, rx: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, ry: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, style: "stroke-width:1px; stroke:black; fill:" + thisCol} );
+		
+
+			// Rectangle
+			drawSVGobj(group, "rect", {x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix, style: "stroke-width:0px; fill:white"} );
+			drawSVGobj(group, "rect", {x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix, style: "stroke-width:0px; fill:" + helixCol} );
 			
+
+
+
 
 			// HIGH motif on H1
 			if (eleName == "H1"){
 
-				drawSVGobj(group, "rect", {rx: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix/4, style: "stroke-width:0px; fill:" + motifCol + "; stroke:black"} );
-				drawSVGobj(group, "rect", {rx: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix, style: "stroke-width:1px; stroke:black; fill:transparent"} );
+				thisCol = motifCol;
+
+
+				//drawSVGobj(group, "rect", {rx: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix/4, style: "stroke-width:0px; fill:" + motifCol + "; stroke:black"} );
+				//drawSVGobj(group, "rect", {rx: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix/4, style: "stroke-width:1px; stroke:black; fill:transparent"} );
+				
+
+				// Bottom circle
+				drawSVGobj(group, "ellipse", {cx: x, cy: helixY+eleHeightHelix/4, rx: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, ry: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, style: "stroke-width:0px; fill:white"} );
+				drawSVGobj(group, "ellipse", {cx: x, cy: helixY+eleHeightHelix/4, rx: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, ry: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, style: "stroke-width:1px; stroke:black; fill:" + thisCol} );
+		
+				// Rectangle
+				drawSVGobj(group, "rect", {x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix/4, style: "stroke-width:0px; fill:white"} );
+				drawSVGobj(group, "rect", {x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix/4, style: "stroke-width:0px; fill:" + thisCol} );
+				
+
+				// Text
 				drawSVGobj(group, "text", {x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2 - CATALYTIC_DOMAIN_FONT_SIZE/2, y: y - CATALYTIC_DOMAIN_FONT_SIZE/2, style: "font-size:" + CATALYTIC_DOMAIN_MOTIF_FONT_SIZE + "px; text-anchor:middle; dominant-baseline:end; font-weight:bold; fill:" + motifColBase + "; "}, "HIGH");
 	
 
 
 			}
 
-		drawSVGobj(group, "text", {x: x, y: helixY+eleHeightHelix/2, style: "font-size:" + CATALYTIC_DOMAIN_FONT_SIZE + "px; text-anchor:middle; dominant-baseline:central; "}, eleName);
+
+			// Rect border lines
+			drawSVGobj(group, "line", {x1: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, x2: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y1: helixY, y2: helixY+eleHeightHelix, style: "stroke-width:1px; stroke: black;"} );
+			drawSVGobj(group, "line", {x1: x+eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, x2: x+eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y1: helixY, y2: helixY+eleHeightHelix, style: "stroke-width:1px; stroke: black;"} );
+
+						
+			// Top circle
+			drawSVGobj(group, "ellipse", {cx: x, cy: helixY, rx: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, ry: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, style: "stroke-width:0px; fill:white"} );
+			drawSVGobj(group, "ellipse", {cx: x, cy: helixY, rx: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, ry: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, style: "stroke-width:1px; stroke:black; fill:" + helixBgCol } );
+		
+
+
+	
+			
+
+			// Text label
+			drawSVGobj(group, "text", {x: x, y: helixY+eleHeightHelix/2, style: "font-size:" + CATALYTIC_DOMAIN_FONT_SIZE + "px; text-anchor:middle; dominant-baseline:central; "}, eleName);
 	
 
 			
@@ -2474,7 +2556,10 @@ function renderCatalyticDomainInserts(text, classNr){
 		else if (i % 2 == 1){
 			
 		
-			var y1, y2, y3;
+			x = x - CATALYTIC_DOMAIN_ARROW_BG_WIDTH/2;
+
+
+			var y1, y2, y3, ybg1, ybg2, ybg3;
 			if (odd){
 
 			  // Up arrow
@@ -2482,6 +2567,10 @@ function renderCatalyticDomainInserts(text, classNr){
 			  y2 = y+CATALYTIC_DOMAIN_STRAND_ARROW_HEAD_LEN_1;
 			  y3 = y+CATALYTIC_DOMAIN_STRAND_ARROW_HEAD_LEN_2;
 			  y4 = y;
+
+				ybg1 = y1 - CATALYTIC_DOMAIN_ARROW_BG_WIDTH;
+			  ybg2 = y4 - CATALYTIC_DOMAIN_ARROW_BG_WIDTH;
+			  ybg3 = y3 - CATALYTIC_DOMAIN_ARROW_BG_WIDTH;
 
 
 			}else{
@@ -2491,6 +2580,11 @@ function renderCatalyticDomainInserts(text, classNr){
 			  y2 = y+eleHeight-CATALYTIC_DOMAIN_STRAND_ARROW_HEAD_LEN_1;
 			  y3 = y+eleHeight-CATALYTIC_DOMAIN_STRAND_ARROW_HEAD_LEN_2;
 			  y4 = y+eleHeight;
+
+
+			  ybg1 = yStrand - CATALYTIC_DOMAIN_ARROW_BG_WIDTH;
+			  ybg2 = y4 - CATALYTIC_DOMAIN_ARROW_BG_WIDTH;
+			  ybg3 = y3 - CATALYTIC_DOMAIN_ARROW_BG_WIDTH;
 
 			}
 
@@ -2521,7 +2615,44 @@ function renderCatalyticDomainInserts(text, classNr){
 			if (eleStart == null) eleStart = -1;
 			if (eleStop == null) eleStop = -1;
 
-			let group = $(drawSVGobj(svg, "g", {element: eleName, start: eleStart, end: eleStop, style:"cursor:pointer"} ));
+
+
+			let group = $(drawSVGobj(bottomLayer, "g", {element: eleName, start: eleStart, end: eleStop, style:"cursor:pointer"} ));
+
+
+
+
+			// Background of arrow side
+			let pointsBG =    (x+eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2) + "," + (y1);
+			pointsBG += " " + (x+eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2 + CATALYTIC_DOMAIN_ARROW_BG_WIDTH) + "," + (ybg1);
+			pointsBG += " " + (x+eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2 + CATALYTIC_DOMAIN_ARROW_BG_WIDTH) + "," + (y2);
+			pointsBG += " " + (x+eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2) + "," + (y2);
+			drawSVGobj(group, "polygon", {points: pointsBG, style: "stroke-width:1px; stroke:black; fill:" + strandBgCol} )
+
+
+			// Background of arrow head
+			pointsBG =    (x) + "," + (y4);
+			pointsBG += " " + (x + CATALYTIC_DOMAIN_ARROW_BG_WIDTH) + "," + (ybg2);
+			pointsBG += " " + (x+eleWidth/2 + CATALYTIC_DOMAIN_ARROW_BG_WIDTH) + "," + (ybg3);
+			pointsBG += " " + (x+eleWidth/2+(odd ? 1 : 0)) + "," + (y3+(odd ? 1 : 0) );
+			drawSVGobj(group, "polygon", {points: pointsBG, style: "stroke-width:1px; stroke:black; fill:" + strandBgCol} )
+			
+
+			if (!odd){
+
+				// Top of arrow (the rectangular base)
+				pointsBG =    (x+eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2) + "," + (y1);
+				pointsBG += " " + (x+eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2 + CATALYTIC_DOMAIN_ARROW_BG_WIDTH) + "," + (ybg1);
+				pointsBG += " " + (x-eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2 + CATALYTIC_DOMAIN_ARROW_BG_WIDTH) + "," + (ybg1);
+				pointsBG += " " + (x-eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2) + "," + (y1);
+				drawSVGobj(group, "polygon", {points: pointsBG, style: "stroke-width:1px; stroke:black; fill:" + strandBgCol} )
+
+			}
+
+
+
+
+			// The main arrow strand
 			drawSVGobj(group, "polygon", {points: points, style: "stroke-width:1px; stroke:black; fill:white"} )
 			drawSVGobj(group, "polygon", {points: points, style: "stroke-width:1px; stroke:black; fill:" + strandCol} )
 			drawSVGobj(group, "text", {x: x, y: y+eleHeight/2, style: "font-size:" + CATALYTIC_DOMAIN_FONT_SIZE + "px; text-anchor:middle; dominant-baseline:central; "}, eleName);
@@ -2548,7 +2679,7 @@ function renderCatalyticDomainInserts(text, classNr){
 
       // 6 antiparallel strands and 3 helices
       let odd = false;
-	  let oddLoop = false;
+	  	let oddLoop = false;
       for (let i = 0; i <= 9 ; i++){
 
 		let eleHeight = (CATALYTIC_DOMAIN_HEIGHT-4*CATALYTIC_DOMAIN_YPAD);
@@ -2575,7 +2706,7 @@ function renderCatalyticDomainInserts(text, classNr){
 			let endPoint, control1, control2 = [];
 			let ylab = y;
 			let xlab = x;
-			
+			let onTop = false;
 
 			let pathCol = "black";
 
@@ -2601,6 +2732,7 @@ function renderCatalyticDomainInserts(text, classNr){
 				control2 = [xMid+CATALYTIC_DOMAIN_XPAD/3, yLoop-2*(CATALYTIC_DOMAIN_YPAD)/4];	
 				xlab = xMid;
 				ylab = yLoop-CATALYTIC_DOMAIN_YPAD - 5;
+				onTop = true;
 				
 			}
 			
@@ -2624,6 +2756,7 @@ function renderCatalyticDomainInserts(text, classNr){
 				control2 = [endPoint[0]-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX, yLoop-CATALYTIC_DOMAIN_YPAD];
 				xlab = (xMid+endPoint[0])/2-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX;
 				ylab = yLoop-CATALYTIC_DOMAIN_YPAD-3;
+				onTop = true;
 			}
 			
 			// Standard even loop (bottom)
@@ -2646,9 +2779,9 @@ function renderCatalyticDomainInserts(text, classNr){
 			let d = "M " + xMid + " " + yLoop  + " C " + control1[0] + " " + control1[1] + ", " + control2[0] + " " + control2[1] + ", " + endPoint[0] + " " + endPoint[1];
 			let group;
 			if (eleName == "N" || eleName == "C"){
-				group = $(drawSVGobj(svg, "g", {element: eleName, style:""} )); // No click events
-			}else{
-				group = $(drawSVGobj(svg, "g", {element: eleName, start:eleStart, end:eleStop, style:"cursor:pointer"} ));
+				group = $(drawSVGobj(onTop ? topLayer : bottomLayer, "g", {element: eleName, style:""} )); // No click events
+			}else {
+				group = $(drawSVGobj(onTop ? topLayer : bottomLayer, "g", {element: eleName, start:eleStart, end:eleStop, style:"cursor:pointer"} ));
 			}
 
 
@@ -2671,84 +2804,48 @@ function renderCatalyticDomainInserts(text, classNr){
 	
 
 		let group;
-		
-		
-		// Helix
-		if (i > 0 && i < 10 && (i <= 2 || i == 5 || i == 9)){
-			
-
-				let thisCol = helixCol;
-				
-				let nr = i;
-				if (i == 5) nr = 4;
-				if (i == 9) nr = 3;
-				var eleName = "H" + nr;
-
-				// Special case: SH1
-				if (i == 5){
-					eleName = "SH1";
-					thisCol = motifCol;
-				}
-				
-				
-				let eleStart = json == null ? -1 : json["median_" + eleName + ".start"];
-				let eleStop = json == null ? -1 : json["median_" + eleName + ".end"];
-				if (eleStart == null) eleStart = -1;
-				if (eleStop == null) eleStop = -1;
-				
-				group = $(drawSVGobj(svg, "g", {element: eleName, start: eleStart, end: eleStop, style:"cursor:pointer"} ));
-				let helixY = y;
-				let eleHeightHelix = eleHeight;
-				
-				// The final helix
-				if (i == 5){
-					eleHeightHelix = eleHeightHelix/2;
-				}
 
 
 
-
-
-				drawSVGobj(group, "rect", {rx: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix, style: "stroke-width:1px; stroke:black; fill:white"} );
-				drawSVGobj(group, "rect", {rx: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix, style: "stroke-width:1px; stroke:black; fill:" + thisCol} );
-				drawSVGobj(group, "text", {x: x, y: helixY+eleHeightHelix/2, style: "font-size:" + CATALYTIC_DOMAIN_FONT_SIZE + "px; text-anchor:middle; dominant-baseline:central; "}, eleName);
-	
-
-
-
-			
-		}
-		
 		// Strand
 		if (i > 2 && i < 9){
+
+			x = x - CATALYTIC_DOMAIN_ARROW_BG_WIDTH/2;
+			let yStrand = y;
 			
 			// The final short strand
 			if (i == 5){
 				eleHeight = eleHeight/2;
-				y = CATALYTIC_DOMAIN_YPAD*2 + eleHeight;
+				yStrand = CATALYTIC_DOMAIN_YPAD*2 + eleHeight;
 			}
 
-			var y1, y2, y3;
+			var y1, y2, y3, ybg1, ybg2, ybg3;
 			if (odd){
 
 			  // Up arrow
-			  y1 = y+eleHeight;
-			  y2 = y+CATALYTIC_DOMAIN_STRAND_ARROW_HEAD_LEN_1;
-			  y3 = y+CATALYTIC_DOMAIN_STRAND_ARROW_HEAD_LEN_2;
-			  y4 = y;
+			  y1 = yStrand+eleHeight;
+			  ybg1 = y1 - CATALYTIC_DOMAIN_ARROW_BG_WIDTH;
+			  y2 = yStrand+CATALYTIC_DOMAIN_STRAND_ARROW_HEAD_LEN_1;
+			  y3 = yStrand+CATALYTIC_DOMAIN_STRAND_ARROW_HEAD_LEN_2;
+			  y4 = yStrand;
+			  ybg2 = y4 - CATALYTIC_DOMAIN_ARROW_BG_WIDTH;
+			  ybg3 = y3 - CATALYTIC_DOMAIN_ARROW_BG_WIDTH;
 
 
 			}else{
 
 			  // Down arrow
-			  y1 = y;
-			  y2 = y+eleHeight-CATALYTIC_DOMAIN_STRAND_ARROW_HEAD_LEN_1;
-			  y3 = y+eleHeight-CATALYTIC_DOMAIN_STRAND_ARROW_HEAD_LEN_2;
-			  y4 = y+eleHeight;
+			  y1 = yStrand+CATALYTIC_DOMAIN_ARROW_BG_WIDTH;
+			  ybg1 = yStrand - CATALYTIC_DOMAIN_ARROW_BG_WIDTH;
+			  y2 = yStrand+eleHeight-CATALYTIC_DOMAIN_STRAND_ARROW_HEAD_LEN_1;
+			  y3 = yStrand+eleHeight-CATALYTIC_DOMAIN_STRAND_ARROW_HEAD_LEN_2;
+			  y4 = yStrand+eleHeight;
+			  ybg2 = y4 - CATALYTIC_DOMAIN_ARROW_BG_WIDTH;
+			  ybg3 = y3 - CATALYTIC_DOMAIN_ARROW_BG_WIDTH;
 
 			}
 
-			var points =    (x-eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2) + "," + (y1);
+			let points =    (x-eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2) + "," + (y1);
 			points += " " + (x-eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2) + "," + (y2);
 			points += " " + (x-eleWidth/2) + "," + (y3);
 			points += " " + x + "," + y4;
@@ -2768,38 +2865,65 @@ function renderCatalyticDomainInserts(text, classNr){
 
 			let thisCol = strandCol;
 
-      // Special case: SH1 reuses the same group selector
+	     // Special case: SH1 
       if (i == 5){
       	thisCol = motifCol;
-        group = group;
-        eleName = "";
-
-
-        // SH1 is motif 3
-        drawSVGobj(group, "text", {x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/3 - CATALYTIC_DOMAIN_MOTIF_FONT_SIZE, y: y, style: "font-size:" + CATALYTIC_DOMAIN_MOTIF_FONT_SIZE + "px; text-anchor:middle; dominant-baseline:central; font-weight:bold; fill:" + motifColBase + "; "}, "M3");
-	
-
-      }else{
-		  
-		let eleStart = json == null ? -1 : json["median_" + eleName + ".start"];
-		let eleStop = json == null ? -1 : json["median_" + eleName + ".end"];
-		if (eleStart == null) eleStart = -1;
-		if (eleStop == null) eleStop = -1;
-		  
-        group = $(drawSVGobj(svg, "g", {element: eleName, start:eleStart, end: eleStop, style:"cursor:pointer"} ));
+      	eleName = "";
       }
 
+
+  
+			let eleStart = json == null ? -1 : json["median_" + eleName + ".start"];
+			let eleStop = json == null ? -1 : json["median_" + eleName + ".end"];
+			if (eleStart == null) eleStart = -1;
+			if (eleStop == null) eleStop = -1;
+		  
+      group = $(drawSVGobj(bottomLayer, "g", {element: eleName, start:eleStart, end: eleStop, style:"cursor:pointer"} ));
+
+
+ 
+      
+		
+
+
+			// Background of arrow side
+			let pointsBG =    (x+eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2) + "," + (y1);
+			pointsBG += " " + (x+eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2 + CATALYTIC_DOMAIN_ARROW_BG_WIDTH) + "," + (ybg1);
+			pointsBG += " " + (x+eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2 + CATALYTIC_DOMAIN_ARROW_BG_WIDTH) + "," + (y2);
+			pointsBG += " " + (x+eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2) + "," + (y2);
+			drawSVGobj(group, "polygon", {points: pointsBG, style: "stroke-width:1px; stroke:black; fill:" + strandBgCol} )
+
+
+			// Background of arrow head
+			pointsBG =    (x) + "," + (y4);
+			pointsBG += " " + (x + CATALYTIC_DOMAIN_ARROW_BG_WIDTH) + "," + (ybg2);
+			pointsBG += " " + (x+eleWidth/2 + CATALYTIC_DOMAIN_ARROW_BG_WIDTH) + "," + (ybg3);
+			pointsBG += " " + (x+eleWidth/2+(odd ? 1 : 0)) + "," + (y3+(odd ? 1 : 0) );
+			drawSVGobj(group, "polygon", {points: pointsBG, style: "stroke-width:1px; stroke:black; fill:" + strandBgCol} )
 			
+
+			if (!odd){
+
+				// Top of arrow (the rectangular base)
+				pointsBG =    (x+eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2) + "," + (y1);
+				pointsBG += " " + (x+eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2 + CATALYTIC_DOMAIN_ARROW_BG_WIDTH) + "," + (ybg1);
+				pointsBG += " " + (x-eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2 + CATALYTIC_DOMAIN_ARROW_BG_WIDTH) + "," + (ybg1);
+				pointsBG += " " + (x-eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2) + "," + (y1);
+				drawSVGobj(group, "polygon", {points: pointsBG, style: "stroke-width:1px; stroke:black; fill:" + strandBgCol} )
+
+			}
+
+			// Arrow
 			drawSVGobj(group, "polygon", {points: points, style: "stroke-width:1px; stroke:black; fill:white"} )
 			drawSVGobj(group, "polygon", {points: points, style: "stroke-width:1px; stroke:black; fill:" + thisCol} )
-			
+
 
 
 			// S1 is motif 2
 			if (eleName == "S1"){
 
 
-				let S2_y1 = y+3*eleHeight/4;
+				let S2_y1 = yStrand+3*eleHeight/4;
 
 				let pointsS2 =    (x-eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2) + "," + (S2_y1);
 				pointsS2 += " " + (x-eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2) + "," + (y2);
@@ -2810,22 +2934,103 @@ function renderCatalyticDomainInserts(text, classNr){
 				pointsS2 += " " + (x+eleWidth*CATALYTIC_DOMAIN_STRAND_ARROW_BASE_WIDTH_PROP/2) + "," + (S2_y1);
 
 
+				drawSVGobj(group, "polygon", {points: pointsS2, style: "stroke-width:0px; fill:white"} )
 				drawSVGobj(group, "polygon", {points: pointsS2, style: "stroke-width:0px; fill:" + motifCol} )
 				drawSVGobj(group, "polygon", {points: points, style: "stroke-width:1px; stroke:black; fill:transparent"} )
-				drawSVGobj(group, "text", {x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/3 - CATALYTIC_DOMAIN_MOTIF_FONT_SIZE, y: y+eleHeight/2, style: "font-size:" + CATALYTIC_DOMAIN_MOTIF_FONT_SIZE + "px; text-anchor:middle; dominant-baseline:central; font-weight:bold; fill:" + motifColBase + "; "}, "M2");
+				drawSVGobj(group, "text", {x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/3 - CATALYTIC_DOMAIN_MOTIF_FONT_SIZE, y: yStrand+eleHeight/2, style: "font-size:" + CATALYTIC_DOMAIN_MOTIF_FONT_SIZE + "px; text-anchor:middle; dominant-baseline:central; font-weight:bold; fill:" + motifColBase + "; "}, "M2");
 	
 
 			}
 
 
 
-			drawSVGobj(group, "text", {x: x, y: y+eleHeight/2, style: "font-size:" + CATALYTIC_DOMAIN_FONT_SIZE + "px; text-anchor:middle; dominant-baseline:central; "}, eleName);
+			drawSVGobj(group, "text", {x: x, y: yStrand+eleHeight/2, style: "font-size:" + CATALYTIC_DOMAIN_FONT_SIZE + "px; text-anchor:middle; dominant-baseline:central; "}, eleName);
 			
 
 
 		
 		}
 
+		
+		
+		
+		// Helix
+		if (i > 0 && i < 10 && (i <= 2 || i == 5 || i == 9)){
+			
+
+				let thisCol = helixCol;
+				let bgCol = helixBgCol;
+
+				
+				let nr = i;
+				if (i == 5) nr = 4;
+				if (i == 9) nr = 3;
+				var eleName = "H" + nr;
+
+				// Special case: SH1
+				if (i == 5){
+					eleName = "SH1";
+					thisCol = motifCol;
+					//bgCol = motifCol;
+					group = group;
+
+				}else{
+
+					let eleStart = json == null ? -1 : json["median_" + eleName + ".start"];
+					let eleStop = json == null ? -1 : json["median_" + eleName + ".end"];
+					if (eleStart == null) eleStart = -1;
+					if (eleStop == null) eleStop = -1;
+					
+
+					group = $(drawSVGobj(bottomLayer, "g", {element: eleName, start: eleStart, end: eleStop, style:"cursor:pointer"} ));
+					
+
+
+				}
+				
+				
+
+				
+				let helixY = y;
+				let eleHeightHelix = eleHeight;
+				
+				// The final helix
+				if (i == 5){
+					//eleHeightHelix = eleHeightHelix;
+				}
+
+
+
+
+				// Cylinder
+
+				// Bottom circle
+				drawSVGobj(group, "ellipse", {cx: x, cy: helixY+eleHeightHelix, rx: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, ry: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, style: "stroke-width:0px; fill:white"} );
+				drawSVGobj(group, "ellipse", {cx: x, cy: helixY+eleHeightHelix, rx: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, ry: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, style: "stroke-width:1px; stroke:black; fill:" + thisCol} );
+			
+
+				// Rectangle
+				drawSVGobj(group, "rect", {x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix, style: "stroke-width:0px; fill:white"} );
+				drawSVGobj(group, "rect", {x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y: helixY, width: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP, height: eleHeightHelix, style: "stroke-width:0px; fill:" + thisCol} );
+				
+
+				// Rect border lines
+				drawSVGobj(group, "line", {x1: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, x2: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y1: helixY, y2: helixY+eleHeightHelix, style: "stroke-width:1px; stroke: black;"} );
+				drawSVGobj(group, "line", {x1: x+eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, x2: x+eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, y1: helixY, y2: helixY+eleHeightHelix, style: "stroke-width:1px; stroke: black;"} );
+				
+
+
+				// Top circle
+				drawSVGobj(group, "ellipse", {cx: x, cy: helixY, rx: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, ry: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, style: "stroke-width:0px; fill:white"} );
+				drawSVGobj(group, "ellipse", {cx: x, cy: helixY, rx: eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/2, ry: CATALYTIC_DOMAIN_HELIX_CORNER_RADIUS, style: "stroke-width:1px; stroke:black; fill:" + bgCol } );
+			
+				// Text label
+				drawSVGobj(group, "text", {x: x, y: helixY+eleHeightHelix/2, style: "font-size:" + CATALYTIC_DOMAIN_FONT_SIZE + "px; text-anchor:middle; dominant-baseline:central; "}, eleName);
+	
+
+
+			
+		}
 		
 		
 		oddLoop = !oddLoop;
@@ -2837,7 +3042,7 @@ function renderCatalyticDomainInserts(text, classNr){
     }
 	
 	// Select an element
-	svg.children("g").click(function(){
+	svg.children("g").children("g").click(function(){
 		
 		let ele = $(this);
 		var sse = $(ele).attr("element");
@@ -2850,10 +3055,11 @@ function renderCatalyticDomainInserts(text, classNr){
 			deselectSites(true);
 			return;
 		}
-		
+
+
 		deselectSites(false);
 		
-		$(svg).children("g").attr("class", "deselected");
+		$(svg).children("g").children("g").attr("class", "deselected");
 		$('table.maptable td').addClass("deselected");
 		$('table.maptable th').addClass("deselected");
 		$('table.maptable td[ele="' + sse + '"]').addClass("selected");
@@ -2867,7 +3073,7 @@ function renderCatalyticDomainInserts(text, classNr){
 		
 		// Residues to select
 		SELECTED_SITES.lower = start;
-        SELECTED_SITES.upper = end;
+    SELECTED_SITES.upper = end;
 		
 		selectSites();
 		
