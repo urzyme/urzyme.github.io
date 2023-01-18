@@ -13,7 +13,7 @@ do
 
 	cd $c
 	
-	for d in Edit*/
+	for d in HisRS*/
 	do
 
 		echo "$c $d"

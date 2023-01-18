@@ -21,6 +21,8 @@ output.seq = character(0)
 for (f in dssp.files){
 
 
+	#print(f)
+
 
 	acc = gsub("[.]dssp$", "", f)
 	acc = gsub("dssp/", "structures/", acc)
@@ -37,6 +39,8 @@ for (f in dssp.files){
 	seq = ""
 	dssp.pos = 1
 	for (i in 1:nsites){
+
+		#print(i)
 
 		# If gap, then skip
 		aln.char = toupper(fasta.seq[i])

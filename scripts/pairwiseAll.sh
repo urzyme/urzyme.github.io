@@ -6,7 +6,7 @@
 
 # Prepare all alignments
 cd pairwise
-for c in class*;
+for c in class2;
 do
 
 	cd $c
