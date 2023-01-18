@@ -730,6 +730,8 @@ function drawClass2Domain(startX, startY, svg, motifColBase, highlightColBase, t
 			// Insertion module
 			if ((eleName == "L6" && L6insert) || (eleName == "L8" && L8insert)){
 				
+
+				let insertName = eleName == "L6" ? features.insertName : "B";
 				
 				let icol = IMcol;
 				if (eleName == "L8" && features.highlight == "sc2b"){
@@ -738,7 +740,7 @@ function drawClass2Domain(startX, startY, svg, motifColBase, highlightColBase, t
 
 				let xCircle = CATALYTIC_DOMAIN_XPAD + (CATALYTIC_DOMAIN_XPAD+eleWidth)*(i+0.5) + startXEff;
 				drawSVGobj(group, "circle", {cx: xCircle, cy: yLoop+CATALYTIC_LOOP_HEIGHT*0.8, r: INSERTION_MODULE_RADIUS, style: "stroke-width:1px; stroke:black; fill:" + icol + ";"} );
-				drawSVGobj(group, "text", {x: xCircle, y: yLoop+CATALYTIC_LOOP_HEIGHT*0.8, style: "font-size:" + CATALYTIC_DOMAIN_FONT_SIZE + "px; fill:white; text-anchor:middle; dominant-baseline:central; "}, "B");
+				drawSVGobj(group, "text", {x: xCircle, y: yLoop+CATALYTIC_LOOP_HEIGHT*0.8, style: "font-size:" + CATALYTIC_DOMAIN_FONT_SIZE + "px; fill:white; text-anchor:middle; dominant-baseline:central; "}, insertName);
 			
 
 			}else if (eleName == "L4" && L4insert){
