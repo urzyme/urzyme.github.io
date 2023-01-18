@@ -28,7 +28,7 @@ AA_COLS = {A: "#80a0f0", I: "#80a0f0", L: "#80a0f0", M: "#80a0f0", F: "#80a0f0",
 
 
 // http://bioinformatica.isa.cnr.it/SUSAN/NAR2/dsspweb.html#:~:text=DSSP%20assigns%20seven%20different%20secondary,no%20secondary%20structure%20is%20recognized
-AA_COLS_2 = {E: "#FFC20A", H: "#0C7BDC", G: "#0C7BDC", I: "#0C7BDC", T:"#d3d3d3", S: "#d3d3d3",  B: "#d3d3d3",  N: "#ffffff",};
+AA_COLS_2 = {E: "#FFC20A", H: "#0C7BDC", G: "#0C7BDC", I: "#0C7BDC", T:"#d3d3d3", S: "#d3d3d3",  B: "#d3d3d3",  N: "#ffffff"};
 AA_FONT_COLS_2 = {E: "#222222", H: "#222222", G: "#222222", I: "#222222", T:"#222222", S: "#222222",  B: "#222222",  N: "#111111",};
 
 
@@ -2315,8 +2315,8 @@ function renderCatalyticDomainInserts(text, classNr){
 
 
 	// Top and bottom layers
-	let bottomLayer = $(drawSVGobj(svg, "g", {element: eleName, style:""} )); 
-	let topLayer = $(drawSVGobj(svg, "g", {element: eleName, style:""} )); 
+	let bottomLayer = $(drawSVGobj(svg, "g", {style:""} )); 
+	let topLayer = $(drawSVGobj(svg, "g", {style:""} )); 
 	
 
 
@@ -2957,7 +2957,8 @@ function renderCatalyticDomainInserts(text, classNr){
 		// Helix
 		if (i > 0 && i < 10 && (i <= 2 || i == 5 || i == 9)){
 			
-
+				let helixY = y;
+				let eleHeightHelix = eleHeight;
 				let thisCol = helixCol;
 				let bgCol = helixBgCol;
 
@@ -2973,6 +2974,12 @@ function renderCatalyticDomainInserts(text, classNr){
 					thisCol = motifCol;
 					//bgCol = motifCol;
 					group = group;
+
+
+					// Motif 3 label
+					drawSVGobj(group, "text", {x: x-eleWidth*CATALYTIC_DOMAIN_HELIX_WIDTH_PROP/3 - CATALYTIC_DOMAIN_MOTIF_FONT_SIZE, y: helixY+eleHeightHelix, style: "font-size:" + CATALYTIC_DOMAIN_MOTIF_FONT_SIZE + "px; text-anchor:middle; dominant-baseline:central; font-weight:bold; fill:" + motifColBase + "; "}, "M3");
+		
+
 
 				}else{
 
@@ -2991,8 +2998,8 @@ function renderCatalyticDomainInserts(text, classNr){
 				
 
 				
-				let helixY = y;
-				let eleHeightHelix = eleHeight;
+				
+				
 				
 				// The final helix
 				if (i == 5){
