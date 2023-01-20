@@ -14,7 +14,7 @@
 		"ref_str": ["structures/MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb"],
 		"hinge_str": "structures/MetRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827030.pdb",
 		"hinges": [114],
-		"refine": [{"start": 800}],
+		"refine": [{"start": 907, "stop": 1336}],
 		"features": {"Catalytic domain": {"acc": "MetRS_AF_Euk_Drosophila_melanogaster_gene37177.pdb", "range": "250-605", "level": 4},
 					"Protozyme": {"acc": "MetRS_AF_Euk_Drosophila_melanogaster_gene37177.pdb", "range": "255-302", "level": 2},
 					"Crossover 2": {"acc": "MetRS_AF_Euk_Drosophila_melanogaster_gene37177.pdb", "range": "538-576", "level": 2},

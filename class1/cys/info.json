@@ -14,7 +14,7 @@
 		"ref_str": ["structures/CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb"],
 		"hinge_str": "structures/CysRS_AF_Mito_Saccharomyces_cerevisiae_S288C_gene855474.pdb",
 		"hinges": [681],
-		"refine": [{"start": 834, "stop": 1146}],
+		"refine": [{"start": 860}],
 		"features": {"Catalytic domain": {"acc": "CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb", "range": "18-332", "level": 4},
 					"Protozyme": {"acc": "CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb", "range": "21-67", "level": 2},
 					"Crossover 2": {"acc": "CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb", "range": "218-255", "level": 2},
