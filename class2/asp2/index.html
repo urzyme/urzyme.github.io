@@ -16,14 +16,16 @@
 <script type='text/javascript' src='../../bower_components/bio-pv/bio-pv.min.js'></script>
 
         
-<script type="text/x-mathjax-config">
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
 </script>
+
 
 
 
@@ -61,20 +63,22 @@ function init(){
 			<li class="notes">
 				
 				<div>
+
+
+
+				The non-discrmininating aspartyl tRNA synthetase (AsxRS) is an enzyme that plays a crucial role in protein synthesis by catalysing the attachment of the amino acid aspartate to its cognate tRNA, as well as the tRNA of asparagine. These reactions proceed through the following mechanisms:
+
+
+
+					<div class="reaction">
+						<span>
+							$ \text{Asp} + \text{tRNA}^\text{Asp} + \text{ATP} \xrightarrow{\text{AsxRS}} \text{Asp-tRNA}^\text{Asp} + \text{AMP} + \text{PP}_i  $<br>
+							$ \text{Asp} + \text{tRNA}^\text{Asn} + \text{ATP} \xrightarrow{\text{AsxRS}} \text{Asp-tRNA}^\text{Asn} + \text{AMP} + \text{PP}_i  $
+						</span>
+					</div>
+
 				
-			
-					The non-discrmininating aspartyl tRNA synthetase (AsxRS) is an enzyme which can attach aspartate to its cognate tRNA as well as the tRNA of asparagine: <br><br>
 
-
-					
-						<div class="reaction">
-							<span>
-								Asp + tRNA<sup>Asp</sup> + ATP &#129094; Asp-tRNA<sup>Asp</sup> + AMP + PP<sub>i</sub><br>
-							</span>
-							<span>
-								Asp + tRNA<sup>Asn</sup> + ATP &#129094; Asp-tRNA<sup>Asn</sup> + AMP + PP<sub>i</sub>
-							</span>
-						</div>
 
 
 					This first reaction enables the incorporation of aspartate into the polypeptide, while the second enables incorporation of asparagine for organisms which lack
@@ -95,7 +99,7 @@ function init(){
 
 					The C-terminal catalytic domain of AsxRS is quite typical of a class II aaRS. 
 					Like most members of the superfamily, ATP binding is coordinated by the arginine tweezers, located in motifs 2 and 3 (Kaiser et al. 2018). <br><br>
-
+					he calalytic domain of AsxRS, much like the other members of subclass IIb, is characterised by the subclass 2b insertion modules <a href="/superfamily/class2/Subclass_2b_IM_1">1</a> and <a href="/superfamily/class2/Subclass_2b_IM_1">2</a>.  
 
 					
 

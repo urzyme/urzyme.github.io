@@ -15,14 +15,15 @@
 <script language='JavaScript' type='text/JavaScript' src="/js/util.js"></script>
 <script type='text/javascript' src='../../bower_components/bio-pv/bio-pv.min.js'></script>
 
-        
-<script type="text/x-mathjax-config">
+
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
 </script>
 
 
@@ -63,21 +64,29 @@ function init(){
 				<div>
 				
 				
-					The class II lysyl tRNA synthetase (LysRS) is an enzyme which attaches lysine to its cognate tRNA: <br><br>
 
 
-				<ul>
-					<li>Lys + tRNA<sup>Lys</sup> + ATP &rightarrow; Lys-tRNA<sup>Lys</sup> + AMP + PP<sub>i</sub> </li>
-				</ul>
+					The homodimeric class II lysyl-tRNA synthetase (LysRS-II) is an enzyme that plays a crucial role in protein synthesis by catalysing the attachment of the amino acid lysine to its cognate tRNA:
 
 
-				The three dimensional structure of LysRS closely resembles that of <a href="../asn">AsnRS</a> and <a href="../asp1">AspRS</a>, with an N-terminal anticodon binding domain and a C-terminal catalytic domain. These members constitute subclass IIb (Cusack et al. 1991, Valencia-Sánchez et al. 2016, Gomez et al. 2020). The class IIb synthetases of many eukaryotes contain a flexible domain at their N-terminii which help to anchor the synthetase onto the tRNA (Frugier et al. 2000).  <br><br>
+
+
+					<div class="reaction">
+						<span>
+							$ \text{Lys} + \text{tRNA}^\text{Lys} + \text{ATP} \xrightarrow{\text{LysRS-II}} \text{Lys-tRNA}^\text{Lys} + \text{AMP} + \text{PP}_i  $
+						</span>
+					</div>
+
+
+
+				The three dimensional structure of LysRS-II closely resembles that of <a href="../asn">AsnRS</a> and <a href="../asp1">AspRS</a>, with an N-terminal anticodon binding domain and a C-terminal catalytic domain. These members constitute subclass IIb (Cusack et al. 1991, Valencia-Sánchez et al. 2016, Gomez et al. 2020). The class IIb synthetases of many eukaryotes contain a flexible domain at their N-terminii which help to anchor the synthetase onto the tRNA (Frugier et al. 2000).  <br><br>
 				
 
 				The N-terminal anticodon binding domain binds the second and third positions of the anticodon (Cusack et al. 1996). This enables binding specificty towards tRNA<sup>Lys</sup>, as opposed to tRNA<sup>Asn</sup>, as their anticodon binding domains are structurally similar, and their first two codon positions are identical in most genetic codes (AAA and AAG for Lys; AAC and AAT for Asn). <br><br>
 
 
-				The C-terminal catalytic domain of LysRS is quite typical of a class II aaRS. Like most members of the superfamily, ATP binding is coordinated by the arginine tweezers, located in motifs 2 and 3 (Kaiser et al. 2018). The catalytic domain is a seven stranded antiparallel fold. In the active site, three metal ions bind to the &beta; and &gamma; phosphates of ATP (Blanquet et al. 2005). Like many multimeric class II aaRS proteins, LysRS exhibits negative cooperativity, meaning that substrate binding in the actives site of one subunit lowers the catalytic activity of the other (Hughes et al. 2003). <br><br>
+				The C-terminal catalytic domain of LysRS is quite typical of a class II aaRS. Like most members of the superfamily, ATP binding is coordinated by the arginine tweezers, located in motifs 2 and 3 (Kaiser et al. 2018). The catalytic domain is a six stranded antiparallel fold. In the active site, three metal ions bind to the &beta; and &gamma; phosphates of ATP (Blanquet et al. 2005). Like many multimeric class II aaRS proteins, LysRS exhibits negative cooperativity, meaning that substrate binding in the actives site of one subunit lowers the catalytic activity of the other (Hughes et al. 2003). 
+				The calalytic domain of LysRS-II, much like the other members of subclass IIb, is characterised by the subclass 2b insertion modules <a href="/superfamily/class2/Subclass_2b_IM_1">1</a> and <a href="/superfamily/class2/Subclass_2b_IM_1">2</a>.  <br><br>
 
 				
 			Editing in LysRS occurs at the pre-transfer level, despite lacking an edit domain. This process has been characterised for methionine, leucine, cysteine, alanine, threonine, homocysteine, homoserine, and ornithine (Jakubowski 1997, 1999).  <br><br>

@@ -16,15 +16,16 @@
 <script type='text/javascript' src='../../bower_components/bio-pv/bio-pv.min.js'></script>
 
         
-<script type="text/x-mathjax-config">
+        
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
 </script>
-
 
 
 
@@ -62,20 +63,24 @@ function init(){
 				
 				<div>
 				
-			
-					The discriminating aspartyl tRNA synthetase (AspRS) is an enzyme which attaches aspartate to its cognate tRNA: <br><br>
+
+
+					The discriminating aspartyl tRNA synthetase (AspRS) is an enzyme that plays a crucial role in protein synthesis by catalysing the attachment of the amino acid aspartate to its cognate tRNA:
 
 
 
-					
+
 					<div class="reaction">
 						<span>
-							Asp + tRNA<sup>Asp</sup> + ATP &#129094; Asp-tRNA<sup>Asp</sup> + AMP + PP<sub>i</sub>
+							$ \text{Asp} + \text{tRNA}^\text{Asp} + \text{ATP} \xrightarrow{\text{AspRS}} \text{Asp-tRNA}^\text{Asp} + \text{AMP} + \text{PP}_i  $
 						</span>
 					</div>
 
+
+
+
 					This reaction enables the incorporation of aspartate into the polypeptide. 
-					There is also a non-discriminating <a href="../asp2">AsxRS</a> which can also incorporate asparagine into the protein by binding to the tRNA for asparagine. 
+					There is also a non-discriminating <a href="../asp2">AsxRS</a> which can also incorporate both aspartate as well as asparagine into the protein. 
 					A helix in the anticodon binding domain enables AspRS to discriminate between the two tRNA species  (Charron et al. 2003).
 					Some organisms contain genes for both proteins.   <br><br>
 
@@ -88,16 +93,16 @@ function init(){
 					Editing activity has not been detected for AspRS (Gomez et al. 2020). <br><br>
 
 
-					In addition to the eukaryotic flexible linker, AspRS is further characterised by an insertion module. 
-					This module exists between motifs 2 and 3 and is composed of a five-stranded antiparallel &beta;-sheet flanked by &alpha; helices, 
-					and interacts with the tRNA through a network of water molecules (Eiler et al. 1999).  <br><br>
+					The C-terminal catalytic domain of AspRS is quite typical of a class II aaRS, and contains six antiparallel strands.
+					 Like most members of the superfamily, ATP binding is coordinated by the arginine tweezers, located in motifs 2 and 3 
+					(Kaiser et al. 2018).
+					The calalytic domain of AspRS, much like the other members of subclass IIb, is characterised by the subclass 2b insertion modules <a href="/superfamily/class2/Subclass_2b_IM_1">1</a> and <a href="/superfamily/class2/Subclass_2b_IM_1">2</a>.  
+					This first insertion module is quite extensive for AspRS and is composed of a five-stranded antiparallel &beta;-sheet flanked by &alpha; helices. 
+					It interacts with the tRNA through a network of water molecules (Eiler et al. 1999).  <br><br>
 
 
 
-					The C-terminal catalytic domain of AspRS is quite typical of a class II aaRS, however the catalytic domain contains six antiparallel strands rather than seven
-					(same as <a href="../asn">AsnRS</a>). Like most members of the superfamily, ATP binding is coordinated by the arginine tweezers, located in motifs 2 and 3 
-					(Kaiser et al. 2018). <br><br>
-
+				
 
 					
 
