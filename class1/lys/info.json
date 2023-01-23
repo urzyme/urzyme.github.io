@@ -17,6 +17,7 @@
 		"features": {"Catalytic domain": {"acc": "LysRS-I_AF_Arch_Candidatus_Bathyarchaeota_archaeon_proteinRJS75864.1.pdb", "range": "33-318", "level": 4},
 					"Protozyme": {"acc": "LysRS-I_AF_Arch_Candidatus_Bathyarchaeota_archaeon_proteinRJS75864.1.pdb", "range": "35-78", "level": 2},
 					"Crossover 2": {"acc": "LysRS-I_AF_Arch_Candidatus_Bathyarchaeota_archaeon_proteinRJS75864.1.pdb", "range": "255-289", "level": 2},
+					"CP1": {"acc": "LysRS-I_AF_Arch_Candidatus_Bathyarchaeota_archaeon_proteinRJS75864.1.pdb", "range": "139-254", "level": 2, "href": "/superfamily/class1/CP1"},
 					"HIGH": {"acc": "LysRS-I_AF_Arch_Candidatus_Bathyarchaeota_archaeon_proteinRJS75864.1.pdb", "range": "48-51", "level": 1},
 					"KMSKS": {"acc": "LysRS-I_AF_Arch_Candidatus_Bathyarchaeota_archaeon_proteinRJS75864.1.pdb", "range": "299-303", "level": 1}}
 	

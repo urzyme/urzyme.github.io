@@ -13,7 +13,7 @@ do
 
 	cd $c
 	
-	for d in Proto*/
+	for d in C*/
 	do
 
 		echo "$c $d"

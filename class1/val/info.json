@@ -18,6 +18,7 @@
 		"features": {"Catalytic domain": {"acc": "ValRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094666.pdb", "range": "36-550", "level": 4},
 					"Protozyme": {"acc": "ValRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094666.pdb", "range": "40-85", "level": 2},
 					"Crossover 2": {"acc": "ValRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094666.pdb", "range": "488-529", "level": 2},
+					"CP1": {"acc": "ValRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094666.pdb", "range": "147-474", "level": 2, "href": "/superfamily/class1/CP1"},
 					"HIGH": {"acc": "ValRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094666.pdb", "range": "55-58", "level": 1},
 					"KMSKS": {"acc": "ValRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094666.pdb", "range": "534-538", "level": 1}}
 	

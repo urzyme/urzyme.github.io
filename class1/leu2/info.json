@@ -16,6 +16,7 @@
 		"features": {"Catalytic domain": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "28-668", "level": 4},
 					"Protozyme": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "29-69", "level": 2},
 					"Crossover 2": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "590-625", "level": 2},
+					"CP1": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "153-588", "level": 2, "href": "/superfamily/class1/CP1"},
 					"HIGH": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "44-47", "level": 1},
 					"KMSKS": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "634-638", "level": 1}}
 	

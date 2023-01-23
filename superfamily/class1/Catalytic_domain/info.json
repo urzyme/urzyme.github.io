@@ -1,5 +1,34 @@
 {
-    "fullName":"Class I Catalytic Domain",
+    "fullName":"Class I Catalytic domain",
     "class":"Class I",
-    "icon":"/fig/icon_white.png"
+    "substrate":"Arg, Cys, Gln, Glu, Ile, Leu, Lys, Met, Trp, Tyr, Val",
+    "incorporates":"Arg, Cys, Gln, Glu, Ile, Leu, Lys, Met, Trp, Tyr, Val",
+    "oligo":"Monomer, Homodimer",
+    "icon":"/fig/icon_white.png",
+    "features": {   
+
+
+        "IleRS IM": {"acc": "IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb", "range": "209-244", "level": 4, "count": 1},
+        "SC2a IM.1": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "418-474", "level": 4, "count": 5},
+
+        "Protozyme": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "3-49", "level": 3, "href": "../Protozyme"},
+        "Crossover 2": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "256-290", "level": 3},
+
+
+
+        "HIGH": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "19-22", "level": 2},
+        "KMSKS": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "299-303", "level": 2},
+
+        "S1": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "3-9", "level": 1},
+        "H1": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "20-37", "level": 1},
+        "S2": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "42-49", "level": 1},
+        "H2": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "71-85", "level": 1},
+        "S3": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "90-94", "level": 1},
+        "H3": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "98-113", "level": 1},
+        "H4": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "226-239", "level": 1},
+        "S4": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "256-261", "level": 1},
+        "H5": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "267-279", "level": 1},
+        "S5": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "285-290", "level": 1}
+
+    }
 }

@@ -18,6 +18,7 @@
 		"features": {"Catalytic domain": {"acc": "MetRS_AF_Euk_Drosophila_melanogaster_gene37177.pdb", "range": "250-605", "level": 4},
 					"Protozyme": {"acc": "MetRS_AF_Euk_Drosophila_melanogaster_gene37177.pdb", "range": "255-302", "level": 2},
 					"Crossover 2": {"acc": "MetRS_AF_Euk_Drosophila_melanogaster_gene37177.pdb", "range": "538-576", "level": 2},
+					"CP1": {"acc": "MetRS_AF_Euk_Drosophila_melanogaster_gene37177.pdb", "range": "348-524", "level": 2, "href": "/superfamily/class1/CP1"},
 					"HIGH": {"acc": "MetRS_AF_Euk_Drosophila_melanogaster_gene37177.pdb", "range": "270-273", "level": 1},
 					"KMSKS": {"acc": "MetRS_AF_Euk_Drosophila_melanogaster_gene37177.pdb", "range": "585-589", "level": 1}}
 	

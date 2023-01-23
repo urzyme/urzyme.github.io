@@ -15,6 +15,7 @@
 		"features": {"Catalytic domain": {"acc": "TrpRS-A_AF_Arch_Natrialba_magadii_ATCC_43099_gene8824932.pdb", "range": "83-298", "level": 4},
 					"Protozyme": {"acc": "TrpRS-A_AF_Arch_Natrialba_magadii_ATCC_43099_gene8824932.pdb", "range": "86-123", "level": 2},
 					"Crossover 2": {"acc": "TrpRS-A_AF_Arch_Natrialba_magadii_ATCC_43099_gene8824932.pdb", "range": "222-258", "level": 2},
+					"CP1": {"acc": "TrpRS-A_AF_Arch_Natrialba_magadii_ATCC_43099_gene8824932.pdb", "range": "165-220", "level": 2, "href": "/superfamily/class1/CP1"},
 					"HIGH": {"acc": "TrpRS-A_AF_Arch_Natrialba_magadii_ATCC_43099_gene8824932.pdb", "range": "98-101", "level": 1},
 					"KMSKS": {"acc": "TrpRS-A_AF_Arch_Natrialba_magadii_ATCC_43099_gene8824932.pdb", "range": "268-272", "level": 1}}
 	
