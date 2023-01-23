@@ -15,15 +15,15 @@
 <script type='text/javascript' src='../../bower_components/bio-pv/bio-pv.min.js'></script>
 
         
-<script type="text/x-mathjax-config">
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
 </script>
-
 
 
 
@@ -62,26 +62,32 @@ function init(){
 				<div>
 
 
-						The mitochondrial	phenylalanyl tRNA synthetase (m-PheRS) is an enzyme which attaches phenylalanine to its cognate tRNA: <br><br>
 
 
-					<ul>
-						<li>Phe + tRNA<sup>Phe</sup> + ATP &rightarrow; Phe-tRNA<sup>Phe</sup> + AMP + PP<sub>i</sub> </li>
-					</ul>
-
-					Although it resides in the mitochondria, the gene which encodes m-PheRS is nuclear. <br><br>
-
-
-					PheRS is probably the most complex of amino acyl tRNA synthetases (Klipcan et al. 2010). There are three variants of PheRS.
-					 This variant is the only monomeric member of the class II superfamily. The other two variants are heterotetrameric - one predominantly found in bacteria, and the other in eukaryotes/archaea (Finarov et al. 2010). As the two variants are heterotetrameric, they are comprised of four families: the <a href="../phe1">bacterial &alpha; subunit</a>, the <a href="../phe2">bacterial &beta; subunit</a>, the <a href="../phe3">eukaryotic &alpha; subunit</a>, and the <a href="../phe4">eukaryotic &beta; subunit</a>. <br><br>
+					The mitochondrial	phenylalanyl-tRNA synthetase (PheRS-M) is an enzyme that plays a crucial role in protein synthesis by catalysing the attachment of the amino acid phenylalanine to its cognate tRNA:
 
 
 
-					 	The catalytic core is similar to that of the other PheRS familes, as well as <a href="../sep">SepRS</a> and <a href="../pyl">PylRS</a>. Collectivey, these members constitute subclass IIc (Kavran et al. 2007, Perona et al. 2012, Valencia-Sánchez et al. 2016, Gomez et al. 2020). Like most members of the superfamily, ATP binding is coordinated by the arginine tweezers, located in motifs 2 and 3 (Kaiser et al. 2018). The core is most similar to the &alpha; bacterial subunit of PheRS, and much like this paralog, the sequence at the position of motif 1 is fairly distant to other class members. In contrast, the C-terminal anticodon binding domain appears to be borrowed from the bacterial &beta; subunit (domain B8; Klipcan et al. 2010). As such, the mitochondrial PheRS is likely a chimera between the two bacterial PheRS subunits.  <br><br>
+					<div class="reaction">
+						<span>
+							$ \text{Phe} + \text{tRNA}^\text{Phe} + \text{ATP} \xrightarrow{\text{PheRS-M}} \text{Phe-tRNA}^\text{Phe} + \text{AMP} + \text{PP}_i  $
+						</span>
+					</div>
+
+					The gene for PheRS-M is expressed in the nucleus and the protein is localised to the mitochondria and chloroplasts (Duchêne et al., 2005). 
+					The phenylalanyl-tRNA synthetases (PheRS) are considered to be one of the most evolutionarily complex enzymes among aminoacyl-tRNA synthetases (Klipcan et al., 2010). 
+					There are three variants of PheRS, with PheRS-M being the only monomeric member of the class II superfamily. 
+					The other two variants are heterotetrameric, with one <a href="../phe1">variant</a> found primarily in bacteria and the <a href="../phe3">variant</a> in eukaryotes/archaea (Finarov et al., 2010). <br><br>
 
 
+					The catalytic core of PheRS-M is similar to that of the other PheRS families, as well as <a href="../sep">SepRS</a> and <a href="../pyl">PylRS</a>. 
+					Together, these enzymes constitute subclass IIc (Kavran et al. 2007, Perona et al. 2012, Valencia-Sánchez et al. 2016, Gomez et al. 2020). 
+					The core of PheRS-M is most similar to the &alpha; bacterial subunit <a href="../phe1">PheRS-B&alpha;</a>.
+					 In contrast, the C-terminal anticodon binding domain appears to have been borrowed from the bacterial &beta; subunit <a href="../phe2">PheRS-B&alpha;</a> (domain B8; Klipcan et al. 2010). This suggests that the mitochondrial PheRS may be a chimera between the two bacterial PheRS subunits. <br><br>
 
-					 	Unlike the cystsolic vaiants, there is no known editing activity for the mitochondrial PheRS (Roy et al. 2005, Klipcan et al. 2010). All types of PheRS are known to mischarge tyrosyl groups, suggesting that mitochondrial translation of phenylalanine may be less accurate than the cytosolic form.
+
+					 Unlike the cytosolic variants, there is no known editing activity for the mitochondrial PheRS (Roy et al. 2005, Klipcan et al. 2010). All types of PheRS are known to mischarge tyrosyl groups, which suggests that mitochondrial translation of phenylalanine may be less accurate than the cytosolic form.
+
 
 
 			
@@ -144,6 +150,10 @@ function init(){
 					Finarov, Igal, et al. "Structure of human cytosolic phenylalanyl-tRNA synthetase: evidence for kingdom-specific design of the active sites and tRNA binding patterns." Structure 18.3 (2010): 343-353.
 				</div>
 
+
+		<div>
+			Duchêne, Anne-Marie, et al. "Dual targeting is the rule for organellar aminoacyl-tRNA synthetases in Arabidopsis thaliana." Proceedings of the National Academy of Sciences 102.45 (2005): 16484-16489.
+		</div>
 
 			<div>
 				Klipcan, Liron, et al. "The tRNA-induced conformational activation of human mitochondrial phenylalanyl-tRNA synthetase." Structure 16.7 (2008): 1095-1104.
