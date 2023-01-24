@@ -7,13 +7,13 @@
     "fullName1":"Tyrosyl tRNA Synthetase",
     "fullName2":"Valyl tRNA Synthetase",
     "description":"Pairwise comparison of the Class I catalytic domains from the Tyrosyl tRNA Synthetase (<a href='/class1/tyr'>TyrRS</a>) and Valyl tRNA Synthetase (<a href='/class1/val'>ValRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.572,
-    "rmsd1":    3.18,
-    "rmsd2":    2.93,
-    "crossFamilyRmsd":    4.84,
-    "rmsdTotal":    3.97,
+    "rmsd":    2.611,
+    "rmsd1":    3.16,
+    "rmsd2":    3.83,
+    "crossFamilyRmsd":    6.02,
+    "rmsdTotal":    4.75,
     "features":{
-        "Crossover 1":{
+        "Protozyme":{
             "acc":"TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb",
             "range":"1-38",
             "level":            2
@@ -22,6 +22,12 @@
             "acc":"TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb",
             "range":"137-175",
             "level":            2
+        },
+        "CP1":{
+            "acc":"TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb",
+            "range":"77-136",
+            "level":            2,
+            "href":"/superfamily/class1/CP1"
         },
         "HIGH":{
             "acc":"TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb",

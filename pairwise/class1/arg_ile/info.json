@@ -7,13 +7,13 @@
     "fullName1":"Arginyl tRNA Synthetase",
     "fullName2":"Isoleucyl tRNA Synthetase",
     "description":"Pairwise comparison of the Class I catalytic domains from the Arginyl tRNA Synthetase (<a href='/class1/arg'>ArgRS</a>) and Isoleucyl tRNA Synthetase (<a href='/class1/ile'>IleRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.457,
-    "rmsd1":    4.2,
-    "rmsd2":    4.22,
-    "crossFamilyRmsd":    3.89,
-    "rmsdTotal":    4.05,
+    "rmsd":    2.451,
+    "rmsd1":    3.13,
+    "rmsd2":    4.13,
+    "crossFamilyRmsd":    4.06,
+    "rmsdTotal":    3.85,
     "features":{
-        "Crossover 1":{
+        "Protozyme":{
             "acc":"ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb",
             "range":"4-49",
             "level":            2
@@ -22,6 +22,12 @@
             "acc":"ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb",
             "range":"280-315",
             "level":            2
+        },
+        "CP1":{
+            "acc":"ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb",
+            "range":"187-273",
+            "level":            2,
+            "href":"/superfamily/class1/CP1"
         },
         "HIGH":{
             "acc":"ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb",

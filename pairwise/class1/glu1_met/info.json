@@ -7,13 +7,13 @@
     "fullName1":"Discriminating Glutamyl tRNA Synthetase",
     "fullName2":"Methionyl tRNA Synthetase",
     "description":"Pairwise comparison of the Class I catalytic domains from the Discriminating Glutamyl tRNA Synthetase (<a href='/class1/glu1'>GluRS</a>) and Methionyl tRNA Synthetase (<a href='/class1/met'>MetRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.251,
-    "rmsd1":    2.12,
-    "rmsd2":    3,
-    "crossFamilyRmsd":    4.47,
-    "rmsdTotal":    3.59,
+    "rmsd":    2.344,
+    "rmsd1":    2.06,
+    "rmsd2":    2.99,
+    "crossFamilyRmsd":    4.02,
+    "rmsdTotal":    3.35,
     "features":{
-        "Crossover 1":{
+        "Protozyme":{
             "acc":"GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
             "range":"1-38",
             "level":            2
@@ -22,6 +22,12 @@
             "acc":"GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
             "range":"204-240",
             "level":            2
+        },
+        "CP1":{
+            "acc":"GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
+            "range":"105-201",
+            "level":            3,
+            "href":"/superfamily/class1/CP1"
         },
         "HIGH":{
             "acc":"GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
@@ -32,6 +38,12 @@
             "acc":"GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
             "range":"249-253",
             "level":            1
+        },
+        "SC1b IM":{
+            "acc":"GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
+            "range":"124-187",
+            "level":            2,
+            "href":"/superfamily/class1/SC1b_IM"
         }
     }
 }

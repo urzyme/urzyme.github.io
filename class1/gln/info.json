@@ -16,9 +16,10 @@
 		"hinges": [203],
 		"refine": [{"start": 422, "stop": 491}],
 		"features": {"Catalytic domain": {"acc": "GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb", "range": "29-287", "level": 4},
+					"CP1": {"acc": "GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb", "range": "102-227", "level": 3, "href": "/superfamily/class1/CP1"},
+					"SC1b IM": {"acc": "GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb", "range": "119-213", "level": 2, "href": "/superfamily/class1/SC1b_IM"},
 					"Protozyme": {"acc": "GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb", "range": "31-68", "level": 2},
 					"Crossover 2": {"acc": "GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb", "range": "229-261", "level": 2},
-					"CP1": {"acc": "GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb", "range": "102-227", "level": 2, "href": "/superfamily/class1/CP1"},
 					"HIGH": {"acc": "CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb", "range": "36-39", "level": 1},
 					"HIGH": {"acc": "GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb", "range": "43-46", "level": 1},
 					"KMSKS": {"acc": "GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb", "range": "270-274", "level": 1}}

@@ -7,13 +7,13 @@
     "fullName1":"Leucyl tRNA Synthetase (Bacterial-like)",
     "fullName2":"Valyl tRNA Synthetase",
     "description":"Pairwise comparison of the Class I catalytic domains from the Leucyl tRNA Synthetase (Bacterial-like) (<a href='/class1/leu1'>LeuRS-B</a>) and Valyl tRNA Synthetase (<a href='/class1/val'>ValRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    1.845,
-    "rmsd1":    3.99,
-    "rmsd2":    2.34,
-    "crossFamilyRmsd":    3.19,
-    "rmsdTotal":    3.03,
+    "rmsd":    1.918,
+    "rmsd1":    4.22,
+    "rmsd2":    2.37,
+    "crossFamilyRmsd":    4.15,
+    "rmsdTotal":    3.59,
     "features":{
-        "Crossover 1":{
+        "Protozyme":{
             "acc":"LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb",
             "range":"44-86",
             "level":            2
@@ -22,6 +22,12 @@
             "acc":"LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb",
             "range":"654-694",
             "level":            2
+        },
+        "CP1":{
+            "acc":"LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb",
+            "range":"138-627",
+            "level":            2,
+            "href":"/superfamily/class1/CP1"
         },
         "HIGH":{
             "acc":"LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb",

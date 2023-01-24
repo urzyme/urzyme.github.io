@@ -7,13 +7,13 @@
     "fullName1":"Cysteinyl tRNA Synthetase",
     "fullName2":"Tyrosyl tRNA Synthetase",
     "description":"Pairwise comparison of the Class I catalytic domains from the Cysteinyl tRNA Synthetase (<a href='/class1/cys'>CysRS</a>) and Tyrosyl tRNA Synthetase (<a href='/class1/tyr'>TyrRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.29,
-    "rmsd1":    2.59,
-    "rmsd2":    2.99,
-    "crossFamilyRmsd":    6.06,
-    "rmsdTotal":    4.47,
+    "rmsd":    2.772,
+    "rmsd1":    3.68,
+    "rmsd2":    2.62,
+    "crossFamilyRmsd":    5.64,
+    "rmsdTotal":    4.41,
     "features":{
-        "Crossover 1":{
+        "Protozyme":{
             "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
             "range":"3-49",
             "level":            2
@@ -22,6 +22,12 @@
             "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
             "range":"200-237",
             "level":            2
+        },
+        "CP1":{
+            "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
+            "range":"95-198",
+            "level":            2,
+            "href":"/superfamily/class1/CP1"
         },
         "HIGH":{
             "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",

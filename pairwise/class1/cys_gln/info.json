@@ -7,13 +7,25 @@
     "fullName1":"Cysteinyl tRNA Synthetase",
     "fullName2":"Glutaminyl tRNA Synthetase",
     "description":"Pairwise comparison of the Class I catalytic domains from the Cysteinyl tRNA Synthetase (<a href='/class1/cys'>CysRS</a>) and Glutaminyl tRNA Synthetase (<a href='/class1/gln'>GlnRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    1.887,
-    "rmsd1":    2.41,
-    "rmsd2":    1.44,
-    "crossFamilyRmsd":    4.86,
-    "rmsdTotal":    3.47,
+    "rmsd":    2.115,
+    "rmsd1":    3.07,
+    "rmsd2":    1.71,
+    "crossFamilyRmsd":    5.17,
+    "rmsdTotal":    3.9,
     "features":{
-        "Crossover 1":{
+        "CP1":{
+            "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
+            "range":"95-198",
+            "level":            2,
+            "href":"/superfamily/class1/CP1"
+        },
+        "SC1b IM":{
+            "acc":"GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb",
+            "range":"90-184",
+            "level":            2,
+            "href":"/superfamily/class1/SC1b_IM"
+        },
+        "Protozyme":{
             "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
             "range":"3-49",
             "level":            2

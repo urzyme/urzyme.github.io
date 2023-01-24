@@ -7,13 +7,13 @@
     "fullName1":"Non-discriminating Glutamyl tRNA Synthetase",
     "fullName2":"Tyrosyl tRNA Synthetase",
     "description":"Pairwise comparison of the Class I catalytic domains from the Non-discriminating Glutamyl tRNA Synthetase (<a href='/class1/glu2'>GlxRS</a>) and Tyrosyl tRNA Synthetase (<a href='/class1/tyr'>TyrRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.633,
-    "rmsd1":    2,
-    "rmsd2":    3.62,
-    "crossFamilyRmsd":    4.17,
-    "rmsdTotal":    3.72,
+    "rmsd":    2.373,
+    "rmsd1":    2.58,
+    "rmsd2":    2.93,
+    "crossFamilyRmsd":    4.78,
+    "rmsdTotal":    3.69,
     "features":{
-        "Crossover 1":{
+        "Protozyme":{
             "acc":"GlxRS_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb",
             "range":"4-42",
             "level":            2
@@ -22,6 +22,12 @@
             "acc":"GlxRS_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb",
             "range":"198-229",
             "level":            2
+        },
+        "CP1":{
+            "acc":"TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb",
+            "range":"77-136",
+            "level":            2,
+            "href":"/superfamily/class1/CP1"
         },
         "HIGH":{
             "acc":"GlxRS_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb",

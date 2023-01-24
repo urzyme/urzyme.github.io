@@ -7,13 +7,13 @@
     "fullName1":"Methionyl tRNA Synthetase",
     "fullName2":"Valyl tRNA Synthetase",
     "description":"Pairwise comparison of the Class I catalytic domains from the Methionyl tRNA Synthetase (<a href='/class1/met'>MetRS</a>) and Valyl tRNA Synthetase (<a href='/class1/val'>ValRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    1.876,
-    "rmsd1":    3.3,
-    "rmsd2":    3.66,
-    "crossFamilyRmsd":    4.14,
-    "rmsdTotal":    3.81,
+    "rmsd":    2.492,
+    "rmsd1":    3.9,
+    "rmsd2":    2.44,
+    "crossFamilyRmsd":    4.58,
+    "rmsdTotal":    3.94,
     "features":{
-        "Crossover 1":{
+        "Protozyme":{
             "acc":"MetRS_AF_Euk_Drosophila_melanogaster_gene37177.pdb",
             "range":"5-52",
             "level":            2
@@ -22,6 +22,12 @@
             "acc":"MetRS_AF_Euk_Drosophila_melanogaster_gene37177.pdb",
             "range":"288-326",
             "level":            2
+        },
+        "CP1":{
+            "acc":"MetRS_AF_Euk_Drosophila_melanogaster_gene37177.pdb",
+            "range":"98-274",
+            "level":            2,
+            "href":"/superfamily/class1/CP1"
         },
         "HIGH":{
             "acc":"MetRS_AF_Euk_Drosophila_melanogaster_gene37177.pdb",

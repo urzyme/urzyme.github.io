@@ -7,13 +7,13 @@
     "fullName1":"Cysteinyl tRNA Synthetase",
     "fullName2":"Non-discriminating Glutamyl tRNA Synthetase",
     "description":"Pairwise comparison of the Class I catalytic domains from the Cysteinyl tRNA Synthetase (<a href='/class1/cys'>CysRS</a>) and Non-discriminating Glutamyl tRNA Synthetase (<a href='/class1/glu2'>GlxRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    1.87,
-    "rmsd1":    2.55,
-    "rmsd2":    1.9,
-    "crossFamilyRmsd":    4.2,
-    "rmsdTotal":    3.22,
+    "rmsd":    2.029,
+    "rmsd1":    2.74,
+    "rmsd2":    1.52,
+    "crossFamilyRmsd":    5.29,
+    "rmsdTotal":    3.74,
     "features":{
-        "Crossover 1":{
+        "Protozyme":{
             "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
             "range":"3-49",
             "level":            2
@@ -32,6 +32,12 @@
             "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
             "range":"246-250",
             "level":            1
+        },
+        "CP1":{
+            "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
+            "range":"95-198",
+            "level":            2,
+            "href":"/superfamily/class1/CP1"
         }
     }
 }

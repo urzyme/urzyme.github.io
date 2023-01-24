@@ -1,0 +1,43 @@
+{
+    "fullName":"GlxRS vs TrpRS-B pairwise comparison",
+    "class":"Class I",
+    "icon":"/fig/icon_white.png",
+    "family1":"GlxRS",
+    "family2":"TrpRS-B",
+    "fullName1":"Non-discriminating Glutamyl tRNA Synthetase",
+    "fullName2":"Tryptophanyl tRNA Synthetase (Bacterial-like)",
+    "description":"Pairwise comparison of the Class I catalytic domains from the Non-discriminating Glutamyl tRNA Synthetase (<a href='/class1/glu2'>GlxRS</a>) and Tryptophanyl tRNA Synthetase (Bacterial-like) (<a href='/class1/trp2'>TrpRS-B</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.947,
+    "rmsd1":    3.1,
+    "rmsd2":    1.41,
+    "crossFamilyRmsd":    4.88,
+    "rmsdTotal":    3.48,
+    "features":{
+        "Protozyme":{
+            "acc":"GlxRS_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb",
+            "range":"4-42",
+            "level":            2
+        },
+        "Crossover 2":{
+            "acc":"GlxRS_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb",
+            "range":"198-229",
+            "level":            2
+        },
+        "CP1":{
+            "acc":"TrpRS-B_AF_Mito_Cyanidioschyzon_merolae_strain_10D_gene16992222.pdb",
+            "range":"85-142",
+            "level":            2,
+            "href":"/superfamily/class1/CP1"
+        },
+        "HIGH":{
+            "acc":"GlxRS_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb",
+            "range":"16-19",
+            "level":            1
+        },
+        "KMSKS":{
+            "acc":"GlxRS_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb",
+            "range":"238-242",
+            "level":            1
+        }
+    }
+}

@@ -7,16 +7,28 @@
     "fullName1":"Glutaminyl tRNA Synthetase",
     "fullName2":"Class I Lysyl tRNA Synthetase",
     "description":"Pairwise comparison of the Class I catalytic domains from the Glutaminyl tRNA Synthetase (<a href='/class1/gln'>GlnRS</a>) and Class I Lysyl tRNA Synthetase (<a href='/class1/lys'>LysRS-I</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.232,
-    "rmsd1":    1.47,
-    "rmsd2":    2.96,
-    "crossFamilyRmsd":    5.15,
-    "rmsdTotal":    3.57,
+    "rmsd":    2.313,
+    "rmsd1":    1.95,
+    "rmsd2":    3.27,
+    "crossFamilyRmsd":    5.76,
+    "rmsdTotal":    4.09,
     "features":{
-        "Crossover 1":{
+        "CP1":{
+            "acc":"GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb",
+            "range":"73-198",
+            "level":            3,
+            "href":"/superfamily/class1/CP1"
+        },
+        "Protozyme":{
             "acc":"GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb",
             "range":"2-39",
             "level":            2
+        },
+        "LysRS-I IM":{
+            "acc":"LysRS-I_AF_Arch_Candidatus_Bathyarchaeota_archaeon_proteinRJS75864.1.pdb",
+            "range":"138-207",
+            "level":            2,
+            "href":"/superfamily/class1/LysRS-I_IM"
         },
         "Crossover 2":{
             "acc":"GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb",
@@ -32,6 +44,12 @@
             "acc":"GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb",
             "range":"241-245",
             "level":            1
+        },
+        "SC1b IM":{
+            "acc":"GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb",
+            "range":"90-184",
+            "level":            2,
+            "href":"/superfamily/class1/SC1b_IM"
         }
     }
 }

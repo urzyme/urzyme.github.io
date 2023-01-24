@@ -1,0 +1,43 @@
+{
+    "fullName":"TrpRS-A vs TyrRS pairwise comparison",
+    "class":"Class I",
+    "icon":"/fig/icon_white.png",
+    "family1":"TrpRS-A",
+    "family2":"TyrRS",
+    "fullName1":"Tryptophanyl tRNA Synthetase (Archaeal-like)",
+    "fullName2":"Tyrosyl tRNA Synthetase",
+    "description":"Pairwise comparison of the Class I catalytic domains from the Tryptophanyl tRNA Synthetase (Archaeal-like) (<a href='/class1/trp1'>TrpRS-A</a>) and Tyrosyl tRNA Synthetase (<a href='/class1/tyr'>TyrRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.422,
+    "rmsd1":    2.32,
+    "rmsd2":    3.28,
+    "crossFamilyRmsd":    3.77,
+    "rmsdTotal":    3.41,
+    "features":{
+        "Protozyme":{
+            "acc":"TrpRS-A_AF_Arch_Natrialba_magadii_ATCC_43099_gene8824932.pdb",
+            "range":"3-40",
+            "level":            2
+        },
+        "Crossover 2":{
+            "acc":"TrpRS-A_AF_Arch_Natrialba_magadii_ATCC_43099_gene8824932.pdb",
+            "range":"139-175",
+            "level":            2
+        },
+        "CP1":{
+            "acc":"TrpRS-A_AF_Arch_Natrialba_magadii_ATCC_43099_gene8824932.pdb",
+            "range":"82-137",
+            "level":            2,
+            "href":"/superfamily/class1/CP1"
+        },
+        "HIGH":{
+            "acc":"TrpRS-A_AF_Arch_Natrialba_magadii_ATCC_43099_gene8824932.pdb",
+            "range":"15-18",
+            "level":            1
+        },
+        "KMSKS":{
+            "acc":"TrpRS-A_AF_Arch_Natrialba_magadii_ATCC_43099_gene8824932.pdb",
+            "range":"185-189",
+            "level":            1
+        }
+    }
+}

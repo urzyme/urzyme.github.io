@@ -16,9 +16,10 @@
 		"hinges": [349],
 		"refine": [{"start": 787, "stop": 919}],
 		"features": {"Catalytic domain": {"acc": "GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb", "range": "20-302", "level": 4},
+					"CP1": {"acc": "GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb", "range": "125-221", "level": 3, "href": "/superfamily/class1/CP1"},
+					"SC1b IM": {"acc": "GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb", "range": "144-207", "level": 2, "href": "/superfamily/class1/SC1b_IM"},
 					"Protozyme": {"acc": "GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb", "range": "21-58", "level": 2},
 					"Crossover 2": {"acc": "GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb", "range": "224-260", "level": 2},
-					"CP1": {"acc": "GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb", "range": "125-221", "level": 2, "href": "/superfamily/class1/CP1"},
 					"HIGH": {"acc": "GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb", "range": "33-36", "level": 1},
 					"KMSKS": {"acc": "GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb", "range": "269-273", "level": 1}}
 	

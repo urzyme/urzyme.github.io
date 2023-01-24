@@ -7,13 +7,13 @@
     "fullName1":"Arginyl tRNA Synthetase",
     "fullName2":"Leucyl tRNA Synthetase (Archaeal-like)",
     "description":"Pairwise comparison of the Class I catalytic domains from the Arginyl tRNA Synthetase (<a href='/class1/arg'>ArgRS</a>) and Leucyl tRNA Synthetase (Archaeal-like) (<a href='/class1/leu2'>LeuRS-A</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.519,
-    "rmsd1":    4.06,
-    "rmsd2":    5.81,
-    "crossFamilyRmsd":    5.41,
-    "rmsdTotal":    4.74,
+    "rmsd":    2.562,
+    "rmsd1":    3.41,
+    "rmsd2":    4.67,
+    "crossFamilyRmsd":    4.76,
+    "rmsdTotal":    4.08,
     "features":{
-        "Crossover 1":{
+        "Protozyme":{
             "acc":"ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb",
             "range":"4-49",
             "level":            2
@@ -22,6 +22,12 @@
             "acc":"ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb",
             "range":"280-315",
             "level":            2
+        },
+        "CP1":{
+            "acc":"ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb",
+            "range":"187-273",
+            "level":            2,
+            "href":"/superfamily/class1/CP1"
         },
         "HIGH":{
             "acc":"ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb",

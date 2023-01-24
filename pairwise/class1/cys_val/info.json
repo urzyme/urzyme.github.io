@@ -7,13 +7,13 @@
     "fullName1":"Cysteinyl tRNA Synthetase",
     "fullName2":"Valyl tRNA Synthetase",
     "description":"Pairwise comparison of the Class I catalytic domains from the Cysteinyl tRNA Synthetase (<a href='/class1/cys'>CysRS</a>) and Valyl tRNA Synthetase (<a href='/class1/val'>ValRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    1.855,
-    "rmsd1":    2.22,
-    "rmsd2":    2.79,
-    "crossFamilyRmsd":    3.26,
-    "rmsdTotal":    2.89,
+    "rmsd":    1.964,
+    "rmsd1":    2.52,
+    "rmsd2":    3.51,
+    "crossFamilyRmsd":    4.3,
+    "rmsdTotal":    3.65,
     "features":{
-        "Crossover 1":{
+        "Protozyme":{
             "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
             "range":"3-49",
             "level":            2
@@ -22,6 +22,12 @@
             "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
             "range":"200-237",
             "level":            2
+        },
+        "CP1":{
+            "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
+            "range":"95-198",
+            "level":            2,
+            "href":"/superfamily/class1/CP1"
         },
         "HIGH":{
             "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
