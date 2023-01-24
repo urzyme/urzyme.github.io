@@ -15,9 +15,10 @@
 		"hinge_str": "structures/ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb",
 		"hinges": [114],
 		"features": {"Catalytic domain": {"acc": "ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb", "range": "117-468", "level": 4},
+					"CP1": {"acc": "ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb", "range": "304-390", "level": 3, "href": "/superfamily/class1/CP1"},
+					"Variable bundle": {"acc": "ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb", "range": "168-260", "level": 3, "href": "/superfamily/class1/Variable_bundle"},
 					"Protozyme": {"acc": "ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb", "range": "121-166", "level": 2},
 					"Crossover 2": {"acc": "ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb", "range": "397-432", "level": 2},
-					"CP1": {"acc": "ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb", "range": "304-390", "level": 2, "href": "/superfamily/class1/CP1"},
 					"HIGH": {"acc": "ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb", "range": "136-139", "level": 1},
 					"KMSKS": {"acc": "ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb", "range": "441-446", "level": 1}}
 }
