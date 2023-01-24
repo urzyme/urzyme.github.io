@@ -13,7 +13,7 @@ do
 
 	cd $c
 	
-	for d in C*/
+	for d in LIV*/
 	do
 
 		echo "$c $d"

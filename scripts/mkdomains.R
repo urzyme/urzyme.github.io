@@ -103,7 +103,10 @@ for (domain in features.df$domain){
 
 	for (pdbFile in pdbFiles){
 
-		#cat(paste(pdbFile, "\n"))
+
+		if (pdbFile == "structures/*.pdb" ){
+			next
+		}
 
 		pdb = readLines(pdbFile)
 

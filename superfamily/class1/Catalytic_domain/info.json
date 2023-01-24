@@ -8,11 +8,26 @@
     "features": {   
 
 
-        "IleRS IM": {"acc": "IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb", "range": "209-244", "level": 4, "count": 1},
-        "SC2a IM.1": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "418-474", "level": 4, "count": 5},
+        
+        "SC1b IM": {"acc": "GlnRS_AF_Euk_Candida_dubliniensis_CD36_gene8049124.pdb", "range": "97-146", "level": 4, "count": 3, "href": "../SC1b_IM"},
+        "LysRS-II IM": {"acc": "LysRS-I_AF_Arch_Candidatus_Bathyarchaeota_archaeon_proteinRJS75864.1.pdb", "range": "128-206", "level": 4, "count": 1, "href": "../LysRS-I_IM"},
+        "SC1a IM.2": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "167-201", "level": 4, "count": 5},
+        "CysRS IM": {"acc": "CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb", "range": "127-173", "level": 4, "count": 1, "href": "../LysRS-I_IM"},
+
+        "LIV IM": {"acc": "ValRS_AF_Mito_Falco_naumanni_gene121082178.pdb", "range": "182-338", "level": 4, "count": 3, "href": "../LIV_IM"},
+        "LI IM": {"acc": "IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb", "range": "209-244", "level": 2, "count": 2},
+        "LeuRS-A IM": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "326-373", "level": 2, "count": 1},
+
+
 
         "Protozyme": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "3-49", "level": 3, "href": "../Protozyme"},
         "Crossover 2": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "256-290", "level": 3},
+
+
+
+         "Z1": {"acc": "ArgRS_AF_Bact_Prochlorococcus_marinus_subsp_marinus_str_CCMP1375_gene54199571.pdb", "range": "175-180", "level": 4, "count": 10},
+         "Z2": {"acc": "ArgRS_AF_Bact_Prochlorococcus_marinus_subsp_marinus_str_CCMP1375_gene54199571.pdb", "range": "183-188", "level": 4, "count": 10},
+         "Z3": {"acc": "ArgRS_AF_Bact_Prochlorococcus_marinus_subsp_marinus_str_CCMP1375_gene54199571.pdb", "range": "197-201", "level": 4, "count": 10},
 
 
 
