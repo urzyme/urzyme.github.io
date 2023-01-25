@@ -1,7 +1,7 @@
 class	familyID	name	accession	domain	phylum	species	pdb	genbank	gene	protein	transl_table	desc	sequence	
 1	arg	ArgRS	ArgRS_PDB_Arch_2ZUF	Archaea	Crenarchaeota	Pyrococcus horikoshii	2ZUF							
-1	arg	ArgRS	ArgRS_PDB_Bact_1IQ0	Bacteria	Proteobacteria	Escherichia coli	1IQ0							
-1	arg	ArgRS	ArgRS_PDB_Bact_3FNR	Bacteria	Proteobacteria	Campylobacter jejuni	3FNR							
+1	arg	ArgRS	ArgRS_PDB_Bact_1IQ0	Bacteria	Deinococcus-Thermus	Thermus thermophilus	1IQ0							
+1	arg	ArgRS	ArgRS_PDB_Euk_S_cerevisiae_1BS2	Eukaryota	Ascomycota	Saccharomyces cerevisiae	1BS2							
 1	cys	CysRS	CysRS_PDB_Bact_E_coli_1LI5	Bacteria	Proteobacteria	Escherichia coli	1LI5							
 1	cys	CysRS	CysRS_PDB_Bact_M_smegmatis_3C8Z	Bacteria	Actinomycetota	Mycobacterium smegmatis	3C8Z							
 1	gln	GlnRS	GlnRS_Bact_D_radio_2HZ7	Bacteria	Deinococcaceae	Deinococcus radiodurans	2HZ7							
