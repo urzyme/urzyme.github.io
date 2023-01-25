@@ -23,7 +23,7 @@
         "LIV IM 1": {"acc": "ValRS_AF_Mito_Falco_naumanni_gene121082178.pdb", "range": "182-338", "level": 4, "count": 3, "href": "../LIV_IM"},
         "LI IM": {"acc": "IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb", "range": "209-244", "level": 2, "count": 2},
         "LeuRS-A IM 1": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "326-373", "level": 2, "count": 1},
-		"LeuRS-A IM 2": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "497-537", "level": 2, "count": 1},
+		"LeuRS-A IM 2": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "497-537", "level": 2, "count": 1, "align": "right"},
 
         "Protozyme": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "3-49", "level": 3, "href": "../Protozyme"},
         "Crossover 2": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "256-290", "level": 3},
@@ -46,7 +46,7 @@
         "S3": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "90-94", "level": 1},
         "H3": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "98-113", "level": 1},
         "H4": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "227-239", "level": 1},
-        "S4": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "256-261", "level": 1},
+        "S4": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "256-261", "level": 1, "align": "right"},
         "H5": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "267-279", "level": 1},
         "S5": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "285-290", "level": 1}
 

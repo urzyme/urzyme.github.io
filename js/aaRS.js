@@ -200,15 +200,17 @@ function renderaaRS(isPairwise = false, isSuperfamily = false){
 
 	// Tertiary dropdowns
 	$("#tertiaryTable").append("<span class='button' onClick='deselectSites(); deselectTaxa(true)'>Clear selection</span>");
+	$("#tertiaryTable").append("<span class='dropdownDiv'>Accession: <select id='accessionSelect'></select></span>");
 	$("#tertiaryTable").append("<span class='dropdownDiv domainSelect'>Domain: <select id='domainSelect'></select></span>");
-	$("#tertiaryTable").append("<span class='dropdownDiv colouring'>Alignment colour: <select id='tertiaryColouringAln'></select></span>");
-	$("#tertiaryTable").append("<span class='dropdownDiv colouring'>Reference colour: <select id='tertiaryColouringSingle'></select></span>");
+	
 	
 	
 	if (IS_MOBILE){
 		$("#tertiaryTable").find("span").after("<br>");
 		$("#tertiaryTable").find("span").css("display", "inline-block");
 	}
+
+
 	
 	// Domain selection
     let dropdown = $("#domainSelect");
@@ -221,27 +223,34 @@ function renderaaRS(isPairwise = false, isSuperfamily = false){
     }
     $(dropdown).on("change", function(){
       $("#tertiary").html("");
-      renderTertiary("data/align.pdb", "superposition");
+      deselectSites();
+      recolourTertiaries(true);
+      dropdown.focus(); // Refocus on dropdown for easy selection using arrow keys
     });
 	
 		
-	if (PAIRWISE) {
+	if (PAIRWISE || isSuperfamily) {
 		$("#tertiaryTable .domainSelect").hide();
 	}
 	
 	
 	
 	// Protein colouring
+	$("#superposition").after("<span class='dropdownDiv colouring'>Colour by: <select id='tertiaryColouringAln'></select></span>");
+	$("#tertiary").after("<span class='dropdownDiv colouring'>Colour by: <select id='tertiaryColouringSingle'></select></span>");
+
+
 	let dropdowns = $("#tertiaryTable").find(".colouring");
 	for (let d = 0; d < dropdowns.length; d ++){
 		let dropdownCol = $(dropdowns[d]).find("select");
 		if (d == 0) dropdownCol.append("<option value='byChain'>Chain</option>");
 		dropdownCol.append("<option value='rainbow'>Position</option>");
-		dropdownCol.append("<option value='bySS'>Secondary structure</option>");
-		dropdownCol.append("<option value='ssSuccession'>Secondary structure succession</option>");
+		dropdownCol.append("<option value='bySS'>SSE</option>");
+		dropdownCol.append("<option value='ssSuccession'>SSE succession</option>");
 		$(dropdownCol).val("bySS");
 		$(dropdownCol).on("change", function(){
 			 recolourTertiaries();
+			 
 		});
 	}
 
@@ -261,18 +270,49 @@ function renderaaRS(isPairwise = false, isSuperfamily = false){
 
 
 
-	
+
+		// Accession select
+		let accessionSelect = $("#accessionSelect");
+    for (let f in DATA.accessions){
+    	let acc = getNameOfAccession(DATA.accessions[f]);
+    	accessionSelect.append("<option value='" + DATA.accessions[f] + "'>" + acc + "</option>");
+    }
+    $(accessionSelect).on("change", function(){
+      console.log("selected", $(accessionSelect).val());
+      deselectTaxa();
+      SELECTED_ACCESSION = $(accessionSelect).val();
+      let directory = getDirectoryOfAccession(SELECTED_ACCESSION);
+      renderTertiary(directory, "tertiary");
+      selectSites(true);
+      accessionSelect.focus(); // Refocus on dropdown for easy selection using arrow keys
+    });
+    renderTertiary(getDirectoryOfAccession($(accessionSelect).val()), "tertiary");
 
 
 
-  // Delete loader
-  $("#mainloader").remove();
+
+	  // Delete loader
+	  $("#mainloader").remove();
 
 	
 
   })
 
 	
+}
+
+
+// Get pdb directory of an accession
+function getDirectoryOfAccession(acc){
+
+      let directory = DATA.directories[acc];
+      directory = directory.replaceAll("structures/", "dssp/")
+      if (directory.substr(0, 4) == "dssp"){
+      	directory = "data/" + directory;
+      }
+
+      return directory;
+
 }
 
 
@@ -495,8 +535,25 @@ function renderInfo(text, resolve=function() { }){
 
 }
 
+
+
+function isElementInViewport (ele) {
+
+
+		ele = ele[0];
+    let rect = ele.getBoundingClientRect();
+
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /* or $(window).height() */
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() */
+    );
+}
+
 function renderTertiary(pdb = null, id = "tertiary") {
-	
+
+
 	
 	var options = {
 	  width: IS_MOBILE ? 700 : 450,
@@ -506,12 +563,12 @@ function renderTertiary(pdb = null, id = "tertiary") {
 	};
 	
 	// Hide and show again to prevent the annoying scrolling activity, unless already in viewport
-	let hideAndShow = true;// $('#' + id).isInViewport();
+	let hideAndShow = !isElementInViewport($("#" + id)); //true;// $('#' + id).isInViewport();
 
 	if (hideAndShow){
-		$("#" + id).hide(0);
+		$("#" + id).parent().hide(0);
 	}else{
-		$("#" + id).show(0);
+		$("#" + id).parent().show(0);
 	}
   
 
@@ -552,7 +609,7 @@ function renderTertiary(pdb = null, id = "tertiary") {
   
   if (hideAndShow){
 	  setTimeout(function(){
-		$("#" + id).show(0);
+		$("#" + id).parent().show(0);
 	  }, 1);
   }
 	
@@ -578,6 +635,11 @@ function renderTertiary(pdb = null, id = "tertiary") {
 
     let acc = pdb.split("/");
     acc = acc[acc.length-1];
+    if (id == "superposition"){
+    	acc = "Superposition";
+    }else{
+    	acc = getNameOfAccession(acc);
+    }
 	  $("#" + id).append("<div class='pdblabel'>" + acc + "</div>");
 
 
@@ -597,25 +659,26 @@ function renderTertiary(pdb = null, id = "tertiary") {
 
 
  // Update tertiary colours
-function recolourTertiaries(){
+function recolourTertiaries(override = false){
 
 
   // Full only
   var redraw = false;
-  if ($("#domainSelect").val() != "_full"){
+  if ($("#domainSelect").val() != "_full" && SELECTED_SITES.lower != -1){
     redraw = true;
     $("#domainSelect").val("_full");
   }
 
     for (var id in PV_VIEWERS){
 
-      if (redraw){
-        var pdb = PV_PDBS[id].split("/");
+      if (redraw || (override)){
+        let pdb = PV_PDBS[id].split("/");
         pdb = pdb[pdb.length-1];
-        if (id == "tertiary"){
-          pdb = "data/dssp/" + pdb;
-        }else{
+        
+        if (id == "superposition"){
           pdb = "data/" + pdb;
+        }else{
+          pdb = getDirectoryOfAccession($("#accessionSelect").val());
         }
         
         renderTertiary(pdb, id);
@@ -836,7 +899,7 @@ function renderSecondary(svg){
 
         // Clear selection
         if (clearing && SELECTED_SITES.upper - SELECTED_SITES.lower < 3){
-			deselectTaxa();
+				deselectTaxa();
 		    deselectSites();
         }
 		if (coords.x1 == coords.x2){
@@ -871,8 +934,14 @@ function renderSecondary(svg){
     for (var feature in features){
 
 
-      var range = features[feature].range;
-      var level = features[feature].level;
+      let range = features[feature].range;
+      let level = features[feature].level;
+      let textAlign = features[feature].align;
+      if (textAlign == "right"){
+      	textAlign = "end";
+      }else{
+      	textAlign = "start";
+      }
       let featureCount = features[feature].count; 
       if (range == "") continue;
       range = range.split("-")
@@ -897,6 +966,7 @@ function renderSecondary(svg){
 	       lw = 0.7;
       }
 	  
+	  	let textX = textAlign == "left" ? x1 : x1;
 
 	  	let textFeature = null;
 	  	let featureBg = null;
@@ -915,6 +985,8 @@ function renderSecondary(svg){
 
 		    }
 
+
+
 		    if (yAcc != -1){
 
 
@@ -928,8 +1000,8 @@ function renderSecondary(svg){
 	  	  	drawSVGobj(svgContent, "polygon", {points: points, style: "stroke-width:0.7px; stroke:black; fill:" + col} ) // Triangle
 
 
-	  	  	// Test
-	  	  	textFeature = drawSVGobj(svgContent, "text", {lower: lower, upper:upper,  x: x1-NT_WIDTH/4, y: yBtm-SEC_HEIGHT/20, style: "cursor:pointer; text-anchor:start; dominant-baseline:hanging; font-size:" + FEATURE_FONT_SIZE*0.8 + "px; fill:" + textCol}, value=txt)
+	  	  	// Text
+	  	  	textFeature = drawSVGobj(svgContent, "text", {lower: lower, upper:upper,  x: textX, y: yBtm-SEC_HEIGHT/20, style: "cursor:pointer; text-anchor:" + textAlign + "; dominant-baseline:hanging; font-size:" + FEATURE_FONT_SIZE*0.8 + "px; fill:" + textCol}, value=txt)
 	  	  
 
 
@@ -947,12 +1019,9 @@ function renderSecondary(svg){
   	  	
 
 
-  	  	// Test
-	  	  if (feature == "Motif 3" || feature == "KMSKS"){
-	  		   textFeature = drawSVGobj(svgContent, "text", {lower: lower, upper:upper, x: x1+NT_WIDTH/4, y: y-SEC_HEIGHT/20, style: "cursor:pointer; text-anchor:end; dominant-baseline:hanging; font-size:" + FEATURE_FONT_SIZE + "px; fill:" + textCol}, value=txt)
-	  	  }else{
-	  		   textFeature = drawSVGobj(svgContent, "text", {lower: lower, upper:upper,  x: x1-NT_WIDTH/4, y: y-SEC_HEIGHT/20, style: "cursor:pointer; text-anchor:start; dominant-baseline:hanging; font-size:" + FEATURE_FONT_SIZE + "px; fill:" + textCol}, value=txt)
-	  	  }
+  	  	// Text
+	  	 	textFeature = drawSVGobj(svgContent, "text", {lower: lower, upper:upper,  x: textX, y: y-SEC_HEIGHT/20, style: "cursor:pointer; text-anchor:" + textAlign + "; dominant-baseline:hanging; font-size:" + FEATURE_FONT_SIZE + "px; fill:" + textCol}, value=txt)
+	  	  
 
 
 
@@ -1410,14 +1479,16 @@ function deselectSites(refresh = false){
 
 function selectSites(rescroll = true){
 	
-	// Domain architecture fade out other sequences
+		// Domain architecture fade out other sequences
     if (SELECTED_ACCESSION != null){
       $("#secondary g.domainSeq").attr("select", "false");
       $(`#secondary g.domainSeq[accession="` + SELECTED_ACCESSION + `"]`).attr("select", "true");
+      let accessionSelect = $("#accessionSelect");
+      accessionSelect.val(SELECTED_ACCESSION);
       console.log("setting to deselected");
     }
 
-	// Update canvas colours async
+		// Update canvas colours async
     setTimeout(function(){
 		
 		renderAlignment("alignment", true, "data/align.ali");

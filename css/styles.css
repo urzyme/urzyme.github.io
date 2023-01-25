@@ -68,8 +68,12 @@ g.matrixcell:hover text{
 
 
 .pdblabel{
-	font-size: 0.8em;
+	margin-top: -1.5em;
+	margin-left: 0.5em;
+	margin-bottom: 1em;
+	font-size: 1em;
 	font-style:italic;
+	color: #000000;
 }
 
 
@@ -112,8 +116,19 @@ svg text{
 }
 
 
+
+#tertiaryTable tr td {
+	padding: 1em;
+}
+
+
+#tertiaryTable {
+	min-height: 600;
+}
+
 #tertiaryTable tr td div canvas{
 	border:2px solid #333;
+	box-shadow: 0.2em 0.2em #aaaaaa;
 }
 
 svg text.alpha{
@@ -404,11 +419,31 @@ div.svgDiv{
 }
 
 .dropdownDiv select{
-	background-color: #008cbadd;
-	color: white;
-	padding: 0.8em;
+	background-color: white;
+	color: black;
+	padding: 0.5em;
 	font-size:0.85em;
 	max-width: 30em;
+}
+
+
+.dropdownDiv.colouring {
+	margin-top:0em;
+	margin-bottom:0em;
+	font-size: 0.9em;
+	padding: 0.2em;
+	float:right;
+}
+
+.dropdownDiv.colouring select {
+	padding: 0.2em;
+	font-size:0.85em;
+	max-width: 30em;
+}
+
+.dropdownDiv select:focus {
+		background-color: black;
+		color: white;
 }
 
 @media only screen and ( min-device-width: 1000px ) {
