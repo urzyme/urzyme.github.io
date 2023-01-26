@@ -21,8 +21,8 @@ output.seq = character(0)
 for (f in dssp.files){
 
 
-	#print(f)
 
+	given.warning = FALSE
 
 	acc = gsub("[.]dssp$", "", f)
 	acc = gsub("dssp/", "structures/", acc)
@@ -40,11 +40,19 @@ for (f in dssp.files){
 	dssp.pos = 1
 	for (i in 1:nsites){
 
-		#print(i)
 
 		# If gap, then skip
 		aln.char = toupper(fasta.seq[i])
-		if (aln.char == "-"){
+		if (length(aln.char) == 0){
+			if (!given.warning){
+				cat(paste("Warning - proceeding to the end of", gsub(".+/", "", f), "\n"))
+				#given.warning = TRUE
+				print(i)
+			}
+			
+			sse = "N"
+		}
+		else if (aln.char == "-"){
 			sse = "-"
 
 		}else{
