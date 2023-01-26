@@ -12,7 +12,6 @@
 		"codons": "UUU, UUC",
 		"editing": "Post-transfer",
 		"ref_str": ["structures/PheRS-Aβ_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724457.pdb"],
-		"refine": [{"start": 830}],
 		"features": {"Catalytic domain": {"acc": "PheRS-Aβ_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724457.pdb", "range": "351-547", "level": 4},
 					"Editing domain F": {"acc": "PheRS-Aβ_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724457.pdb", "range": "73-270", "level": 4},
 					"Protozyme": {"acc": "PheRS-Aβ_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724457.pdb", "range": "413-451", "level": 2, "href": "/superfamily/class2/Protozyme"},
