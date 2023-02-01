@@ -2,6 +2,9 @@ library(rjson)
 library(seqinr)
 
 
+
+# args=c("../../../../class2/", 'Catalytic_domain', "structures.txt", "align.ali")
+
 # Add family members to the alignment by using the exissing alignment to their reference structure
 args = commandArgs(trailingOnly=TRUE)
 wd = args[1]
@@ -49,16 +52,32 @@ for (d in dirs){
 		insertPositions = numeric(0)
 		cumulativeFamilyAccessions = character(0)
 
+
+
+
+		# Reference sequence in both alignments
+		refSeqFamily = fam.fasta[[gsub(".+/", "", ref_str)]]
+		refSeqSuperfamily = out.fasta[[gsub(".+/", "", ref_str)]]
+
+
+		# Confirm they are the same sequence
+		refSeqFamily.nogap = gsub("-", "", refSeqFamily)
+		refSeqSuperfamily.nogap = gsub("-", "", refSeqSuperfamily)
+		if (refSeqFamily.nogap != refSeqSuperfamily.nogap){
+			cat(paste0("WARNING! Mismatching family and superfamily sequences for ", ref_str, "\n"))
+			cat(paste0("\t", refSeqFamily.nogap, "\n"))
+			cat(paste0("\t", refSeqSuperfamily.nogap, "\n"))
+		}
+
+				
+
 		for (f in fileDir){
 
 			if (file.exists(f)){
+
 				structures = c(structures, f)
 
 
-
-				# Reference sequence in both alignments
-				refSeqFamily = fam.fasta[[gsub(".+/", "", ref_str)]]
-				refSeqSuperfamily = out.fasta[[gsub(".+/", "", ref_str)]]
 
 
 				# Add to alignment: if it's not a reference structure and it's not a pdb structure
@@ -119,7 +138,7 @@ for (d in dirs){
 									}
 
 								}
-								cat(paste("Adding a gap at position", posSuperFamily, posFamily, fAcc, "\n"))
+								#cat(paste("Adding a gap at position", posSuperFamily, posFamily, fAcc, "\n"))
 								refSeqSuperfamily = out.fasta[[gsub(".+/", "", ref_str)]]
 								posSuperFamily = posSuperFamily + 1
 								insertPositions = c(insertPositions, posFamily)

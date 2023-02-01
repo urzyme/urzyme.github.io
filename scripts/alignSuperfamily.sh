@@ -1,19 +1,15 @@
 #!/bin/sh
 
 
-#domains=( "Protozyme" "Catalytic_domain" )
-#domains=( "Crossover_1" "Catalytic_domain" )
-
-
 
 # Prepare one superfamily per domain
 cd superfamily
-for c in class1;
+for c in class2;
 do
 
 	cd $c
 	
-	for d in Cat*/
+	for d in LIV*/
 	do
 
 		echo "$c $d"

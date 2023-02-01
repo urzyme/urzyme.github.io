@@ -943,6 +943,7 @@ function renderSecondary(svg){
       	textAlign = "start";
       }
       let featureCount = features[feature].count; 
+      let featureDY = features[feature].dy; 
       if (range == "") continue;
       range = range.split("-")
       var y = SEC_HEIGHT*(nseq+1) + FEATURE_HEIGHT_SEC*(level-0.5);
@@ -980,6 +981,9 @@ function renderSecondary(svg){
 		      let accSeq = accessions[seqNum];
 		      if (accSeq == features[feature].acc){
 		      	yAcc = (seqNum+1)*SEC_HEIGHT;
+		      	if (featureDY != null) {
+		      		yAcc= (seqNum+1+featureDY)*SEC_HEIGHT;
+		      	}
 		      	break;
 		      }
 
@@ -988,6 +992,7 @@ function renderSecondary(svg){
 
 
 		    if (yAcc != -1){
+
 
 
       		drawSVGobj(svgAnnotation, "rect", {x: x1-SEC_WIDTH, y: yAcc, width: x2-x1, height:SEC_HEIGHT*featureCount, style:"stroke-width:" +  lw + "px; stroke:black; fill:" + "white"});
@@ -1558,6 +1563,11 @@ function getAlignmentPosFromUngapped(accession, accPos){
 	let alignment = DATA.alignment;
 	let nsites = alignment[accessions[0]].length;
 	let siteSeq = 0;
+
+
+	if (alignment[accession] == null){
+		console.log("cannot find", accession, "in alignment");
+	}
 
 
 	for (let siteAln = 0; siteAln < nsites; siteAln++){

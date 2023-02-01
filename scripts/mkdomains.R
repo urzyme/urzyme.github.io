@@ -15,7 +15,7 @@ getAlignmentPosFromUngapped = function(accession, accPos, alignment){
 	names(alignment) = gsub(".+/", "", names(alignment))
 
 	nsites = length(alignment[[1]])
-	siteSeq = 0
+	siteSeq = 1
 	for (siteAln in 1:nsites){
 
 
