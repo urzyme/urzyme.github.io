@@ -1,3 +1,6 @@
+data2json:
+	Rscript scripts/tsv2json.R data/accessions.tsv accession
+
 align-ala:
 	cd class2/ala && echo "ala"; \
 	bash ../../scripts/align.sh
