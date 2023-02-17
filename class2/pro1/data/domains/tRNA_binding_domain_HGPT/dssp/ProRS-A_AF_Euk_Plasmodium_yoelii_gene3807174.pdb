@@ -1,13 +1,28 @@
+HELIX    1  H1 XXX A	 542  XXX A  544  1                                   3
 SHEET    1  E1 5 XXX A 549 XXX  A 553  0
-HELIX    1  H1 XXX A	 561  XXX A  577  1                                  17
+HELIX    2  H2 XXX A	 561  XXX A  577  1                                  17
 SHEET    2  E2 3 XXX A 582 XXX  A 584  0
-HELIX    2  H2 XXX A	 592  XXX A  601  1                                  10
+HELIX    3  H3 XXX A	 592  XXX A  601  1                                  10
 SHEET    3  E3 5 XXX A 606 XXX  A 610  0
-HELIX    3  H3 XXX A	 612  XXX A  616  1                                   5
+HELIX    4  H4 XXX A	 612  XXX A  616  1                                   5
 SHEET    4  E4 6 XXX A 619 XXX  A 624  0
 SHEET    5  E5 5 XXX A 630 XXX  A 634  0
-HELIX    4  H4 XXX A	 635  XXX A  637  1                                   3
-HELIX    5  H5 XXX A	 638  XXX A  663  1                                  26
+HELIX    5  H5 XXX A	 635  XXX A  637  1                                   3
+HELIX    6  H6 XXX A	 638  XXX A  663  1                                  26
+ATOM   8847  N   PRO A 541     -12.211   2.488   2.176  1.00 98.84           N  
+ATOM   8848  CA  PRO A 541     -13.092   2.047   1.109  1.00 98.84           C  
+ATOM   8849  HA  PRO A 541     -13.863   2.806   0.975  1.00 98.84           H  
+ATOM   8850  C   PRO A 541     -13.689   0.679   1.463  1.00 98.84           C  
+ATOM   8851  CB  PRO A 541     -12.247   1.982  -0.167  1.00 98.84           C  
+ATOM   8852  HB2 PRO A 541     -12.793   2.357  -1.032  1.00 98.84           H  
+ATOM   8853  HB3 PRO A 541     -11.904   0.964  -0.352  1.00 98.84           H  
+ATOM   8854  O   PRO A 541     -12.952  -0.220   1.894  1.00 98.84           O  
+ATOM   8855  CG  PRO A 541     -11.050   2.870   0.159  1.00 98.84           C  
+ATOM   8856  HG2 PRO A 541     -10.153   2.542  -0.367  1.00 98.84           H  
+ATOM   8857  HG3 PRO A 541     -11.283   3.910  -0.068  1.00 98.84           H  
+ATOM   8858  CD  PRO A 541     -10.874   2.704   1.661  1.00 98.84           C  
+ATOM   8859  HD2 PRO A 541     -10.416   3.599   2.081  1.00 98.84           H  
+ATOM   8860  HD3 PRO A 541     -10.268   1.823   1.870  1.00 98.84           H  
 ATOM   8861  N   PRO A 542     -15.005   0.485   1.272  1.00 98.61           N  
 ATOM   8862  CA  PRO A 542     -15.671  -0.763   1.591  1.00 98.61           C  
 ATOM   8863  HA  PRO A 542     -15.706  -0.865   2.675  1.00 98.61           H  

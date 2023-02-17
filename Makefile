@@ -1,7 +1,7 @@
 data2json:
 	Rscript scripts/tsv2json.R data/accessions.tsv accession
 
-align-ala:
+ala:
 	cd class2/ala && echo "ala"; \
 	bash ../../scripts/align.sh
 
@@ -10,7 +10,7 @@ domain-ala:
 	bash ../../scripts/makeDomains.sh
 
 
-align-asn:
+asn:
 	cd class2/asn && echo "asn"; \
 	bash ../../scripts/align.sh
 
@@ -19,7 +19,7 @@ domain-asn:
 	bash ../../scripts/makeDomains.sh
 
 
-align-asp:
+asp:
 	cd class2/asp1 && echo "asp"; \
 	bash ../../scripts/align.sh
 
@@ -28,7 +28,7 @@ domain-asp:
 	bash ../../scripts/makeDomains.sh
 
 
-align-asx:
+asx:
 	cd class2/asp2 && echo "asx"; \
 	bash ../../scripts/align.sh
 
@@ -37,7 +37,7 @@ domain-asx:
 	bash ../../scripts/makeDomains.sh
 
 
-align-gly1:
+gly1:
 	cd class2/gly1 && echo "gly1"; \
 	bash ../../scripts/align.sh
 
@@ -46,7 +46,7 @@ domain-gly1:
 	bash ../../scripts/makeDomains.sh
 
 
-align-gly2:
+gly2:
 	cd class2/gly2 && echo "gly2"; \
 	bash ../../scripts/align.sh
 
@@ -55,7 +55,7 @@ domain-gly2:
 	bash ../../scripts/makeDomains.sh
 
 
-align-gly3:
+gly3:
 	cd class2/gly3 && echo "gly3"; \
 	bash ../../scripts/align.sh
 
@@ -64,7 +64,7 @@ domain-gly3:
 	bash ../../scripts/makeDomains.sh
 
 
-align-his:
+his:
 	cd class2/his && echo "his"; \
 	bash ../../scripts/align.sh
 
@@ -73,7 +73,7 @@ domain-his:
 	bash ../../scripts/makeDomains.sh
 
 
-align-lys1:
+lys1:
 	cd class1/lys && echo "lys1"; \
 	bash ../../scripts/align.sh
 
@@ -83,7 +83,7 @@ domain-lys1:
 
 
 
-align-lys2:
+lys2:
 	cd class2/lys && echo "lys2"; \
 	bash ../../scripts/align.sh
 
@@ -92,7 +92,7 @@ domain-lys2:
 	bash ../../scripts/makeDomains.sh
 
 
-align-phe1:
+phe1:
 	cd class2/phe1 && echo "phe1"; \
 	bash ../../scripts/align.sh
 
@@ -101,7 +101,7 @@ domain-phe1:
 	bash ../../scripts/makeDomains.sh
 
 
-align-phe2:
+phe2:
 	cd class2/phe2 && echo "phe2"; \
 	bash ../../scripts/align.sh
 
@@ -111,7 +111,7 @@ domain-phe2:
 
 
 
-align-phe3:
+phe3:
 	cd class2/phe3 && echo "phe3"; \
 	bash ../../scripts/align.sh
 
@@ -121,7 +121,7 @@ domain-phe3:
 
 
 
-align-phe4:
+phe4:
 	cd class2/phe4 && echo "phe4"; \
 	bash ../../scripts/align.sh
 
@@ -131,7 +131,7 @@ domain-phe4:
 
 
 
-align-phe5:
+phe5:
 	cd class2/phe5 && echo "phe5"; \
 	bash ../../scripts/align.sh
 
@@ -140,7 +140,7 @@ domain-phe5:
 	bash ../../scripts/makeDomains.sh
 
 
-align-pro1:
+pro1:
 	cd class2/pro1 && echo "pro1"; \
 	bash ../../scripts/align.sh
 
@@ -149,7 +149,7 @@ domain-pro1:
 	bash ../../scripts/makeDomains.sh
 
 
-align-pro2:
+pro2:
 	cd class2/pro2 && echo "pro2"; \
 	bash ../../scripts/align.sh
 
@@ -158,7 +158,7 @@ domain-pro2:
 	bash ../../scripts/makeDomains.sh
 
 
-align-pyl:
+pyl:
 	cd class2/pyl && echo "pyl"; \
 	bash ../../scripts/align.sh
 
@@ -168,7 +168,7 @@ domain-pyl:
 
 
 
-align-sep:
+sep:
 	cd class2/sep && echo "sep"; \
 	bash ../../scripts/align.sh
 
@@ -177,7 +177,7 @@ domain-sep:
 	bash ../../scripts/makeDomains.sh
 
 
-align-ser1:
+ser1:
 	cd class2/ser1 && echo "ser1"; \
 	bash ../../scripts/align.sh
 
@@ -186,7 +186,7 @@ domain-ser1:
 	bash ../../scripts/makeDomains.sh
 
 
-align-ser2:
+ser2:
 	cd class2/ser2 && echo "ser2"; \
 	bash ../../scripts/align.sh
 
@@ -196,7 +196,7 @@ domain-ser2:
 
 
 
-align-thr:
+thr:
 	cd class2/thr && echo "thr"; \
 	bash ../../scripts/align.sh
 
@@ -205,3 +205,129 @@ domain-thr:
 	bash ../../scripts/makeDomains.sh
 
 
+
+
+arg:
+	cd class1/arg && echo "arg"; \
+	bash ../../scripts/align.sh
+
+domain-arg:
+	cd class1/arg && echo "arg"; \
+	bash ../../scripts/makeDomains.sh
+
+
+cys:
+	cd class1/cys && echo "cys"; \
+	bash ../../scripts/align.sh
+
+domain-cys:
+	cd class1/cys && echo "cys"; \
+	bash ../../scripts/makeDomains.sh
+
+
+gln:
+	cd class1/gln && echo "gln"; \
+	bash ../../scripts/align.sh
+
+domain-gln:
+	cd class1/gln && echo "gln"; \
+	bash ../../scripts/makeDomains.sh
+
+
+
+glu:
+	cd class1/glu1 && echo "glu"; \
+	bash ../../scripts/align.sh
+
+domain-glu:
+	cd class1/glu1 && echo "glu"; \
+	bash ../../scripts/makeDomains.sh
+
+
+glx:
+	cd class1/glu2 && echo "glx"; \
+	bash ../../scripts/align.sh
+
+domain-glx:
+	cd class1/glu2 && echo "glx"; \
+	bash ../../scripts/makeDomains.sh
+
+
+ile:
+	cd class1/ile && echo "ile"; \
+	bash ../../scripts/align.sh
+
+domain-ile:
+	cd class1/ile && echo "ile"; \
+	bash ../../scripts/makeDomains.sh
+
+
+
+met:
+	cd class1/met && echo "met"; \
+	bash ../../scripts/align.sh
+
+domain-met:
+	cd class1/met && echo "met"; \
+	bash ../../scripts/makeDomains.sh
+
+
+trp1:
+	cd class1/trp1 && echo "trp1"; \
+	bash ../../scripts/align.sh
+
+domain-trp1:
+	cd class1/trp1 && echo "trp1"; \
+	bash ../../scripts/makeDomains.sh
+
+
+
+trp2:
+	cd class1/trp2 && echo "trp2"; \
+	bash ../../scripts/align.sh
+
+domain-trp2:
+	cd class1/trp2 && echo "trp2"; \
+	bash ../../scripts/makeDomains.sh
+
+
+
+
+tyr:
+	cd class1/tyr && echo "tyr"; \
+	bash ../../scripts/align.sh
+
+domain-tyr:
+	cd class1/tyr && echo "tyr"; \
+	bash ../../scripts/makeDomains.sh
+
+
+
+
+val:
+	cd class1/val && echo "val"; \
+	bash ../../scripts/align.sh
+
+domain-val:
+	cd class1/val && echo "val"; \
+	bash ../../scripts/makeDomains.sh
+
+
+
+
+leu1:
+	cd class1/leu1 && echo "leu1"; \
+	bash ../../scripts/align.sh
+
+domain-leu1:
+	cd class1/leu1 && echo "leu1"; \
+	bash ../../scripts/makeDomains.sh
+
+
+leu2:
+	cd class1/leu2 && echo "leu2"; \
+	bash ../../scripts/align.sh
+
+domain-leu2:
+	cd class1/leu2 && echo "leu2"; \
+	bash ../../scripts/makeDomains.sh
