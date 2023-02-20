@@ -1,6 +1,32 @@
 data2json:
 	Rscript scripts/tsv2json.R data/accessions.tsv accession
 
+
+
+sse-class1:
+	cd superfamily/class1/Catalytic_domain/data && echo "Regenerating class 1 catalytic domain secondary structure alignment from primary sequence alignment";\
+	Rscript ../../../../scripts/dssp2fasta.R
+
+
+
+sse-class2:
+	cd superfamily/class2/Catalytic_domain/data && echo "Regenerating class 2 catalytic domain secondary structure alignment from primary sequence alignment";\
+	Rscript ../../../../scripts/dssp2fasta.R
+
+align-class1:
+	cd superfamily/class1/Catalytic_domain/data && echo "class 1 cat";\
+	Rscript ../../../../scripts/addFamilyMembersToAlignment.R ../../../../class1/ Catalytic_domain structures.txt align.ali;\
+	cd ../; \
+	Rscript ../../../scripts/extractAlignments.R info.json extract;\
+
+
+align-class2:
+	cd superfamily/class2/Catalytic_domain/data && echo "class 2 cat";\
+	Rscript ../../../../scripts/addFamilyMembersToAlignment.R ../../../../class2/ Catalytic_domain structures.txt align.ali;\
+	cd ../; \
+	Rscript ../../../scripts/extractAlignments.R info.json extract;\
+
+
 ala:
 	cd class2/ala && echo "ala"; \
 	bash ../../scripts/align.sh

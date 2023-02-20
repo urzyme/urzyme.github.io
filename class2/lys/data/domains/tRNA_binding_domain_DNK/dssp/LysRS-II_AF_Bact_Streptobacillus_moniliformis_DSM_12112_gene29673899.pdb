@@ -1,4 +1,4 @@
-HELIX    1  H1 XXX A	   3  XXX A   26  1                                  24
+HELIX    1  H1 XXX A	   2  XXX A   26  1                                  25
 HELIX    2  H2 XXX A	  42  XXX A   45  1                                   4
 SHEET    1  E114 XXX A  55 XXX  A  68  0
 SHEET    2  E2 8 XXX A  71 XXX  A  78  0
@@ -6,6 +6,25 @@ SHEET    3  E3 8 XXX A  81 XXX  A  88  0
 HELIX    3  H3 XXX A	  89  XXX A  102  1                                  14
 SHEET    4  E410 XXX A 108 XXX  A 117  0
 SHEET    5  E512 XXX A 123 XXX  A 134  0
+ATOM      1  N   MET A   1     -21.886 -32.194   4.936  1.00 43.64           N  
+ATOM      2  H   MET A   1     -21.029 -32.116   5.467  1.00 43.64           H  
+ATOM      3  H2  MET A   1     -21.848 -33.048   4.399  1.00 43.64           H  
+ATOM      4  H3  MET A   1     -21.948 -31.400   4.315  1.00 43.64           H  
+ATOM      5  CA  MET A   1     -23.044 -32.217   5.860  1.00 43.64           C  
+ATOM      6  HA  MET A   1     -23.962 -32.289   5.277  1.00 43.64           H  
+ATOM      7  C   MET A   1     -23.164 -30.895   6.605  1.00 43.64           C  
+ATOM      8  CB  MET A   1     -23.008 -33.436   6.792  1.00 43.64           C  
+ATOM      9  HB2 MET A   1     -21.979 -33.761   6.945  1.00 43.64           H  
+ATOM     10  HB3 MET A   1     -23.436 -33.179   7.761  1.00 43.64           H  
+ATOM     11  O   MET A   1     -24.238 -30.316   6.563  1.00 43.64           O  
+ATOM     12  CG  MET A   1     -23.840 -34.574   6.187  1.00 43.64           C  
+ATOM     13  HG2 MET A   1     -24.894 -34.317   6.294  1.00 43.64           H  
+ATOM     14  HG3 MET A   1     -23.614 -34.674   5.126  1.00 43.64           H  
+ATOM     15  SD  MET A   1     -23.551 -36.178   6.970  1.00 43.64           S  
+ATOM     16  CE  MET A   1     -25.124 -37.014   6.629  1.00 43.64           C  
+ATOM     17  HE1 MET A   1     -25.938 -36.469   7.107  1.00 43.64           H  
+ATOM     18  HE2 MET A   1     -25.088 -38.025   7.035  1.00 43.64           H  
+ATOM     19  HE3 MET A   1     -25.294 -37.064   5.553  1.00 43.64           H  
 ATOM     20  N   GLU A   2     -22.057 -30.363   7.124  1.00 46.01           N  
 ATOM     21  H   GLU A   2     -21.238 -30.938   7.264  1.00 46.01           H  
 ATOM     22  CA  GLU A   2     -21.965 -29.077   7.840  1.00 46.01           C  
