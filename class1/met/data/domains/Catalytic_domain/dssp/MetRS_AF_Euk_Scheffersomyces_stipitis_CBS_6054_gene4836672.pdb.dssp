@@ -1,12 +1,12 @@
-==== Secondary Structure Definition by the program DSSP, CMBI version 2.0                          ==== DATE=2023-01-23        .
+==== Secondary Structure Definition by the program DSSP, CMBI version 2.0                          ==== DATE=2023-02-21        .
 REFERENCE W. KABSCH AND C.SANDER, BIOPOLYMERS 22 (1983) 2577-2637                                                              .
                                                                                                                                .
 COMPND                                                                                                                         .
 SOURCE                                                                                                                         .
 AUTHOR                                                                                                                         .
-  550  1  0  0  0 TOTAL NUMBER OF RESIDUES, NUMBER OF CHAINS, NUMBER OF SS-BRIDGES(TOTAL,INTRACHAIN,INTERCHAIN)                .
- 29048.2   ACCESSIBLE SURFACE OF PROTEIN (ANGSTROM**2)                                                                         .
-  382 69.5   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(J)  , SAME NUMBER PER 100 RESIDUES                              .
+  549  1  0  0  0 TOTAL NUMBER OF RESIDUES, NUMBER OF CHAINS, NUMBER OF SS-BRIDGES(TOTAL,INTRACHAIN,INTERCHAIN)                .
+ 29047.4   ACCESSIBLE SURFACE OF PROTEIN (ANGSTROM**2)                                                                         .
+  382 69.6   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(J)  , SAME NUMBER PER 100 RESIDUES                              .
    31  5.6   TOTAL NUMBER OF HYDROGEN BONDS IN     PARALLEL BRIDGES, SAME NUMBER PER 100 RESIDUES                              .
    46  8.4   TOTAL NUMBER OF HYDROGEN BONDS IN ANTIPARALLEL BRIDGES, SAME NUMBER PER 100 RESIDUES                              .
     7  1.3   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I-5), SAME NUMBER PER 100 RESIDUES                              .
@@ -302,9 +302,9 @@ AUTHOR                                                                          
   274  274 A V  H  X S+     0   0    5     -4,-2.2     4,-2.3     2,-0.2    -2,-0.2   0.944 114.3  44.7 -63.0 -49.9  -13.8   -4.9   -4.0               
   275  275 A Y  H  <>S+     0   0    2     -4,-2.8     5,-2.4     2,-0.2    -2,-0.2   0.884 111.9  52.4 -68.5 -35.3  -10.6   -5.6   -1.9               
   276  276 A D  H ><5S+     0   0   81     -4,-2.9     3,-1.4     3,-0.2    -1,-0.2   0.916 110.8  48.1 -62.1 -43.0   -9.1   -7.7   -4.8               
-  277  277 A W  H 3<5S+     0   0   79     -4,-2.0    -2,-0.2     1,-0.3    -1,-0.2   0.894 109.1  52.4 -66.8 -37.3   -9.7   -4.8   -7.2               
-  278  278 A F  T 3<5S-     0   0   35     -4,-2.3    -1,-0.3    -5,-0.1    -2,-0.2   0.373 117.1-119.1 -73.1   4.6   -8.2   -2.3   -4.6               
-  279  279 A D  T < 5 +     0   0  105     -3,-1.4     2,-0.6     1,-0.2    -3,-0.2   0.931  46.1 177.3  52.3  49.7   -5.1   -4.7   -4.6               
+  277  277 A W  H 3<5S+     0   0  100     -4,-2.0    -2,-0.2     1,-0.3    -1,-0.2   0.894 109.1  52.4 -66.8 -37.3   -9.7   -4.8   -7.2               
+  278  278 A F  T 3<5S-     0   0   50     -4,-2.3    -1,-0.3    -5,-0.1    -2,-0.2   0.373 117.1-119.1 -73.1   4.6   -8.2   -2.3   -4.6               
+  279  279 A D  T < 5 +     0   0  111     -3,-1.4     2,-0.6     1,-0.2    -3,-0.2   0.931  46.1 177.3  52.3  49.7   -5.1   -4.7   -4.6               
   280  280 A I      < -     0   0    9     -5,-2.4     2,-1.2    -6,-0.1    -1,-0.2  -0.792  21.9-147.5 -82.3 119.4   -5.4   -5.5   -0.8               
   281  281 A G        +     0   0   26     -2,-0.6     2,-0.2     3,-0.0   -43,-0.2  -0.455  27.4 169.6 -92.3  60.0   -2.7   -8.1    0.0               
   282  282 A F        -     0   0   33     -2,-1.2     3,-0.2     1,-0.2   -43,-0.2  -0.518  32.3-152.6 -62.5 136.7   -4.4  -10.2    2.8               
@@ -573,6 +573,5 @@ AUTHOR                                                                          
   545  545 A D  G <  S+     0   0  121     -3,-0.6    -1,-0.2     1,-0.3    -2,-0.2   0.676  84.3  70.3 -70.5 -14.8  -16.4    1.9  -13.2               
   546  546 A T  G <  S-     0   0   90     -3,-1.2    -1,-0.3    -4,-0.4    -2,-0.2   0.655 102.6-131.3 -67.7 -17.8  -14.3    5.2  -13.5               
   547  547 A G    <   +     0   0   66     -3,-1.9    -2,-0.1     1,-0.3    -3,-0.1   0.491  64.0 134.8  70.9   5.3  -11.7    3.2  -15.6               
-  548  548 A I        -     0   0  113     -5,-0.5    -1,-0.3     1,-0.1    -2,-0.1  -0.733  62.5-106.8 -84.1 131.6   -9.0    4.7  -13.3               
-  549  549 A P              0   0  117      0, 0.0    -1,-0.1     0, 0.0  -271,-0.0  -0.198 360.0 360.0 -58.6 148.8   -6.4    2.1  -12.1               
-  550  550 A A              0   0   84   -273,-0.2  -272,-0.0    -6,-0.0    -2,-0.0   0.850 360.0 360.0 -56.8 360.0   -6.4    0.9   -8.4               
+  548  548 A I              0   0  113     -5,-0.5    -1,-0.3     1,-0.1    -2,-0.1  -0.733 360.0 360.0 -84.1 131.6   -9.0    4.7  -13.3               
+  549  549 A P              0   0  159      0, 0.0    -1,-0.1     0, 0.0  -271,-0.0  -0.198 360.0 360.0 -58.6 360.0   -6.4    2.1  -12.1               

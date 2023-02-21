@@ -1,7 +1,7 @@
 HELIX    1  H1 XXX A	 170  XXX A  181  1                                  12
 HELIX    2  H2 XXX A	 183  XXX A  194  1                                  12
 HELIX    3  H3 XXX A	 203  XXX A  220  1                                  18
-HELIX    4  H4 XXX A	 224  XXX A  237  1                                  14
+HELIX    4  H4 XXX A	 224  XXX A  236  1                                  13
 HEADER    LIGASE/RNA                              16-OCT-08   2ZUF              
 TITLE     CRYSTAL STRUCTURE OF PYROCOCCUS HORIKOSHII ARGINYL-TRNA               
 TITLE    2 SYNTHETASE COMPLEXED WITH TRNA(ARG)                                  
@@ -423,6 +423,14 @@ ORIGX3      0.000000  0.000000  1.000000        0.00000
 SCALE1      0.013122  0.000000  0.004027        0.00000                         
 SCALE2      0.000000  0.016628  0.000000        0.00000                         
 SCALE3      0.000000  0.000000  0.009481        0.00000                         
+ATOM   1319  N   ASP A 167      41.914   7.309  40.146  1.00 26.47           N  
+ATOM   1320  CA  ASP A 167      42.960   8.281  39.862  1.00 26.10           C  
+ATOM   1321  C   ASP A 167      44.275   7.989  40.602  1.00 26.24           C  
+ATOM   1322  O   ASP A 167      45.212   8.784  40.544  1.00 25.90           O  
+ATOM   1323  CB  ASP A 167      42.471   9.692  40.201  1.00 24.54           C  
+ATOM   1324  CG  ASP A 167      41.886   9.800  41.610  1.00 24.91           C  
+ATOM   1325  OD1 ASP A 167      41.831  10.934  42.130  1.00 24.46           O  
+ATOM   1326  OD2 ASP A 167      41.468   8.775  42.195  1.00 24.71           O  
 ATOM   1327  N   LEU A 168      44.351   6.852  41.291  1.00 26.84           N  
 ATOM   1328  CA  LEU A 168      45.570   6.496  42.028  1.00 28.05           C  
 ATOM   1329  C   LEU A 168      46.124   5.158  41.556  1.00 28.69           C  
@@ -1018,10 +1026,6 @@ ATOM   1918  C   SER A 237      50.018  11.937  49.707  1.00 49.04           C
 ATOM   1919  O   SER A 237      49.857  12.655  50.694  1.00 49.84           O  
 ATOM   1920  CB  SER A 237      51.968  10.440  50.105  1.00 48.50           C  
 ATOM   1921  OG  SER A 237      52.658  11.203  49.129  1.00 48.83           O  
-ATOM   1922  N   GLY A 238      49.827  12.366  48.465  1.00 48.78           N  
-ATOM   1923  CA  GLY A 238      49.425  13.737  48.223  1.00 47.59           C  
-ATOM   1924  C   GLY A 238      50.606  14.569  47.769  1.00 47.22           C  
-ATOM   1925  O   GLY A 238      50.444  15.718  47.365  1.00 47.85           O  
 TER    6748        C B 974                                                      
 HETATM 6749  O   HOH A1001      -2.407 -31.960  25.395  1.00 22.60           O  
 HETATM 6750  O   HOH A1004       5.246 -14.978   9.052  1.00 30.40           O  

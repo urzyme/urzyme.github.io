@@ -1,9 +1,9 @@
-SHEET    1  E1 5 XXX A 254 XXX  A 258  0
+SHEET    1  E1 4 XXX A 254 XXX  A 257  0
 HELIX    1  H1 XXX A	 259  XXX A  261  1                                   3
 HELIX    2  H2 XXX A	 262  XXX A  263  1                                   2
 HELIX    3  H3 XXX A	 264  XXX A  268  1                                   5
 HELIX    4  H4 XXX A	 269  XXX A  276  1                                   8
-SHEET    2  E2 5 XXX A 283 XXX  A 287  0
+SHEET    2  E2 4 XXX A 283 XXX  A 286  0
 HEADER    LIGASE                                  27-AUG-04   1WOY              
 TITLE     CRYSTAL STRUCTURE OF METHIONYL TRNA SYNTHETASE Y225F MUTANT FROM      
 TITLE    2 THERMUS THERMOPHILUS                                                 
@@ -666,10 +666,6 @@ ATOM   2386  N   GLY A 287       9.809 -21.459 122.027  1.00 14.06           N
 ATOM   2387  CA  GLY A 287      10.108 -20.602 123.167  1.00  9.50           C  
 ATOM   2388  C   GLY A 287      11.483 -20.913 123.753  1.00 16.22           C  
 ATOM   2389  O   GLY A 287      12.047 -21.979 123.487  1.00 14.27           O  
-ATOM   2390  N   GLY A 288      12.035 -19.989 124.543  1.00 13.66           N  
-ATOM   2391  CA  GLY A 288      13.333 -20.226 125.147  1.00 15.87           C  
-ATOM   2392  C   GLY A 288      13.194 -20.712 126.580  1.00 15.03           C  
-ATOM   2393  O   GLY A 288      12.094 -21.010 127.035  1.00 13.71           O  
 TER    4101      LYS A 500                                                      
 HETATM 4102 ZN    ZN A 601      23.016 -57.434 134.772  1.00 42.58          ZN  
 HETATM 4103  O   HOH A 602      -3.349 -47.536 126.232  1.00 25.01           O  

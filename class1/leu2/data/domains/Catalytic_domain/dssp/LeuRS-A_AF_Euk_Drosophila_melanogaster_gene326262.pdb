@@ -1,77 +1,119 @@
+HELIX    1  H1 XXX A	  44  XXX A   46  1                                   3
 SHEET    1  E1 5 XXX A  47 XXX  A  51  0
-HELIX    1  H1 XXX A	  63  XXX A   81  1                                  19
+HELIX    2  H2 XXX A	  63  XXX A   81  1                                  19
 SHEET    2  E2 3 XXX A  85 XXX  A  87  0
 SHEET    3  E3 2 XXX A  92 XXX  A  93  0
-HELIX    2  H2 XXX A	  98  XXX A  113  1                                  16
-HELIX    3  H3 XXX A	 158  XXX A  163  1                                   6
-HELIX    4  H4 XXX A	 169  XXX A  172  1                                   4
-HELIX    5  H5 XXX A	 173  XXX A  176  1                                   4
-HELIX    6  H6 XXX A	 178  XXX A  195  1                                  18
-HELIX    7  H7 XXX A	 202  XXX A  204  1                                   3
+HELIX    3  H3 XXX A	  98  XXX A  113  1                                  16
+HELIX    4  H4 XXX A	 158  XXX A  163  1                                   6
+HELIX    5  H5 XXX A	 169  XXX A  172  1                                   4
+HELIX    6  H6 XXX A	 173  XXX A  176  1                                   4
+HELIX    7  H7 XXX A	 178  XXX A  195  1                                  18
+HELIX    8  H8 XXX A	 202  XXX A  204  1                                   3
 SHEET    4  E4 2 XXX A 207 XXX  A 208  0
-HELIX    8  H8 XXX A	 213  XXX A  228  1                                  16
+HELIX    9  H9 XXX A	 213  XXX A  228  1                                  16
 SHEET    5  E511 XXX A 232 XXX  A 242  0
 SHEET    6  E6 2 XXX A 247 XXX  A 248  0
-HELIX    9  H9 XXX A	 251  XXX A  253  1                                   3
+HELIX   10 H10 XXX A	 251  XXX A  253  1                                   3
 SHEET    7  E7 3 XXX A 254 XXX  A 256  0
 SHEET    8  E811 XXX A 262 XXX  A 272  0
-HELIX   10 H10 XXX A	 277  XXX A  279  1                                   3
+HELIX   11 H11 XXX A	 277  XXX A  279  1                                   3
 SHEET    9  E9 7 XXX A 286 XXX  A 292  0
-HELIX   11 H11 XXX A	 295  XXX A  300  1                                   6
+HELIX   12 H12 XXX A	 295  XXX A  300  1                                   6
 SHEET   10 E10 4 XXX A 303 XXX  A 306  0
 SHEET   11 E11 6 XXX A 311 XXX  A 316  0
 SHEET   12 E12 5 XXX A 323 XXX  A 327  0
-HELIX   12 H12 XXX A	 328  XXX A  334  1                                   7
-HELIX   13 H13 XXX A	 335  XXX A  337  1                                   3
+HELIX   13 H13 XXX A	 328  XXX A  334  1                                   7
+HELIX   14 H14 XXX A	 335  XXX A  337  1                                   3
 SHEET   13 E13 6 XXX A 348 XXX  A 353  0
-HELIX   14 H14 XXX A	 354  XXX A  357  1                                   4
+HELIX   15 H15 XXX A	 354  XXX A  357  1                                   4
 SHEET   14 E14 3 XXX A 361 XXX  A 363  0
 SHEET   15 E15 5 XXX A 372 XXX  A 376  0
 SHEET   16 E16 4 XXX A 388 XXX  A 391  0
-HELIX   15 H15 XXX A	 397  XXX A  408  1                                  12
-HELIX   16 H16 XXX A	 410  XXX A  415  1                                   6
-HELIX   17 H17 XXX A	 420  XXX A  422  1                                   3
+HELIX   16 H16 XXX A	 397  XXX A  408  1                                  12
+HELIX   17 H17 XXX A	 410  XXX A  415  1                                   6
+HELIX   18 H18 XXX A	 420  XXX A  422  1                                   3
 SHEET   17 E17 2 XXX A 432 XXX  A 433  0
-HELIX   18 H18 XXX A	 441  XXX A  448  1                                   8
-HELIX   19 H19 XXX A	 457  XXX A  474  1                                  18
+HELIX   19 H19 XXX A	 441  XXX A  448  1                                   8
+HELIX   20 H20 XXX A	 457  XXX A  474  1                                  18
 SHEET   18 E18 2 XXX A 476 XXX  A 477  0
-HELIX   20 H20 XXX A	 480  XXX A  482  1                                   3
-HELIX   21 H21 XXX A	 487  XXX A  500  1                                  14
+HELIX   21 H21 XXX A	 480  XXX A  482  1                                   3
+HELIX   22 H22 XXX A	 487  XXX A  500  1                                  14
 SHEET   19 E19 7 XXX A 504 XXX  A 510  0
 SHEET   20 E20 2 XXX A 515 XXX  A 516  0
 SHEET   21 E2111 XXX A 523 XXX  A 533  0
-HELIX   22 H22 XXX A	 537  XXX A  549  1                                  13
-HELIX   23 H23 XXX A	 555  XXX A  567  1                                  13
+HELIX   23 H23 XXX A	 537  XXX A  549  1                                  13
+HELIX   24 H24 XXX A	 555  XXX A  567  1                                  13
 SHEET   22 E22 3 XXX A 570 XXX  A 572  0
 SHEET   23 E23 2 XXX A 574 XXX  A 575  0
 SHEET   24 E24 2 XXX A 582 XXX  A 583  0
 SHEET   25 E25 6 XXX A 586 XXX  A 591  0
-HELIX   24 H24 XXX A	 600  XXX A  610  1                                  11
-HELIX   25 H25 XXX A	 627  XXX A  629  1                                   3
-HELIX   26 H26 XXX A	 632  XXX A  639  1                                   8
-HELIX   27 H27 XXX A	 653  XXX A  666  1                                  14
+HELIX   25 H25 XXX A	 600  XXX A  610  1                                  11
+HELIX   26 H26 XXX A	 627  XXX A  629  1                                   3
+HELIX   27 H27 XXX A	 632  XXX A  639  1                                   8
+HELIX   28 H28 XXX A	 653  XXX A  666  1                                  14
 SHEET   26 E26 5 XXX A 671 XXX  A 675  0
-HELIX   28 H28 XXX A	 676  XXX A  678  1                                   3
-HELIX   29 H29 XXX A	 679  XXX A  683  1                                   5
-HELIX   30 H30 XXX A	 684  XXX A  693  1                                  10
-HELIX   31 H31 XXX A	 698  XXX A  700  1                                   3
+HELIX   29 H29 XXX A	 676  XXX A  678  1                                   3
+HELIX   30 H30 XXX A	 679  XXX A  683  1                                   5
+HELIX   31 H31 XXX A	 684  XXX A  693  1                                  10
+HELIX   32 H32 XXX A	 698  XXX A  700  1                                   3
 SHEET   27 E27 4 XXX A 705 XXX  A 708  0
 SHEET   28 E28 2 XXX A 712 XXX  A 713  0
 SHEET   29 E29 2 XXX A 716 XXX  A 717  0
-HELIX   32 H32 XXX A	 728  XXX A  735  1                                   8
-HELIX   33 H33 XXX A	 737  XXX A  746  1                                  10
-HELIX   34 H34 XXX A	  53  XXX A   58  1                                   6
+HELIX   33 H33 XXX A	 728  XXX A  735  1                                   8
+HELIX   34 H34 XXX A	 737  XXX A  746  1                                  10
+HELIX   35 H35 XXX A	  53  XXX A   58  1                                   6
 SHEET   30 E30 7 XXX A  73 XXX  A  79  0
 SHEET   31 E31 6 XXX A  90 XXX  A  95  0
-HELIX   35 H35 XXX A	 100  XXX A  111  1                                  12
-HELIX   36 H36 XXX A	 117  XXX A  119  1                                   3
+HELIX   36 H36 XXX A	 100  XXX A  111  1                                  12
+HELIX   37 H37 XXX A	 117  XXX A  119  1                                   3
 SHEET   32 E32 6 XXX A 120 XXX  A 125  0
-HELIX   37 H37 XXX A	 131  XXX A  133  1                                   3
+HELIX   38 H38 XXX A	 131  XXX A  133  1                                   3
 SHEET   33 E33 3 XXX A 145 XXX  A 147  0
 SHEET   34 E34 5 XXX A 152 XXX  A 156  0
 SHEET   35 E35 6 XXX A 161 XXX  A 166  0
 SHEET   36 E36 4 XXX A 169 XXX  A 172  0
 SHEET   37 E37 6 XXX A 176 XXX  A 181  0
+ATOM    704  N   ARG A  43       7.863 -26.246  12.604  1.00 81.15           N  
+ATOM    705  H   ARG A  43       7.868 -25.673  13.435  1.00 81.15           H  
+ATOM    706  CA  ARG A  43       6.926 -25.903  11.525  1.00 81.15           C  
+ATOM    707  HA  ARG A  43       7.202 -26.461  10.631  1.00 81.15           H  
+ATOM    708  C   ARG A  43       7.005 -24.413  11.212  1.00 81.15           C  
+ATOM    709  CB  ARG A  43       5.486 -26.277  11.931  1.00 81.15           C  
+ATOM    710  HB2 ARG A  43       4.838 -26.170  11.062  1.00 81.15           H  
+ATOM    711  HB3 ARG A  43       5.147 -25.577  12.695  1.00 81.15           H  
+ATOM    712  O   ARG A  43       7.108 -23.591  12.117  1.00 81.15           O  
+ATOM    713  CG  ARG A  43       5.345 -27.700  12.496  1.00 81.15           C  
+ATOM    714  HG2 ARG A  43       5.927 -27.786  13.413  1.00 81.15           H  
+ATOM    715  HG3 ARG A  43       5.714 -28.423  11.768  1.00 81.15           H  
+ATOM    716  CD  ARG A  43       3.887 -28.016  12.836  1.00 81.15           C  
+ATOM    717  HD2 ARG A  43       3.309 -28.054  11.913  1.00 81.15           H  
+ATOM    718  HD3 ARG A  43       3.499 -27.220  13.472  1.00 81.15           H  
+ATOM    719  NE  ARG A  43       3.777 -29.300  13.553  1.00 81.15           N  
+ATOM    720  HE  ARG A  43       4.640 -29.801  13.711  1.00 81.15           H  
+ATOM    721  NH1 ARG A  43       1.493 -29.317  13.808  1.00 81.15           N  
+ATOM    722 HH11 ARG A  43       1.432 -28.451  13.292  1.00 81.15           H  
+ATOM    723 HH12 ARG A  43       0.653 -29.769  14.140  1.00 81.15           H  
+ATOM    724  NH2 ARG A  43       2.705 -30.991  14.640  1.00 81.15           N  
+ATOM    725 HH21 ARG A  43       1.846 -31.433  14.934  1.00 81.15           H  
+ATOM    726 HH22 ARG A  43       3.584 -31.467  14.781  1.00 81.15           H  
+ATOM    727  CZ  ARG A  43       2.664 -29.860  13.994  1.00 81.15           C  
+ATOM    728  N   GLN A  44       6.855 -24.042   9.942  1.00 75.49           N  
+ATOM    729  H   GLN A  44       6.816 -24.754   9.226  1.00 75.49           H  
+ATOM    730  CA  GLN A  44       6.845 -22.630   9.532  1.00 75.49           C  
+ATOM    731  HA  GLN A  44       7.800 -22.188   9.815  1.00 75.49           H  
+ATOM    732  C   GLN A  44       5.741 -21.816  10.235  1.00 75.49           C  
+ATOM    733  CB  GLN A  44       6.710 -22.569   8.003  1.00 75.49           C  
+ATOM    734  HB2 GLN A  44       5.754 -23.005   7.713  1.00 75.49           H  
+ATOM    735  HB3 GLN A  44       7.503 -23.163   7.549  1.00 75.49           H  
+ATOM    736  O   GLN A  44       5.952 -20.658  10.581  1.00 75.49           O  
+ATOM    737  CG  GLN A  44       6.783 -21.143   7.438  1.00 75.49           C  
+ATOM    738  HG2 GLN A  44       5.978 -20.538   7.855  1.00 75.49           H  
+ATOM    739  HG3 GLN A  44       6.620 -21.192   6.361  1.00 75.49           H  
+ATOM    740  CD  GLN A  44       8.110 -20.429   7.670  1.00 75.49           C  
+ATOM    741  NE2 GLN A  44       8.135 -19.137   7.462  1.00 75.49           N  
+ATOM    742 HE21 GLN A  44       7.305 -18.597   7.265  1.00 75.49           H  
+ATOM    743 HE22 GLN A  44       9.041 -18.691   7.420  1.00 75.49           H  
+ATOM    744  OE1 GLN A  44       9.143 -20.985   8.030  1.00 75.49           O  
 ATOM    745  N   ALA A  45       4.592 -22.439  10.515  1.00 78.76           N  
 ATOM    746  H   ALA A  45       4.489 -23.397  10.212  1.00 78.76           H  
 ATOM    747  CA  ALA A  45       3.454 -21.810  11.185  1.00 78.76           C  
@@ -11382,21 +11424,47 @@ ATOM  12051  CG2 VAL A 751      -5.825  -3.652  -6.653  1.00 92.92           C
 ATOM  12052 HG21 VAL A 751      -6.170  -2.761  -7.178  1.00 92.92           H  
 ATOM  12053 HG22 VAL A 751      -6.689  -4.222  -6.313  1.00 92.92           H  
 ATOM  12054 HG23 VAL A 751      -5.267  -4.258  -7.367  1.00 92.92           H  
-ATOM  12055  N   GLU A 752      -7.248  -0.689  -5.056  1.00 92.43           N  
-ATOM  12056  H   GLU A 752      -7.905  -1.304  -4.598  1.00 92.43           H  
-ATOM  12057  CA  GLU A 752      -7.732   0.627  -5.449  1.00 92.43           C  
-ATOM  12058  HA  GLU A 752      -7.249   0.905  -6.386  1.00 92.43           H  
-ATOM  12059  C   GLU A 752      -7.358   1.678  -4.400  1.00 92.43           C  
-ATOM  12060  CB  GLU A 752      -9.241   0.608  -5.710  1.00 92.43           C  
-ATOM  12061  HB2 GLU A 752      -9.545   1.602  -6.039  1.00 92.43           H  
-ATOM  12062  HB3 GLU A 752      -9.760   0.381  -4.779  1.00 92.43           H  
-ATOM  12063  O   GLU A 752      -6.953   1.367  -3.275  1.00 92.43           O  
-ATOM  12064  CG  GLU A 752      -9.632  -0.405  -6.798  1.00 92.43           C  
-ATOM  12065  HG2 GLU A 752      -9.400  -1.414  -6.455  1.00 92.43           H  
-ATOM  12066  HG3 GLU A 752      -9.043  -0.198  -7.691  1.00 92.43           H  
-ATOM  12067  CD  GLU A 752     -11.127  -0.329  -7.135  1.00 92.43           C  
-ATOM  12068  OE1 GLU A 752     -11.478  -0.583  -8.307  1.00 92.43           O  
-ATOM  12069  OE2 GLU A 752     -11.911   0.001  -6.216  1.00 92.43           O  
+ATOM  16775  N   ILE A1043     -51.816 -17.757  16.207  1.00 90.89           N  
+ATOM  16776  H   ILE A1043     -52.042 -18.438  16.918  1.00 90.89           H  
+ATOM  16777  CA  ILE A1043     -51.093 -18.221  15.021  1.00 90.89           C  
+ATOM  16778  HA  ILE A1043     -51.105 -17.434  14.266  1.00 90.89           H  
+ATOM  16779  C   ILE A1043     -51.813 -19.439  14.444  1.00 90.89           C  
+ATOM  16780  CB  ILE A1043     -49.613 -18.523  15.338  1.00 90.89           C  
+ATOM  16781  HB  ILE A1043     -49.571 -19.366  16.027  1.00 90.89           H  
+ATOM  16782  O   ILE A1043     -51.871 -20.501  15.076  1.00 90.89           O  
+ATOM  16783  CG1 ILE A1043     -48.876 -17.319  15.973  1.00 90.89           C  
+ATOM  16784 HG12 ILE A1043     -48.589 -16.605  15.201  1.00 90.89           H  
+ATOM  16785 HG13 ILE A1043     -49.514 -16.797  16.687  1.00 90.89           H  
+ATOM  16786  CG2 ILE A1043     -48.898 -18.899  14.029  1.00 90.89           C  
+ATOM  16787 HG21 ILE A1043     -47.845 -19.111  14.213  1.00 90.89           H  
+ATOM  16788 HG22 ILE A1043     -49.351 -19.779  13.571  1.00 90.89           H  
+ATOM  16789 HG23 ILE A1043     -48.965 -18.066  13.329  1.00 90.89           H  
+ATOM  16790  CD1 ILE A1043     -47.629 -17.751  16.740  1.00 90.89           C  
+ATOM  16791 HD11 ILE A1043     -47.929 -18.310  17.626  1.00 90.89           H  
+ATOM  16792 HD12 ILE A1043     -47.076 -16.867  17.058  1.00 90.89           H  
+ATOM  16793 HD13 ILE A1043     -46.992 -18.384  16.121  1.00 90.89           H  
+ATOM  16794  N   LYS A1044     -52.334 -19.292  13.225  1.00 90.10           N  
+ATOM  16795  H   LYS A1044     -52.179 -18.412  12.752  1.00 90.10           H  
+ATOM  16796  CA  LYS A1044     -53.057 -20.333  12.490  1.00 90.10           C  
+ATOM  16797  HA  LYS A1044     -53.050 -21.255  13.072  1.00 90.10           H  
+ATOM  16798  C   LYS A1044     -52.378 -20.645  11.165  1.00 90.10           C  
+ATOM  16799  CB  LYS A1044     -54.521 -19.927  12.273  1.00 90.10           C  
+ATOM  16800  HB2 LYS A1044     -54.559 -18.943  11.804  1.00 90.10           H  
+ATOM  16801  HB3 LYS A1044     -54.990 -20.647  11.602  1.00 90.10           H  
+ATOM  16802  O   LYS A1044     -51.729 -19.798  10.551  1.00 90.10           O  
+ATOM  16803  CG  LYS A1044     -55.313 -19.904  13.586  1.00 90.10           C  
+ATOM  16804  HG2 LYS A1044     -54.934 -19.110  14.230  1.00 90.10           H  
+ATOM  16805  HG3 LYS A1044     -55.192 -20.858  14.099  1.00 90.10           H  
+ATOM  16806  CD  LYS A1044     -56.803 -19.679  13.308  1.00 90.10           C  
+ATOM  16807  HD2 LYS A1044     -57.192 -20.529  12.748  1.00 90.10           H  
+ATOM  16808  HD3 LYS A1044     -56.936 -18.775  12.713  1.00 90.10           H  
+ATOM  16809  CE  LYS A1044     -57.561 -19.543  14.631  1.00 90.10           C  
+ATOM  16810  HE2 LYS A1044     -57.358 -20.422  15.243  1.00 90.10           H  
+ATOM  16811  HE3 LYS A1044     -57.193 -18.673  15.174  1.00 90.10           H  
+ATOM  16812  NZ  LYS A1044     -59.016 -19.419  14.393  1.00 90.10           N  
+ATOM  16813  HZ1 LYS A1044     -59.204 -18.616  13.810  1.00 90.10           H  
+ATOM  16814  HZ2 LYS A1044     -59.491 -19.298  15.276  1.00 90.10           H  
+ATOM  16815  HZ3 LYS A1044     -59.362 -20.243  13.922  1.00 90.10           H  
 ATOM  16816  N   TYR A1045     -52.554 -21.880  10.716  1.00 89.44           N  
 ATOM  16817  H   TYR A1045     -53.173 -22.500  11.218  1.00 89.44           H  
 ATOM  16818  CA  TYR A1045     -52.145 -22.269   9.377  1.00 89.44           C  

@@ -17,9 +17,12 @@
 		"refine": [{"start": 1454}],
 		"features": {"Catalytic domain": {"acc": "IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb", "range": "34-618", "level": 4},
 					"CP1": {"acc": "IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb", "range": "150-540", "level": 3, "href": "/superfamily/class1/CP1"},
-					"LIV IM": {"acc": "IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb", "range": "169-419", "level": 2, "href": "/superfamily/class1/LIV_IM"},
+					"LIV IM1": {"acc": "IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb", "range": "169-417", "level": 2, "href": "/superfamily/class1/LIV_IM1"},
+					"LIV IM2": {"acc": "IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb", "range": "465-522", "level": 2, "href": "/superfamily/class1/LIV_IM2"},
 					"Protozyme": {"acc": "IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb", "range": "36-82", "level": 2},
 					"Crossover 2": {"acc": "IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb", "range": "551-589", "level": 2},
+					"SC1a IM": {"acc": "IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb", "range": "418-450", "level": 1, "href": "/superfamily/class1/SC1a_IM"},
+					"LI IM": {"acc": "IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb", "range": "240-278", "level": 1, "href": "/superfamily/class1/LI_IM"},
 					"HIGH": {"acc": "IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb", "range": "52-55", "level": 1},
 					"KMSKS": {"acc": "IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb", "range": "599-603", "level": 1}}
 	

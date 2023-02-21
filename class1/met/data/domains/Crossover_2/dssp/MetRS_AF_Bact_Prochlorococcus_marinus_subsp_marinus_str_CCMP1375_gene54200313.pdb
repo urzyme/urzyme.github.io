@@ -1,8 +1,8 @@
-SHEET    1  E1 4 XXX A 255 XXX  A 258  0
+SHEET    1  E1 3 XXX A 255 XXX  A 257  0
 HELIX    1  H1 XXX A	 262  XXX A  263  1                                   2
 HELIX    2  H2 XXX A	 264  XXX A  268  1                                   5
 HELIX    3  H3 XXX A	 269  XXX A  275  1                                   7
-SHEET    2  E2 4 XXX A 284 XXX  A 287  0
+SHEET    2  E2 3 XXX A 284 XXX  A 286  0
 ATOM   4030  N   ALA A 252      -4.214 -14.349   4.733  1.00 97.59           N  
 ATOM   4031  H   ALA A 252      -4.870 -14.289   5.499  1.00 97.59           H  
 ATOM   4032  CA  ALA A 252      -3.526 -13.141   4.288  1.00 97.59           C  
@@ -574,13 +574,6 @@ ATOM   4597  HD1 HIS A 287       0.895   4.435   9.459  1.00 97.00           H
 ATOM   4598  CE1 HIS A 287      -0.827   3.602   8.624  1.00 97.00           C  
 ATOM   4599  HE1 HIS A 287      -1.526   4.422   8.696  1.00 97.00           H  
 ATOM   4600  NE2 HIS A 287      -1.126   2.389   8.134  1.00 97.00           N  
-ATOM   4601  N   GLY A 288       3.058   3.835  11.566  1.00 95.02           N  
-ATOM   4602  H   GLY A 288       3.821   3.886  10.906  1.00 95.02           H  
-ATOM   4603  CA  GLY A 288       2.810   5.019  12.383  1.00 95.02           C  
-ATOM   4604  HA2 GLY A 288       3.747   5.546  12.563  1.00 95.02           H  
-ATOM   4605  HA3 GLY A 288       2.414   4.719  13.353  1.00 95.02           H  
-ATOM   4606  C   GLY A 288       1.825   6.004  11.758  1.00 95.02           C  
-ATOM   4607  O   GLY A 288       1.306   5.794  10.659  1.00 95.02           O  
 TER    8156      GLU A 507                                                       
 END   
 

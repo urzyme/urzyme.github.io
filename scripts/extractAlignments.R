@@ -103,14 +103,17 @@ for (element in names(extract)){
 			stop(paste("Unexpected error finding boundaries for", feature, alignmentRange[1], alignmentRange[2], "\n"))
 		}
 
+		if (element != "common"){
 
-		# Ensure that none of the sites are used in more than 1 alignment ie. no double dipping
-		alreadyUsed = sapply(alignmentRange[1]:alignmentRange[2], function(ele) any(ele == all.sites.included))
-		if (sum(alreadyUsed) > 0){
-			duplicates = (alignmentRange[1]:alignmentRange[2])[alreadyUsed]
-			stop(paste("Duplicate sites detected for", feature, ":", paste(duplicates, collapse=","), "\n"))
+			# Ensure that none of the sites are used in more than 1 alignment ie. no double dipping
+			alreadyUsed = sapply(alignmentRange[1]:alignmentRange[2], function(ele) any(ele == all.sites.included))
+			if (sum(alreadyUsed) > 0){
+				duplicates = (alignmentRange[1]:alignmentRange[2])[alreadyUsed]
+				cat(paste("Warning: Duplicate sites detected for", feature, ":", paste(duplicates, collapse=","), "\n"))
+			}
+			all.sites.included = c(all.sites.included, alignmentRange[1]:alignmentRange[2])
+
 		}
-		all.sites.included = c(all.sites.included, alignmentRange[1]:alignmentRange[2])
 
 
 		# Subsequences

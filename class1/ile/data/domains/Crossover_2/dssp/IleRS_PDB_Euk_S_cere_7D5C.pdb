@@ -1,7 +1,7 @@
-SHEET    1  E1 4 XXX A 559 XXX  A 562  0
+SHEET    1  E1 3 XXX A 559 XXX  A 561  0
 HELIX    1  H1 XXX A	 563  XXX A  567  1                                   5
 HELIX    2  H2 XXX A	 569  XXX A  581  1                                  13
-SHEET    2  E2 4 XXX A 589 XXX  A 592  0
+SHEET    2  E2 3 XXX A 589 XXX  A 591  0
 HEADER    LIGASE/INHIBITOR                        25-SEP-20   7D5C              
 TITLE     ILERS IN COMPLEX WITH A TRNA SITE INHIBITOR                           
 COMPND    MOL_ID: 1;                                                            
@@ -536,6 +536,11 @@ ORIGX3      0.000000  0.000000  1.000000        0.00000
 SCALE1      0.005860  0.000000  0.001879        0.00000                         
 SCALE2      0.000000  0.015442  0.000000        0.00000                         
 SCALE3      0.000000  0.000000  0.007384        0.00000                         
+ATOM   4484  N   ALA A 556      -4.125   0.596  51.467  1.00 13.82           N  
+ATOM   4485  CA  ALA A 556      -4.438   1.905  50.848  1.00 13.46           C  
+ATOM   4486  C   ALA A 556      -5.617   1.748  49.887  1.00 13.36           C  
+ATOM   4487  O   ALA A 556      -5.686   0.715  49.175  1.00 13.67           O  
+ATOM   4488  CB  ALA A 556      -3.236   2.455  50.112  1.00 13.08           C  
 ATOM   4489  N   ASN A 557      -6.499   2.747  49.843  1.00 12.88           N  
 ATOM   4490  CA  ASN A 557      -7.503   2.874  48.759  1.00 12.79           C  
 ATOM   4491  C   ASN A 557      -6.760   2.993  47.424  1.00 12.27           C  
@@ -822,10 +827,6 @@ ATOM   4771  C   SER A 592       2.510   4.342  33.314  1.00 14.75           C
 ATOM   4772  O   SER A 592       3.345   3.560  33.823  1.00 14.00           O  
 ATOM   4773  CB  SER A 592       1.733   6.253  34.739  1.00 14.65           C  
 ATOM   4774  OG  SER A 592       2.554   6.137  35.890  1.00 15.73           O  
-ATOM   4775  N   GLY A 593       2.539   4.761  32.049  1.00 14.89           N  
-ATOM   4776  CA  GLY A 593       3.535   4.319  31.062  1.00 15.10           C  
-ATOM   4777  C   GLY A 593       4.802   5.152  31.146  1.00 15.58           C  
-ATOM   4778  O   GLY A 593       4.873   6.069  31.994  1.00 15.69           O  
 TER    7511      LEU A 982                                                      
 HETATM 7512  C13 GVU A1001      15.210  -1.842  38.797  1.00 19.91           C  
 HETATM 7513  C12 GVU A1001      12.147  -1.322  39.015  1.00 21.65           C  

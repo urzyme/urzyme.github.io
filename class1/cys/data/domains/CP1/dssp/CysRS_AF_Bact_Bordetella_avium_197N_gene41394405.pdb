@@ -1,12 +1,23 @@
-HELIX    1  H1 XXX A	 118  XXX A  130  1                                  13
+HELIX    1  H1 XXX A	 115  XXX A  117  1                                   3
+HELIX    2  H2 XXX A	 118  XXX A  130  1                                  13
 SHEET    1  E1 3 XXX A 134 XXX  A 136  0
 SHEET    2  E2 3 XXX A 142 XXX  A 144  0
-HELIX    2  H2 XXX A	 146  XXX A  148  1                                   3
-HELIX    3  H3 XXX A	 160  XXX A  166  1                                   7
+HELIX    3  H3 XXX A	 146  XXX A  148  1                                   3
+HELIX    4  H4 XXX A	 160  XXX A  166  1                                   7
 SHEET    3  E3 6 XXX A 181 XXX  A 186  0
-HELIX    4  H4 XXX A	 193  XXX A  195  1                                   3
+HELIX    5  H5 XXX A	 193  XXX A  195  1                                   3
 SHEET    4  E4 3 XXX A 204 XXX  A 206  0
-HELIX    5  H5 XXX A	 210  XXX A  220  1                                  11
+HELIX    6  H6 XXX A	 210  XXX A  219  1                                  10
+ATOM   1846  N   ALA A 114      16.120  -4.795  -5.510  1.00 98.12           N  
+ATOM   1847  H   ALA A 114      15.780  -4.381  -4.655  1.00 98.12           H  
+ATOM   1848  CA  ALA A 114      16.887  -3.960  -6.436  1.00 98.12           C  
+ATOM   1849  HA  ALA A 114      16.337  -3.892  -7.374  1.00 98.12           H  
+ATOM   1850  C   ALA A 114      18.275  -4.549  -6.765  1.00 98.12           C  
+ATOM   1851  CB  ALA A 114      16.995  -2.553  -5.834  1.00 98.12           C  
+ATOM   1852  HB1 ALA A 114      15.998  -2.129  -5.714  1.00 98.12           H  
+ATOM   1853  HB2 ALA A 114      17.577  -1.910  -6.494  1.00 98.12           H  
+ATOM   1854  HB3 ALA A 114      17.485  -2.600  -4.862  1.00 98.12           H  
+ATOM   1855  O   ALA A 114      18.665  -4.573  -7.931  1.00 98.12           O  
 ATOM   1856  N   THR A 115      18.995  -5.099  -5.783  1.00 97.51           N  
 ATOM   1857  H   THR A 115      18.633  -5.059  -4.840  1.00 97.51           H  
 ATOM   1858  CA  THR A 115      20.325  -5.704  -6.002  1.00 97.51           C  
@@ -1627,13 +1638,6 @@ ATOM   3472  CD2 LEU A 220       3.637  -7.580 -13.676  1.00 98.38           C
 ATOM   3473 HD21 LEU A 220       4.099  -8.500 -14.035  1.00 98.38           H  
 ATOM   3474 HD22 LEU A 220       3.379  -7.719 -12.626  1.00 98.38           H  
 ATOM   3475 HD23 LEU A 220       2.718  -7.394 -14.232  1.00 98.38           H  
-ATOM   3476  N   GLY A 221       6.557  -6.400 -18.262  1.00 97.72           N  
-ATOM   3477  H   GLY A 221       7.404  -6.418 -17.712  1.00 97.72           H  
-ATOM   3478  CA  GLY A 221       6.602  -5.773 -19.583  1.00 97.72           C  
-ATOM   3479  HA2 GLY A 221       6.062  -6.399 -20.294  1.00 97.72           H  
-ATOM   3480  HA3 GLY A 221       7.639  -5.699 -19.909  1.00 97.72           H  
-ATOM   3481  C   GLY A 221       5.986  -4.367 -19.597  1.00 97.72           C  
-ATOM   3482  O   GLY A 221       5.697  -3.787 -18.554  1.00 97.72           O  
 TER    7428      ALA A 483                                                       
 END   
 

@@ -1,7 +1,7 @@
-SHEET    1  E1 5 XXX A  31 XXX  A  35  0
+SHEET    1  E1 6 XXX A  30 XXX  A  35  0
 HELIX    1  H1 XXX A	  44  XXX A   46  1                                   3
 HELIX    2  H2 XXX A	  47  XXX A   58  1                                  12
-SHEET    2  E2 5 XXX A  63 XXX  A  67  0
+SHEET    2  E2 6 XXX A  62 XXX  A  67  0
 HELIX    3  H3 XXX A	  71  XXX A   73  1                                   3
 HELIX    4  H4 XXX A	  89  XXX A  103  1                                  15
 SHEET    3  E3 4 XXX A 118 XXX  A 121  0
@@ -11,13 +11,27 @@ HELIX    7  H7 XXX A	 139  XXX A  141  1                                   3
 HELIX    8  H8 XXX A	 144  XXX A  148  1                                   5
 HELIX    9  H9 XXX A	 151  XXX A  156  1                                   6
 HELIX   10 H10 XXX A	 167  XXX A  186  1                                  20
-SHEET    4  E4 5 XXX A 191 XXX  A 195  0
+SHEET    4  E4 7 XXX A 189 XXX  A 195  0
 HELIX   11 H11 XXX A	 196  XXX A  198  1                                   3
 HELIX   12 H12 XXX A	 199  XXX A  213  1                                  15
 SHEET    5  E5 5 XXX A 218 XXX  A 222  0
 SHEET    6  E6 2 XXX A 235 XXX  A 236  0
 SHEET    7  E7 2 XXX A 239 XXX  A 240  0
 HELIX   13 H13 XXX A	 250  XXX A  258  1                                   9
+ATOM    460  N   THR A  29       0.021   7.363 -24.883  1.00 98.21           N  
+ATOM    461  H   THR A  29      -0.705   7.647 -24.241  1.00 98.21           H  
+ATOM    462  CA  THR A  29       1.321   7.033 -24.294  1.00 98.21           C  
+ATOM    463  HA  THR A  29       2.005   6.715 -25.080  1.00 98.21           H  
+ATOM    464  C   THR A  29       1.148   5.873 -23.323  1.00 98.21           C  
+ATOM    465  CB  THR A  29       1.936   8.276 -23.627  1.00 98.21           C  
+ATOM    466  HB  THR A  29       1.228   8.706 -22.918  1.00 98.21           H  
+ATOM    467  O   THR A  29       0.097   5.730 -22.704  1.00 98.21           O  
+ATOM    468  CG2 THR A  29       3.253   7.988 -22.916  1.00 98.21           C  
+ATOM    469 HG21 THR A  29       3.067   7.420 -22.005  1.00 98.21           H  
+ATOM    470 HG22 THR A  29       3.736   8.924 -22.634  1.00 98.21           H  
+ATOM    471 HG23 THR A  29       3.902   7.423 -23.584  1.00 98.21           H  
+ATOM    472  OG1 THR A  29       2.225   9.215 -24.631  1.00 98.21           O  
+ATOM    473  HG1 THR A  29       3.075   9.628 -24.460  1.00 98.21           H  
 ATOM    474  N   SER A  30       2.161   5.018 -23.187  1.00 98.63           N  
 ATOM    475  H   SER A  30       3.013   5.189 -23.702  1.00 98.63           H  
 ATOM    476  CA  SER A  30       2.190   4.013 -22.119  1.00 98.63           C  
@@ -3595,22 +3609,6 @@ ATOM   4047  ND2 ASN A 259     -15.664   6.221  11.732  1.00 93.07           N
 ATOM   4048 HD21 ASN A 259     -16.589   5.863  11.921  1.00 93.07           H  
 ATOM   4049 HD22 ASN A 259     -14.994   5.612  11.284  1.00 93.07           H  
 ATOM   4050  OD1 ASN A 259     -16.443   8.290  11.820  1.00 93.07           O  
-ATOM   4051  N   VAL A 260     -12.919  10.272   8.374  1.00 93.89           N  
-ATOM   4052  H   VAL A 260     -13.432   9.831   7.624  1.00 93.89           H  
-ATOM   4053  CA  VAL A 260     -11.877  11.260   8.054  1.00 93.89           C  
-ATOM   4054  HA  VAL A 260     -11.001  10.995   8.647  1.00 93.89           H  
-ATOM   4055  C   VAL A 260     -12.287  12.676   8.491  1.00 93.89           C  
-ATOM   4056  CB  VAL A 260     -11.432  11.212   6.580  1.00 93.89           C  
-ATOM   4057  HB  VAL A 260     -10.560  11.857   6.473  1.00 93.89           H  
-ATOM   4058  O   VAL A 260     -13.477  13.021   8.545  1.00 93.89           O  
-ATOM   4059  CG1 VAL A 260     -10.998   9.798   6.175  1.00 93.89           C  
-ATOM   4060 HG11 VAL A 260     -10.231   9.433   6.857  1.00 93.89           H  
-ATOM   4061 HG12 VAL A 260     -11.852   9.122   6.214  1.00 93.89           H  
-ATOM   4062 HG13 VAL A 260     -10.604   9.799   5.159  1.00 93.89           H  
-ATOM   4063  CG2 VAL A 260     -12.502  11.723   5.618  1.00 93.89           C  
-ATOM   4064 HG21 VAL A 260     -12.174  11.589   4.587  1.00 93.89           H  
-ATOM   4065 HG22 VAL A 260     -12.652  12.788   5.799  1.00 93.89           H  
-ATOM   4066 HG23 VAL A 260     -13.446  11.203   5.778  1.00 93.89           H  
 TER    6733      GLU A 430                                                       
 END   
 

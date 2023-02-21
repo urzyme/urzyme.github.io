@@ -1,6 +1,6 @@
-SHEET    1  E1 2 XXX A  44 XXX  A  45  0
+SHEET    1  E1 3 XXX A  43 XXX  A  45  0
 HELIX    1  H1 XXX A	  55  XXX A   70  1                                  16
-SHEET    2  E2 2 XXX A  76 XXX  A  77  0
+SHEET    2  E2 3 XXX A  75 XXX  A  77  0
 HEADER    LIGASE                                  27-FEB-14   4P2B              
 TITLE     CRYSTAL STRUCTURE OF THE APO FORM OF THE GLUTAMINYL-TRNA SYNTHETASE   
 TITLE    2 CATALYTIC DOMAIN FROM TOXOPLASMA GONDII.                             
@@ -650,6 +650,14 @@ ORIGX3      0.000000  0.000000  1.000000        0.00000
 SCALE1      0.009512  0.005492  0.000000        0.00000                         
 SCALE2      0.000000  0.010984  0.000000        0.00000                         
 SCALE3      0.000000  0.000000  0.004357        0.00000                         
+ATOM    135  N   ILE A  42      69.205  57.204  64.651  1.00 64.34           N  
+ATOM    136  CA  ILE A  42      69.524  57.705  63.324  1.00 62.08           C  
+ATOM    137  C   ILE A  42      70.847  58.464  63.347  1.00 54.41           C  
+ATOM    138  O   ILE A  42      70.932  59.566  63.892  1.00 49.80           O  
+ATOM    139  CB  ILE A  42      68.418  58.641  62.797  1.00 59.52           C  
+ATOM    140  CG1 ILE A  42      67.073  57.915  62.780  1.00 56.88           C  
+ATOM    141  CG2 ILE A  42      68.773  59.171  61.414  1.00 55.04           C  
+ATOM    142  CD1 ILE A  42      65.955  58.781  62.334  1.00 64.04           C  
 ATOM    143  N   THR A  43      71.879  57.865  62.758  1.00 48.17           N  
 ATOM    144  CA  THR A  43      73.182  58.516  62.682  1.00 45.85           C  
 ATOM    145  C   THR A  43      73.427  59.086  61.270  1.00 46.15           C  
@@ -931,14 +939,6 @@ ATOM    420  CD2 PHE A  79      76.303  62.728  48.822  1.00 49.83           C
 ATOM    421  CE1 PHE A  79      78.762  61.469  48.856  1.00 46.82           C  
 ATOM    422  CE2 PHE A  79      76.425  61.433  48.350  1.00 52.52           C  
 ATOM    423  CZ  PHE A  79      77.655  60.805  48.372  1.00 52.25           C  
-ATOM    424  N   ASP A  80      78.234  66.802  52.514  1.00 38.94           N  
-ATOM    425  CA  ASP A  80      78.333  68.181  52.993  1.00 59.90           C  
-ATOM    426  C   ASP A  80      78.836  69.073  51.879  1.00 39.25           C  
-ATOM    427  O   ASP A  80      79.988  69.498  51.879  1.00 64.24           O  
-ATOM    428  CB  ASP A  80      79.293  68.297  54.188  1.00 69.50           C  
-ATOM    429  CG  ASP A  80      78.570  68.418  55.526  1.00 90.37           C  
-ATOM    430  OD1 ASP A  80      77.374  68.785  55.529  1.00 98.90           O  
-ATOM    431  OD2 ASP A  80      79.201  68.149  56.579  1.00 97.69           O  
 ANISOU 3830  CD2 LEU A 575    11071   6488   6785   2339   1144   1188       C  
 TER    3831      LEU A 575                                                      
 HETATM 3832  S   SO4 A 601      60.619  91.573  57.397  1.00108.67           S  

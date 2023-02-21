@@ -1,6 +1,6 @@
-SHEET    1  E1 3 XXX A  37 XXX  A  39  0
+SHEET    1  E1 4 XXX A  36 XXX  A  39  0
 HELIX    1  H1 XXX A	  51  XXX A   68  1                                  18
-SHEET    2  E2 3 XXX A  75 XXX  A  77  0
+SHEET    2  E2 4 XXX A  74 XXX  A  77  0
 HEADER    LIGASE/RNA                              23-JUN-00   1GAX              
 TITLE     CRYSTAL STRUCTURE OF THERMUS THERMOPHILUS VALYL-TRNA                  
 TITLE    2 SYNTHETASE COMPLEXED WITH TRNA(VAL) AND VALYL-ADENYLATE              
@@ -818,6 +818,13 @@ ORIGX3      0.000000  0.000000  1.000000        0.00000
 SCALE1      0.002428  0.000000  0.000000        0.00000                         
 SCALE2      0.000000  0.002428  0.000000        0.00000                         
 SCALE3      0.000000  0.000000  0.012200        0.00000                                                   
+ATOM   3481  N   PRO A  35     104.091  33.990   3.496  1.00 39.67           N  
+ATOM   3482  CA  PRO A  35     102.875  34.228   4.276  1.00 39.45           C  
+ATOM   3483  C   PRO A  35     103.080  35.160   5.467  1.00 38.24           C  
+ATOM   3484  O   PRO A  35     104.208  35.379   5.931  1.00 36.92           O  
+ATOM   3485  CB  PRO A  35     102.481  32.823   4.722  1.00 37.09           C  
+ATOM   3486  CG  PRO A  35     103.812  32.216   5.003  1.00 37.41           C  
+ATOM   3487  CD  PRO A  35     104.661  32.669   3.809  1.00 35.78           C  
 ATOM   3488  N   PHE A  36     101.967  35.707   5.942  1.00 34.96           N  
 ATOM   3489  CA  PHE A  36     101.932  36.591   7.102  1.00 28.49           C  
 ATOM   3490  C   PHE A  36     100.632  36.201   7.802  1.00 27.95           C  
@@ -1175,14 +1182,6 @@ ATOM   3841  O   THR A  80      83.654  31.997  18.451  1.00 44.17           O
 ATOM   3842  CB  THR A  80      82.695  34.710  17.289  1.00 39.44           C  
 ATOM   3843  OG1 THR A  80      81.886  33.657  16.751  1.00 40.26           O  
 ATOM   3844  CG2 THR A  80      82.768  35.825  16.276  1.00 36.10           C  
-ATOM   3845  N   ASP A  81      84.452  33.500  19.920  1.00 38.59           N  
-ATOM   3846  CA  ASP A  81      84.436  32.577  21.061  1.00 38.52           C  
-ATOM   3847  C   ASP A  81      83.046  32.471  21.697  1.00 38.20           C  
-ATOM   3848  O   ASP A  81      82.359  33.475  21.860  1.00 40.48           O  
-ATOM   3849  CB  ASP A  81      85.452  33.037  22.111  1.00 37.22           C  
-ATOM   3850  CG  ASP A  81      85.677  32.008  23.207  1.00 45.45           C  
-ATOM   3851  OD1 ASP A  81      86.576  32.231  24.051  1.00 53.84           O  
-ATOM   3852  OD2 ASP A  81      84.964  30.980  23.235  1.00 47.81           O  
 TER    3208        A D 975                                                      
 HETATM17151 ZN    ZN A 998      78.737  33.374  39.525  1.00 54.10          ZN  
 HETATM17152 ZN    ZN A 999      84.500  -0.954  34.613  1.00 42.78          ZN  

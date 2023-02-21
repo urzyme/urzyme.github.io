@@ -1,7 +1,7 @@
-SHEET    1  E1 5 XXX A  31 XXX  A  35  0
+SHEET    1  E1 4 XXX A  31 XXX  A  34  0
 HELIX    1  H1 XXX A	  44  XXX A   46  1                                   3
 HELIX    2  H2 XXX A	  47  XXX A   58  1                                  12
-SHEET    2  E2 5 XXX A  63 XXX  A  67  0
+SHEET    2  E2 4 XXX A  63 XXX  A  66  0
 ATOM    474  N   SER A  30       2.161   5.018 -23.187  1.00 98.63           N  
 ATOM    475  H   SER A  30       3.013   5.189 -23.702  1.00 98.63           H  
 ATOM    476  CA  SER A  30       2.190   4.013 -22.119  1.00 98.63           C  
@@ -590,13 +590,6 @@ ATOM   1058  CD1 ILE A  67       1.516  -6.589  -9.272  1.00 96.38           C
 ATOM   1059 HD11 ILE A  67       1.949  -5.600  -9.122  1.00 96.38           H  
 ATOM   1060 HD12 ILE A  67       0.455  -6.468  -9.488  1.00 96.38           H  
 ATOM   1061 HD13 ILE A  67       1.609  -7.173  -8.356  1.00 96.38           H  
-ATOM   1062  N   GLY A  68       6.454  -6.064  -8.815  1.00 93.30           N  
-ATOM   1063  H   GLY A  68       5.799  -5.615  -8.190  1.00 93.30           H  
-ATOM   1064  CA  GLY A  68       7.839  -6.150  -8.386  1.00 93.30           C  
-ATOM   1065  HA2 GLY A  68       8.491  -5.883  -9.218  1.00 93.30           H  
-ATOM   1066  HA3 GLY A  68       7.991  -5.432  -7.580  1.00 93.30           H  
-ATOM   1067  C   GLY A  68       8.226  -7.534  -7.876  1.00 93.30           C  
-ATOM   1068  O   GLY A  68       8.609  -7.661  -6.719  1.00 93.30           O  
 TER    6733      GLU A 430                                                       
 END   
 

@@ -14,12 +14,22 @@
 		"ref_str": ["structures/LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb"],
 		"refine": [{"start": 1171}],
 		"features": {"Catalytic domain": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "28-668", "level": 4},
-					"CP1": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "153-588", "level": 3, "href": "/superfamily/class1/CP1"},
+					"CP1": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "153-569", "level": 3, "href": "/superfamily/class1/CP1"},
+
 					"Variable bundle": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "76-122", "level": 3, "href": "/superfamily/class1/Variable_bundle"},
-					"LIV IM": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "174-462", "level": 2, "href": "/superfamily/class1/LIV_IM"},
+					"LIV IM": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "174-461", "level": 2, "href": "/superfamily/class1/LIV_IM"},
+					"SC1a IM": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "462-494", "level": 2, "href": "/superfamily/class1/SC1a_IM"},
+					"LeuRS-A IM2": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "512-570", "level": 2, "href": "/superfamily/class1/LeuRS-A_IM2"},
 					"Protozyme": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "29-69", "level": 2},
 					"Crossover 2": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "590-625", "level": 2},
+					"LeuRS-A IM1": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "354-401", "level": 1, "href": "/superfamily/class1/LeuRS-A_IM1"},
+					"LI IM": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "244-280", "level": 1, "href": "/superfamily/class1/LI_IM"},
+
 					"HIGH": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "44-47", "level": 1},
 					"KMSKS": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "634-638", "level": 1}}
 	
 }
+
+
+
+

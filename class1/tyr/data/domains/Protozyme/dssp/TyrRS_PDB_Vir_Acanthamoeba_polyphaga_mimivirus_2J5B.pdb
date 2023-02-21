@@ -1,6 +1,6 @@
-SHEET    1  E1 5 XXX A  33 XXX  A  37  0
+SHEET    1  E1 4 XXX A  33 XXX  A  36  0
 HELIX    1  H1 XXX A	  45  XXX A   60  1                                  16
-SHEET    2  E2 5 XXX A  65 XXX  A  69  0
+SHEET    2  E2 4 XXX A  65 XXX  A  68  0
 HEADER    LIGASE                                  13-SEP-06   2J5B              
 TITLE     STRUCTURE OF THE TYROSYL TRNA SYNTHETASE FROM ACANTHAMOEBA POLYPHAGA  
 TITLE    2 MIMIVIRUS COMPLEXED WITH TYROSYNOL                                   
@@ -774,11 +774,6 @@ ATOM    573  CB  ILE A  69      51.476  61.954  39.875  1.00 31.73           C
 ATOM    574  CG1 ILE A  69      52.030  61.472  41.216  1.00 31.85           C  
 ATOM    575  CG2 ILE A  69      52.589  62.464  38.978  1.00 31.30           C  
 ATOM    576  CD1 ILE A  69      52.892  60.248  41.126  1.00 37.52           C  
-ATOM    577  N   ALA A  70      49.550  64.738  38.617  1.00 29.81           N  
-ATOM    578  CA  ALA A  70      48.867  65.248  37.437  1.00 29.57           C  
-ATOM    579  C   ALA A  70      49.684  65.260  36.145  1.00 30.02           C  
-ATOM    580  O   ALA A  70      49.756  66.288  35.464  1.00 30.39           O  
-ATOM    581  CB  ALA A  70      48.338  66.649  37.731  1.00 29.89           C  
 ATOM   2591  N   GLN A 335      70.163  70.543  30.843  1.00 73.95           N  
 TER    5171      SER B 337                                                      
 HETATM 5172  C   TYE A1336      49.473  73.646  40.076  1.00 59.14           C  

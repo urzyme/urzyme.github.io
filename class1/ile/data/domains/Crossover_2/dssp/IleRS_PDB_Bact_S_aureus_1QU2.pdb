@@ -1,7 +1,7 @@
-SHEET    1  E1 4 XXX A 552 XXX  A 555  0
+SHEET    1  E1 3 XXX A 552 XXX  A 554  0
 HELIX    1  H1 XXX A	 556  XXX A  559  1                                   4
 HELIX    2  H2 XXX A	 562  XXX A  574  1                                  13
-SHEET    2  E2 4 XXX A 582 XXX  A 585  0
+SHEET    2  E2 3 XXX A 582 XXX  A 584  0
 HEADER    LIGASE/RNA                              06-JUL-99   1QU2              
 TITLE     INSIGHTS INTO EDITING FROM AN ILE-TRNA SYNTHETASE STRUCTURE           
 TITLE    2 WITH TRNA(ILE) AND MUPIROCIN                                         
@@ -857,6 +857,11 @@ ORIGX3      0.000000  0.000000  1.000000        0.00000
 SCALE1      0.014085  0.000000  0.000000        0.00000                         
 SCALE2      0.000000  0.010000  0.000000        0.00000                         
 SCALE3      0.000000  0.000000  0.005376        0.00000                         
+ATOM   6026  N   ALA A 549       8.378  88.082  73.449  1.00 25.78           N  
+ATOM   6027  CA  ALA A 549       8.914  88.387  74.775  1.00 24.54           C  
+ATOM   6028  C   ALA A 549       9.506  89.790  74.786  1.00 23.68           C  
+ATOM   6029  O   ALA A 549      10.174  90.199  73.824  1.00 21.90           O  
+ATOM   6030  CB  ALA A 549       9.984  87.385  75.156  1.00 23.96           C  
 ATOM   6031  N   ASP A 550       9.267  90.524  75.873  1.00 22.24           N  
 ATOM   6032  CA  ASP A 550       9.802  91.879  75.989  1.00 22.04           C  
 ATOM   6033  C   ASP A 550      11.322  91.833  75.886  1.00 21.60           C  
@@ -1147,10 +1152,6 @@ ATOM   6317  ND1 HIS A 585      24.200  88.288  81.001  1.00 19.77           N
 ATOM   6318  CD2 HIS A 585      26.300  87.697  81.127  1.00 17.82           C  
 ATOM   6319  CE1 HIS A 585      24.225  86.980  81.193  1.00 17.60           C  
 ATOM   6320  NE2 HIS A 585      25.486  86.597  81.273  1.00 20.27           N  
-ATOM   6321  N   GLY A 586      28.625  90.149  79.576  1.00 16.78           N  
-ATOM   6322  CA  GLY A 586      29.884  89.493  79.294  1.00 15.81           C  
-ATOM   6323  C   GLY A 586      30.079  88.299  80.202  1.00 17.98           C  
-ATOM   6324  O   GLY A 586      29.152  87.888  80.909  1.00 16.92           O  
 TER    9012      VAL A 917                                                      
 HETATM 9013  K     K T 301      32.495 107.438 119.902  1.00 26.10           K  
 HETATM 9014 MG    MG T1201      52.097 121.064  65.038  1.00 37.54          MG  

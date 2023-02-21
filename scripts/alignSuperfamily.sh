@@ -4,12 +4,12 @@
 
 # Prepare one superfamily per domain
 cd superfamily
-for c in class2;
+for c in class1;
 do
 
 	cd $c
 	
-	for d in LIV*/
+	for d in Cys*/
 	do
 
 		echo "$c $d"

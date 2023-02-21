@@ -8,7 +8,6 @@ sse-class1:
 	Rscript ../../../../scripts/dssp2fasta.R
 
 
-
 sse-class2:
 	cd superfamily/class2/Catalytic_domain/data && echo "Regenerating class 2 catalytic domain secondary structure alignment from primary sequence alignment";\
 	Rscript ../../../../scripts/dssp2fasta.R

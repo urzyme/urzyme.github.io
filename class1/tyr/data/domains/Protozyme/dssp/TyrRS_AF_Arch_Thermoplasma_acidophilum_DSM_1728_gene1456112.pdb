@@ -1,8 +1,8 @@
-SHEET    1  E1 5 XXX A  31 XXX  A  35  0
+SHEET    1  E1 4 XXX A  31 XXX  A  34  0
 HELIX    1  H1 XXX A	  43  XXX A   43  1                                   1
 HELIX    2  H2 XXX A	  44  XXX A   48  1                                   5
 HELIX    3  H3 XXX A	  49  XXX A   54  1                                   6
-SHEET    2  E2 5 XXX A  62 XXX  A  66  0
+SHEET    2  E2 4 XXX A  62 XXX  A  65  0
 ATOM    492  N   LYS A  30      -7.913   6.251 -20.005  1.00 98.19           N  
 ATOM    493  H   LYS A  30      -7.445   7.035 -20.437  1.00 98.19           H  
 ATOM    494  CA  LYS A  30      -7.100   5.257 -19.299  1.00 98.19           C  
@@ -598,16 +598,6 @@ ATOM   1083  CD2 LEU A  66      -1.823  -6.672  -8.105  1.00 98.69           C
 ATOM   1084 HD21 LEU A  66      -2.874  -6.961  -8.125  1.00 98.69           H  
 ATOM   1085 HD22 LEU A  66      -1.317  -7.225  -7.314  1.00 98.69           H  
 ATOM   1086 HD23 LEU A  66      -1.762  -5.600  -7.913  1.00 98.69           H  
-ATOM   1087  N   ALA A  67       2.693  -4.087  -8.388  1.00 98.48           N  
-ATOM   1088  H   ALA A  67       2.023  -3.662  -7.763  1.00 98.48           H  
-ATOM   1089  CA  ALA A  67       4.022  -3.497  -8.432  1.00 98.48           C  
-ATOM   1090  HA  ALA A  67       4.310  -3.403  -9.479  1.00 98.48           H  
-ATOM   1091  C   ALA A  67       5.070  -4.406  -7.754  1.00 98.48           C  
-ATOM   1092  CB  ALA A  67       3.897  -2.075  -7.860  1.00 98.48           C  
-ATOM   1093  HB1 ALA A  67       3.785  -2.111  -6.776  1.00 98.48           H  
-ATOM   1094  HB2 ALA A  67       4.775  -1.481  -8.113  1.00 98.48           H  
-ATOM   1095  HB3 ALA A  67       3.030  -1.577  -8.293  1.00 98.48           H  
-ATOM   1096  O   ALA A  67       5.646  -4.057  -6.726  1.00 98.48           O  
 TER    5337      GLN A 332                                                       
 END   
 
