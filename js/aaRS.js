@@ -243,7 +243,7 @@ function renderaaRS(isPairwise = false, isSuperfamily = false){
 	let dropdowns = $("#tertiaryTable").find(".colouring");
 	for (let d = 0; d < dropdowns.length; d ++){
 		let dropdownCol = $(dropdowns[d]).find("select");
-		if (d == 0) dropdownCol.append("<option value='byChain'>Chain</option>");
+		dropdownCol.append("<option value='byChain'>Chain</option>");
 		dropdownCol.append("<option value='rainbow'>Position</option>");
 		dropdownCol.append("<option value='bySS'>SSE</option>");
 		dropdownCol.append("<option value='ssSuccession'>SSE succession</option>");
