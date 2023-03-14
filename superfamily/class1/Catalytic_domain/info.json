@@ -16,7 +16,7 @@
         "CP2": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "167-201", "level": 2, "count": 5, "align": "right", "href": "../SC1a_IM"},
         "Edit 1": {"acc": "ValRS_AF_Mito_Falco_naumanni_gene121082178.pdb", "range": "183-339", "level": 4, "count": 3, "href": "../LIV_IM1"},
         "Edit 2": {"acc": "LeuRS-B_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56439070.pdb", "range": "224-409", "level": 2, "count": 1, "href": "../LIV_IM1"},
-        "LIV 2": {"acc": "LeuRS-B_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56439070.pdb", "range": "429-485", "level": 2, "count": 3, "href": "../LIV_IM2"},
+        "CP3": {"acc": "LeuRS-B_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56439070.pdb", "range": "429-485", "level": 2, "count": 3, "href": "../LIV_IM2"},
         "LI": {"acc": "IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb", "range": "208-245", "level": 2, "count": 2, "href": "../LI_IM"},
         "LeuRS-A 1": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "327-374", "level": 2, "count": 1, "href": "../LeuRS-A_IM1"},
 		"LeuRS-A 2": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "485-539", "level": 2, "count": 1, "align": "right", "href": "../LeuRS-A_IM2"},
@@ -65,7 +65,7 @@
 
         "editing": {"features": ["Edit 1", "Edit 2"],  "dir": "../LIV_IM1"},
         
-        "liv2": {"features": ["LIV 2"],  "dir": "../LIV_IM2"},
+        "liv2": {"features": ["CP3"],  "dir": "../LIV_IM2"},
         "leuA": {"features": ["LeuRS-A 2"],  "dir": "../LeuRS-A_IM2"},
         "leuB": {"features": ["LeuRS-B"],  "dir": "../LeuRS-B_IM"},
 
