@@ -13,13 +13,14 @@
         "CysRS": {"acc": "CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb", "range": "128-161", "level": 3, "count": 1, "align": "left", "href": "../CysRS_IM"},
 		
         "CP2": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "167-201", "level": 3, "count": 5, "align": "left", "href": "../SC1a_IM"},
-        "Editing": {"acc": "ValRS_AF_Mito_Falco_naumanni_gene121082178.pdb", "range": "183-339", "level": 3, "count": 3, "href": "../LIV_IM1"},
+        "Editing": {"acc": "ValRS_AF_Mito_Falco_naumanni_gene121082178.pdb", "range": "183-327", "level": 3, "count": 3, "href": "../LIV_IM1"},
         "Editing ": {"acc": "LeuRS-B_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56439070.pdb", "range": "224-409", "level": 3, "count": 1, "href": "../LIV_IM1"},
         "CP3": {"acc": "LeuRS-B_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56439070.pdb", "range": "429-485", "level": 3, "count": 3, "href": "../LIV_IM2"},
 		"LeuRS-A": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "485-539", "level": 3, "count": 1, "align": "right", "href": "../LeuRS-A_IM2"},
         "LeuRS-B": {"acc": "LeuRS-B_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56439070.pdb", "range": "564-604", "level": 3, "count": 1, "href": "../LeuRS-B_IM"},
 
-
+        "Zinc": {"acc": "ValRS_AF_Mito_Falco_naumanni_gene121082178.pdb", "range": "149-182", "level": 2, "count": 5, "dy": -2, "align": "right", "href": "../Zn"},
+        "Zinc ": {"acc": "ValRS_AF_Mito_Falco_naumanni_gene121082178.pdb", "range": "330-338", "level": 2, "count": 5, "dy": -2, "align": "right", "href": "../Zn"},
      
 
         "Z1": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "148-158", "level": 1, "count": 10, "dy": -9},

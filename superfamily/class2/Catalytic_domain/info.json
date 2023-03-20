@@ -9,7 +9,7 @@
     "features": {   
 
 
-                "ProRS-B": {"acc": "ProRS-B_AF_Bact_Acinetobacter_baylyi_ADP1_gene45233245.pdb", "range": "213-363", "level": 3, "count": 1,  "href": "../ProRS-B_IM"},
+                "ProRS-B": {"acc": "ProRS-B_AF_Bact_Acinetobacter_baylyi_ADP1_gene45233245.pdb", "range": "206-363", "level": 3, "count": 1,  "href": "../ProRS-B_IM"},
                 "GlyRS-AE1": {"acc": "GlyRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697160.pdb", "range": "49-110", "level": 3, "count": 2, "href": "../GlyRS-AE_IM1"},
                 "GlyRS-AE2": {"acc": "GlyRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697160.pdb", "range": "192-226", "level": 3, "count": 2, "href": "../GlyRS-AE_IM2"},
                 "GlyRS-E": {"acc": "GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb", "range": "373-448", "level": 3, "count": 1, "href": "../GlyRS-E_IM"}, 
@@ -20,17 +20,18 @@
                 "ThrRS": {"acc": "ThrRS_AF_Mito_Oryza_sativa_Japonica_Group_gene4345200.pdb", "range": "163-197", "level": 3, "count": 1},
                 "AlaRS": {"acc": "AlaRS_AF_Bact_Nocardia_farcinica_IFM_10152_gene61134339.pdb", "range": "130-163", "level": 3, "count": 1, "href": "../AlaRS_IM"},
 
-                "S2b.1a": {"acc": "AspRS_AF_Bact_Bacillus_anthracis_str_Ames_Ancestor_gene45024275.pdb", "range": "216-233", "level": 3, "count": 4, "dy": -2, "href": "../Subclass_2b_IM_1"},
-                "S2b.1b": {"acc": "AspRS_AF_Bact_Bacillus_anthracis_str_Ames_Ancestor_gene45024275.pdb", "range": "279-296", "level": 3, "count": 4, "dy": -2, "href": "../Subclass_2b_IM_1"},
-                "S2b.2": {"acc": "AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb", "range": "249-280", "level": 3, "count": 4, "href": "../Subclass_2b_IM_2"},
-                "AspRSa": {"acc": "AspRS_AF_Bact_Bacillus_anthracis_str_Ames_Ancestor_gene45024275.pdb", "range": "145-214", "level": 3, "count": 1},
+                "S2b.1a": {"acc": "LysRS-II_AF_Arch_Aciduliprofundum_boonei_T469_gene8827564.pdb", "range": "147-180", "level": 3, "count": 4, "dy": -1, "href": "../Subclass_2b_IM_1"},
+                "S2b.1b": {"acc": "AspRS_AF_Bact_Bacillus_anthracis_str_Ames_Ancestor_gene45024275.pdb", "range": "216-233", "level": 3, "count": 4, "href": "../Subclass_2b_IM_1"},
+                "S2b.1c": {"acc": "AspRS_AF_Bact_Bacillus_anthracis_str_Ames_Ancestor_gene45024275.pdb", "range": "279-296", "level": 3, "count": 4, "href": "../Subclass_2b_IM_1"},
+                "S2b.2": {"acc": "AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb", "range": "249-280", "level": 3, "count": 4, "dy": -2, "href": "../Subclass_2b_IM_2"},
+                "AspRSa": {"acc": "AspRS_AF_Bact_Bacillus_anthracis_str_Ames_Ancestor_gene45024275.pdb", "range": "157-214", "level": 3, "count": 1},
                 "AspRSb": {"acc": "AspRS_AF_Bact_Bacillus_anthracis_str_Ames_Ancestor_gene45024275.pdb", "range": "234-278", "level": 3, "count": 1},
-                "LysRS-II": {"acc": "LysRS-II_AF_Arch_Aciduliprofundum_boonei_T469_gene8827564.pdb", "range": "143-180", "level": 3, "count": 1},
 
-				"Gate 1": {"acc": "PheRS-Aα_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724458.pdb", "range": "31-47", "level": 3, "count": 16, "dy": -11},
-				"Gate 2": {"acc": "PheRS-Aα_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724458.pdb", "range": "206-214", "level": 3, "count": 16, "dy": -11},
+				"SI a": {"acc": "PheRS-Aα_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724458.pdb", "range": "31-47", "level": 3, "count": 20, "dy": -16},
+                "SI b": {"acc": "AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb", "range": "60-67", "level": 3, "count": 20, "dy": -2},
 
-                "Dimer loop": {"acc": "AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb", "range": "60-67", "level": 3, "count": 20},
+
+				"H4": {"acc": "PheRS-Aα_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724458.pdb", "range": "206-214", "level": 3, "count": 16, "dy": -12},
                 "Hairpin 2a": {"acc": "GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb", "range": "365-372", "level": 3, "count": 7, "dy": -5},
                 "Hairpin 2b": {"acc": "ProRS-B_AF_Bact_Acinetobacter_baylyi_ADP1_gene45233245.pdb", "range": "395-399", "level": 3, "count": 7, "dy": -1},
 
@@ -67,8 +68,8 @@
         "urzyme": {"features": ["S5", "SH1"]},
         "6fold": {"features": ["H1", "Motif 1", "H3", "S2", "S3", "S4"]},
         
-        "gates": {"features": ["Gate 1", "Gate 2"]},
-        "dimer": {"features": ["Dimer loop"]},
+        "H4": {"features": ["H4"]},
+        "si": {"features": ["SI a", "SI b"]},
         "hairpin2": {"features": ["Hairpin 2a", "Hairpin 2b"]},
 
 
@@ -76,10 +77,10 @@
         "phe3": {"features": ["PheRS-A&alpha;"],  "dir": "../PheRS-Aα_IM"},
         "ser2": {"features": ["SerRS-A"],  "dir": "../SerRS-A_IM"},
 
-        "sc2b1": {"features": ["S2b.1a", "S2b.1b"]},
+        "sc2b1": {"features": ["S2b.1a", "S2b.1b", "S2b.1c"]},
         "sc2b2": {"features": ["S2b.2"],  "dir": "../Subclass_2b_IM_2"},
-        "asp": {"features": ["AspRSa", "AspRSb"]},
-        "lys": {"features": ["LysRS-II"]},
+        "asp1": {"features": ["AspRSa"]},
+        "asp2": {"features": ["AspRSb"]},
 
         "thr": {"features": ["ThrRS"]},
         "his": {"features": ["HisRS"]},
@@ -91,6 +92,8 @@
         "glyAE2": {"features": ["GlyRS-AE2"],  "dir": "../GlyRS-AE_IM2"},
         "gly3": {"features": ["GlyRS-E"],  "dir": "../GlyRS-E_IM"},
 
+
+         "urzyme_common": {"features": ["Protozyme", "S5", "SH1"]},
         "common": {"features": ["H1", "Motif 1", "Protozyme", "S2", "H3", "S3", "S4", "S5", "SH1"]}
 
 

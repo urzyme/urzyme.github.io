@@ -1,0 +1,144 @@
+﻿
+
+
+<html>
+<head>
+<title>Alignment</title>
+
+<link rel="icon" href="fig/icon_white.png">
+<meta name="viewport" content="width=device-width, initial-scale=0.41, maximum-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="/css/styles.css">
+<script language='JavaScript' type='text/JavaScript' src="/js/util.js"></script>
+<script language='JavaScript' type='text/JavaScript' src="testing.js"></script>
+<script type='text/javascript' src='/bower_components/bio-pv/bio-pv.min.js'></script>
+        
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+
+
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+
+
+
+<script language='JavaScript' type='text/JavaScript'>
+
+
+function init(){
+
+
+  // Colour brewer
+  let red = [228,26,28,256];
+  let blue = [55,126,184,256];
+  let green = [77,175,74,256];
+  let purple = [152,78,163,256];
+  let orange = [255,127,0,256];
+  let yellow = [255,255,51,256];
+  let brown = [166,86,40,256];
+  let pink = [247,129,191,256];
+  let grey = [153,153,153,140];
+
+
+
+  let di = 30;
+	renderTertiary("../../class1/leu1/data/domains/Catalytic_domain/dssp/LeuRS-B_PDB_Bact_T_therm_2V0C.pdb", "leuRS", "LeuRS-B (2V0C)",
+                colours = {default: grey, indices: [
+
+
+                     {name: "CP1",     lower: 80-di, upper: 145-di,   colour: orange }, 
+
+                     {name: "Z1",     lower: 146-di, upper: 156-di,   colour: red }, 
+                     {name: "Z2",     lower: 182-di, upper: 191-di,   colour: red },
+                     {name: "Z3",     lower: 417-di, upper: 421-di,   colour: red },
+
+                     {name: "Zinc",     lower: 157-di, upper: 181-di,   colour: purple }, 
+                     {name: "CP2",      lower: 192-di, upper: 221-di,   colour: green }, 
+                     {name: "Editing",  lower: 222-di, upper: 416-di,   colour: blue }, 
+                     {name: "CP3",      lower: 432-di, upper: 494-di,   colour: yellow }, 
+                     {name: "LeuRS-B",  lower: 573-di, upper: 634-di,   colour: pink } 
+
+                   ]});
+
+
+
+
+
+  di = 0;
+  renderTertiary("../../class2/gly3/data/domains/Catalytic_domain/dssp/GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb", "glyRS", "GlyRS-E",
+     colours = {default: grey, indices: [
+
+
+                     {name: "Gate 1",     lower: 37-di, upper: 49-di,   colour: blue },
+                     {name: "Gate 2",     lower: 350-di, upper: 359-di,   colour: blue }, 
+
+                     {name: "Dimer loop",     lower: 163-di, upper: 178-di,    colour: red }, 
+
+                     {name: "Hairpin 2a 1",     lower: 365-di, upper: 369-di,    colour: yellow }, 
+                     {name: "Hairpin 2a 2",     lower: 449-di, upper: 454-di,    colour: yellow }, 
+
+                     {name: "GlyRS 1",     lower: 50-di, upper: 161-di,   colour: orange }, 
+                     {name: "GlyRS 2",     lower: 243-di, upper: 282-di,  colour: purple }, 
+                     {name: "GlyRS-E",     lower: 370-di, upper: 448-di,  colour: green },
+
+                   ]});
+              
+	
+}
+
+
+
+</script>
+
+</head>
+<body onload="init()">
+
+
+
+	<div id="main">
+
+
+      <div >
+      
+      <table>
+        <tr>
+          <td>
+            <div class="PVbox" id='leuRS'></div>
+          </td>
+          
+          <td>
+            <div class="PVbox" id='glyRS'></div>
+          </td>
+        </tr>
+
+
+
+        <tr>
+          <td>
+            <div class="PVbox" id='leuRSA'></div>
+          </td>
+          
+          <td>
+          </td>
+        </tr>
+      
+      </table>
+
+
+		
+    
+
+
+
+
+</body>
+</html>
