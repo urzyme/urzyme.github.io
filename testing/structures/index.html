@@ -50,7 +50,7 @@ function init(){
 
 
 
-  let di = 30;
+  let di = 0;
 	renderTertiary("../../class1/leu1/data/domains/Catalytic_domain/dssp/LeuRS-B_PDB_Bact_T_therm_2V0C.pdb", "leuRS", "LeuRS-B (2V0C)",
                 colours = {default: grey, indices: [
 
@@ -72,6 +72,31 @@ function init(){
 
 
 
+  di = 0;
+  renderTertiary("1wz2.a.pdb", "leuRSA", "LeuRS-A (1WZ2)",
+                colours = {default: blue, indices: [
+
+                  
+                     {name: "Protozyme",     lower: 33-di, upper: 83-di,   colour: blue },
+                     {name: "CP1",     lower: 84-di, upper: 175-di,   colour: green },
+                     {name: "Zinc",     lower: 176-di, upper: 201-di,   colour: yellow },
+                     {name: "Editing",     lower: 202-di, upper: 422-di,   colour: red },
+                     {name: "Zinc",     lower: 423-di, upper: 440-di,   colour: yellow },
+                     {name: "CP1",     lower: 441-di, upper: 501-di,   colour: green },
+
+                     //{name: "SH",     lower: 527-di, upper: 539-di,   colour: yellow },
+
+                    {name: "IM",     lower: 502-di, upper: 567-di,   colour: pink },
+
+
+                   // {name: "CP1",     lower: 568-di, upper: 603-di,   colour: green },
+
+                     {name: "Protozyme",     lower: 568-di, upper: 662-di,   colour: blue },
+
+                      {name: "ABD",     lower: 663-di, upper: 810-di,   colour: brown },
+                       {name: "C-terminal domain",     lower: 810-di, upper: 2000-di,   colour: purple },
+
+                   ]});
 
   di = 0;
   renderTertiary("../../class2/gly3/data/domains/Catalytic_domain/dssp/GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb", "glyRS", "GlyRS-E",

@@ -105,8 +105,8 @@ function colourSelected(id, defaultFn, colours) {
   var colorFunc = function(atom, out, index) {
 
 
-  	//console.log(index);
-  	let pdbIndex = index/4;
+  	//console.log(index, atom.residue().index());
+  	let pdbIndex = atom.residue().index(); //index/4;
 
 
     // Which colour group?
