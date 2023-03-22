@@ -239,7 +239,7 @@ function drawTree(){
 	    	drawTip(svg, glnX, glnY, true, false);
 	    	drawTip(svg, glnX, glnY, false, false);
 	    	drawClass1Domain(glnX-LEAF_LENGTH, glnY-LEAF_DY, svg, motifColBase, highlightColBase, "", {align: "right", box: false, Z: true, sc1b: true, small: true, insertName: "3", name: "GluRS"});
-	    	drawClass1Domain(glnX-LEAF_LENGTH, glnY+LEAF_DY, svg, motifColBase, highlightColBase, "", {align: "right", box: false, Z: true, sc1b: true, small: true, insertName: "3", phase: 2, name: "GlnRS and GlxRS"});
+	    	drawClass1Domain(glnX-LEAF_LENGTH, glnY+LEAF_DY, svg, motifColBase, highlightColBase, "", {align: "right", box: false, Z: true, sc1b: true, small: true, insertName: "3", phase: 1, name: "GlxRS and GlnRS"});
 
 
 	    	// ArgRS
@@ -458,7 +458,7 @@ function drawTree(){
 	    	drawTip(svg, acidX, acidY, false, true, false, false);
 	    	drawTip(svg, acidX, acidY, true, true, false, true);
 	    	drawSVGobj(svg, "line", {x1: acidX + LEAF_LENGTH, x2: aspX, y1: acidY+LEAF_DY, y2: acidY+LEAF_DY, style: "stroke-width:" + MAIN_ARROW_LWD + "px; stroke-linecap: round; stroke:black"} );
-	    	drawClass2Domain(acidX + LEAF_LENGTH, acidY-LEAF_DY, svg, motifColBase,  highlightColBase, "", {phase: 2, name: "AsnRS and AsxRS", small: true, box: false, hairpin: true, s2b: true});
+	    	drawClass2Domain(acidX + LEAF_LENGTH, acidY-LEAF_DY, svg, motifColBase,  highlightColBase, "", {phase: 1, name: "AsxRS and AsnRS", small: true, box: false, hairpin: true, s2b: true});
 			
 			
 			
@@ -803,8 +803,8 @@ function drawClass1Domain(startX, startY, svg, motifColBase, highlightColBase, t
 			let tw = textObj.getBBox().width; //CATALYTIC_DOMAIN_FONT_SIZE*5;
 			let th = CATALYTIC_DOMAIN_FONT_SIZE*1.2;
 
-			// Hardcode: ensure that only the GlnRS of the 'GlnRS and GlxRS' is highlighted
-			if (features.name.substring(0, 5) == "GlnRS"){
+			// Hardcode: ensure that only the GlxRS of the 'GlxRS and GlnRS' is highlighted
+			if (features.name.substring(0, 5) == "GlxRS"){
 				xlab = xlab - tw;
 				tw = 5 * tw / 14; 
 				xlab += tw;
@@ -1631,6 +1631,8 @@ function drawClass2Domain(startX, startY, svg, motifColBase, highlightColBase, t
 			ylab += 1*ypadding;
 		}
 
+
+
 		if (s2bInsert){
 			ylab += 1.5*ypadding;
 		}
@@ -1645,9 +1647,15 @@ function drawClass2Domain(startX, startY, svg, motifColBase, highlightColBase, t
 		let textObj = null;
 		if (isRightAligned){
 			xlab = startXOrig;
+			if (hasHairpin2){
+				xlab -= xpadding;
+			}
 			textObj = drawSVGobj(svg, "text", {x: xlab, y: ylab, style: "font-size:" + fontSize + "px; text-anchor:end; dominant-baseline:central; " + boldness}, features.name);
 		}else{
 			xlab = startXOrig + xpadding*6;
+			if (hasHairpin2){
+				xlab -= 2*xpadding;
+			}
 			textObj = drawSVGobj(svg, "text", {x: xlab, y: ylab, style: "font-size:" + fontSize + "px; text-anchor:start; dominant-baseline:central; " + boldness}, features.name);
 		}
 
@@ -1655,8 +1663,8 @@ function drawClass2Domain(startX, startY, svg, motifColBase, highlightColBase, t
 			let tw = textObj.getBBox().width; 
 			let th = CATALYTIC_DOMAIN_FONT_SIZE*1.2;
 
-			// Hardcode: ensure that only the AsnRS of the 'AsnRS and AsxRS' is highlighted
-			if (features.name.substring(0, 5) == "AsnRS"){
+			// Hardcode: ensure that only the AsxRS of the 'AsxRS and AsnRS' is highlighted
+			if (features.name.substring(0, 5) == "AsxRS"){
 				tw = 5 * tw / 14; 
 			}
 
