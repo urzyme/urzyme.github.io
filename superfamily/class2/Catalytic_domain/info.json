@@ -9,7 +9,8 @@
     "features": {   
 
 
-                "ProRS-B": {"acc": "ProRS-B_AF_Bact_Acinetobacter_baylyi_ADP1_gene45233245.pdb", "range": "206-363", "level": 3, "count": 1,  "href": "../ProRS-B_IM"},
+                "ProRS": {"acc": "ProRS-B_AF_Bact_Acinetobacter_baylyi_ADP1_gene45233245.pdb", "range": "175-207", "level": 3, "count": 2},
+                "Editing": {"acc": "ProRS-B_AF_Bact_Acinetobacter_baylyi_ADP1_gene45233245.pdb", "range": "208-363", "level": 3, "count": 1,  "href": "../ProRS-B_IM"},
                 "GlyRS-AE1": {"acc": "GlyRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697160.pdb", "range": "49-110", "level": 3, "count": 2, "href": "../GlyRS-AE_IM1"},
                 "GlyRS-AE2": {"acc": "GlyRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697160.pdb", "range": "192-226", "level": 3, "count": 2, "href": "../GlyRS-AE_IM2"},
                 "GlyRS-E": {"acc": "GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb", "range": "373-448", "level": 3, "count": 1, "href": "../GlyRS-E_IM"}, 
@@ -31,7 +32,6 @@
                 "SI b": {"acc": "AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb", "range": "60-67", "level": 3, "count": 20, "dy": -2},
 
 
-				"H4": {"acc": "PheRS-Aα_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724458.pdb", "range": "206-214", "level": 3, "count": 16, "dy": -12},
                 "Hairpin 2a": {"acc": "GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb", "range": "365-372", "level": 3, "count": 7, "dy": -5},
                 "Hairpin 2b": {"acc": "ProRS-B_AF_Bact_Acinetobacter_baylyi_ADP1_gene45233245.pdb", "range": "395-399", "level": 3, "count": 7, "dy": -1},
 
@@ -65,10 +65,9 @@
 
 
         "protozyme": {"features": ["Protozyme"]},
-        "urzyme": {"features": ["S5", "SH1"]},
-        "6fold": {"features": ["H1", "Motif 1", "H3", "S2", "S3", "S4"]},
+        "urzyme": {"features": ["H1", "Motif 1", "S2"]},
+        "6fold": {"features": ["H3", "S3", "S4"]},
         
-        "H4": {"features": ["H4"]},
         "si": {"features": ["SI a", "SI b"]},
         "hairpin2": {"features": ["Hairpin 2a", "Hairpin 2b"]},
 
@@ -86,14 +85,15 @@
         "his": {"features": ["HisRS"]},
         "ala": {"features": ["AlaRS"],  "dir": "../AlaRS_IM"},
 
-        "pro": {"features": ["ProRS-B"],  "dir": "../ProRS-B_IM"},
+        "pro": {"features": ["ProRS"]},
+        "prob": {"features": ["Editing"], "dir": "../ProRS-B_IM"},
 
         "glyAE1": {"features": ["GlyRS-AE1"],  "dir": "../GlyRS-AE_IM1"},
         "glyAE2": {"features": ["GlyRS-AE2"],  "dir": "../GlyRS-AE_IM2"},
         "gly3": {"features": ["GlyRS-E"],  "dir": "../GlyRS-E_IM"},
 
 
-         "urzyme_common": {"features": ["Protozyme", "S5", "SH1"]},
+        "urzyme_common": {"features": ["Protozyme", "H1", "Motif 1", "S2"]},
         "common": {"features": ["H1", "Motif 1", "Protozyme", "S2", "H3", "S3", "S4", "S5", "SH1"]}
 
 
