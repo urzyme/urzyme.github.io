@@ -22,6 +22,12 @@ LEGEND_FONT_SIZE = 21;
 ELEMENT_DOMAIN_FONT_SIZE = 18;
 CATALYTIC_DOMAIN_ARROW_BG_WIDTH = 0.5;
 
+
+DELETION_CROSS_RADIUS = 6.5;
+DELETION_CROSS_COL = "#EE4B2B";
+DELETION_CROSS_LWD = 2.5;
+
+
 RO_PADDING = 220;
 
 CLASS1_PADDING = 400;
@@ -272,8 +278,8 @@ function drawTree(){
 
 	// Disclaimer
 	let disclaimerY = legendY + legendH - 1.8*LEGEND_FONT_SIZE;
-	drawSVGobj(svg, "text", {x:legendX + legendW/2, y: disclaimerY, style: "font-size:" + (LEGEND_FONT_SIZE*0.8) + "px; text-anchor:middle; dominant-baseline:central;"}, "Branch length and");
-	drawSVGobj(svg, "text", {x:legendX + legendW/2, y: disclaimerY+LEGEND_FONT_SIZE, style: "font-size:" + (LEGEND_FONT_SIZE*0.8) + "px; text-anchor:middle; dominant-baseline:central;"}, "protein size not to scale");
+	drawSVGobj(svg, "text", {x:legendX + legendW/2, y: disclaimerY, style: "font-size:" + (LEGEND_FONT_SIZE*0.8) + "px; text-anchor:middle; dominant-baseline:central;"}, "Branch lengths and");
+	drawSVGobj(svg, "text", {x:legendX + legendW/2, y: disclaimerY+LEGEND_FONT_SIZE, style: "font-size:" + (LEGEND_FONT_SIZE*0.8) + "px; text-anchor:middle; dominant-baseline:central;"}, "protein sizes not to scale");
 	
 
 
@@ -310,10 +316,19 @@ function drawTree(){
 	
 
 	// IM legend
-	let imY = 3.4*legendH/nLegend +legendY;
+	let imY = 3.2*legendH/nLegend +legendY;
 	drawSVGobj(svg, "circle", {cx: eleX, cy: imY+eleHeight/2, r: eleHeight/4, style: "stroke-width:1px; stroke:black; fill:black;"} );
 	drawSVGobj(svg, "text", {x:textPad + eleX + eleWidth/2, y: imY + eleHeight/2, style: "font-size:" + LEGEND_FONT_SIZE + "px; text-anchor:start; dominant-baseline:central;"}, "Insertion");
 	
+
+	// Deletion with red cross
+	imY = 3.6*legendH/nLegend +legendY;
+	let crossRadius = eleHeight/4;
+	drawSVGobj(svg, "circle", {cx: eleX, cy: imY+eleHeight/2, r: eleHeight/4, style: "stroke-width:1px; stroke:black; fill:black;"} );
+	drawSVGobj(svg, "text", {x:textPad + eleX + eleWidth/2, y: imY + eleHeight/2, style: "font-size:" + LEGEND_FONT_SIZE + "px; text-anchor:start; dominant-baseline:central;"}, "Deletion");
+	drawSVGobj(svg, "line", {x1: eleX+crossRadius, x2: eleX-crossRadius, y1: imY+eleHeight/2+crossRadius, y2: imY+eleHeight/2-crossRadius, style: "stroke-linecap:round; stroke-width:" + DELETION_CROSS_LWD + "px; stroke:" + DELETION_CROSS_COL + "; fill:black;"} );
+	drawSVGobj(svg, "line", {x1: eleX+crossRadius, x2: eleX-crossRadius, y1: imY+eleHeight/2-crossRadius, y2: imY+eleHeight/2+crossRadius, style: "stroke-linecap:round; stroke-width:" + DELETION_CROSS_LWD + "px; stroke:" + DELETION_CROSS_COL + "; fill:black;"} );
+
 
 
 	// Motif legend
@@ -416,7 +431,7 @@ function drawTree(){
 	    	let lysX = paddingLeft-0.25*dx;
 	    	drawSVGobj(svg, "text", {x:lysX+CATALYTIC_DOMAIN_FONT_SIZE/2, y: lysY - 4*CATALYTIC_DOMAIN_FONT_SIZE/4, style: "font-size:" + titleFontSize + "px; text-anchor:start; font-style:italic; dominant-baseline:central;"}, "1d");
 	    	drawSVGobj(svg, "line", {x1: paddingLeft + CATALYTIC_DOMAIN_FONT_SIZE/2, x2: lysX, y1: lysY, y2: lysY, marker_end:"url(#arrowheadLeft)", style: "stroke-width:" + MAIN_ARROW_LWD + "px; stroke-linecap: round; stroke:black"} );
-			drawClass1Domain(lysX, lysY, svg, motifColBase, highlightColBase, "", {align: "right", box: false, small: true,  lysRS: true, insertName: "6", phase: 2, name: "LysRS-I"});
+			drawClass1Domain(lysX, lysY, svg, motifColBase, highlightColBase, "", {align: "right", box: false, small: true,  lysRS: true, insertName: "4", phase: 2, name: "LysRS-I"});
 
 
 
@@ -445,7 +460,7 @@ function drawTree(){
 	    	drawSVGobj(svg, "text", {x:argX-LEAF_LENGTH, y: glnY-LEAF_DY-CATALYTIC_DOMAIN_FONT_SIZE, style: "font-size:" + titleFontSize + "px; text-anchor:start; font-style:italic; dominant-baseline:central;"}, "1e");
 	    	//drawSVGobj(svg, "line", {x1: paddingLeft + CATALYTIC_DOMAIN_FONT_SIZE/2, x2: argX, y1: glnY, y2: argY, marker_end:"url(#arrowheadLeft)", style: "stroke-width:" + MAIN_ARROW_LWD + "px; stroke-linecap: round; stroke:black"} );
 			drawTip(svg, argX, glnY, true, false, true);
-			drawClass1Domain(argX-LEAF_LENGTH-CATALYTIC_DOMAIN_FONT_SIZE/2, glnY - LEAF_LENGTH*TALL_LEAF_MODIFIER*1.75, svg, motifColBase, highlightColBase, "", {align: "right", box: false, small: true, Z: true, phase: 2, name: "ArgRS"});
+			drawClass1Domain(argX-LEAF_LENGTH-CATALYTIC_DOMAIN_FONT_SIZE/2, glnY - LEAF_LENGTH*TALL_LEAF_MODIFIER*1.75, svg, motifColBase, highlightColBase, "", {preCP1insert: true, insertName: "6",  align: "right", box: false, small: true, Z: true, phase: 2, name: "ArgRS"});
 
 
 
@@ -462,7 +477,7 @@ function drawTree(){
 	    	let cysX = paddingLeft-0.25*dx;
 	    	drawSVGobj(svg, "text", {x:cysX+CATALYTIC_DOMAIN_FONT_SIZE/2, y: cysY-CATALYTIC_DOMAIN_FONT_SIZE, style: "font-size:" + titleFontSize + "px; text-anchor:start; font-style:italic; dominant-baseline:central;"}, "1f");
 	    	drawSVGobj(svg, "line", {x1: paddingLeft + CATALYTIC_DOMAIN_FONT_SIZE/2, x2: cysX, y1: cysY, y2: cysY, marker_end:"url(#arrowheadLeft)", style: "stroke-width:" + MAIN_ARROW_LWD + "px; stroke-linecap: round; stroke:black"} );
-			drawClass1Domain(cysX, cysY- CATALYTIC_DOMAIN_HEIGHT*0.3, svg, motifColBase, highlightColBase, "", {phase: 2, align: "right", box: false, small: true, Z: true, Z2insert: true, insertName: "9", name: "CysRS"});
+			drawClass1Domain(cysX, cysY- CATALYTIC_DOMAIN_HEIGHT*0.3, svg, motifColBase, highlightColBase, "", {phase: 2, align: "right", box: false, small: true, Z: true, Z2insert: true, insertName: "8", name: "CysRS"});
 
 
 
@@ -495,7 +510,7 @@ function drawTree(){
 	    	let leuAY = (ym+0.2)*dy;
 	    	let leuAX = paddingLeft-0.2*dx;
 	    	drawSVGobj(svg, "line", {x1: paddingLeft + CATALYTIC_DOMAIN_FONT_SIZE/2, x2: leuAX, y1: leuAY, y2: leuAY, marker_end:"url(#arrowheadLeft)", style: "stroke-width:" + MAIN_ARROW_LWD + "px; stroke-linecap: round; stroke:black"} );
-			drawClass1Domain(leuAX, leuAY, svg, motifColBase, highlightColBase, "", {align: "right", box: false, small: true, Z: true, sc1a: true, editing: true, Z3insert: true, insertName: "L", name: "LeuRS-A"});
+			drawClass1Domain(leuAX, leuAY, svg, motifColBase, highlightColBase, "", {preCP1insert: true, align: "right", box: false, small: true, Z: true, sc1a: true, editing: true, Z3insert: true, insertName: "L", name: "LeuRS-A"});
 
 
 			drawSVGobj(svg, "line", {x1: paddingLeft + CATALYTIC_DOMAIN_FONT_SIZE/2, x2: paddingLeft + CATALYTIC_DOMAIN_FONT_SIZE/2, y1: ym*dy, y2: 7.6*dy - 18, marker_end:"url(#arrowheadVert)", style: "stroke-width:" + MAIN_ARROW_LWD + "px; stroke-linecap: round; stroke:black"} );
@@ -514,7 +529,7 @@ function drawTree(){
 			drawTip(svg, valX, valY, false, false);
 			drawTip(svg, valX, valY, true, false);
 
-			drawClass1Domain(valX-LEAF_LENGTH - 3*CATALYTIC_DOMAIN_XPAD, valY - LEAF_DY - CATALYTIC_DOMAIN_YPAD, svg, motifColBase, highlightColBase, "", {align: "right", box: false, small: true, Z: true, sc1a: true, editing: false, Z3insert: true, Z2insert: true, kmsksInsert: true, insertName: "12", name: "LeuRS-B"});
+			drawClass1Domain(valX-LEAF_LENGTH - 3*CATALYTIC_DOMAIN_XPAD, valY - LEAF_DY - CATALYTIC_DOMAIN_YPAD, svg, motifColBase, highlightColBase, "", {align: "right", box: false, small: true, Z: true, sc1a: true, editing: false, Z3insert: true, Z2insert: true, kmsksInsert: true, insertName: "11", name: "LeuRS-B"});
 			drawClass1Domain(valX-LEAF_LENGTH + 1*CATALYTIC_DOMAIN_XPAD, valY + LEAF_DY + CATALYTIC_DOMAIN_YPAD, svg, motifColBase, highlightColBase, "", {align: "right", box: false, small: true, Z: true, sc1a: true, editing: true, Z3insert: true, Z2insert: false, name: "IleRS and ValRS"});
 
 
@@ -575,7 +590,7 @@ function drawTree(){
 			drawSVGobj(svg, "text", {x:alaX+CATALYTIC_DOMAIN_FONT_SIZE*1.5, y: alaY, style: "font-size:" + titleFontSize + "px; text-anchor:end; font-style:italic; dominant-baseline:central;"}, "2d");
 	    	drawTip(svg, alaX, alaY, true, true);
 	    	drawTip(svg, alaX, alaY, false, true);
-	    	drawClass2Domain(alaX+LEAF_LENGTH, alaY+LEAF_DY, svg, motifColBase, highlightColBase, "", {align: "left", box: false, small: true, L6: true, insertName: "9", name: "AlaRS"});
+	    	drawClass2Domain(alaX+LEAF_LENGTH, alaY+LEAF_DY, svg, motifColBase, highlightColBase, "", {align: "left", box: false, small: true, L6: true, insertName: "4", name: "AlaRS"});
 	    	drawClass2Domain(alaX+LEAF_LENGTH, alaY-LEAF_DY- CATALYTIC_DOMAIN_HEIGHT*1.6, svg, motifColBase, highlightColBase, "", {align: "left", box: false, large: true, bold: true, name: "GlyRS-B"});
 
 
@@ -616,21 +631,21 @@ function drawTree(){
 	    	// Second branching: His/Sep
 	    	drawTip(svg, hisX, pheY-LEAF_DY, false, true);
 	    	drawTip(svg, hisX, pheY-LEAF_DY, true, true);
-	    	drawClass2Domain(hisX+LEAF_LENGTH, pheY-LEAF_DY*2, svg, motifColBase, highlightColBase, "", {align: "left", box: false, hairpin: true, HP: true, insertName: "14", gates: true, small: true, phase: 2, name: "SepRS"});
-	    	drawClass2Domain(hisX+LEAF_LENGTH, pheY, svg, motifColBase, highlightColBase, "", {thrIM: true, insertName: "12", align: "left", box: false, small: true, hairpin: true, gates: true, phase: 2, name: "HisRS"});
+	    	drawClass2Domain(hisX+LEAF_LENGTH, pheY-LEAF_DY*2, svg, motifColBase, highlightColBase, "", {align: "left", box: false, hairpin: true, HP: true, insertName: "6", gates: true, small: true, phase: 2, name: "SepRS"});
+	    	drawClass2Domain(hisX+LEAF_LENGTH, pheY, svg, motifColBase, highlightColBase, "", {thrIM: true, insertName: "7", align: "left", box: false, small: true, hairpin: true, gates: true, phase: 2, name: "HisRS"});
 
 
 			// Second branching: Phe
 			drawTip(svg, pheArchX, pheY+LEAF_DY, false, true);
 			drawTip(svg, pheArchX, pheY+LEAF_DY, true, true);
-	    	drawClass2Domain(pheArchX+LEAF_LENGTH, pheY, svg, motifColBase, highlightColBase, "", {phase: 2, align: "left", box: false, hairpin: true, HP: true, insertName: "13", gates: true, small: true, name: "PheRS-A"});
+	    	drawClass2Domain(pheArchX+LEAF_LENGTH, pheY, svg, motifColBase, highlightColBase, "", {phase: 2, align: "left", box: false, hairpin: true, HP: true, insertName: "8", gates: true, small: true, name: "PheRS-A"});
 	    	drawClass2Domain(pheArchX+LEAF_LENGTH, pheY+2*LEAF_DY, svg, motifColBase, highlightColBase, "", {phase: 2, align: "left", box: false, hairpin: true, gates: true, small: true, name: "PheRS-B and -M"});
 
 
 
 			 // + Small interface SI
 			 drawSVGobj(svg, "line", {x1: paddingLeft + CATALYTIC_DOMAIN_FONT_SIZE/2, x2: paddingLeft + CATALYTIC_DOMAIN_FONT_SIZE/2, y1: ym*dy, y2: 4.5*dy - 18, marker_end:"url(#arrowheadVert)", style: "stroke-width:" + MAIN_ARROW_LWD + "px; stroke-linecap: round; stroke:black"} );
-			 drawClass2Domain(paddingLeft, ym*dy, svg, motifColBase, highlightColBase, "+SI +H4", {box: true, hairpin: true, gates: true, highlight: "hairpin1", align: "right"});
+			 drawClass2Domain(paddingLeft, ym*dy, svg, motifColBase, highlightColBase, "+SI", {box: true, hairpin: true, gates: true, highlight: "hairpin1", align: "right"});
 	    	
 
 
@@ -662,7 +677,7 @@ function drawTree(){
 			// Second branching: Lys/Asp
 			drawTip(svg, aspX, acidY+LEAF_DY, false, true);
 			drawTip(svg, aspX, acidY+LEAF_DY, true, true);
-	    	drawClass2Domain(aspX+LEAF_LENGTH, acidY+LEAF_DY*2.1, svg, motifColBase,  highlightColBase, "", {name: "AspRS", small: true, box: false, hairpin: true, s2b: true, s2bInsertInsert: true, s2bInsertInsert2: true, insertName: "10"});
+	    	drawClass2Domain(aspX+LEAF_LENGTH, acidY+LEAF_DY*2.1, svg, motifColBase,  highlightColBase, "", {name: "AspRS", small: true, box: false, hairpin: true, s2b: true, s2bInsertInsert: true, s2bInsertInsert2: true, insertName: "12"});
 			drawClass2Domain(aspX+LEAF_LENGTH, acidY, svg, motifColBase,  highlightColBase, "", {phase: 2, name: "LysRS-II", small: true, box: false, hairpin: true, s2b: true});
 			
 		
@@ -711,7 +726,7 @@ function drawTree(){
 	    	let serAY = (ym-0.2)*dy;
 	    	let serAX = paddingLeft+0.2*dx;
 			drawSVGobj(svg, "line", {x1: paddingLeft + CATALYTIC_DOMAIN_FONT_SIZE/2, x2: serAX, y1: serAY, y2: serAY, marker_end:"url(#arrowheadRight)", style: "stroke-width:" + MAIN_ARROW_LWD + "px; stroke-linecap: round; stroke:black"} );
-			drawClass2Domain(serAX, serAY - CATALYTIC_DOMAIN_HEIGHT*0.4, svg, motifColBase, highlightColBase, "", {align: "left", box: false, small: true, hairpin: true, gates: true,  HP: true, insertName: "17", name: "SerRS-A"});
+			drawClass2Domain(serAX, serAY - CATALYTIC_DOMAIN_HEIGHT*0.4, svg, motifColBase, highlightColBase, "", {align: "left", box: false, small: true, hairpin: true, gates: true,  HP: true, insertName: "13", name: "SerRS-A"});
 
 
 
@@ -730,8 +745,8 @@ function drawTree(){
 	    	// ProRS-B and -M
 	    	drawTip(svg, proMX, thrY, false, true);
 	    	drawTip(svg, proMX, thrY, true, true);
-			drawClass2Domain(proMX+LEAF_LENGTH, thrY+LEAF_DY, svg, motifColBase, highlightColBase, "", {phase: 1, align: "left",hairpin2: true, box: false, hairpin: true, gates: true, small: true, name: "ProRS-M"});
-			drawClass2Domain(proMX+LEAF_LENGTH, thrY-LEAF_DY, svg, motifColBase, highlightColBase, "", {phase: 1, L7: true, insertName: "16", align: "left", hairpin2: true, box: false, hairpin: true, gates: true, small: true, name: "ProRS-B"});
+			drawClass2Domain(proMX+LEAF_LENGTH, thrY+LEAF_DY, svg, motifColBase, highlightColBase, "", {phase: 1, L7: true, insertName: "16", editing: "deletion", align: "left",hairpin2: true, box: false, hairpin: true, gates: true, small: true, name: "ProRS-M"});
+			drawClass2Domain(proMX+LEAF_LENGTH, thrY-LEAF_DY, svg, motifColBase, highlightColBase, "", {phase: 1, L7: true, insertName: "16", editing: "insertion", align: "left", hairpin2: true, box: false, hairpin: true, gates: true, small: true, name: "ProRS-B"});
 	    	
 
 
@@ -815,6 +830,7 @@ function drawClass1Domain(startX, startY, svg, motifColBase, highlightColBase, t
     let hasZ3insert = features.Z3insert != null && features.Z3insert == true;
     let hasEditing = features.editing != null && features.editing == true;
     let kmsksInsert = features.kmsksInsert != null && features.kmsksInsert == true;
+    let preCP1insert = features.preCP1insert != null && features.preCP1insert == true;
 
     let startXOrig = startX;
 
@@ -1271,8 +1287,6 @@ function drawClass1Domain(startX, startY, svg, motifColBase, highlightColBase, t
 
 
 
-		
-
 		// L9 C-terminal: KMSKS
 		if (i == 7){
 			if (includeText) {
@@ -1281,9 +1295,18 @@ function drawClass1Domain(startX, startY, svg, motifColBase, highlightColBase, t
 		}
 
 
+		// Pre CP1 insertion
+		if (eleName == "L5" && preCP1insert){
+			let r = INSERTION_MODULE_RADIUS* (isSmall ? 1 : 2);
+			let featureName = features.insertName == "L" ? "12" : features.insertName;
+			drawInsertion(featureName, topLayer, xMid, (yStraight1+yStraight2)/2, INSERTION_MODULE_RADIUS, INSERTION_MODULE_FONT_SIZE, IMcol, -r*3);
+			preCP1insert=false;
+		}
+		
+
 
 		// LysRS insert
-		if (i == 10 && islysRS){
+		else if (i == 10 && islysRS){
 
 
 			let xCircle = xpadding + (xpadding+eleWidth)*(4) + startXEff;
@@ -1300,7 +1323,7 @@ function drawClass1Domain(startX, startY, svg, motifColBase, highlightColBase, t
 			let r = INSERTION_MODULE_RADIUS* (isSmall ? 1 : 2);
 			let xCircle = xMid;
 
-			drawInsertion("12", svg, xCircle, yLoop-eleHeight/4, INSERTION_MODULE_RADIUS, INSERTION_MODULE_FONT_SIZE, thisCol, r*3);
+			drawInsertion("15", svg, xCircle, yLoop-eleHeight/4, INSERTION_MODULE_RADIUS, INSERTION_MODULE_FONT_SIZE, thisCol, r*3);
 
 
 		}
@@ -1318,8 +1341,8 @@ function drawClass1Domain(startX, startY, svg, motifColBase, highlightColBase, t
 			let r = INSERTION_MODULE_RADIUS* (isSmall ? 1 : 2);
 			let xCircle = xpadding + (xpadding+eleWidth)*(6) + startXEff;
 
-			let insertNamez3 = features.insertName == "L" ? "11" : "5";
-			drawInsertion(insertNamez3, svg, xCircle, yLoop+eleHeight*1.7, r, INSERTION_MODULE_FONT_SIZE, thisCol, null, insertNamez3 == "11" ? (-r*8) : (-r*2));
+			let insertNamez3 = features.insertName == "L" ? "13" : "14";
+			drawInsertion(insertNamez3, svg, xCircle, yLoop+eleHeight*1.7, r, INSERTION_MODULE_FONT_SIZE, thisCol, null, insertNamez3 == "13" ? (-r*8) : (-r*2));
 
 		}
 
@@ -1340,7 +1363,7 @@ function drawClass1Domain(startX, startY, svg, motifColBase, highlightColBase, t
 			let r = INSERTION_MODULE_RADIUS* (isSmall ? 1 : 2);
 
 			let xCircle = xpadding + (xpadding+eleWidth)*(4.5) + startXEff;
-			drawInsertion("13", svg, xCircle, cy, r, INSERTION_MODULE_FONT_SIZE, thisCol, 0, r*3);
+			drawInsertion("11", svg, xCircle, cy, r, INSERTION_MODULE_FONT_SIZE, thisCol, 0, r*3);
 
 
 		}
@@ -1762,6 +1785,8 @@ function drawClass2Domain(startX, startY, svg, motifColBase, highlightColBase, t
     let hasgates = features.gates != null && features.gates == true;
     let L6insert = features.L6 != null && features.L6 == true;
 	let L7insert = features.L7 != null && features.L7 == true;
+	let editingInsertion = features.editing != null && features.editing == "insertion";
+	let editingDeletion = features.editing != null && features.editing == "deletion";
 	let HPinsert = hasHairpin && features.HP != null && features.HP == true;
 	let HP2insert = hasHairpin2 && features.HP2 != null && features.HP2 == true;
 	let G1insert = features.G1 != null && features.G1 == true;
@@ -1783,7 +1808,6 @@ function drawClass2Domain(startX, startY, svg, motifColBase, highlightColBase, t
     }
 
     if (hasHairpin) startYEff += 2*ypadding;
-    if (hasgates) startYEff += 2*ypadding;
 	if (G1insert && isSmall)  startYEff += 2.0*ypadding;
 	if (HPinsert) startYEff += 1*ypadding;
 
@@ -1800,9 +1824,6 @@ function drawClass2Domain(startX, startY, svg, motifColBase, highlightColBase, t
     	startYEff = startYEff - 2*ypadding;
     }
 
-    if (hasgates){
-    	startYEff = startYEff - 1.8*ypadding;
-    }
 
     if (hasHairpin2 && isSmall){
     	startXEff = startXEff + 2*xpadding;
@@ -2011,11 +2032,11 @@ function drawClass2Domain(startX, startY, svg, motifColBase, highlightColBase, t
 			else if (i == 4 && !isUrzyme){
 				yLoop = y+eleHeight;
 				endPoint = [xpadding + (xpadding+eleWidth)*9  + startXEff, yLoop];
-				if (hasgates || L6insert) bigLoopHeightRel = 4;
+				if (L6insert) bigLoopHeightRel = 4;
 				if (s2bInsert) bigLoopHeightRel = 5;
 				if (!hasHairpin2 && thrIM) bigLoopHeightRel = 5;
-				else if (hasHairpin2 || thrIM) bigLoopHeightRel = 7;
-				if (HP2insert) bigLoopHeightRel = 9;
+				else if (hasHairpin2 || thrIM) bigLoopHeightRel = 5;
+				if (HP2insert) bigLoopHeightRel = 7;
 				control1 = [xMid-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX, yLoop+bigLoopHeightRel*ypadding];
 				control2 = [endPoint[0]-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX, yLoop+bigLoopHeightRel*ypadding];	
 				ylab = yLoop+2*ypadding-20;
@@ -2023,6 +2044,20 @@ function drawClass2Domain(startX, startY, svg, motifColBase, highlightColBase, t
 				oddLoop = !oddLoop;
 
 				
+			}
+
+
+			else if (eleName == "L7" && L7insert){
+
+				yLoop = yLoop - eleHeight/2;
+				endPoint = [xMid + xpadding+eleWidth, yLoop];
+				control1 = [xMid-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX, yLoop-ypadding];
+				control2 = [endPoint[0]-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX, yLoop-ypadding];
+				xlab = (xMid+endPoint[0])/2-CATALYTIC_DOMAIN_CUBIC_RIGHT_DX;
+				ylab = yLoop-ypadding-3;
+				onTop = true;
+
+
 			}
 			
 			
@@ -2180,11 +2215,11 @@ function drawClass2Domain(startX, startY, svg, motifColBase, highlightColBase, t
 			else if (eleName == "L8" && hasgates){
 
 				let gate2x = xpadding + (xpadding+eleWidth)*(i+1) + startXEff;
-				let gateHeight = eleHeight / 2;
+				let gateHeight = 0; //eleHeight / 2;
 				
 				
 				// Draw gate 2
-				drawHelix(gate2x, y+eleHeight, gateHeight, eleWidth, (features.highlight == "hairpin1" ? highlightCol : helixCol), helixBgCol, bottomLayer, "Gate2", includeText);
+				//drawHelix(gate2x, y+eleHeight, gateHeight, eleWidth, (features.highlight == "hairpin1" ? highlightCol : helixCol), helixBgCol, bottomLayer, "Gate2", includeText);
 
 				let loopHeight = 0;
 				let strandHeight = 0;
@@ -2390,9 +2425,22 @@ function drawClass2Domain(startX, startY, svg, motifColBase, highlightColBase, t
 			
 			
 			}else if (eleName == "L7" && L7insert) {
-				let xCircle = xpadding + (xpadding+eleWidth)*(i+0.5) + startXEff;
+
+
+
+				// Draw 2 straight loops
+				let xStraight1 = xpadding + (xpadding+eleWidth)*(i) + startXEff;
+				let xStraight2 = xpadding + (xpadding+eleWidth)*(i+1) + startXEff;
+				drawSVGobj(topLayer, "line", {x1: xStraight1, x2: xStraight1, y1: yLoop+eleHeight/2, y2: yLoop, style: "stroke-width:" + CATALYTIC_DOMAIN_LOOP_WIDTH + "px; stroke: black;"} );
+				drawSVGobj(topLayer, "line", {x1: xStraight2, x2: xStraight2, y1: yLoop+eleHeight/2, y2: yLoop, style: "stroke-width:" + CATALYTIC_DOMAIN_LOOP_WIDTH + "px; stroke: black;"} );
+
+
 				let r = INSERTION_MODULE_RADIUS* (isSmall ? 1 : 2);
-				drawInsertion(features.insertName, topLayer, xCircle, yLoop-ypadding*1, r, INSERTION_MODULE_FONT_SIZE, IMcol, r*5, -r*3);
+				drawInsertion(features.insertName, topLayer, xStraight2, yLoop+eleHeight/6, r, INSERTION_MODULE_FONT_SIZE, IMcol, r*5, -r*3);
+
+				// ProRS editing domain
+				drawInsertion("17", topLayer, xStraight1, yLoop+eleHeight/6, r, INSERTION_MODULE_FONT_SIZE, IMcol, r*5, -r*5, editingDeletion);
+
 			}
 
 
@@ -2911,7 +2959,7 @@ function drawTip(svg, x, y, up=true, right=true, tall=false, drawArrow=true){
 
 
 
-function drawInsertion(name, svg, xCircle, yCircle, radius, fontSize, col, dx = null, dy = 0){
+function drawInsertion(name, svg, xCircle, yCircle, radius, fontSize, col, dx = null, dy = 0, deletion=false){
 
 
 	if (dx == null){
@@ -2954,6 +3002,17 @@ function drawInsertion(name, svg, xCircle, yCircle, radius, fontSize, col, dx = 
 	}
 
 	drawSVGobj(svg, "text", {x: xCircle+dx+textDX, y: yCircle+dy+textDY, style: "font-size:" + fontSize + "px; fill:black;" + align},name);
+
+	if (deletion){
+
+
+		// Draw red cross
+		drawSVGobj(svg, "line", {x1: xCircle+DELETION_CROSS_RADIUS, x2: xCircle-DELETION_CROSS_RADIUS, y1: yCircle+DELETION_CROSS_RADIUS, y2: yCircle-DELETION_CROSS_RADIUS, style: "stroke-linecap:round; stroke-width:" + DELETION_CROSS_LWD + "px; stroke:" + DELETION_CROSS_COL + "; fill:black;"} );
+		drawSVGobj(svg, "line", {x1: xCircle+DELETION_CROSS_RADIUS, x2: xCircle-DELETION_CROSS_RADIUS, y1: yCircle-DELETION_CROSS_RADIUS, y2: yCircle+DELETION_CROSS_RADIUS, style: "stroke-linecap:round; stroke-width:" + DELETION_CROSS_LWD + "px; stroke:" + DELETION_CROSS_COL + "; fill:black;"} );
+
+
+
+	}
 
 
 }
