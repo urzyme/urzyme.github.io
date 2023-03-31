@@ -137,6 +137,8 @@ function renderSecondary(svg, DATA){
       let textAlign = features[feature].align;
       if (textAlign == "right"){
       	textAlign = "end";
+      }else if (textAlign == "center"){
+        textAlign = "middle";
       }else{
       	textAlign = "start";
       }
@@ -236,6 +238,9 @@ function renderSecondary(svg, DATA){
 
 
 
+      // Subclass header
+    //drawSVGobj(svgContent, "text", {x: ALN_LABEL_WIDTH - 0.5*NT_FONT_SIZE, y: SEC_HEIGHT*0.5, style: "text-anchor:end; dominant-baseline:central; font-size:" + NT_FONT_SIZE + "px"}, value="Subclass")
+    
 
 
     // Sequence labels
@@ -252,7 +257,7 @@ function renderSecondary(svg, DATA){
 		   //let domainEle = drawSVGobj(svgContent, "image", {href:"/fig/" + domainOfLife + ".png", x: x+NT_FONT_SIZE, y: y-NT_FONT_SIZE/2, pdb: acc, height:NT_FONT_SIZE})
 
 
-		   let letter = domainOfLife.substring(0, 1);
+		   let letter = domainOfLife; //domainOfLife.substring(0, 1);
 		   if (letter == "M") letter = "O";
 		   drawSVGobj(svgContent, "text", {x: x+NT_FONT_SIZE, y: y, style: "text-anchor:middle; fill:black; dominant-baseline:central; font-size:" + NT_FONT_SIZE + "px"}, value=letter)
 		
@@ -435,6 +440,8 @@ function renderSecondary(svg, DATA){
 // Return the domain (of life) for a sequence
 function getLifeDomainOfAccession(acc, DATA){
 	
+
+  /*
 	acc = acc.replace(".pdb", "");
 	let metadata = DATA.metadata[acc];
 	if (metadata == null){
@@ -443,7 +450,32 @@ function getLifeDomainOfAccession(acc, DATA){
 	}
 
 	return metadata.domain;
-	
+	*/
+
+
+  // Return subclass
+  let family = acc.split("_")[0];
+  console.log(family);
+
+
+  // Class I
+  if (family == "ValRS" || family == "IleRS" || family == "MetRS"  || family == "LeuRS-A"  || family == "LeuRS-B") return "Ia";
+  if (family == "GlnRS" || family == "GlxRS" || family == "GluRS") return "Ib";
+  if (family == "TrpRS-A" || family == "TyrRS") return "Ic";
+  if (family == "LysRS-I") return "Id";
+  if (family == "ArgRS") return "Ie";
+  if (family == "CysRS") return "If";
+
+
+   // Class II
+  if (family == "SerRS" || family == "SerRS-A" || family.substring(0, 5) == "ProRS"  || family == "ThrRS"  || family == "GlyRS-A" || family == "GlyRS-E") return "IIa";
+  if (family == "AsnRS" || family == "AsxRS" || family == "AspRS"  || family == "LysRS-II") return "IIb";
+  if (family.substring(0, 5) == "PheRS" || family == "SepRS" || family == "HisRS") return "IIc";
+  if (family == "AlaRS" || family.substring(0, 7) == "GlyRS-B") return "IId";
+  if (family == "PylRS") return "IIe";
+
+
+  return "X";
 	
 }
 
