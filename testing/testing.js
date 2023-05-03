@@ -631,7 +631,7 @@ function drawTree(){
 	    	// Second branching: His/Sep
 	    	drawTip(svg, hisX, pheY-LEAF_DY, false, true);
 	    	drawTip(svg, hisX, pheY-LEAF_DY, true, true);
-	    	drawClass2Domain(hisX+LEAF_LENGTH, pheY-LEAF_DY*2, svg, motifColBase, highlightColBase, "", {align: "left", box: false, hairpin: true, HP: true, insertName: "6", gates: true, small: true, phase: 2, name: "SepRS"});
+	    	drawClass2Domain(hisX+LEAF_LENGTH, pheY-LEAF_DY*2, svg, motifColBase, highlightColBase, "", {align: "left", box: false, hairpin: true, HP: true, insertName: "6", gates: true, small: true, phase: 1, name: "SepRS"});
 	    	drawClass2Domain(hisX+LEAF_LENGTH, pheY, svg, motifColBase, highlightColBase, "", {thrIM: true, insertName: "7", align: "left", box: false, small: true, hairpin: true, gates: true, phase: 2, name: "HisRS"});
 
 
@@ -710,11 +710,10 @@ function drawTree(){
 			let dashedY1 = (ym-0.3)*dy;
 			let dashedY2 = (5.5)*dy;
 			let dashedX = CLASS2_PADDING - RO_PADDING - CATALYTIC_DOMAIN_FONT_SIZE/2; //paddingLeft - 0.285*dx;
-			let dash = "6,5";
-			let dashCol = "#696969";
-			drawSVGobj(svg, "line", {x1: paddingLeft + CATALYTIC_DOMAIN_FONT_SIZE/2, x2: dashedX, y1: dashedY1, y2: dashedY1, style: "stroke-dasharray:" + dash + "; stroke-width:" + MAIN_ARROW_LWD + "px; stroke-linecap: round; stroke:" + dashCol} );
-			drawSVGobj(svg, "line", {x1: dashedX, x2: dashedX, y1: dashedY1, y2: dashedY2, style: "stroke-dasharray:" + dash + "; stroke-width:" + MAIN_ARROW_LWD + "px; stroke-linecap: round; stroke:" + dashCol} );
-			drawSVGobj(svg, "line", {x1: paddingLeft + CATALYTIC_DOMAIN_FONT_SIZE/2, x2: dashedX, y1: dashedY2, y2: dashedY2, style: "stroke-dasharray:" + dash + "; stroke-width:" + MAIN_ARROW_LWD + "px; stroke-linecap: round; stroke:" + dashCol} );
+			let dashCol = "black";
+			drawSVGobj(svg, "line", {x1: paddingLeft + CATALYTIC_DOMAIN_FONT_SIZE/2, x2: dashedX, y1: dashedY1, y2: dashedY1, style: "; stroke-width:" + MAIN_ARROW_LWD + "px; stroke-linecap: round; stroke:" + dashCol} );
+			drawSVGobj(svg, "line", {x1: dashedX, x2: dashedX, y1: dashedY1, y2: dashedY2, style: "; stroke-width:" + MAIN_ARROW_LWD + "px; stroke-linecap: round; stroke:" + dashCol} );
+			drawSVGobj(svg, "line", {x1: paddingLeft + CATALYTIC_DOMAIN_FONT_SIZE/2, x2: dashedX, y1: dashedY2, y2: dashedY2, style:  "; stroke-width:" + MAIN_ARROW_LWD + "px; stroke-linecap: round; stroke:" + dashCol} );
 			drawSVGobj(svg, "line", {x1: paddingLeft + CATALYTIC_DOMAIN_FONT_SIZE/2, x2: paddingLeft + CATALYTIC_DOMAIN_FONT_SIZE/2, y1: dashedY2, y2: 6.1*dy - 18, marker_end:"url(#arrowheadVert)", style: "stroke-width:" + MAIN_ARROW_LWD + "px; stroke-linecap: round; stroke:black"} );
 			
 
