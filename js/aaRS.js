@@ -117,6 +117,8 @@ LEVEL_4_COL = "transparent";
 function renderaaRS(isPairwise = false, isSuperfamily = false){
 
 
+
+
   PAIRWISE = isPairwise;
   IS_SUPERFAMILY = isSuperfamily
   
@@ -158,6 +160,8 @@ function renderaaRS(isPairwise = false, isSuperfamily = false){
 
   loadAllFiles(function(){
 
+
+	$(".notes").show(100);
 
     //console.log(DATA);
     renderAlignment("alignment", true, "data/align.ali");
