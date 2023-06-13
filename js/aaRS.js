@@ -519,6 +519,7 @@ function renderInfo(text, resolve=function() { }){
   let resolve2 = function(){
 
 
+		/*
 	  // Catalytic domain architecture
 	  if (json.class == "Class I"){
 	    fetch("catalytic.json").then(response => response.text()).then(text => renderCatalyticDomainInserts(text, 1));
@@ -527,7 +528,7 @@ function renderInfo(text, resolve=function() { }){
 	  else if (json.class == "Class II"){
 	    fetch("catalytic.json").then(response => response.text()).then(text => renderCatalyticDomainInserts(text, 2));
 	  }
-
+	*/
 	  resolve();
 
   }
