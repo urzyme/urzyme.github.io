@@ -41,8 +41,7 @@ function renderHeader(includeFooter = true){
 	$("#class1Selector div").append(`<a href='/class1/leu1'>LeuRS (bact)</a>`);
 	$("#class1Selector div").append(`<a href='/class1/lys'>LysRS-I</a>`);
 	$("#class1Selector div").append(`<a href='/class1/met'>MetRS</a>`);
-	$("#class1Selector div").append(`<a href='/class1/trp1'>TrpRS (arch)</a>`);
-	$("#class1Selector div").append(`<a href='/class1/trp2'>TrpRS (bact)</a>`);
+	$("#class1Selector div").append(`<a href='/class1/trp'>TrpRS</a>`);
 	$("#class1Selector div").append(`<a href='/class1/tyr'>TyrRS</a>`);
 	$("#class1Selector div").append(`<a href='/class1/val'>ValRS</a>`);
 
