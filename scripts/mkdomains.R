@@ -86,6 +86,9 @@ for (domain in features.df$domain){
 	cat(paste(domain, "\n"))
 
 
+
+		
+
 	if (!dir.exists("domains/")){
 		dir.create("domains/")
 	}
@@ -101,6 +104,8 @@ for (domain in features.df$domain){
 	}
 
 
+
+	nStructures = 0
 	for (pdbFile in pdbFiles){
 
 
@@ -210,15 +215,21 @@ for (domain in features.df$domain){
 		}
 
 
+
 		file.name = gsub(".+/", "", pdbFile)
 		write(paste(pdb.truncated, collapse="\n"), paste0(dirName2, "/", file.name))
 
 
+		nStructures = nStructures + 1
 
 
+	}
 
 
+	if (nStructures < 2){
 
+
+		#unlink(dirName, recursive = TRUE)
 	}
 
 

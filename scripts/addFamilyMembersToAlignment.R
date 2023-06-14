@@ -56,7 +56,12 @@ for (d in dirs){
 
 
 		# Reference sequence in both alignments
-		refSeqFamily = fam.fasta[[gsub(".+/", "", ref_str)]]
+		ref_str.tidy = gsub(".+/", "", ref_str)
+		if (!any(names(fam.fasta) == ref_str.tidy)){
+			cat(paste("Warning: cannot find ref seq", ref_str, "in alignment. Skipping family\n"))
+			next
+		}
+		refSeqFamily = fam.fasta[[ref_str.tidy]]
 		refSeqSuperfamily = out.fasta[[gsub(".+/", "", ref_str)]]
 
 

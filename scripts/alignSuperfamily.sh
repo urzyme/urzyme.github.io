@@ -9,7 +9,7 @@ do
 
 	cd $c
 	
-	for d in Cys*/
+	for d in Zn/
 	do
 
 		echo "$c $d"
