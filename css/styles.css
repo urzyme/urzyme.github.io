@@ -724,8 +724,9 @@ div.reaction span{
 
 @media only screen and ( max-device-width: 1000px ) {
 	.reaction {
-		font-size: 1.8em;
+		font-size: 0.65em;
 		text-size-adjust: 100%;
+		max-width:100%;
 	}
 }
 
