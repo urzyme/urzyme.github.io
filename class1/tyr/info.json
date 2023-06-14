@@ -16,10 +16,14 @@
 		"hinges": [359],
 		"refine": [{"start": 800}],
 		"features": {"Catalytic domain": {"acc": "TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb", "range": "36-246", "level": 4},
+					"ABD": {"acc": "TyrRS_AF_Bact_Chlamydia_psittaci_6BC_gene12242888.pdb", "range": "263-314",  "count":12, "dy": -2, "level": 4},
+					"tRNA binding domain WY": {"acc": "TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb", "range": "273-378", "count":10, "level": 4},
+					"S4": {"acc": "TyrRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66533077.pdb", "range": "337-440", "level": 4, "count": 11},
+					"EMAP": {"acc": "TyrRS_AF_Euk_Drosophila_melanogaster_gene39829.pdb", "range": "346-525", "level": 4, "count": 2},
 					"Protozyme": {"acc": "TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb", "range": "37-74", "level": 3},
 					"SDH": {"acc": "TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb", "range": "155-170", "level": 2},
 					"CP1": {"acc": "TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb", "range": "83-153", "level": 2},
 					"HIGH": {"acc": "TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb", "range": "50-53", "level": 1},
-					"KMSKS": {"acc": "TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb", "range": "221-225", "level": 1}}
+					"KMSKS": {"acc": "TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb", "align": "right", "range": "221-225", "level": 1}}
 	
 }

@@ -631,7 +631,7 @@ function drawTree(){
 	    	// Second branching: His/Sep
 	    	drawTip(svg, hisX, pheY-LEAF_DY, false, true);
 	    	drawTip(svg, hisX, pheY-LEAF_DY, true, true);
-	    	drawClass2Domain(hisX+LEAF_LENGTH, pheY-LEAF_DY*2, svg, motifColBase, highlightColBase, "", {align: "left", box: false, hairpin: true, HP: true, insertName: "6", gates: true, small: true, phase: 1, name: "SepRS"});
+	    	drawClass2Domain(hisX+LEAF_LENGTH, pheY-LEAF_DY*2, svg, motifColBase, highlightColBase, "", {align: "left", box: false, hairpin: true, HP: true, insertName: "6", gates: true, small: true, phase: 2, name: "SepRS"});
 	    	drawClass2Domain(hisX+LEAF_LENGTH, pheY, svg, motifColBase, highlightColBase, "", {thrIM: true, insertName: "7", align: "left", box: false, small: true, hairpin: true, gates: true, phase: 2, name: "HisRS"});
 
 

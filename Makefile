@@ -297,23 +297,16 @@ domain-met:
 	bash ../../scripts/makeDomains.sh
 
 
-trp1:
-	cd class1/trp1 && echo "trp1"; \
+trp:
+	cd class1/trp && echo "trp"; \
 	bash ../../scripts/align.sh
 
-domain-trp1:
-	cd class1/trp1 && echo "trp1"; \
+domain-trp:
+	cd class1/trp && echo "trp"; \
 	bash ../../scripts/makeDomains.sh
 
 
 
-trp2:
-	cd class1/trp2 && echo "trp2"; \
-	bash ../../scripts/align.sh
-
-domain-trp2:
-	cd class1/trp2 && echo "trp2"; \
-	bash ../../scripts/makeDomains.sh
 
 
 

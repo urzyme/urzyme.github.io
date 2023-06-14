@@ -28,6 +28,7 @@
 
 
         "Protozyme": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "3-49", "level": 3, "href": "../Protozyme"},
+		"CP1": {"acc": "TrpRS-A_AF_Arch_Natrialba_magadii_ATCC_43099_gene8824932.pdb", "range": "55-116", "level": 3, "align": "right"},
         "Crossover 2": {"acc": "MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb", "range": "256-290", "level": 3},
 
         "Z1": {"acc": "LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb", "range": "148-158", "level": 1, "count": 10, "dy": -9},
@@ -57,7 +58,7 @@
 
         "protozyme": {"features": ["Protozyme"],  "dir": "../Protozyme"},
         "urzyme": {"features": ["H4", "Crossover 2", "KMSKS"]},
-        "CP1": {"features": ["H2", "S3", "H3"]},
+        "CP1": {"features": ["CP1"]},
         "z": {"features": ["Z1", "Z2", "Z3"]},
 
 

@@ -15,6 +15,7 @@
 		"refine": [{"start": 34, "stop": 219}],
 		"features": {"Catalytic domain": {"acc": "PheRS-Bβ_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb", "range": "498-706", "level": 4},
 					"tRNA binding domain F": {"acc": "PheRS-Bβ_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb", "range": "713-807", "level": 4},
+					"EMAP": {"acc": "PheRS-Bβ_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb", "range": "1-195", "level": 4},
 					"Editing domain F": {"acc": "PheRS-Bβ_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb", "range": "207-403", "level": 4},
 					"Protozyme": {"acc": "PheRS-Bβ_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb", "range": "554-593", "level": 2, "href": "/superfamily/class2/Protozyme"},
 					"Motif 1": {"acc": "PheRS-Bβ_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb", "range": "540-549", "level": 1},
