@@ -1,3 +1,7 @@
+
+rmsd:
+	bash scripts/getRMSD.sh
+
 data2json:
 	Rscript scripts/tsv2json.R data/accessions.tsv accession
 
@@ -180,6 +184,16 @@ pro2:
 
 domain-pro2:
 	cd class2/pro2 && echo "pro2"; \
+	bash ../../scripts/makeDomains.sh
+
+
+
+pro3:
+	cd class2/pro3 && echo "pro3"; \
+	bash ../../scripts/align.sh
+
+domain-pro3:
+	cd class2/pro3 && echo "pro3"; \
 	bash ../../scripts/makeDomains.sh
 
 
