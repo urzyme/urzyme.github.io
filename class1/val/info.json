@@ -14,7 +14,7 @@
 		"ref_str": ["structures/ValRS_AF_Mito_Falco_naumanni_gene121082178.pdb"],
 		"hinge_str": "structures/ValRS_AF_Bact_Brucella_abortus_2308_gene3789053.pdb",
 		"hinges": [840],
-		"refine": [{"start": 1724 }],
+		"refine": [{"start": 1, "stop": 472 }],
 		"features": {"Catalytic domain": {"acc": "ValRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094666.pdb", "range": "36-550", "level": 4},
 					"CP1": {"acc": "ValRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094666.pdb", "range": "147-474", "level": 3, "href": "/superfamily/class1/CP1"},
 					"LIV IM1": {"acc": "ValRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094666.pdb", "range": "166-362", "level": 2, "href": "/superfamily/class1/LIV_IM1"},
