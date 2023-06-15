@@ -143,7 +143,7 @@ svg text.alpha{
 
 .banner{
 	text-align:justify;
-	word-break: break-all;
+	word-break: break-word;
 	background-image: linear-gradient(140deg, #008cba0a, #008cba22);
 
 	padding: 2em;
