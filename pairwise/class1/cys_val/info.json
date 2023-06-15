@@ -5,14 +5,33 @@
     "family1":"CysRS",
     "family2":"ValRS",
     "fullName1":"Cysteinyl tRNA Synthetase",
-    "fullName2":"Valyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class I catalytic domains from the Cysteinyl tRNA Synthetase (<a href='/class1/cys'>CysRS</a>) and Valyl tRNA Synthetase (<a href='/class1/val'>ValRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    1.964,
-    "rmsd1":    2.52,
-    "rmsd2":    3.51,
-    "crossFamilyRmsd":    4.3,
-    "rmsdTotal":    3.65,
+    "fullName2":"Valyl-tRNA Synthetase",
+    "description":"Pairwise comparison of the Class I catalytic domains from the Cysteinyl tRNA Synthetase (<a href='/class1/cys'>CysRS</a>) and Valyl-tRNA Synthetase (<a href='/class1/val'>ValRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    1.988,
+    "tm":    0.757,
+    "rmsd1":    2.43,
+    "rmsd2":    3.11,
+    "crossFamilyRmsd":    4.18,
+    "rmsdTotal":    3.47,
     "features":{
+        "CP1":{
+            "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
+            "range":"95-198",
+            "level":            3,
+            "href":"/superfamily/class1/CP1"
+        },
+        "LIV IM1":{
+            "acc":"ValRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094666.pdb",
+            "range":"130-326",
+            "level":            2,
+            "href":"/superfamily/class1/LIV_IM1"
+        },
+        "LIV IM2":{
+            "acc":"ValRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094666.pdb",
+            "range":"376-421",
+            "level":            2,
+            "href":"/superfamily/class1/LIV_IM2"
+        },
         "Protozyme":{
             "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
             "range":"3-49",
@@ -23,11 +42,11 @@
             "range":"200-237",
             "level":            2
         },
-        "CP1":{
-            "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
-            "range":"95-198",
-            "level":            2,
-            "href":"/superfamily/class1/CP1"
+        "CP2":{
+            "acc":"ValRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094666.pdb",
+            "range":"327-360",
+            "level":            1,
+            "href":"/superfamily/class1/CP2"
         },
         "HIGH":{
             "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
@@ -38,6 +57,12 @@
             "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
             "range":"246-250",
             "level":            1
+        },
+        "CysRS IM":{
+            "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
+            "range":"127-160",
+            "level":            2,
+            "href":"/superfamily/class1/CysRS_IM"
         }
     }
 }

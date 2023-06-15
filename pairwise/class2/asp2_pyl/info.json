@@ -4,15 +4,22 @@
     "icon":"/fig/icon_white.png",
     "family1":"AsxRS",
     "family2":"PylRS",
-    "fullName1":"Non-discriminating Aspartyl tRNA Synthetase",
-    "fullName2":"Pyrrolysyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class II catalytic domains from the Non-discriminating Aspartyl tRNA Synthetase (<a href='/class2/asp2'>AsxRS</a>) and Pyrrolysyl tRNA Synthetase (<a href='/class2/pyl'>PylRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    1.705,
-    "rmsd1":    2.3,
-    "rmsd2":    1.34,
+    "fullName1":"Non-discriminating Aspartyl-tRNA Synthetase",
+    "fullName2":"Pyrrolysyl-tRNA Synthetase",
+    "description":"Pairwise comparison of the Class II catalytic domains from the Non-discriminating Aspartyl-tRNA Synthetase (<a href='/class2/asp2'>AsxRS</a>) and Pyrrolysyl-tRNA Synthetase (<a href='/class2/pyl'>PylRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    1.973,
+    "tm":    0.8139,
+    "rmsd1":    2.63,
+    "rmsd2":    1.28,
     "crossFamilyRmsd":    2.96,
-    "rmsdTotal":    2.5,
+    "rmsdTotal":    2.6,
     "features":{
+        "Protozyme":{
+            "acc":"AsxRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094477.pdb",
+            "range":"65-106",
+            "level":            2,
+            "href":"/superfamily/class2/Protozyme"
+        },
         "Motif 1":{
             "acc":"AsxRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094477.pdb",
             "range":"38-47",
@@ -37,6 +44,20 @@
             "acc":"AsxRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094477.pdb",
             "range":"293",
             "level":            0
+        },
+        "Subclass 2b IM 1":{
+            "acc":"AsxRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094477.pdb",
+            "range":"164-206",
+            "level":            3,
+            "level":            3,
+            "href":"/superfamily/class2/Subclass_2b_IM_1"
+        },
+        "Subclass 2b IM 2":{
+            "acc":"AsxRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094477.pdb",
+            "range":"250-283",
+            "level":            3,
+            "level":            3,
+            "href":"/superfamily/class2/Subclass_2b_IM_2"
         }
     }
 }

@@ -4,15 +4,28 @@
     "icon":"/fig/icon_white.png",
     "family1":"PheRS-M",
     "family2":"SepRS",
-    "fullName1":"Mitochondrial Phenylalanyl tRNA Synthetase",
-    "fullName2":"O-phosphoseryl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class II catalytic domains from the Mitochondrial Phenylalanyl tRNA Synthetase (<a href='/class2/phe5'>PheRS-M</a>) and O-phosphoseryl tRNA Synthetase (<a href='//'>SepRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    1.774,
-    "rmsd1":    4.07,
-    "rmsd2":    1.45,
-    "crossFamilyRmsd":    2.36,
-    "rmsdTotal":    2.65,
+    "fullName1":"Phenylalanyl-tRNA Synthetase (Mitochondrial)",
+    "fullName2":"O-phosphoseryl-tRNA Synthetase",
+    "description":"Pairwise comparison of the Class II catalytic domains from the Phenylalanyl-tRNA Synthetase (Mitochondrial) (<a href='/class2/phe5'>PheRS-M</a>) and O-phosphoseryl-tRNA Synthetase (<a href='//'>SepRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    1.824,
+    "tm":    0.7825,
+    "rmsd1":    5.07,
+    "rmsd2":    2.3,
+    "crossFamilyRmsd":    3.38,
+    "rmsdTotal":    3.63,
     "features":{
+        "SepRS IM":{
+            "acc":"SepRS_AF_Arch_Methanothrix_thermoacetophila_PT_gene4462697.pdb",
+            "range":"55-131",
+            "level":            3,
+            "href":"/superfamily/class2/SepRS_IM"
+        },
+        "Protozyme":{
+            "acc":"PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb",
+            "range":"62-100",
+            "level":            2,
+            "href":"/superfamily/class2/Protozyme"
+        },
         "Motif 1":{
             "acc":"PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb",
             "range":"23-32",

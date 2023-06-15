@@ -4,15 +4,34 @@
     "icon":"/fig/icon_white.png",
     "family1":"LeuRS-B",
     "family2":"ValRS",
-    "fullName1":"Leucyl tRNA Synthetase (Bacterial-like)",
-    "fullName2":"Valyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class I catalytic domains from the Leucyl tRNA Synthetase (Bacterial-like) (<a href='/class1/leu1'>LeuRS-B</a>) and Valyl tRNA Synthetase (<a href='/class1/val'>ValRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    1.918,
-    "rmsd1":    4.22,
-    "rmsd2":    2.37,
-    "crossFamilyRmsd":    4.15,
-    "rmsdTotal":    3.59,
+    "fullName1":"Leucyl-tRNA Synthetase (Bacterial-like)",
+    "fullName2":"Valyl-tRNA Synthetase",
+    "description":"Pairwise comparison of the Class I catalytic domains from the Leucyl-tRNA Synthetase (Bacterial-like) (<a href='/class1/leu1'>LeuRS-B</a>) and Valyl-tRNA Synthetase (<a href='/class1/val'>ValRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    1.914,
+    "tm":    0.7226,
+    "rmsd1":    3.99,
+    "rmsd2":    2.18,
+    "crossFamilyRmsd":    3.71,
+    "rmsdTotal":    3.3,
     "features":{
+        "CP1":{
+            "acc":"LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb",
+            "range":"138-627",
+            "level":            3,
+            "href":"/superfamily/class1/CP1"
+        },
+        "LIV IM1":{
+            "acc":"LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb",
+            "range":"294-521",
+            "level":            2,
+            "href":"/superfamily/class1/LIV_IM1"
+        },
+        "LIV IM2":{
+            "acc":"LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb",
+            "range":"536-607",
+            "level":            2,
+            "href":"/superfamily/class1/LIV_IM2"
+        },
         "Protozyme":{
             "acc":"LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb",
             "range":"44-86",
@@ -21,13 +40,15 @@
         "Crossover 2":{
             "acc":"LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb",
             "range":"654-694",
-            "level":            2
-        },
-        "CP1":{
-            "acc":"LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb",
-            "range":"138-627",
             "level":            2,
-            "href":"/superfamily/class1/CP1"
+            "align":"right"
+        },
+        "CP2":{
+            "acc":"LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb",
+            "range":"264-293",
+            "align":"right",
+            "level":            2,
+            "href":"/superfamily/class1/CP2"
         },
         "HIGH":{
             "acc":"LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb",

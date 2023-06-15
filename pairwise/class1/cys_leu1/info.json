@@ -5,14 +5,21 @@
     "family1":"CysRS",
     "family2":"LeuRS-B",
     "fullName1":"Cysteinyl tRNA Synthetase",
-    "fullName2":"Leucyl tRNA Synthetase (Bacterial-like)",
-    "description":"Pairwise comparison of the Class I catalytic domains from the Cysteinyl tRNA Synthetase (<a href='/class1/cys'>CysRS</a>) and Leucyl tRNA Synthetase (Bacterial-like) (<a href='/class1/leu1'>LeuRS-B</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.039,
-    "rmsd1":    2.36,
-    "rmsd2":    3.79,
-    "crossFamilyRmsd":    4.1,
-    "rmsdTotal":    3.44,
+    "fullName2":"Leucyl-tRNA Synthetase (Bacterial-like)",
+    "description":"Pairwise comparison of the Class I catalytic domains from the Cysteinyl tRNA Synthetase (<a href='/class1/cys'>CysRS</a>) and Leucyl-tRNA Synthetase (Bacterial-like) (<a href='/class1/leu1'>LeuRS-B</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.088,
+    "tm":    0.7772,
+    "rmsd1":    2.39,
+    "rmsd2":    3.56,
+    "crossFamilyRmsd":    5.03,
+    "rmsdTotal":    3.9,
     "features":{
+        "CP1":{
+            "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
+            "range":"95-198",
+            "level":            3,
+            "href":"/superfamily/class1/CP1"
+        },
         "Protozyme":{
             "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
             "range":"3-49",
@@ -23,11 +30,24 @@
             "range":"200-237",
             "level":            2
         },
-        "CP1":{
-            "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
-            "range":"95-198",
+        "CP2":{
+            "acc":"LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb",
+            "range":"264-293",
+            "align":"right",
             "level":            2,
-            "href":"/superfamily/class1/CP1"
+            "href":"/superfamily/class1/CP2"
+        },
+        "LIV IM1":{
+            "acc":"LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb",
+            "range":"294-521",
+            "level":            2,
+            "href":"/superfamily/class1/LIV_IM1"
+        },
+        "LIV IM2":{
+            "acc":"LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb",
+            "range":"536-607",
+            "level":            2,
+            "href":"/superfamily/class1/LIV_IM2"
         },
         "HIGH":{
             "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
@@ -38,6 +58,12 @@
             "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
             "range":"246-250",
             "level":            1
+        },
+        "CysRS IM":{
+            "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
+            "range":"127-160",
+            "level":            2,
+            "href":"/superfamily/class1/CysRS_IM"
         }
     }
 }

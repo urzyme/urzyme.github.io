@@ -5,13 +5,14 @@
     "family1":"CysRS",
     "family2":"MetRS",
     "fullName1":"Cysteinyl tRNA Synthetase",
-    "fullName2":"Methionyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class I catalytic domains from the Cysteinyl tRNA Synthetase (<a href='/class1/cys'>CysRS</a>) and Methionyl tRNA Synthetase (<a href='/class1/met'>MetRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.013,
-    "rmsd1":    2.89,
-    "rmsd2":    4.18,
+    "fullName2":"Methionyl-tRNA Synthetase",
+    "description":"Pairwise comparison of the Class I catalytic domains from the Cysteinyl tRNA Synthetase (<a href='/class1/cys'>CysRS</a>) and Methionyl-tRNA Synthetase (<a href='/class1/met'>MetRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    1.998,
+    "tm":    0.7566,
+    "rmsd1":    2.99,
+    "rmsd2":    3.27,
     "crossFamilyRmsd":    5.06,
-    "rmsdTotal":    4.33,
+    "rmsdTotal":    4.12,
     "features":{
         "Protozyme":{
             "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
@@ -26,8 +27,14 @@
         "CP1":{
             "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
             "range":"95-198",
-            "level":            2,
+            "level":            3,
             "href":"/superfamily/class1/CP1"
+        },
+        "CP2":{
+            "acc":"MetRS_AF_Euk_Drosophila_melanogaster_gene37177.pdb",
+            "range":"195-229",
+            "level":            2,
+            "href":"/superfamily/class1/CP2"
         },
         "HIGH":{
             "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
@@ -38,6 +45,12 @@
             "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
             "range":"246-250",
             "level":            1
+        },
+        "CysRS IM":{
+            "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
+            "range":"127-160",
+            "level":            2,
+            "href":"/superfamily/class1/CysRS_IM"
         }
     }
 }

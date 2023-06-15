@@ -465,6 +465,10 @@ function renderInfo(text, resolve=function() { }){
                   <th>Total RMSD</th>
                   <td>` + json.rmsdTotal + ` &#8491;</td>
                 </tr>`);
+        $(".summary table").append(`<tr>
+                  <th>TM score</th>
+                  <td>` + json.tm + `</td>
+                </tr>`);
 
 
         $(".notes div").html(json.description);

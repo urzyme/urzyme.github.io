@@ -5,18 +5,19 @@
     "family1":"CysRS",
     "family2":"LysRS-I",
     "fullName1":"Cysteinyl tRNA Synthetase",
-    "fullName2":"Class I Lysyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class I catalytic domains from the Cysteinyl tRNA Synthetase (<a href='/class1/cys'>CysRS</a>) and Class I Lysyl tRNA Synthetase (<a href='/class1/lys'>LysRS-I</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.246,
+    "fullName2":"Class I Lysyl-tRNA Synthetase",
+    "description":"Pairwise comparison of the Class I catalytic domains from the Cysteinyl tRNA Synthetase (<a href='/class1/cys'>CysRS</a>) and Class I Lysyl-tRNA Synthetase (<a href='/class1/lys'>LysRS-I</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.26,
+    "tm":    0.7856,
     "rmsd1":    2.16,
-    "rmsd2":    2.94,
-    "crossFamilyRmsd":    5.44,
-    "rmsdTotal":    3.65,
+    "rmsd2":    3.27,
+    "crossFamilyRmsd":    5.43,
+    "rmsdTotal":    3.67,
     "features":{
         "CP1":{
             "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
             "range":"95-198",
-            "level":            2,
+            "level":            3,
             "href":"/superfamily/class1/CP1"
         },
         "Protozyme":{
@@ -44,6 +45,12 @@
             "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
             "range":"246-250",
             "level":            1
+        },
+        "CysRS IM":{
+            "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
+            "range":"127-160",
+            "level":            2,
+            "href":"/superfamily/class1/CysRS_IM"
         }
     }
 }

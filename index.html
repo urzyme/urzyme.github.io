@@ -10,6 +10,7 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 <script language='JavaScript' type='text/JavaScript' src="/js/util.js"></script>
+<script language='JavaScript' type='text/JavaScript' src="/js/mainPage.js"></script>
 
         
 <script type="text/x-mathjax-config">
@@ -43,7 +44,26 @@
 
 
 function init(){
+
 	renderHeader(false);
+
+	// Add loading wheel
+	$("#catalyticDomainDIV").before(`<div id="mainloader" class='loader'><img src='/fig/icon_white.png'></img></div>`);
+	$("#catalyticDomainDIV").hide(0);
+
+
+	setTimeout(function(){
+
+
+		drawTree();
+
+		// Remove loading wheel
+		$("#mainloader").remove();
+		$("#catalyticDomainDIV").show(200);
+
+	}, 10);
+
+
 	
 }
 
@@ -58,37 +78,80 @@ function init(){
 
 	<div id="main">
 
-		<h1>Aminoacyl-tRNA synthetases (AARS)</h1>
 		
-		The AARS are a large group of enzymes which execute the computational rules of the genetic code by attaching amino acids to their cognate tRNA. 
-		This website documents their sequence, structure, and function across a taxonomically representative sample of enzymes.
-		
-		<br><br>
 		
 
+		<div class="banner">
+
+
+			<h1>AARS Online</h1>
+
+		The aminoacyl-tRNA synthetases (AARS) are a large group of enzymes which execute the computational rules of the genetic code by attaching amino acids to their cognate tRNA. 
+		AARS Online documents their sequence, structure, and function across a taxonomically representative sample of enzymes.
+		The AARS catalytic domains fall into the <a href="class1">Class I</a> and <a href="class2">Class II</a> superfamilies, as summarised by the evolutionary tree below. <br> <br>
+
+
+
+		Use the map below to navigate to an AARS.
+
+
+		</div>
+		
+<!--
 	<div id="contents">
 
 		<h2>Contents</h1>
 
 		<div>
-			<a href="class1">Class I aaRS</a>
+			<a href="class1">Class I AARS</a>
 		</div>
 		<div>
-			<a href="class2">Class II aaRS</a>
+			<a href="class2">Class II AARS</a>
 		</div>
 
 
 	</div>
+-->
+
+	<div id='catalyticDomainDIV' style="width:100%; text-align:center; overflow-x: auto;"></div>
+
+		<br><br>
+		<div class="banner">
+
 
 		
-		<div id="notes">
-		
+
+			<h1>Contact</h1>
+
+
+			Developed and maintained by Jordan Douglas, University of Auckland, New Zealand. 
+			For any inquiries please create an issue on <a href="https://github.com/urzyme/urzyme.github.io">GitHub</a> or contact jordan.douglas@auckland.ac.nz.
+
 			
 		
-		
-		</div>
+
+			
+
 
 
 	</div>
+
+
+		<div class="banner">
+
+
+
+
+			
+				<h1>References</h1>
+
+				If you find this tool helpful for your research, please cite our preprint: <br><br>
+
+				Douglas, J., Bouckaert, R., Carter, C., & Wills, P. R.  (2023). Enzymic recognition of amino acids drove the evolution of primordial genetic codes.
+			</div>
+
+
+	</div>
+
 </body>
 </html>

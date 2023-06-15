@@ -7,15 +7,15 @@ FAMILY_MATRIX_SIZE = 45;
 
 // RMSD colour brewer
 
-RMSD_COLS = [ {min: 0.0, max:1.0, col:"#081d58", fontCol: "white"},
-              {min: 1.0, max:1.5, col:"#253494", fontCol: "white"},
-              {min: 1.5, max:2.0, col:"#225ea8", fontCol: "white"},
-              {min: 2.0, max:2.5, col:"#1d91c0", fontCol: "white"},
-              {min: 2.5, max:3.0, col:"#41b6c4", fontCol: "black"},
-              {min: 3.0, max:3.5, col:"#7fcdbb", fontCol: "black"},
-              {min: 3.5, max:4.0, col:"#c7e9b4", fontCol: "black"},
-              {min: 4.0, max:4.5, col:"#edf8b1", fontCol: "black"},
-              {min: 4.5, max:Infinity, col:"#ffffd9", fontCol: "black"}];
+RMSD_COLS = [ {min: 0.00, max:0.05, col:"#081d58", fontCol: "white"},
+              {min: 0.05, max:0.10, col:"#253494", fontCol: "white"},
+              {min: 0.10, max:0.15, col:"#225ea8", fontCol: "white"},
+              {min: 0.15, max:0.20, col:"#1d91c0", fontCol: "white"},
+              {min: 0.20, max:0.25, col:"#41b6c4", fontCol: "black"},
+              {min: 0.25, max:0.30, col:"#7fcdbb", fontCol: "black"},
+              {min: 0.30, max:0.35, col:"#c7e9b4", fontCol: "black"},
+              {min: 0.35, max:0.40, col:"#edf8b1", fontCol: "black"},
+              {min: 0.40, max:Infinity, col:"#ffffd9", fontCol: "black"}];
 
 
 
@@ -103,6 +103,10 @@ plotMatrix = function(text){
       var url = json["url_" + key];
       var name = json["name_" + key];
 
+
+
+
+
       // Colour of rmsd
       var col = "white";
       var fontCol = "black";
@@ -121,6 +125,7 @@ plotMatrix = function(text){
       let rect2 = drawSVGobj(group, "rect", {x: y, y:x, width:FAMILY_MATRIX_SIZE, height:FAMILY_MATRIX_SIZE, style: "fill:" + col + "; stroke-width:0.5px; stroke:black;"})
 
 
+      rmsd = Math.round(rmsd * 100) / 100;
       var text1 = drawSVGobj(group, "text", {x: x+FAMILY_MATRIX_SIZE/2, y: y+FAMILY_MATRIX_SIZE/2, url:url, style: "text-anchor:middle; dominant-baseline:central; fill:" + fontCol + ";font-size:" + MATRIX_FONT_SIZE + "px"}, rmsd)
       var text2 = drawSVGobj(group, "text", {x: y+FAMILY_MATRIX_SIZE/2, y: x+FAMILY_MATRIX_SIZE/2, url:url, style: "text-anchor:middle; dominant-baseline:central; fill:" + fontCol + ";font-size:" + MATRIX_FONT_SIZE + "px"}, rmsd)
 

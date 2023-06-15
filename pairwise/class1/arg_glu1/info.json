@@ -4,19 +4,20 @@
     "icon":"/fig/icon_white.png",
     "family1":"ArgRS",
     "family2":"GluRS",
-    "fullName1":"Arginyl tRNA Synthetase",
-    "fullName2":"Discriminating Glutamyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class I catalytic domains from the Arginyl tRNA Synthetase (<a href='/class1/arg'>ArgRS</a>) and Discriminating Glutamyl tRNA Synthetase (<a href='/class1/glu1'>GluRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.278,
-    "rmsd1":    3.16,
-    "rmsd2":    3.43,
-    "crossFamilyRmsd":    3.83,
-    "rmsdTotal":    3.53,
+    "fullName1":"Arginyl-tRNA Synthetase",
+    "fullName2":"Discriminating Glutamyl-tRNA Synthetase",
+    "description":"Pairwise comparison of the Class I catalytic domains from the Arginyl-tRNA Synthetase (<a href='/class1/arg'>ArgRS</a>) and Discriminating Glutamyl-tRNA Synthetase (<a href='/class1/glu1'>GluRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.322,
+    "tm":    0.6816,
+    "rmsd1":    3.09,
+    "rmsd2":    2.4,
+    "crossFamilyRmsd":    3.67,
+    "rmsdTotal":    3.27,
     "features":{
         "CP1":{
             "acc":"ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb",
             "range":"187-273",
-            "level":            2,
+            "level":            3,
             "href":"/superfamily/class1/CP1"
         },
         "SC1b IM":{
@@ -44,6 +45,12 @@
             "acc":"ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb",
             "range":"324-329",
             "level":            1
+        },
+        "Variable bundle":{
+            "acc":"ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb",
+            "range":"51-143",
+            "level":            3,
+            "href":"/superfamily/class1/Variable_bundle"
         }
     }
 }

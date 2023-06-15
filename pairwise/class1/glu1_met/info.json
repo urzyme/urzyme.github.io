@@ -4,14 +4,15 @@
     "icon":"/fig/icon_white.png",
     "family1":"GluRS",
     "family2":"MetRS",
-    "fullName1":"Discriminating Glutamyl tRNA Synthetase",
-    "fullName2":"Methionyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class I catalytic domains from the Discriminating Glutamyl tRNA Synthetase (<a href='/class1/glu1'>GluRS</a>) and Methionyl tRNA Synthetase (<a href='/class1/met'>MetRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.344,
-    "rmsd1":    2.06,
-    "rmsd2":    2.99,
-    "crossFamilyRmsd":    4.02,
-    "rmsdTotal":    3.35,
+    "fullName1":"Discriminating Glutamyl-tRNA Synthetase",
+    "fullName2":"Methionyl-tRNA Synthetase",
+    "description":"Pairwise comparison of the Class I catalytic domains from the Discriminating Glutamyl-tRNA Synthetase (<a href='/class1/glu1'>GluRS</a>) and Methionyl-tRNA Synthetase (<a href='/class1/met'>MetRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.404,
+    "tm":    0.7161,
+    "rmsd1":    1.91,
+    "rmsd2":    2.93,
+    "crossFamilyRmsd":    4.06,
+    "rmsdTotal":    3.33,
     "features":{
         "Protozyme":{
             "acc":"GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
@@ -28,6 +29,12 @@
             "range":"105-201",
             "level":            3,
             "href":"/superfamily/class1/CP1"
+        },
+        "CP2":{
+            "acc":"MetRS_AF_Euk_Drosophila_melanogaster_gene37177.pdb",
+            "range":"195-229",
+            "level":            2,
+            "href":"/superfamily/class1/CP2"
         },
         "HIGH":{
             "acc":"GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",

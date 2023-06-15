@@ -36,13 +36,16 @@ for (d in dirs){
 	aa2 = strsplit(gsub("./", "", d), "_")[[1]][2]
 	json = fromJSON(file = paste0(d, "/info.json"))
 
-	distance.mat[aa1,aa2] = json$crossFamilyRmsd
-	distance.mat[aa2,aa1] = distance.mat[aa1,aa2]
+
+	dist = 1-json$tm # json$crossFamilyRmsd
+
+	distance.mat[aa1,aa2] = dist
+	distance.mat[aa2,aa1] = dist
 
 	key = paste0(aa1, "_", aa2)
 	JSON[paste0("url_", key)] = paste0("/pairwise/", aaClass, "/", aa1, "_", aa2)
 	JSON[paste0("name_", key)] = json$fullName
-	JSON[paste0("d_", key)] = json$crossFamilyRmsd
+	JSON[paste0("d_", key)] = dist
 
 
 	# get the full name of each 

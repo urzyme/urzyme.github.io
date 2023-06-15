@@ -4,58 +4,69 @@
     "icon":"/fig/icon_white.png",
     "family1":"GlyRS-E",
     "family2":"PheRS-B&beta;",
-    "fullName1":"Glycyl tRNA Synthetase (Eukaryote-like)",
-    "fullName2":"&beta; bacterial Phenylalanyl tRNA Synthetase subunit",
-    "description":"Pairwise comparison of the Class II catalytic domains from the Glycyl tRNA Synthetase (Eukaryote-like) (<a href='/class2/gly3'>GlyRS-E</a>) and &beta; bacterial Phenylalanyl tRNA Synthetase subunit (<a href='/class2/phe2'>PheRS-B&beta;</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.16,
-    "rmsd1":    3.21,
-    "rmsd2":    2.28,
-    "crossFamilyRmsd":    5.64,
-    "rmsdTotal":    4.15,
+    "fullName1":"Glycyl-tRNA Synthetase (Eukaryote-like)",
+    "fullName2":"Phenylalanyl-tRNA Synthetase &beta; Subunit (Bacterial-like)",
+    "description":"Pairwise comparison of the Class II catalytic domains from the Glycyl-tRNA Synthetase (Eukaryote-like) (<a href='/class2/gly3'>GlyRS-E</a>) and Phenylalanyl-tRNA Synthetase &beta; Subunit (Bacterial-like) (<a href='/class2/phe2'>PheRS-B&beta;</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.505,
+    "tm":    0.7724,
+    "rmsd1":    3.12,
+    "rmsd2":    3.29,
+    "crossFamilyRmsd":    5.6,
+    "rmsdTotal":    4.3,
     "features":{
-        "Motif 1*":{
-            "acc":"PheRS-B\u03b2_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb",
-            "range":"13-22",
-            "level":            1
-        },
-        "Motif 2*":{
-            "acc":"PheRS-B\u03b2_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb",
-            "range":"57-66",
-            "level":            1
-        },
-        "Motif 3*":{
-            "acc":"PheRS-B\u03b2_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb",
-            "range":"160-169",
-            "level":            1
-        },
-        "GlyRS-E insert":{
+        "Protozyme":{
             "acc":"GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb",
-            "range":"254-339",
-            "level":            3
+            "range":"173-224",
+            "level":            2,
+            "href":"/superfamily/class2/Protozyme"
         },
         "Motif 1":{
             "acc":"GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb",
-            "range":"29-38",
+            "range":"28-37",
             "level":            1
         },
         "Motif 2":{
             "acc":"GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb",
-            "range":"94-103",
+            "range":"205-214",
             "level":            1
         },
         "Motif 3":{
             "acc":"GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb",
-            "range":"347-356",
+            "range":"458-467",
             "level":            1
+        },
+        "GlyRS-AE IM1":{
+            "acc":"GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb",
+            "range":"48-162",
+            "level":            3,
+            "href":"/superfamily/class2/GlyRS-AE_IM1"
+        },
+        "GlyRS-AE IM2":{
+            "acc":"GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb",
+            "range":"242-281",
+            "level":            3,
+            "href":"/superfamily/class2/GlyRS-AE_IM2"
+        },
+        "GlyRS-E IM":{
+            "acc":"GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb",
+            "range":"365-450",
+            "level":            3,
+            "href":"/superfamily/class2/GlyRS-E_IM"
+        },
+        "Lysine-rich":{
+            "acc":"GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb",
+            "range":"77-117",
+            "level":            2,
+            "href":"/superfamily/class2/Protozyme"
         },
         "Tweezer 1":{
             "acc":"GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb",
-            "range":"101",
+            "range":"212",
             "level":            0
         },
         "Tweezer 2":{
             "acc":"GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb",
-            "range":"354",
+            "range":"465",
             "level":            0
         }
     }

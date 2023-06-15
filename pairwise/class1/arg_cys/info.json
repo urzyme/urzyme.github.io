@@ -4,15 +4,22 @@
     "icon":"/fig/icon_white.png",
     "family1":"ArgRS",
     "family2":"CysRS",
-    "fullName1":"Arginyl tRNA Synthetase",
+    "fullName1":"Arginyl-tRNA Synthetase",
     "fullName2":"Cysteinyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class I catalytic domains from the Arginyl tRNA Synthetase (<a href='/class1/arg'>ArgRS</a>) and Cysteinyl tRNA Synthetase (<a href='/class1/cys'>CysRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.503,
-    "rmsd1":    3.49,
-    "rmsd2":    2.79,
-    "crossFamilyRmsd":    4.46,
-    "rmsdTotal":    3.83,
+    "description":"Pairwise comparison of the Class I catalytic domains from the Arginyl-tRNA Synthetase (<a href='/class1/arg'>ArgRS</a>) and Cysteinyl tRNA Synthetase (<a href='/class1/cys'>CysRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.467,
+    "tm":    0.6983,
+    "rmsd1":    3.71,
+    "rmsd2":    3.34,
+    "crossFamilyRmsd":    5.46,
+    "rmsdTotal":    4.52,
     "features":{
+        "CP1":{
+            "acc":"ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb",
+            "range":"187-273",
+            "level":            3,
+            "href":"/superfamily/class1/CP1"
+        },
         "Protozyme":{
             "acc":"ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb",
             "range":"4-49",
@@ -23,11 +30,11 @@
             "range":"280-315",
             "level":            2
         },
-        "CP1":{
-            "acc":"ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb",
-            "range":"187-273",
+        "CysRS IM":{
+            "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
+            "range":"127-160",
             "level":            2,
-            "href":"/superfamily/class1/CP1"
+            "href":"/superfamily/class1/CysRS_IM"
         },
         "HIGH":{
             "acc":"ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb",
@@ -38,6 +45,12 @@
             "acc":"ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb",
             "range":"324-329",
             "level":            1
+        },
+        "Variable bundle":{
+            "acc":"ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb",
+            "range":"51-143",
+            "level":            3,
+            "href":"/superfamily/class1/Variable_bundle"
         }
     }
 }

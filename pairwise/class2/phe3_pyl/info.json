@@ -4,15 +4,22 @@
     "icon":"/fig/icon_white.png",
     "family1":"PheRS-A&alpha;",
     "family2":"PylRS",
-    "fullName1":"&alpha; eukaryotic Phenylalanyl tRNA Synthetase subunit",
-    "fullName2":"Pyrrolysyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class II catalytic domains from the &alpha; eukaryotic Phenylalanyl tRNA Synthetase subunit (<a href='/class2/phe3'>PheRS-A&alpha;</a>) and Pyrrolysyl tRNA Synthetase (<a href='/class2/pyl'>PylRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    1.833,
-    "rmsd1":    1.18,
-    "rmsd2":    1.3,
-    "crossFamilyRmsd":    2.33,
-    "rmsdTotal":    1.82,
+    "fullName1":"Phenylalanyl-tRNA Synthetase &alpha; Subunit (Archaeal-like)",
+    "fullName2":"Pyrrolysyl-tRNA Synthetase",
+    "description":"Pairwise comparison of the Class II catalytic domains from the Phenylalanyl-tRNA Synthetase &alpha; Subunit (Archaeal-like) (<a href='/class2/phe3'>PheRS-A&alpha;</a>) and Pyrrolysyl-tRNA Synthetase (<a href='/class2/pyl'>PylRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    1.886,
+    "tm":    0.8946,
+    "rmsd1":    1.34,
+    "rmsd2":    1.37,
+    "crossFamilyRmsd":    2.44,
+    "rmsdTotal":    1.93,
     "features":{
+        "Protozyme":{
+            "acc":"PheRS-A\u03b1_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724458.pdb",
+            "range":"90-132",
+            "level":            2,
+            "href":"/superfamily/class2/Protozyme"
+        },
         "Motif 1":{
             "acc":"PheRS-A\u03b1_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724458.pdb",
             "range":"18-27",
@@ -37,6 +44,12 @@
             "acc":"PheRS-A\u03b1_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724458.pdb",
             "range":"226",
             "level":            0
+        },
+        "PheRS-A\u03b1 IM":{
+            "acc":"PheRS-A\u03b1_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724458.pdb",
+            "range":"60-89",
+            "level":            3,
+            "href":"/superfamily/class2/PheRS-A\u03b1_IM"
         }
     }
 }

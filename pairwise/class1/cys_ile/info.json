@@ -7,12 +7,31 @@
     "fullName1":"Cysteinyl tRNA Synthetase",
     "fullName2":"Isoleucyl tRNA Synthetase",
     "description":"Pairwise comparison of the Class I catalytic domains from the Cysteinyl tRNA Synthetase (<a href='/class1/cys'>CysRS</a>) and Isoleucyl tRNA Synthetase (<a href='/class1/ile'>IleRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.001,
-    "rmsd1":    2.58,
-    "rmsd2":    4.09,
-    "crossFamilyRmsd":    6.26,
-    "rmsdTotal":    4.85,
+    "rmsd":    2.03,
+    "tm":    0.748,
+    "rmsd1":    2.65,
+    "rmsd2":    4.27,
+    "crossFamilyRmsd":    4.62,
+    "rmsdTotal":    4.07,
     "features":{
+        "CP1":{
+            "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
+            "range":"95-198",
+            "level":            3,
+            "href":"/superfamily/class1/CP1"
+        },
+        "LIV IM1":{
+            "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
+            "range":"135-383",
+            "level":            2,
+            "href":"/superfamily/class1/LIV_IM1"
+        },
+        "LIV IM2":{
+            "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
+            "range":"431-488",
+            "level":            2,
+            "href":"/superfamily/class1/LIV_IM2"
+        },
         "Protozyme":{
             "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
             "range":"3-49",
@@ -23,11 +42,17 @@
             "range":"200-237",
             "level":            2
         },
-        "CP1":{
-            "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
-            "range":"95-198",
-            "level":            2,
-            "href":"/superfamily/class1/CP1"
+        "CP2":{
+            "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
+            "range":"384-416",
+            "level":            1,
+            "href":"/superfamily/class1/CP2"
+        },
+        "LI IM":{
+            "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
+            "range":"206-244",
+            "level":            1,
+            "href":"/superfamily/class1/LI_IM"
         },
         "HIGH":{
             "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
@@ -38,6 +63,12 @@
             "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
             "range":"246-250",
             "level":            1
+        },
+        "CysRS IM":{
+            "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
+            "range":"127-160",
+            "level":            2,
+            "href":"/superfamily/class1/CysRS_IM"
         }
     }
 }

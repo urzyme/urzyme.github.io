@@ -41,9 +41,10 @@ JSON$description = paste0("Pairwise comparison of the ", JSON$class, " catalytic
 
 # Total RMSD
 rmsd = readLines("data/align.sco")
-rmsd = as.numeric(strsplit(rmsd[2], " +")[[1]][3])
-JSON$rmsd = rmsd
-
+rmsdscore = as.numeric(strsplit(rmsd[2], " +")[[1]][3])
+tmscore = as.numeric(strsplit(rmsd[3], " +")[[1]][3])
+JSON$rmsd = rmsdscore
+JSON$tm = tmscore
 
 # Cross-family RMSD
 pdb = readLines("data/align.pdb")
@@ -221,5 +222,7 @@ for (f in names(featuresAdj1)){
 JSON$features = featuresAdj2
 
 
+
+cat(paste("saving to info.json\n" ))
 exportJSON <- toJSON(JSON, indent=4)
 write(exportJSON, "info.json")

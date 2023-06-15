@@ -4,23 +4,24 @@
     "icon":"/fig/icon_white.png",
     "family1":"GlnRS",
     "family2":"TyrRS",
-    "fullName1":"Glutaminyl tRNA Synthetase",
-    "fullName2":"Tyrosyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class I catalytic domains from the Glutaminyl tRNA Synthetase (<a href='/class1/gln'>GlnRS</a>) and Tyrosyl tRNA Synthetase (<a href='/class1/tyr'>TyrRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.45,
-    "rmsd1":    2.03,
-    "rmsd2":    3.08,
-    "crossFamilyRmsd":    4.54,
-    "rmsdTotal":    3.64,
+    "fullName1":"Glutaminyl-tRNA Synthetase",
+    "fullName2":"Tyrosyl-tRNA Synthetase",
+    "description":"Pairwise comparison of the Class I catalytic domains from the Glutaminyl-tRNA Synthetase (<a href='/class1/gln'>GlnRS</a>) and Tyrosyl-tRNA Synthetase (<a href='/class1/tyr'>TyrRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.474,
+    "tm":    0.6879,
+    "rmsd1":    1.97,
+    "rmsd2":    3.2,
+    "crossFamilyRmsd":    4.4,
+    "rmsdTotal":    3.62,
     "features":{
         "Protozyme":{
             "acc":"GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb",
             "range":"2-39",
             "level":            2
         },
-        "Crossover 2":{
-            "acc":"GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb",
-            "range":"200-232",
+        "SDH":{
+            "acc":"TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb",
+            "range":"119-134",
             "level":            2
         },
         "CP1":{
@@ -44,6 +45,11 @@
             "range":"90-184",
             "level":            2,
             "href":"/superfamily/class1/SC1b_IM"
+        },
+        "Crossover 2":{
+            "acc":"GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb",
+            "range":"200-232",
+            "level":            2
         }
     }
 }

@@ -4,19 +4,20 @@
     "icon":"/fig/icon_white.png",
     "family1":"LeuRS-A",
     "family2":"LysRS-I",
-    "fullName1":"Leucyl tRNA Synthetase (Archaeal-like)",
-    "fullName2":"Class I Lysyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class I catalytic domains from the Leucyl tRNA Synthetase (Archaeal-like) (<a href='/class1/leu2'>LeuRS-A</a>) and Class I Lysyl tRNA Synthetase (<a href='/class1/lys'>LysRS-I</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.884,
-    "rmsd1":    6.29,
+    "fullName1":"Leucyl-tRNA Synthetase (Archaeal-like)",
+    "fullName2":"Class I Lysyl-tRNA Synthetase",
+    "description":"Pairwise comparison of the Class I catalytic domains from the Leucyl-tRNA Synthetase (Archaeal-like) (<a href='/class1/leu2'>LeuRS-A</a>) and Class I Lysyl-tRNA Synthetase (<a href='/class1/lys'>LysRS-I</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.897,
+    "tm":    0.7004,
+    "rmsd1":    5.69,
     "rmsd2":    2.57,
-    "crossFamilyRmsd":    6.2,
-    "rmsdTotal":    5.36,
+    "crossFamilyRmsd":    6.22,
+    "rmsdTotal":    5.24,
     "features":{
         "CP1":{
             "acc":"LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb",
-            "range":"125-560",
-            "level":            2,
+            "range":"125-541",
+            "level":            3,
             "href":"/superfamily/class1/CP1"
         },
         "Protozyme":{
@@ -44,6 +45,42 @@
             "acc":"LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb",
             "range":"606-610",
             "level":            1
+        },
+        "Variable bundle":{
+            "acc":"LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb",
+            "range":"48-94",
+            "level":            3,
+            "href":"/superfamily/class1/Variable_bundle"
+        },
+        "LIV IM1":{
+            "acc":"LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb",
+            "range":"146-433",
+            "level":            2,
+            "href":"/superfamily/class1/LIV_IM1"
+        },
+        "CP2":{
+            "acc":"LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb",
+            "range":"434-466",
+            "level":            2,
+            "href":"/superfamily/class1/CP2"
+        },
+        "LeuRS-A IM2":{
+            "acc":"LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb",
+            "range":"484-542",
+            "level":            2,
+            "href":"/superfamily/class1/LeuRS-A_IM2"
+        },
+        "LeuRS-A IM1":{
+            "acc":"LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb",
+            "range":"326-373",
+            "level":            1,
+            "href":"/superfamily/class1/LeuRS-A_IM1"
+        },
+        "LI IM":{
+            "acc":"LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb",
+            "range":"216-252",
+            "level":            1,
+            "href":"/superfamily/class1/LI_IM"
         }
     }
 }

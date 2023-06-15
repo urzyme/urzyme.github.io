@@ -4,29 +4,30 @@
     "icon":"/fig/icon_white.png",
     "family1":"MetRS",
     "family2":"TyrRS",
-    "fullName1":"Methionyl tRNA Synthetase",
-    "fullName2":"Tyrosyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class I catalytic domains from the Methionyl tRNA Synthetase (<a href='/class1/met'>MetRS</a>) and Tyrosyl tRNA Synthetase (<a href='/class1/tyr'>TyrRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.55,
-    "rmsd1":    3.95,
-    "rmsd2":    2.88,
-    "crossFamilyRmsd":    4.62,
-    "rmsdTotal":    4.04,
+    "fullName1":"Methionyl-tRNA Synthetase",
+    "fullName2":"Tyrosyl-tRNA Synthetase",
+    "description":"Pairwise comparison of the Class I catalytic domains from the Methionyl-tRNA Synthetase (<a href='/class1/met'>MetRS</a>) and Tyrosyl-tRNA Synthetase (<a href='/class1/tyr'>TyrRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.499,
+    "tm":    0.681,
+    "rmsd1":    5.51,
+    "rmsd2":    3.05,
+    "crossFamilyRmsd":    6.07,
+    "rmsdTotal":    5.19,
     "features":{
         "Protozyme":{
             "acc":"MetRS_AF_Euk_Drosophila_melanogaster_gene37177.pdb",
             "range":"5-52",
             "level":            2
         },
-        "Crossover 2":{
-            "acc":"MetRS_AF_Euk_Drosophila_melanogaster_gene37177.pdb",
-            "range":"288-326",
+        "SDH":{
+            "acc":"TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb",
+            "range":"119-134",
             "level":            2
         },
         "CP1":{
             "acc":"MetRS_AF_Euk_Drosophila_melanogaster_gene37177.pdb",
-            "range":"98-274",
-            "level":            2,
+            "range":"98-229",
+            "level":            3,
             "href":"/superfamily/class1/CP1"
         },
         "HIGH":{
@@ -38,6 +39,17 @@
             "acc":"MetRS_AF_Euk_Drosophila_melanogaster_gene37177.pdb",
             "range":"335-339",
             "level":            1
+        },
+        "Crossover 2":{
+            "acc":"MetRS_AF_Euk_Drosophila_melanogaster_gene37177.pdb",
+            "range":"288-326",
+            "level":            2
+        },
+        "CP2":{
+            "acc":"MetRS_AF_Euk_Drosophila_melanogaster_gene37177.pdb",
+            "range":"195-229",
+            "level":            2,
+            "href":"/superfamily/class1/CP2"
         }
     }
 }

@@ -4,15 +4,22 @@
     "icon":"/fig/icon_white.png",
     "family1":"ProRS-B",
     "family2":"SerRS",
-    "fullName1":"Prolyl tRNA Synthetase (Bacterial-like)",
-    "fullName2":"Seryl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class II catalytic domains from the Prolyl tRNA Synthetase (Bacterial-like) (<a href='/class2/pro2'>ProRS-B</a>) and Seryl tRNA Synthetase (<a href='/class2/ser1'>SerRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    1.659,
-    "rmsd1":    3.07,
-    "rmsd2":    1.43,
-    "crossFamilyRmsd":    2.63,
-    "rmsdTotal":    2.13,
+    "fullName1":"Prolyl-tRNA Synthetase (Bacterial-like)",
+    "fullName2":"Seryl-tRNA Synthetase",
+    "description":"Pairwise comparison of the Class II catalytic domains from the Prolyl-tRNA Synthetase (Bacterial-like) (<a href='/class2/pro2'>ProRS-B</a>) and Seryl-tRNA Synthetase (<a href='/class2/ser1'>SerRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    1.72,
+    "tm":    0.8929,
+    "rmsd1":    3.4,
+    "rmsd2":    1.46,
+    "crossFamilyRmsd":    2.73,
+    "rmsdTotal":    2.17,
     "features":{
+        "Protozyme":{
+            "acc":"ProRS-B_AF_Bact_Acinetobacter_baylyi_ADP1_gene45233245.pdb",
+            "range":"51-106",
+            "level":            2,
+            "href":"/superfamily/class2/Protozyme"
+        },
         "Motif 1":{
             "acc":"ProRS-B_AF_Bact_Acinetobacter_baylyi_ADP1_gene45233245.pdb",
             "range":"22-31",
@@ -37,6 +44,12 @@
             "acc":"ProRS-B_AF_Bact_Acinetobacter_baylyi_ADP1_gene45233245.pdb",
             "range":"410",
             "level":            0
+        },
+        "ProRS-B IM":{
+            "acc":"ProRS-B_AF_Bact_Acinetobacter_baylyi_ADP1_gene45233245.pdb",
+            "range":"219-361",
+            "level":            3,
+            "href":"/superfamily/class2/ProRS-B_IM"
         }
     }
 }

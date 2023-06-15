@@ -4,15 +4,28 @@
     "icon":"/fig/icon_white.png",
     "family1":"GlyRS-B&alpha;",
     "family2":"PheRS-A&alpha;",
-    "fullName1":"Glycyl tRNA Synthetase (Bacterial-like)",
-    "fullName2":"&alpha; eukaryotic Phenylalanyl tRNA Synthetase subunit",
-    "description":"Pairwise comparison of the Class II catalytic domains from the Glycyl tRNA Synthetase (Bacterial-like) (<a href='/class2/gly2'>GlyRS-B&alpha;</a>) and &alpha; eukaryotic Phenylalanyl tRNA Synthetase subunit (<a href='/class2/phe3'>PheRS-A&alpha;</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "fullName1":"Glycyl-tRNA Synthetase (Bacterial-like)",
+    "fullName2":"Phenylalanyl-tRNA Synthetase &alpha; Subunit (Archaeal-like)",
+    "description":"Pairwise comparison of the Class II catalytic domains from the Glycyl-tRNA Synthetase (Bacterial-like) (<a href='/class2/gly2'>GlyRS-B&alpha;</a>) and Phenylalanyl-tRNA Synthetase &alpha; Subunit (Archaeal-like) (<a href='/class2/phe3'>PheRS-A&alpha;</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
     "rmsd":    1.742,
-    "rmsd1":    2.7,
+    "tm":    0.8395,
+    "rmsd1":    2.64,
     "rmsd2":    1.19,
-    "crossFamilyRmsd":    3.37,
-    "rmsdTotal":    2.78,
+    "crossFamilyRmsd":    3.33,
+    "rmsdTotal":    2.75,
     "features":{
+        "PheRS-A\u03b1 IM":{
+            "acc":"PheRS-A\u03b1_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724458.pdb",
+            "range":"60-89",
+            "level":            3,
+            "href":"/superfamily/class2/PheRS-A\u03b1_IM"
+        },
+        "Protozyme":{
+            "acc":"GlyRS-B\u03b1_AF_Euk_Ostreococcus_tauri_gene9837276.pdb",
+            "range":"25-64",
+            "level":            2,
+            "href":"/superfamily/class2/Protozyme"
+        },
         "Motif 1":{
             "acc":"GlyRS-B\u03b1_AF_Euk_Ostreococcus_tauri_gene9837276.pdb",
             "range":"17-26",

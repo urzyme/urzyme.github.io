@@ -4,15 +4,28 @@
     "icon":"/fig/icon_white.png",
     "family1":"PheRS-B&alpha;",
     "family2":"ProRS-B",
-    "fullName1":"&alpha; bacterial Phenylalanyl tRNA Synthetase subunit",
-    "fullName2":"Prolyl tRNA Synthetase (Bacterial-like)",
-    "description":"Pairwise comparison of the Class II catalytic domains from the &alpha; bacterial Phenylalanyl tRNA Synthetase subunit (<a href='/class2/phe1'>PheRS-B&alpha;</a>) and Prolyl tRNA Synthetase (Bacterial-like) (<a href='/class2/pro2'>ProRS-B</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.214,
-    "rmsd1":    1.45,
-    "rmsd2":    2.63,
-    "crossFamilyRmsd":    3.95,
-    "rmsdTotal":    3.04,
+    "fullName1":"Phenylalanyl-tRNA Synthetase &alpha; Subunit (Bacterial-like)",
+    "fullName2":"Prolyl-tRNA Synthetase (Bacterial-like)",
+    "description":"Pairwise comparison of the Class II catalytic domains from the Phenylalanyl-tRNA Synthetase &alpha; Subunit (Bacterial-like) (<a href='/class2/phe1'>PheRS-B&alpha;</a>) and Prolyl-tRNA Synthetase (Bacterial-like) (<a href='/class2/pro2'>ProRS-B</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.414,
+    "tm":    0.7987,
+    "rmsd1":    1.79,
+    "rmsd2":    3.21,
+    "crossFamilyRmsd":    4.17,
+    "rmsdTotal":    3.34,
     "features":{
+        "ProRS-B IM":{
+            "acc":"ProRS-B_AF_Bact_Acinetobacter_baylyi_ADP1_gene45233245.pdb",
+            "range":"219-361",
+            "level":            3,
+            "href":"/superfamily/class2/ProRS-B_IM"
+        },
+        "Protozyme":{
+            "acc":"PheRS-B\u03b1_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440383.pdb",
+            "range":"59-99",
+            "level":            2,
+            "href":"/superfamily/class2/Protozyme"
+        },
         "Motif 1":{
             "acc":"PheRS-B\u03b1_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440383.pdb",
             "range":"19-28",

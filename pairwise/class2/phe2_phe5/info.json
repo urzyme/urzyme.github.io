@@ -4,28 +4,35 @@
     "icon":"/fig/icon_white.png",
     "family1":"PheRS-B&beta;",
     "family2":"PheRS-M",
-    "fullName1":"&beta; bacterial Phenylalanyl tRNA Synthetase subunit",
-    "fullName2":"Mitochondrial Phenylalanyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class II catalytic domains from the &beta; bacterial Phenylalanyl tRNA Synthetase subunit (<a href='/class2/phe2'>PheRS-B&beta;</a>) and Mitochondrial Phenylalanyl tRNA Synthetase (<a href='/class2/phe5'>PheRS-M</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    1.787,
-    "rmsd1":    2.97,
-    "rmsd2":    3.48,
+    "fullName1":"Phenylalanyl-tRNA Synthetase &beta; Subunit (Bacterial-like)",
+    "fullName2":"Phenylalanyl-tRNA Synthetase (Mitochondrial)",
+    "description":"Pairwise comparison of the Class II catalytic domains from the Phenylalanyl-tRNA Synthetase &beta; Subunit (Bacterial-like) (<a href='/class2/phe2'>PheRS-B&beta;</a>) and Phenylalanyl-tRNA Synthetase (Mitochondrial) (<a href='/class2/phe5'>PheRS-M</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.334,
+    "tm":    0.763,
+    "rmsd1":    3.22,
+    "rmsd2":    4.48,
     "crossFamilyRmsd":    5.59,
-    "rmsdTotal":    4.4,
+    "rmsdTotal":    4.54,
     "features":{
+        "Protozyme":{
+            "acc":"PheRS-B\u03b2_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb",
+            "range":"56-95",
+            "level":            2,
+            "href":"/superfamily/class2/Protozyme"
+        },
         "Motif 1":{
-            "acc":"PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb",
-            "range":"23-32",
+            "acc":"PheRS-B\u03b2_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb",
+            "range":"42-51",
             "level":            1
         },
         "Motif 2":{
-            "acc":"PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb",
-            "range":"84-93",
+            "acc":"PheRS-B\u03b2_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb",
+            "range":"86-95",
             "level":            1
         },
         "Motif 3":{
-            "acc":"PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb",
-            "range":"199-208",
+            "acc":"PheRS-B\u03b2_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb",
+            "range":"189-198",
             "level":            1
         },
         "Tweezer 1":{
@@ -37,21 +44,6 @@
             "acc":"PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb",
             "range":"206",
             "level":            0
-        },
-        "Motif 1*":{
-            "acc":"PheRS-B\u03b2_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb",
-            "range":"13-22",
-            "level":            1
-        },
-        "Motif 2*":{
-            "acc":"PheRS-B\u03b2_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb",
-            "range":"57-66",
-            "level":            1
-        },
-        "Motif 3*":{
-            "acc":"PheRS-B\u03b2_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb",
-            "range":"160-169",
-            "level":            1
         }
     }
 }

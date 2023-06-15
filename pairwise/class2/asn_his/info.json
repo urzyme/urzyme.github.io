@@ -4,15 +4,34 @@
     "icon":"/fig/icon_white.png",
     "family1":"AsnRS",
     "family2":"HisRS",
-    "fullName1":"Asparginyl tRNA Synthetase",
-    "fullName2":"Histidyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class II catalytic domains from the Asparginyl tRNA Synthetase (<a href='/class2/asn'>AsnRS</a>) and Histidyl tRNA Synthetase (<a href='/class2/his'>HisRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.484,
-    "rmsd1":    1.82,
-    "rmsd2":    3.8,
-    "crossFamilyRmsd":    4.76,
-    "rmsdTotal":    3.84,
+    "fullName1":"Asparginyl-tRNA Synthetase",
+    "fullName2":"Histidyl-tRNA Synthetase",
+    "description":"Pairwise comparison of the Class II catalytic domains from the Asparginyl-tRNA Synthetase (<a href='/class2/asn'>AsnRS</a>) and Histidyl-tRNA Synthetase (<a href='/class2/his'>HisRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.534,
+    "tm":    0.6529,
+    "rmsd1":    2.74,
+    "rmsd2":    3.32,
+    "crossFamilyRmsd":    5.47,
+    "rmsdTotal":    4.28,
     "features":{
+        "HTRS IM":{
+            "acc":"HisRS_AF_Arch_Candidatus_Methanomassiliicoccus_intestinalis_Issoire-Mx1_gene16154026.pdb",
+            "range":"218-248",
+            "level":            3,
+            "href":"/superfamily/class2/HTRS_IM"
+        },
+        "HisRS IM":{
+            "acc":"HisRS_AF_Arch_Candidatus_Methanomassiliicoccus_intestinalis_Issoire-Mx1_gene16154026.pdb",
+            "range":"150-217",
+            "level":            3,
+            "href":"/superfamily/class2/HisRS_IM"
+        },
+        "Protozyme":{
+            "acc":"AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb",
+            "range":"67-106",
+            "level":            2,
+            "href":"/superfamily/class2/Protozyme"
+        },
         "Motif 1":{
             "acc":"AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb",
             "range":"38-47",
@@ -37,6 +56,18 @@
             "acc":"AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb",
             "range":"291",
             "level":            0
+        },
+        "Subclass 2b IM 1":{
+            "acc":"AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb",
+            "range":"160-199",
+            "level":            3,
+            "href":"/superfamily/class2/Subclass_2b_IM_1"
+        },
+        "Subclass 2b IM 2":{
+            "acc":"AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb",
+            "range":"248-281",
+            "level":            3,
+            "href":"/superfamily/class2/Subclass_2b_IM_2"
         }
     }
 }

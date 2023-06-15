@@ -4,15 +4,34 @@
     "icon":"/fig/icon_white.png",
     "family1":"GlxRS",
     "family2":"ValRS",
-    "fullName1":"Non-discriminating Glutamyl tRNA Synthetase",
-    "fullName2":"Valyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class I catalytic domains from the Non-discriminating Glutamyl tRNA Synthetase (<a href='/class1/glu2'>GlxRS</a>) and Valyl tRNA Synthetase (<a href='/class1/val'>ValRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.53,
-    "rmsd1":    2.05,
-    "rmsd2":    2.82,
-    "crossFamilyRmsd":    6.62,
-    "rmsdTotal":    4.47,
+    "fullName1":"Non-discriminating Glutamyl-tRNA Synthetase",
+    "fullName2":"Valyl-tRNA Synthetase",
+    "description":"Pairwise comparison of the Class I catalytic domains from the Non-discriminating Glutamyl-tRNA Synthetase (<a href='/class1/glu2'>GlxRS</a>) and Valyl-tRNA Synthetase (<a href='/class1/val'>ValRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.496,
+    "tm":    0.7908,
+    "rmsd1":    2.69,
+    "rmsd2":    2.57,
+    "crossFamilyRmsd":    6.36,
+    "rmsdTotal":    4.29,
     "features":{
+        "CP1":{
+            "acc":"ValRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094666.pdb",
+            "range":"111-438",
+            "level":            3,
+            "href":"/superfamily/class1/CP1"
+        },
+        "LIV IM1":{
+            "acc":"ValRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094666.pdb",
+            "range":"130-326",
+            "level":            2,
+            "href":"/superfamily/class1/LIV_IM1"
+        },
+        "LIV IM2":{
+            "acc":"ValRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094666.pdb",
+            "range":"376-421",
+            "level":            2,
+            "href":"/superfamily/class1/LIV_IM2"
+        },
         "Protozyme":{
             "acc":"GlxRS_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb",
             "range":"4-42",
@@ -23,11 +42,11 @@
             "range":"198-229",
             "level":            2
         },
-        "CP1":{
+        "CP2":{
             "acc":"ValRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094666.pdb",
-            "range":"111-438",
-            "level":            2,
-            "href":"/superfamily/class1/CP1"
+            "range":"327-360",
+            "level":            1,
+            "href":"/superfamily/class1/CP2"
         },
         "HIGH":{
             "acc":"GlxRS_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb",

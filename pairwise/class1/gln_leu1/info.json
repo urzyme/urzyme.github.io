@@ -4,15 +4,22 @@
     "icon":"/fig/icon_white.png",
     "family1":"GlnRS",
     "family2":"LeuRS-B",
-    "fullName1":"Glutaminyl tRNA Synthetase",
-    "fullName2":"Leucyl tRNA Synthetase (Bacterial-like)",
-    "description":"Pairwise comparison of the Class I catalytic domains from the Glutaminyl tRNA Synthetase (<a href='/class1/gln'>GlnRS</a>) and Leucyl tRNA Synthetase (Bacterial-like) (<a href='/class1/leu1'>LeuRS-B</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.632,
-    "rmsd1":    1.58,
-    "rmsd2":    3.82,
-    "crossFamilyRmsd":    5.75,
-    "rmsdTotal":    4.32,
+    "fullName1":"Glutaminyl-tRNA Synthetase",
+    "fullName2":"Leucyl-tRNA Synthetase (Bacterial-like)",
+    "description":"Pairwise comparison of the Class I catalytic domains from the Glutaminyl-tRNA Synthetase (<a href='/class1/gln'>GlnRS</a>) and Leucyl-tRNA Synthetase (Bacterial-like) (<a href='/class1/leu1'>LeuRS-B</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "rmsd":    2.557,
+    "tm":    0.734,
+    "rmsd1":    1.54,
+    "rmsd2":    3.86,
+    "crossFamilyRmsd":    6.55,
+    "rmsdTotal":    4.77,
     "features":{
+        "CP1":{
+            "acc":"GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb",
+            "range":"73-198",
+            "level":            3,
+            "href":"/superfamily/class1/CP1"
+        },
         "Protozyme":{
             "acc":"GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb",
             "range":"2-39",
@@ -23,11 +30,24 @@
             "range":"200-232",
             "level":            2
         },
-        "CP1":{
-            "acc":"GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb",
-            "range":"73-198",
-            "level":            3,
-            "href":"/superfamily/class1/CP1"
+        "CP2":{
+            "acc":"LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb",
+            "range":"264-293",
+            "align":"right",
+            "level":            2,
+            "href":"/superfamily/class1/CP2"
+        },
+        "LIV IM1":{
+            "acc":"LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb",
+            "range":"294-521",
+            "level":            2,
+            "href":"/superfamily/class1/LIV_IM1"
+        },
+        "LIV IM2":{
+            "acc":"LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb",
+            "range":"536-607",
+            "level":            2,
+            "href":"/superfamily/class1/LIV_IM2"
         },
         "HIGH":{
             "acc":"LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb",
