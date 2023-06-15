@@ -15,14 +15,16 @@
 <script type='text/javascript' src='../../bower_components/bio-pv/bio-pv.min.js'></script>
 
         
-<script type="text/x-mathjax-config">
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
 </script>
+
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KBC488H8EG"></script>
@@ -70,8 +72,37 @@ function init(){
 				
 				<div>
 				
-				<!-- GlnRS is one of only 3 "dispensible" aaRS which do not exist in all organisms (alongside CysRS and AsnRS)
-					https://en.wikipedia.org/wiki/YqeY_protein_domain -->
+				
+					Glutaminyl-tRNA synthetase (GlnRS) is an enzyme that plays a crucial role in protein synthesis by catalysing the attachment of the amino acid glutamine to its cognate tRNA:
+
+
+
+
+					<div class="reaction">
+						<span>
+							$ \text{Gln} + \text{tRNA}^\text{Gln} + \text{ATP} \xrightarrow{\text{GlnRS}} \text{Gln-tRNA}^\text{Gln} + \text{AMP} + \text{PP}_i  $
+						</span>
+					</div>
+					
+					
+					Many organisms, including archaea and some bacteria, do not possess GlnRS, in which case the incorporation of glutamine into the polypeptide can be accomplished through the use 
+					of a <a href="/class1/glu2">non-discriminating GlxRS</a> coupled with amidotransferase activity (Lapointe et al. 1986, Raczniak et al. 2001).
+					The same mechanism is employed by the Class II <a href="/class2/asp2">AspRS</a> and <a href="/class2/asn">AsnRS</a> families, 
+					leading to the hypothesis that AsnRS and GlnRS were among the last of the synthetases to evolve (de Pouplana and Schimmel, 2001, Hadd et al. 2014). <br><br>
+					
+					
+					The N-terminal catalytic domain of GlnRS closely resembles that of <a href="/class1/glu1">GluRS</a> and <a href="/class1/glu2">GlxRS</a>, 
+					constituting subclass Ib (Perona et al. 2012, Gomez et al., 2020).
+					Their catalytic domains are characterised by an insertion flanked by two helices within connecting peptide 1 (SC1b IM), and 
+					may play a role in acceptor stem recognition  (Rath et al. 1998, Nureki et al. 2010).
+					Its anticodon binding domain is located at the C-terminal (Rould et al. 1991) and is homologous with that of GlxRS but not GluRS. <br><br>
+					
+
+				
+					In many eukaryotes, the N-terminal contains a helical domain homologous to the Yqey domain found in amidotransferases (Hadd et al. 2014), and is required
+					for the assembly of the MARS complex (Kim et al. 2000).
+					It may also contribute to the enzyme's ability to discriminate against tRNA<sup>Glu</sup> (Hadd et al. 2014).
+
 
 
 				</div>
@@ -118,9 +149,56 @@ function init(){
 		
 		
 		<div id="references">
+		
+		
+			<div>
+				John J. Perona. "The Aminoacyl-tRNA Synthetases" CRC Press (2005): Chapter 9: Glutaminyl-tRNA Synthetases.
+			</div>
 	
 			<div>
 				Gomez, Miguel Angel Rubio, and Michael Ibba. "Aminoacyl-tRNA synthetases." Rna 26.8 (2020): 910-936.
+			</div>
+			
+			
+			<div>
+				de Pouplana, Lluıs Ribas, and Paul Schimmel. "Operational RNA code for amino acids in relation to genetic code in evolution." Journal of Biological Chemistry 276.10 (2001): 6881-6884.
+			</div>
+			
+			<div>
+				Raczniak, Gregory, et al. "A single amidotransferase forms asparaginyl-tRNA and glutaminyl-tRNA in Chlamydia trachomatis." Journal of Biological Chemistry 276.49 (2001): 45862-45867.
+			</div>
+			
+			
+			<div>
+				Perona, John J., and Andrew Hadd. "Structural diversity and protein engineering of the aminoacyl-tRNA synthetases." Biochemistry 51.44 (2012): 8705-8729.
+			</div>
+			
+			<div>
+				Wolf, Yuri I., et al. "Evolution of aminoacyl-tRNA synthetases—analysis of unique domain architectures and phylogenetic trees reveals a complex history of horizontal gene transfer events." Genome research 9.8 (1999): 689-710.
+			</div>
+			
+			<div>
+				Hadd, Andrew, and John J. Perona. "Coevolution of specificity determinants in eukaryotic glutamyl-and glutaminyl-tRNA synthetases." Journal of molecular biology 426.21 (2014): 3619-3633.
+			</div>
+			
+			<div>
+				Lapointe JA, Duplain LO, Proulx MA. A single glutamyl-tRNA synthetase aminoacylates tRNAGlu and tRNAGln in Bacillus subtilis and efficiently misacylates Escherichia coli tRNAGln1 in vitro. Journal of Bacteriology. 1986 Jan;165(1):88-93.
+			</div>
+			
+			<div>
+				Kim, Taeho, et al. "Catalytic peptide of human glutaminyl-tRNA synthetase is essential for its assembly to the aminoacyl-tRNA synthetase complex." Journal of Biological Chemistry 275.28 (2000): 21768-21772.
+			</div>
+			
+			<div>
+				Rath, Virginia L., et al. "How glutaminyl-tRNA synthetase selects glutamine." Structure 6.4 (1998): 439-449.
+			</div>
+			
+			<div>
+				Rould, M. A., J. J. Perona, and T. A. Steitz. "Structural basis of anticodon loop recognition by glutaminyl-tRNA synthetase." Nature 352.6332 (1991): 213-218.
+			</div>
+			
+			<div>
+				Nureki, Osamu, et al. "Structure of an archaeal non-discriminating glutamyl-tRNA synthetase: a missing link in the evolution of Gln-tRNAGln formation." Nucleic acids research 38.20 (2010): 7286-7297.
 			</div>
 
 		
