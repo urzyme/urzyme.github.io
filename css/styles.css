@@ -24,6 +24,37 @@ svg {
 
 
 
+ul.aalist li{
+
+	text-align: left;
+	font-size:1.3em;
+	margin:1em;
+
+}
+
+
+
+ul.aalist li img{
+
+	vertical-align: middle;
+	height:1.2em;
+
+}
+
+
+@media only screen and ( max-device-width: 1000px ) {
+
+
+	ul.aalist li{
+		margin:2em;
+	}
+
+	ul.aalist li img{
+		height:2.5em;
+	}
+	
+}
+
 
 .alignmentToolBar{
 	font-size: 0.85em;
