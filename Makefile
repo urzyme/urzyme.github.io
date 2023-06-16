@@ -274,6 +274,16 @@ domain-gln:
 
 
 
+glu3:
+	cd class1/glu3 && echo "glu3"; \
+	bash ../../scripts/align.sh
+
+domain-glu3:
+	cd class1/glu3 && echo "glu3"; \
+	bash ../../scripts/makeDomains.sh
+
+	
+
 glu:
 	cd class1/glu1 && echo "glu"; \
 	bash ../../scripts/align.sh
