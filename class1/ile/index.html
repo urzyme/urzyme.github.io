@@ -14,15 +14,23 @@
 <script language='JavaScript' type='text/JavaScript' src="/js/util.js"></script>
 <script type='text/javascript' src='../../bower_components/bio-pv/bio-pv.min.js'></script>
 
-        
-<script type="text/x-mathjax-config">
+         
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
 </script>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KBC488H8EG"></script>
 <script>
@@ -32,11 +40,6 @@
 
   gtag('config', 'G-KBC488H8EG');
 </script>
-
-
-
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
 
 
@@ -70,7 +73,49 @@ function init(){
 				
 				<div>
 				
+				
+				
+					Isoleucyl-tRNA synthetase (IleRS) is an enzyme that plays a crucial role in protein synthesis by catalysing the attachment of the amino acid isoleucine to its cognate tRNA:
 
+
+
+
+					<div class="reaction">
+						<span>
+							$ \text{Ile} + \text{tRNA}^\text{Ile} + \text{ATP} \xrightarrow{\text{IleRS}} \text{Ile-tRNA}^\text{Ile} + \text{AMP} + \text{PP}_i  $
+						</span>
+					</div>
+					
+					
+					IleRS features a conserved and modular domain architecture: an N-terminal catalytic domain, a C-terminal tRNA binding domain, and a post-transfer editing domain inserted within the catalytic domain. 
+					The enzyme has been extensively studied (Nordin and Schimmel 2005). <br><br>
+					
+					
+					The enzyme is closely related to the <a href="../leu2">LeuRS-A</a>, <a href="../leu1">LeuRS-B</a>, <a href="../val">ValRS</a>, and <a href="../met">MetRS</a> families, which comprise 
+					subclass Ia (Perona and Hadd 2012, Gomez and Ibba, 2020).
+					Members of subclass Ia are characterised by their hydrophobic amino acid substrates, as well as the connecting peptide 2 (CP2) and zinc finger insertions, depicted below. 
+				    CP2 is 30-40 amino acid two-helix bundle on the surface of the catalytic domain (Starzyk et al. 1987) and appears to be essential for amino acid activation (Zhou at al. 2008). 
+					Upstream from this resides a cysteine-rich zinc finger, 20-40 amino acids in length, also essential for effective aminoacylation (Nureki et al. 1993, Sugiura et al. 2000). <br><br>
+					
+					
+					IleRS, LeuRS, and ValRS share a a post-transfer editing domain, absent from MetRS.
+					The editing domain typically resides within the zinc finger, providing further amino acid selectivity by expelling a wide range of mistargetted amino acids 
+					such alanine, cysteine, threonine, valine, isoleucine, methionine, homocysteine, and norvaline (Gomez and Ibba, 2020).
+					IleRS, ValRS, and the bacterial-like LeuRS-B are further characterised by connecting peptide 3 (CP3), which contains a second zinc-finger motif in certain organisms (Fukunaga et al. 2005).
+					Its functional role is unclear. <br><br>
+					
+					
+					
+					
+					
+
+
+					<!--
+						
+						
+						ABD - why 2 domains? And are there two variants of the last domain?
+						
+					-->
 
 				</div>
 				
@@ -120,7 +165,42 @@ function init(){
 			<div>
 				Gomez, Miguel Angel Rubio, and Michael Ibba. "Aminoacyl-tRNA synthetases." Rna 26.8 (2020): 910-936.
 			</div>
+			
+			
+			<div>
+				Brian E. Nordin and Paul Schimmel. "The Aminoacyl-tRNA Synthetases" CRC Press (2005): Chapter 4: Isoleuyl-tRNA Synthetases.
+			</div>
 
+
+			<div>
+				Zhou, Xiao-Long, Bin Zhu, and En-Duo Wang. "The CP2 domain of leucyl-tRNA synthetase is crucial for amino acid activation and post-transfer editing." Journal of Biological Chemistry 283.52 (2008): 36608-36616.
+			</div>
+
+			<div>
+				Starzyk, Ruth M., Teresa A. Webster, and Paul Schimmel. "Evidence for dispensable sequences inserted into a nucleotide fold." Science 237.4822 (1987): 1614-1618.
+			</div>
+			
+			
+			<div>
+				Perona, John J., and Andrew Hadd. "Structural diversity and protein engineering of the aminoacyl-tRNA synthetases." Biochemistry 51.44 (2012): 8705-8729.
+			</div>
+			
+			<div>
+				Nureki, O., et al. "Chemical modification and mutagenesis studies on zinc binding of aminoacyl-tRNA synthetases." Journal of Biological Chemistry 268.21 (1993): 15368-15373.
+			</div>
+			
+			
+			<div>
+				Sugiura, Ikuko, et al. "The 2.0 Å crystal structure of Thermus thermophilus methionyl-tRNA synthetase reveals two RNA-binding modules." Structure 8.2 (2000): 197-208.
+			</div>
+			
+			<div>
+				Fukunaga, Ryuya, and Shigeyuki Yokoyama. "Crystal structure of leucyl-tRNA synthetase from the archaeon Pyrococcus horikoshii reveals a novel editing domain orientation." Journal of molecular biology 346.1 (2005): 57-71.
+			</div>
+			
+			<div>
+				Nureki, Osamu, et al. "Enzyme structure with two catalytic sites for double-sieve selection of substrate." Science 280.5363 (1998): 578-582.
+			</div>
 		
 		</div>
 
