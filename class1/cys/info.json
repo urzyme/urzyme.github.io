@@ -16,7 +16,7 @@
 		"hinges": [681],
 		"refine": [{"start": 860}],
 		"features": {"Catalytic domain": {"acc": "CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb", "range": "18-280", "level": 4},
-					"Helical bundle": {"acc": "CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb", "range": "282-402", "level": 4},
+					"Anticodon binding domain 1a": {"acc": "CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb", "range": "282-402", "level": 4},
 					"Anticodon binding domain": {"acc": "CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb", "range": "403-455", "level": 4},
 					"CP1": {"acc": "CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb", "range": "113-216", "level": 3, "href": "/superfamily/class1/CP1"},
 					"Protozyme": {"acc": "CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb", "range": "21-67", "level": 2},

@@ -15,7 +15,7 @@
 		"hinge_str": "structures/ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb",
 		"hinges": [114],
 		"features": {"Catalytic domain": {"acc": "ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb", "range": "117-474", "level": 4},
-					"Anticodon binding domain": {"acc": "ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb", "range": "475-632", "level": 4},
+					"Anticodon binding domain 1a": {"acc": "ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb", "range": "475-632", "level": 4},
 					"D-loop binding domain": {"acc": "ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb", "range": "7-111", "level": 4},
 					"CP1": {"acc": "ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb", "range": "304-390", "level": 3, "href": "/superfamily/class1/CP1"},
 					"Variable bundle": {"acc": "ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb", "range": "168-260", "level": 3, "href": "/superfamily/class1/Variable_bundle"},

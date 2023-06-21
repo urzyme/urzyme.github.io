@@ -9,7 +9,7 @@ do
 
 	cd $c
 	
-	for d in Anticodon*/
+	for d in *domain_1a/
 	do
 
 		echo "$c $d"
