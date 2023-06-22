@@ -123,10 +123,96 @@ function renderaaRS(isPairwise = false, isSuperfamily = false){
   IS_SUPERFAMILY = isSuperfamily
   
 
+
+  // Initialise HTML
+  if ($("#main").children().length == 0){
+  	$("#main").append(`
+		  	<ul id="flexContainer">
+					<li class="summary">
+					</li>
+
+					<li class="notes">
+						
+						
+						<div id="introduction">
+
+
+						</div>
+						
+					</li>
+					
+				</ul>
+				
+
+				<div class="svgDiv">
+					<svg id="secondary" height=0 width=0 overflow="auto"></svg>
+				</div>
+
+				
+				
+				<div id="alignment" class="svgDiv">
+
+				</div>
+
+
+				<div id="alignment2" class="svgDiv">
+
+				</div>
+
+
+				<div id="tertiaryTable">
+					
+					<table>
+						<tr>
+							<td>
+								<div id="superposition"> </div>
+							</td>
+							
+							<td>
+								<div id="tertiary"> </div>
+							</td>
+						</tr>
+					
+					</table>
+					
+					
+				
+				</div>
+				
+				
+				<div id="references">
+
+
+				</div>
+		`);
+  }
+
    
 
 	// Add loading wheel
 	$("#alignment").before(`<div id="mainloader" class='loader'><img src='/fig/icon_white.png'></img></div>`);
+
+
+
+	// Render the introduction
+	fetch("README.md")      // The path to the raw Markdown file
+  .then(response => response.blob())  // Unwrap to a blob...
+  .then(blob => blob.text())          // ...then to raw text...
+  .then(markdown => {                 // ...then pass the raw text into marked.parse
+    document.getElementById("introduction").innerHTML = marked.parse(markdown);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+  });
+
+
+
+
+	// Render the references
+	fetch("REF.md")      // The path to the raw Markdown file
+  .then(response => response.blob())  // Unwrap to a blob...
+  .then(blob => blob.text())          // ...then to raw text...
+  .then(markdown => {                 // ...then pass the raw text into marked.parse
+    document.getElementById("references").innerHTML = marked.parse(markdown);
+  });
   
   
   renderHeader();

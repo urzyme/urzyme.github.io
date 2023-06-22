@@ -393,10 +393,19 @@ table.maptable tr.refSeq{
 
 
 
+#introduction{
+	 line-height: 150%;
+	 font-size:1.1em;
+
+
+}
+
 
 #references{
 	margin-bottom: 5em;
 	margin-top: 1em;
+	line-height: 150%;
+	font-size:1.1em;
 
 	text-align:justify;
 	background-image: linear-gradient(140deg, #008cba0a, #008cba22);
