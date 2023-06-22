@@ -14,14 +14,15 @@
 		"ref_str": ["structures/LeuRS-B_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56439070.pdb"],
 		"refine": [{"start": 1138, "stop": 1397}],
 		"features": {"Catalytic domain": {"acc": "LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb", "range": "17-791", "level": 4},
-					"CP1": {"acc": "LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb", "range": "155-644", "level": 3, "href": "/superfamily/class1/CP1"},
-					"Protozyme": {"acc": "LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb", "range": "61-103", "level": 2},
-					"Crossover 2": {"acc": "LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb", "range": "671-711", "level": 2, "align": "right"},
-					"CP2": {"acc": "LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb", "range": "281-310", "align":"right", "level": 2, "href": "/superfamily/class1/CP2"},
-					"LIV IM1": {"acc": "LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb", "range": "311-538", "level": 2, "href": "/superfamily/class1/LIV_IM1"},
-					"LIV IM2": {"acc": "LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb", "range": "553-624", "level": 2, "href": "/superfamily/class1/LIV_IM2"},
-					"LeuRS-B IM": {"acc": "LeuRS-B_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56439070.pdb", "range": "568-608", "level": 2, "href": "/superfamily/class1/LeuRS-B_IM"},
+					"Anticodon binding domain 1a": {"acc": "LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb", "range": "800-904", "level": 4},
+					"C-terminal domain": {"acc": "LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb", "range": "916-984", "level": 4},
+					"ZF": {"acc": "LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb", "range": "244-270", "align": "right", "level": 1},
+					"Protozyme": {"acc": "LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb", "range": "61-103", "level": 3},
+					"CP2": {"acc": "LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb", "range": "281-310", "align":"right", "level": 3},
+					"Editing domain 1a": {"acc": "LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb", "range": "311-538", "level": 3},
+					"CP3": {"acc": "LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb", "range": "553-624", "level": 3},
+					"LeuRS-B IM": {"acc": "LeuRS-B_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56439070.pdb", "range": "568-608", "level": 3},
 					"HIGH": {"acc": "LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb", "range": "77-80", "level": 1},
-					"KMSKS": {"acc": "LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb", "range": "760-764", "level": 1}}
+					"KMSKS": {"acc": "LeuRS-B_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578373.pdb", "range": "760-764", "level": 1, "align": "right"}}
 	
 }
