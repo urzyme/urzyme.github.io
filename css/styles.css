@@ -394,8 +394,8 @@ table.maptable tr.refSeq{
 
 
 #introduction{
-	 line-height: 150%;
-	 font-size:1.1em;
+	 line-height: 140%;
+	 font-size:1.0em;
 
 
 }
@@ -404,8 +404,8 @@ table.maptable tr.refSeq{
 #references{
 	margin-bottom: 5em;
 	margin-top: 1em;
-	line-height: 150%;
-	font-size:1.1em;
+	line-height: 140%;
+	font-size:1.0em;
 
 	text-align:justify;
 	background-image: linear-gradient(140deg, #008cba0a, #008cba22);
@@ -774,6 +774,22 @@ span.sseLegend span{
 	margin-top:0.3em;
 }
 
+.aafig{
+	text-align:center;
+	margin-left:1em;
+	margin-right:1em;
+	margin-top:3em;
+}
+
+
+.aafig img{
+	width:65%;
+}
+
+
+
+
+
 .indent{
 	margin-left: 2em !important;
 	font-size: 0.9em;
@@ -797,8 +813,8 @@ div.reaction span{
 
 
 @media only screen and ( max-device-width: 1000px ) {
-	.reaction {
-		font-size: 0.65em;
+	.math {
+		font-size: 1em;
 		text-size-adjust: 100%;
 		max-width:100%;
 	}

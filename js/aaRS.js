@@ -181,8 +181,6 @@ function renderaaRS(isPairwise = false, isSuperfamily = false){
 				
 				
 				<div id="references">
-
-
 				</div>
 		`);
   }
@@ -201,6 +199,7 @@ function renderaaRS(isPairwise = false, isSuperfamily = false){
   .then(markdown => {                 // ...then pass the raw text into marked.parse
     document.getElementById("introduction").innerHTML = marked.parse(markdown);
     MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+	$("#introduction").prepend("<h1>Introduction</h1>");
   });
 
 
@@ -211,7 +210,33 @@ function renderaaRS(isPairwise = false, isSuperfamily = false){
   .then(response => response.blob())  // Unwrap to a blob...
   .then(blob => blob.text())          // ...then to raw text...
   .then(markdown => {                 // ...then pass the raw text into marked.parse
+  
+
     document.getElementById("references").innerHTML = marked.parse(markdown);
+	
+	
+	// Sort references alphabetically
+	let refs = $("#references").find("p");
+	
+	
+	let getSorted = function(elements) {
+		console.log($(elements).toArray());
+		return $($(elements).toArray().sort(function(a, b){
+			let aVal = $(a).html();
+			let bVal = $(b).html();
+			return aVal.localeCompare(bVal);
+		}));
+	}
+	
+	
+	refs = getSorted(refs);
+	$("#references").html("");
+	
+	
+	$("#references").append(refs);
+	
+	
+	$("#references").prepend("<h1>References</h1>");
   });
   
   
@@ -240,9 +265,8 @@ function renderaaRS(isPairwise = false, isSuperfamily = false){
   
 
   // Section titles
-  $(".summary").prepend("<h2>Summary</h2>");
-  $("#flexContainer .notes").prepend("<h2>Introduction</h2>");
-  $("#references").prepend("<h2>References</h2>");
+  $(".summary").prepend("<h1>Summary</h1>");
+  $("#references").prepend("<h1>References</h1>");
 
   loadAllFiles(function(){
 
@@ -599,6 +623,12 @@ function renderInfo(text, resolve=function() { }){
   								<td>` + json.editing + `</td>
   							</tr>`);
 
+  }
+  
+  
+  if (json.fig != null && json.fig != ""){
+	  $(".summary table").after(`<div title="` + json.substrate + `" class="aafig"><img src="` + json.fig + `"/></div>`);
+	  
   }
 
 
