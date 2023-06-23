@@ -267,6 +267,8 @@ function renderaaRS(isPairwise = false, isSuperfamily = false){
   // Section titles
   $(".summary").prepend("<h1>Summary</h1>");
   $("#references").prepend("<h1>References</h1>");
+  
+  
 
   loadAllFiles(function(){
 
@@ -513,6 +515,9 @@ function renderInfo(text, resolve=function() { }){
 	 $("#main").prepend("<h1>" + json.fullName + "</h1>");
 	 
 	 
+	 if (json.hide != null && json.hide == true){
+		$(".summary").hide(0);
+	 }
 
 	$(".summary").append("<table></table>");
 
