@@ -24,4 +24,4 @@ Both subunit species are essential for GlyRS-B activity (Ostrem et al., 1974). T
   
   
 
-GlyRS-B is present in most bacteria and is phylogenetically distinct from the dimeric families [GlyRS-A](/class2/gly1) and [GlyRS-E](/class2/gly3) , which are present in archaea, eukaryotes, and some bacteria (Shiba, 2005). The figures below present eukaryotes with GlyRS-B, however these samples should be met with scepticism, as they could be due to contamination during genome sequencing.
+GlyRS-B is present in most bacteria and is phylogenetically distinct from the dimeric families [GlyRS-A](/class2/gly1) and [GlyRS-E](/class2/gly3), which are present in archaea, eukaryotes, and some bacteria (Shiba, 2005). The figures below present eukaryotes with GlyRS-B, however these samples should be met with scepticism, as they could be due to contamination during genome sequencing.

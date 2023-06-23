@@ -14,7 +14,7 @@
 <script language='JavaScript' type='text/JavaScript' src="/js/util.js"></script>
 <script type='text/javascript' src='../../bower_components/bio-pv/bio-pv.min.js'></script>
 
-        
+      <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>     
         
 <script type="text/javascript"
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -62,140 +62,6 @@ function init(){
 	<div id="main">
 
 		
-		<ul id="flexContainer">
-			<li class="summary">
-				
-			</li>
-
-
-			<li class="notes">
-				
-				<div>
-
-
-
-
-				Threonyl-tRNA synthetase (ThrRS) is an enzyme that plays a crucial role in protein synthesis by catalysing the attachment of the amino acid threonine to its cognate tRNA:
-
-
-
-					<div class="reaction">
-						<span>
-							$ \text{Thr} + \text{tRNA}^\text{Thr} + \text{ATP} \xrightarrow{\text{ThrRS}} \text{Thr-tRNA}^\text{Thr} + \text{AMP} + \text{PP}_i  $
-						</span>
-					</div>
-
-
-
-				ThrRS belongs to the subclass IIa, which includes other enzymes such as <a href="../his">HisRS</a>, <a href="../pro1">ProRS</a>, <a href="../ser1">SerRS</a>, and the <a href="../gly1">dimeric GlyRS</a> (Gomez et al. 2020, Valencia-Sánchez et al. 2016, Perona et al. 2012). The <a href="/superfamily/class2/tRNA_binding_domain_HGPT">anticodon binding domains</a> of subclass IIa, with the exception of SerRS, are homologous and are located at the C-terminal end (Wolf et al. 1999). 
-				The catalytic domain of ThrRS is typical of a class II aminoacyl-tRNA synthetase. Like most members of the superfamily, ATP binding is coordinated by the arginine tweezers, located in motifs 2 and 3 (Kaiser et al. 2018). 
-				The catalytic domain is characterised by the ~40 residue <a href="/superfamily/class2/ThrRS_IM/">ThrRS insertion module</a> which resides between motits 2 and 3 and contains a short &beta; strand which runs parallel with the six stranded anti-parallel fold. <br><br>
-
-				ThrRS also has an editing function, which occurs at the post-transfer level to remove mischarged serines from tRNA<sup>Thr</sup> (Dock-Bregeon et al. 2000). This is achieved through the two N-terminal domains N1 and N2 (Dock-Bregeon et a. 2004). In some archaea, a non-homologous N-terminal editing domain, which also targets mischarged serine, is present instead of the N1 and N2 domains (Hussain et al. 2006).
-				The <a href="/superfamily/class2/Editing_domain_AT/">editing domain</a> of ThrRS is located upstream of the catalytic domain and is homologous with that of <a href="../ala">AlaRS</a>, which is conversely located downstream of the catalytic domain (Sankaranarayanan et al. 1999). This highlights the complex evolutionary history of aminoacyl-tRNA synthetases and the diversity of structural arrangements observed among these enzymes.
-
-
-			
-				</div>
-				
-			</li>
-			
-		</ul>
-
-
-
-
-		<div class="svgDiv">
-			<svg id="secondary" height=0 width=0 overflow="auto"></svg>
-		</div>
-		
-		
-		<div id="alignment" class="svgDiv">
-
-		</div>
-
-
-		<div id="alignment2" class="svgDiv">
-
-		</div>
-
-		<div id="tertiaryTable">
-			
-			<table>
-				<tr>
-					<td>
-						<div id="superposition"> </div>
-					</td>
-					
-					<td>
-						<div id="tertiary"> </div>
-					</td>
-				</tr>
-			
-			</table>
-			
-			
-		
-		</div>
-		
-		
-		<div id="references">
-			
-
-			<div>
-				Wolf, Yuri I., et al. "Evolution of aminoacyl-tRNA synthetases—analysis of unique domain architectures and phylogenetic trees reveals a complex history of horizontal gene transfer events." Genome research 9.8 (1999): 689-710.
-			</div>
-
-			<div>
-				Perona, John J., and Andrew Hadd. "Structural diversity and protein engineering of the aminoacyl-tRNA synthetases." Biochemistry 51.44 (2012): 8705-8729.
-			</div>
-
-
-
-				<div>
-				Kaiser, Florian, et al. "Backbone brackets and arginine tweezers delineate class I and class II aminoacyl tRNA synthetases." PLoS computational biology 14.4 (2018): e1006101.
-			</div>
-
-			<div>
-				Torres-Larios, Alfredo, et al. "Structural basis of translational control by Escherichia coli threonyl tRNA synthetase." nature structural biology 9.5 (2002): 343-347.
-			</div>
-
-				<div>
-				Dock-Bregeon, Anne-Catherine, et al. "The Aminoacyl-tRNA Synthetases" CRC Press (2005): Chapter 16: Threonyl-tRNA Synthetases.
-			</div>
-
-			<div>
-				Dock-Bregeon, Anne-Catherine, et al. "Transfer RNA–mediated editing in threonyl-tRNA synthetase: the class II solution to the double discrimination problem." Cell 103.6 (2000): 877-884.
-			</div>
-
-
-			<div>
-				Dock-Bregeon, Anne-Catherine, et al. "Achieving error-free translation: the mechanism of proofreading of threonyl-tRNA synthetase at atomic resolution." Molecular cell 16.3 (2004): 375-386.
-			</div>
-
-			<div>
-				Hussain, Tanweer, et al. "Post‐transfer editing mechanism of ad‐aminoacyl‐tRNA deacylase‐like domain in threonyl‐tRNA synthetase from archaea." The EMBO Journal 25.17 (2006): 4152-4162.
-			</div>
-
-			<div>
-				Gomez, Miguel Angel Rubio, and Michael Ibba. "Aminoacyl-tRNA synthetases." Rna 26.8 (2020): 910-936.
-			</div>
-
-
-				<div>
-					Valencia-Sánchez, Marco Igor, et al. "Structural Insights into the Polyphyletic Origins of Glycyl tRNA Synthetases." Journal of Biological Chemistry 291.28 (2016): 14430-14446.
-			</div>
-
-
-						<div>
-				Sankaranarayanan, Rajan, et al. "The structure of threonyl-tRNA synthetase-tRNAThr complex enlightens its repressor activity and reveals an essential zinc ion in the active site." Cell 97.3 (1999): 371-381.
-			</div>
-
-
-
-		
-		</div>
-
 
 	</div>
 </body>
