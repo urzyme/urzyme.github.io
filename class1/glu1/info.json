@@ -5,6 +5,7 @@
 		"fullName": "Glutamyl-tRNA Synthetase (Bacterial-like)",
 		"icon": "/fig/icon_acidic.png",
 		"substrate": "Glutamate",
+		"fig": "/fig/aa/glu.png",
 		"incorporates": "Glutamate, glutamine",
 		"class": "Class I",
 		"subclass": "b",

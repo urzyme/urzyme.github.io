@@ -9,7 +9,7 @@ function renderHeader(includeFooter = true){
 
   
   // Header, footer
-  $("body").prepend("<div id='header'><span class='title'><a style='text-decoration:none; color:black' href='/'>aars.online<a></span></div>")
+  $("body").prepend("<div id='header'><span class='title'><a title='AARS Online' style='text-decoration:none; color:black' href='/'><img src='/fig/logo.png' height='100%'/><a></span></div>")
 
   if (includeFooter){
     $("body").append("<div id='footer'></div>")

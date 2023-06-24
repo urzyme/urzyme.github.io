@@ -188,8 +188,9 @@ function renderaaRS(isPairwise = false, isSuperfamily = false){
    
 
 	// Add loading wheel
-	$("#alignment").before(`<div id="mainloader" class='loader'><img src='/fig/icon_white.png'></img></div>`);
-
+	$("body").append(`<div id="mainloader" class='loader'><img src='/fig/loader.png'></img></div>`);
+	$("#main").css("opacity", "50%");
+	
 
 
 	// Render the introduction
@@ -409,7 +410,7 @@ function renderaaRS(isPairwise = false, isSuperfamily = false){
 
 	  // Delete loader
 	  $("#mainloader").remove();
-
+	  $("#main").css("opacity", "100%");
 	
 
   })
