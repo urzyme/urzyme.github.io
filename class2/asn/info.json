@@ -15,6 +15,8 @@
 		"ref_str": ["structures/AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb"],
 		"hinge_str": "structures/AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb",
 		"hinges": [109],
+		"tree": "/data/class2.nexus",
+		"treeDescription": "Phylogeny of the AARS catalytic domain (Douglas et al. 2023). Internal nodes are labelled by clade posterior support.",
 		"features": {"Catalytic domain": {"acc": "AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb", "range": "115-415", "level": 4},
 					"tRNA binding domain DNK": {"acc": "AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb", "range": "1-110", "level": 4, "href": "/superfamily/class2/tRNA_binding_domain_DNK/"},
 					"Subclass 2b IM 1": {"acc": "AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb", "range": "275-314", "level": 3, "href": "/superfamily/class2/Subclass_2b_IM_1"},

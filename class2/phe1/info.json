@@ -1,5 +1,5 @@
 {
-		"name": "PheRS-B&alpha;",
+		"name": "PheRS-Bα",
 		"id": "phe1",
 		"classID": "class2",
 		"fullName": "Phenylalanyl-tRNA Synthetase &alpha; Subunit (Bacterial-like)",
@@ -12,6 +12,8 @@
 		"oligo": "Heterotetramer",
 		"codons": "UUU, UUC",
 		"editing": "No",
+		"tree": "/data/class2.nexus",
+		"treeDescription": "Phylogeny of the AARS catalytic domain (Douglas et al. 2023). Internal nodes are labelled by clade posterior support.",
 		"ref_str": ["structures/PheRS-Bα_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440383.pdb"],
 		"hinge_str": "structures/PheRS-Bα_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440383.pdb",
 		"hinges": [105],

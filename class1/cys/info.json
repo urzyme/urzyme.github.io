@@ -16,6 +16,8 @@
 		"hinge_str": "structures/CysRS_AF_Mito_Saccharomyces_cerevisiae_S288C_gene855474.pdb",
 		"hinges": [681],
 		"refine": [{"start": 860}],
+		"tree": "/data/class1.nexus",
+		"treeDescription": "Phylogeny of the AARS catalytic domain (Douglas et al. 2023). Internal nodes are labelled by clade posterior support.",
 		"features": {"Catalytic domain": {"acc": "CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb", "range": "18-280", "level": 4},
 					"Anticodon binding domain 1a": {"acc": "CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb", "range": "282-402", "level": 4},
 					"Anticodon binding domain": {"acc": "CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb", "range": "403-455", "level": 4},

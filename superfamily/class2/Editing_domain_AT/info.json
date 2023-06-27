@@ -1,5 +1,9 @@
 {
+	"name": "Edit-AT",
     "fullName":"Editing domain (AlaRS and ThrRS)",
     "icon":"/fig/icon_white.png",
-	"hide": true
+	"hide": true,
+	"tree": "/data/editAT.nexus",
+	"fullTree": true,
+	"treeDescription": "Phylogeny of the AT editing domain. Internal nodes are labelled by clade posterior support."
 }

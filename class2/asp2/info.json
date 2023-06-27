@@ -14,6 +14,8 @@
 		"editing": "No",
 		"ref_str": ["structures/AsxRS_AF_Euk_Caenorhabditis_elegans_gene176334.pdb"],
 		"hinge_str": "structures/AsxRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094477.pdb",
+		"tree": "/data/class2.nexus",
+		"treeDescription": "Phylogeny of the AARS catalytic domain (Douglas et al. 2023). Internal nodes are labelled by clade posterior support.",
 		"hinges": [95],
 		"features": {"Catalytic domain": {"acc": "AsxRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094477.pdb", "range": "106-406", "level": 4},
 					"tRNA binding domain DNK": {"acc": "AsxRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094477.pdb", "range": "1-97", "level": 4, "href": "/superfamily/class2/tRNA_binding_domain_DNK/"},

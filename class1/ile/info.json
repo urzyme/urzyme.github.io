@@ -16,6 +16,8 @@
 		"hinge_str": "structures/IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
 		"hinges": [787],
 		"refine": [{"start": 1454}],
+		"tree": "/data/class1.nexus",
+		"treeDescription": "Phylogeny of the AARS catalytic domain (Douglas et al. 2023). Internal nodes are labelled by clade posterior support.",
 		"features": {"Catalytic domain": {"acc": "IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb", "range": "34-618", "level": 4},
 					"Anticodon binding domain 1a": {"acc": "IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb", "range": "619-784", "level": 4},
 					"C-terminal junction domain": {"acc": "IleRS_AF_Euk_Ostreococcus_lucimarinus_CCE9901_gene5000489.pdb", "range": "804-1136", "level": 4},

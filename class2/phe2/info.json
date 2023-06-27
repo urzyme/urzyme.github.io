@@ -1,5 +1,5 @@
 {
-		"name": "PheRS-B&beta;",
+		"name": "PheRS-Bβ",
 		"id": "phe2",
 		"classID": "class2",
 		"fullName": "Phenylalanyl-tRNA Synthetase &beta; Subunit (Bacterial-like)",
@@ -14,6 +14,8 @@
 		"editing": "Post-transfer",
 		"ref_str": ["structures/PheRS-Bβ_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb"],
 		"refine": [{"start": 34, "stop": 219}],
+		"tree": "/data/class2.nexus",
+		"treeDescription": "Phylogeny of the AARS catalytic domain (Douglas et al. 2023). Internal nodes are labelled by clade posterior support.",
 		"features": {"Catalytic domain": {"acc": "PheRS-Bβ_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb", "range": "498-706", "level": 4},
 					"tRNA binding domain F": {"acc": "PheRS-Bβ_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb", "range": "713-807", "level": 4},
 					"EMAP": {"acc": "PheRS-Bβ_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440382.pdb", "range": "1-195", "level": 4},

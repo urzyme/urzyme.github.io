@@ -1,5 +1,5 @@
 {
-		"name": "PheRS-A&alpha;",
+		"name": "PheRS-Aα",
 		"id": "phe3",
 		"classID": "class2",
 		"fullName": "Phenylalanyl-tRNA Synthetase &alpha; Subunit (Archaeal-like)",
@@ -16,6 +16,8 @@
 		"hinge_str": "structures/PheRS-Aα_AF_Arch_Haloterrigena_turkmenica_DSM_5511_gene8744248.pdb",
 		"hinges": [235],
 		"refine": [{"start": 1, "stop": 1150}],
+		"tree": "/data/class2.nexus",
+		"treeDescription": "Phylogeny of the AARS catalytic domain (Douglas et al. 2023). Internal nodes are labelled by clade posterior support.",
 		"features": {"Catalytic domain": {"acc": "PheRS-Aα_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724458.pdb", "range": "132-366", "level": 4},
 					"DNA binding domain": {"acc": "PheRS-Aα_AF_Arch_Haloterrigena_turkmenica_DSM_5511_gene8744248.pdb", "range": "1-175", "level": 4},
 					"tRNA binding module": {"acc": "PheRS-Aα_PDB_Euk.B_H_sapiens_3L4G.C.pdb", "range": "174-211", "level": 3},

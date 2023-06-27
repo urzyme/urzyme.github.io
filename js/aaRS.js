@@ -163,15 +163,12 @@ function renderaaRS(isPairwise = false, isSuperfamily = false){
 				<div id="tertiaryTable">
 					
 					<table>
-						<tr>
+						<tr id="superpositionRow">
 							<td>
 								<div id="superposition"> </div>
 							</td>
-							
-							<td>
-								<div id="tertiary"> </div>
-							</td>
 						</tr>
+
 					
 					</table>
 					
@@ -183,6 +180,15 @@ function renderaaRS(isPairwise = false, isSuperfamily = false){
 				<div id="references">
 				</div>
 		`);
+  }
+  
+  
+  if (IS_MOBILE){
+	  let row = $(`<tr><td><div id="tertiary"> </div></td></tr>`)
+	  $("#superpositionRow").after(row);
+  }else{
+	   let cell = $(`<td><div id="tertiary"> </div></td>`)
+	   $("#superpositionRow").append(cell)
   }
 
    
@@ -524,6 +530,22 @@ function renderInfo(text, resolve=function() { }){
 
 
 
+	// Draw a tree?
+	if (json.tree != null){
+		
+		let scriptEle = document.createElement("script");
+		scriptEle.setAttribute("src", "/js/drawTree.js");
+		document.body.appendChild(scriptEle);
+		scriptEle.addEventListener("load", () => {
+			console.log("File loaded");
+			let treeDiv = $(`<div id="treeDiv"><h2>Phylogeny</h2></div>`);
+			$("#tertiaryTable").after(treeDiv);
+
+			drawTree(json.leafFamily == null ? json.name : json.leafFamily, treeDiv, json.tree, DATA.metadata, json.treeDescription, json.fullTree);
+		});
+	}
+
+
 	// Summary table for superfamily alignments
 	if (IS_SUPERFAMILY){
 
@@ -642,25 +664,12 @@ function renderInfo(text, resolve=function() { }){
   DATA.features = json.features;
 
 
-  let resolve2 = function(){
-
-
-		/*
-	  // Catalytic domain architecture
-	  if (json.class == "Class I"){
-	    fetch("catalytic.json").then(response => response.text()).then(text => renderCatalyticDomainInserts(text, 1));
-	  }
-
-	  else if (json.class == "Class II"){
-	    fetch("catalytic.json").then(response => response.text()).then(text => renderCatalyticDomainInserts(text, 2));
-	  }
-	*/
-	  resolve();
-
-  }
   
-  // Load accessions
-  fetch("/data/accessions.json").then(response => response.text()).then(text => loadAcccessionMetadata(text, resolve2));
+  //// Load accessions
+  //fetch("/data/accessions.json").then(response => response.text()).then(text => loadAcccessionMetadata(text, resolve));
+  
+	// Load alignment
+	fetch("data/align.ali").then(response => response.text()).then(text => loadAlignment(text, resolve));
 
 
 
@@ -1156,7 +1165,7 @@ function renderSecondary(svg){
 
 
   	  	// Text
-	  	 	textFeature = drawSVGobj(svgContent, "text", {lower: lower, upper:upper,  x: textX, y: y-SEC_HEIGHT/20, style: "cursor:pointer; text-anchor:" + textAlign + "; dominant-baseline:hanging; font-size:" + FEATURE_FONT_SIZE + "px; fill:" + textCol}, value=txt)
+		textFeature = drawSVGobj(svgContent, "text", {lower: lower, upper:upper,  x: textX, y: y-SEC_HEIGHT/20, style: "cursor:pointer; text-anchor:" + textAlign + "; dominant-baseline:hanging; font-size:" + FEATURE_FONT_SIZE + "px; fill:" + textCol}, value=txt)
 	  	  
 
 
@@ -2117,8 +2126,11 @@ function loadAllFiles(resolve = function() { }){
 
   DATA = {};
 
-  // Read info json
-  fetch("info.json").then(response => response.text()).then(text => renderInfo(text, resolve));
+
+	// Load accessions
+	fetch("/data/accessions.json").then(response => response.text()).then(text => loadAcccessionMetadata(text, resolve));
+	
+
 
 
 }
@@ -2134,9 +2146,12 @@ function loadAcccessionMetadata(text, resolve = function() { }){
 	DATA.metadata = json;
 	
 	// features[feature] = {range: range, level: level};
+	
+	
+		
+	// Read info json
+	fetch("info.json").then(response => response.text()).then(text => renderInfo(text, resolve));
 
-	// Load alignment
-  fetch("data/align.ali").then(response => response.text()).then(text => loadAlignment(text, resolve));
 	
 }
 

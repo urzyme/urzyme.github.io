@@ -76,3 +76,66 @@ function renderHeader(includeFooter = true){
 }
 
 
+
+function roundToSF(val, sf=2, ceilOrFloor = "none", precise = true){
+	
+	var magnitude = Math.floor(Math.log(val, 10));
+
+	if (val < 0 && ceilOrFloor == "ceil") ceilOrFloor = "floor";
+	else if (val < 0 && ceilOrFloor == "floor") ceilOrFloor = "ceil";
+
+	var num = val * tenToThePowerOf(sf-magnitude, precise);
+	if (ceilOrFloor == "ceil") num = Math.ceil(num)
+	else if (ceilOrFloor == "floor") num = Math.floor(num)
+	else num = Math.round(num);
+
+	num = num * tenToThePowerOf(magnitude-sf, precise);
+	
+	// Sometimes this picks up a trailing .00000000001 which we want to remove
+
+	var expectedStringLength = 0;
+	if (magnitude >= 0) expectedStringLength = magnitude >= sf ? magnitude+1 : sf+2; // Add 1 for the decimal point
+	else expectedStringLength = 2 -magnitude + sf;
+	if (num < 0) expectedStringLength++; // Also need the negative symbol
+
+
+
+	num = parseFloat(num.toString().substring(0, expectedStringLength+1));
+	
+	return num;
+		
+}
+
+
+
+// Compute 10^n without using Math.pow for negative n which presents numerical instabilities
+function tenToThePowerOf(n, precise = true){
+
+	if (!precise) return Math.pow(10, n);
+
+	if (n == Infinity || n == -Infinity) return n;
+
+	if (n == 0) return 1;
+	var val = "1";
+	if (n < 0) {
+	
+	
+		for (var index = -1; index > n; index --){
+			val = "0" + val;
+		}
+		val = "." + val;
+	}
+
+	else if (n > 0) {
+		return Math.pow(10, n);
+
+	}
+	else {
+		return 1;
+	}
+	//console.log(n, "->", parseFloat(val));
+	return parseFloat(val);
+
+
+}
+

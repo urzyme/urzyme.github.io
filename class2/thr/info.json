@@ -15,6 +15,8 @@
 		"ref_str": ["structures/ThrRS_AF_Mito_Oryza_sativa_Japonica_Group_gene4345200.pdb"],
 		"hinge_str": "structures/ThrRS_AF_Bact_Bifidobacterium_longum_subsp_longum_JCM_1217_gene69578309.pdb",
 		"hinges": [251],
+		"tree": "/data/class2.nexus",
+		"treeDescription": "Phylogeny of the AARS catalytic domain (Douglas et al. 2023). Internal nodes are labelled by clade posterior support.",
 		"refine": [{"start": 350, "stop": 700}],
 		"features": {"Catalytic domain": {"acc": "ThrRS_AF_Arch_Candidatus_Methanomethylophilus_alvus_Mx1201_gene15140074.pdb", "range": "215-477", "level": 4},
 					"tRNA binding domain HGPT": {"acc": "ThrRS_AF_Arch_Candidatus_Methanomethylophilus_alvus_Mx1201_gene15140074.pdb", "range": "484-585", "level": 4},

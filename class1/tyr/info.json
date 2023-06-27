@@ -16,6 +16,8 @@
 		"hinge_str": "structures/TyrRS_AF_Euk_Seriola_dumerili_gene111223086.pdb",
 		"hinges": [359],
 		"refine": [{"start": 800}],
+		"tree": "/data/class1.nexus",
+		"treeDescription": "Phylogeny of the AARS catalytic domain (Douglas et al. 2023). Internal nodes are labelled by clade posterior support.",
 		"features": {"Catalytic domain": {"acc": "TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb", "range": "36-246", "level": 4},
 					"ABD": {"acc": "TyrRS_AF_Bact_Chlamydia_psittaci_6BC_gene12242888.pdb", "range": "263-314",  "count":12, "dy": -2, "level": 4},
 					"tRNA binding domain WY": {"acc": "TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb", "range": "273-378", "count":10, "level": 4},

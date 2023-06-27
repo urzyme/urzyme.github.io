@@ -12,6 +12,8 @@
 		"oligo": "Homodimer",
 		"codons": "CAU, CAC",
 		"editing": "No",
+		"tree": "/data/class2.nexus",
+		"treeDescription": "Phylogeny of the AARS catalytic domain (Douglas et al. 2023). Internal nodes are labelled by clade posterior support.",
 		"ref_str": ["structures/HisRS_AF_Arch_Candidatus_Methanomassiliicoccus_intestinalis_Issoire-Mx1_gene16154026.pdb"],
 		"refine": [{"start": 1037, "stop": 1197 }],
 		"features": {"Catalytic domain": {"acc": "HisRS_AF_Arch_Candidatus_Methanomassiliicoccus_intestinalis_Issoire-Mx1_gene16154026.pdb", "range": "11-316", "level": 4},

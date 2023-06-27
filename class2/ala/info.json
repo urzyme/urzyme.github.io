@@ -15,6 +15,8 @@
 		"ref_str": ["structures/AlaRS_AF_Bact_Nocardia_farcinica_IFM_10152_gene61134339.pdb"],
 		"hinge_str": "structures/AlaRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094822.pdb",
 		"hinges": [794],
+		"tree": "/data/class2.nexus",
+		"treeDescription": "Phylogeny of the AARS catalytic domain (Douglas et al. 2023). Internal nodes are labelled by clade posterior support.",
 		"refine": [{"start": 570}],
 		"features": {"Catalytic domain": {"acc": "AlaRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094822.pdb", "range": "55-244", "level": 4},
 					"tRNA binding domain": {"acc": "AlaRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094822.pdb", "range": "315-472", "level": 4},

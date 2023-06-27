@@ -1,5 +1,5 @@
 {
-		"name": "GlyRS-B&alpha;",
+		"name": "GlyRS-Bα",
 		"id": "gly2",
 		"classID": "class2",
 		"fullName": "Glycyl-tRNA Synthetase (Bacterial-like)",
@@ -15,6 +15,8 @@
 		"ref_str": ["structures/GlyRS-Bα_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440230.pdb"],
 		"hinge_str": "structures/GlyRS-Bα_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440230.pdb",
 		"hinges": [],
+		"tree": "/data/class2.nexus",
+		"treeDescription": "Phylogeny of the AARS catalytic domain (Douglas et al. 2023). Internal nodes are labelled by clade posterior support.",
 		"features": {"Catalytic domain": {"acc": "GlyRS-Bα_AF_Euk_Ostreococcus_tauri_gene9837276.pdb", "range": "20-192", "level": 4},
 					"Dimeric interface": {"acc": "GlyRS-Bα_AF_Euk_Ostreococcus_tauri_gene9837276.pdb", "range": "225-303", "level": 4},
 					"Beta chain": {"acc": "GlyRS-Bα_AF_Bact_Chlamydia_pneumoniae_TW-183_gene45051002.pdb", "range": "298-1010", "level": 4, "count": 3},

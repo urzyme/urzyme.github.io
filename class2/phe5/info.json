@@ -15,6 +15,8 @@
 		"ref_str": ["structures/PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb"],
 		"hinge_str": "structures/PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb",
 		"hinges": [332],
+		"tree": "/data/class2.nexus",
+		"treeDescription": "Phylogeny of the AARS catalytic domain (Douglas et al. 2023). Internal nodes are labelled by clade posterior support.",
 		"features": {"Catalytic domain": {"acc": "PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb", "range": "94-308", "level": 4},
 					"tRNA binding domain F": {"acc": "PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb", "range": "333-429", "level": 4},
 					"Protozyme": {"acc": "PheRS-M_AF_Mito_Arabidopsis_thaliana_gene824983.pdb", "range": "156-194", "level": 2, "href": "/superfamily/class2/Protozyme"},

@@ -11,6 +11,8 @@
 		"codons": "UGU, UGC",
 		"editing": "No",
 		"ref_str": ["structures/SepRS_AF_Arch_Methanothrix_thermoacetophila_PT_gene4462697.pdb"],
+		"tree": "/data/class2.nexus",
+		"treeDescription": "Phylogeny of the AARS catalytic domain (Douglas et al. 2023). Internal nodes are labelled by clade posterior support.",
 		"features": {"Catalytic domain": {"acc": "SepRS_AF_Arch_Methanothrix_thermoacetophila_PT_gene4462697.pdb", "range": "45-344", "level": 4},
 					"tRNA binding domain": {"acc": "SepRS_AF_Arch_Methanothrix_thermoacetophila_PT_gene4462697.pdb", "range": "433-524", "level": 4},
 					"SepRS IM": {"acc": "SepRS_AF_Arch_Methanothrix_thermoacetophila_PT_gene4462697.pdb", "range": "100-176", "level": 3, "href": "/superfamily/class2/SepRS_IM"},

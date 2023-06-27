@@ -15,6 +15,8 @@
 		"ref_str": ["structures/LysRS-I_AF_Arch_Candidatus_Bathyarchaeota_archaeon_proteinRJS75864.1.pdb"],
 		"hinge_str": "structures/LysRS-I_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13726042.pdb",
 		"hinges": [447],
+		"tree": "/data/class1.nexus",
+		"treeDescription": "Phylogeny of the AARS catalytic domain (Douglas et al. 2023). Internal nodes are labelled by clade posterior support.",
 		"features": {"Catalytic domain": {"acc": "LysRS-I_AF_Arch_Candidatus_Bathyarchaeota_archaeon_proteinRJS75864.1.pdb", "range": "33-318", "level": 4},
 					"CP1": {"acc": "LysRS-I_AF_Arch_Candidatus_Bathyarchaeota_archaeon_proteinRJS75864.1.pdb", "range": "139-254", "level": 3, "href": "/superfamily/class1/CP1"},
 					"Protozyme": {"acc": "LysRS-I_AF_Arch_Candidatus_Bathyarchaeota_archaeon_proteinRJS75864.1.pdb", "range": "35-78", "level": 2},
