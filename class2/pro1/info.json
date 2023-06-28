@@ -18,7 +18,7 @@
 		"tree": "/data/class2.nexus",
 		"treeDescription": "Phylogeny of the AARS catalytic domain (Douglas et al. 2023). Internal nodes are labelled by clade posterior support.",
 		"features": {"Catalytic domain": {"acc": "ProRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697692.pdb", "range": "42-280", "level": 4},
-					"tRNA binding domain HGPT": {"acc": "ProRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697692.pdb", "range": "285-412", "level": 4},
+					"Anticodon binding domain HGPT": {"acc": "ProRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697692.pdb", "range": "285-412", "level": 4},
 					"Zinc binding domain": {"acc": "ProRS-A_AF_Bact_Bacillus_anthracis_str_Ames_Ancestor_gene45020455.pdb", "range": "409-508", "level": 4},
 					"Protozyme": {"acc": "ProRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697692.pdb", "range": "102-153", "level": 2, "href": "/superfamily/class2/Protozyme"},
 					"Motif 1": {"acc": "ProRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697692.pdb", "range": "64-73", "level": 1},

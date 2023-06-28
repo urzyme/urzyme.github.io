@@ -17,3 +17,7 @@ Beebe, Kirk, et al. "Distinct domains of tRNA synthetase recognize the same base
 Gomez, Miguel Angel Rubio, and Michael Ibba. "Aminoacyl-tRNA synthetases." Rna 26.8 (2020): 910-936.
 
 Dock-Bregeon, Anne-Catherine, et al. "Transfer RNA–mediated editing in threonyl-tRNA synthetase: the class II solution to the double discrimination problem." Cell 103.6 (2000): 877-884.
+
+
+Dock-Bregeon, A. C., Rees, B., Torres-Larios, A., Bey, G., Caillet, J., & Moras, D. (2004). Achieving error-free translation: the mechanism of proofreading of threonyl-tRNA synthetase at atomic resolution. Molecular cell, 16(3), 375-386.
+

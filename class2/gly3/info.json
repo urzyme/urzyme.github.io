@@ -16,7 +16,7 @@
 		"treeDescription": "Phylogeny of the AARS catalytic domain (Douglas et al. 2023). Internal nodes are labelled by clade posterior support.",
 		"ref_str": ["structures/GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb"],
 		"features": {"Catalytic domain": {"acc": "GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb", "range": "85-560", "level": 4},
-					"tRNA binding domain HGPT": {"acc": "GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb", "range": "579-699", "level": 4},
+					"Anticodon binding domain HGPT": {"acc": "GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb", "range": "579-699", "level": 4},
 					"GlyRS-AE IM1": {"acc": "GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb", "range": "133-247", "level": 3, "href": "/superfamily/class2/GlyRS-AE_IM1"},
 					"GlyRS-AE IM2": {"acc": "GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb", "range": "327-366", "level": 3, "href": "/superfamily/class2/GlyRS-AE_IM2"},
 					"GlyRS-E IM": {"acc": "GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb", "range": "450-535", "level": 3, "href": "/superfamily/class2/GlyRS-E_IM"},
