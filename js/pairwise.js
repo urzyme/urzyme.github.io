@@ -125,9 +125,9 @@ plotMatrix = function(text){
       let rect2 = drawSVGobj(group, "rect", {x: y, y:x, width:FAMILY_MATRIX_SIZE, height:FAMILY_MATRIX_SIZE, style: "fill:" + col + "; stroke-width:0.5px; stroke:black;"})
 
 
-      rmsd = Math.round(rmsd * 100) / 100;
-      var text1 = drawSVGobj(group, "text", {x: x+FAMILY_MATRIX_SIZE/2, y: y+FAMILY_MATRIX_SIZE/2, url:url, style: "text-anchor:middle; dominant-baseline:central; fill:" + fontCol + ";font-size:" + MATRIX_FONT_SIZE + "px"}, rmsd)
-      var text2 = drawSVGobj(group, "text", {x: y+FAMILY_MATRIX_SIZE/2, y: x+FAMILY_MATRIX_SIZE/2, url:url, style: "text-anchor:middle; dominant-baseline:central; fill:" + fontCol + ";font-size:" + MATRIX_FONT_SIZE + "px"}, rmsd)
+      let rmsdPrint = Math.round((1-rmsd) * 100) / 100;
+      var text1 = drawSVGobj(group, "text", {x: x+FAMILY_MATRIX_SIZE/2, y: y+FAMILY_MATRIX_SIZE/2, url:url, style: "text-anchor:middle; dominant-baseline:central; fill:" + fontCol + ";font-size:" + MATRIX_FONT_SIZE + "px"}, rmsdPrint)
+      var text2 = drawSVGobj(group, "text", {x: y+FAMILY_MATRIX_SIZE/2, y: x+FAMILY_MATRIX_SIZE/2, url:url, style: "text-anchor:middle; dominant-baseline:central; fill:" + fontCol + ";font-size:" + MATRIX_FONT_SIZE + "px"}, rmsdPrint)
 
 
       $(group).click(function(){
