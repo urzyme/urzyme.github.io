@@ -15,8 +15,8 @@ leading to the hypothesis that AsnRS and GlnRS were among the last of the synthe
 
   
 
-The three-dimensional structure of AsnRS closely resembles that of AsxRS, [AsxRS](/class2/asp1/), and [LysRS-II](/class2/lys/), with an N-terminal anticodon binding domain and a C-terminal catalytic domain.
-AspRS, AsxRS, and AsnRS have quite similar catalytic domains and constitute subclass IIb (Cusack et al., 1991; Valencia-Sánchez et al., 2016), whereas the catalytic domain of LysRS-II is quite distinct, falling into its own subclass (Douglas et al. 2023), despite sharing a homologous [anticodon binding domain](/superfamily/class2/tRNA_binding_domain_DNK/).
+The three-dimensional structure of AsnRS closely resembles that of AsxRS, [AspRS](/class2/asp1/), and [LysRS-II](/class2/lys/), with an N-terminal [anticodon binding domain](/superfamily/class2/tRNA_binding_domain_DNK/) and a C-terminal catalytic domain.
+The four members have quite similar catalytic domains and constitute subclass IIb (Cusack et al., 1991; Valencia-Sánchez et al., 2016).
 The class IIb synthetases of many eukaryotes contain a flexible domain at their N-termini, which helps to anchor the synthetase onto the tRNA (Frugier et al., 2000).
 Editing activity has not been detected for AsnRS (Gomez et al. 2020).
 
@@ -27,4 +27,4 @@ Like most members of the superfamily, ATP binding is coordinated by the arginine
 In the active site, asparagine recognition is largely achieved through water molecule interactions, in contrast with AspRS where aspartate recognition is facilitated by direct interaction with the protein (Iwasaki et al., 2006).
 This specificity is also achieved by the replacement of positively charged residues with negatively
 charged ones in the active site (Kern et al., 2005).
-The catalytic domain of AsnRS, much like the other members of subclass IIb, is characterised by the subclass 2b insertion modules 1 and 2.
+The catalytic domain of AsnRS, much like the other members of subclass IIb, is characterised by the subclass IIb insertion modules 1 and 2 (Douglas et al. 2023).
