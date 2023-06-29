@@ -461,7 +461,13 @@ function getNameOfAccession(acc){
 	let species = metadata.species.split("_");
 	if (species.length > 1){
 		species = species[0] + " " + species[1];
+	}else{
+		species = metadata.species;
 	}
+	
+	// Capitalise first letter
+	species = species[0].toUpperCase() + species.substr(1);
+	
 	let str = species + " (" + metadata.name + ")";
 	return str;
 	
