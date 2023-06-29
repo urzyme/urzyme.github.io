@@ -3,7 +3,7 @@
 
 <html>
 <head>
-<title>Glycyl-tRNA Synthetase (Eukaryote-like)</title>
+<title>Glycyl-tRNA Synthetase</title>
 
 <link rel="icon" >
 <meta name="viewport" content="width=device-width, initial-scale=0.41, maximum-scale=1" />
@@ -13,6 +13,7 @@
 <script language='JavaScript' type='text/JavaScript' src="/js/aaRS.js"></script>
 <script language='JavaScript' type='text/JavaScript' src="/js/util.js"></script>
 <script type='text/javascript' src='../../bower_components/bio-pv/bio-pv.min.js'></script>
+
 
         
 <script type="text/javascript"
@@ -27,9 +28,11 @@
 
 
 
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>   
 
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KBC488H8EG"></script>
 <script>
@@ -39,7 +42,6 @@
 
   gtag('config', 'G-KBC488H8EG');
 </script>
-
 
 
 <script language='JavaScript' type='text/JavaScript'>
@@ -60,140 +62,6 @@ function init(){
 
 	<div id="main">
 
-		<ul id="flexContainer">
-		
-			<li class="summary">
-				
-			</li>
-
-
-			<li class="notes">
-				
-				<div>
-
-
-
-						The Eukaryote-like glycyl-tRNA synthetase (GlyRS-E) is a homodimeric enzyme that plays a crucial role in protein synthesis by catalysing the attachment of the amino acid glycine to its cognate tRNA:
-
-
-
-							<div class="reaction">
-								<span>
-									$ \text{Gly} + \text{tRNA}^\text{Gly} + \text{ATP} \xrightarrow{\text{GlyRS-E}} \text{Gly-tRNA}^\text{Gly} + \text{AMP} + \text{PP}_i  $
-								</span>
-							</div>
-
-							GlyRS-E belongs to the subclass IIa of aminoacyl tRNA synthetases, which also includes <a href="../pro1">ProRS</a>, <a href="../ser1">SerRS</a>, <a href="../thr">ThrRS</a>, <a href="../his">HisRS</a>, and the archaeal-like <a href="../gly1">GlyRS-A</a> (Gomez et al., 2020; Valencia-Sánchez et al., 2016; Perona et al., 2012). The <a href="/superfamily/class2/tRNA_binding_domain_HGPT">anticodon binding domains</a> of subclass IIa, with the exception of SerRS, are homologous and are located at the C-terminal end (Wolf et al., 1999). A serine-to-leucine mutation in the anticodon binding domain of the human GlyRS-E impairs mitochindrial metabolism in neurons, and is implicated in motor nerve degeneration (Cader et al. 2007, Boczonadi et al., 2018). The domain architecture of GlyRS-E is minimal, similar to HisRS, and it appears to lack editing activity altogether (Gomez et al., 2020).  <br><br>
-
-
-
-							The catalytic domains of GlyRS-A and GlyRS-E are characterised by the presence of two insertion modules, GlyRS-AE insertion modules <a href="/superfamily/class2/GlyRS-AE_IM1/">1</a> and <a href="/superfamily/class2/GlyRS-AE_IM2/">2</a>, which are located between motifs 2 and 3. Insertion module 1 contains a short &beta; strand which runs parallel with the six stranded anti-parallel fold. Insertion module 2 is present in most eukaryotic and archaeal GlyRS enzymes, but is absent in bacteria. This insert often contains a lysine rich region, which may be involved in differentiating between cytoplasmic and mitochondrial tRNA Gly acceptor stems (Chen et al. 2012).    <br><br>
-
-
-							GlyRS-E is one of the few aminoacyl-tRNA synthetases which operate in both the cytoplasm as well as the mitochondria, alongside <a href="/class2/ala">AlaRS</a>, <a href="/class2/his">HisRS</a>, and <a href="/class1/val">ValRS</a>.
-							Localisation into these compartments is achieved through alternative initiation, which governs the expression of an N-terminal mitochondrial localisation signal (Shiba et al. 1994, Chang et al. 2004).
-							Some eukaryotes contain an additional GlyRS-E genes known as GRS2, which appears to be silent under normal conditions in <i>S. cerevisiae</i> and is lacking the lysine rich insert (Chen et al. 2012). 
-							
-
-
-
-
-
-	
-			
-				</div>
-				
-			</li>
-			
-		</ul>
-
-
-		<div class="svgDiv">
-			<svg id="secondary" height=0 width=0 overflow="auto"></svg>
-		</div>
-		
-		
-		<div id="alignment" class="svgDiv">
-
-		</div>
-
-
-		<div id="alignment2" class="svgDiv">
-
-		</div>
-
-
-
-
-		<div id="tertiaryTable">
-			
-			<table>
-				<tr>
-					<td>
-						<div id="superposition"> </div>
-					</td>
-					
-					<td>
-						<div id="tertiary"> </div>
-					</td>
-				</tr>
-			
-			</table>
-			
-			
-		
-		</div>
-		
-
-
-		<div id="references">
-
-			<div>
-				Wolf, Yuri I., et al. "Evolution of aminoacyl-tRNA synthetases—analysis of unique domain architectures and phylogenetic trees reveals a complex history of horizontal gene transfer events." Genome research 9.8 (1999): 689-710.
-			</div>
-
-			<div>
-				Chang, Kuang-Jung, and Chien-Chia Wang. "Translation initiation from a naturally occurring non-AUG codon in Saccharomyces cerevisiae." Journal of Biological Chemistry 279.14 (2004): 13778-13785.
-			</div>
-
-
-			<div>
-				Cader, Muhammed Z., et al. "Crystal structure of human wildtype and S581L-mutant glycyl-tRNA synthetase, an enzyme underlying distal spinal muscular atrophy." FEBS letters 581.16 (2007): 2959-2964.
-			</div>
-
-			<div>
-				Shiba, Kiyotaka, et al. "Human glycyl-tRNA synthetase. Wide divergence of primary structure from bacterial counterpart and species-specific aminoacylation." Journal of Biological Chemistry 269.47 (1994): 30049-30055.
-			</div>
-
-			<div>
-				Perona, John J., and Andrew Hadd. "Structural diversity and protein engineering of the aminoacyl-tRNA synthetases." Biochemistry 51.44 (2012): 8705-8729.
-			</div>
-
-				<div>
-				Gomez, Miguel Angel Rubio, and Michael Ibba. "Aminoacyl-tRNA synthetases." Rna 26.8 (2020): 910-936.
-			</div>
-
-
-				<div>
-					Valencia-Sánchez, Marco Igor, et al. "Structural Insights into the Polyphyletic Origins of Glycyl tRNA Synthetases." Journal of Biological Chemistry 291.28 (2016): 14430-14446.
-			</div>
-
-
-							<div>
-				Shiba, Kiyotaka. "The Aminoacyl-tRNA Synthetases" CRC Press (2005): Chapter 13: Glycyl-tRNA Synthetases.
-			</div>
-
-			<div>
-				Chen, Shun-Jia, et al. "Saccharomyces cerevisiae possesses a stress-inducible glycyl-tRNA synthetase gene." PloS one 7.3 (2012): e33363.
-			</div>
-
-			<div>
-				Boczonadi, Veronika, et al. "Mutations in glycyl-tRNA synthetase impair mitochondrial metabolism in neurons." Human molecular genetics 27.12 (2018): 2187-2204.
-			</div>
-
-
-		
-		</div>
 
 
 	</div>
