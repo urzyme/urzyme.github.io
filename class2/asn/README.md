@@ -9,16 +9,16 @@ $ \text{Asn} + \text{tRNA}^\text{Asn} + \text{ATP} \xrightarrow{\text{AsnRS}} \t
 
 
 Some organisms do not possess AsnRS, in which case the incorporation of asparagine into the polypeptide can be accomplished through the use
-of a non-discriminating [AsxRS](/class2/asp2/), coupled with amidotransferase activity (Lapointe et al. 1986, Raczniak et al. 2001).
+of a non-discriminating [AsxRS](/class2/asp2/), coupled with amidotransferase activity (Becker et al. 1997, Raczniak et al. 2001).
 The same mechanism is employed by the Class I [GlxRS](/class1/glu2/) and [GlnRS](/class1/gln/) families,
 leading to the hypothesis that AsnRS and GlnRS were among the last of the synthetases to evolve (de Pouplana and Schimmel, 2001).
 
   
 
-The three-dimensional structure of AsnRS closely resembles that of AsxRS, [AspRS](/class2/asp1/), and [LysRS-II](/class2/lys/), with an N-terminal [anticodon binding domain](/superfamily/class2/tRNA_binding_domain_DNK/) and a C-terminal catalytic domain.
+The three-dimensional structure of AsnRS closely resembles that of AsxRS, [AspRS](/class2/asp1/), and [LysRS-II](/class2/lys/), with an N-terminal [anticodon binding domain](/superfamily/class2/Anticodon_binding_domain_DNK/) and a C-terminal catalytic domain.
 The four members have quite similar catalytic domains and constitute subclass IIb (Cusack et al., 1991; Valencia-Sánchez et al., 2016).
-The class IIb synthetases of many eukaryotes contain a flexible domain at their N-termini, which helps to anchor the synthetase onto the tRNA (Frugier et al., 2000).
-Editing activity has not been detected for AsnRS (Gomez et al. 2020).
+The subclass IIb synthetases of many eukaryotes contain a flexible domain at their N-termini, which helps to anchor the synthetase onto the tRNA (Frugier et al., 2000).
+Editing activity has not been detected for AsnRS (Gomez and Ibba, 2020).
 
   
 

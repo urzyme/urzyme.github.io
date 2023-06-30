@@ -12,13 +12,13 @@ $ \text{Asp} + \text{tRNA}^\text{Asp} + \text{ATP} \xrightarrow{\text{AspRS}} \t
 
 This reaction enables the incorporation of aspartate into the polypeptide. 
 There is also a non-discriminating [AsxRS](/class2/asp2) that can also incorporate both aspartate and asparagine into the growing peptide. 
-A helix in the anticodon binding domain enables AspRS to discriminate between the two tRNA species  (Charron et al. 2003).
+A helix in the anticodon binding domain may enable AspRS to discriminate between the two tRNA species  (Charron et al. 2003).
 Some organisms contain genes for both proteins.  
 
 
-The three-dimensional structure of AsnRS closely resembles that of AsxRS, [AsnRS](/class2/asn/), and [LysRS-II](/class2/lys/), with an N-terminal [anticodon binding domain](/superfamily/class2/tRNA_binding_domain_DNK/) and a C-terminal catalytic domain.
+The three-dimensional structure of AsnRS closely resembles that of AsxRS, [AsnRS](/class2/asn/), and [LysRS-II](/class2/lys/), with an N-terminal [anticodon binding domain](/superfamily/class2/Anticodon_binding_domain_DNK/) and a C-terminal catalytic domain.
 The four members have quite similar catalytic domains and constitute subclass IIb (Cusack et al., 1991; Valencia-Sánchez et al., 2016).
-The class IIb synthetases of many eukaryotes contain a flexible domain at their N-termini, which helps to anchor the synthetase onto the tRNA (Frugier et al., 2000).
+The subclass IIb synthetases of many eukaryotes contain a flexible domain at their N-termini, which helps to anchor the synthetase onto the tRNA (Frugier et al., 2000).
 Editing activity has not been detected for AspRS (Gomez abd Ibba, 2020).
 
 

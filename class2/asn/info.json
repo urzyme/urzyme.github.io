@@ -18,7 +18,7 @@
 		"tree": "/data/class2.nexus",
 		"treeDescription": "Phylogeny of the AARS catalytic domain (Douglas et al. 2023). Internal nodes are labelled by clade posterior support.",
 		"features": {"Catalytic domain": {"acc": "AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb", "range": "115-415", "level": 4},
-					"tRNA binding domain DNK": {"acc": "AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb", "range": "1-110", "level": 4},
+					"Anticodon binding domain DNK": {"acc": "AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb", "range": "1-110", "level": 4, "align": "right"},
 					"IIb IM 1": {"acc": "AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb", "range": "275-314", "level": 3},
 					"IIb IM 2": {"acc": "AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb", "range": "363-396", "level": 3},
 					"Protozyme": {"acc": "AsnRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094562.pdb", "range": "182-221", "level": 3},

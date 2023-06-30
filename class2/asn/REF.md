@@ -17,6 +17,7 @@ Frugier, Magali, Luc Moulinier, and Richard Giegé. "A domain in the N-terminal 
 Valencia-Sánchez, Marco Igor, et al. "Structural Insights into the Polyphyletic Origins of Glycyl tRNA Synthetases." Journal of Biological Chemistry 291.28 (2016): 14430-14446.
 
 
+Becker, Hubert Dominique, et al. "Existence of two distinct aspartyl-tRNA synthetases in Thermus thermophilus. Structural and biochemical properties of the two enzymes." Biochemistry 36.29 (1997): 8785-8797.
 
 
 Kaiser, Florian, et al. "Backbone brackets and arginine tweezers delineate class I and class II aminoacyl tRNA synthetases." PLoS computational biology 14.4 (2018): e1006101.
