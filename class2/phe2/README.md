@@ -15,8 +15,8 @@ Unlike most Class II synthetases, which are homodimeric, PheRS-B operates as a h
 There are three known variants of PheRS: one found predominantly in bacteria, one found in eukaryotes/archaea [PheRS-A](/class2/phe3), and one localised to eukaryotic organelles [PheRS-M](/class2/phe5). 
 This page specifically refers to the $\beta$ subunit of the bacterial variant (PheRS-B$\beta$). 
 
-The catalytic activity of PheRS-B is confined to the $\alpha$ subunit, while tRNA recognition and editing activity is executed to the $\beta$ subunit, 
-which is over twice the size of $\alpha$ (Fishman et al. 2001). The other heterotetrameric Class II synthetase is the bacterial [GlyRS-B](/class2/gly2), which is also composed of two catalytic $\alpha$ subunits and two non-catalytic  $\beta subunits. 
+The catalytic activity of PheRS-B is confined to the $\alpha$ subunit, while tRNA recognition and editing activity is executed by the $\beta$ subunit, 
+which is over twice the size of $\alpha$ (Fishman et al. 2001). The other heterotetrameric Class II synthetase is the bacterial [GlyRS-B](/class2/gly2), which is also composed of two catalytic $\alpha$ subunits and two non-catalytic  $\beta$ subunits. 
 However, unlike GlyRS-B, efficient catalysis in PheRS-B is not possible without the full tetrameric assembly (Mosyak et al. 1995). 
 PheRS-B binds two tRNA molecules, with each tRNA binding across all four subunits (Goldgur et al. 1997). 
 
