@@ -16,10 +16,11 @@ if (IS_MOBILE){
 
 
 // Adds a header to the top of the page and a footer to the bottom
-function drawTree(family, treeDiv, treeFile, metadata, desc, fullTree){
+function drawTree(family, treeDiv, treeFile, metadata, desc, fullTree, addToClade){
 
 
 	fullTree = (fullTree == null ? false : fullTree);
+	if (addToClade == null) addToClade = [];
 
 	console.log("drawing tree");
 	prepareTreeParser(function(){
@@ -42,7 +43,7 @@ function drawTree(family, treeDiv, treeFile, metadata, desc, fullTree){
 				if (desc == null) desc = "";
 				treeDiv.append(`<div>` + desc + ` <span><a href="` + treeFile + `" >Download tree</a></span></div>`);
 				
-				let success = plotTree(family, tree, svg, metadata, fullTree);
+				let success = plotTree(family, tree, svg, metadata, fullTree, addToClade);
 				if (!success) treeDiv.hide();
 			
 			
@@ -56,7 +57,7 @@ function drawTree(family, treeDiv, treeFile, metadata, desc, fullTree){
 
 
 // Draw a tree
-function plotTree(family, tree, svg, metadata, fullTree){
+function plotTree(family, tree, svg, metadata, fullTree, addToClade){
 	
 	
 	// Only consider taxa with the right family
@@ -68,10 +69,9 @@ function plotTree(family, tree, svg, metadata, fullTree){
 		for (let i = 0; i < leaves.length; i++){
 			let node = leaves[i];
 			let nodeFamily = node.label.split("_")[0];
-			if (nodeFamily == family){
+			if (nodeFamily == family || addToClade.includes(nodeFamily)){
 				familyLeaves.push(node);
 			}
-			
 		}
 		
 		

@@ -547,7 +547,7 @@ function renderInfo(text, resolve=function() { }){
 			let treeDiv = $(`<div id="treeDiv"><h2>Phylogeny</h2></div>`);
 			$("#tertiaryTable").after(treeDiv);
 
-			drawTree(json.leafFamily == null ? json.name : json.leafFamily, treeDiv, json.tree, DATA.metadata, json.treeDescription, json.fullTree);
+			drawTree(json.leafFamily == null ? json.name : json.leafFamily, treeDiv, json.tree, DATA.metadata, json.treeDescription, json.fullTree, json.addToClade);
 		});
 	}
 
