@@ -4,7 +4,7 @@ Kaiser, Florian, et al. "Backbone brackets and arginine tweezers delineate class
 
 
 
-
+Douglas, J, Bouckaert, R., Carter, C., & Wills, P. R. Enzymic recognition of amino acids drove the evolution of primordial genetic codes. Research Square (2023).
 
 
 Cavarelli, Jean, et al. "L-arginine recognition by yeast arginyl-tRNA synthetase." The EMBO journal 17.18 (1998): 5438-5448.

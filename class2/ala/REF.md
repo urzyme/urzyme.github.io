@@ -16,7 +16,7 @@ Guo, Min, et al. "The C-Ala domain brings together editing and aminoacylation fu
 Tang, Huei-Lin, et al. "Translation of a yeast mitochondrial tRNA synthetase initiated at redundant non-AUG codons." Journal of Biological Chemistry 279.48 (2004): 49656-49663.
 
 
-
+Cavarelli, Jean, et al. "L-arginine recognition by yeast arginyl-tRNA synthetase." The EMBO journal 17.18 (1998): 5438-5448.
 
 Naganuma, Masahiro, et al. "Unique protein architecture of alanyl-tRNA synthetase for aminoacylation, editing, and dimerization." Proceedings of the National Academy of Sciences 106.21 (2009): 8489-8494.
 
