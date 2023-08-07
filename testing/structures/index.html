@@ -47,10 +47,117 @@ function init(){
   let brown = [166,86,40,256];
   let pink = [247,129,191,256];
   let grey = [153,153,153,140];
+  let black = [30,30,30,200];
+  let white = [256,256,256,256];
 
 
 
   let di = 0;
+  renderTertiary("1wz2.a.pdb", "leuRSA", "LeuRS-A (1WZ2)",
+                colours = {default: white, indices: [
+
+
+                     {name: "Editing",     lower: 202-di, upper: 422-di,   colour: blue },
+                      {name: "ABD",     lower: 663-di, upper: 810-di,   colour: green },
+                      {name: "C-terminal domain",     lower: 810-di, upper: 2000-di,   colour: black },
+
+                   ]});
+
+  
+
+  di = 0;
+  renderTertiary("2v0c.pdb", "leuRSB", "LeuRS-B (2V0C)",
+                colours = {default: white, indices: [
+
+
+                     {name: "Editing",  lower: 222-di, upper: 416-di,   colour: blue },
+                    {name: "ABD",  lower: 675-di, upper: 10000-di,   colour: green }
+
+                   ]});
+
+
+
+
+   di = 0;
+  renderTertiary("1pfv.pdb", "met", "MetRS (1pfv)",
+                colours = {default: white, indices: [
+                    {name: "ABD",  lower: 363-di, upper: 10000-di,   colour: green }
+                   ]});
+
+ di = 0;
+  renderTertiary("1gax.pdb", "val", "ValRS (1GAX)",
+                colours = {default: white, indices: [
+                   {name: "Editing",  lower: 188-di, upper: 345-di,   colour: blue },
+                    {name: "ABD",  lower: 544-di, upper: 696-di,   colour: green },
+                    {name: "C-terminal domain",     lower: 711-di, upper: 2000-di,   colour: black },
+                   ]});
+
+
+ di = 0;
+  renderTertiary("7d5c.pdb", "ile", "IleRS (7d5c)",
+                colours = {default: white, indices: [
+                   {name: "Editing",  lower: 192-di, upper: 393-di,   colour: blue },
+                    {name: "ABD",  lower: 615-di, upper: 776-di,   colour: green },
+                    {name: "C-terminal domain",     lower: 777-di, upper: 2000-di,   colour: black }
+                   ]});
+
+
+
+ di = 0;
+  renderTertiary("1bs2.pdb", "arg", "ArgRS (1bs2)",
+                colours = {default: white, indices: [
+                   {name: "NTD",  lower: 1-di, upper: 129-di,   colour: black },
+                    {name: "ABD",  lower: 442-di, upper: 20000-di,   colour: green }
+                   ]});
+
+
+ di = 0;
+  renderTertiary("CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb", "cys", "CysRS (AlphaFold)",
+                colours = {default: white, indices: [
+                     {name: "ABD",  lower: 282-di, upper: 402-di,   colour: green },
+                     {name: "CTD",  lower: 403-di, upper: 1000-di,   colour: black }
+                   ]});
+
+
+ di = 0;
+  renderTertiary("1irx.pdb", "lys1", "LysRS-I (1irx)",
+                colours = {default: white, indices: [
+                     {name: "ABD",  lower: 310-di, upper: 1000-di,   colour: yellow }
+                   ]});
+
+
+ di = 0;
+  renderTertiary("1j09.pdb", "glu", "GluRS-B, GlxRS-B (1j09)",
+                colours = {default: white, indices: [
+                     {name: "ABD",  lower: 285-di, upper: 1000-di,   colour: yellow }
+                   ]});
+
+
+
+ di = 0;
+  renderTertiary("1qtq.pdb", "gln", "GlnRS, GlxRS-A, GluRS-E (1qtq)",
+                colours = {default: white, indices: [
+                     {name: "ABD",  lower: 284-di, upper: 1000-di,   colour: red }
+                   ]});
+
+
+ di = 0;
+  renderTertiary("1i6m.pdb", "trp", "TrpRS (1i6m)",
+                colours = {default: white, indices: [
+                     {name: "ABD",  lower: 226-di, upper: 1000-di,   colour: purple }
+                   ]});
+
+
+ di = 0;
+  renderTertiary("2j5b.pdb", "tyr", "TyrRS (2j5b)",
+                colours = {default: white, indices: [
+                     {name: "ABD",  lower: 254-di, upper: 1000-di,   colour: purple }
+                   ]});
+
+
+
+  /*
+  di = 0;
 	renderTertiary("../../class1/leu1/data/domains/Catalytic_domain/dssp/LeuRS-B_PDB_Bact_T_therm_2V0C.pdb", "leuRS", "LeuRS-B (2V0C)",
                 colours = {default: grey, indices: [
 
@@ -72,31 +179,7 @@ function init(){
 
 
 
-  di = 0;
-  renderTertiary("1wz2.a.pdb", "leuRSA", "LeuRS-A (1WZ2)",
-                colours = {default: blue, indices: [
-
-                  
-                     {name: "Protozyme",     lower: 33-di, upper: 83-di,   colour: blue },
-                     {name: "CP1",     lower: 84-di, upper: 175-di,   colour: green },
-                     {name: "Zinc",     lower: 176-di, upper: 201-di,   colour: yellow },
-                     {name: "Editing",     lower: 202-di, upper: 422-di,   colour: red },
-                     {name: "Zinc",     lower: 423-di, upper: 440-di,   colour: yellow },
-                     {name: "CP1",     lower: 441-di, upper: 501-di,   colour: green },
-
-                     //{name: "SH",     lower: 527-di, upper: 539-di,   colour: yellow },
-
-                    {name: "IM",     lower: 502-di, upper: 567-di,   colour: pink },
-
-
-                   // {name: "CP1",     lower: 568-di, upper: 603-di,   colour: green },
-
-                     {name: "Protozyme",     lower: 568-di, upper: 662-di,   colour: blue },
-
-                      {name: "ABD",     lower: 663-di, upper: 810-di,   colour: brown },
-                       {name: "C-terminal domain",     lower: 810-di, upper: 2000-di,   colour: purple },
-
-                   ]});
+ 
 
   di = 0;
   renderTertiary("../../class2/gly3/data/domains/Catalytic_domain/dssp/GlyRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258293.pdb", "glyRS", "GlyRS-E",
@@ -116,8 +199,9 @@ function init(){
 
                    ]});
               
-	
+	*/
 }
+
 
 
 
@@ -136,11 +220,11 @@ function init(){
       <table>
         <tr>
           <td>
-            <div class="PVbox" id='leuRS'></div>
+            <div class="PVbox" id='leuRSA'></div>
           </td>
           
           <td>
-            <div class="PVbox" id='glyRS'></div>
+            <div class="PVbox" id='leuRSB'></div>
           </td>
         </tr>
 
@@ -148,13 +232,64 @@ function init(){
 
         <tr>
           <td>
-            <div class="PVbox" id='leuRSA'></div>
+            <div class="PVbox" id='met'></div>
           </td>
           
           <td>
+            <div class="PVbox" id='val'></div>
           </td>
         </tr>
       
+
+        <tr>
+          <td>
+            
+            <div class="PVbox" id='ile'></div>
+          </td>
+          
+          <td>
+            <div class="PVbox" id='arg'></div>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>
+            
+            <div class="PVbox" id='cys'></div>
+          </td>
+          
+          <td>
+            <div class="PVbox" id='lys1'></div>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>
+            
+            <div class="PVbox" id='glu'></div>
+          </td>
+          
+          <td>
+            <div class="PVbox" id='gln'></div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+            
+            <div class="PVbox" id='trp'></div>
+          </td>
+          
+          <td>
+            <div class="PVbox" id='tyr'></div>
+          </td>
+        </tr>
+      
+
       </table>
 
 
