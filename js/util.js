@@ -78,6 +78,8 @@ function renderHeader(includeFooter = true){
 
 
 function roundToSF(val, sf=2, ceilOrFloor = "none", precise = true){
+
+	if (val == 0) return 0;
 	
 	var magnitude = Math.floor(Math.log(val, 10));
 

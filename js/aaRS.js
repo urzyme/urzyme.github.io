@@ -179,6 +179,20 @@ function renderaaRS(isPairwise = false, isSuperfamily = false){
 				
 				<div id="references">
 				</div>
+
+
+				<div id="issues">
+
+					<a id="GitHubLink">
+						View on GitHub
+					</a>
+
+					<a id="IssuesLink">
+						Discuss
+					</a>
+
+				</div>
+
 		`);
   }
   
@@ -235,6 +249,13 @@ function renderaaRS(isPairwise = false, isSuperfamily = false){
 		}));
 	}
 	
+
+
+	// Footer information
+	let loc = window.location.pathname;
+	let wd = loc.substring(0, loc.lastIndexOf('/'));
+	$("#GitHubLink").attr("href", "https://github.com/urzyme/urzyme.github.io/tree/main" + wd);
+
 	
 	refs = getSorted(refs);
 	$("#references").html("");
@@ -550,6 +571,13 @@ function renderInfo(text, resolve=function() { }){
 			drawTree(json.leafFamily == null ? json.name : json.leafFamily, treeDiv, json.tree, DATA.metadata, json.treeDescription, json.fullTree, json.addToClade);
 		});
 	}
+
+
+
+
+	// GitHub issue link
+	let issueLabel = json.issuePage == null ? json.id : json.issuePage;
+	$("#IssuesLink").attr("href", "https://github.com/urzyme/urzyme.github.io/labels/" + issueLabel);
 
 
 	// Summary table for superfamily alignments

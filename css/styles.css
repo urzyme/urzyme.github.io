@@ -83,6 +83,7 @@ g.matrixcell:hover text{
 
 
 
+
 #main{
 	%background-color:#d3d3d3;
 	padding:0.5em;
@@ -835,5 +836,13 @@ div.reaction span{
 
 
 
+#issues{
+	text-align:center;
+	padding:1em;
+}
 
 
+#issues a{
+	margin-left:2em;
+	margin-right:2em;
+}
