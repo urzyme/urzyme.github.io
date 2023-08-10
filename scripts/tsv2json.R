@@ -1,4 +1,6 @@
 library(rjson)
+library(Biostrings)
+
 
 
 args = commandArgs(trailingOnly=TRUE)
@@ -14,13 +16,46 @@ if (!any(colnames(in.df) == idCol)){
 }
 
 
+translate.seqs = any(colnames(in.df) == "sequence") & any(colnames(in.df) == "transl_table")
+if (translate.seqs){
+	in.df$proteinSeq = ""
+}
+
+
 JSON = list()
 for (id in in.df[,idCol]){
+
+	
+
+
+	# Translate protein sequence?
+	if (translate.seqs){
+
+
+		gene = in.df[in.df[,idCol] == id,"sequence"]
+		transl_table = in.df[in.df[,idCol] == id,"transl_table"]
+
+		if (length(gene) == 1 & !is.na(gene) & nchar(gene) > 0 & length(gene) == 1 & !is.na(gene) & nchar(gene) > 0){
+			ptn = seqinr::translate(strsplit(as.character(gene), "")[[1]], numcode=as.numeric(transl_table))
+			ptn = paste(ptn, collapse="")
+			ptn = gsub("[*].*", "", ptn)
+			in.df[in.df[,idCol] == id,"proteinSeq"] = ptn
+		}
+
+
+	}
+
 
 	JSON[[id]] = in.df[in.df[,idCol] == id,]
 
 
 }
+
+
+
+
+
+
 
 
 exportJSON <- toJSON(JSON, indent=4)
