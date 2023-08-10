@@ -1,9 +1,9 @@
-﻿
-
-
-<html>
+﻿<html>
 <head>
 <title>Glutaminyl-tRNA Synthetase</title>
+
+<meta name="description" content="Glutaminyl-tRNA Synthetase is an enzyme that attaches the amino acid glutamine to its cognate tRNA during protein synthesis">
+<meta name="keywords" content="GlnRS,QRS,aminoacyl-tRNA synthetase,AARS,database,application,tool,visualization,protein,biochemistry,molecular biology">
 
 <link rel="icon" >
 <meta name="viewport" content="width=device-width, initial-scale=0.41, maximum-scale=1" />
@@ -14,6 +14,7 @@
 <script language='JavaScript' type='text/JavaScript' src="/js/util.js"></script>
 <script type='text/javascript' src='../../bower_components/bio-pv/bio-pv.min.js'></script>
 
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>   
         
 <script type="text/javascript"
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -27,6 +28,9 @@
 
 
 
+
+
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KBC488H8EG"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -35,6 +39,10 @@
 
   gtag('config', 'G-KBC488H8EG');
 </script>
+
+
+
+
 
 
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -49,7 +57,10 @@
 function init(){
 	
 	renderaaRS();
+
+
 }
+
 
 
 
@@ -62,161 +73,7 @@ function init(){
 	<div id="main">
 
 
-		<ul id="flexContainer">
-			<li class="summary">
-				
-			</li>
-
-
-			<li class="notes">
-				
-				<div>
-				
-				
-					Glutaminyl-tRNA synthetase (GlnRS) is an enzyme that plays a crucial role in protein synthesis by catalysing the attachment of the amino acid glutamine to its cognate tRNA:
-
-					<div class="reaction">
-						<span>
-							$ \text{Gln} + \text{tRNA}^\text{Gln} + \text{ATP} \xrightarrow{\text{GlnRS}} \text{Gln-tRNA}^\text{Gln} + \text{AMP} + \text{PP}_i  $
-						</span>
-					</div>
-					
-					
-						As discussed by Hadd and Perona 2014, there is a complex coevolutionary history between glutamyl- and glutaminyl-tRNA syntheteases, which comprise subclass Ib (Perona and Hadd. 2012, Gomez et al., 2020). 
-					Their diversification occurred after the last universal common ancestor, with bacterial-like forms being characterised by an $\alpha$-helical anticodon binding domain, and the archael and eukaryotic forms possessing a $\beta$-barrel anticodon binding domain.
-					While many contemporary systems express both GlnRS and GluRS, their ancestor was most likely a non-discriminating form, which would attach Glu to tRNA<sup>Gln</sup>.
-					A second enzymic step, performed by an amidotransferase, would correct the misacylated tRNA prior to protein synthesis, as it does with <a href="/class2/asp2/">AsxRS</a> (Lapointe et al. 1986, Raczniak et al. 2001).
-					This non-discriminating enzyme is still found in systems which lack GlnRS, such the archaea, which express <a href="/class1/glu2">GlxRS-A</a>, as well as certain bacteria which have a non-discriminating variant <a href="/class1/glu1">GlxRS-B</a>, or a noncognate variant GluGlnRS which attaches Glu to tRNA<sup>Gln</sup> (Salazar et al. 2003, Skouloubris et al. 2003).
-					Is is likely that GlnRS originated in the eukaryota, and was later acquired by certain bacteria through horizontal gene transfer (Siatecka et al. 1998). <br><br>
-					
-					
-					The N-terminal catalytic domain of GlnRS closely resembles that of <a href="/class1/glu1">GluRS-B</a>, <a href="/class1/glu3">GluRS-E</a>, and <a href="/class1/glu2">GlxRS-A</a>, 
-					constituting subclass Ib (Perona  and Hadd 2012, Gomez et al., 2020).
-					Their catalytic domains are characterised by an insertion within CP1, containing a loop flanked by two helices (SC1b IM), which 
-					may play a role in acceptor stem recognition  (Rath et al. 1998, Nureki et al. 2010).
-					Its <a href="/superfamily/class1/Anticodon_binding_domain_Q">$\beta$-barrel anticodon binding domain</a> is located at the C-terminal end (Rould et al. 1991) and is homologous with that of GlxRS-A and GluRS-E.
-					However it is distinct to the bacterial form GluRS-B, which instead has an <a href="/superfamily/class1/Anticodon_binding_domain_E">$\alpha$-helical anticodon binding domain</a>.
-					Members of subclass Ib, alongside <a href="/class1/arg">ArgRS</a> and <a href="/class1/lys">LysRS-I</a>, require the presence of tRNA to catalyse activation of the amino acid substrate (Dubois et al. 2005).
-					<br><br>
-					
-
-				
-					In many eukaryotes, the N-terminal contains a helical domain homologous to the Yqey domain found in amidotransferases (Hadd et al. 2014), and is required
-					for the assembly of the MARS complex (Kim et al. 2000).
-					It may also contribute to the enzyme's ability to discriminate against tRNA<sup>Glu</sup> (Hadd et al. 2014). <br><br>
-
-
-
-
-
-
-				</div>
-				
-			</li>
-			
-		</ul>
 		
-
-		<div class="svgDiv">
-			<svg id="secondary" height=0 width=0 overflow="auto"></svg>
-		</div>
-
-		
-		
-		<div id="alignment" class="svgDiv">
-
-		</div>
-
-
-		<div id="alignment2" class="svgDiv">
-
-		</div>
-
-
-		<div id="tertiaryTable">
-			
-			<table>
-				<tr>
-					<td>
-						<div id="superposition"> </div>
-					</td>
-					
-					<td>
-						<div id="tertiary"> </div>
-					</td>
-				</tr>
-			
-			</table>
-			
-			
-		
-		</div>
-		
-		
-		<div id="references">
-		
-		
-			<div>
-				John J. Perona. "The Aminoacyl-tRNA Synthetases" CRC Press (2005): Chapter 9: Glutaminyl-tRNA Synthetases.
-			</div>
-
-				<div>
-				Daniel Y. Dubois, Jacques Lapointe and Shun-ichi Sekine. "The Aminoacyl-tRNA Synthetases" CRC Press (2005): Chapter 10: Glutamyl-tRNA Synthetases.
-			</div>
-	
-			<div>
-				Gomez, Miguel Angel Rubio, and Michael Ibba. "Aminoacyl-tRNA synthetases." Rna 26.8 (2020): 910-936.
-			</div>
-			
-			
-			<div>
-				de Pouplana, Lluıs Ribas, and Paul Schimmel. "Operational RNA code for amino acids in relation to genetic code in evolution." Journal of Biological Chemistry 276.10 (2001): 6881-6884.
-			</div>
-			
-			<div>
-				Raczniak, Gregory, et al. "A single amidotransferase forms asparaginyl-tRNA and glutaminyl-tRNA in Chlamydia trachomatis." Journal of Biological Chemistry 276.49 (2001): 45862-45867.
-			</div>
-			
-			
-			<div>
-				Perona, John J., and Andrew Hadd. "Structural diversity and protein engineering of the aminoacyl-tRNA synthetases." Biochemistry 51.44 (2012): 8705-8729.
-			</div>
-			
-			<div>
-				Wolf, Yuri I., et al. "Evolution of aminoacyl-tRNA synthetases—analysis of unique domain architectures and phylogenetic trees reveals a complex history of horizontal gene transfer events." Genome research 9.8 (1999): 689-710.
-			</div>
-			
-			<div>
-				Hadd, Andrew, and John J. Perona. "Coevolution of specificity determinants in eukaryotic glutamyl-and glutaminyl-tRNA synthetases." Journal of molecular biology 426.21 (2014): 3619-3633.
-			</div>
-			
-			<div>
-				Lapointe JA, Duplain LO, Proulx MA. A single glutamyl-tRNA synthetase aminoacylates tRNAGlu and tRNAGln in Bacillus subtilis and efficiently misacylates Escherichia coli tRNAGln1 in vitro. Journal of Bacteriology. 1986 Jan;165(1):88-93.
-			</div>
-			
-			<div>
-				Kim, Taeho, et al. "Catalytic peptide of human glutaminyl-tRNA synthetase is essential for its assembly to the aminoacyl-tRNA synthetase complex." Journal of Biological Chemistry 275.28 (2000): 21768-21772.
-			</div>
-			
-			<div>
-				Rath, Virginia L., et al. "How glutaminyl-tRNA synthetase selects glutamine." Structure 6.4 (1998): 439-449.
-			</div>
-			
-			<div>
-				Rould, M. A., J. J. Perona, and T. A. Steitz. "Structural basis of anticodon loop recognition by glutaminyl-tRNA synthetase." Nature 352.6332 (1991): 213-218.
-			</div>
-			
-			<div>
-				Nureki, Osamu, et al. "Structure of an archaeal non-discriminating glutamyl-tRNA synthetase: a missing link in the evolution of Gln-tRNAGln formation." Nucleic acids research 38.20 (2010): 7286-7297.
-			</div>
-
-			<div>
-				Siatecka, Miroslawa, et al. "Modular evolution of the Glx‐tRNA synthetase family: Rooting of the evolutionary tree between the bacteria and archaea/eukarya branches." European Journal of Biochemistry 256.1 (1998): 80-87.
-			</div>
-
-		
-		</div>
-
 
 	</div>
 </body>

@@ -1033,7 +1033,7 @@ function loadAlignmentRO(fasta, resolve = function() { }){
 
   	if (DATA.metadata[acc] != null){
 
-	  	let fullPtn = DATA.metadata[acc].protein;
+	  	let fullPtn = DATA.metadata[acc].proteinSeq;
 	  	let fullGene = DATA.metadata[acc].sequence;
 
 	  	// Substring of gene that corresponds to protein

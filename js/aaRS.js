@@ -586,7 +586,7 @@ function renderInfo(text, resolve=function() { }){
 
 
         $(".summary table").append(`<tr>
-                  <th>Superfamily</th>
+                  <th>Class</th>
                   <td>` + json.class + `</td>
                 </tr>`);
         $(".summary table").append(`<tr title="Amino acids attached to tRNA">
@@ -610,7 +610,7 @@ function renderInfo(text, resolve=function() { }){
   else if (PAIRWISE) {
 
         $(".summary table").append(`<tr>
-                  <th>Superfamily</th>
+                  <th>Class</th>
                   <td>` + json.class + `</td>
                 </tr>`);
         $(".summary table").append(`<tr>
@@ -656,7 +656,7 @@ function renderInfo(text, resolve=function() { }){
   								<td>` + json.name + `</td>
   							</tr>`);
   	$(".summary table").append(`<tr>
-  								<th>Superfamily</th>
+  								<th>Class</th>
   								<td>` + json.class + `</td>
   							</tr>`);
     $(".summary table").append(`<tr>

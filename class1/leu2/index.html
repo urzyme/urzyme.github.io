@@ -1,9 +1,9 @@
-﻿
-
-
-<html>
+﻿<html>
 <head>
-<title>Leucyl-tRNA Synthetase (Archaeal-like)</title>
+<title>Archaeal-like leucyl-tRNA Synthetase</title>
+
+<meta name="description" content="The archaeal-like leucyl-tRNA synthetase (LeuRS-A) is an enzyme that attaches the amino acid leucine to its cognate tRNA during protein synthesis">
+<meta name="keywords" content="archaea,eukaryote,human,LeuRS,LRS,aminoacyl-tRNA synthetase,aminoacyl-tRNA ligase,AARS,database,application,tool,visualization,protein,biochemistry,molecular biology,bioinformatics">
 
 <link rel="icon" >
 <meta name="viewport" content="width=device-width, initial-scale=0.41, maximum-scale=1" />
@@ -14,6 +14,7 @@
 <script language='JavaScript' type='text/JavaScript' src="/js/util.js"></script>
 <script type='text/javascript' src='../../bower_components/bio-pv/bio-pv.min.js'></script>
 
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>   
         
 <script type="text/javascript"
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -26,6 +27,10 @@
 </script>
 
 
+
+
+
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KBC488H8EG"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -34,6 +39,10 @@
 
   gtag('config', 'G-KBC488H8EG');
 </script>
+
+
+
+
 
 
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -48,7 +57,10 @@
 function init(){
 	
 	renderaaRS();
+
+
 }
+
 
 
 
@@ -61,182 +73,7 @@ function init(){
 	<div id="main">
 
 
-		<ul id="flexContainer">
-			<li class="summary">
-				
-			</li>
-
-
-			<li class="notes">
-				
-				<div>
-
-
-
-					The archaeal-like leucyl-tRNA synthetase (LeuRS-A) is an enzyme that plays a crucial role in protein synthesis by catalysing the attachment of the amino acid leucine to its cognate tRNA:
-
-
-
-
-					<div class="reaction">
-						<span>
-							$ \text{Leu} + \text{tRNA}^\text{Leu} + \text{ATP} \xrightarrow{\text{LeuRS-A}} \text{Leu-tRNA}^\text{Leu} + \text{AMP} + \text{PP}_i  $
-						</span>
-					</div>
-
-
-
-
-							LeuRS-A is found in most archaea, and differs from the bacterial-like form LeuRS-B, which is found in most bacteria and organelles. 
-							Either type may reside in a eukaryotic cytosol.  
-							The two forms are characterised by their abilities to charge tRNAs corresponding to six different codons.
-							In the standard genetic code, <a href="/class1/arg">ArgRS</a> and <a href="/class2/ser1">SerRS</a> are the only other AARS which decode as many as six codons.
-							The structures of LeuRS-A and -B are distinguished by 
-							i) the placement of the editing domain within their primary sequence  (Fukunaga et al. 2005), 
-							ii) the C-terminal domain which recognises tRNA (Tukalo et al. 2005), and 
-							iii) the two LeuRS-A insertion modules depicted below, also known as the archaeal leucyl-specific domains 1 and 2 (Fukunaga et al. 2005). <br><br>
-
-				
-
-							LeuRS-A and -B alike are closely related to the <a href="../val">ValRS</a>, <a href="../ile">IleRS</a>, and <a href="../met">MetRS</a> families, which comprise 
-							subclass Ia (Perona and Hadd 2012, Gomez and Ibba, 2020).
-							Members of subclass Ia are characterised by their hydrophobic amino acid substrates, as well as the connecting peptide 2 (CP2) and zinc finger insertions, depicted below. 
-						    CP2 is a a 30-40 amino acid two-helix bundle on the surface of the catalytic domain (Starzyk et al. 1987) and appears to be essential for amino acid activation (Zhou at al. 2008). 
-							Upstream from this resides a cysteine-rich zinc finger, 20-40 amino acids in length, also essential for effective aminoacylation (Nureki et al. 1993, Sugiura et al. 2000).
-							However, zinc binding activity appears to be absent from this region of the protein for certain members of LeuRS-A, including <i>Pyrococcus horikoshii</i> (Fukunaga et al. 2005).  <br><br>
-
-
-							ValRS,	IleRS, and LeuRS share a a post-transfer editing domain, absent from MetRS.
-							This editing domain typically resides within the zinc finger, providing further amino acid selectivity by expelling a wide range of mistargetted amino acids 
-							such alanine, cysteine, threonine, valine, isoleucine, methionine, homocysteine, and norvaline (Gomez and Ibba, 2020).
-							However, unlike LeuRS-A, ValRS, and IleRS, the editing domain of LeuRS-B resides downstream of the zinc finger and CP2 (Fukunaga et al. 2005).
-							Thus, the domain appears to have hopped between the two positions, or may have orginated as a trans-acting factor.
-							LeuRS-A is lacking the connecting peptide 3 (CP3) domain found in IleRS, ValRS, and LeuRS-B. <br><br>
-
-
-							The tRNA is recognised by two C-terminal domains (Fukunaga et al. 2005).
-							The first is a <a href="/superfamily/class1/Anticodon_binding_domain_1a">helical domain</a> that recognises the anticodon binding domain, and is universal across the members of subclass Ia plus <a href="../cys">CysRS</a> and <a href="../arg">ArgRS</a>.
-							The second domain (the C-terminal domain) is unique to LeuRS-A and appears to be beneficial, but not essential, for aminoacylation activity (Fukunaga et al. 2005).
-							 <br><br>
-
-
-
-							 LeuRS-A has been widely used for studying ancestral AARS model, such as urzymes. 
-							 Urzyme constructs - which lack the editing domain, zinc finger, CP2, and C-terminal domains - still retain aminoacylation activity, albeit with much lower activity and specificity (Hobson et al. 2022, Carter and Wills 2022).
-							 Mutational studies have revealed that mutating the histidine and lysine resides of the HIGH and KMSKS motifs of the LeuRS-A urzyme improved the enzyme's catalytic activity, suggesting that these insertions may have predated the motifs (Tang et al. 2023).
-
-
-
-				</div>
-				
-			</li>
-			
-		</ul>
 		
-
-		<div class="svgDiv">
-			<svg id="secondary" height=0 width=0 overflow="auto"></svg>
-		</div>
-
-		
-		
-		<div id="alignment" class="svgDiv">
-
-		</div>
-
-
-		<div id="alignment2" class="svgDiv">
-
-		</div>
-
-
-		<div id="tertiaryTable">
-			
-			<table>
-				<tr>
-					<td>
-						<div id="superposition"> </div>
-					</td>
-					
-					<td>
-						<div id="tertiary"> </div>
-					</td>
-				</tr>
-			
-			</table>
-			
-			
-		
-		</div>
-		
-		
-		<div id="references">
-	
-		
-			<div>
-				Tommie L. Lincecum, Jr. and Susan A. Martinis. "The Aminoacyl-tRNA Synthetases" CRC Press (2005): Chapter 5: Leucyl-tRNA Synthetases.
-			</div>
-	
-			<div>
-				Gomez, Miguel Angel Rubio, and Michael Ibba. "Aminoacyl-tRNA synthetases." Rna 26.8 (2020): 910-936.
-			</div>
-
-			<div>
-				Cusack, Stephen, Anna Yaremchuk, and Michael Tukalo. "The 2 Å crystal structure of leucyl-tRNA synthetase and its complex with a leucyl-adenylate analogue." The EMBO Journal 19.10 (2000): 2351-2361.
-			</div>
-
-
-			<div>
-				Zhou, Xiao-Long, Bin Zhu, and En-Duo Wang. "The CP2 domain of leucyl-tRNA synthetase is crucial for amino acid activation and post-transfer editing." Journal of Biological Chemistry 283.52 (2008): 36608-36616.
-			</div>
-
-			<div>
-				Starzyk, Ruth M., Teresa A. Webster, and Paul Schimmel. "Evidence for dispensable sequences inserted into a nucleotide fold." Science 237.4822 (1987): 1614-1618.
-			</div>
-			
-			
-			<div>
-				Perona, John J., and Andrew Hadd. "Structural diversity and protein engineering of the aminoacyl-tRNA synthetases." Biochemistry 51.44 (2012): 8705-8729.
-			</div>
-
-
-		<div>
-				Nureki, O., et al. "Chemical modification and mutagenesis studies on zinc binding of aminoacyl-tRNA synthetases." Journal of Biological Chemistry 268.21 (1993): 15368-15373.
-			</div>
-
-
-	
-			<div>
-				Sugiura, Ikuko, et al. "The 2.0 Å crystal structure of Thermus thermophilus methionyl-tRNA synthetase reveals two RNA-binding modules." Structure 8.2 (2000): 197-208.
-			</div>
-
-			<div>
-				Fukunaga, Ryuya, and Shigeyuki Yokoyama. "Crystal structure of leucyl-tRNA synthetase from the archaeon Pyrococcus horikoshii reveals a novel editing domain orientation." Journal of molecular biology 346.1 (2005): 57-71.
-			</div>
-
-			<div>
-				Rock, Fernando L., et al. "An antifungal agent inhibits an aminoacyl-tRNA synthetase by trapping tRNA in the editing site." science 316.5832 (2007): 1759-1761.
-			</div>
-
-			<div>
-				Tukalo, Michael, et al. "The crystal structure of leucyl-tRNA synthetase complexed with tRNALeu in the post-transfer–editing conformation." Nature structural & molecular biology 12.10 (2005): 923-930.
-			</div>
-
-			<div>
-				Tang, Guo Qing, et al. "Domain Acquisition by Class I Aminoacyl-tRNA Synthetase Urzymes Coordinated the Catalytic Functions of HVGH and KMSKS Motifs." bioRxiv (2023): 2023-04.
-			</div>
-
-			<div>
-				Hobson, Jessica J., et al. "A Leucyl-tRNA Synthetase Urzyme: Authenticity of tRNA Synthetase Catalytic Activities and Promiscuous Phosphorylation of Leucyl-5′ AMP." International Journal of Molecular Sciences 23.8 (2022): 4229.
-			</div>
-
-			<div>
-				Carter Jr, Charles W., and Peter R. Wills. "The roots of genetic coding in aminoacyl-tRNA synthetase duality." Annual review of biochemistry 90 (2021): 349-373.
-			</div>
-
-		
-		</div>
-
 
 	</div>
 </body>

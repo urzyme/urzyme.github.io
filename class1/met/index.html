@@ -1,9 +1,9 @@
-﻿
-
-
-<html>
+﻿<html>
 <head>
 <title>Methionyl-tRNA Synthetase</title>
+
+<meta name="description" content="Methionyl-tRNA synthetase (MetRS) is an enzyme that attaches the amino acid methionine to its cognate tRNA during protein synthesis">
+<meta name="keywords" content="MetRS,MARS,aminoacyl-tRNA synthetase,aminoacyl-tRNA ligase,AARS,database,application,tool,visualization,protein,biochemistry,molecular biology,bioinformatics">
 
 <link rel="icon" >
 <meta name="viewport" content="width=device-width, initial-scale=0.41, maximum-scale=1" />
@@ -14,6 +14,7 @@
 <script language='JavaScript' type='text/JavaScript' src="/js/util.js"></script>
 <script type='text/javascript' src='../../bower_components/bio-pv/bio-pv.min.js'></script>
 
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>   
         
 <script type="text/javascript"
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -29,8 +30,6 @@
 
 
 
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KBC488H8EG"></script>
 <script>
@@ -43,13 +42,25 @@
 
 
 
+
+
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+
+
+
 <script language='JavaScript' type='text/JavaScript'>
 
 
 function init(){
 	
 	renderaaRS();
+
+
 }
+
 
 
 
@@ -62,151 +73,7 @@ function init(){
 	<div id="main">
 
 
-		<ul id="flexContainer">
-			<li class="summary">
-				
-			</li>
-
-
-			<li class="notes">
-				
-				<div>
-
-
-						Methionyl-tRNA synthetase (MetRS) is an enzyme that plays a crucial role in protein synthesis by catalysing the attachment of the amino acid methionine to its cognate tRNA:
-
-
-
-
-					<div class="reaction">
-						<span>
-							$ \text{Met} + \text{tRNA}^\text{Met} + \text{ATP} \xrightarrow{\text{MetRS}} \text{Met-tRNA}^\text{Met} + \text{AMP} + \text{PP}_i  $
-						</span>
-					</div>
-
-
-							MetRS is closely related to the <a href="../leu2">LeuRS-A</a>, <a href="../leu1">LeuRS-B</a>, <a href="../ile">IleRS</a>, and <a href="../val">ValRS</a> families, which comprise subclass Ia (Gomez and Ibba, 2020).
-							Members of subclass Ia are characterised by their hydrophobic amino acid substrates, as well as the connecting peptide 2 (CP2) insertion, depicted below. 
-							The CP2 module is 30-40 amino acids in length (Starzyk et al. 1987) and exists as two anti-parallel &alpha;-helices on the surface of the catalytic domain. 
-							It appears to be essential for amino acid activation (Zhou at al. 2008).  <br><br>
-
-
-
-							MetRS exists as a homodimer or a monomer, depending on the presence or absence of a C-terminal domain downstream from the helical anticodon binding domain (Crepin et al. 2004). 
-							The dimerisation domain, EMAP, is only present in certain organisms and shows an OB-fold, which is also found in paralogous RNA binding proteins (Crepin et al. 2002). 
-							In the context of MetRS, this domain improves tRNA<sup>Met</sup> binding affinity (Blanquet et al. 1973). 
-							A paralog of EMAP is also found in some forms of <a href="/class1/tyr">TyrRS</a> and <a href="/class2/phe2">PheRS</a> (Wolf et al. 1999). <br><br>
-
-
-
-							Editing activity has been characterised in MetRS which, in contrast to other members of subclass Ia, removes mischarged amino acids at the active site as opposed to a specialised editing domain (Gomez and Ibba, 2020). 
-							This process targets non-proteinogenic amino acids, such as homocysteine, at the pre-transfer level (Jakubowski et al. 1990).
-							MetRS is also one of several aminoacyl-tRNA synthetases expressed by mimiviruses (Abergel et al. 2007).
-							Certain cytosolic MetRS have an N-terminal glutathione S-transferase (GST) domain (Hadd and Perona. 2014).
-
-				
-	
-
-				</div>
-				
-			</li>
-			
-		</ul>
 		
-
-		<div class="svgDiv">
-			<svg id="secondary" height=0 width=0 overflow="auto"></svg>
-		</div>
-
-		
-		
-		<div id="alignment" class="svgDiv">
-
-		</div>
-
-
-		<div id="alignment2" class="svgDiv">
-
-		</div>
-
-
-		<div id="tertiaryTable">
-			
-			<table>
-				<tr>
-					<td>
-						<div id="superposition"> </div>
-					</td>
-					
-					<td>
-						<div id="tertiary"> </div>
-					</td>
-				</tr>
-			
-			</table>
-			
-			
-		
-		</div>
-		
-		
-		<div id="references">
-	
-			<div>
-				Gomez, Miguel Angel Rubio, and Michael Ibba. "Aminoacyl-tRNA synthetases." Rna 26.8 (2020): 910-936.
-			</div>
-
-
-			<div>
-				Blanquet, Sylvain, et al. "The Aminoacyl-tRNA Synthetases" CRC Press (2005): Chapter 6: Methionyl-tRNA Synthetases.
-			</div>
-
-			<div>
-				Crepin, Thibaut, et al. "Three-dimensional structure of methionyl-tRNA synthetase from Pyrococcus abyssi." Biochemistry 43.9 (2004): 2635-2644.
-			</div>
-
-			<div>
-				Crepin, Thibaut, et al. "Use of analogues of methionine and methionyl adenylate to sample conformational changes during catalysis in Escherichia coli methionyl-tRNA synthetase." Journal of molecular biology 332.1 (2003): 59-72.
-			</div>
-
-
-			<div>
-				Zhou, Xiao-Long, Bin Zhu, and En-Duo Wang. "The CP2 domain of leucyl-tRNA synthetase is crucial for amino acid activation and post-transfer editing." Journal of Biological Chemistry 283.52 (2008): 36608-36616.
-			</div>
-
-			<div>
-				Starzyk, Ruth M., Teresa A. Webster, and Paul Schimmel. "Evidence for dispensable sequences inserted into a nucleotide fold." Science 237.4822 (1987): 1614-1618.
-			</div>
-
-			<div>
-				Blanquet, Sylvain, Motohiro Iwatsubo, and Jean‐Pierre Waller. "The Mechanism of Action of Methionyl‐tRNA Synthetase from Escherichia coli: 1. Fluorescence Studies on tRNAMet Binding as a Function of Ligands, Ions and pH." European Journal of Biochemistry 36.1 (1973): 213-226.
-			</div>
-
-			<div>
-				Crepin, Thibaut, et al. "Structure and function of the C-terminal domain of methionyl-tRNA synthetase." Biochemistry 41.43 (2002): 13003-13011.
-			</div>
-
-
-			<div>
-				Abergel, Chantal, et al. "Virus-encoded aminoacyl-tRNA synthetases: structural and functional characterization of mimivirus TyrRS and MetRS." Journal of Virology 81.22 (2007): 12406-12417.
-			</div>
-
-
-			<div>
-				Jakubowski, Hieronim. "Proofreading in vivo: editing of homocysteine by methionyl-tRNA synthetase in Escherichia coli." Proceedings of the National Academy of Sciences 87.12 (1990): 4504-4508.
-			</div>
-		
-		
-			<div>
-				Wolf, Yuri I., et al. "Evolution of aminoacyl-tRNA synthetases—analysis of unique domain architectures and phylogenetic trees reveals a complex history of horizontal gene transfer events." Genome research 9.8 (1999): 689-710.
-			</div>
-
-
-
-			<div>
-				Hadd, Andrew, and John J. Perona. "Coevolution of specificity determinants in eukaryotic glutamyl-and glutaminyl-tRNA synthetases." Journal of molecular biology 426.21 (2014): 3619-3633.
-			</div>
-
 
 	</div>
 </body>

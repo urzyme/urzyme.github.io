@@ -1,9 +1,9 @@
-﻿
-
-
-<html>
+﻿<html>
 <head>
-<title>Isoleucyl-tRNA Synthetease</title>
+<title>Isoleucyl-tRNA Synthetase</title>
+
+<meta name="description" content="Isoleucyl-tRNA synthetase (IleRS) is an enzyme that attaches the amino acid isoleucine to its cognate tRNA during protein synthesis">
+<meta name="keywords" content="IleRS,IRS,aminoacyl-tRNA synthetase,aminoacyl-tRNA ligase,AARS,database,application,tool,visualization,protein,biochemistry,molecular biology,bioinformatics">
 
 <link rel="icon" >
 <meta name="viewport" content="width=device-width, initial-scale=0.41, maximum-scale=1" />
@@ -14,7 +14,8 @@
 <script language='JavaScript' type='text/JavaScript' src="/js/util.js"></script>
 <script type='text/javascript' src='../../bower_components/bio-pv/bio-pv.min.js'></script>
 
-         
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>   
+        
 <script type="text/javascript"
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   MathJax.Hub.Config({
@@ -29,8 +30,6 @@
 
 
 
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KBC488H8EG"></script>
 <script>
@@ -44,13 +43,24 @@
 
 
 
+
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+
+
+
 <script language='JavaScript' type='text/JavaScript'>
 
 
 function init(){
 	
 	renderaaRS();
+
+
 }
+
 
 
 
@@ -63,176 +73,7 @@ function init(){
 	<div id="main">
 
 
-		<ul id="flexContainer">
-			<li class="summary">
-				
-			</li>
-
-
-			<li class="notes">
-				
-				<div>
-				
-				
-				
-					Isoleucyl-tRNA synthetase (IleRS) is an enzyme that plays a crucial role in protein synthesis by catalysing the attachment of the amino acid isoleucine to its cognate tRNA:
-
-
-
-
-					<div class="reaction">
-						<span>
-							$ \text{Ile} + \text{tRNA}^\text{Ile} + \text{ATP} \xrightarrow{\text{IleRS}} \text{Ile-tRNA}^\text{Ile} + \text{AMP} + \text{PP}_i  $
-						</span>
-					</div>
-					
-					
-					IleRS features a N-terminal catalytic domain, C-terminal tRNA binding domains, and a post-transfer editing domain inserted within the catalytic domain (Nordin and Schimmel 2005).
-					 <br><br>
-					
-					
-					IleRS is closely related to the <a href="../leu2">LeuRS-A</a>, <a href="../leu1">LeuRS-B</a>, <a href="../val">ValRS</a>, and <a href="../met">MetRS</a> families, which comprise 
-					subclass Ia (Perona and Hadd 2012, Gomez and Ibba, 2020).
-					Members of subclass Ia are characterised by their hydrophobic amino acid substrates, as well as the connecting peptide 2 (CP2) and zinc finger insertions, depicted below. 
-				    CP2 is a 30-40 amino acid two-helix bundle on the surface of the catalytic domain (Starzyk et al. 1987) and appears to be essential for amino acid activation (Zhou at al. 2008). 
-					Upstream from this resides a cysteine-rich zinc finger, 20-40 amino acids in length, also essential for effective aminoacylation (Nureki et al. 1993, Sugiura et al. 2000). <br><br>
-					
-					
-					IleRS, LeuRS, and ValRS share a a post-transfer editing domain, absent from MetRS.
-					The editing domain typically resides within the zinc finger, providing further amino acid selectivity by expelling a wide range of mistargetted amino acids 
-					such alanine, cysteine, threonine, valine, isoleucine, methionine, homocysteine, and norvaline (Gomez and Ibba, 2020).
-					IleRS, ValRS, and the bacterial-like LeuRS-B are further characterised by connecting peptide 3 (CP3), which contains a second zinc-finger motif in certain organisms (Fukunaga et al. 2005).
-					Its functional role is unclear. <br><br>
-
-
-
-					There are two types of IleRS, which have distinct sequences and C-terminal domain architectures. 
-					Both forms possess a <a href="/superfamily/class1/Anticodon_binding_domain_1a">helical domain</a>, that recognises the anticodon loop, residing downstream from the catalytic domain.
-					The domain is universal across the members of subclass Ia, as well as <a href="../cys">CysRS</a> and <a href="../arg">ArgRS</a>.
-					However, the remaining C-terminal regions vary between the two types.
-					The first type, IleRS-1, is found in certain bacteria, organelles, and eukaryotic cytosols.
-					It possesses a C-terminal junction domain and a zinc finger downstream from the helical bundle.
-					Together with an N-terminal extension, the three C-terminal domains recognise the anticodon loop (Silvian et al. 1999).  
-					The second type, IleRS-2, is found in many archaea, bacteria, and eukaryotic cytosols. 
-					It lacks the N-terminal extension and zinc finger motif (Brkic et al. 2023), and achieves anticodon loop recognition through a much larger variation of the C-terminal junction domain.
-					<br><br>
-
-
-
-
-
-					Many bacteria express both types of IleRS. Certain bacteria, such as <i>Staphylococcus aureus</i>, have an abnormal GxHH sequence profile in place of the standard HxGH motif in IleRS-2, promoting antibiotic resistance (Brkic et al. 2023).
-					
-					
-					
-
-
-					<!--
-						
-						
-						ABD - why 2 domains? And are there two variants of the last domain?
-						
-					-->
-
-				</div>
-				
-			</li>
-			
-		</ul>
 		
-
-		<div class="svgDiv">
-			<svg id="secondary" height=0 width=0 overflow="auto"></svg>
-		</div>
-
-		
-		
-		<div id="alignment" class="svgDiv">
-
-		</div>
-
-
-		<div id="alignment2" class="svgDiv">
-
-		</div>
-
-
-		<div id="tertiaryTable">
-			
-			<table>
-				<tr>
-					<td>
-						<div id="superposition"> </div>
-					</td>
-					
-					<td>
-						<div id="tertiary"> </div>
-					</td>
-				</tr>
-			
-			</table>
-			
-			
-		
-		</div>
-		
-		
-		<div id="references">
-	
-			<div>
-				Gomez, Miguel Angel Rubio, and Michael Ibba. "Aminoacyl-tRNA synthetases." Rna 26.8 (2020): 910-936.
-			</div>
-			
-			
-			<div>
-				Brian E. Nordin and Paul Schimmel. "The Aminoacyl-tRNA Synthetases" CRC Press (2005): Chapter 4: Isoleuyl-tRNA Synthetases.
-			</div>
-
-
-			<div>
-				Zhou, Xiao-Long, Bin Zhu, and En-Duo Wang. "The CP2 domain of leucyl-tRNA synthetase is crucial for amino acid activation and post-transfer editing." Journal of Biological Chemistry 283.52 (2008): 36608-36616.
-			</div>
-
-			<div>
-				Starzyk, Ruth M., Teresa A. Webster, and Paul Schimmel. "Evidence for dispensable sequences inserted into a nucleotide fold." Science 237.4822 (1987): 1614-1618.
-			</div>
-			
-			
-			<div>
-				Perona, John J., and Andrew Hadd. "Structural diversity and protein engineering of the aminoacyl-tRNA synthetases." Biochemistry 51.44 (2012): 8705-8729.
-			</div>
-			
-			<div>
-				Nureki, O., et al. "Chemical modification and mutagenesis studies on zinc binding of aminoacyl-tRNA synthetases." Journal of Biological Chemistry 268.21 (1993): 15368-15373.
-			</div>
-			
-			
-			<div>
-				Sugiura, Ikuko, et al. "The 2.0 Å crystal structure of Thermus thermophilus methionyl-tRNA synthetase reveals two RNA-binding modules." Structure 8.2 (2000): 197-208.
-			</div>
-			
-			<div>
-				Fukunaga, Ryuya, and Shigeyuki Yokoyama. "Crystal structure of leucyl-tRNA synthetase from the archaeon Pyrococcus horikoshii reveals a novel editing domain orientation." Journal of molecular biology 346.1 (2005): 57-71.
-			</div>
-			
-			<div>
-				Nureki, Osamu, et al. "Enzyme structure with two catalytic sites for double-sieve selection of substrate." Science 280.5363 (1998): 578-582.
-			</div>
-
-			<div>
-				Silvian, Laura F., Jimin Wang, and Thomas A. Steitz. "Insights into editing from an ile-tRNA synthetase structure with tRNAile and mupirocin." Science 285.5430 (1999): 1074-1077.
-			</div>
-
-			<div>
-				Chen, Bingyi, et al. "Inhibitory mechanism of reveromycin A at the tRNA binding site of a class I synthetase." Nature communications 12.1 (2021): 1616.
-			</div>
-
-			<div>
-				Brkic, Alojzije, et al. "Antibiotic hyper-resistance in a class I aminoacyl-tRNA synthetase with altered active site signature motif." bioRxiv (2023): 2023-01.
-			</div>
-		
-		</div>
-
 
 	</div>
 </body>
