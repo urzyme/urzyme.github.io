@@ -1,9 +1,17 @@
-# urzyme.github.io
-Collection of of amino acyl tRNA synthetases (aaRS). This project is under active development and is a work in progress.
+# AARS Online
 
-To view the website please visit http://urzyme.github.io
+Collection of of aminoacyl-tRNA synthetases (AARS). This project is under active development and is a work in progress.
+
+To view the website please visit http://www.aars.online
 
 
+
+## Creating Issues
+
+If you encounter an error or have any feedback, please [create an issue](https://github.com/urzyme/urzyme.github.io/issues), or contact jordan.douglas@auckland.ac.nz
+
+
+To help other users find the discussion, please use the appropriate labels when creating issues. For example, if you notice a mistake in the ArgRS introduction, use the [arg](https://github.com/urzyme/urzyme.github.io/labels/arg) label.
 
 
 
