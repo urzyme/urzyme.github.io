@@ -39,8 +39,8 @@ AA_FONT_COLS = {A: "#ffffff", I: "#ffffff", L: "#ffffff", M: "#ffffff", F: "#fff
 
 
 // http://bioinformatica.isa.cnr.it/SUSAN/NAR2/dsspweb.html#:~:text=DSSP%20assigns%20seven%20different%20secondary,no%20secondary%20structure%20is%20recognized
-AA_COLS_2 = {E: "#FFC20A", H: "#0C7BDC", G: "#0C7BDC", I: "#0C7BDC", T:"#d3d3d3", S: "#d3d3d3",  B: "#d3d3d3",  N: "#ffffff"};
-AA_FONT_COLS_2 = {E: "#222222", H: "#222222", G: "#222222", I: "#222222", T:"#222222", S: "#222222",  B: "#222222",  N: "#111111",};
+AA_COLS_2 = {E: "#FFC20A", H: "#0C7BDC", G: "#08569a", I: "#043158", T:"#333333", S: "#696969",  B: "#d3d3d3",  N: "#ffffff"};
+AA_FONT_COLS_2 = {E: "#222222", H: "#ffffff", G: "#ffffff", I: "#ffffff", T:"#ffffff", S: "#ffffff",  B: "#222222",  N: "#111111",};
 
 
 IS_SUPERFAMILY = false;
@@ -2062,8 +2062,9 @@ function renderAlignment(divID, isPrimary = true, downloadHref = ""){
 		// SSE legend
 		if (!isPrimary){
 			toolbar.append($(`<span class="sseLegend" > <span style="color:` + AA_FONT_COLS_2["N"] + `; background-color:` + AA_COLS_2["N"] + `">N</span> - none </span>`));
-			toolbar.append($(`<span class="sseLegend" > <span style="color:` + AA_FONT_COLS_2["S"] + `; background-color:` + AA_COLS_2["S"] + `">S</span> - bend </span>`));
+			
 			toolbar.append($(`<span class="sseLegend" > <span style="color:` + AA_FONT_COLS_2["T"] + `; background-color:` + AA_COLS_2["T"] + `">T</span> - H-bonded turn </span>`));
+			toolbar.append($(`<span class="sseLegend" > <span style="color:` + AA_FONT_COLS_2["S"] + `; background-color:` + AA_COLS_2["S"] + `">S</span> - bend </span>`));
 			toolbar.append($(`<span class="sseLegend" > <span style="color:` + AA_FONT_COLS_2["B"] + `; background-color:` + AA_COLS_2["B"] + `">B</span> - b-bridge </span>`));
 			toolbar.append($(`<span class="sseLegend" > <span style="color:` + AA_FONT_COLS_2["I"] + `; background-color:` + AA_COLS_2["I"] + `">I</span> - p-helix </span>`));
 			toolbar.append($(`<span class="sseLegend" > <span style="color:` + AA_FONT_COLS_2["G"] + `;background-color:` + AA_COLS_2["G"] + `">G</span> - 310 helix </span>`));

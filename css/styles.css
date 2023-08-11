@@ -24,36 +24,6 @@ svg {
 
 
 
-ul.aalist li{
-
-	text-align: left;
-	font-size:1.1em;
-	margin:1em;
-
-}
-
-
-
-ul.aalist li img{
-
-	vertical-align: middle;
-	height:1.2em;
-
-}
-
-
-@media only screen and ( max-device-width: 1000px ) {
-
-
-	ul.aalist li{
-		margin:2em;
-	}
-
-	ul.aalist li img{
-		height:2.5em;
-	}
-	
-}
 
 
 .alignmentToolBar{
@@ -181,10 +151,38 @@ svg text.alpha{
 
 
 
+.aarsShowcase {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	display: none;
+}
+
+
+
+
+.aarsShowcase img{
+	vertical-align: middle;
+	height:1.2em;
+}
+
+ul.aalist li img{
+
+
+
+}
+
+
+
+
+
+
 .banner{
-	text-align:justify;
+	text-align:left;
 	word-break: break-word;
 	background-image: linear-gradient(140deg, #008cba0a, #008cba22);
+
+	font-size: 1.2em;
+	line-height: 1.5em;
 
 	padding: 2em;
 	color: black;
@@ -200,6 +198,43 @@ svg text.alpha{
 	
 	
 }
+
+
+@media only screen and ( max-device-width: 1000px ) {
+
+	.banner{
+		line-height: 3em;
+	}
+
+
+	
+.aarsShowcase{
+	padding: 0.5em;
+	background-image: linear-gradient(140deg, #008cba99, #008cbacc);
+	color: white;
+	box-shadow: 0.3em 0.25em 0.1em #702963cc;
+}
+
+
+}
+
+
+
+@media only screen and ( min-device-width: 1000px ) {
+
+
+
+	
+.aarsShowcase span{
+	padding: 0.5em;
+	background-image: linear-gradient(140deg, #008cba99, #008cbacc);
+	color: white;
+	box-shadow: 0.3em 0.25em 0.1em #702963cc;
+}
+
+
+}
+
 
 
 .notes{
@@ -582,9 +617,9 @@ div#treeDiv{
 #mainloader{
 	z-index:100;
 	position:fixed;
-	left:45%;
-	top:50%;
-	width:10%;
+	left:47.5%;
+	top:52.5%;
+	width:5%;
 	text-align:center;
 	
 }

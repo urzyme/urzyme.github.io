@@ -1,6 +1,4 @@
 ﻿
-
-
 <html>
 <head>
 <title>AARS Online</title>
@@ -9,7 +7,7 @@
 <meta name="keywords" content="aminoacyl-tRNA synthetase,AARS,database,application,tool,visualization,protein,biochemistry,molecular biology,bioinformatics">
 
 
-<link rel="icon" href="fig/icon_white.png">
+<link rel="icon" href="fig/icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=0.41, maximum-scale=1" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -51,8 +49,12 @@ function init(){
 
 	renderHeader(false);
 
+
+
+
+
 	// Add loading wheel
-	$("#catalyticDomainDIV").before(`<div id="mainloader" class='loader'><img src='/fig/icon_white.png'></img></div>`);
+	$("#catalyticDomainDIV").before(`<div id="mainloader" class='loader'><img src='/fig/loader.png'></img></div>`);
 	$("#catalyticDomainDIV").hide(0);
 
 
@@ -65,10 +67,35 @@ function init(){
 		$("#mainloader").remove();
 		$("#catalyticDomainDIV").show(200);
 
-	}, 10);
+
+
+		let eles = $(".aarsShowcase");
+		showEle(eles, 0);
+		
+
+	}, 50);
 
 
 	
+}
+
+
+
+showEle = function(eles, i, timeout = 200){
+
+
+
+	if (i >= eles.length) return;
+	
+	let ele = $(eles[i]);
+	ele.slideDown(100);
+
+	setTimeout(function(){
+		showEle(eles, i+1, timeout);
+	}, timeout);
+	
+
+
 }
 
 
@@ -82,61 +109,71 @@ function init(){
 
 	<div id="main">
 
-		
-		
+
 
 		<div class="banner">
 
 
-			<h1>AARS Online</h1>
+			<h1>Welcome to AARS Online</h1>
 
 
-
-			<ul class="aalist">
-
-				<li>
-					The aminoacyl-tRNA synthetases (AARS) are a large group of enzymes that attach amino acids to their cognate tRNA
-				</li>
-
-				<li>
-					They execute the computational rules of the genetic code 
-				</li>
+			The aminoacyl-tRNA synthetases (AARS) are a large group of enzymes that attach amino acids to their cognate tRNA. 
+			They operate the genetic code in all living systems across all three domains of life- the bacteria, archaea, and eukaryota - plus mitochondria and chloroplasts, and there are even certain viruses that have AARS genes.
+			The evolution of <a href="class1">Class I</a> and <a href="class2">Class II</a> AARS can be traced back earlier than the last universal common ancestor 3-4 billion years ago.
 
 
-				<li>
-					Two evolutionary superfamilies: <a href="class1">Class I</a> and <a href="class2">Class II</a> 
-				</li>
+			AARS Online is a curated database showcasing a taxonomically diverse selection of AARS sequences and structures.
 
 
-				<li>
-					AARS Online is an interactive tool that documents their sequence, structure, and function
-				</li>
+			<div class="aarsShowcase">
+			<span>
+					&#x2726; Seamlessly navigate between protein sequence and structure with a user-friendly interface
+			</span>
+		</div>
 
 
-				<li>
-					Enzymes are sampled from 
-					Bacteria <img src="/fig/Bacteria.png"/>, 
-					Archaea <img src="/fig/Archaea.png"/>, 
-					Eukaryotes <img src="/fig/Eukaryota.png"/>, 
-					Organelles <img src="/fig/Mitochondrial.png"/>, and 
-					Viruses <img src="/fig/Viruses.png"/> 
-				</li>
+		<div class="aarsShowcase">
+			<span>
+					&#x2726; Download high quallity multiple sequence alignments and phylogenetic trees
+			</span>
+		</div>
 
-				<li>
-					Some structures have strong experimental support 
+			<div class="aarsShowcase">
+				<span class="">
+						&#x2726; Enzymes are sampled from 
+						Bacteria <img src="/fig/Bacteria.png"/>, 
+						Archaea <img src="/fig/Archaea.png"/>, 
+						Eukaryotes <img src="/fig/Eukaryota.png"/>, 
+						Organelles <img src="/fig/Mitochondrial.png"/>, and 
+						Viruses <img src="/fig/Viruses.png"/> 
+				</span>
+		</div>
+
+
+		<div class="aarsShowcase">
+			<span class="">
+					&#x2726; Some structures have strong experimental support 
 					<img src="/fig/xray.png"/>
 					while others are AlphaFold models <img src="/fig/alphafold.png"/>
-				</li>
+			</span>
+		</div>
 
-				<li>
-					Use the evolutionary tree below to navigate to an AARS
-				</li>
 
-			</ul>
+		<div class="aarsShowcase">
+			<span class="">
+					&#x2726; Leave a comment, start a discussion, or report an issue on GitHub using the 'Discuss' link at the bottom of each page
+			</span>
+		</div>
 
-		
-		
-	
+
+		<div class="aarsShowcase">
+			<span class="">
+					&#x2726; Use the evolutionary tree below to navigate to an AARS 
+			</span>
+</div>
+
+
+
 
 
 		

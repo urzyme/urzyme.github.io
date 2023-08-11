@@ -1,5 +1,5 @@
 
-The class I lysyl-tRNA synthetase (LysRS-I) is a monomeric that plays a crucial role in protein synthesis by catalysing the attachment of the amino acid arginine to its cognate tRNA:
+The class I lysyl-tRNA synthetase (LysRS-I) is a monomeric enzyme that plays a crucial role in protein synthesis by catalysing the attachment of the amino acid arginine to its cognate tRNA:
 
 
 
