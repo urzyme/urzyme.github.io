@@ -26,6 +26,17 @@ AA_COLS = {A: "#80a0f0", I: "#80a0f0", L: "#80a0f0", M: "#80a0f0", F: "#80a0f0",
           X: "#ffffff"};
 
 
+AA_FONT_COLS = {A: "#ffffff", I: "#ffffff", L: "#ffffff", M: "#ffffff", F: "#ffffff", W: "#ffffff", V: "#ffffff",
+          K: "#ffffff", R: "#ffffff",
+          D: "#ffffff", E: "#ffffff",
+          N: "#ffffff", S: "#ffffff", Q: "#ffffff", T: "#ffffff",
+          C: "#ffffff",
+          G: "#ffffff",
+          P: "#ffffff",
+          H: "#ffffff", Y: "#ffffff",
+          X: "#ffffff"};
+
+
 
 // http://bioinformatica.isa.cnr.it/SUSAN/NAR2/dsspweb.html#:~:text=DSSP%20assigns%20seven%20different%20secondary,no%20secondary%20structure%20is%20recognized
 AA_COLS_2 = {E: "#FFC20A", H: "#0C7BDC", G: "#0C7BDC", I: "#0C7BDC", T:"#d3d3d3", S: "#d3d3d3",  B: "#d3d3d3",  N: "#ffffff"};
@@ -997,6 +1008,18 @@ function renderSecondary(svg){
     var svgContent = $(drawSVGobj(svg, "g", {class: "content"}));
 
 
+    // Colour gradients
+    let defs = $(drawSVGobj(svg, "defs", {} ));
+    let helixGradient = $(drawSVGobj(defs, "linearGradient", {id: "helixGradient"} ));
+    $(drawSVGobj(helixGradient, "stop", {offset: "0%", stop_color: AA_COLS_2["H"] + "aa"} ));
+    $(drawSVGobj(helixGradient, "stop", {offset: "100%", stop_color: AA_COLS_2["H"] + "ee"} ));
+    let strandGradient = $(drawSVGobj(defs, "linearGradient", {id: "strandGradient"} ));
+    $(drawSVGobj(strandGradient, "stop", {offset: "0%", stop_color: AA_COLS_2["E"] + "99"} ));
+    $(drawSVGobj(strandGradient, "stop", {offset: "100%", stop_color: AA_COLS_2["E"] + "ee"} ));
+    let helixBgCol  = "url(#helixGradient)";
+    let strandBgCol  = "url(#strandGradient)";
+
+
     // Residue selection dragger
     const eleSvg = $(svg).get(0); //document.getElementById(svg.attr("id"));
     eleSvg.addEventListener('mousedown', ({clientX, clientY}) => {
@@ -1535,12 +1558,17 @@ function renderSecondary(svg){
           	startX = startX + HELIX_CORNER_RADIUS/2;
           	endX = endX - HELIX_CORNER_RADIUS/2;
 
+
+
           	// Right circle
-          	drawSVGobj(sseGroup, "ellipse", {cx: endX, cy: y, rx: HELIX_CORNER_RADIUS, ry: HELIX_WIDTH/2, style: "stroke-width:1px; stroke:black; fill:" + AA_COLS_2["H"] + colourModifier} );
+          	drawSVGobj(sseGroup, "ellipse", {cx: endX, cy: y, rx: HELIX_CORNER_RADIUS, ry: HELIX_WIDTH/2, style: "stroke-width:1px; stroke:black; fill:" + "white"} );
+          	drawSVGobj(sseGroup, "ellipse", {cx: endX, cy: y, rx: HELIX_CORNER_RADIUS, ry: HELIX_WIDTH/2, style: "stroke-width:1px; stroke:black; fill:" + AA_COLS_2["H"]} );
        
+
        			// Rect
-          	drawSVGobj(sseGroup, "rect", {x: startX, y: y-HELIX_WIDTH/2, width: endX-startX, height: HELIX_WIDTH, style: "stroke-width:0px; fill:" + AA_COLS_2["H"] + colourModifier} );
+       			drawSVGobj(sseGroup, "rect", {x: startX, y: y-HELIX_WIDTH/2, width: endX-startX, height: HELIX_WIDTH, style: "stroke-width:0px; fill:" + AA_COLS_2["H"]} );
          
+
          		// Border around rect
 	         	drawSVGobj(sseGroup, "line", {x1: startX, x2: endX, y1: y-HELIX_WIDTH/2, y2: y-HELIX_WIDTH/2, style: "stroke-width:1px; stroke: black"} );
 	         	drawSVGobj(sseGroup, "line", {x1: startX, x2: endX, y1: y+HELIX_WIDTH/2, y2: y+HELIX_WIDTH/2, style: "stroke-width:1px; stroke: black"} );
@@ -1548,10 +1576,11 @@ function renderSecondary(svg){
 
          		// Left circle
 	          drawSVGobj(sseGroup, "ellipse", {cx: startX, cy: y, rx: HELIX_CORNER_RADIUS, ry: HELIX_WIDTH/2, style: "stroke-width:0px; fill:white"} );
-          	drawSVGobj(sseGroup, "ellipse", {cx: startX, cy: y, rx: HELIX_CORNER_RADIUS, ry: HELIX_WIDTH/2, style: "stroke-width:1px; stroke:black; fill:" + AA_COLS_2["H"] + "aa"} );
+
+          	drawSVGobj(sseGroup, "ellipse", {cx: startX, cy: y, rx: HELIX_CORNER_RADIUS, ry: HELIX_WIDTH/2, style: "stroke-width:1px; stroke:black; fill:" + helixBgCol} );
          
           }else{
-          	 drawSVGobj(sseGroup, "rect", {rx: HELIX_CORNER_RADIUS, x: startX, y: y-HELIX_WIDTH/2, width: endX-startX, height: HELIX_WIDTH, style: "stroke-width:1px; stroke:black; fill:" + AA_COLS_2["H"] + colourModifier} );
+          	 drawSVGobj(sseGroup, "rect", {rx: HELIX_CORNER_RADIUS, x: startX, y: y-HELIX_WIDTH/2, width: endX-startX, height: HELIX_WIDTH, style: "stroke-width:1px; stroke:black; fill:" + helixBgCol} );
          
           }
 
@@ -1580,7 +1609,8 @@ function renderSecondary(svg){
           points += " " + x2 + "," + (y+STRAND_ARROW_BASE_WIDTH/2);
           points += " " + startX + "," + (y+STRAND_ARROW_BASE_WIDTH/2);
 
-          drawSVGobj(sseGroup, "polygon", {points: points, style: "stroke-width:1px; stroke:black; fill:" + AA_COLS_2["E"] + colourModifier} )
+          drawSVGobj(sseGroup, "polygon", {points: points, style: "stroke-width:1px; stroke:black; fill:" + "white"} )
+          drawSVGobj(sseGroup, "polygon", {points: points, style: "stroke-width:1px; stroke:black; fill:" + strandBgCol} )
 
         }
 
@@ -1868,9 +1898,10 @@ function renderAlignment(divID, isPrimary = true, downloadHref = ""){
       if (aa == "-"){
         col = "#ffffff";
       }else if (isPrimary){
+      	textCol = AA_FONT_COLS[aa];
         col = AA_COLS[aa];
       }else{
-		textCol = AA_FONT_COLS_2[aa];
+				textCol = AA_FONT_COLS_2[aa];
         col = AA_COLS_2[aa];
       }
 
