@@ -593,24 +593,6 @@
         "X":"",
         "proteinSeq":""
     },
-    "AsnRS_PDB_Euk_S_cerevisiae_1asz":{
-        "class":        2,
-        "familyID":"asn",
-        "name":"AsnRS",
-        "accession":"AsnRS_PDB_Euk_S_cerevisiae_1asz",
-        "domain":"Eukaryota",
-        "phylum":"Ascomycota",
-        "species":"Saccharomyces cerevisiae",
-        "pdb":"1asz",
-        "genbank":"",
-        "gene":        "NA",
-        "protein":"",
-        "transl_table":        "NA",
-        "desc":"",
-        "sequence":"",
-        "X":"",
-        "proteinSeq":""
-    },
     "AspRS_PDB_Bact_E_coli_1c0a":{
         "class":        2,
         "familyID":"asp1",
@@ -665,11 +647,11 @@
         "X":"",
         "proteinSeq":""
     },
-    "AsxRS_PDB_Euk_S_cerevisiae_1EOV":{
+    "AspRS-E_PDB_Euk_S_cerevisiae_1EOV":{
         "class":        2,
         "familyID":"asp2",
-        "name":"AsxRS",
-        "accession":"AsxRS_PDB_Euk_S_cerevisiae_1EOV",
+        "name":"AspRS-E",
+        "accession":"AspRS-E_PDB_Euk_S_cerevisiae_1EOV",
         "domain":"Eukaryota",
         "phylum":"Ascomycota",
         "species":"Saccharomyces cerevisiae",
@@ -5813,11 +5795,11 @@
         "X":"",
         "proteinSeq":"MQEFTIVDSISSYINFDEKIDSEITITGMVQNSRVTGWGGFIIIRTPNNNIQCVLDRNTLNIEPEAIKVEAAIKITGIVKSATIKDISIVPRNIEIHVKTVEILSSPSENPLPVDTTKKELNINLNTNFDKRPLTLRHPRQRAIFRISSTIFNEFGNFLTTNGFTRICSPKIVKTGAEGGANIFKLDYFETNAYLAQSPQFYKQIMIGTFGRVFEEAPVFRAEKHDTSRHLNEYISLDLEMILENGFTDLIQVETKLLKHIFSKLNELCSNELELLGVTVPDIEKIVTIKFDDVHDIIFKEFNKDYRGEKDLAPEEESLICGYAKKNWDTELLFVTHFPTVKRPFYTMDDPDDEGKTLSFDLLFRGMEITTGGQRLNVYDDYLKKMKSFGLNTELFDSYLQSFRYGMPPHGGLGLGLERLTALICGLSNVKEASLFPRDINRLEP"
     },
-    "AsxRS_AF_Euk_Caenorhabditis_elegans_gene176334":{
+    "AspRS-E_AF_Euk_Caenorhabditis_elegans_gene176334":{
         "class":        2,
         "familyID":"asp2",
-        "name":"AsxRS",
-        "accession":"AsxRS_AF_Euk_Caenorhabditis_elegans_gene176334",
+        "name":"AspRS-E",
+        "accession":"AspRS-E_AF_Euk_Caenorhabditis_elegans_gene176334",
         "domain":"Eukaryota",
         "phylum":"Nematoda",
         "species":"Caenorhabditis_elegans",
@@ -5831,11 +5813,11 @@
         "X":"",
         "proteinSeq":"MADAAEGEQPKLSKKELNKLARKAKKDEKAGEKGGNQQQAAAMDQEDASKDFYGSYGLVNSKEKKVLNFLKVKEINVSNATKDVWVRGRIHTTRSKGKNCFLVLRQGVYTVQVAMFMNEKISKQMLKFVSSISKESIVDVYATINKVDNPIESCTQKDVELLAQQVFVVSTSAPKLPLQIEDASRRAPTDEEKASEQENQLAVVNLDTRLDNRVIDLRTPTSHAIFRIQAGICNQFRNILDVRGFVEIMAPKIISAPSEGGANVFEVSYFKGSAYLAQSPQLYKQMAIAGDFEKVYTIGPVFRAEDSNTHRHMTEFVGLDLEMAFNFHYHEVMETIAEVLTQMFKGLQQNYQDEIAAVGNQYPAEPFQFCEPPLILKYPDAITLLRENGIEIGDEDDLSTPVEKFLGKLVKEKYSTDFYVLDKFPLSVRPFYTMPDAHDERYSNSYDMFMRGEEILSGAQRIHDADMLVERAKHHQVDLAKIQSYIDSFKYGCPPHAGGGIGLERVTMLFLGLHNIRLASLFPRDPKRLTP"
     },
-    "AsxRS_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258977":{
+    "AspRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258977":{
         "class":        2,
         "familyID":"asp2",
-        "name":"AsxRS",
-        "accession":"AsxRS_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258977",
+        "name":"AspRS-E",
+        "accession":"AspRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258977",
         "domain":"Eukaryota",
         "phylum":"Basidiomycota",
         "species":"Cryptococcus_neoformans_var._neoformans_JEC21",
@@ -5849,11 +5831,11 @@
         "X":"",
         "proteinSeq":"MSSTDTTKNPIIKLGRVLKPSHSNSGDRPELPRSATHEKVARHAAEKQHEQAKQEAKKERTEHEKHEMQRRRQIADEKAQLEEDSETQASYGDIDGLEEITPFEEVIDMPAGTKVNIRGRIHQQRDLSSHLNFILLRQRGLVIQGILSEHASEHMIKWVQHLPGEAIVQVSGTLREPPKPITAAVDTPLELNIERLYLVEASHDIPFNLAHGDRPPQSTRLRNRTLDLRHPTAQAIFKIRAKVLKVFRDTLDDLGFLEINTPKLQPSATESGAEVFRVNYFGRKAFLAQSPQLMKQMAISADFRRVYEIGPVFRAENSNTHRHLTEYTGLDIEMAIQKEYHEVFRILDIVLRNIFNALKEMKTELNRIREFFPSDDFQFLEETPIIPFQEAVQMLRDDGRDVEEEDLHTPDEIRLGELIKEKLGTDYYVIDKFPVSARPFYTANDGKITNSFDMFIRGQEVCTGGQRINDPKELRESMKESRINEDEMAEYLQAFDWGMPPHGGAGLGVERIVTFFLNLPDVRLSTLWHRDPHSLPDKPASLPHPDADTLKTIDPNNPPPIENLIANYGDATNTSWLDDRFDIWRDRETGAAIGYSTKDTKFCMITGDPLCDDGQKKQVTKRFLDFIRREVKMKPIWLLVSEMMEEILAYEFGWRALSCTQEQRSDSDRADSSVIQNSKQKKGVFKVREVEPTEKIQRKCDARIEEWSAGRDHKGKQVHLTEIAPWKDTEHRRYFIAESDHEANENGENNKFQSRKGEQTIDTLVVLARLAPSKGYQLKWALDFPGSPNGAIESTVQAALSAVPGEPVTFGTAVSESLVTKHGIGGLRASFMERTYRSIVKSLSLDKKAGFREKFGVTGDLTYICYPKGGVKAYELKDIVKFFE"
     },
-    "AsxRS_AF_Euk_Theileria_orientalis_strain_Shintoku_gene20715543":{
+    "AspRS-E_AF_Euk_Theileria_orientalis_strain_Shintoku_gene20715543":{
         "class":        2,
         "familyID":"asp2",
-        "name":"AsxRS",
-        "accession":"AsxRS_AF_Euk_Theileria_orientalis_strain_Shintoku_gene20715543",
+        "name":"AspRS-E",
+        "accession":"AspRS-E_AF_Euk_Theileria_orientalis_strain_Shintoku_gene20715543",
         "domain":"Eukaryota",
         "phylum":"Apicomplexa",
         "species":"Theileria_orientalis_strain_Shintoku",
@@ -5867,11 +5849,11 @@
         "X":"",
         "proteinSeq":"MNLREATLMLIYLHIAKQVSTVRLTNCIYNIKLGKNLFINRPEFIRNISKLSQTYLNMADTVANTAKPAESKPKLTAREEQNLKNQQLLNTSVTDFSTDKFGYVPFRFNKAPSREFLEIKDLDDHVSEYVWLRGRVHELRGKGALCFLVLRQQRELLQCVIDSKSEENTKDMVKWASSLSFESVVDVYGKVVVPNSPILSTTSANELHVSKVFCLSKSSPNLPFLLRDANNTDNEEMMENPSVIRVNQDTRLDNRALDLRCFLNGVIFKIQSQVCQLYREFLLSKDFIEIHTPKLLGGSSEGGSSVFKFKYFDQDACLAQSPQLYKQMAICGDLKRVFEIGPVFRAENSNTHRHLCEYVGLDLEMEFKNDYMEVVDLIDEMLKHVFEGLSKKSGSELDYFYKCNPSITRFKFIEKTPKLSFQEAADMLRSSEVAEEIPEDLNDYDFSTEHEKLLGKLVRERYGTDYYIVYDYPLNARPFYTMPKYEDDAGAGSSSNEDGSAAVLNGTEEGAKPLKLSRSYDFFMRGEEILSGAQRIHDSAELERRARECGLDVNTIRDYVDVFKYGAFPHAGSGIGLERVVMLFLGLGNVRRTSMFPRDPKRLTP"
     },
-    "AsxRS_AF_Euk_Thalassiosira_pseudonana_CCMP1335_gene7443135":{
+    "AspRS-E_AF_Euk_Thalassiosira_pseudonana_CCMP1335_gene7443135":{
         "class":        2,
         "familyID":"asp2",
-        "name":"AsxRS",
-        "accession":"AsxRS_AF_Euk_Thalassiosira_pseudonana_CCMP1335_gene7443135",
+        "name":"AspRS-E",
+        "accession":"AspRS-E_AF_Euk_Thalassiosira_pseudonana_CCMP1335_gene7443135",
         "domain":"Eukaryota",
         "phylum":"Bacillariophyta",
         "species":"Thalassiosira_pseudonana_CCMP1335",

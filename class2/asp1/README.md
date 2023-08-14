@@ -1,4 +1,4 @@
-The discriminating aspartyl tRNA synthetase (AspRS) is an enzyme that plays a crucial role in protein synthesis by catalysing the attachment of the amino acid aspartate to its cognate tRNA:
+The discriminating aspartyl tRNA synthetase (AspRS) is an enzyme that plays a crucial role in protein synthesis by catalyzing the attachment of the amino acid aspartate to its cognate tRNA:
 
 
 
@@ -24,7 +24,8 @@ Editing activity has not been detected for AspRS (Gomez abd Ibba, 2020).
 
 The C-terminal catalytic domain of AspRS is quite typical of a Class II AARS.
 Like most members of the superfamily, ATP binding is coordinated by the arginine tweezers, located in motifs 2 and 3 (Kaiser et al., 2018).
-The catalytic domain of AspRS, much like the other members of subclass IIb, is characterised by the subclass IIb insertion modules 1 and 2.
+The catalytic domain of AspRS, much like the other members of subclass IIb, is characterized by the subclass IIb insertion modules 1 and 2.
 In the special case of AspRS, the first insertion module is considerably more elaborated than the rest of the subclass (Douglas et al. 2023). This extensive module makes up a five-stranded antiparallel $\beta$-sheet flanked by $\alpha$-helices that interacts with the tRNA through a network of water molecules (Eiler et al. 1999). 
+
 
 

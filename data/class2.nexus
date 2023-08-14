@@ -55,10 +55,10 @@ Begin taxa;
 			AsxRS_AF_Bact_Clostridium_acetobutylicum_DSM_1731_gene45000055.pdb
 			AsxRS_AF_Bact_Spirochaetes_bacterium_GWE1_32_154_proteinOHD39701.1.pdb
 			AsxRS_AF_Bact_Tropheryma_whipplei_TW08_27_gene67388547.pdb
-			AsxRS_AF_Euk_Caenorhabditis_elegans_gene176334.pdb
-			AsxRS_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258977.pdb
-			AsxRS_AF_Euk_Thalassiosira_pseudonana_CCMP1335_gene7443135.pdb
-			AsxRS_AF_Euk_Theileria_orientalis_strain_Shintoku_gene20715543.pdb
+			AspRS-E_AF_Euk_Caenorhabditis_elegans_gene176334.pdb
+			AspRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258977.pdb
+			AspRS-E_AF_Euk_Thalassiosira_pseudonana_CCMP1335_gene7443135.pdb
+			AspRS-E_AF_Euk_Theileria_orientalis_strain_Shintoku_gene20715543.pdb
 			GlyRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697160.pdb
 			GlyRS-A_AF_Arch_Candidatus_Woesearchaeota_archaeon_proteinMBT4248212.1.pdb
 			GlyRS-A_AF_Arch_Methanosalsum_zhilinae_DSM_4017_gene10821854.pdb
@@ -285,10 +285,10 @@ Begin trees;
 		  50 AsxRS_AF_Bact_Clostridium_acetobutylicum_DSM_1731_gene45000055.pdb,
 		  51 AsxRS_AF_Bact_Spirochaetes_bacterium_GWE1_32_154_proteinOHD39701.1.pdb,
 		  52 AsxRS_AF_Bact_Tropheryma_whipplei_TW08_27_gene67388547.pdb,
-		  53 AsxRS_AF_Euk_Caenorhabditis_elegans_gene176334.pdb,
-		  54 AsxRS_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258977.pdb,
-		  55 AsxRS_AF_Euk_Thalassiosira_pseudonana_CCMP1335_gene7443135.pdb,
-		  56 AsxRS_AF_Euk_Theileria_orientalis_strain_Shintoku_gene20715543.pdb,
+		  53 AspRS-E_AF_Euk_Caenorhabditis_elegans_gene176334.pdb,
+		  54 AspRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258977.pdb,
+		  55 AspRS-E_AF_Euk_Thalassiosira_pseudonana_CCMP1335_gene7443135.pdb,
+		  56 AspRS-E_AF_Euk_Theileria_orientalis_strain_Shintoku_gene20715543.pdb,
 		  57 GlyRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697160.pdb,
 		  58 GlyRS-A_AF_Arch_Candidatus_Woesearchaeota_archaeon_proteinMBT4248212.1.pdb,
 		  59 GlyRS-A_AF_Arch_Methanosalsum_zhilinae_DSM_4017_gene10821854.pdb,

@@ -1,5 +1,5 @@
 
-The archaeal-like phenylalanyl-tRNA synthetase (PheRS-A) is an enzyme that plays a crucial role in protein synthesis by catalysing the attachment of the amino acid phenylalanine to its cognate tRNA:
+The archaeal-like phenylalanyl-tRNA synthetase (PheRS-A) is an enzyme that plays a crucial role in protein synthesis by catalyzing the attachment of the amino acid phenylalanine to its cognate tRNA:
 
 
 
@@ -10,7 +10,7 @@ $ \text{Phe} + \text{tRNA}^\text{Phe} + \text{ATP} \xrightarrow{\text{PheRS-A}} 
 
 The phenylalanyl-tRNA synthetases (PheRS) are considered to be one of the most evolutionarily complex enzymes among aminoacyl-tRNA synthetases (Klipcan et al. 2010).
 Unlike most Class II synthetases, which are homodimeric, PheRS-A operates as a heterotetramer composed of two $\alpha$ and two $\beta$ subunits $\alpha_2 \beta_2$. 
-There are three known variants of PheRS: one found predominantly in eukaryotes/archaea, one found in bacteria [PheRS-B](/class2/phe1), and one localised to eukaryotic organelles [PheRS-M](/class2/phe5). 
+There are three known variants of PheRS: one found predominantly in eukaryotes/archaea, one found in bacteria [PheRS-B](/class2/phe1), and one localized to eukaryotic organelles [PheRS-M](/class2/phe5). 
 This page specifically refers to the $\alpha$ subunit of the archaral-like variant (PheRS-A$\alpha$). 
 
 
@@ -25,5 +25,6 @@ The PheRS-A$\alpha$ catalytic domain is characterised by the short PheRS-A; inse
 
 
 The anticodon binding domain is proposed to be a short loop upstream of the catalytic core (Finarov et al. 2010). The N-terminal domains resemble DNA binding proteins, however their function roles are still under investigation (Ho et al. 2022).  
+
 
 

@@ -1,6 +1,6 @@
 
 
-Asparaginyl-tRNA synthetase (AsnRS) is an enzyme that plays a crucial role in protein synthesis by catalysing the attachment of the amino acid asparagine to its cognate tRNA:
+Asparaginyl-tRNA synthetase (AsnRS) is an enzyme that plays a crucial role in protein synthesis by catalyzing the attachment of the amino acid asparagine to its cognate tRNA:
 
 
 
@@ -27,4 +27,5 @@ Like most members of the superfamily, ATP binding is coordinated by the arginine
 In the active site, asparagine recognition is largely achieved through water molecule interactions, in contrast with AspRS where aspartate recognition is facilitated by direct interaction with the protein (Iwasaki et al., 2006).
 This specificity is also achieved by the replacement of positively charged residues with negatively
 charged ones in the active site (Kern et al., 2005).
-The catalytic domain of AsnRS, much like the other members of subclass IIb, is characterised by the subclass IIb insertion modules 1 and 2 (Douglas et al. 2023).
+The catalytic domain of AsnRS, much like the other members of subclass IIb, is characterized by the subclass IIb insertion modules 1 and 2 (Douglas et al. 2023).
+

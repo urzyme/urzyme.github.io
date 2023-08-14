@@ -1,4 +1,4 @@
-The tetrameric Bacterial-like glycyl-tRNA synthetase (GlyRS-B), also known as the orphan GlyRS, is an enzyme that plays a crucial role in protein synthesis by catalysing the attachment of the amino acid glycine to its cognate tRNA:
+The tetrameric Bacterial-like glycyl-tRNA synthetase (GlyRS-B), also known as the orphan GlyRS, is an enzyme that plays a crucial role in protein synthesis by catalyzing the attachment of the amino acid glycine to its cognate tRNA:
 
   
   
@@ -10,7 +10,7 @@ $ \text{Gly} + \text{tRNA}^\text{Gly} + \text{ATP} \xrightarrow{\text{GlyRS-B}} 
   
   
 
-The catalytic domain of GlyRS-B is the smallest among all of Class II. The catalytic domains of AlaRS and GlyRS-B, which constitute subclass IId (Valencia-Sánchez et al., 2016), are characterised by their absence of the small interface between motifs 1 and 2 (Douglas et al. 2023). The small interface promotes dimerisation in other Class II synthetases, and therefore AlaRS and GlyRS-B form oligomers through alternative means. GlyRS-B operates as a heterotetramer composed of two $\alpha$ subunits and two $\beta$ subunits, unlike most Class II synthetases which are homodimeric. Other Class II tetramers include [PheRS](/class2/phe1) and [SepRS](/class2/sep). In certain bacteria, such as *Chlamydia trachomatis*, the two subunits are encoded by a single gene and the $\alpha$ and $\beta$ regions are part of the same protomer (Wagar et al. 1995). The fusion or fission of AARS genes that result in switching between homodimeric and heterotetrameric enzymes has also been observed in AlaRS and [PylRS](/class2/pyl).
+The catalytic domain of GlyRS-B is the smallest among all of Class II. The catalytic domains of AlaRS and GlyRS-B, which constitute subclass IId (Valencia-Sánchez et al., 2016), are characterized by their absence of the small interface between motifs 1 and 2 (Douglas et al. 2023). The small interface promotes dimerisation in other Class II synthetases, and therefore AlaRS and GlyRS-B form oligomers through alternative means. GlyRS-B operates as a heterotetramer composed of two $\alpha$ subunits and two $\beta$ subunits, unlike most Class II synthetases which are homodimeric. Other Class II tetramers include [PheRS](/class2/phe1) and [SepRS](/class2/sep). In certain bacteria, such as *Chlamydia trachomatis*, the two subunits are encoded by a single gene and the $\alpha$ and $\beta$ regions are part of the same protomer (Wagar et al. 1995). The fusion or fission of AARS genes that result in switching between homodimeric and heterotetrameric enzymes has also been observed in AlaRS and [PylRS](/class2/pyl).
 
   
   
@@ -24,4 +24,8 @@ Both subunit species are essential for GlyRS-B activity (Ostrem et al., 1974). T
   
   
 
-GlyRS-B is present in most bacteria and is phylogenetically distinct from the dimeric families [GlyRS-A](/class2/gly1) and [GlyRS-E](/class2/gly3), which are present in archaea, eukaryotes, and some bacteria (Shiba, 2005). The full-length $\alpha$-$\beta$ type of GlyRS-B also operates in chloroplasts (Uwer et al. 1998). The figures below present a mammal with GlyRS-B, however this samples should be met with scepticism, as it may be due to contamination during genome sequencing.
+GlyRS-B is present in most bacteria and is phylogenetically distinct from the dimeric families [GlyRS-A](/class2/gly1) and [GlyRS-E](/class2/gly3), which are present in archaea, eukaryotes,
+ and some bacteria (Shiba, 2005).
+ The full-length $\alpha$-$\beta$ type of GlyRS-B also operates in chloroplasts (Uwer et al. 1998). 
+ 
+

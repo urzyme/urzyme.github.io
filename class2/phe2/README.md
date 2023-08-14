@@ -1,6 +1,6 @@
 
 
-The bacterial-like phenylalanyl-tRNA synthetase (PheRS-B) is an enzyme that plays a crucial role in protein synthesis by catalysing the attachment of the amino acid phenylalanine to its cognate tRNA:
+The bacterial-like phenylalanyl-tRNA synthetase (PheRS-B) is an enzyme that plays a crucial role in protein synthesis by catalyzing the attachment of the amino acid phenylalanine to its cognate tRNA:
 
 
 
@@ -12,7 +12,7 @@ $ \text{Phe} + \text{tRNA}^\text{Phe} + \text{ATP} \xrightarrow{\text{PheRS-B}} 
 
 The phenylalanyl-tRNA synthetases (PheRS) are considered to be one of the most evolutionarily complex enzymes among aminoacyl-tRNA synthetases (Klipcan et al. 2010).
 Unlike most Class II synthetases, which are homodimeric, PheRS-B operates as a heterotetramer composed of two $\alpha$ and two $\beta$ subunits $\alpha_2 \beta_2$. 
-There are three known variants of PheRS: one found predominantly in bacteria, one found in eukaryotes/archaea [PheRS-A](/class2/phe3), and one localised to eukaryotic organelles [PheRS-M](/class2/phe5). 
+There are three known variants of PheRS: one found predominantly in bacteria, one found in eukaryotes/archaea [PheRS-A](/class2/phe3), and one localized to eukaryotic organelles [PheRS-M](/class2/phe5). 
 This page specifically refers to the $\beta$ subunit of the bacterial variant (PheRS-B$\beta$). 
 
 The catalytic activity of PheRS-B is confined to the $\alpha$ subunit, while tRNA recognition and editing activity is executed by the $\beta$ subunit, 
@@ -25,7 +25,7 @@ The C-terminal catalytic core of the $\beta$ subunit is similar to that of other
 (Douglas et al. 2023, Kavran et al. 2007, Perona et al. 2012, Valencia-Sánchez et al. 2016). 
 The "catalytic domain" is not in fact catalytic (Fishman et al. 2001), but still contains the six antiparallel strands characteristic of a Class II AARS. 
 As such, the sequence at the structural positions of motifs 1, 2, and 3 do not follow the motif pattern, but the positions one would normally expect to see these motifs are 
-labelled below for convenience. 
+labeled below for convenience. 
 
 
 
@@ -35,5 +35,6 @@ The [anticodon binding domain](/superfamily/class2/Anticodon_binding_domain_F) (
 while other members of Class II charge 3′OH (Goldgur et al. 1997).
 This contrasts with the eukaryotic PheRS tetramer, whose anticodon binding domain resides in the $\alpha$ chain.
 A paralog of the N-terminal RNA binding domain EMAP is also found in some forms of [TyrRS](/class1/tyr) and [MetRS](/class1/met) (Wolf et al. 1999).
+
 
 

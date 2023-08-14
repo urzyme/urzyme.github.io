@@ -1,4 +1,4 @@
-The mitochondrial-like prolyl-tRNA synthetase (ProRS-M) is an enzyme that plays a crucial role in protein synthesis by catalysing the attachment of the amino acid proline to its cognate tRNA:
+The mitochondrial-like prolyl-tRNA synthetase (ProRS-M) is an enzyme that plays a crucial role in protein synthesis by catalyzing the attachment of the amino acid proline to its cognate tRNA:
 
 
 
@@ -14,7 +14,8 @@ The three types of ProRS belong to subclass IIa, which includes other enzymes su
 
 
 
-ProRS-M is predicted to localise to organelles and is one of the few AARS families which are lacking an experimentally solved structure. Phylogenetic analyses suggest that the enzyme was derived from the bacterial form ProRS-B, likely concurring with mitochondrial/chloroplast endosymbiosis (Douglas et al. 2023). Shortly after this event, the post-transfer editing domain was deleted in most members of ProRS-M. However, the N- and C-terminal regions flanking this excision site were retained, an evolutionary "scar". This scar is rich in highly conserved cysteine residues, and its functional status is unclear. 
+ProRS-M is predicted to localize to organelles and is one of the few AARS families which are lacking an experimentally solved structure. Phylogenetic analyses suggest that the enzyme was derived from the bacterial form ProRS-B, likely concurring with mitochondrial/chloroplast endosymbiosis (Douglas et al. 2023). Shortly after this event, the post-transfer editing domain was deleted in most members of ProRS-M. However, the N- and C-terminal regions flanking this excision site were retained, an evolutionary "scar". This scar is rich in highly conserved cysteine residues, and its functional status is unclear. 
+
 
 
 
