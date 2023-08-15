@@ -158,6 +158,10 @@ function renderaaRS(isPairwise = false, isSuperfamily = false){
 				<div class="svgDiv">
 					<svg id="secondary" height=0 width=0 overflow="auto"></svg>
 				</div>
+				
+				<div id="secondaryHelper" class="helperNote">
+					
+				</div>
 
 				
 				
@@ -330,7 +334,8 @@ function renderaaRS(isPairwise = false, isSuperfamily = false){
   $("#secondary").before("<h2>Domain architecture</h2>");
   $("#secondary").before("<div class='helperNote'>Click on an accession or domain below, or drag a region, to select it. Right click on an accession for more information.</div>");
   let imgWidth = IS_MOBILE ? 30 : 15;
-  $("#secondary").after(`<div class='helperNote'>
+  $("#secondaryHelper").html(`
+							
 							<span><img src="/fig/Archaea.png"  height="` + imgWidth + `px"></img> - Archaea </span>
 							<span><img src="/fig/Bacteria.png"  height="` + imgWidth + `px"></img> - Bacteria </span>
 							<span><img src="/fig/Eukaryota.png"  height="` + imgWidth + `px"></img> - Eukaryota </span>
@@ -338,7 +343,8 @@ function renderaaRS(isPairwise = false, isSuperfamily = false){
 							<span><img src="/fig/Viruses.png"  height="` + imgWidth + `px"></img> - Virus </span>
 							<span><img src="/fig/xray.png" height="` + imgWidth + `px"></img> - Solved structure </span>
 							<span><img src="/fig/alphafold.png"  height="` + imgWidth + `px"></img> - Computational prediction </span>
-						</div>`);
+							<span id="secondarySelectedSites"> </span>
+							`);
   $("#tertiaryTable").prepend("<h2>Tertiary structure</h2>");
 
   
@@ -1024,11 +1030,11 @@ function renderSecondary(svg){
     const eleSvg = $(svg).get(0); //document.getElementById(svg.attr("id"));
     eleSvg.addEventListener('mousedown', ({clientX, clientY}) => {
 
-			  
-			var x1 = clientX - svg.offset().left;
-			var y1 = clientY - svg.offset().top;
-			if (x1 <= ALN_LABEL_WIDTH) return;
-			if (y1 >= SEC_HEIGHT*(nseq+1)) return;
+		  
+		var x1 = clientX - svg.offset().left;
+		var y1 = clientY - svg.offset().top;
+		if (x1 < ALN_LABEL_WIDTH) return;
+		if (y1 >= SEC_HEIGHT*(nseq+1)) return;
 
 
 
@@ -1043,35 +1049,37 @@ function renderSecondary(svg){
        deselectSites();
       
       
-      var res1 = Math.floor((x1 - ALN_LABEL_WIDTH) / SEC_WIDTH) + 1;
+      let res1 = Math.floor((x1 - ALN_LABEL_WIDTH) / SEC_WIDTH) + 1;
 
-      var rect = drawSVGobj(svgHighlight, "rect", {x: x1-SEC_WIDTH, y: 0, width: 0, height: SEC_HEIGHT*(nseq+1), class: "selectionRect", style: "stroke-width:1px; stroke:black; fill:#008cba55"} )
-      var text = drawSVGobj(svgHighlight, "text", {x: SEC_WIDTH*5, y: svg.height() - SEC_WIDTH*5, class: "selectionRect", style: "text-anchor:start; dominant-baseline:auto; font-size:12px"}, "" )
+      let rect = drawSVGobj(svgHighlight, "rect", {x: x1-SEC_WIDTH, y: 0, width: 0, height: SEC_HEIGHT*(nseq+1), class: "selectionRect", style: "stroke-width:1px; stroke:black; fill:#008cba55"} )
+      let text = $("#secondarySelectedSites"); //drawSVGobj(svgHighlight, "text", {x: SEC_WIDTH*5, y: svg.height() - SEC_WIDTH*5, class: "selectionRect", style: "text-anchor:start; dominant-baseline:auto; font-size:12px"}, "" )
 
 
 
-      var mouseMove = function({clientX, clientY}){
+      let mouseMove = function({clientX, clientY}){
 
         $(svgContent).find("text").attr("class", "");
 
-        var x1_ = x1;
-        var x2 = clientX - svg.offset().left;
+        let x1_ = x1;
+        let x2 = clientX - svg.offset().left;
 
 
         if (x1_ > x2){
-          var tmp = x1_;
+          let tmp = x1_;
           x1_ = x2;
           x2 = tmp;
         }
+		
+		let maxX = SEC_WIDTH*(nsites) + ALN_LABEL_WIDTH;
         if (x1_ <= ALN_LABEL_WIDTH+1) x1_ = ALN_LABEL_WIDTH+1;
         if (x2 <= ALN_LABEL_WIDTH+1) x2 = ALN_LABEL_WIDTH+1;
-        if (x1_ >= svg.width()-2) x1_ = svg.width()-2;
-        if (x2 >= svg.width()-2) x2 = svg.width()-2;
+        if (x1_ >= maxX) x1_ = maxX;
+        if (x2 >= maxX) x2 = maxX;
 
 
         // What are the residue numbers?
-        var res1_ = Math.floor((x1_ - ALN_LABEL_WIDTH) / SEC_WIDTH) + 1;
-        var res2 = Math.floor((x2 - ALN_LABEL_WIDTH) / SEC_WIDTH) + 1;
+        let res1_ = Math.floor((x1_ - ALN_LABEL_WIDTH) / SEC_WIDTH);
+        let res2 = Math.floor((x2 - ALN_LABEL_WIDTH) / SEC_WIDTH);
 
         x1_ = res1_ * SEC_WIDTH + ALN_LABEL_WIDTH;
         x2 = res2 * SEC_WIDTH + ALN_LABEL_WIDTH;
@@ -1657,6 +1665,7 @@ function deselectSites(refresh = false){
 	
 	// Clear selecting rectangle
 	$("svg").find(".selectionRect").remove();
+	$("#secondarySelectedSites").html("");
 	
 	
 	// Hide accession dialog
