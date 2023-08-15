@@ -484,8 +484,23 @@ function getNameOfAccession(acc){
 	acc = acc.replace(".pdb", "");
 	let metadata = DATA.metadata[acc];
 	if (metadata == null){
-		console.log("cannot find", acc);
-		return "error";
+		
+		// Try to match by gene name
+		let geneName = acc.split("_");
+		geneName = geneName[geneName.length-1];
+		for (let d in DATA.metadata){
+			let dgeneName = d.split("_");
+			dgeneName = dgeneName[dgeneName.length-1];
+			if (dgeneName == geneName){
+				metadata = DATA.metadata[d];
+				break;
+			}
+		}
+		
+		if (metadata == null){
+			console.log("cannot find", acc);
+			return "error";
+		}
 	}
 	
 	let isPDB = metadata.pdb != "" && metadata.pdb != "NA";
@@ -519,7 +534,21 @@ function getLifeDomainOfAccession(acc){
 	acc = acc.replace(".pdb", "");
 	let metadata = DATA.metadata[acc];
 	if (metadata == null){
-		console.log("cannot find", acc);
+		
+		// Try to match by gene name
+		let geneName = acc.split("_");
+		geneName = geneName[geneName.length-1];
+		for (let d in DATA.metadata){
+			let dgeneName = d.split("_");
+			dgeneName = dgeneName[dgeneName.length-1];
+			if (dgeneName == geneName){
+				metadata = DATA.metadata[d];
+				return metadata.domain;
+			}
+		}
+		
+		
+		console.log("cannot find", acc, geneName);
 		return null;
 	}
 
@@ -1312,7 +1341,7 @@ function renderSecondary(svg){
 	  // Domain image
 	  let domainOfLife = getLifeDomainOfAccession(acc);
 	  if (domainOfLife != null){
-		   let domainEle = drawSVGobj(svgContent, "image", {href:"/fig/" + domainOfLife + ".png", x: x+NT_FONT_SIZE, y: y-NT_FONT_SIZE/2, pdb: acc, height:SEC_HEIGHT*0.7})
+		   let domainEle = drawSVGobj(svgContent, "image", {href:"/fig/" + domainOfLife + ".png", x: x+NT_FONT_SIZE, y: y-NT_FONT_SIZE/2, pdb: acc, height:SEC_HEIGHT*0.9})
 		   drawSVGobj(domainEle, "title", {}, domainOfLife);
 		   
 		   

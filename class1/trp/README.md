@@ -20,7 +20,7 @@ Lastly, while most Class I syntheteases approach the tRNA acceptor stem from the
 
 TrpRS from prokaryotic and archaeal/eukaryotic organisms form quite distinct groups, with respect to their sequences, allosteries, and domain architectures (Carter 2005).
 The archaeal-like TrpRS contains an additional N-terminal domain known as the eukaryote-specific-extension, ESE (Yang et al. 2007).
-Both the ESE and C-terminal anticodon binding domains undergo vast conformational changes upon substrate binding, making the archaeal-like form more complex than the bacterial-like (Shen et al. 2008).
+Both the ESE and the C-terminal [anticodon binding domain](/superfamily/class1/Anticodon_binding_domain_WY) undergo vast conformational changes upon substrate binding, making the archaeal-like form quite complex (Shen et al. 2008).
 However, despite the intricate allostery displayed by TrpRS, the catalytic domain itself is less elaborated than other Class I synthetases, making it a useful target for investigating
 ancestral models, such as  protozymes (Onodera et al. 2021) and urzymes (Pham et al. 2010), which display activation and aminoacylation activity respectively. 
 The connecting peptide 1 (CP1) domains in TrpRS and TyrRS occur in their simplest forms.

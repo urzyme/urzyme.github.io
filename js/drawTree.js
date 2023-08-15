@@ -134,7 +134,7 @@ function drawBranch(svg, node, x, lengthScale){
 		// Domain figure
 		let domainOfLife = getLifeDomainOfAccession(node.label);
 		if (domainOfLife != null){
-			drawSVGobj(leafG, "image", {href:"/fig/" + domainOfLife + ".png", x: x, y: y-TREE_SVG_FONT_SIZE/2, height:TREE_SVG_FONT_SIZE});
+			drawSVGobj(leafG, "image", {href:"/fig/" + domainOfLife + ".png", x: x, y: y-TREE_SVG_FONT_SIZE/2, height:TREE_SVG_FONT_SIZE*1.3});
 		}
 		
 		// Text

@@ -23,19 +23,20 @@ nsites = as.numeric(nchar(out.fasta)[1])
 
 structures = character(0)
 
-dirs = list.dirs(wd, recursive=F)
+dirs = list.dirs(path=wd, recursive=T)
+dirs = dirs[grep(paste0(wd, "/class./.+/data$"), dirs)]
 for (d in dirs){
 
-	structuresD = readLines(paste0(d, "/data/structures.txt"))
+	structuresD = readLines(paste0(d, "/structures.txt"))
 
-	json = fromJSON(file = paste0(d, "/info.json"))
+	json = fromJSON(file = paste0(d, "/../info.json"))
 	ref_str = json$ref_str
 
 
 
 
 	# Does the domain exist?
-	domainDir = paste0(d, "/data/domains/", domain)
+	domainDir = paste0(d, "/domains/", domain)
 	if (dir.exists(domainDir)){
 
 

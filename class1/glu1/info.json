@@ -17,7 +17,7 @@
 		"hinges": [349],
 		"refine": [{"start": 550 }],
 		"features": {"Catalytic domain": {"acc": "GlxRS-B_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb", "range": "20-302", "level": 4},
-					"Anticodon binding domain E": {"acc": "GluRS-B_AF_Bact_Chlamydia_psittaci_6BC_gene12242467.pdb", "range": "294-504", "level": 4},
+					"Anticodon binding domain EK": {"acc": "GluRS-B_AF_Bact_Chlamydia_psittaci_6BC_gene12242467.pdb", "range": "294-504", "level": 4},
 					"CP1": {"acc": "GlxRS-B_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb", "range": "125-221", "level": 3, "href": "/superfamily/class1/CP1"},
 					"SC1b IM": {"acc": "GlxRS-B_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb", "range": "125-166", "level": 2, "href": "/superfamily/class1/SC1b_IM"},
 					"Protozyme": {"acc": "GlxRS-B_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb", "range": "21-58", "level": 2},

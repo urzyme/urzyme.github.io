@@ -16,7 +16,7 @@ It is likely that GlnRS originated in the eukaryota, and was later acquired by c
 
 
 This page details the eukaryote-like GluRS-E, which is a discriminating form of GluRS. 
-It is found in many eukaryotic cytosols, and is characterized by an N-terminal glutathione S-transferase (GST) domain (Hadd and Perona. 2014).
+It is found in many eukaryotic cytosols, and is characterized by an N-terminal glutathione S-transferase ([GST](/superfamily/class1/GST)) domain (Hadd and Perona. 2014).
 Chung et al. 2022 identified four potential regions of the *Gallus Gallus* GluRS-E which may offer selectivity against tRNA$^\text{Gln}$.
 
 
@@ -25,8 +25,8 @@ Chung et al. 2022 identified four potential regions of the *Gallus Gallus* GluRS
 The N-terminal catalytic domain of GluRS-E closely resembles the other members of subclass Ib: [GlnRS](/class1/gln/), [GluRS-B](/class1/glu1/), GlxRS-A,  and GlxRS-B.
 Their catalytic domains are characterized by an insertion within CP1, containing a loop flanked by two helices (SC1b IM), which 
 may play a role in acceptor stem recognition  (Rath et al. 1998, Nureki et al. 2010).
-GluRS-E has a [$\beta$-barrel anticodon binding domain](/superfamily/class1/Anticodon_binding_domain_Q) located at the C-terminal end (Rould et al. 1991), which is homologous to GlxRS-A and GlnRS.
-However it is distinct to the bacterial form GluRS-B, which instead has an [$\alpha$-helical anticodon binding domain](/superfamily/class1/Anticodon_binding_domain_E) of bacterial origin. 
+GluRS-E has a [$\beta$-barrel anticodon binding domain](/superfamily/class1/Anticodon_binding_domain_EQ) located at the C-terminal end (Rould et al. 1991), which is homologous to GlxRS-A and GlnRS.
+However it is distinct to the bacterial form GluRS-B, which instead has an [$\alpha$-helical anticodon binding domain](/superfamily/class1/Anticodon_binding_domain_EK) of bacterial origin. 
 The members of subclass Ib, alongside [ArgRS](/class1/arg/) and  [LysRS-I](/class1/lys/), require the presence of tRNA to catalyze activation of the amino acid substrate (Dubois et al. 2005).
 
 

@@ -4,12 +4,12 @@
 
 # Prepare one superfamily per domain
 cd superfamily
-for c in class2;
+for c in class1;
 do
 
 	cd $c
 	
-	for d in Anticodon_binding*/
+	for d in Anticodon_binding_domain_EK/
 	do
 
 		echo "$c $d"
@@ -42,26 +42,9 @@ do
 		Rscript ../../../../scripts/dssp2fasta.R
 
 
-		# Realign some regions?
-		#Rscript ../../../../scripts/realignRegions.R align.ali secondary.fasta ../info.json
-		#mv align.ali refined.fasta
-		#mv realigned.fasta align.ali
-		#Rscript ../../../../scripts/dssp2fasta.R
-
-
-
 
 		# Add the remaining family members to the alignment by aligning them to their reference structure
-		Rscript ../../../../scripts/addFamilyMembersToAlignment.R ../../../../$c/ $d structures.txt align.ali
-
-		#~/DeepAlign/3DCOMB -i structures.txt -o align
-
-		# Refine the alignment
-		#Rscript ../../../../scripts/refineMSA.R align.ali secondary.fasta
-		#mv align.ali unrefined.fasta
-		#mv refined.fasta align.ali
-		#Rscript ../../../../scripts/dssp2fasta.R
-
+		Rscript ../../../../scripts/addFamilyMembersToAlignment.R ../../../../ $d structures.txt align.ali
 
 
 		

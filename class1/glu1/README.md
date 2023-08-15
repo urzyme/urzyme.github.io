@@ -38,7 +38,7 @@ are unified in a single alignment below.
 The N-terminal catalytic domains of GluRS-B and GlxRS-B  closely resembles the other members of subclass Ib: <a href="/class1/gln">GlnRS</a>, GlxRS-A, and GluRS-E.
 Their catalytic domains are characterized by an insertion within CP1, containing a loop flanked by two helices (SC1b IM), which 
 may play a role in acceptor stem recognition  (Rath et al. 1998, Nureki et al. 2010).
-The [$\alpha$-helical anticodon binding domain](/superfamily/class1/Anticodon_binding_domain_E) of GluRS-B and GlxRS-B are located at their C-terminal ends and are homologous with that of [LysRS-I](/class1/lys/) (Terada et al. 2002), in contrast to the other members of Ib, which instead have a [$\beta$-barrel anticodon binding domain](/superfamily/class1/Anticodon_binding_domain_Q) of archaeal origin. 
+The [$\alpha$-helical anticodon binding domain](/superfamily/class1/Anticodon_binding_domain_EK) of GluRS-B and GlxRS-B are located at their C-terminal ends and are homologous with that of [LysRS-I](/class1/lys/) (Terada et al. 2002), in contrast to the other members of Ib, which instead have a [$\beta$-barrel anticodon binding domain](/superfamily/class1/Anticodon_binding_domain_EQ) of archaeal origin. 
 The members of subclass Ib, alongside LysRS-I and [ArgRS](/class1/arg/), require the presence of tRNA to catalyze activation of the amino acid substrate (Dubois et al. 2005).
 
 

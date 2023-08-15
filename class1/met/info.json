@@ -12,7 +12,7 @@
 		"oligo": "Monomeric, homodimeric",
 		"codons": "AUG",
 		"editing": "Pre-transfer",
-		"ref_str": ["structures/MetRS_AF_Bact_Brucella_suis_1330_gene45052047.pdb"],
+		"ref_str": ["structures/MetRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827030.pdb"],
 		"hinge_str": "structures/MetRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827030.pdb",
 		"hinges": [114],
 		"refine": [{"start": 907, "stop": 1336}],

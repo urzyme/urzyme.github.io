@@ -28,7 +28,7 @@ Upstream from this resides a cysteine-rich zinc finger, 20-40 amino acids in len
 However, zinc binding activity appears to be absent from this region of the protein for certain members of LeuRS-A, including *Pyrococcus horikoshii* (Fukunaga et al. 2005).  
 
 
-ValRS,	IleRS, and LeuRS share a post-transfer editing domain, absent from MetRS.
+ValRS,	IleRS, and LeuRS share a post-transfer [editing domain](/superfamily/class1/Editing_domain_1a), absent from MetRS.
 This editing domain typically resides within the zinc finger, providing further amino acid selectivity by expelling a wide range of mistargetted amino acids 
 such alanine, cysteine, threonine, valine, isoleucine, methionine, homocysteine, and norvaline (Gomez and Ibba, 2020).
 However, unlike LeuRS-A, ValRS, and IleRS, the editing domain of LeuRS-B resides downstream of the zinc finger and CP2 (Fukunaga et al. 2005).

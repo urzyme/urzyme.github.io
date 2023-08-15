@@ -25,8 +25,8 @@ GlxRS-A is an primordial remnant of life before the last universal common ancest
 Its N-terminal catalytic domain closely resembles the other members of subclass Ib: [GluRS-E](/class1/gln/), [GlnRS](/class1/glu1/), [GluRS-E](/class1/glu3/),  and GlxRS-B.
 Their catalytic domains are characterized by an insertion within CP1, containing a loop flanked by two helices (SC1b IM), which 
 may play a role in acceptor stem recognition  (Rath et al. 1998, Nureki et al. 2010).
-GlxRS-A has a [$\beta$-barrel anticodon binding domain](/superfamily/class1/Anticodon_binding_domain_Q) located at the C-terminal end (Rould et al. 1991), which is homologous to GluRS-E and GlnRS.
-However it is distinct to the bacterial form GluRS-B, which instead has an [$\alpha$-helical anticodon binding domain](/superfamily/class1/Anticodon_binding_domain_E) of bacterial origin. 
+GlxRS-A has a [$\beta$-barrel anticodon binding domain](/superfamily/class1/Anticodon_binding_domain_EQ) located at the C-terminal end (Rould et al. 1991), which is homologous to GluRS-E and GlnRS.
+However it is distinct to the bacterial form GluRS-B, which instead has an [$\alpha$-helical anticodon binding domain](/superfamily/class1/Anticodon_binding_domain_EK) of bacterial origin. 
 The members of subclass Ib, alongside [ArgRS](/class1/arg/) and  [LysRS-I](/class1/lys/), require the presence of tRNA to catalyze activation of the amino acid substrate (Dubois et al. 2005).
 
 

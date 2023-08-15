@@ -23,9 +23,9 @@ The N-terminal of TyrRS contains the Class I Rossman fold catalytic domain, pres
 There are varying idiosyncratic domains at the C-terminus, which differ between the bacteria, archaea, and eukaryota (Bedouelle 2005).
 First, tRNA recognition is achieved by the helical anticodon binding domain in bacteria and organelles (Zhang et al. 2005) and a 
 distinct tRNA binding domain in the archaea and eukaryota (Wolf et al. 1999). 
-The latter is homologous with the anticodon binding domain of TrpRS.
+The latter is homologous with the [anticodon binding domain](/superfamily/class1/Anticodon_binding_domain_WY) of TrpRS.
 Second, many eukaryotic TyrRS, including the human form, contain a C-terminal RNA binding domain homologous to EMAP (Yaremchuk et al. 2002). 
-This domain is also found in some forms of [MetRS](/class1/met) and [PheRS](/class2/phe2) (Wolf et al. 1999). 
+This domain is also found in some forms of [MetRS](/class1/met) and [PheRS](/class2/phe2) (Wolf et al. 1999), and is the [anticodon binding domain](/superfamily/class2/Anticodon_binding_domain_DNK) of subclass IIb AARS.
 Lastly, most bacterial and organellar TyrRS possess a C-terminal RNA binding domain, which belongs to the S4 superfamily (Aravind et al. 1999).
 
 

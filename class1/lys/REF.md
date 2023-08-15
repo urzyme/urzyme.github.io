@@ -1,6 +1,6 @@
 Douglas, J, Bouckaert, R., Carter, C., & Wills, P. R. Enzymic recognition of amino acids drove the evolution of primordial genetic codes. Research Square (2023).
 
-Terada, Takaho, et al. "Functional convergence of two lysyl-tRNA synthetases with unrelated topologies." nature structural biology 9.4 (2002): 257-262.
+Terada, Takaho, et al. "Functional convergence of two lysyl-tRNA synthetases with unrelated topologies." Nature Structural Biology 9.4 (2002): 257-262.
 
 
 

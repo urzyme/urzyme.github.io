@@ -26,7 +26,7 @@ CP2 is a 30-40 amino acid two-helix bundle on the surface of the catalytic domai
 Upstream from this resides a cysteine-rich zinc finger, 20-40 amino acids in length, also essential for effective aminoacylation (Nureki et al. 1993, Sugiura et al. 2000). 
 
 
-ValRS,	IleRS, and LeuRS share a post-transfer editing domain, absent from MetRS.
+ValRS,	IleRS, and LeuRS share a post-transfer [editing domain](/superfamily/class1/Editing_domain_1a), absent from MetRS.
 This editing domain typically resides within the zinc finger, providing further amino acid selectivity by expelling a wide range of mistargetted amino acids 
 such alanine, cysteine, threonine, valine, isoleucine, methionine, homocysteine, and norvaline (Gomez and Ibba, 2020).
 However, unlike LeuRS-A, ValRS, and IleRS, the editing domain of LeuRS-B resides downstream of the zinc finger and CP2 (Fukunaga et al. 2005).
