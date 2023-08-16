@@ -339,7 +339,7 @@ function renderaaRS(isPairwise = false, isSuperfamily = false){
 							<span><img src="/fig/Archaea.png"  height="` + imgWidth + `px"></img> - Archaea </span>
 							<span><img src="/fig/Bacteria.png"  height="` + imgWidth + `px"></img> - Bacteria </span>
 							<span><img src="/fig/Eukaryota.png"  height="` + imgWidth + `px"></img> - Eukaryota </span>
-							<span><img src="/fig/Mitochondrial.png"  height="` + imgWidth + `px"></img> - Eukaryotic organelle </span>
+							<span><img src="/fig/Mitochondrial.png"  height="` + imgWidth + `px"></img> - Mitochondrion/chloroplast </span>
 							<span><img src="/fig/Viruses.png"  height="` + imgWidth + `px"></img> - Virus </span>
 							<span><img src="/fig/xray.png" height="` + imgWidth + `px"></img> - Solved structure </span>
 							<span><img src="/fig/alphafold.png"  height="` + imgWidth + `px"></img> - Computational prediction </span>
@@ -1403,7 +1403,7 @@ function renderSecondary(svg){
 				
 				
 				let species = metadata.species.replaceAll("_", " ");
-				let domain = metadata.domain == "Mitochondrial" ? "Eukaryote organelle" : metadata.domain;
+				let domain = metadata.domain == "Mitochondrial" ? "Mitochondrion/chloroplast" : metadata.domain;
 				let domainImg =  "/fig/" + metadata.domain + ".png";
 				   
 				let isPDB = metadata.pdb != "" && metadata.pdb != "NA";

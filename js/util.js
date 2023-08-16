@@ -14,7 +14,8 @@ function renderHeader(includeFooter = true){
   if (includeFooter){
     $("body").append("<div id='footer'></div>")
   }
-  
+
+					   
   $("#header").append(`<div id='class2Selector' class='dropdown'>
 						<button class='dropbtn'>Class II</button>
 							<div class='dropdown-content'>
@@ -27,7 +28,21 @@ function renderHeader(includeFooter = true){
 							<div class='dropdown-content'>
 							</div>
 						</button>
-					   </div>`);		
+					   </div>`);
+					   
+  
+	$("#header").append(`<div id='helpMenu' class='dropdown'>
+						<button class='dropbtn'>About</button>
+							<div class='dropdown-content'>
+							</div>
+						</button>
+					   </div>`);
+
+	// Help
+	$("#helpMenu div").append(`<a href='/'><b>Home</b></a>`);
+	$("#helpMenu div").append(`<a href='/about/methods'>Methods</a>`);
+	$("#helpMenu div").append(`<a href='/about/organisms'>Organisms</a>`);
+	
 
 	// Class 1
 	$("#class1Selector div").append(`<a href='/class1/'><b>Home</b></a>`);
