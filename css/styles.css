@@ -564,7 +564,7 @@ div#treeDiv{
 
 
 .dropdownDiv{
-	padding: 1em;
+	padding: 0.5em;
 	margin-top:0.5em;
 	margin-bottom:0.5em;
 }
@@ -704,8 +704,8 @@ div#treeDiv{
 .dropbtn {
   background-color: #008cbacc;
   color: white;
-  padding: 1.2em;
-  font-size: 1.1em;
+  padding: 0.8em;
+  font-size: 1.0em;
   border: none;
   border-radius:0.0em;
   margin-right:1.2em;
@@ -916,4 +916,10 @@ div.reaction span{
 #issues a{
 	margin-left:2em;
 	margin-right:2em;
+}
+
+
+img.imgIcon{
+	vertical-align:middle;
+	width:30;
 }
