@@ -154,16 +154,10 @@ svg text.alpha{
 .aarsShowcase {
 	margin-top: 2em;
 	margin-bottom: 2em;
-	display: none;
 }
 
 
 
-
-.aarsShowcase img{
-	vertical-align: middle;
-	height:1.2em;
-}
 
 ul.aalist li img{
 
@@ -207,13 +201,13 @@ ul.aalist li img{
 	}
 
 
-	
-.aarsShowcase{
-	padding: 0.5em;
-	background-image: linear-gradient(140deg, #008cba99, #008cbacc);
-	color: white;
-	box-shadow: 0.3em 0.25em 0.1em #702963cc;
-}
+		
+	.aarsShowcase{
+		padding: 0.75em;
+		background-image: linear-gradient(140deg, #696969aa, #696969cc);
+		color: white;
+		box-shadow: 0.3em 0.25em 0.1em #d3d3d3;
+	}
 
 
 }
@@ -225,12 +219,12 @@ ul.aalist li img{
 
 
 	
-.aarsShowcase span{
-	padding: 0.5em;
-	background-image: linear-gradient(140deg, #008cba99, #008cbacc);
-	color: white;
-	box-shadow: 0.3em 0.25em 0.1em #702963cc;
-}
+	.aarsShowcase span{
+		padding: 0.75em;
+		background-image: linear-gradient(140deg, #696969aa, #696969cc);
+		color: white;
+		box-shadow: 0.3em 0.25em 0.1em #d3d3d3;
+	}
 
 
 }
@@ -921,5 +915,13 @@ div.reaction span{
 
 img.imgIcon{
 	vertical-align:middle;
-	width:30;
+	width:2em;
+}
+
+
+@media only screen and ( max-device-width: 1000px ) {
+	img.imgIcon{
+		vertical-align:middle;
+		width:4em;
+	}
 }

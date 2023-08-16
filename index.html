@@ -51,8 +51,6 @@ function init(){
 
 
 
-
-
 	// Add loading wheel
 	$("#catalyticDomainDIV").before(`<div id="mainloader" class='loader'><img src='/fig/loader.png'></img></div>`);
 	$("#catalyticDomainDIV").hide(0);
@@ -69,8 +67,8 @@ function init(){
 
 
 
-		let eles = $(".aarsShowcase");
-		showEle(eles, 0);
+		//let eles = $(".aarsShowcase");
+		//showEle(eles, 0);
 		
 
 	}, 50);
@@ -125,6 +123,28 @@ showEle = function(eles, i, timeout = 200){
 			AARS Online is a curated database showcasing a taxonomically diverse selection of AARS sequences and structures.
 
 
+		
+		<div class="aarsShowcase">
+			<span class="">
+					&#x2726; Enzymes are sampled from 
+					Bacteria <img class="imgIcon" src="/fig/Bacteria.png"/>, 
+					Archaea <img class="imgIcon" src="/fig/Archaea.png"/>, 
+					Eukaryotes <img class="imgIcon" src="/fig/Eukaryota.png"/>, 
+					Organelles <img class="imgIcon" src="/fig/Mitochondrial.png"/>, and 
+					Viruses <img class="imgIcon" src="/fig/Viruses.png"/> 
+			</span>
+		</div>
+
+
+		<div class="aarsShowcase">
+			<span class="">
+					&#x2726; Contains protein structure with direct experimental support 
+					<img class="imgIcon" src="/fig/xray.png"/>
+					and AlphaFold models <img class="imgIcon" src="/fig/alphafold.png"/>
+			</span>
+		</div>
+
+
 			<div class="aarsShowcase">
 			<span>
 					&#x2726; Seamlessly navigate between protein sequence and structure with a user-friendly interface
@@ -134,34 +154,15 @@ showEle = function(eles, i, timeout = 200){
 
 		<div class="aarsShowcase">
 			<span>
-					&#x2726; Download high quallity multiple sequence alignments and phylogenetic trees
-			</span>
-		</div>
-
-			<div class="aarsShowcase">
-				<span class="">
-						&#x2726; Enzymes are sampled from 
-						Bacteria <img src="/fig/Bacteria.png"/>, 
-						Archaea <img src="/fig/Archaea.png"/>, 
-						Eukaryotes <img src="/fig/Eukaryota.png"/>, 
-						Organelles <img src="/fig/Mitochondrial.png"/>, and 
-						Viruses <img src="/fig/Viruses.png"/> 
-				</span>
-		</div>
-
-
-		<div class="aarsShowcase">
-			<span class="">
-					&#x2726; Some structures have strong experimental support 
-					<img src="/fig/xray.png"/>
-					while others are AlphaFold models <img src="/fig/alphafold.png"/>
+					&#x2726; Download curated multiple sequence alignments and phylogenetic trees
 			</span>
 		</div>
 
 
+
 		<div class="aarsShowcase">
 			<span class="">
-					&#x2726; Leave a comment, start a discussion, or report an issue on GitHub using the 'Discuss' link at the bottom of each page
+					&#x2726; Start a discussion or report an issue on GitHub using the 'Discuss' link at the bottom of each page
 			</span>
 		</div>
 
