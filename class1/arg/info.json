@@ -21,7 +21,7 @@
 					"Anticodon binding domain CRIMVL": {"acc": "ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb", "range": "475-632", "level": 4},
 					"D-loop binding domain": {"acc": "ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb", "range": "7-111", "level": 4},
 					"ArgRS IM": {"acc": "ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb", "range": "168-260", "level": 3},
-					"Protozyme": {"acc": "ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb", "range": "121-166", "level": 2},
+					"Protozyme": {"acc": "ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb", "range": "121-166", "level": 3, "align": "right"},
 					"HIGH": {"acc": "ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb", "range": "136-139", "level": 1},
 					"KMSKS": {"acc": "ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb", "range": "441-446", "level": 1}}
 }

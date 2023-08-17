@@ -24,7 +24,8 @@ The Archaea are primitive lifeforms that offer a glimpse into early history on o
 They are single-celled organisms that resemble bacteria, however their genes are more closely related to eukaryotes.
 Like bacteria, they show high levels of horizontal gene transfer (Eppley et al. 2007, Papke et al. 2007).
 Their taxonomy is still an active area of research, and therefore the Archaeal phyla are provisional.
-There are several AARS that are exclusive, or largely restricted, to the Archaea, including [SepRS](/class2/sep) and a special form of [SerRS](/class2/ser2).
+There are several AARS that are exclusive, or largely restricted, to the Archaea, including [SepRS](/class2/sep), a special form of [SerRS](/class2/ser2), and the non-discriminating [GlxRS](/class1/glu2).
+
 
 ## <img class="imgIcon" src="/fig/Eukaryota.png" alt="leaf icon" /> Eukaryota 
 
@@ -37,13 +38,13 @@ It is noted that some eukaryotic protein sequences are computational predictions
 
 Mitochondria and chloroplasts have their own translational machinery, distinct from the cytosols they reside in. 
 They also have their own AARS, but these are not encoded by the small compartmental genomes. 
-Rather, the enzymes are produced in the cytosol and are imported into the mitochondria and chloroplasts using localisation signals.
+Rather, the enzymes are produced in the cytosol and are imported into the mitochondria and chloroplasts using localization signals.
 In general, the same AARS is localized into both compartments through dual targeting (Duchêne 2005).
 In the case of [AlaRS](/class2/ala), [GlyRS](/class2/gly3), [HisRS](/class2/his), and [ValRS](/class1/val), the same AARS operates in the cytoplasm and mitochondria, through alternative initiation (Chatton et al. 1986).
 Due to the endosymbiotic origins of these organelles, their AARS are typically, but not always, of bacterial origin. 
 
 
-Predicting protein cellular localisation is a non-trivial problem and existing algorithms are not always accurate (Sun and Habermann 2017). 
+Predicting protein cellular localization is a non-trivial problem and existing algorithms are not always accurate (Sun and Habermann 2017). 
 Thus, the classifications of eukaryotic structures into organellar/cytosolic should be considered as putative unless there is direct experimental evidence. 
 If you believe we have misclassified a eukaryotic structure into organellar/cytosolic, please contact us or raise an issue on GitHub.
 

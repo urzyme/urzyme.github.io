@@ -15,7 +15,7 @@ function renderAbout(){
 
 		
 						
-					<ul id="flexContainer">
+					<ul class="flexContainer">
 					<li class="summary">
 					</li>
 
@@ -35,9 +35,11 @@ function renderAbout(){
 				
 				
 
-				
-				<div id="references">
-				</div>
+				<ul class="flexContainer">
+					<li id="references">
+						<h2>References</h2>
+					</li>
+				</ul>
 
 
 				<div id="issues">
@@ -55,6 +57,7 @@ function renderAbout(){
 		`);
   }
   
+  $(".notes").show(0);
   renderHeader();
   
   
@@ -63,7 +66,7 @@ function renderAbout(){
   }else{
 	   
   }
-  $(".notes").show(100);
+  
   
   // Render the introduction
 	fetch("README.md")      // The path to the raw Markdown file
@@ -108,13 +111,12 @@ function renderAbout(){
 
 	
 	refs = getSorted(refs);
+
+	
 	$("#references").html("");
-	
-	
 	$("#references").append(refs);
+	$("#references").prepend("<h2>References</h2>");
 	
-	
-	$("#references").prepend("<h1>References</h1>");
   });
 
 

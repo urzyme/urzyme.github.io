@@ -138,9 +138,8 @@ function renderaaRS(isPairwise = false, isSuperfamily = false){
   // Initialise HTML
   if ($("#main").children().length == 0){
   	$("#main").append(`
-		  	<ul id="flexContainer">
-					<li class="summary">
-					</li>
+		  	<ul class="flexContainer">
+					
 
 					<li class="notes">
 						
@@ -149,6 +148,10 @@ function renderaaRS(isPairwise = false, isSuperfamily = false){
 
 
 						</div>
+						
+					</li>
+					
+					<li class="summary">
 						
 					</li>
 					
@@ -191,18 +194,20 @@ function renderaaRS(isPairwise = false, isSuperfamily = false){
 				
 				</div>
 				
-				
-				<div id="references">
-				</div>
+				<ul class="flexContainer">
+					<li id="references">
+						<h2>References</h2>
+					</li>
+				</ul>
 
 
 				<div id="issues">
 
-					<a id="GitHubLink">
+					<a target="_blank" id="GitHubLink">
 						View on GitHub
 					</a>
 
-					<a id="IssuesLink">
+					<a target="_blank" id="IssuesLink">
 						Discuss
 					</a>
 
@@ -235,7 +240,7 @@ function renderaaRS(isPairwise = false, isSuperfamily = false){
   .then(markdown => {                 // ...then pass the raw text into marked.parse
     document.getElementById("introduction").innerHTML = marked.parse(markdown);
     MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
-	$("#introduction").prepend("<h1>Introduction</h1>");
+	$("#introduction").prepend("<h1 id='fullName'>Introduction</h1>");
   });
 
 
@@ -274,12 +279,8 @@ function renderaaRS(isPairwise = false, isSuperfamily = false){
 	
 	refs = getSorted(refs);
 	$("#references").html("");
-	
-	
 	$("#references").append(refs);
-	
-	
-	$("#references").prepend("<h1>References</h1>");
+	$("#references").prepend("<h2>References</h2>");
   });
   
   
@@ -307,9 +308,7 @@ function renderaaRS(isPairwise = false, isSuperfamily = false){
 
   
 
-  // Section titles
-  $(".summary").prepend("<h1>Summary</h1>");
-  $("#references").prepend("<h1>References</h1>");
+
   
   
 
@@ -592,7 +591,7 @@ function renderInfo(text, resolve=function() { }){
 	$("link[rel='icon']").attr("href", json.icon);
 	
 	// Page main header
-	 $("#main").prepend("<h1>" + json.fullName + "</h1>");
+	 $("#fullName").html(json.fullName);
 	 
 	 
 	 if (json.hide != null && json.hide == true){

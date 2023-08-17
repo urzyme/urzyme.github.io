@@ -234,7 +234,7 @@ ul.aalist li img{
 .notes{
 	display:none;
 	text-align:justify;
-	background-image: linear-gradient(140deg, #008cba0a, #008cba22);
+	%background-image: linear-gradient(140deg, #008cba0a, #008cba22);
 
 	padding: 2em;
 	color: black;
@@ -251,7 +251,7 @@ ul.aalist li img{
 
 .summary{
 	text-align:justify;
-	background-image: linear-gradient(140deg, #008cba0a, #008cba22);
+	%background-image: linear-gradient(140deg, #008cba0a, #008cba22);
 
 	padding: 2em;
 	color: black;
@@ -300,6 +300,7 @@ ul.aalist li img{
 }
 
 .summary>table{
+	margin-top:3em;
 	width:100%;
 	 border-collapse: collapse;
 }
@@ -317,15 +318,27 @@ ul.aalist li img{
 }
 
 
+.summary th{
+	border-top-left-radius: 1.5em;
+	%border-bottom-left-radius: 1.5em;
+}
+
+.summary td{
+	%border-top-right-radius: 1.5em;
+	border-bottom-right-radius: 1.5em;
+}
 
 .summary tr:nth-child(even){
-  background-color: #008cba33;
+  %background-color: #008cba33;
+  background: radial-gradient(#008cba22, #ffffff00);
+ 
   %color: #fff;
 }
 
 
 .summary tr:nth-child(odd){
-  background-color: #008cba22;
+  %background-color: #008cba22;
+ % background: radial-gradient(#008cba33, #ffffff00);
   %color: #fff;
 }
 
@@ -448,16 +461,20 @@ table.maptable tr.refSeq{
 	}
 }
 
-
+h1#fullName{
+	%text-align:left;
+	%margin-left:0.4em;
+}
 
 #references{
 	margin-bottom: 5em;
 	margin-top: 1em;
+
 	line-height: 140%;
 	font-size:1.0em;
 
 	text-align:justify;
-	background-image: linear-gradient(140deg, #008cba0a, #008cba22);
+	background-image: linear-gradient(140deg, #008cba0a, #008cba11);
 
 
 	padding: 2em;
@@ -533,7 +550,7 @@ div#treeDiv{
 
 
 
-#contents{
+.contents{
 	width: 500px;
 	padding: 1em;
 	background-image: linear-gradient(140deg, #008cba0a, #008cba22);
@@ -545,15 +562,22 @@ div#treeDiv{
 }
 
 
-#contents img{
+.contents img{
 	width: 25px;
 	height:  25px;
 	vertical-align: middle;
 }
 
-#contents div{
+.contents div{
 	padding: 0.2em;
 	margin-left: 0.2em;
+}
+
+
+@media only screen and ( max-device-width: 1000px ) {
+	#contents{
+		width: 95%;
+	}
 }
 
 
@@ -754,23 +778,23 @@ div#treeDiv{
 
 
 
-#flexContainer, .flexContainer {
+.flexContainer {
   /* We first create a flex layout context */
   display: flex;
 
   flex-flow: row wrap;
   
   /* Then we define how is distributed the remaining space */
-  justify-content: space-between;
+  justify-content: space-around;
+  
+  align-items: flex-start;
   
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-#flexContainer>li {
-	margin-bottom:1em;
-}
+
 
 .flexContainer>li {
 	margin-bottom:1em;
