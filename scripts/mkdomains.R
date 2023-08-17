@@ -121,7 +121,7 @@ for (domain in features.df$domain){
 
 
 
-		pdb.df = data.frame(line = atomLines, chain = substr(atoms, 22, 22), residue = substr(atoms, 18, 20), pos.pdb = as.numeric(substr(atoms, 24, 26)), include = TRUE)
+		pdb.df = data.frame(line = atomLines, chain = substr(atoms, 22, 22), residue = substr(atoms, 18, 20), pos.pdb = as.numeric(substr(atoms, 23, 26)), include = TRUE)
 		pdb.df2 = pdb.df[pdb.df$chain == "A",]
 		if (nrow(pdb.df2) == 0){
 			pdb.df2 = pdb.df[pdb.df$chain == "B",]

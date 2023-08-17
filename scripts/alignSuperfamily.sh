@@ -9,7 +9,7 @@ do
 
 	cd $c
 	
-	for d in Anticodon_binding_domain_EK/
+	for d in C-term*/
 	do
 
 		echo "$c $d"

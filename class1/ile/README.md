@@ -31,7 +31,7 @@ Both forms possess a  [helical domain](/superfamily/class1/Anticodon_binding_dom
 The domain is universal across the members of subclass Ia, as well as [CysRS](/class1/cys) and [ArgRS](/class1/arg).
 However, the remaining C-terminal regions vary between the two types.
 The first type, IleRS-1, is found in certain bacteria, organelles, and eukaryotic cytosols.
-It possesses a C-terminal junction domain and a zinc finger downstream from the helical bundle.
+It possesses a [C-terminal junction domain](/superfamily/class1/C-terminal_junction_domain) and a zinc finger downstream from the helical bundle.
 Together with an N-terminal extension, the three C-terminal domains recognise the anticodon loop (Silvian et al. 1999).  
 The second type, IleRS-2, is found in many archaea, bacteria, and eukaryotic cytosols. 
 It lacks the N-terminal extension and zinc finger motif (Brkic et al. 2023), and achieves anticodon loop recognition through a much larger variation of the C-terminal junction domain.

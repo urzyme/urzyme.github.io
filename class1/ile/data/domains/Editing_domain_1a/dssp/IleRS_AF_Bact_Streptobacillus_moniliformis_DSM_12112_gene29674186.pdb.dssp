@@ -1,14 +1,14 @@
-==== Secondary Structure Definition by the program DSSP, CMBI version 2.0                          ==== DATE=2023-06-21        .
+==== Secondary Structure Definition by the program DSSP, CMBI version 2.0                          ==== DATE=2023-08-17        .
 REFERENCE W. KABSCH AND C.SANDER, BIOPOLYMERS 22 (1983) 2577-2637                                                              .
                                                                                                                                .
 COMPND                                                                                                                         .
 SOURCE                                                                                                                         .
 AUTHOR                                                                                                                         .
-  193  1  0  0  0 TOTAL NUMBER OF RESIDUES, NUMBER OF CHAINS, NUMBER OF SS-BRIDGES(TOTAL,INTRACHAIN,INTERCHAIN)                .
-  9878.0   ACCESSIBLE SURFACE OF PROTEIN (ANGSTROM**2)                                                                         .
-  135 69.9   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(J)  , SAME NUMBER PER 100 RESIDUES                              .
+  192  1  0  0  0 TOTAL NUMBER OF RESIDUES, NUMBER OF CHAINS, NUMBER OF SS-BRIDGES(TOTAL,INTRACHAIN,INTERCHAIN)                .
+  9719.4   ACCESSIBLE SURFACE OF PROTEIN (ANGSTROM**2)                                                                         .
+  135 70.3   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(J)  , SAME NUMBER PER 100 RESIDUES                              .
     9  4.7   TOTAL NUMBER OF HYDROGEN BONDS IN     PARALLEL BRIDGES, SAME NUMBER PER 100 RESIDUES                              .
-   42 21.8   TOTAL NUMBER OF HYDROGEN BONDS IN ANTIPARALLEL BRIDGES, SAME NUMBER PER 100 RESIDUES                              .
+   42 21.9   TOTAL NUMBER OF HYDROGEN BONDS IN ANTIPARALLEL BRIDGES, SAME NUMBER PER 100 RESIDUES                              .
     1  0.5   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I-5), SAME NUMBER PER 100 RESIDUES                              .
     1  0.5   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I-4), SAME NUMBER PER 100 RESIDUES                              .
     1  0.5   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I-3), SAME NUMBER PER 100 RESIDUES                              .
@@ -216,6 +216,5 @@ AUTHOR                                                                          
   188  396 A H        -     0   0   66     -2,-0.5     2,-0.2     2,-0.0    -2,-0.0  -0.980  53.8 -82.5-152.9 163.4   25.5   20.5   -7.1               
   189  397 A S        +     0   0  123     -2,-0.3    -2,-0.0  -188,-0.0     0, 0.0  -0.499  49.6 179.4 -70.4 134.6   22.4   18.3   -7.4               
   190  398 A Y        -     0   0  105     -2,-0.2     2,-0.1     0, 0.0    -2,-0.0  -0.988  31.4 -97.2-140.9 145.8   22.7   15.6  -10.1               
-  191  399 A P        -     0   0  106      0, 0.0     2,-0.3     0, 0.0     0, 0.0  -0.356  41.1-176.1 -68.4 140.4   20.4   12.7  -11.3               
-  192  400 A H              0   0  165     -2,-0.1     0, 0.0     0, 0.0     0, 0.0  -0.964 360.0 360.0-132.9 151.3   21.0    9.2   -9.9               
-  193  401 A D              0   0  212     -2,-0.3     0, 0.0     0, 0.0     0, 0.0  -0.565 360.0 360.0 -67.0 360.0   19.5    5.8  -10.6               
+  191  399 A P              0   0  106      0, 0.0     0, 0.0     0, 0.0     0, 0.0  -0.356 360.0 360.0 -68.4 140.4   20.4   12.7  -11.3               
+  192  400 A H              0   0  218     -2,-0.1     0, 0.0     0, 0.0     0, 0.0  -0.964 360.0 360.0-132.9 360.0   21.0    9.2   -9.9               
