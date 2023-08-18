@@ -778,7 +778,7 @@ div#treeDiv{
 
 
 
-.flexContainer {
+#flexContainer, .flexContainer {
   /* We first create a flex layout context */
   display: flex;
 
@@ -796,7 +796,7 @@ div#treeDiv{
 
 
 
-.flexContainer>li {
+#flexContainer, .flexContainer>li {
 	margin-bottom:1em;
 	max-width: 100%;
 }
