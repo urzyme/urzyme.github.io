@@ -16,9 +16,8 @@
 		"refine": [{"start": 1, "stop": 220}],
 		"features": {"Catalytic domain": {"acc": "GlxRS-A_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094352.pdb", "range": "94-355", "level": 4},
 					"Anticodon binding domain EQ": {"acc": "GlxRS-A_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094352.pdb", "range": "361-568", "level": 4},
-					"CP1": {"acc": "GlxRS-A_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094352.pdb", "range": "175-295", "level": 3, "href": "/superfamily/class1/CP1"},
-					"SC1b IM": {"acc": "GlxRS-A_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094352.pdb", "range": "200-240", "level": 2, "href": "/superfamily/class1/SC1b_IM"},
-					"Protozyme": {"acc": "GlxRS-A_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094352.pdb", "range": "94-131", "level": 2},
+					"SC1b IM": {"acc": "GlxRS-A_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094352.pdb", "range": "200-240", "level": 3},
+					"Protozyme": {"acc": "GlxRS-A_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094352.pdb", "range": "94-131", "level": 3},
 					"HIGH": {"acc": "GlxRS-A_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094352.pdb", "range": "106-109", "level": 1},
 					"KMSKS": {"acc": "GlxRS-A_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094352.pdb", "range": "338-342", "align": "right", "level": 1}}
 	

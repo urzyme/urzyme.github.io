@@ -14,7 +14,7 @@ IleRS features a N-terminal catalytic domain, C-terminal tRNA binding domains, a
 
 IleRS is closely related to the [LeuRS-A](/class1/leu2), [LeuRS-B](/class1/leu1), [ValRS](/class1/val), and [MetRS](/class1/met) families, which comprise 
 subclass Ia (Perona and Hadd 2012, Gomez and Ibba, 2020).
-Members of subclass Ia are characterized by their hydrophobic amino acid substrates, as well as the connecting peptide 2 (CP2) and zinc finger insertions, depicted below. 
+Members of subclass Ia are characterized by their hydrophobic amino acid substrates, as well as the connecting peptide 2 (CP2) and zinc finger (ZF) insertions, depicted below. 
 CP2 is a 30-40 amino acid two-helix bundle on the surface of the catalytic domain (Starzyk et al. 1987) and appears to be essential for amino acid activation (Zhou at al. 2008). 
 Upstream from this resides a cysteine-rich zinc finger, 20-40 amino acids in length, also essential for effective aminoacylation (Nureki et al. 1993, Sugiura et al. 2000). 
 

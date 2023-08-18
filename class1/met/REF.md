@@ -26,7 +26,7 @@ Zhou, Xiao-Long, Bin Zhu, and En-Duo Wang. "The CP2 domain of leucyl-tRNA synthe
 
 Starzyk, Ruth M., Teresa A. Webster, and Paul Schimmel. "Evidence for dispensable sequences inserted into a nucleotide fold." Science 237.4822 (1987): 1614-1618.
 
-
+Sugiura, Ikuko, et al. "The 2.0 Å crystal structure of Thermus thermophilus methionyl-tRNA synthetase reveals two RNA-binding modules." Structure 8.2 (2000): 197-208.
 
 Blanquet, Sylvain, Motohiro Iwatsubo, and Jean‐Pierre Waller. "The Mechanism of Action of Methionyl‐tRNA Synthetase from Escherichia coli: 1. Fluorescence Studies on tRNAMet Binding as a Function of Ligands, Ions and pH." European Journal of Biochemistry 36.1 (1973): 213-226.
 

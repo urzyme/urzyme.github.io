@@ -1,5 +1,5 @@
 
-Tyrosyl-tRNA synthetase (TyrRS) is an enzyme that plays a crucial role in protein synthesis by catalysing the attachment of tyrosine to its cognate tRNA:
+Tyrosyl-tRNA synthetase (TyrRS) is an enzyme that plays a crucial role in protein synthesis by catalyzing the attachment of tyrosine to its cognate tRNA:
 
 
 
@@ -9,12 +9,12 @@ $ \text{Tyr} + \text{tRNA}^\text{Tyr} + \text{ATP} \xrightarrow{\text{TyrRS}} \t
 
 
 
-TyrRS shares a number of similarites with its close homolog [TrpRS](/class1/trp), which constitute subclass Ic.
-TyrRS and TrpRS are homodimeric, in contrast to many Class I syntheteases which operate as monomers (Gomez and Ibba, 2020).
+TyrRS shares a number of similarities with its close homolog [TrpRS](/class1/trp), which constitute subclass Ic.
+TyrRS and TrpRS are homodimeric, in contrast to many Class I synthetases which operate as monomers (Gomez and Ibba, 2020).
 Moreover, the two amino acids may have been among the last amino acids to emerge in the metabolism (Trifonov 2000), 
 and are chemically similar (aromatic side chains), consistent with the hypotheses of the two AARS sharing a common ancestor with either dual specificity, or one synthetase spawning off the other (Doublié et al. 1995, Fournier et al. 2015).
 Conserved aspartate side chains in the specificity determining helix (SDH) allow the respective enzymes to discriminate between tyrosine and tryptophan (Doublié et al. 1995).
-Lastly, while most Class I syntheteases approach the tRNA acceptor stem from the minor groove side, TyrRS and TrpRS alike instead approach the acceptor stem directly (de Pouplana and Schimmel 2001).
+Lastly, while most Class I synthetases approach the tRNA acceptor stem from the minor groove side, TyrRS and TrpRS alike instead approach the acceptor stem directly (de Pouplana and Schimmel 2001).
 
 
 
@@ -30,10 +30,11 @@ Lastly, most bacterial and organellar TyrRS possess a C-terminal RNA binding dom
 
 
 Editing activity has not been detected for TyrRS, which is one of the more promiscuous AARS with respect to amino acid recognition (Bedouelle 2005).
-Coupled with the lack of cross-reactivity between TyrRS and tRNA$^\text{Tyr}$ between bacteria and archaea, this property has made TyrRS a favourable target for engineering unnatural amino acids into the genetic code (Kobayashi et al. 2003).
+Coupled with the lack of cross-reactivity between TyrRS and tRNA$^\text{Tyr}$ between bacteria and archaea, this property has made TyrRS a favorable target for engineering unnatural amino acids into the genetic code (Kobayashi et al. 2003).
 
 
 
 TyrRS is also one of several aminoacyl-tRNA synthetases expressed by the mimiviruses (Abergel et al. 2007).
 In some eukaryotes, notably parasites, TyrRS exists as a double length duplicated enzyme which forms an asymmetric pseudo-dimer, with catalytic activity confined to the N-terminal paralog of the catalytic domain (Larson et al. 2011). 
+
 

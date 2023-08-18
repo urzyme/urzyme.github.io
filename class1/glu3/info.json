@@ -17,9 +17,8 @@
 		"features": {"Catalytic domain": {"acc": "GluRS-E_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb", "range": "204-459", "level": 4},
 					"GST": {"acc": "GluRS-E_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb", "range": "1-199", "count": 4, "dy": -3, "level": 4},
 					"Anticodon binding domain EQ": {"acc": "GluRS-E_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb", "range": "466-710", "level": 4},
-					"CP1": {"acc": "GluRS-E_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb", "range": "279-399", "level": 3},
-					"SC1b IM": {"acc": "GluRS-E_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb", "range": "304-346", "level": 2, "href": "/superfamily/class1/SC1b_IM"},
-					"Protozyme": {"acc": "GluRS-E_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb", "range": "208-246", "level": 2},
+					"SC1b IM": {"acc": "GluRS-E_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb", "range": "304-346", "level": 3},
+					"Protozyme": {"acc": "GluRS-E_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb", "range": "208-246", "level": 3},
 					"HIGH": {"acc": "GluRS-E_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb", "range": "220-223", "level": 1},
 					"KMSKS": {"acc": "GluRS-E_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb", "range": "442-446", "level": 1, "align": "right"}}
 	
