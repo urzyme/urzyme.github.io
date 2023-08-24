@@ -622,7 +622,12 @@ function renderInfo(text, resolve=function() { }){
 
 	// GitHub issue link
 	let issueLabel = json.issuePage == null ? json.id : json.issuePage;
-	$("#IssuesLink").attr("href", "https://github.com/urzyme/urzyme.github.io/labels/" + issueLabel);
+	if (issueLabel == null) {
+		$("#IssuesLink").attr("href", "https://github.com/urzyme/urzyme.github.io/issues/");
+	}else{
+		$("#IssuesLink").attr("href", "https://github.com/urzyme/urzyme.github.io/labels/" + issueLabel);
+	}
+	
 
 
 	// Summary table for superfamily alignments
@@ -687,8 +692,6 @@ function renderInfo(text, resolve=function() { }){
                   <td>` + json.tm + `</td>
                 </tr>`);
 
-
-        $(".notes div").html(json.description);
 
 
   }

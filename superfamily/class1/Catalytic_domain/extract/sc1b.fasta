@@ -18,6 +18,12 @@ KGKAYICHLSQEEICERR-REFTSNDMKVRTYLSQYRNRS---VEE-NLR-IF-Q---EMI-DGKWEEGKA-CLRFKMDT
 RGQAYVCHQRVEELKG------------HNSLPSPWRERP---VEE-SLL-LF-E---AMR-KGKFAEGEA-TLRMKL-V---------------------M-------------------------------------E-D-------------G---------------K---MDPVAYR-----VKYTPHHRTGDK--WCIYPT
 >GlnRS_AF_Mito_Cyanidioschyzon_merolae_strain_10D_gene16997184.pdb
 RGKAYVCHQRPEEMARDR----------EEKRPSPWRNRS---VEE-NLD-CF-E---RMR-LGLYDEGAA-VLRMKIDM-Q-------------------H----------------------------P--------N---------------P---------------VM--RDPVAYR-----IKYAAHPHVGDR--WCIYPS
+>GlnRS_Bact_D_radio_2HZ7.pdb
+QGDAYVESVSPEELSRLR------GNATTPGTPSPYRDRS---VEE-NLD-LL-R---RMK-AGEFADGEH-VLRAKIDL-T-------------------A----------------------------P--------N---------------M---------------KL--RDPVLYR-----IVNKPHFRTSDE--WHIYPA
+>GlnRS_Bact_E_coli_1QTQ.pdb
+KGLAYVDELTPEQIREYR------GTLTQPGKNSPYRDRS---VEE-NLA-LF-E---KMR-AGGFEEGKA-CLRAKIDM-A-------------------S----------------------------P--------F---------------I---------------VM--RDPVLYR-----IKFAEHHQTGNK--WCIYPM
+>GlnRS_PDB_Euk_T_gondii_4P2B.pdb
+KGLAFVDDDSLEEIRRKR-------------ENSPFRERS---IEE-NLD-LF-R---RMR-AGEFEEGSR-VLRAKIDM-T-------------------H----------------------------S--------N---------------M---------------NM--RDPVLYR-----ILKKEHPRTGNQ--WVIYPM
 >GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb
 ---------------GY---------------DGYDRNLS----EE-QKA-A-FR---A---EGRKP-----ALRIKMPD-E-------------------D-ITFNDL-IRGEITF----------------------KA-------------GS---------------V---PDYVIVR-------------P-N-----GDP-
 >GluRS_AF_Bact_Chlamydia_psittaci_6BC_gene12242467.pdb
@@ -46,6 +52,8 @@ RGKAYVCHQRPEEMARDR----------EEKRPSPWRNRS---VEE-NLD-CF-E---RMR-LGLYDEGAA-VLRMKIDM
 ----------------Q--------------YDGTCRDAD---PAL-IRK-RL-Q--RG---------D-PYTLRFRVPA-G-------------------TRVEIRDV-IRGDIAW----------------------DA------------NAT---------------I---GDFIIVR--------------SS-----GLP-
 >GluRS_AF_Mito_Drosophila_melanogaster_gene39828.pdb
 ----------------R--------------YDNKCRHLT---TSE-V-DSLL-A---K---------GTPYCIRFKLTD-H-------------------E------------------------EPLDDLIYGKVHHNV------------SDN---------------E---GDPVVMK--------------SD-----QFP-
+>GluRS_PDB_Bact_T_therm_1J09.pdb
+---------------GY---------------DGRARNIP---PEE-AEE-RA-R---R---------GEPHVIRLKVPRPG-------------------T-TEVKDELRG-VVVY-------------D--------N--------------QE---------------I---PDVVLLK--------------SD-----GYP-
 >GlxRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094352.pdb
 -GKAYVCTCPAAEVRKRR----------KLGISCDHRDQP---IEK-NLE-LW-E---KML-NGGFREGEA-HLRLKTDM-S-------------------H----------------------------P--------N---------------V---------------TM--RDPGIFR-----VIEAEHPIHGDK--YRVYPV
 >GlxRS_AF_Arch_Methanothrix_soehngenii_GP6_gene10459943.pdb
@@ -62,3 +70,5 @@ RGKAYVCHQRPEEMARDR----------EEKRPSPWRNRS---VEE-NLD-CF-E---RMR-LGLYDEGAA-VLRMKIDM
 -GRAYVDDTPREQMQKER----------MDGIESQCRNHS---VEE-NLK-LW-K---EMI--AGSERGLQCCVRGKLDM-Q-------------------D----------------------------P--------N---------------K---------------SL--RDPVYYR-----CNPMPHHRIGSK--YKVYPT
 >GlxRS_AF_Euk_Xylariaceae_sp_FL0804_proteinKAI0483267.1.pdb
 -GKAFADDSELGKGDEDR----------KNRLPSKRRDLS---IED-TLA-RF-E---EMR--SASEEGRRWAIRARIAY-D-------------------S----------------------------P--------N---------------G---------------TL--RDPVIYR-----CNLEPHHRTGTQ--WKVYPT
+>GlxRS_PDB_Arch_M_thermau_3AII.pdb
+-GGAYVCTCRPEEFRELK----------NRGEACHCRSLG---FRE-NLQ-RW-R---EMF---EMKEGSA-VVRVKTDL-N-------------------H----------------------------P--------N---------------P---------------AI--RDWVSMR-----IVEAEHPRTGTR--YRVYPM

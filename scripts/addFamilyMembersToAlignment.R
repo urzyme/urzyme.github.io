@@ -3,7 +3,7 @@ library(seqinr)
 
 
 
-# args=c("../../../../class2/", 'Catalytic_domain', "structures.txt", "align.ali")
+# args=c("../../../../class2", 'Catalytic_domain', "structures.txt", "align.ali")
 
 # Add family members to the alignment by using the exissing alignment to their reference structure
 args = commandArgs(trailingOnly=TRUE)
@@ -24,7 +24,8 @@ nsites = as.numeric(nchar(out.fasta)[1])
 structures = character(0)
 
 dirs = list.dirs(path=wd, recursive=T)
-dirs = dirs[grep(paste0(wd, "/class./.+/data$"), dirs)]
+#dirs = dirs[grep(paste0(wd, "/class./.+/data$"), dirs)]
+dirs = dirs[grep(paste0(wd, "/.+/data$"), dirs)]
 for (d in dirs){
 
 	structuresD = readLines(paste0(d, "/structures.txt"))
@@ -32,6 +33,8 @@ for (d in dirs){
 	json = fromJSON(file = paste0(d, "/../info.json"))
 	ref_str = json$ref_str
 
+
+	print(ref_str)
 
 
 
@@ -88,6 +91,7 @@ for (d in dirs){
 
 				# Add to alignment: if it's not a reference structure and it's not a pdb structure
 				is.alphafold = strsplit(gsub(".+/", "", f), "_")[[1]][2] == "AF"
+				is.alphafold = TRUE
 				if (is.alphafold && !any(refStructures == f)){
 
 

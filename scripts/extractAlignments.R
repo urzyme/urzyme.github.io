@@ -152,6 +152,10 @@ for (element in names(extract)){
 
 
 		is.alphafold = sapply(strsplit(gsub(".+/", "", names(aln.short.seq)), "_"), function(ele) ele[2] == "AF")
+
+		# Use all
+		is.alphafold = rep(T, length(aln.short.seq))
+
 		aln.short.seq = aln.short.seq[is.alphafold]
 
 		aln.short.seq = removeShortSequences(aln.short.seq)

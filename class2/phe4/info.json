@@ -13,6 +13,7 @@
 		"codons": "UUU, UUC",
 		"editing": "Post-transfer",
 		"tree": "/data/class2.nexus",
+		"addToClade": ["PheRS-Aβ", "PheRS-Bβ"],
 		"treeDescription": "Phylogeny of the AARS catalytic domain (Douglas et al. 2023). Internal nodes are labelled by clade posterior support.",
 		"ref_str": ["structures/PheRS-Aβ_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724457.pdb"],
 		"features": {"Catalytic domain": {"acc": "PheRS-Aβ_AF_Arch_Candidatus_Nitrosopumilus_koreensis_AR1_gene13724457.pdb", "range": "351-547", "level": 4},

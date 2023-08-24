@@ -13,6 +13,7 @@
 		"codons": "UUU, UUC",
 		"editing": "No",
 		"tree": "/data/class2.nexus",
+		"addToClade": ["PheRS-Aα", "PheRS-Bα", "PheRS-M"],
 		"treeDescription": "Phylogeny of the AARS catalytic domain (Douglas et al. 2023). Internal nodes are labelled by clade posterior support.",
 		"ref_str": ["structures/PheRS-Bα_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440383.pdb"],
 		"hinge_str": "structures/PheRS-Bα_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440383.pdb",

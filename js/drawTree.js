@@ -1,12 +1,12 @@
 
 
-TREE_SVG_WIDTH = 500;
-TREE_SVG_X_PADDING = 300;
+TREE_SVG_WIDTH = 650;
+TREE_SVG_X_PADDING = 400;
 TREE_SVG_LINE_HEIGHT = 20;
 TREE_SVG_FONT_SIZE = 15;
 
 if (IS_MOBILE){
-	let multipler = 2;
+	let multipler = 1.8;
 	TREE_SVG_WIDTH *= multipler;
 	TREE_SVG_X_PADDING *= multipler;
 	TREE_SVG_LINE_HEIGHT *= multipler;
@@ -135,12 +135,31 @@ function drawBranch(svg, node, x, lengthScale){
 		let domainOfLife = getLifeDomainOfAccession(node.label);
 		if (domainOfLife != null){
 			drawSVGobj(leafG, "image", {href:"/fig/" + domainOfLife + ".png", x: x, y: y-TREE_SVG_FONT_SIZE/2, height:TREE_SVG_FONT_SIZE*1.3});
+			x += 1.52*TREE_SVG_FONT_SIZE;
 		}
+
+
+
+		// Xray / alphafold
+		let isExperimental = accessionIsExperimental(node.label);
+		if (isExperimental != null && isExperimental){
+
+			//let rect = textSVG.getBoundingClientRect(); 
+			x -= 0.2*TREE_SVG_FONT_SIZE;
+			drawSVGobj(leafG, "image", {href:"/fig/" + (isExperimental ? "xray" : "alphafold") + ".png", x: x, y: y-TREE_SVG_FONT_SIZE/2, height:TREE_SVG_FONT_SIZE*0.85});
+			x += 1.1*TREE_SVG_FONT_SIZE;
+		}
+
 		
 		// Text
 		let label = getNameOfAccession(node.label);
 		//if (label == "error") label = node.label;
-		drawSVGobj(leafG, "text", {x: x+1.52*TREE_SVG_FONT_SIZE, y: y, style: "text-anchor:start; dominant-baseline:middle; font-size:" + TREE_SVG_FONT_SIZE + "px; fill:black"}, value=label)
+		let textSVG = drawSVGobj(leafG, "text", {x: x, y: y, style: "text-anchor:start; dominant-baseline:middle; font-size:" + TREE_SVG_FONT_SIZE + "px; fill:black"}, value=label)
+
+
+
+
+
 
 		return y;
 	}

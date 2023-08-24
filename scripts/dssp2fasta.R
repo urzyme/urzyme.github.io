@@ -21,6 +21,8 @@ output.seq = character(0)
 for (f in dssp.files){
 
 
+	print(f)
+
 
 	given.warning = FALSE
 

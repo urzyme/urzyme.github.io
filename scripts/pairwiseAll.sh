@@ -6,7 +6,7 @@
 
 # Prepare all alignments
 cd pairwise
-for c in class*;
+for c in class2;
 do
 
 	cd $c
@@ -37,7 +37,7 @@ do
 				dir="${aa1}_${aa2}"
 				mkdir -p $dir
 				cp ../template.html $dir/index.html
-				#cp ../info.json $dir/
+				cp ../REF.md $dir/REF.md
 
 
 

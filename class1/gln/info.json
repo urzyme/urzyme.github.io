@@ -17,6 +17,7 @@
 		"hinges": [203],
 		"refine": [{"start": 422, "stop": 491}],
 		"tree": "/data/class1.nexus",
+		"addToClade": ["GlnRS", "GluRS-E", "GlxRS-A"],
 		"treeDescription": "Phylogeny of the AARS catalytic domain (Douglas et al. 2023). Internal nodes are labelled by clade posterior support.",
 		"features": {"Catalytic domain": {"acc": "GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb", "range": "29-287", "level": 4},
 					"Anticodon binding domain EQ": {"acc": "GlnRS_AF_Bact_Anaerostipes_hadrus_gene15230984.pdb", "range": "294-556", "level": 4},

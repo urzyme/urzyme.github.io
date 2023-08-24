@@ -33,9 +33,13 @@ JSON$fullName2 = json2$fullName
 href1 = paste0("<a href='/", json1$classID, "/", json1$id, "'>", json1$name, "</a>")
 href2 = paste0("<a href='/", json2$classID, "/", json2$id, "'>", json2$name, "</a>")
 JSON$description = paste0("Pairwise comparison of the ", JSON$class, " catalytic domains from the ", json1$fullName, " (", href1, ") and ", json2$fullName, " (", href2, ") families. 
-	Monomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is
-	 larger than the total RMSD, which compares structures both within- and between-families. ")
+	The cross-family RMSD is the average RMSD between pairs of structures from different families, and is
+	 larger than the total RMSD, which compares structures both within- and between-families. TM scores are bound between 0 and 1. 
+	 This alignment was generated automatically using 3DCOMB (Wang et al. 2011) and was not corrected with any manual adjustment.")
 
+
+
+# README
 
 
 
@@ -223,6 +227,12 @@ JSON$features = featuresAdj2
 
 
 
+
 cat(paste("saving to info.json\n" ))
 exportJSON <- toJSON(JSON, indent=4)
 write(exportJSON, "info.json")
+
+
+# README
+cat(paste("saving to README.md\n" ))
+write(JSON$description, "README.md")
