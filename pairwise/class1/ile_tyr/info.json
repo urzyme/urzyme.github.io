@@ -6,29 +6,28 @@
     "family2":"TyrRS",
     "fullName1":"Isoleucyl tRNA Synthetase",
     "fullName2":"Tyrosyl-tRNA Synthetase",
-    "description":"Pairwise comparison of the Class I catalytic domains from the Isoleucyl tRNA Synthetase (<a href='/class1/ile'>IleRS</a>) and Tyrosyl-tRNA Synthetase (<a href='/class1/tyr'>TyrRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.656,
-    "tm":    0.6367,
-    "rmsd1":    4.13,
-    "rmsd2":    2.85,
-    "crossFamilyRmsd":    4.75,
-    "rmsdTotal":    4.14,
+    "description":"Pairwise comparison of the Class I catalytic domains from the Isoleucyl tRNA Synthetase (<a href='/class1/ile'>IleRS</a>) and Tyrosyl-tRNA Synthetase (<a href='/class1/tyr'>TyrRS</a>) families. \n\tThe cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. TM scores are bound between 0 and 1. \n\t This alignment was generated automatically using 3DCOMB (Wang et al. 2011) and was not corrected with any manual adjustment.",
+    "rmsd":    2.657,
+    "tm":    0.6383,
+    "rmsd1":    3.78,
+    "rmsd2":    2.82,
+    "crossFamilyRmsd":    4.68,
+    "rmsdTotal":    4.01,
     "features":{
         "Protozyme":{
             "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
             "range":"2-48",
-            "level":            2
+            "level":            3
         },
         "SDH":{
             "acc":"TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb",
             "range":"119-134",
-            "level":            2
+            "level":            3
         },
         "CP1":{
-            "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
-            "range":"116-506",
-            "level":            3,
-            "href":"/superfamily/class1/CP1"
+            "acc":"TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb",
+            "range":"47-117",
+            "level":            3
         },
         "HIGH":{
             "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
@@ -38,36 +37,34 @@
         "KMSKS":{
             "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
             "range":"565-569",
-            "level":            1
+            "level":            1,
+            "align":"right"
         },
-        "LIV IM1":{
+        "Editing domain 1a":{
             "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
-            "range":"135-383",
-            "level":            2,
-            "href":"/superfamily/class1/LIV_IM1"
+            "range":"167-363",
+            "level":            3
         },
-        "LIV IM2":{
+        "CP3":{
             "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
             "range":"431-488",
-            "level":            2,
-            "href":"/superfamily/class1/LIV_IM2"
-        },
-        "Crossover 2":{
-            "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
-            "range":"517-555",
-            "level":            2
+            "level":            3
         },
         "CP2":{
             "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
             "range":"384-416",
-            "level":            1,
-            "href":"/superfamily/class1/CP2"
+            "level":            3
         },
-        "LI IM":{
+        "ZF.1":{
             "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
-            "range":"206-244",
-            "level":            1,
-            "href":"/superfamily/class1/LI_IM"
+            "range":"147-166",
+            "align":"right",
+            "level":            1
+        },
+        "ZF.2":{
+            "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
+            "range":"361-369",
+            "level":            1
         }
     }
 }

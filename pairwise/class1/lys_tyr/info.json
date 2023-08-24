@@ -6,7 +6,7 @@
     "family2":"TyrRS",
     "fullName1":"Class I Lysyl-tRNA Synthetase",
     "fullName2":"Tyrosyl-tRNA Synthetase",
-    "description":"Pairwise comparison of the Class I catalytic domains from the Class I Lysyl-tRNA Synthetase (<a href='/class1/lys'>LysRS-I</a>) and Tyrosyl-tRNA Synthetase (<a href='/class1/tyr'>TyrRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "description":"Pairwise comparison of the Class I catalytic domains from the Class I Lysyl-tRNA Synthetase (<a href='/class1/lys'>LysRS-I</a>) and Tyrosyl-tRNA Synthetase (<a href='/class1/tyr'>TyrRS</a>) families. \n\tThe cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. TM scores are bound between 0 and 1. \n\t This alignment was generated automatically using 3DCOMB (Wang et al. 2011) and was not corrected with any manual adjustment.",
     "rmsd":    2.504,
     "tm":    0.7296,
     "rmsd1":    3.99,
@@ -17,18 +17,17 @@
         "Protozyme":{
             "acc":"LysRS-I_AF_Arch_Candidatus_Bathyarchaeota_archaeon_proteinRJS75864.1.pdb",
             "range":"2-45",
-            "level":            2
+            "level":            3
         },
         "SDH":{
             "acc":"TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb",
             "range":"119-134",
-            "level":            2
+            "level":            3
         },
         "CP1":{
-            "acc":"LysRS-I_AF_Arch_Candidatus_Bathyarchaeota_archaeon_proteinRJS75864.1.pdb",
-            "range":"106-221",
-            "level":            3,
-            "href":"/superfamily/class1/CP1"
+            "acc":"TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb",
+            "range":"47-117",
+            "level":            3
         },
         "HIGH":{
             "acc":"LysRS-I_AF_Arch_Candidatus_Bathyarchaeota_archaeon_proteinRJS75864.1.pdb",
@@ -38,18 +37,13 @@
         "KMSKS":{
             "acc":"LysRS-I_AF_Arch_Candidatus_Bathyarchaeota_archaeon_proteinRJS75864.1.pdb",
             "range":"266-270",
-            "level":            1
+            "level":            1,
+            "align":"right"
         },
         "LysRS-I IM":{
             "acc":"LysRS-I_AF_Arch_Candidatus_Bathyarchaeota_archaeon_proteinRJS75864.1.pdb",
             "range":"138-207",
-            "level":            2,
-            "href":"/superfamily/class1/LysRS-I_IM"
-        },
-        "Crossover 2":{
-            "acc":"LysRS-I_AF_Arch_Candidatus_Bathyarchaeota_archaeon_proteinRJS75864.1.pdb",
-            "range":"222-256",
-            "level":            2
+            "level":            3
         }
     }
 }

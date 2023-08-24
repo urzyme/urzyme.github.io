@@ -6,7 +6,7 @@
     "family2":"PylRS",
     "fullName1":"Prolyl-tRNA Synthetase (Archaeal-like)",
     "fullName2":"Pyrrolysyl-tRNA Synthetase",
-    "description":"Pairwise comparison of the Class II catalytic domains from the Prolyl-tRNA Synthetase (Archaeal-like) (<a href='/class2/pro1'>ProRS-A</a>) and Pyrrolysyl-tRNA Synthetase (<a href='/class2/pyl'>PylRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "description":"Pairwise comparison of the Class II catalytic domains from the Prolyl-tRNA Synthetase (Archaeal-like) (<a href='/class2/pro1'>ProRS-A</a>) and Pyrrolysyl-tRNA Synthetase (<a href='/class2/pyl'>PylRS</a>) families. \n\tThe cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. TM scores are bound between 0 and 1. \n\t This alignment was generated automatically using 3DCOMB (Wang et al. 2011) and was not corrected with any manual adjustment.",
     "rmsd":    2.143,
     "tm":    0.8538,
     "rmsd1":    1.4,
@@ -17,8 +17,7 @@
         "Protozyme":{
             "acc":"ProRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697692.pdb",
             "range":"60-111",
-            "level":            2,
-            "href":"/superfamily/class2/Protozyme"
+            "level":            3
         },
         "Motif 1":{
             "acc":"ProRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697692.pdb",
@@ -33,7 +32,8 @@
         "Motif 3":{
             "acc":"ProRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697692.pdb",
             "range":"218-227",
-            "level":            1
+            "level":            1,
+            "align":"right"
         },
         "Tweezer 1":{
             "acc":"ProRS-A_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697692.pdb",

@@ -6,7 +6,7 @@
     "family2":"SerRS",
     "fullName1":"Alanyl-tRNA Synthetase",
     "fullName2":"Seryl-tRNA Synthetase",
-    "description":"Pairwise comparison of the Class II catalytic domains from the Alanyl-tRNA Synthetase (<a href='/class2/ala'>AlaRS</a>) and Seryl-tRNA Synthetase (<a href='/class2/ser1'>SerRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "description":"Pairwise comparison of the Class II catalytic domains from the Alanyl-tRNA Synthetase (<a href='/class2/ala'>AlaRS</a>) and Seryl-tRNA Synthetase (<a href='/class2/ser1'>SerRS</a>) families. \n\tThe cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. TM scores are bound between 0 and 1. \n\t This alignment was generated automatically using 3DCOMB (Wang et al. 2011) and was not corrected with any manual adjustment.",
     "rmsd":    2.066,
     "tm":    0.7669,
     "rmsd1":    2.85,
@@ -17,8 +17,7 @@
         "Protozyme":{
             "acc":"AlaRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094822.pdb",
             "range":"33-76",
-            "level":            2,
-            "href":"/superfamily/class2/Protozyme"
+            "level":            3
         },
         "Motif 1":{
             "acc":"AlaRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094822.pdb",
@@ -33,7 +32,8 @@
         "Motif 3":{
             "acc":"AlaRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094822.pdb",
             "range":"174-183",
-            "level":            1
+            "level":            1,
+            "align":"right"
         },
         "Tweezer 1":{
             "acc":"AlaRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094822.pdb",

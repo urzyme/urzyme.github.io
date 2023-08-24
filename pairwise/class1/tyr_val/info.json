@@ -6,50 +6,49 @@
     "family2":"ValRS",
     "fullName1":"Tyrosyl-tRNA Synthetase",
     "fullName2":"Valyl-tRNA Synthetase",
-    "description":"Pairwise comparison of the Class I catalytic domains from the Tyrosyl-tRNA Synthetase (<a href='/class1/tyr'>TyrRS</a>) and Valyl-tRNA Synthetase (<a href='/class1/val'>ValRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.486,
-    "tm":    0.7154,
-    "rmsd1":    3.14,
-    "rmsd2":    3.58,
-    "crossFamilyRmsd":    6.74,
-    "rmsdTotal":    5.06,
+    "description":"Pairwise comparison of the Class I catalytic domains from the Tyrosyl-tRNA Synthetase (<a href='/class1/tyr'>TyrRS</a>) and Valyl-tRNA Synthetase (<a href='/class1/val'>ValRS</a>) families. \n\tThe cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. TM scores are bound between 0 and 1. \n\t This alignment was generated automatically using 3DCOMB (Wang et al. 2011) and was not corrected with any manual adjustment.",
+    "rmsd":    2.491,
+    "tm":    0.7151,
+    "rmsd1":    3.29,
+    "rmsd2":    3.74,
+    "crossFamilyRmsd":    6.2,
+    "rmsdTotal":    4.85,
     "features":{
-        "CP1":{
-            "acc":"TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb",
-            "range":"47-117",
-            "level":            2
-        },
-        "LIV IM1":{
+        "Editing domain 1a":{
             "acc":"ValRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094666.pdb",
-            "range":"130-326",
-            "level":            2,
-            "href":"/superfamily/class1/LIV_IM1"
+            "range":"154-309",
+            "level":            3
         },
-        "LIV IM2":{
+        "CP3":{
             "acc":"ValRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094666.pdb",
             "range":"376-421",
-            "level":            2,
-            "href":"/superfamily/class1/LIV_IM2"
+            "level":            3
         },
         "Protozyme":{
             "acc":"TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb",
             "range":"1-38",
-            "level":            3
-        },
-        "Crossover 2":{
-            "acc":"ValRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094666.pdb",
-            "range":"452-493",
-            "level":            2
+            "level":            3,
+            "align":"right"
         },
         "CP2":{
             "acc":"ValRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094666.pdb",
-            "range":"327-360",
-            "level":            1,
-            "href":"/superfamily/class1/CP2"
+            "range":"326-360",
+            "level":            3
         },
         "HIGH":{
             "acc":"TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb",
             "range":"14-17",
+            "level":            1
+        },
+        "ZF.1":{
+            "acc":"ValRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094666.pdb",
+            "range":"141-146",
+            "align":"right",
+            "level":            1
+        },
+        "ZF.2":{
+            "acc":"ValRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094666.pdb",
+            "range":"308-315",
             "level":            1
         },
         "KMSKS":{
@@ -61,7 +60,12 @@
         "SDH":{
             "acc":"TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb",
             "range":"119-134",
-            "level":            2
+            "level":            3
+        },
+        "CP1":{
+            "acc":"TyrRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094625.pdb",
+            "range":"47-117",
+            "level":            3
         }
     }
 }

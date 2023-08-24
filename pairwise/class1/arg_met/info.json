@@ -6,7 +6,7 @@
     "family2":"MetRS",
     "fullName1":"Arginyl-tRNA Synthetase",
     "fullName2":"Methionyl-tRNA Synthetase",
-    "description":"Pairwise comparison of the Class I catalytic domains from the Arginyl-tRNA Synthetase (<a href='/class1/arg'>ArgRS</a>) and Methionyl-tRNA Synthetase (<a href='/class1/met'>MetRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
+    "description":"Pairwise comparison of the Class I catalytic domains from the Arginyl-tRNA Synthetase (<a href='/class1/arg'>ArgRS</a>) and Methionyl-tRNA Synthetase (<a href='/class1/met'>MetRS</a>) families. \n\tThe cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. TM scores are bound between 0 and 1. \n\t This alignment was generated automatically using 3DCOMB (Wang et al. 2011) and was not corrected with any manual adjustment.",
     "rmsd":    2.594,
     "tm":    0.6684,
     "rmsd1":    3.43,
@@ -17,24 +17,18 @@
         "Protozyme":{
             "acc":"ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb",
             "range":"4-49",
-            "level":            2
-        },
-        "Crossover 2":{
-            "acc":"ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb",
-            "range":"280-315",
-            "level":            2
-        },
-        "CP1":{
-            "acc":"ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb",
-            "range":"187-273",
             "level":            3,
-            "href":"/superfamily/class1/CP1"
+            "align":"right"
         },
         "CP2":{
             "acc":"MetRS_AF_Euk_Drosophila_melanogaster_gene37177.pdb",
             "range":"195-229",
-            "level":            2,
-            "href":"/superfamily/class1/CP2"
+            "level":            3
+        },
+        "ZF":{
+            "acc":"MetRS_AF_Euk_Drosophila_melanogaster_gene37177.pdb",
+            "range":"130-184",
+            "level":            1
         },
         "HIGH":{
             "acc":"ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb",
@@ -46,11 +40,10 @@
             "range":"324-329",
             "level":            1
         },
-        "Variable bundle":{
+        "ArgRS IM":{
             "acc":"ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb",
             "range":"51-143",
-            "level":            3,
-            "href":"/superfamily/class1/Variable_bundle"
+            "level":            3
         }
     }
 }

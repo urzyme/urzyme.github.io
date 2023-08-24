@@ -1,56 +1,43 @@
 {
-    "fullName":"GluRS vs LysRS-I pairwise comparison",
+    "fullName":"GluRS-B vs LysRS-I pairwise comparison",
     "class":"Class I",
     "icon":"/fig/icon_white.png",
-    "family1":"GluRS",
+    "family1":"GluRS-B",
     "family2":"LysRS-I",
-    "fullName1":"Discriminating Glutamyl-tRNA Synthetase",
+    "fullName1":"Glutamyl-tRNA Synthetase (Bacterial-like)",
     "fullName2":"Class I Lysyl-tRNA Synthetase",
-    "description":"Pairwise comparison of the Class I catalytic domains from the Discriminating Glutamyl-tRNA Synthetase (<a href='/class1/glu1'>GluRS</a>) and Class I Lysyl-tRNA Synthetase (<a href='/class1/lys'>LysRS-I</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    1.986,
-    "tm":    0.7289,
-    "rmsd1":    1.95,
-    "rmsd2":    2.27,
-    "crossFamilyRmsd":    3.27,
-    "rmsdTotal":    2.64,
+    "description":"Pairwise comparison of the Class I catalytic domains from the Glutamyl-tRNA Synthetase (Bacterial-like) (<a href='/class1/glu1'>GluRS-B</a>) and Class I Lysyl-tRNA Synthetase (<a href='/class1/lys'>LysRS-I</a>) families. \n\tThe cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. TM scores are bound between 0 and 1. \n\t This alignment was generated automatically using 3DCOMB (Wang et al. 2011) and was not corrected with any manual adjustment.",
+    "rmsd":    1.931,
+    "tm":    0.7294,
+    "rmsd1":    3.52,
+    "rmsd2":    2.19,
+    "crossFamilyRmsd":    3.94,
+    "rmsdTotal":    3.57,
     "features":{
-        "CP1":{
-            "acc":"GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
-            "range":"105-201",
-            "level":            3,
-            "href":"/superfamily/class1/CP1"
-        },
         "Protozyme":{
-            "acc":"GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
+            "acc":"GlxRS-B_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
             "range":"1-38",
-            "level":            2
+            "level":            3
         },
         "LysRS-I IM":{
             "acc":"LysRS-I_AF_Arch_Candidatus_Bathyarchaeota_archaeon_proteinRJS75864.1.pdb",
             "range":"138-207",
-            "level":            2,
-            "href":"/superfamily/class1/LysRS-I_IM"
-        },
-        "Crossover 2":{
-            "acc":"GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
-            "range":"204-240",
-            "level":            2
+            "level":            3
         },
         "HIGH":{
-            "acc":"GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
+            "acc":"GlxRS-B_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
             "range":"13-16",
             "level":            1
         },
         "KMSKS":{
-            "acc":"GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
-            "range":"249-253",
+            "acc":"GlxRS-B_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
+            "range":"250-254",
             "level":            1
         },
         "SC1b IM":{
-            "acc":"GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
-            "range":"124-187",
-            "level":            2,
-            "href":"/superfamily/class1/SC1b_IM"
+            "acc":"GlxRS-B_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
+            "range":"105-146",
+            "level":            3
         }
     }
 }

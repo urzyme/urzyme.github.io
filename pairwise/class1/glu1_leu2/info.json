@@ -1,86 +1,69 @@
 {
-    "fullName":"GluRS vs LeuRS-A pairwise comparison",
+    "fullName":"GluRS-B vs LeuRS-A pairwise comparison",
     "class":"Class I",
     "icon":"/fig/icon_white.png",
-    "family1":"GluRS",
+    "family1":"GluRS-B",
     "family2":"LeuRS-A",
-    "fullName1":"Discriminating Glutamyl-tRNA Synthetase",
+    "fullName1":"Glutamyl-tRNA Synthetase (Bacterial-like)",
     "fullName2":"Leucyl-tRNA Synthetase (Archaeal-like)",
-    "description":"Pairwise comparison of the Class I catalytic domains from the Discriminating Glutamyl-tRNA Synthetase (<a href='/class1/glu1'>GluRS</a>) and Leucyl-tRNA Synthetase (Archaeal-like) (<a href='/class1/leu2'>LeuRS-A</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.325,
-    "tm":    0.7592,
-    "rmsd1":    1.84,
-    "rmsd2":    6.78,
-    "crossFamilyRmsd":    6.1,
-    "rmsdTotal":    4.57,
+    "description":"Pairwise comparison of the Class I catalytic domains from the Glutamyl-tRNA Synthetase (Bacterial-like) (<a href='/class1/glu1'>GluRS-B</a>) and Leucyl-tRNA Synthetase (Archaeal-like) (<a href='/class1/leu2'>LeuRS-A</a>) families. \n\tThe cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. TM scores are bound between 0 and 1. \n\t This alignment was generated automatically using 3DCOMB (Wang et al. 2011) and was not corrected with any manual adjustment.",
+    "rmsd":    2.38,
+    "tm":    0.7559,
+    "rmsd1":    2.85,
+    "rmsd2":    8.06,
+    "crossFamilyRmsd":    8.54,
+    "rmsdTotal":    6.21,
     "features":{
-        "CP1":{
-            "acc":"GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
-            "range":"105-201",
-            "level":            3,
-            "href":"/superfamily/class1/CP1"
-        },
-        "Variable bundle":{
+        "LeuRS-A IM1":{
             "acc":"LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb",
             "range":"48-94",
-            "level":            3,
-            "href":"/superfamily/class1/Variable_bundle"
+            "level":            3
         },
-        "LIV IM1":{
+        "Editing domain 1a":{
             "acc":"LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb",
-            "range":"146-433",
-            "level":            2,
-            "href":"/superfamily/class1/LIV_IM1"
+            "range":"178-409",
+            "level":            3
         },
         "CP2":{
             "acc":"LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb",
             "range":"434-466",
-            "level":            2,
-            "href":"/superfamily/class1/CP2"
+            "level":            3
         },
         "LeuRS-A IM2":{
             "acc":"LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb",
             "range":"484-542",
-            "level":            2,
-            "href":"/superfamily/class1/LeuRS-A_IM2"
+            "level":            3
         },
         "Protozyme":{
-            "acc":"GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
+            "acc":"GlxRS-B_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
             "range":"1-38",
-            "level":            2
-        },
-        "Crossover 2":{
-            "acc":"GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
-            "range":"204-240",
-            "level":            2
-        },
-        "LeuRS-A IM1":{
-            "acc":"LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb",
-            "range":"326-373",
-            "level":            1,
-            "href":"/superfamily/class1/LeuRS-A_IM1"
-        },
-        "LI IM":{
-            "acc":"LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb",
-            "range":"216-252",
-            "level":            1,
-            "href":"/superfamily/class1/LI_IM"
+            "level":            3
         },
         "HIGH":{
-            "acc":"GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
+            "acc":"GlxRS-B_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
             "range":"13-16",
             "level":            1
         },
+        "ZF.1":{
+            "acc":"LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb",
+            "range":"156-176",
+            "align":"right",
+            "level":            1
+        },
+        "ZF.2":{
+            "acc":"LeuRS-A_AF_Arch_Aciduliprofundum_boonei_T469_gene8828435.pdb",
+            "range":"410-420",
+            "level":            1
+        },
         "KMSKS":{
-            "acc":"GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
-            "range":"249-253",
+            "acc":"GlxRS-B_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
+            "range":"250-254",
             "level":            1
         },
         "SC1b IM":{
-            "acc":"GluRS_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
-            "range":"124-187",
-            "level":            2,
-            "href":"/superfamily/class1/SC1b_IM"
+            "acc":"GlxRS-B_AF_Bact_Bifidobacterium_animalis_subsp_lactis_BLC1_gene66532600.pdb",
+            "range":"105-146",
+            "level":            3
         }
     }
 }

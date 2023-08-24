@@ -1,15 +1,15 @@
 >../../../../class1/arg//data/domains/Catalytic_domain/structures/ArgRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6093502.pdb
- 0.992375 -0.103345  0.067170    -0.480118
- 0.099719  0.993479  0.055276    -2.021409
--0.072444 -0.048157  0.996209    -0.560915
+ 0.990451 -0.116915  0.073058    -0.445960
+ 0.112039  0.991400  0.067621    -1.960767
+-0.080336 -0.058790  0.995033    -0.606877
 >../../../../class1/arg//data/domains/Catalytic_domain/structures/ArgRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697696.pdb
  0.841338 -0.399016 -0.364604    -0.732967
  0.530728  0.737600  0.417461    -1.313058
  0.102358 -0.544732  0.832340     1.656701
 >../../../../class1/arg//data/domains/Catalytic_domain/structures/ArgRS_AF_Arch_Desulfurococcus_mucosus_DSM_2162_gene10153309.pdb
- 0.947432 -0.232650  0.219650     0.256817
- 0.170449  0.947975  0.268869     3.713976
--0.270775 -0.217296  0.937797    -4.140445
+ 0.944208 -0.248114  0.216590     0.152261
+ 0.186247  0.944624  0.270182     3.561995
+-0.271632 -0.214768  0.938131    -4.168360
 >../../../../class1/arg//data/domains/Catalytic_domain/structures/ArgRS_AF_Arch_Methanothermococcus_okinawensis_IH1_gene10773248.pdb
  0.931450  0.220493  0.289455    -0.399741
 -0.085637  0.905983 -0.414561    -0.486327
@@ -127,9 +127,9 @@
 -0.765106  0.413669 -0.493448     1.582507
 -0.417209  0.265233  0.869246    -7.330933
 >../../../../class1/val//data/domains/Catalytic_domain/structures/ValRS_AF_Bact_Prochlorococcus_marinus_subsp_marinus_str_CCMP1375_gene54201173.pdb
--0.160427 -0.969879  0.183298     0.904166
--0.590597 -0.054471 -0.805126     2.028478
- 0.790859 -0.237420 -0.564069    -5.986493
+-0.163042 -0.967169  0.194940     1.028383
+-0.595962 -0.060921 -0.800699     2.013823
+ 0.786287 -0.246725 -0.566463    -6.296531
 >../../../../class1/val//data/domains/Catalytic_domain/structures/ValRS_AF_Bact_Streptobacillus_moniliformis_DSM_12112_gene29673078.pdb
 -0.211805  0.400250 -0.891594     1.688216
 -0.165085 -0.913834 -0.371017     1.455718
@@ -147,17 +147,13 @@
 -0.455692  0.889913  0.019999     4.326450
 -0.205098 -0.126833  0.970489    -8.420441
 >../../../../class1/val//data/domains/Catalytic_domain/structures/ValRS_AF_Euk_Trypanosoma_brucei_brucei_TREU927_gene3658082.pdb
- 0.931309  0.283669  0.228464     1.543008
--0.322756  0.933418  0.156716     2.736978
--0.168796 -0.219689  0.960856    -8.605665
+ 0.924106  0.290865  0.247840     1.401463
+-0.338160  0.924508  0.175875     2.669129
+-0.177975 -0.246337  0.952703    -8.334160
 >../../../../class1/val//data/domains/Catalytic_domain/structures/ValRS_AF_Mito_Falco_naumanni_gene121082178.pdb
  0.691227  0.595739  0.409023     7.752310
 -0.510213  0.803168 -0.307576     2.095766
 -0.511749  0.003916  0.859126   -19.254324
->../../../../class1/val//data/domains/Catalytic_domain/structures/ValRS_AF_Mito_Oryza_sativa_Japonica_Group_gene4333799.pdb
--0.130281  0.558069  0.819503     2.250454
- 0.736137 -0.499247  0.457007     1.424137
- 0.664176  0.662806 -0.345773    -7.567022
 >../../../../class1/val//data/domains/Catalytic_domain/structures/ValRS_PDB_Bact_T_therm_1GAX.pdb
 -0.622426 -0.753245 -0.212620    96.859225
 -0.782021  0.587382  0.208389    45.030333

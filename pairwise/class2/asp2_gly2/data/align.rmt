@@ -1,3 +1,23 @@
+>../../../../class2/asp2//data/domains/Catalytic_domain/structures/AspRS-E_AF_Euk_Caenorhabditis_elegans_gene176334.pdb
+ 0.858666 -0.122043  0.497793   -17.281134
+ 0.312142 -0.645823 -0.696764   -18.460828
+ 0.406522  0.753670 -0.516451   -17.137140
+>../../../../class2/asp2//data/domains/Catalytic_domain/structures/AspRS-E_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258977.pdb
+-0.224393 -0.850540 -0.475636   -16.496200
+ 0.508428  0.314206 -0.801733    -9.132446
+ 0.831353 -0.421730  0.361933   -25.461748
+>../../../../class2/asp2//data/domains/Catalytic_domain/structures/AspRS-E_AF_Euk_Thalassiosira_pseudonana_CCMP1335_gene7443135.pdb
+ 0.831477 -0.266926  0.487233   -16.519365
+ 0.266764 -0.577468 -0.771600   -17.557163
+ 0.487322  0.771545 -0.408945   -15.155575
+>../../../../class2/asp2//data/domains/Catalytic_domain/structures/AspRS-E_AF_Euk_Theileria_orientalis_strain_Shintoku_gene20715543.pdb
+ 0.890777  0.016975  0.454124   -17.986783
+ 0.328589 -0.714359 -0.617835   -18.847767
+ 0.313919  0.699573 -0.641912   -17.633415
+>../../../../class2/asp2//data/domains/Catalytic_domain/structures/AspRS-E_PDB_Euk_S_cerevisiae_1EOV.pdb
+ 0.034874  0.496367  0.867412   -69.787499
+-0.998931  0.043657  0.015179   -21.757595
+-0.030334 -0.867015  0.497359   -30.414518
 >../../../../class2/asp2//data/domains/Catalytic_domain/structures/AsxRS_AF_Arch_Candidatus_Korarchaeum_cryptofilum_OPF8_gene6094477.pdb
  0.683538 -0.677242  0.272248   -15.557642
  0.223852 -0.160511 -0.961315   -16.266013
@@ -26,22 +46,6 @@
  0.307543  0.759740  0.572898   -15.631454
 -0.938250  0.141871  0.315531   -17.347411
  0.158443 -0.634561  0.756458   -13.582732
->../../../../class2/asp2//data/domains/Catalytic_domain/structures/AsxRS_AF_Euk_Caenorhabditis_elegans_gene176334.pdb
- 0.858666 -0.122043  0.497793   -17.281134
- 0.312142 -0.645823 -0.696764   -18.460828
- 0.406522  0.753670 -0.516451   -17.137140
->../../../../class2/asp2//data/domains/Catalytic_domain/structures/AsxRS_AF_Euk_Cryptococcus_neoformans_var_neoformans_JEC21_gene3258977.pdb
--0.224393 -0.850540 -0.475636   -16.496200
- 0.508428  0.314206 -0.801733    -9.132446
- 0.831353 -0.421730  0.361933   -25.461748
->../../../../class2/asp2//data/domains/Catalytic_domain/structures/AsxRS_AF_Euk_Thalassiosira_pseudonana_CCMP1335_gene7443135.pdb
- 0.831477 -0.266926  0.487233   -16.519365
- 0.266764 -0.577468 -0.771600   -17.557163
- 0.487322  0.771545 -0.408945   -15.155575
->../../../../class2/asp2//data/domains/Catalytic_domain/structures/AsxRS_AF_Euk_Theileria_orientalis_strain_Shintoku_gene20715543.pdb
- 0.890777  0.016975  0.454124   -17.986783
- 0.328589 -0.714359 -0.617835   -18.847767
- 0.313919  0.699573 -0.641912   -17.633415
 >../../../../class2/asp2//data/domains/Catalytic_domain/structures/AsxRS_PDB_Arch_T_kodarensis_1b8a.pdb
  0.655151 -0.654168  0.377943   -42.902093
  0.153291  0.604953  0.781366   -55.156681
@@ -50,10 +54,6 @@
  0.827035 -0.513047 -0.229774   -31.873093
  0.353161  0.156175  0.922435   -87.192234
 -0.437367 -0.844033  0.310350   -20.609094
->../../../../class2/asp2//data/domains/Catalytic_domain/structures/AsxRS_PDB_Euk_S_cerevisiae_1EOV.pdb
- 0.034874  0.496367  0.867412   -69.787499
--0.998931  0.043657  0.015179   -21.757595
--0.030334 -0.867015  0.497359   -30.414518
 >../../../../class2/gly2//data/domains/Catalytic_domain/structures/GlyRS-Bα_AF_Bact_Brachyspira_pilosicoli_95_1000_gene56440230.pdb
 -0.941591  0.304677 -0.143451   -17.506816
  0.334966  0.803456 -0.492195    -3.110885
@@ -82,10 +82,6 @@
  1.000000  0.000000  0.000000     0.000000
  0.000000  1.000000  0.000000     0.000000
  0.000000  0.000000  1.000000     0.000000
->../../../../class2/gly2//data/domains/Catalytic_domain/structures/GlyRS-Bα_AF_Euk_Vulpes_lagopus_gene121489478.pdb
- 0.973802 -0.122720  0.191442   -21.533655
- 0.204401  0.841311 -0.500417    -4.572772
--0.099651  0.526437  0.844354   -10.149640
 >../../../../class2/gly2//data/domains/Catalytic_domain/structures/GlyRS-Bα_AF_Mito_Nymphaea_colorata_gene116265348.pdb
  0.526783  0.839744 -0.131645     0.578439
 -0.328353  0.058186 -0.942761     1.132145

@@ -4,59 +4,50 @@
     "icon":"/fig/icon_white.png",
     "family1":"CysRS",
     "family2":"IleRS",
-    "fullName1":"Cysteinyl tRNA Synthetase",
+    "fullName1":"Cysteinyl-tRNA Synthetase",
     "fullName2":"Isoleucyl tRNA Synthetase",
-    "description":"Pairwise comparison of the Class I catalytic domains from the Cysteinyl tRNA Synthetase (<a href='/class1/cys'>CysRS</a>) and Isoleucyl tRNA Synthetase (<a href='/class1/ile'>IleRS</a>) families. \n\tMonomeric structures from the two families were aligned using 3DCOMB. The cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. ",
-    "rmsd":    2.03,
-    "tm":    0.748,
-    "rmsd1":    2.65,
-    "rmsd2":    4.27,
-    "crossFamilyRmsd":    4.62,
-    "rmsdTotal":    4.07,
+    "description":"Pairwise comparison of the Class I catalytic domains from the Cysteinyl-tRNA Synthetase (<a href='/class1/cys'>CysRS</a>) and Isoleucyl tRNA Synthetase (<a href='/class1/ile'>IleRS</a>) families. \n\tThe cross-family RMSD is the average RMSD between pairs of structures from different families, and is\n\t larger than the total RMSD, which compares structures both within- and between-families. TM scores are bound between 0 and 1. \n\t This alignment was generated automatically using 3DCOMB (Wang et al. 2011) and was not corrected with any manual adjustment.",
+    "rmsd":    1.993,
+    "tm":    0.8045,
+    "rmsd1":    2.29,
+    "rmsd2":    3.95,
+    "crossFamilyRmsd":    4.11,
+    "rmsdTotal":    3.65,
     "features":{
-        "CP1":{
-            "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
-            "range":"95-198",
-            "level":            3,
-            "href":"/superfamily/class1/CP1"
-        },
-        "LIV IM1":{
+        "Editing domain 1a":{
             "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
-            "range":"135-383",
-            "level":            2,
-            "href":"/superfamily/class1/LIV_IM1"
+            "range":"167-363",
+            "level":            3
         },
-        "LIV IM2":{
+        "CP3":{
             "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
             "range":"431-488",
-            "level":            2,
-            "href":"/superfamily/class1/LIV_IM2"
+            "level":            3
         },
         "Protozyme":{
             "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
             "range":"3-49",
-            "level":            2
-        },
-        "Crossover 2":{
-            "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
-            "range":"200-237",
-            "level":            2
+            "level":            3
         },
         "CP2":{
             "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
             "range":"384-416",
-            "level":            1,
-            "href":"/superfamily/class1/CP2"
-        },
-        "LI IM":{
-            "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
-            "range":"206-244",
-            "level":            1,
-            "href":"/superfamily/class1/LI_IM"
+            "level":            3
         },
         "HIGH":{
             "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
             "range":"18-21",
+            "level":            1
+        },
+        "ZF.1":{
+            "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
+            "range":"147-166",
+            "align":"right",
+            "level":            1
+        },
+        "ZF.2":{
+            "acc":"IleRS_AF_Arch_Candidatus_Nitrosopumilus_sediminis_gene13697091.pdb",
+            "range":"361-369",
             "level":            1
         },
         "KMSKS":{
@@ -67,8 +58,7 @@
         "CysRS IM":{
             "acc":"CysRS_AF_Arch_Aciduliprofundum_boonei_T469_gene8827372.pdb",
             "range":"127-160",
-            "level":            2,
-            "href":"/superfamily/class1/CysRS_IM"
+            "level":            3
         }
     }
 }
